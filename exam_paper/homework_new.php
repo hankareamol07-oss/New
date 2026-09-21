@@ -29,7 +29,7 @@ require __DIR__ . '/includes/header.php';
         </div>
         <label class="form-label small mb-1">Subject (textbook)</label>
         <select class="form-select mb-2" id="subject"></select>
-        <label class="form-label small mb-1">Chapter / पाठ (आजचा टाचण विषय)</label>
+        <label class="form-label small mb-1 d-flex justify-content-between">Chapter / पाठ (आजचा टाचण विषय) <a id="editChapters" class="d-none" href="#" target="_blank" title="Rename lessons / add missing units of this textbook"><i class="bi bi-pencil-square"></i> edit lesson names</a></label>
         <select class="form-select mb-2" id="chapter"></select>
         <label class="form-label small mb-1">Topic printed on sheet</label>
         <input class="form-control mb-2" id="topic">

@@ -54,6 +54,7 @@ require __DIR__ . '/includes/header.php';
       <td><?= h($r['teacher']) ?></td>
       <td class="text-end text-nowrap">
         <a class="btn btn-sm btn-outline-primary" href="homework_view.php?id=<?= (int)$r['hw_id'] ?>" target="_blank" title="Print / PDF"><i class="bi bi-printer"></i> PDF</a>
+        <a class="btn btn-sm btn-outline-success" href="homework_key.php?id=<?= (int)$r['hw_id'] ?>" target="_blank" title="Teacher's answer key"><i class="bi bi-key"></i> Key</a>
         <a class="btn btn-sm btn-outline-secondary" href="homework_new.php?edit=<?= (int)$r['hw_id'] ?>"><i class="bi bi-pencil"></i></a>
         <button class="btn btn-sm btn-outline-danger" onclick="delHw(<?= (int)$r['hw_id'] ?>)"><i class="bi bi-trash"></i></button>
       </td>

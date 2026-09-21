@@ -86,6 +86,7 @@ require __DIR__ . '/includes/header.php';
     </div>
     <div class="col-12">
       <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" name="figures" value="1" id="onlyFig" <?= $onlyFigures ? 'checked' : '' ?>><label class="form-check-label small" for="onlyFig">Only picture / figure questions</label></div>
+      <?php if ($bookId): ?><a class="small ms-3" href="<?= EP_BASE_URL ?>/book_chapters.php?book_id=<?= $bookId ?>"><i class="bi bi-pencil-square"></i> Edit chapter / lesson names &amp; pages of this book</a><?php endif; ?>
     </div>
   </div>
 </form>

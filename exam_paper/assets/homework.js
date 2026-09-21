@@ -47,6 +47,9 @@
   function fillChapters(selected) {
     const chs = chaptersOf(curSubj());
     chSel.innerHTML = '<option value="">— whole book —</option>' + chs.map(c => `<option value="${c.chapter_id}" ${selected == c.chapter_id ? 'selected' : ''}>${c.no}. ${esc(c.title)} (${c.n})</option>`).join('');
+    const book = curSubj()?.books?.[0];
+    const editLink = $('#editChapters');
+    if (editLink) { editLink.href = `book_chapters.php?book_id=${book ? book.book_id : 0}`; editLink.classList.toggle('d-none', !book); }
     onChapter();
   }
   function onChapter() {
@@ -105,7 +108,10 @@
     const box = $('#hwItems');
     box.innerHTML = state.items.length ? `<ol class="list-group list-group-numbered list-group-flush">${state.items.map((it, i) => `
       <li class="list-group-item d-flex gap-2 align-items-start" data-i="${i}">
-        <textarea class="form-control form-control-sm flex-grow-1" rows="1" data-f="text" placeholder="Homework item…">${esc(it.text)}</textarea>
+        <div class="flex-grow-1">
+          <textarea class="form-control form-control-sm" rows="1" data-f="text" placeholder="Homework item…">${esc(it.text)}</textarea>
+          <textarea class="form-control form-control-sm mt-1 border-success-subtle" rows="1" data-f="answer" placeholder="Answer / उत्तर (teacher's answer key only, not printed on homework)">${esc(it.answer || '')}</textarea>
+        </div>
         <div class="text-nowrap small">
           ${it.needs_figure ? `<label class="me-1" title="Print the textbook page image below this item"><input type="checkbox" data-f="show_image" ${it.show_image ? 'checked' : ''}> <i class="bi bi-image"></i></label>` : ''}
           ${it.page ? `<span class="text-muted me-1">p.${it.page}</span>` : ''}
@@ -231,7 +237,7 @@
       hw_id: state.hwId, quiz_id: state.quizId, hw_date: $('#hwDate').value, standard: +stdSel.value, division: $('#division').value, std_label: $('#stdLabel').value,
       subject: s?.subject || '', medium: s?.medium || '', chapter_id: +chSel.value || null, topic: $('#topic').value, teacher: $('#teacher').value,
       title: $('#title').value, note: $('#note').value,
-      items: state.items.map(i => ({ bq_id: i.bq_id, text: i.text, page_image: i.page_image, show_image: i.show_image })),
+      items: state.items.map(i => ({ bq_id: i.bq_id, text: i.text, answer: i.answer || '', page_image: i.page_image, show_image: i.show_image })),
       quiz: quizOn ? { title: $('#quizTitle').value, time_limit: +$('#quizTime').value, show_answers: $('#quizShowAns').checked, questions: state.quiz } : { questions: [] },
     };
     const r = await api('save_homework', { body });
@@ -239,7 +245,7 @@
     if (r.status !== 'success') { msg.className = 'small text-danger'; msg.textContent = r.message || 'Save failed'; return; }
     state.hwId = r.hw_id; state.quizId = r.quiz_id;
     msg.className = 'small text-success';
-    msg.innerHTML = `Saved. <a href="homework_view.php?id=${r.hw_id}" target="_blank">Open PDF</a> · <a href="homework.php">All homework</a>`;
+    msg.innerHTML = `Saved. <a href="homework_view.php?id=${r.hw_id}" target="_blank">Open PDF</a> · <a href="homework_key.php?id=${r.hw_id}" target="_blank">Answer key</a> · <a href="homework.php">All homework</a>`;
     window.open('homework_view.php?id=' + r.hw_id, '_blank');
   };
 

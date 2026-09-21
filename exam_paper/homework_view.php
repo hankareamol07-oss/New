@@ -53,6 +53,7 @@ $std = $hw['std_label'] ?: 'Std ' . $hw['standard'];
 <body>
 <div class="toolbar no-print">
   <button onclick="window.print()">&#128424; Print / Save as PDF</button>
+  <a href="homework_key.php?id=<?= (int)$hw['hw_id'] ?>">Answer key</a>
   <a href="homework_new.php?edit=<?= (int)$hw['hw_id'] ?>">Edit</a>
   <a href="homework.php">All homework</a>
   <?php if ($quiz): ?><a href="<?= h($quizUrl) ?>" target="_blank">Open quiz</a> <a href="quiz_results.php?id=<?= (int)$quiz['quiz_id'] ?>">Quiz results</a>

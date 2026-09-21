@@ -175,6 +175,19 @@ the optional time limit and immediately see their score (and correct answers,
 if enabled). Teachers see attempts, average and question-wise correct % in
 `quiz_results.php` (CSV export), linked from the homework list.
 
+**Answer key:** each homework item has an optional *Answer / उत्तर* field (not
+printed on the student sheet). `homework_key.php?id=…` (**Key** button in the
+list, *Answer key* link on the sheet toolbar) prints the teacher copy with the
+homework answers, the correct option of every quiz MCQ and the expected typed
+answers.
+
+**Lesson names:** `book_chapters.php?book_id=…` (*edit lesson names* beside the
+chapter drop-down, or from the Textbook Bank) lets you rename lessons / fix
+page ranges of any textbook; textbook questions are re-linked to lessons by
+page. `data/book_questions.json` ships with the official contents lists of the
+Balbharati books (std 1–8 Maths, Science, EVS, History-Civics, Geography,
+English) applied over the OCR result.
+
 > Classes 1–4 have no MCQ bank on downloadpapers, so for them build the quiz
 > from textbook questions / manual MCQs. Tachan integration: the chapter
 > drop-down is the same textbook chapter list the tachan DB was built from; to
