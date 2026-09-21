@@ -158,6 +158,9 @@ function ep_clean_quiz_questions(array $raw): array
             }
             $item['options'] = $opts;
             $item['answer'] = $ans;
+            if (trim((string)($it['explain'] ?? '')) !== '') {
+                $item['explain'] = trim((string)$it['explain']);
+            }
         } else {
             $item['answer'] = trim((string)($it['answer'] ?? ''));
         }
@@ -217,9 +220,11 @@ function ep_homework(int $hwId): ?array
     $hw['items'] = json_decode($hw['items_json'], true) ?: [];
     unset($hw['items_json']);
     foreach ($hw['items'] as &$it) {
-        $it['page_image_url'] = !empty($it['page_image']) ? EP_BASE_URL . '/book_page.php?f=' . rawurlencode($it['page_image']) : null;
+        $it['page_image_url'] = ep_book_image_url($it['page_image'] ?? null);
     }
     unset($it);
+    $hw['notes'] = !empty($hw['notes_json']) ? (json_decode($hw['notes_json'], true) ?: []) : [];
+    unset($hw['notes_json']);
     $hw['quiz'] = $hw['quiz_id'] ? ep_quiz((int)$hw['quiz_id']) : null;
     return $hw;
 }

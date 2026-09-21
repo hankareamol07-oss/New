@@ -37,6 +37,10 @@ CREATE TABLE IF NOT EXISTS ep_book_questions (
   item_no INT DEFAULT NULL,
   needs_figure TINYINT(1) DEFAULT 0,        -- question refers to a picture/figure/table on the page
   page_image VARCHAR(80) DEFAULT NULL,      -- data/book_pages/<book_id>/<page>.jpg (only when needs_figure)
+  options_json TEXT DEFAULT NULL,           -- ["A","B","C","D"] for mcq/true_false/match items
+  answer TEXT DEFAULT NULL,                 -- expected / model answer (teacher key)
+  ai_cleaned TINYINT(1) NOT NULL DEFAULT 0, -- text cleaned from OCR noise by AI
+  figure_image VARCHAR(80) DEFAULT NULL,    -- cropped figure data/book_figures/<book_id>/<file>.jpg
   INDEX (standard, subject),
   INDEX (chapter_id, qtype),
   FULLTEXT (text)

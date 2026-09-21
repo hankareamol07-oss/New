@@ -124,14 +124,25 @@ carries class, subject, medium, chapter, textbook page, question type
 (`fill_blank`, `true_false`, `match`, `one_word`, `one_sentence`,
 `short_answer`, `reason`, `difference`, `solve`, `draw`, `grammar`, …) and — when
 the exercise refers to a picture/figure — a rendered page image
-(`data/book_pages/<book_id>/<page>.jpg`, served via `book_page.php?f=…`).
+(`data/book_pages/<book_id>/<page>.jpg`, served via `book_page.php?f=…`) or,
+where the figure could be isolated, a cropped figure
+(`data/book_figures/<book_id>/<page>_<n>.jpg`). Fill-in-the-blank items always
+show a visible `______`. Exercise text was cleaned with an LLM (`ai_cleaned`
+flag) and carries the expected `answer` where the model could supply it.
 
 Install / refresh:
 
 ```bash
 mysql -u root -p school < db/schema_books.sql
-php import_books.php          # ep_books, ep_book_chapters, ep_book_questions, ep_paper_models
+mysql -u root -p school < db/schema_packs.sql   # ep_topic_packs (AI notes + 10-MCQ quiz per chapter)
+php import_books.php          # ep_books, ep_book_chapters, ep_book_questions, ep_paper_models, ep_topic_packs
 ```
+
+`data/topic_packs.json` holds, for every textbook chapter, short revision notes
+and a 10-question MCQ quiz (4 options, answer index, one-line explanation)
+generated from the chapter's OCR text. `api.php?action=topic_pack&chapter_id=N`
+returns it; the homework builder uses it as the default quiz source and prints
+the notes on the sheet.
 
 Workflow: pick test type & number (संकलित १ defaults to the first half of the
 chapters, संकलित २ to the second half), class, textbook subject and chapters →
