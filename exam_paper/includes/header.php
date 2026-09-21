@@ -30,6 +30,7 @@ $epTitle = $epTitle ?? 'Exam Paper Generator';
         <li class="nav-item"><a class="nav-link <?= $epPage === 'competitive' ? 'active' : '' ?>" href="<?= EP_BASE_URL ?>/competitive_paper.php"><i class="bi bi-trophy"></i> Scholarship / Navodaya</a></li>
         <li class="nav-item"><a class="nav-link <?= $epPage === 'assessment' ? 'active' : '' ?>" href="<?= EP_BASE_URL ?>/assessment_paper.php"><i class="bi bi-journal-check"></i> संकलित / आकारिक</a></li>
         <li class="nav-item"><a class="nav-link <?= $epPage === 'bank' ? 'active' : '' ?>" href="<?= EP_BASE_URL ?>/question_bank.php"><i class="bi bi-collection"></i> Question Bank</a></li>
+        <li class="nav-item"><a class="nav-link <?= $epPage === 'homework' ? 'active' : '' ?>" href="<?= EP_BASE_URL ?>/homework.php"><i class="bi bi-house-check"></i> Daily Homework</a></li>
         <li class="nav-item"><a class="nav-link <?= $epPage === 'bookbank' ? 'active' : '' ?>" href="<?= EP_BASE_URL ?>/book_bank.php"><i class="bi bi-book"></i> Textbook Bank</a></li>
         <li class="nav-item"><a class="nav-link <?= $epPage === 'settings' ? 'active' : '' ?>" href="<?= EP_BASE_URL ?>/settings.php"><i class="bi bi-gear"></i> School Settings</a></li>
       </ul>

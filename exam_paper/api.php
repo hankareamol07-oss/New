@@ -2,6 +2,7 @@
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/patterns.php';
 require_once __DIR__ . '/includes/assessment_patterns.php';
+require_once __DIR__ . '/includes/quiz.php';
 
 $action = $_GET['action'] ?? $_POST['action'] ?? '';
 $body = json_decode(file_get_contents('php://input'), true) ?: [];
@@ -199,6 +200,89 @@ switch ($action) {
         }
         ep_db()->prepare("INSERT INTO ep_papers (title, exam_name, std_label, exam_date, duration, total_marks, instructions, paper_json, paper_type) VALUES (?,?,?,?,?,?,?,?,'assessment')")->execute($params);
         ep_json(['status' => 'success', 'paper_id' => (int)ep_db()->lastInsertId()]);
+
+    /* ---------------- daily homework + topic quiz ---------------- */
+
+    case 'quiz_sources':
+        // scraped-bank chapters that can feed auto MCQs for a textbook class/subject/chapter
+        ep_json(ep_quiz_sources((int)($_GET['standard'] ?? 0), trim($_GET['subject'] ?? ''), trim($_GET['medium'] ?? ''), trim($_GET['chapter'] ?? '')));
+
+    case 'quiz_mcq':
+        ep_json(ep_quiz_mcq_pool($body['chapter_ids'] ?? [], max(1, min(30, (int)($body['count'] ?? EP_QUIZ_MIN))), $body['exclude'] ?? []));
+
+    case 'save_homework':
+        $items = [];
+        foreach ($body['items'] ?? [] as $it) {
+            $text = trim((string)($it['text'] ?? ''));
+            if ($text === '') continue;
+            $img = preg_match('~^\d+/\d{3}\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
+            $items[] = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
+        }
+        $standard = (int)($body['standard'] ?? 0);
+        $subject = trim((string)($body['subject'] ?? ''));
+        if (!$standard || $subject === '' || (!$items && trim((string)($body['note'] ?? '')) === '')) {
+            ep_json(['status' => 'error', 'message' => 'Class, subject and at least one homework item (or a note) are required']);
+        }
+        $quizQ = ep_clean_quiz_questions($body['quiz']['questions'] ?? []);
+        $quizId = !empty($body['quiz_id']) ? (int)$body['quiz_id'] : null;
+        $topic = trim((string)($body['topic'] ?? ''));
+        $medium = trim((string)($body['medium'] ?? ''));
+        if ($quizQ) {
+            $qp = [trim((string)($body['quiz']['title'] ?? '')) ?: ('Quiz - ' . $topic), $standard, $subject, $medium, $topic,
+                max(0, (int)($body['quiz']['time_limit'] ?? 0)), !empty($body['quiz']['show_answers']) ? 1 : 0, json_encode($quizQ, JSON_UNESCAPED_UNICODE)];
+            if ($quizId && ep_quiz($quizId)) {
+                $qp[] = $quizId;
+                ep_db()->prepare('UPDATE ep_quizzes SET title=?, standard=?, subject=?, medium=?, topic=?, time_limit=?, show_answers=?, questions_json=? WHERE quiz_id=?')->execute($qp);
+            } else {
+                ep_db()->prepare('INSERT INTO ep_quizzes (code, title, standard, subject, medium, topic, time_limit, show_answers, questions_json) VALUES (?,?,?,?,?,?,?,?,?)')
+                    ->execute(array_merge([ep_quiz_code()], $qp));
+                $quizId = (int)ep_db()->lastInsertId();
+            }
+        } else {
+            $quizId = null;
+        }
+        $hp = [
+            !empty($body['hw_date']) ? $body['hw_date'] : date('Y-m-d'), $standard, trim((string)($body['division'] ?? '')), trim((string)($body['std_label'] ?? '')),
+            $subject, $medium, (int)($body['chapter_id'] ?? 0) ?: null, $topic, trim((string)($body['teacher'] ?? '')),
+            trim((string)($body['title'] ?? '')) ?: 'गृहपाठ', trim((string)($body['note'] ?? '')), json_encode($items, JSON_UNESCAPED_UNICODE), $quizId,
+        ];
+        if (!empty($body['hw_id'])) {
+            $hp[] = (int)$body['hw_id'];
+            ep_db()->prepare('UPDATE ep_homework SET hw_date=?, standard=?, division=?, std_label=?, subject=?, medium=?, chapter_id=?, topic=?, teacher=?, title=?, note=?, items_json=?, quiz_id=? WHERE hw_id=?')->execute($hp);
+            ep_json(['status' => 'success', 'hw_id' => (int)$body['hw_id'], 'quiz_id' => $quizId]);
+        }
+        ep_db()->prepare('INSERT INTO ep_homework (hw_date, standard, division, std_label, subject, medium, chapter_id, topic, teacher, title, note, items_json, quiz_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)')->execute($hp);
+        ep_json(['status' => 'success', 'hw_id' => (int)ep_db()->lastInsertId(), 'quiz_id' => $quizId]);
+
+    case 'delete_homework':
+        $hw = ep_homework((int)($body['hw_id'] ?? 0));
+        if ($hw) {
+            ep_db()->prepare('DELETE FROM ep_homework WHERE hw_id = ?')->execute([(int)$hw['hw_id']]);
+            if ($hw['quiz_id']) ep_db()->prepare('DELETE FROM ep_quizzes WHERE quiz_id = ?')->execute([(int)$hw['quiz_id']]);
+        }
+        ep_json(['status' => 'success']);
+
+    case 'quiz_submit':
+        // public: student submits answers -> stored + scored
+        $quiz = ep_quiz_by_code(trim((string)($body['code'] ?? '')));
+        $name = trim((string)($body['student_name'] ?? ''));
+        if (!$quiz || $name === '') {
+            ep_json(['status' => 'error', 'message' => 'Quiz not found or name missing']);
+        }
+        $answers = [];
+        foreach ($quiz['questions'] as $i => $q) {
+            $a = $body['answers'][$i] ?? null;
+            $answers[$i] = $a === null ? null : ($q['kind'] === 'mcq' ? (int)$a : mb_substr(trim((string)$a), 0, 200));
+        }
+        [$score, $total, $detail] = ep_quiz_score($quiz, $answers);
+        ep_db()->prepare('INSERT INTO ep_quiz_attempts (quiz_id, student_name, roll_no, division, answers_json, score, total) VALUES (?,?,?,?,?,?,?)')
+            ->execute([(int)$quiz['quiz_id'], mb_substr($name, 0, 120), mb_substr(trim((string)($body['roll_no'] ?? '')), 0, 20), mb_substr(trim((string)($body['division'] ?? '')), 0, 20),
+                json_encode($answers, JSON_UNESCAPED_UNICODE), $score, $total]);
+        $resp = ['status' => 'success', 'score' => $score, 'total' => $total, 'detail' => $detail];
+        if ($quiz['show_answers']) {
+            $resp['answers'] = array_map(fn($q) => $q['answer'], $quiz['questions']);
+        }
+        ep_json($resp);
 
     default:
         http_response_code(400);

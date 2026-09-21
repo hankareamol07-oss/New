@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach (['school_name', 'school_address', 'paper_footer', 'watermark_text'] as $k) {
         ep_save_setting($k, trim($_POST[$k] ?? ''));
     }
+    ep_save_setting('public_base_url', rtrim(trim($_POST['public_base_url'] ?? ''), '/'));
     ep_save_setting('watermark_logo', !empty($_POST['watermark_logo']) ? '1' : '0');
     if (!empty($_FILES['school_logo']['tmp_name']) && is_uploaded_file($_FILES['school_logo']['tmp_name'])) {
         $info = @getimagesize($_FILES['school_logo']['tmp_name']);
@@ -71,6 +72,11 @@ require __DIR__ . '/includes/header.php';
   <div class="mb-3">
     <label class="form-label">Watermark Text (optional)</label>
     <input class="form-control" name="watermark_text" value="<?= h(ep_setting('watermark_text')) ?>" placeholder="Printed faintly behind the paper">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Public URL of this module (for quiz links / QR codes)</label>
+    <input class="form-control" name="public_base_url" value="<?= h(ep_setting('public_base_url')) ?>" placeholder="https://www.yourschool.in/exam_paper">
+    <div class="form-text">Address students' phones can reach. Leave blank to use this server's own address.</div>
   </div>
   <div class="mb-3 form-check">
     <input class="form-check-input" type="checkbox" name="watermark_logo" value="1" id="wmLogo" <?= ep_setting('watermark_logo') === '1' ? 'checked' : '' ?>>

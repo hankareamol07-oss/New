@@ -146,6 +146,41 @@ extracted exercise questions.
 > characters/words may be wrong. Every question is editable in the builder
 > before saving. Chapter titles come from the book's अनुक्रमणिका page.
 
+## Daily homework + topic quiz (दैनिक गृहपाठ)
+
+```bash
+mysql -u root -p school < db/schema_homework.sql   # ep_homework, ep_quizzes, ep_quiz_attempts
+```
+
+Then in **School Settings** fill *Public URL of this module* (e.g.
+`https://www.yourschool.in/exam_paper`) — it is the address printed in the quiz
+link / QR code, so it must be reachable from students' phones.
+
+`homework.php` (Daily Homework) → **New homework**: pick date, class, division,
+textbook subject and today's chapter (आजचा टाचण विषय); add homework items by
+typing, **5 from textbook स्वाध्याय** (random exercise questions of that chapter)
+or **Browse textbook**; add a note for parents. Section 4 builds the **topic
+quiz (10–15 questions)**: **Auto-fill MCQs** pulls auto-scorable MCQs from the
+downloadpapers question bank — the bank chapter best matching the textbook
+chapter title is pre-selected (★), change the source if the match is wrong.
+Questions can also be added by hand (MCQ or typed answer) or taken from the
+textbook exercise (you type the expected answer). **Save & open PDF** opens the
+A4 sheet (`homework_view.php`): school header, items (optionally with the
+textbook figure page), note, and at the bottom a boxed **quiz link + QR code**
+(`quiz.php?c=CODE`). Print / Save as PDF and share it on WhatsApp etc.; the
+toolbar also has *Copy quiz link*.
+
+Students open the link on a phone, enter name / roll / division, answer within
+the optional time limit and immediately see their score (and correct answers,
+if enabled). Teachers see attempts, average and question-wise correct % in
+`quiz_results.php` (CSV export), linked from the homework list.
+
+> Classes 1–4 have no MCQ bank on downloadpapers, so for them build the quiz
+> from textbook questions / manual MCQs. Tachan integration: the chapter
+> drop-down is the same textbook chapter list the tachan DB was built from; to
+> pre-select today's tachan chapter automatically, import the tachan data and
+> link it on `chapter_id`.
+
 ## Question images
 
 Questions whose source had an image are flagged (`has_image`, `has_image2`,
