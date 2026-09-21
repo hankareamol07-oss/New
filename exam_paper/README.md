@@ -112,6 +112,40 @@ ALTER TABLE ep_papers
 INSERT IGNORE INTO ep_settings VALUES ('watermark_logo', '0');
 ```
 
+## संकलित / आकारिक मूल्यमापन चाचणी (textbook exercise papers)
+
+`assessment_paper.php` builds Summative (संकलित) / Formative (आकारिक) tests from
+the **स्वाध्याय / Exercise questions of the Balbharati textbooks** (new syllabus,
+std 1–8). The textbook PDFs are scanned, so every page was OCR'd
+(Tesseract, Marathi + Hindi + English) and the exercise blocks below each
+chapter were parsed into `data/book_questions.json`
+(`books/extract_questions.py` in the working folder produced it). Each question
+carries class, subject, medium, chapter, textbook page, question type
+(`fill_blank`, `true_false`, `match`, `one_word`, `one_sentence`,
+`short_answer`, `reason`, `difference`, `solve`, `draw`, `grammar`, …) and — when
+the exercise refers to a picture/figure — a rendered page image
+(`data/book_pages/<book_id>/<page>.jpg`, served via `book_page.php?f=…`).
+
+Install / refresh:
+
+```bash
+mysql -u root -p school < db/schema_books.sql
+php import_books.php          # ep_books, ep_book_chapters, ep_book_questions, ep_paper_models
+```
+
+Workflow: pick test type & number (संकलित १ defaults to the first half of the
+chapters, संकलित २ to the second half), class, textbook subject and chapters →
+**Load layout** (standard layout per subject, or the section layout of a real
+paper parsed from the minishala.com sample papers, stored in `ep_paper_models`)
+→ **Auto-fill** every section with matching exercise questions → edit / swap /
+browse (🔀, Browse, Own question) → **Save & Preview** → print / PDF with the
+school header. `book_bank.php` (Textbook Bank) lets you browse and search all
+extracted exercise questions.
+
+> OCR caveat: question text is OCR output from scanned books, so a few
+> characters/words may be wrong. Every question is editable in the builder
+> before saving. Chapter titles come from the book's अनुक्रमणिका page.
+
 ## Question images
 
 Questions whose source had an image are flagged (`has_image`, `has_image2`,

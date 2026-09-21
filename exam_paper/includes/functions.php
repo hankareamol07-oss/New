@@ -157,7 +157,14 @@ function ep_paper(int $paperId): ?array
     if (!$p) {
         return null;
     }
-    $p['sections'] = json_decode($p['paper_json'], true) ?: [];
+    $data = json_decode($p['paper_json'], true) ?: [];
+    if (isset($data['sections'])) {           // assessment papers: {exam_type, test_no, standard, subject, medium, sections}
+        $p['meta'] = $data;
+        $p['sections'] = $data['sections'];
+    } else {
+        $p['meta'] = [];
+        $p['sections'] = $data;
+    }
     return $p;
 }
 
@@ -186,6 +193,144 @@ function ep_source_tree(): array
     }
     unset($std);
     return array_values(array_filter($tree, fn($s) => $s['subjects']));
+}
+
+/* ---------------- Textbook (Balbharati) exercise bank ---------------- */
+
+function ep_decode_book_question(array $q): array
+{
+    $q['page_image_url'] = $q['page_image'] ? EP_BASE_URL . '/book_page.php?f=' . rawurlencode($q['page_image']) : null;
+    return $q;
+}
+
+/** Classes -> subjects -> books -> chapters (+ question counts) for the textbook bank. */
+function ep_book_tree(): array
+{
+    $rows = ep_db()->query('SELECT b.book_id, b.standard, b.subject, b.medium, b.title, c.chapter_id, c.chapter_no, c.title chapter_title,
+                                   (SELECT COUNT(*) FROM ep_book_questions q WHERE q.chapter_id = c.chapter_id) n
+                            FROM ep_books b LEFT JOIN ep_book_chapters c ON c.book_id = b.book_id
+                            ORDER BY b.standard, b.subject, b.medium, b.book_id, c.chapter_no')->fetchAll();
+    $tree = [];
+    foreach ($rows as $r) {
+        $std = (int)$r['standard'];
+        $tree[$std] ??= ['standard' => $std, 'subjects' => []];
+        $key = $r['subject'] . ' (' . $r['medium'] . ')';
+        $tree[$std]['subjects'][$key] ??= ['name' => $key, 'subject' => $r['subject'], 'medium' => $r['medium'], 'books' => [], 'n' => 0];
+        $bid = (int)$r['book_id'];
+        $tree[$std]['subjects'][$key]['books'][$bid] ??= ['book_id' => $bid, 'title' => $r['title'], 'chapters' => [], 'n' => 0];
+        if ($r['chapter_id']) {
+            $tree[$std]['subjects'][$key]['books'][$bid]['chapters'][] = ['chapter_id' => (int)$r['chapter_id'], 'no' => (int)$r['chapter_no'], 'title' => $r['chapter_title'], 'n' => (int)$r['n']];
+            $tree[$std]['subjects'][$key]['books'][$bid]['n'] += (int)$r['n'];
+            $tree[$std]['subjects'][$key]['n'] += (int)$r['n'];
+        }
+    }
+    foreach ($tree as &$std) {
+        foreach ($std['subjects'] as &$s) {
+            $s['books'] = array_values(array_filter($s['books'], fn($b) => $b['n'] > 0));
+        }
+        unset($s);
+        $std['subjects'] = array_values(array_filter($std['subjects'], fn($s) => $s['n'] > 0));
+    }
+    unset($std);
+    return array_values(array_filter($tree, fn($s) => $s['subjects']));
+}
+
+function ep_book_questions_by_ids(array $ids): array
+{
+    $ids = array_values(array_filter(array_map('intval', $ids)));
+    if (!$ids) {
+        return [];
+    }
+    $st = ep_db()->prepare('SELECT q.*, c.title chapter_title, c.chapter_no FROM ep_book_questions q LEFT JOIN ep_book_chapters c ON c.chapter_id = q.chapter_id
+                            WHERE q.bq_id IN (' . implode(',', array_fill(0, count($ids), '?')) . ')');
+    $st->execute($ids);
+    $byId = [];
+    foreach ($st->fetchAll() as $q) {
+        $byId[$q['bq_id']] = ep_decode_book_question($q);
+    }
+    $ordered = [];
+    foreach ($ids as $id) {
+        if (isset($byId[$id])) {
+            $ordered[] = $byId[$id];
+        }
+    }
+    return $ordered;
+}
+
+/** Question types that can stand in for a requested type when the exact one is scarce. */
+function ep_book_qtype_group(string $qtype): array
+{
+    $groups = [
+        ['fill_blank'], ['true_false'], ['match'], ['mcq', 'odd_one'],
+        ['one_word', 'one_sentence', 'short_answer', 'descriptive', 'reason', 'difference', 'define', 'explain'],
+        ['solve', 'draw'], ['vocabulary', 'grammar'], ['activity'],
+    ];
+    foreach ($groups as $g) {
+        if (in_array($qtype, $g, true)) {
+            return $g;
+        }
+    }
+    return [$qtype];
+}
+
+/** Random textbook questions from the given chapters; exact qtype first, then related types. */
+function ep_book_random(array $chapterIds, string $qtype, int $count, array $exclude = []): array
+{
+    $chapterIds = array_values(array_filter(array_map('intval', $chapterIds)));
+    if (!$chapterIds || $count <= 0) {
+        return [];
+    }
+    $exclude = array_values(array_filter(array_map('intval', $exclude)));
+    $pick = function (array $types, int $n) use ($chapterIds, &$exclude): array {
+        $params = $chapterIds;
+        $sql = 'SELECT * FROM ep_book_questions WHERE chapter_id IN (' . implode(',', array_fill(0, count($chapterIds), '?')) . ')';
+        if ($types) {
+            $sql .= ' AND qtype IN (' . implode(',', array_fill(0, count($types), '?')) . ')';
+            $params = array_merge($params, $types);
+        }
+        if ($exclude) {
+            $sql .= ' AND bq_id NOT IN (' . implode(',', array_fill(0, count($exclude), '?')) . ')';
+            $params = array_merge($params, $exclude);
+        }
+        $st = ep_db()->prepare($sql . ' ORDER BY RAND() LIMIT ' . (int)$n);
+        $st->execute($params);
+        $rows = array_map('ep_decode_book_question', $st->fetchAll());
+        foreach ($rows as $r) {
+            $exclude[] = (int)$r['bq_id'];
+        }
+        return $rows;
+    };
+    $out = $qtype !== '' ? $pick([$qtype], $count) : [];
+    if (count($out) < $count && $qtype !== '') {
+        $out = array_merge($out, $pick(ep_book_qtype_group($qtype), $count - count($out)));
+    }
+    if (count($out) < $count) {
+        $out = array_merge($out, $pick([], $count - count($out)));
+    }
+    return $out;
+}
+
+/** Reference संकलित / आकारिक paper structures (from real papers) for a class + subject. */
+function ep_paper_models(string $examType, ?int $standard, string $subject = ''): array
+{
+    $sql = 'SELECT * FROM ep_paper_models WHERE exam_type = ?';
+    $params = [$examType];
+    if ($standard) {
+        $sql .= ' AND standard = ?';
+        $params[] = $standard;
+    }
+    if ($subject !== '') {
+        $sql .= ' AND subject = ?';
+        $params[] = $subject;
+    }
+    $st = ep_db()->prepare($sql . ' ORDER BY standard, subject, test_no, model_id');
+    $st->execute($params);
+    $rows = $st->fetchAll();
+    foreach ($rows as &$r) {
+        $r['sections'] = json_decode($r['sections_json'], true) ?: [];
+        unset($r['sections_json']);
+    }
+    return $rows;
 }
 
 function ep_json(array $data): void

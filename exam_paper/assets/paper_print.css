@@ -56,3 +56,16 @@ ol.subq { list-style: lower-roman; padding-left: 22px; margin: 2px 0; }
 .answer-grid th { width: 28px; text-align: center; background: #f0f0f0; }
 .answers-heading { font-size: 12pt; margin: 6px 0; border-bottom: 1px solid #999; }
 @media print { .answer-grid th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+
+/* ---- संकलित / आकारिक मूल्यमापन layout ---- */
+.sheet.assessment .qsection { margin-top: 12px; }
+.sheet.assessment .qsection.sub-section { margin-top: 6px; }
+.sheet.assessment .sec-title { border-bottom: 0; margin-bottom: 2px; }
+.sheet.assessment .q-label { display: inline-block; min-width: 52px; }
+.sheet.assessment ol.items { list-style: none; padding-left: 0; }
+.sheet.assessment ol.items > li { display: flex; gap: 6px; padding-left: 52px; margin-bottom: 4px; }
+.sheet.assessment .item-no { flex: 0 0 26px; }
+.sheet.assessment .qtext { flex: 1; }
+.sheet.assessment .page-img { max-width: 120mm; max-height: 90mm; border: 1px solid #ccc; }
+.sheet.assessment.two-col .body { column-count: 2; }
+.sheet.assessment.two-col ol.items > li { padding-left: 0; }

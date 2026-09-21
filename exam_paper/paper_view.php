@@ -6,6 +6,10 @@ if (!$paper) {
     http_response_code(404);
     die('Paper not found');
 }
+if (($paper['paper_type'] ?? 'regular') === 'assessment') {
+    require __DIR__ . '/paper_view_assessment.php';
+    exit;
+}
 $showAnswers = !empty($_GET['answers']);
 $allIds = [];
 foreach ($paper['sections'] as $s) {

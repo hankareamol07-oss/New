@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/patterns.php';
+require_once __DIR__ . '/includes/assessment_patterns.php';
 
 $action = $_GET['action'] ?? $_POST['action'] ?? '';
 $body = json_decode(file_get_contents('php://input'), true) ?: [];
@@ -121,6 +122,83 @@ switch ($action) {
 
     case 'source_tree':
         ep_json(ep_source_tree());
+
+    /* ---------- textbook bank + संकलित / आकारिक papers ---------- */
+    case 'book_tree':
+        ep_json(ep_book_tree());
+
+    case 'book_random':
+        ep_json(ep_book_random($body['chapter_ids'] ?? [], trim($body['qtype'] ?? ''), (int)($body['count'] ?? 1), $body['exclude'] ?? []));
+
+    case 'book_browse':
+        $ids = array_values(array_filter(array_map('intval', $body['chapter_ids'] ?? [])));
+        $params = [];
+        $where = '1=1';
+        if ($ids) { $where .= ' AND q.chapter_id IN (' . implode(',', array_fill(0, count($ids), '?')) . ')'; $params = $ids; }
+        if (!empty($body['standard'])) { $where .= ' AND q.standard = ?'; $params[] = (int)$body['standard']; }
+        if (!empty($body['qtype'])) { $where .= ' AND q.qtype = ?'; $params[] = trim($body['qtype']); }
+        if (!empty($body['search'])) { $where .= ' AND (q.text LIKE ? OR q.instruction LIKE ?)'; $params[] = '%' . $body['search'] . '%'; $params[] = '%' . $body['search'] . '%'; }
+        if (!$ids && empty($body['search'])) ep_json(['total' => 0, 'items' => []]);
+        $page = max(0, (int)($body['page'] ?? 0));
+        $size = 20;
+        $total = ep_db()->prepare("SELECT COUNT(*) FROM ep_book_questions q WHERE $where");
+        $total->execute($params);
+        $st = ep_db()->prepare("SELECT q.*, c.title chapter_title, c.chapter_no FROM ep_book_questions q LEFT JOIN ep_book_chapters c ON c.chapter_id = q.chapter_id
+                                WHERE $where ORDER BY q.page, q.bq_id LIMIT $size OFFSET " . ($page * $size));
+        $st->execute($params);
+        ep_json(['total' => (int)$total->fetchColumn(), 'page' => $page, 'size' => $size, 'items' => array_map('ep_decode_book_question', $st->fetchAll())]);
+
+    case 'assessment_layout':
+        ep_json(ep_assessment_layout(($_GET['exam_type'] ?? '') === 'aakarik' ? 'aakarik' : 'sankalit', trim($_GET['subject'] ?? ''), trim($_GET['medium'] ?? 'Marathi')));
+
+    case 'paper_models':
+        ep_json(ep_paper_models(($_GET['exam_type'] ?? 'sankalit') === 'aakarik' ? 'aakarik' : 'sankalit',
+            (int)($_GET['standard'] ?? 0) ?: null, trim($_GET['subject'] ?? '')));
+
+    case 'save_assessment':
+        // sections: [{q_no, sub, instruction, marks, qtype, chapter_ids[], items:[{bq_id, text, page_image}]}]
+        $sections = $body['sections'] ?? [];
+        if (!$sections) ep_json(['status' => 'error', 'message' => 'Add at least one question section']);
+        $clean = [];
+        $totalMarks = 0;
+        foreach ($sections as $s) {
+            $items = [];
+            foreach ($s['items'] ?? [] as $it) {
+                $text = trim((string)($it['text'] ?? ''));
+                if ($text === '') continue;
+                $img = preg_match('~^\d+/\d{3}\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
+                $items[] = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
+            }
+            $instruction = trim((string)($s['instruction'] ?? ''));
+            if (!$items && $instruction === '') continue;
+            $clean[] = [
+                'q_no' => (int)($s['q_no'] ?? 0), 'sub' => trim((string)($s['sub'] ?? '')), 'instruction' => $instruction,
+                'marks' => (float)($s['marks'] ?? 0), 'qtype' => trim((string)($s['qtype'] ?? '')),
+                'chapter_ids' => array_values(array_filter(array_map('intval', $s['chapter_ids'] ?? []))), 'items' => $items,
+            ];
+            $totalMarks += (float)($s['marks'] ?? 0);
+        }
+        if (!$clean) ep_json(['status' => 'error', 'message' => 'Every section needs an instruction or at least one question']);
+        $examType = ($body['exam_type'] ?? '') === 'aakarik' ? 'aakarik' : 'sankalit';
+        $meta = [
+            'exam_type' => $examType, 'test_no' => (int)($body['test_no'] ?? 1) ?: 1, 'standard' => (int)($body['standard'] ?? 0),
+            'subject' => trim((string)($body['subject'] ?? '')), 'medium' => trim((string)($body['medium'] ?? '')),
+            'student_fields' => !empty($body['student_fields']), 'sections' => $clean,
+        ];
+        $params = [
+            trim($body['title'] ?? '') ?: ($examType === 'aakarik' ? 'आकारिक मूल्यमापन चाचणी' : 'संकलित मूल्यमापन चाचणी'),
+            trim($body['exam_name'] ?? ''), trim($body['std_label'] ?? ''),
+            !empty($body['exam_date']) ? $body['exam_date'] : null, trim($body['duration'] ?? ''),
+            (float)($body['total_marks'] ?? 0) ?: $totalMarks, trim($body['instructions'] ?? ''),
+            json_encode($meta, JSON_UNESCAPED_UNICODE),
+        ];
+        if (!empty($body['paper_id'])) {
+            $params[] = (int)$body['paper_id'];
+            ep_db()->prepare("UPDATE ep_papers SET title=?, exam_name=?, std_label=?, exam_date=?, duration=?, total_marks=?, instructions=?, paper_json=?, paper_type='assessment', standard_id=NULL, subject_id=NULL, template_id=NULL WHERE paper_id=?")->execute($params);
+            ep_json(['status' => 'success', 'paper_id' => (int)$body['paper_id']]);
+        }
+        ep_db()->prepare("INSERT INTO ep_papers (title, exam_name, std_label, exam_date, duration, total_marks, instructions, paper_json, paper_type) VALUES (?,?,?,?,?,?,?,?,'assessment')")->execute($params);
+        ep_json(['status' => 'success', 'paper_id' => (int)ep_db()->lastInsertId()]);
 
     default:
         http_response_code(400);
