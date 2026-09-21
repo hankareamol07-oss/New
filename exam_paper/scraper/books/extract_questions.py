@@ -13,10 +13,10 @@ OCR = os.path.join(ROOT, 'ocr')
 PAGES_OUT = os.path.join(ROOT, 'pages')
 DEV = str.maketrans('०१२३४५६७८९', '0123456789')
 
-TOC_RE = re.compile(r'(अनुक्रमणिका|अनुक्रमाणिका|अनुक्रम|विषय.?सूची|विषय.?सुची|पाठाचे नाव|पाठ का नाम|लेखक/कवी|Contents|CONTENTS|Lesson\s*Name|Title of the (?:lesson|unit)|Page\s*No)', re.U | re.I)
-TOC_HEADER = re.compile(r'(अनुक्रम|पाठाचे नाव|पाठ का नाम|लेखक|पृष्ठ|पान|क्रमांक|अ\.\s*क्र|Contents|Page|Sr\.|Lesson|Title|No\.|Unit)', re.U | re.I)
+TOC_RE = re.compile(r'(अनुक्रमणिका|अनुक्रमाणिका|अनुक्रम|विषय.?सूची|विषय.?सुची|पाठाचे नाव|पाठ का नाम|लेखक/कवी|Contents|CONTENTS|Lesson\s*Name|Name of the (?:Chapter|Lesson)|Title of the (?:lesson|unit)|Page\s*No)', re.U | re.I)
+TOC_HEADER = re.compile(r'(अनुक्रम|पाठाचे नाव|पाठ का नाम|लेखक|पृष्ठ|पान|क्रमांक|अ\.\s*क्र|Contents|Page|Sr\.|Lesson|Title|No\.|Unit|Name of the|Expected|Periods)', re.U | re.I)
 # "१२. title ...... ४५"  |  "« title | ४५"  |  "२. title" (page unreadable)
-TOC_LINE = re.compile(r'^(?P<pre>\W{0,4}(?:[0-9०-९]{1,2}|[a-zA-Z«*=]{1,2})?\s*[.,।)\]|]?\s*[|।\]\[]?\s*)?(?P<title>[^\d०-९\W][^|]{2,80}?)\s*(?:[|।]\s*)?(?:[.…_\-|।\s]*?(?P<page>[0-9०-९]{1,3}))?\W{0,3}$', re.U)
+TOC_LINE = re.compile(r'^(?P<pre>\W{0,4}(?:[0-9०-९]{1,2}\s*[.,।)\]|]?|[a-zA-Z«*=]{1,2}\s*[.,।)\]|])?\s*[|।\]\[]?\s*)?(?P<title>[^\d०-९\W][^|]{2,80}?)\s*(?:[|।]\s*)?(?:[.…_\-|।\s]*?(?P<page>[0-9०-९]{1,3}))?\W{0,3}$', re.U)
 NUM_LINE = re.compile(r'^\s*[|।(\[]?\s*([0-9०-९]{1,2})\s*[.)\]।|]\s*(?P<title>\S.{2,70})$', re.U)
 
 INSTR_KW = ('उत्तरे लिहा', 'उत्तर लिहा', 'उत्तरे द्या', 'उत्तर द्या', 'उत्तरे सांगा', 'उत्तरे शोधा', 'रिकाम्या जाग', 'रिक्त स्थान', 'जोड्या',
@@ -35,6 +35,8 @@ BULLET_RE = re.compile(r'^\s*[७●•*e★☆»>+\-–]\s+(?P<t>\S.{4,})$', re
 INLINE_SPLIT = re.compile(r'\s+(?=\(?[0-9०-९]{1,2}\s*[\)\.]\s*\S)', re.U)
 FIGURE_KW = re.compile(r'(चित्र|आकृती|आकृति|नकाशा|तक्ता|तक्त्या|आलेख|कोष्टक|शब्दकोड|figure|picture|diagram|map|graph|table|chart|puzzle|grid|shown|given below|खालील (?:आकृती|चित्र)|दिलेल्या (?:आकृती|चित्र)|पुढील (?:आकृती|चित्र))', re.U | re.I)
 NOISE = re.compile(r'^[\W\d_ ]*$', re.U)
+OUTCOMES_PAGE = re.compile(r'(Learning Outcomes|Curricular|Carricular|Curriculum Objective|अध्ययन निष्पत्ती)', re.I)
+SKIP_PAGE = re.compile(r'(राष्ट्रगीत|प्रतिज्ञा|जनगणमन|National Anthem|Pledge|Preamble|संविधान|Learning Outcomes|Curricular|Carricular|Competenc|Curriculum Objective|अध्ययन निष्पत्ती|समिती|सदस्य|प्रकाशक|Committee|Publisher|Reprint|मुद्रक)', re.I)
 TEACHER = re.compile(r'(शिक्षकांसाठी|For the teacher|शिक्षकों के लिए|अध्ययन निष्पत्ती|Learning Outcomes)', re.U | re.I)
 
 QTYPES = [
@@ -115,15 +117,55 @@ def parse_toc(pages):
     """Return list of (chapter_no, title, printed_page|None) from the contents page(s).
     Chapter numbers are assigned sequentially (OCR of the printed numbers is unreliable)."""
     toc_pages = [p for p in sorted(pages) if p < 20 and TOC_RE.search(pages[p])]
-    if not toc_pages:
-        return []
     # a contents page has many lines ending in a page number
     def score(p):
+        if len(re.findall(r'\d{2}\.\d{2}\.\d{2}', pages[p])) >= 3 or OUTCOMES_PAGE.search(pages[p]):
+            return 0      # learning-outcomes table, not the contents page
         return sum(1 for l in pages[p].splitlines() if re.search(r'[\u0900-\u097FA-Za-z]{3,}.*\s[0-9०-९]{1,3}\W{0,3}$', l.strip()))
-    toc_pages = [p for p in toc_pages if score(p) >= 3]
     if not toc_pages:
-        return []
-    toc_pages = sorted(set(toc_pages + [p + 1 for p in toc_pages if p + 1 in pages and score(p + 1) >= 4]))
+        # heading missed by OCR: look for a page full of "<no> | <title> <page>" lines
+        def numbered(p):
+            return sum(1 for l in pages[p].splitlines()
+                       if re.match(r'^\W{0,3}[0-9०-९]{1,2}\s*[.।|)\]]\s*[\u0900-\u097FA-Za-z][^0-9०-९]{2,45}\s[0-9०-९]{1,3}\W{0,3}$', l.strip()))
+        cands = [p for p in sorted(pages) if 2 <= p < 20 and numbered(p) >= 5]
+        if not cands:
+            return []
+        best = max(cands, key=numbered)
+        toc_pages = [best]
+    toc_pages = sorted(set(toc_pages + [p + d for p in toc_pages for d in (-1, 1) if p + d in pages and score(p + d) >= 4]))
+    scored = [p for p in toc_pages if score(p) >= 3]
+    if not scored:
+        # page numbers were in a separate column the OCR dropped: take the title lines only
+        heads = [p for p in toc_pages
+                 if any(len(l.strip()) <= 40 and re.search(r'(अनुक्रमणिका|अनुक्रम|Contents|CONTENTS|पाठाचे नाव|पाठ का नाम)', l, re.I) for l in pages[p].splitlines())
+                 and len(re.findall(r'\d{2}\.\d{2}\.\d{2}', pages[p])) < 3 and not SKIP_PAGE.search(pages[p])]
+        def title_line(l):
+            l = re.sub(r'[\s.…_\-–]*[0-9०-९]{1,3}(?:\s*(?:ते|to|से|[-–])\s*[0-9०-९]{1,3})?\W{0,3}$', '', l.strip())
+            return (3 <= len(l) <= 45 and letters(l) >= 3 and len(l.split()) <= 7 and not NOISE.match(l)
+                    and not re.search(r'[.,;:!?]$', l) and not re.search(r'\d{2,}', l)
+                    and max(l.lower().count(c) for c in set(l.lower()) if c.isalpha()) <= max(3, len(l) // 3))
+        if not heads:
+            # heading lost by OCR: a page that is mostly short title lines (English readers list lessons this way)
+            def ratio(p):
+                ls = [l for l in pages[p].splitlines() if l.strip()]
+                n = sum(1 for l in ls if title_line(l))
+                return n if ls and n >= 6 and n / len(ls) >= 0.7 else 0
+            cands = [p for p in sorted(pages) if 3 <= p < 20 and ratio(p) and not SKIP_PAGE.search(pages[p])]
+            if not cands:
+                return []
+            heads = [max(cands, key=ratio)]
+        entries = []
+        for raw in pages[heads[0]].splitlines():
+            if re.match(r'^\W{0,3}(Unit|Part|Section|विभाग|भाग|इकाई)\s+\S{1,6}\W{0,3}$', raw.strip(), re.I):
+                continue
+            line = clean(re.sub(r'^\W{0,4}(?:[0-9०-९]{1,2})?\s*[.।)|\]]?\s*', '', raw.strip()))
+            if letters(line) < 3 or TOC_HEADER.search(line) or len(line) > 45 or NOISE.match(line) or not title_line(line):
+                continue
+            if re.search(r'(?:प्रा\.|श्री|डॉ\.|पान|पृष्ठ|सूचना|प्रस्तावना|मुखपृष्ठ)', line) or re.search(r'[.,;:]$', line) or len(line.split()) > 7:
+                continue
+            entries.append([line, None])
+        return [(i + 1, t, pg) for i, (t, pg) in enumerate(entries)] if len(entries) >= 3 else []
+    toc_pages = sorted(set(scored + [p + d for p in scored for d in (-1, 1) if p + d in pages and score(p + d) >= 4]))
     entries = []
     for p in toc_pages:
         for raw in pages[p].splitlines():
@@ -141,6 +183,11 @@ def parse_toc(pages):
                 continue
             if pg is None and not pre:
                 continue           # plain prose line
+            if pg is None:
+                m2 = re.search(r'\s([0-9०-९]{1,3})\s*(?:ते|to|से|[-–])\s*[0-9०-९]{1,3}\W*$', title)
+                if m2:
+                    pg = d2i(m2.group(1))
+                    title = clean(title[:m2.start()])
             if pg is not None and pg > 400:
                 continue
             entries.append([title, pg])
@@ -187,6 +234,19 @@ def chapter_ranges(toc, offset, pages, first_content):
             starts.append(pg + offset)
         else:
             starts.append(None)
+    # locate chapters whose printed page is unknown by finding their title as a heading
+    pos = first_content
+    for i, (no, title, pg) in enumerate(toc):
+        if starts[i] is not None:
+            pos = max(pos, starts[i])
+            continue
+        nxt = next((starts[j] for j in range(i + 1, len(starts)) if starts[j] is not None), last)
+        for p in range(pos, min(nxt, last) + 1):
+            head = [l.strip() for l in pages.get(p, '').splitlines()[:8] if l.strip()]
+            if any(title[:10] in l or similar(title, l) > 0.7 for l in head):
+                starts[i] = p
+                pos = p + 1
+                break
     # interpolate missing starts
     for i, s in enumerate(starts):
         if s is None:
@@ -271,6 +331,39 @@ def extract_from_page(text, page_no):
     return [s for s in sections if s['items'] or (s['kind'] == 'section' and '?' in s['instruction'])]
 
 
+CHAPTER_END = re.compile(r'^(?:[^\n]{0,12}\W)?(स्वाध्याय|Exercises?|अभ्यास|Let.?s (?:do|practise))\b(?:[^\w\n]{0,6}\w{0,6}){0,3}\W*$', re.U | re.I | re.M)
+LESSON_WORD = {'mr': 'पाठ', 'hi': 'पाठ', 'en': 'Lesson'}
+PAGE_WORD = {'mr': 'पृ.', 'hi': 'पृ.', 'en': 'pp.'}
+
+
+def pseudo_chapters(pages, lang, first_content, min_span=4, block=12):
+    """No readable contents page: split the book at the end-of-chapter exercise headings
+    (a chapter runs from the page after the previous स्वाध्याय/Exercise up to and including its own).
+    Falls back to fixed page blocks when no such headings are found."""
+    last = max(pages)
+    ends = []
+    for p in sorted(pages):
+        if p < first_content or not CHAPTER_END.search(pages[p]):
+            continue
+        if ends and p - ends[-1] <= 1:      # exercise continues on the next page
+            ends[-1] = p
+        elif ends and p - ends[-1] < min_span:
+            ends[-1] = p
+        else:
+            ends.append(p)
+    if len(ends) < 2:
+        ends = list(range(first_content + block - 1, last, block))
+    if not ends or ends[-1] < last:
+        ends.append(last)
+    chapters, start = [], 0
+    for i, e in enumerate(ends, 1):
+        label = f"{LESSON_WORD[lang]} {i}"
+        rng = f"({PAGE_WORD[lang]} {start + 1}-{e + 1})"
+        chapters.append({'no': i, 'title': f"{label} {rng}", 'start': start, 'end': e})
+        start = e + 1
+    return chapters
+
+
 def render_page(pdf, page_no, out_jpg):
     if os.path.exists(out_jpg):
         return
@@ -315,14 +408,15 @@ def main():
         r['Subject'] = subject
         toc = parse_toc(pages)
         offset = find_offset(toc, pages) if toc else None
-        first_content = (max(p for p in pages if p < 20 and TOC_RE.search(pages[p])) + 1) if toc else 4
+        toc_hits = [p for p in pages if p < 20 and TOC_RE.search(pages[p])] or [p for p in pages if p < 20 and any(t[:12] in pages[p] for _, t, _ in toc[:3])]
+        first_content = (max(toc_hits) + 1) if toc and toc_hits else 4
         if toc and offset is None:
             # chapter headings are usually decorative art (not OCR'd): assume printed page 1 follows the front matter
             first_pg = next((pg for _, _, pg in toc if pg is not None), 1)
             offset = first_content - first_pg
         if offset is not None and not 0 <= offset <= 30:
             offset = first_content - 1
-        chapters = chapter_ranges(toc, offset, pages, first_content) if toc else [{'no': 0, 'title': '', 'start': 0, 'end': max(pages)}]
+        chapters = chapter_ranges(toc, offset, pages, first_content) if toc else pseudo_chapters(pages, lang, first_content)
         pdf = find_pdf(r['File'])
         nq = 0
         for ch in chapters:
