@@ -1,0 +1,4 @@
+exam_paper/uploads/*
+!exam_paper/uploads/.gitkeep
+__pycache__/
+*.log

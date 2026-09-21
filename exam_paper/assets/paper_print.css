@@ -1,0 +1,58 @@
+@page { size: A4; margin: 12mm 14mm; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #e9ecef; font-family: "Noto Sans", "Noto Sans Devanagari", "Mangal", Arial, sans-serif; font-size: 12pt; color: #000; line-height: 1.4; }
+.toolbar { position: sticky; top: 0; background: #212529; color: #fff; padding: 8px 16px; display: flex; gap: 14px; align-items: center; z-index: 10; }
+.toolbar button { background: #0d6efd; color: #fff; border: 0; border-radius: 4px; padding: 6px 14px; cursor: pointer; font-size: 14px; }
+.toolbar a { color: #9ec5fe; text-decoration: none; font-size: 14px; }
+.toolbar label { margin-left: auto; font-size: 13px; }
+
+.sheet { position: relative; background: #fff; width: 210mm; min-height: 297mm; margin: 16px auto; padding: 12mm 14mm; box-shadow: 0 0 8px rgba(0,0,0,.2); }
+.watermark { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(-30deg); font-size: 48pt; color: rgba(0,0,0,.06); white-space: nowrap; pointer-events: none; }
+
+.paper-header { display: flex; align-items: center; gap: 12px; border-bottom: 2px solid #000; padding-bottom: 6px; }
+.paper-header .logo, .paper-header .logo-spacer { width: 22mm; height: 22mm; object-fit: contain; flex: 0 0 22mm; }
+.paper-header .school { flex: 1; text-align: center; }
+.paper-header h1 { margin: 0; font-size: 20pt; text-transform: uppercase; letter-spacing: .5px; }
+.paper-header .addr { font-size: 10pt; }
+.paper-header h2 { margin: 4px 0 0; font-size: 14pt; font-weight: 600; }
+
+.meta { width: 100%; margin-top: 6px; border-collapse: collapse; }
+.meta td { padding: 2px 0; width: 33%; }
+.meta .c { text-align: center; } .meta .r { text-align: right; }
+.muted { color: #555; font-size: 10pt; }
+.student-line { border-bottom: 1px solid #000; padding-bottom: 6px; margin-bottom: 8px; }
+.instructions { font-size: 10.5pt; border: 1px dashed #666; padding: 4px 8px; margin-bottom: 8px; }
+.instructions ol { margin: 2px 0 0 18px; padding: 0; }
+
+.qsection { margin-top: 10px; break-inside: avoid-column; }
+.sec-title { display: flex; justify-content: space-between; font-weight: 700; border-bottom: 1px solid #999; margin-bottom: 4px; }
+ol.questions { margin: 0; padding-left: 22px; }
+ol.questions > li { margin-bottom: 6px; break-inside: avoid; }
+ol.subq { list-style: lower-roman; padding-left: 22px; margin: 2px 0; }
+.passage { font-style: italic; margin-bottom: 4px; }
+.qimg { max-width: 70mm; max-height: 60mm; display: block; margin: 4px 0; }
+.answer { color: #0a5c2e; margin-top: 2px; background: #f0fff4; padding: 2px 6px; border-left: 3px solid #198754; }
+.paper-footer { text-align: center; margin-top: 18px; padding-top: 6px; border-top: 1px solid #000; font-weight: 600; }
+
+.two-col .body { column-count: 2; column-gap: 8mm; column-rule: 1px solid #ccc; }
+
+@media print {
+  body { background: #fff; }
+  .no-print { display: none !important; }
+  .sheet { width: auto; min-height: auto; margin: 0; padding: 0; box-shadow: none; }
+  .answer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ---- competitive (Scholarship / Navodaya / NMMS) layout ---- */
+.watermark-logo { position: absolute; top: 50%; left: 50%; width: 60%; max-height: 60%; transform: translate(-50%, -50%); opacity: .08; pointer-events: none; }
+.sheet.competitive { position: relative; }
+.sheet.competitive .sec-head { text-align: center; margin: 10px 0 6px; }
+.sheet.competitive .sec-name { font-weight: 700; font-size: 13pt; text-decoration: underline; }
+.sheet.competitive .sec-range { font-size: 10.5pt; }
+.sheet.competitive .q { position: relative; padding-right: 44px; }
+.sheet.competitive .q-marks { position: absolute; right: 0; top: 0; font-size: 10pt; }
+.answer-grid { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 10pt; }
+.answer-grid th, .answer-grid td { border: 1px solid #888; padding: 2px 5px; }
+.answer-grid th { width: 28px; text-align: center; background: #f0f0f0; }
+.answers-heading { font-size: 12pt; margin: 6px 0; border-bottom: 1px solid #999; }
+@media print { .answer-grid th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
