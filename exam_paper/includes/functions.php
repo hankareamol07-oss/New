@@ -210,7 +210,7 @@ function ep_decode_book_question(array $q): array
     $q['options'] = !empty($q['options_json']) ? (json_decode($q['options_json'], true) ?: []) : [];
     $q['pairs'] = !empty($q['pairs_json']) ? ep_match_pairs(json_decode($q['pairs_json'], true) ?: []) : [];
     if (!$q['pairs'] && ($q['qtype'] ?? '') === 'match') {
-        $q['pairs'] = ep_match_pairs($q['options']);
+        $q['pairs'] = ep_match_pairs($q['options'], true);
     }
     unset($q['options_json'], $q['pairs_json']);
     return $q;
@@ -222,7 +222,7 @@ function ep_decode_book_question(array $q): array
  * Normalise match-the-pairs data to [[left, right], ...].
  * Accepts [[l, r], ...], [{left, right}], ["l | r", ...] rows or a multi-line text with "l | r" lines.
  */
-function ep_match_pairs($src): array
+function ep_match_pairs($src, bool $dashRows = false): array
 {
     if (is_string($src)) {
         $src = preg_split('/\r?\n/', $src);
@@ -231,7 +231,20 @@ function ep_match_pairs($src): array
         return [];
     }
     $pairs = [];
+    $label = '/^\(?[A-Za-z0-9अ-ह१-९]{1,3}[\)\.:]\s*/u';
+    $strip = fn($s) => preg_replace('/^[\s\-–—:]+|[\s\-–—:]+$/u', '', preg_replace($label, '', trim((string)$s)));
+    $rows = [];
     foreach ($src as $row) {
+        if (is_string($row) && substr_count($row, '|') > 1) {
+            // legacy import: "A: l – r | B: l – r | ..." in one string
+            foreach (explode('|', $row) as $seg) {
+                $rows[] = trim($seg);
+            }
+        } else {
+            $rows[] = $row;
+        }
+    }
+    foreach ($rows as $row) {
         $l = $r = null;
         if (is_array($row)) {
             if (isset($row['left']) || isset($row['right'])) {
@@ -240,12 +253,14 @@ function ep_match_pairs($src): array
             } elseif (count($row) >= 2 && !is_array($row[0] ?? null)) {
                 [$l, $r] = [$row[0], $row[1]];
             }
-        } elseif (is_string($row) && preg_match('/^(.+?)\s*\|\s*(.+)$/u', trim($row), $m) && !str_contains($m[2], '|')) {
+        } elseif (is_string($row) && preg_match('/^(.+?)\s*\|\s*(.+)$/u', trim($row), $m)) {
+            [$l, $r] = [$m[1], $m[2]];
+        } elseif ($dashRows && is_string($row) && preg_match('/^(.+?)\s+[–—-]\s+(.+)$/u', trim($row), $m)) {
             [$l, $r] = [$m[1], $m[2]];
         }
-        $l = preg_replace('/^[\s\-–—:]+|[\s\-–—:]+$/u', '', (string)$l);
-        $r = preg_replace('/^[\s\-–—:]+|[\s\-–—:]+$/u', '', (string)$r);
-        if ($l !== '' && $r !== '') {
+        $l = $strip($l);
+        $r = $strip($r);
+        if ($l !== '' && $r !== '' && $l !== $r) {
             $pairs[] = [$l, $r];
         }
     }
