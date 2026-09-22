@@ -208,8 +208,165 @@ function ep_decode_book_question(array $q): array
     $q['page_image_url'] = ep_book_image_url($q['page_image'] ?? null);
     $q['figure_image_url'] = ep_book_image_url($q['figure_image'] ?? null);
     $q['options'] = !empty($q['options_json']) ? (json_decode($q['options_json'], true) ?: []) : [];
-    unset($q['options_json']);
+    $q['pairs'] = !empty($q['pairs_json']) ? ep_match_pairs(json_decode($q['pairs_json'], true) ?: []) : [];
+    if (!$q['pairs'] && ($q['qtype'] ?? '') === 'match') {
+        $q['pairs'] = ep_match_pairs($q['options'], true);
+    }
+    unset($q['options_json'], $q['pairs_json']);
     return $q;
+}
+
+/* ---------------- जोड्या लावा / match the pairs ---------------- */
+
+/**
+ * Normalise match-the-pairs data to [[left, right], ...].
+ * Accepts [[l, r], ...], [{left, right}], ["l | r", ...] rows or a multi-line text with "l | r" lines.
+ */
+function ep_match_pairs($src, bool $dashRows = false): array
+{
+    if (is_string($src)) {
+        $src = preg_split('/\r?\n/', $src);
+    }
+    if (!is_array($src)) {
+        return [];
+    }
+    $pairs = [];
+    $label = '/^\(?[A-Za-z0-9अ-ह१-९]{1,3}[\)\.:]\s*/u';
+    $strip = fn($s) => preg_replace('/^[\s\-–—:]+|[\s\-–—:]+$/u', '', preg_replace($label, '', trim((string)$s)));
+    $rows = [];
+    foreach ($src as $row) {
+        if (is_string($row) && substr_count($row, '|') > 1) {
+            // legacy import: "A: l – r | B: l – r | ..." in one string
+            foreach (explode('|', $row) as $seg) {
+                $rows[] = trim($seg);
+            }
+        } else {
+            $rows[] = $row;
+        }
+    }
+    foreach ($rows as $row) {
+        $l = $r = null;
+        if (is_array($row)) {
+            if (isset($row['left']) || isset($row['right'])) {
+                $l = $row['left'] ?? null;
+                $r = $row['right'] ?? null;
+            } elseif (count($row) >= 2 && !is_array($row[0] ?? null)) {
+                [$l, $r] = [$row[0], $row[1]];
+            }
+        } elseif (is_string($row) && preg_match('/^(.+?)\s*\|\s*(.+)$/u', trim($row), $m)) {
+            [$l, $r] = [$m[1], $m[2]];
+        } elseif ($dashRows && is_string($row) && preg_match('/^(.+?)\s+[–—-]\s+(.+)$/u', trim($row), $m)) {
+            [$l, $r] = [$m[1], $m[2]];
+        }
+        $l = $strip($l);
+        $r = $strip($r);
+        if ($l !== '' && $r !== '' && $l !== $r) {
+            $pairs[] = [$l, $r];
+        }
+    }
+    return count($pairs) >= 2 ? $pairs : [];
+}
+
+/** Pairs for a paper / homework item: the editable "l | r" lines in its text win (teacher edits), else explicit `pairs`. */
+function ep_item_pairs(array $item): array
+{
+    return ep_match_pairs($item['text'] ?? '') ?: ep_match_pairs($item['pairs'] ?? null);
+}
+
+/** The question stem of a match item = its text without the "l | r" pair lines. */
+function ep_match_stem(string $text): string
+{
+    $lines = array_filter(preg_split('/\r?\n/', $text), fn($l) => !preg_match('/^.+?\s*\|\s*.+$/u', trim($l)));
+    return trim(implode("\n", $lines));
+}
+
+/** Editable text form of a match question: stem + one "left | right" line per pair. */
+function ep_match_text(string $stem, array $pairs): string
+{
+    $lines = array_map(fn($p) => $p[0] . ' | ' . $p[1], $pairs);
+    return trim($stem . "\n" . implode("\n", $lines));
+}
+
+/**
+ * Two-column layout: left in textbook order, right shuffled the same way every time (seeded on the pairs)
+ * so the student sheet and the teacher key always agree. Returns [left[], right[], key[leftIdx => rightIdx]].
+ */
+function ep_match_layout(array $pairs): array
+{
+    $n = count($pairs);
+    $order = range(0, $n - 1);
+    mt_srand(crc32(json_encode($pairs)));
+    for ($i = $n - 1; $i > 0; $i--) {
+        $j = mt_rand(0, $i);
+        [$order[$i], $order[$j]] = [$order[$j], $order[$i]];
+    }
+    if ($n > 1 && $order === range(0, $n - 1)) {
+        $order[] = array_shift($order);
+    }
+    $right = [];
+    $key = [];
+    foreach ($order as $pos => $idx) {
+        $right[$pos] = $pairs[$idx][1];
+        $key[$idx] = $pos;
+    }
+    ksort($key);
+    return ['left' => array_column($pairs, 0), 'right' => $right, 'key' => $key];
+}
+
+/** Label script follows the pairs themselves: Latin-only pairs get 1/2/3 + A/B/C even inside a Marathi paper. */
+function ep_match_lang(array $pairs, string $lang): string
+{
+    return preg_match('/\p{Devanagari}/u', json_encode($pairs, JSON_UNESCAPED_UNICODE)) ? ($lang === 'en' ? 'mr' : $lang) : 'en';
+}
+
+function ep_match_labels(string $lang): array
+{
+    if ($lang === 'en') {
+        return ['a' => 'A', 'b' => 'B', 'left' => range(1, 20), 'right' => range('a', 't')];
+    }
+    $right = ['अ', 'ब', 'क', 'ड', 'इ', 'ई', 'उ', 'ऊ', 'ए', 'ऐ', 'ओ', 'औ'];
+    if ($lang === 'hi') {
+        $right = ['क', 'ख', 'ग', 'घ', 'च', 'छ', 'ज', 'झ', 'ट', 'ठ', 'ड', 'ढ'];
+    }
+    $left = array_map(fn($i) => strtr((string)$i, ['0' => '०', '1' => '१', '2' => '२', '3' => '३', '4' => '४', '5' => '५', '6' => '६', '7' => '७', '8' => '८', '9' => '९']), range(1, 20));
+    return ['a' => $lang === 'hi' ? 'क' : 'अ', 'b' => $lang === 'hi' ? 'ख' : 'ब', 'left' => $left, 'right' => $right];
+}
+
+/** Printable two-column table for a match question; with $withKey the correct pairing is shown under it. */
+function ep_match_table(array $pairs, string $lang = 'mr', bool $withKey = false): string
+{
+    if (!$pairs) {
+        return '';
+    }
+    $lang = ep_match_lang($pairs, $lang);
+    $lay = ep_match_layout($pairs);
+    $lb = ep_match_labels($lang);
+    $group = $lang === 'en' ? ['Group A', 'Group B'] : ["'{$lb['a']}' गट", "'{$lb['b']}' गट"];
+    $h = '<table class="match-table"><thead><tr><th>' . h($group[0]) . '</th><th>' . h($group[1]) . '</th></tr></thead><tbody>';
+    foreach ($lay['left'] as $i => $l) {
+        $r = $lay['right'][$i];
+        $h .= '<tr><td>(' . $lb['left'][$i] . ') ' . h($l) . '</td><td>(' . $lb['right'][$i] . ') ' . h($r) . '</td></tr>';
+    }
+    $h .= '</tbody></table>';
+    if ($withKey) {
+        $h .= '<div class="match-key">' . h(ep_match_key_text($pairs, $lang)) . '</div>';
+    }
+    return $h;
+}
+
+/** Teacher key line, e.g. "(१) – (ब), (२) – (अ)" followed by the pairs in words. */
+function ep_match_key_text(array $pairs, string $lang = 'mr'): string
+{
+    $lang = ep_match_lang($pairs, $lang);
+    $lay = ep_match_layout($pairs);
+    $lb = ep_match_labels($lang);
+    $codes = [];
+    $words = [];
+    foreach ($lay['key'] as $li => $ri) {
+        $codes[] = '(' . $lb['left'][$li] . ') – (' . $lb['right'][$ri] . ')';
+        $words[] = $pairs[$li][0] . ' – ' . $pairs[$li][1];
+    }
+    return implode(', ', $codes) . '  [' . implode('; ', $words) . ']';
 }
 
 /** AI topic pack (short notes + 10 MCQ quiz) for a textbook chapter, or null. */

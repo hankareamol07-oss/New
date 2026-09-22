@@ -168,7 +168,11 @@ switch ($action) {
                 $text = trim((string)($it['text'] ?? ''));
                 if ($text === '') continue;
                 $img = preg_match('~^\d+/\d{3}(_\d+)?\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
-                $items[] = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
+                $item = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
+                if ($pairs = ep_item_pairs(['pairs' => $it['pairs'] ?? null, 'text' => $text])) {
+                    $item['pairs'] = $pairs;
+                }
+                $items[] = $item;
             }
             $instruction = trim((string)($s['instruction'] ?? ''));
             if (!$items && $instruction === '') continue;
@@ -220,7 +224,11 @@ switch ($action) {
             $text = trim((string)($it['text'] ?? ''));
             if ($text === '') continue;
             $img = preg_match('~^\d+/\d{3}(_\d+)?\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
-            $items[] = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'answer' => trim((string)($it['answer'] ?? '')), 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
+            $item = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'answer' => trim((string)($it['answer'] ?? '')), 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
+            if ($pairs = ep_item_pairs(['pairs' => $it['pairs'] ?? null, 'text' => $text])) {
+                $item['pairs'] = $pairs;
+            }
+            $items[] = $item;
         }
         $standard = (int)($body['standard'] ?? 0);
         $subject = trim((string)($body['subject'] ?? ''));
