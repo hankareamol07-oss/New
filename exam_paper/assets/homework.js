@@ -128,9 +128,11 @@
 
   /* ---------- homework items ---------- */
   const OPT_MR = ['अ', 'ब', 'क', 'ड', 'इ', 'फ'];
+  // match (जोड्या लावा): stem line + one "left | right" line per pair — printed as a two-column table
+  function matchText(q) { return Array.isArray(q.pairs) && q.pairs.length ? q.text + '\n' + q.pairs.map(p => `${p[0]} | ${p[1]}`).join('\n') : null; }
   function bookItem(q) {
     const opts = Array.isArray(q.options) && q.options.length ? '\n' + q.options.map((o, i) => `(${isEnglish() ? OPT[i] : OPT_MR[i]}) ${o}`).join('  ') : '';
-    return { bq_id: q.bq_id, text: q.text + opts, answer: q.answer || '', page_image: q.figure_image || q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype };
+    return { bq_id: q.bq_id, text: matchText(q) || q.text + opts, answer: q.answer || '', page_image: q.figure_image || q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype };
   }
   $('#hwAdd').onclick = () => { state.items.push({ bq_id: null, text: '' }); renderItems(); setTimeout(() => { const t = $$('#hwItems textarea').pop(); t && t.focus(); }); };
   $('#hwFromBook').onclick = async () => {
@@ -250,7 +252,7 @@
     $('#browseInfo').textContent = `${r.total} questions — page ${browsePage + 1} of ${Math.max(1, Math.ceil(r.total / r.size))}`;
     $('#browseList').innerHTML = r.items.length ? r.items.map(q => `
       <div class="border rounded p-2 mb-2 d-flex gap-2 align-items-start ${used.includes(q.bq_id) ? 'bg-light' : ''}">
-        <div class="flex-grow-1"><div>${esc(q.text)}</div>
+        <div class="flex-grow-1"><div style="white-space:pre-wrap">${esc(matchText(q) || q.text)}</div>
           <div class="small text-muted">${esc(q.chapter_title || '')} · p.${q.page} · ${QTYPES[q.qtype] || q.qtype}${+q.needs_figure ? ' · <i class="bi bi-image"></i> figure' : ''}</div></div>
         <button class="btn btn-sm ${used.includes(q.bq_id) ? 'btn-secondary disabled' : 'btn-primary'}" data-add="${q.bq_id}">${used.includes(q.bq_id) ? 'Added' : 'Add'}</button>
       </div>`).join('') : '<div class="text-muted">No questions match.</div>';

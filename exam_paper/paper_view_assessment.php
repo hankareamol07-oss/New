@@ -15,6 +15,9 @@ $L = $english
     ? ['std' => 'Std.', 'subject' => 'Subject', 'marks' => 'Marks', 'time' => 'Time', 'date' => 'Date', 'name' => 'Name of the student', 'roll' => 'Roll No.', 'obtained' => 'Marks obtained', 'sign' => 'Teacher\'s sign', 'q' => 'Q.', 'inst' => 'Instructions']
     : ['std' => 'इयत्ता', 'subject' => 'विषय', 'marks' => 'गुण', 'time' => 'वेळ', 'date' => 'दिनांक', 'name' => 'विद्यार्थ्याचे नाव', 'roll' => 'हजेरी क्र.', 'obtained' => 'मिळालेले गुण', 'sign' => 'शिक्षकाची सही', 'q' => 'प्र.', 'inst' => 'सूचना'];
 $editUrl = 'assessment_paper.php?edit=' . (int)$paper['paper_id'];
+$teacherKey = !empty($_GET['key']);   // teacher copy: correct pairing printed under each जोड्या लावा table
+$matchLang = $english ? 'en' : (($meta['medium'] ?? '') === 'Hindi' || ($meta['subject'] ?? '') === 'Hindi' ? 'hi' : 'mr');
+$viewUrl = 'paper_view.php?id=' . (int)$paper['paper_id'];
 ?>
 <!DOCTYPE html>
 <html lang="<?= $english ? 'en' : 'mr' ?>">
@@ -27,6 +30,7 @@ $editUrl = 'assessment_paper.php?edit=' . (int)$paper['paper_id'];
 <div class="toolbar no-print">
   <button onclick="window.print()">&#128424; Print / Save as PDF</button>
   <a href="<?= $editUrl ?>">Edit</a>
+  <a href="<?= $viewUrl . ($teacherKey ? '' : '&key=1') ?>"><?= $teacherKey ? 'Student paper' : 'Answer key (जोड्या)' ?></a>
   <a href="index.php">All papers</a>
   <label><input type="checkbox" id="twoCol"> Two columns</label>
 </div>
@@ -81,7 +85,13 @@ $editUrl = 'assessment_paper.php?edit=' . (int)$paper['paper_id'];
         <?php foreach ($sec['items'] as $i => $it): ?>
           <li class="q">
             <span class="item-no"><?= $digits($i + 1) ?>)</span>
-            <div class="qtext"><?= ep_markup($it['text']) ?>
+            <div class="qtext">
+              <?php if ($pairs = ep_item_pairs($it)): ?>
+                <?= ep_markup(ep_match_stem($it['text'])) ?>
+                <?= ep_match_table($pairs, $matchLang, $teacherKey) ?>
+              <?php else: ?>
+                <?= ep_markup($it['text']) ?>
+              <?php endif; ?>
               <?php if (!empty($it['show_image']) && !empty($it['page_image'])): ?>
                 <div><img class="qimg page-img" src="<?= EP_BASE_URL ?>/book_page.php?f=<?= rawurlencode($it['page_image']) ?>" alt=""></div>
               <?php endif; ?>
