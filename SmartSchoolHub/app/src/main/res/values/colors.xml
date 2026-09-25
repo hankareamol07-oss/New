@@ -1,0 +1,83 @@
+<resources>
+    <!-- Primary Brand: Deep Orange (matches website #BF360C / #E65100) -->
+    <color name="primary">#BF360C</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#FFCCBC</color>
+    <color name="on_primary_container">#4E0000</color>
+
+    <!-- Secondary: Amber/Gold -->
+    <color name="secondary">#E65100</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#FFE0B2</color>
+
+    <!-- Tertiary: Teal/Green for success states -->
+    <color name="tertiary">#00796B</color>
+    <color name="on_tertiary">#FFFFFF</color>
+
+    <!-- Surface & Background -->
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F8FAFC</color>
+    <color name="on_surface">#1E293B</color>
+    <color name="on_surface_variant">#475569</color>
+    <color name="background">#F1F5F9</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1E293B</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_hint">#94A3B8</color>
+
+    <!-- Card / Stroke -->
+    <color name="card_stroke">#E2E8F0</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="divider">#E2E8F0</color>
+
+    <!-- Status Colors -->
+    <color name="success">#059669</color>
+    <color name="success_container">#D1FAE5</color>
+    <color name="warning">#D97706</color>
+    <color name="warning_container">#FEF3C7</color>
+    <color name="error">#DC2626</color>
+    <color name="error_container">#FEE2E2</color>
+    <color name="info">#0284C7</color>
+    <color name="info_container">#E0F2FE</color>
+
+    <!-- Module Icon Background Colors -->
+    <color name="module_hpc_bg">#E8F5E9</color>
+    <color name="module_hpc_icon">#2E7D32</color>
+    <color name="module_cce_bg">#FFF3E0</color>
+    <color name="module_cce_icon">#E65100</color>
+    <color name="module_tachan_bg">#E3F2FD</color>
+    <color name="module_tachan_icon">#1565C0</color>
+    <color name="module_paripath_bg">#FFFDE7</color>
+    <color name="module_paripath_icon">#F57F17</color>
+    <color name="module_hajeri_bg">#FCE4EC</color>
+    <color name="module_hajeri_icon">#C62828</color>
+    <color name="module_mdm_bg">#F1F8E9</color>
+    <color name="module_mdm_icon">#558B2F</color>
+    <color name="module_fee_bg">#E0F2F1</color>
+    <color name="module_fee_icon">#00796B</color>
+    <color name="module_exam_bg">#EDE7F6</color>
+    <color name="module_exam_icon">#4527A0</color>
+    <color name="module_gr_bg">#FBE9E7</color>
+    <color name="module_gr_icon">#BF360C</color>
+    <color name="module_class_bg">#E8EAF6</color>
+    <color name="module_class_icon">#283593</color>
+
+    <!-- Gradient -->
+    <color name="gradient_start">#BF360C</color>
+    <color name="gradient_end">#E65100</color>
+    <color name="gradient_amber_start">#FFA000</color>
+    <color name="gradient_amber_end">#FF6F00</color>
+
+    <!-- Bottom Navigation -->
+    <color name="bottom_nav_selected">#BF360C</color>
+    <color name="bottom_nav_unselected">#94A3B8</color>
+
+    <!-- Shimmer -->
+    <color name="shimmer_base">#F0F0F0</color>
+    <color name="shimmer_highlight">#E0E0E0</color>
+
+    <!-- Overlay -->
+    <color name="overlay_dark">#80000000</color>
+    <color name="overlay_light">#33FFFFFF</color>
+</resources>

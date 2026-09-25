@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    nav_graph.xml
+    Jetpack Navigation Component graph for Smart School Hub.
+
+    All 5 bottom-nav destinations are top-level fragments (no back-stack pop).
+    Each destination wires up enter/exit animations using the slide/fade
+    animators defined in res/anim/.
+
+    Package: com.techguruji.smartschoolhub
+-->
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <!-- ═══════════════════════════════════════════════════
+         1. Dashboard Fragment — डॅशबोर्ड
+         ═══════════════════════════════════════════════════ -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.techguruji.smartschoolhub.ui.dashboard.DashboardFragment"
+        android:label="@string/nav_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <!-- Action → Modules -->
+        <action
+            android:id="@+id/action_dashboard_to_modules"
+            app:destination="@id/modulesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action → Paripath -->
+        <action
+            android:id="@+id/action_dashboard_to_paripath"
+            app:destination="@id/paripathFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action → Students -->
+        <action
+            android:id="@+id/action_dashboard_to_students"
+            app:destination="@id/studentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action → Profile -->
+        <action
+            android:id="@+id/action_dashboard_to_profile"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <!-- ═══════════════════════════════════════════════════
+         2. Modules Fragment — मॉड्युल्स
+         ═══════════════════════════════════════════════════ -->
+    <fragment
+        android:id="@+id/modulesFragment"
+        android:name="com.techguruji.smartschoolhub.ui.modules.ModulesFragment"
+        android:label="@string/nav_modules"
+        tools:layout="@layout/fragment_modules">
+
+        <!-- Action → HPC -->
+        <action
+            android:id="@+id/action_modules_to_hpc"
+            app:destination="@id/hpcFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action → CCE -->
+        <action
+            android:id="@+id/action_modules_to_cce"
+            app:destination="@id/cceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action → Tachan -->
+        <action
+            android:id="@+id/action_modules_to_tachan"
+            app:destination="@id/tachanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action → Hajeri -->
+        <action
+            android:id="@+id/action_modules_to_hajeri"
+            app:destination="@id/hajeriFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action → MDM -->
+        <action
+            android:id="@+id/action_modules_to_mdm"
+            app:destination="@id/mdmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action → Fee -->
+        <action
+            android:id="@+id/action_modules_to_fee"
+            app:destination="@id/feeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action → Exam -->
+        <action
+            android:id="@+id/action_modules_to_exam"
+            app:destination="@id/examFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <!-- ═══════════════════════════════════════════════════
+         3. Paripath Fragment — परिपाठ
+         ═══════════════════════════════════════════════════ -->
+    <fragment
+        android:id="@+id/paripathFragment"
+        android:name="com.techguruji.smartschoolhub.ui.paripath.ParipathFragment"
+        android:label="@string/nav_paripath"
+        tools:layout="@layout/fragment_paripath" />
+
+    <!-- ═══════════════════════════════════════════════════
+         4. Students Fragment — विद्यार्थी
+         ═══════════════════════════════════════════════════ -->
+    <fragment
+        android:id="@+id/studentsFragment"
+        android:name="com.techguruji.smartschoolhub.ui.students.StudentsFragment"
+        android:label="@string/nav_students"
+        tools:layout="@layout/fragment_students">
+
+        <!-- Action → Student Detail -->
+        <action
+            android:id="@+id/action_students_to_detail"
+            app:destination="@id/studentDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <!-- ═══════════════════════════════════════════════════
+         5. Profile Fragment — प्रोफाइल
+         ═══════════════════════════════════════════════════ -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.techguruji.smartschoolhub.ui.profile.ProfileFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- ═══════════════════════════════════════════════════
+         Secondary / Child Fragments (not bottom-nav items)
+         ═══════════════════════════════════════════════════ -->
+
+    <!-- HPC Progress Cards -->
+    <fragment
+        android:id="@+id/hpcFragment"
+        android:name="com.techguruji.smartschoolhub.ui.hpc.HpcFragment"
+        android:label="@string/module_hpc"
+        tools:layout="@layout/fragment_hpc" />
+
+    <!-- CCE Evaluation -->
+    <fragment
+        android:id="@+id/cceFragment"
+        android:name="com.techguruji.smartschoolhub.ui.cce.CceFragment"
+        android:label="@string/module_cce"
+        tools:layout="@layout/fragment_cce" />
+
+    <!-- Tachan (Lesson Diary) -->
+    <fragment
+        android:id="@+id/tachanFragment"
+        android:name="com.techguruji.smartschoolhub.ui.tachan.TachanFragment"
+        android:label="@string/module_tachan"
+        tools:layout="@layout/fragment_tachan" />
+
+    <!-- Hajeri (Attendance) -->
+    <fragment
+        android:id="@+id/hajeriFragment"
+        android:name="com.techguruji.smartschoolhub.ui.hajeri.HajeriFragment"
+        android:label="@string/module_hajeri"
+        tools:layout="@layout/fragment_hajeri" />
+
+    <!-- MDM (Mid-Day Meals) -->
+    <fragment
+        android:id="@+id/mdmFragment"
+        android:name="com.techguruji.smartschoolhub.ui.mdm.MdmFragment"
+        android:label="@string/module_mdm"
+        tools:layout="@layout/fragment_mdm" />
+
+    <!-- Fee Management -->
+    <fragment
+        android:id="@+id/feeFragment"
+        android:name="com.techguruji.smartschoolhub.ui.fee.FeeFragment"
+        android:label="@string/module_fee"
+        tools:layout="@layout/fragment_fee" />
+
+    <!-- Exam Paper Generator -->
+    <fragment
+        android:id="@+id/examFragment"
+        android:name="com.techguruji.smartschoolhub.ui.exam.ExamFragment"
+        android:label="@string/module_exam"
+        tools:layout="@layout/fragment_exam" />
+
+    <!-- Student Detail (child of Students) -->
+    <fragment
+        android:id="@+id/studentDetailFragment"
+        android:name="com.techguruji.smartschoolhub.ui.students.StudentDetailFragment"
+        android:label="@string/student_detail"
+        tools:layout="@layout/fragment_student_detail">
+
+        <!-- Safe Args: student ID passed as argument -->
+        <argument
+            android:name="studentId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+
+    </fragment>
+
+</navigation>

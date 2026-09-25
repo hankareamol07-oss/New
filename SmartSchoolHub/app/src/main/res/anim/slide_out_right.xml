@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    slide_out_right.xml
+    Fragment/Activity exits to the right side of the screen.
+    Paired with slide_in_left for a back-navigation feel.
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/accelerate_cubic">
+
+    <!-- Translate from 0% (original) → 100% right -->
+    <translate
+        android:duration="300"
+        android:fromXDelta="0%p"
+        android:toXDelta="100%p" />
+
+    <!-- Fade out to 80% opacity -->
+    <alpha
+        android:duration="300"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.8" />
+
+</set>

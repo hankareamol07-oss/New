@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    bg_badge_premium.xml
+    Amber rounded rectangle badge for premium (paid) modules.
+    Filled with Amber 700 (#F57C00), pill-shaped corners.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Amber 700 — consistent with app's secondary brand color -->
+    <solid android:color="#E65100" />
+
+    <!-- Pill-shaped corners -->
+    <corners android:radius="50dp" />
+
+    <padding
+        android:bottom="2dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:top="2dp" />
+
+</shape>

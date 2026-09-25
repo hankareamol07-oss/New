@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/btnPrint"
+        android:icon="@drawable/ic_print"
+        android:title="प्रिंट / PDF"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/btnShare"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="शेअर करा"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/btnOpenBrowser"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="ब्राउझरमध्ये उघडा"
+        app:showAsAction="never"/>
+
+</menu>
