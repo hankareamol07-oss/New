@@ -89,4 +89,81 @@
     <string name="module_fee">फी व्यवस्थापन</string>
     <string name="module_exam">प्रश्नपत्रिका जनरेटर</string>
     <string name="student_detail">विद्यार्थी माहिती</string>
+
+    <!-- Native module screens -->
+    <string name="print_pdf">प्रिंट / PDF</string>
+    <string name="save">जतन करा</string>
+    <string name="add">जोडा</string>
+    <string name="date">दिनांक</string>
+    <string name="grade">इयत्ता</string>
+    <string name="section">तुकडी</string>
+    <string name="select_grade">इयत्ता निवडा</string>
+    <string name="select_section">तुकडी निवडा</string>
+    <string name="select_student">विद्यार्थी निवडा</string>
+    <string name="all_grades">सर्व इयत्ता</string>
+    <string name="search">शोधा</string>
+    <string name="saving">जतन होत आहे…</string>
+    <string name="saved_success">यशस्वीरित्या जतन झाले!</string>
+    <string name="network_error">नेटवर्क त्रुटी. इंटरनेट तपासा.</string>
+    <string name="required_field">हे आवश्यक आहे</string>
+
+    <string name="mdm_title">पोषण आहार (MDM)</string>
+    <string name="mdm_group_1_5">इयत्ता १ ली ते ५ वी</string>
+    <string name="mdm_group_6_8">इयत्ता ६ वी ते ८ वी</string>
+    <string name="mdm_beneficiaries">लाभार्थी संख्या</string>
+    <string name="mdm_menu">आजचा मेनू</string>
+    <string name="mdm_cooked">आहार शिजवला</string>
+    <string name="mdm_holiday">सुट्टी / आहार नाही</string>
+    <string name="mdm_remarks">शेरा (ऐच्छिक)</string>
+    <string name="mdm_rice">तांदूळ (किलो)</string>
+    <string name="mdm_dal">डाळ (किलो)</string>
+
+    <string name="fee_title">फी व्यवस्थापन</string>
+    <string name="fee_collect">फी जमा करा</string>
+    <string name="fee_amount">रक्कम (₹)</string>
+    <string name="fee_mode">पेमेंट पद्धत</string>
+    <string name="fee_type">फी प्रकार</string>
+    <string name="fee_remarks">शेरा (ऐच्छिक)</string>
+    <string name="fee_receipt">पावती</string>
+    <string name="fee_expected">अपेक्षित</string>
+    <string name="fee_collected">जमा</string>
+    <string name="fee_pending">बाकी</string>
+
+    <string name="exam_title">प्रश्नपत्रिका जनरेटर</string>
+    <string name="exam_name">परीक्षेचे नाव</string>
+    <string name="exam_subject">विषय</string>
+    <string name="exam_total_marks">एकूण गुण</string>
+    <string name="exam_duration">वेळ (मिनिटे)</string>
+    <string name="exam_add_question">प्रश्न जोडा</string>
+    <string name="exam_generate">प्रश्नपत्रिका तयार करा</string>
+    <string name="exam_question">प्रश्न</string>
+    <string name="exam_marks">गुण</string>
+    <string name="exam_section">विभाग</string>
+
+    <string name="classes_title">वर्ग व्यवस्थापन</string>
+    <string name="bonafide_title">बोनाफाईड दाखला</string>
+    <string name="bonafide_purpose">दाखल्याचा उद्देश</string>
+    <string name="bonafide_generate">दाखला तयार करा</string>
+    <string name="gr_title">जनरल रजिस्टर (GR)</string>
+    <string name="gr_print">रजिस्टर प्रिंट</string>
+    <string name="search_hint">नाव / GR शोधा</string>
+    <string name="plans_title">सबस्क्रिप्शन योजना</string>
+
+    <string name="add_student_title">नवीन विद्यार्थी नोंदणी</string>
+    <string name="student_name_en">विद्यार्थ्याचे नाव (इंग्रजी)</string>
+    <string name="student_name_mr">विद्यार्थ्याचे नाव (मराठी)</string>
+    <string name="gr_no">GR क्रमांक</string>
+    <string name="roll_no">हजेरी क्रमांक</string>
+    <string name="gender">लिंग</string>
+    <string name="dob">जन्मतारीख</string>
+    <string name="father_name">वडिलांचे नाव</string>
+    <string name="mother_name">आईचे नाव</string>
+    <string name="aadhar_no">आधार क्रमांक</string>
+    <string name="apaar_id">APAAR ID</string>
+    <string name="caste">जात / प्रवर्ग</string>
+    <string name="blood_group">रक्तगट</string>
+    <string name="student_saved">विद्यार्थी यशस्वीरित्या जोडला!</string>
+    <string name="attendance_summary">हजेरी सारांश</string>
+    <string name="present">उपस्थित</string>
+    <string name="absent">अनुपस्थित</string>
 </resources>

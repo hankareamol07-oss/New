@@ -33,6 +33,10 @@ public class StudentListResponse {
         @SerializedName("phone")          private String phone;
         @SerializedName("apaar_id")       private String apaarId;
         @SerializedName("blood_group")    private String bloodGroup;
+        @SerializedName("gr_no")          private String grNo;
+        @SerializedName("aadhar_no")      private String aadharNo;
+        @SerializedName("caste")          private String caste;
+        @SerializedName("status")         private String status;
 
         public int getId() { return id; }
         public String getName() { return name; }
@@ -51,5 +55,9 @@ public class StudentListResponse {
         public String getPhone() { return phone; }
         public String getApaarId() { return apaarId; }
         public String getBloodGroup() { return bloodGroup; }
+        public String getGrNo() { return grNo; }
+        public String getAadharNo() { return aadharNo; }
+        public String getCaste() { return caste; }
+        public String getStatus() { return status; }
     }
 }

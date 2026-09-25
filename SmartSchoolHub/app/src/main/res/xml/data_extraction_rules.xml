@@ -55,13 +55,6 @@
             path="." />
 
         <!-- Allow non-sensitive user preferences -->
-        <include
-            domain="sharedpref"
-            path="app_settings.xml" />
-
-        <include
-            domain="sharedpref"
-            path="language_prefs.xml" />
 
     </cloud-backup>
 
@@ -114,13 +107,6 @@
             path="." />
 
         <!-- Allow non-sensitive user preferences -->
-        <include
-            domain="sharedpref"
-            path="app_settings.xml" />
-
-        <include
-            domain="sharedpref"
-            path="language_prefs.xml" />
 
     </device-transfer>
 

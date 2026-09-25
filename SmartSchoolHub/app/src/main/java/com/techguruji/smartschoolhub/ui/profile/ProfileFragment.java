@@ -1,6 +1,11 @@
 package com.techguruji.smartschoolhub.ui.profile;
 
+import android.content.ActivityNotFoundException;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +19,11 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.techguruji.smartschoolhub.R;
 import com.techguruji.smartschoolhub.databinding.FragmentProfileBinding;
 import com.techguruji.smartschoolhub.ui.auth.LoginActivity;
-import com.techguruji.smartschoolhub.ui.modules.ModuleWebActivity;
+import com.techguruji.smartschoolhub.BuildConfig;
+import com.techguruji.smartschoolhub.ui.classes.ClassesActivity;
 import com.techguruji.smartschoolhub.ui.subscription.PlansActivity;
 import com.techguruji.smartschoolhub.utils.SessionManager;
+import com.techguruji.smartschoolhub.utils.UiUtils;
 
 /**
  * ProfileFragment — school profile, subscription status, settings, and logout.
@@ -25,7 +32,7 @@ public class ProfileFragment extends Fragment {
 
     private FragmentProfileBinding binding;
     private SessionManager session;
-    private static final String BASE = "https://vijetaacademysangli.in/techguruji/";
+    private static final String SUPPORT_PHONE = "9198220000";
 
     @Nullable
     @Override
@@ -79,35 +86,89 @@ public class ProfileFragment extends Fragment {
         binding.bannerUpgrade.setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), PlansActivity.class)));
 
-        // School settings
-        binding.rowSchoolSettings.setOnClickListener(v -> openModule(
-                "शाळा सेटिंग्ज", BASE + "school/profile.php"));
-
-        // Class settings
-        binding.rowClassSettings.setOnClickListener(v -> openModule(
-                "वर्ग सेटिंग्ज", BASE + "modules/classes/index.php"));
-
-        // Change password
-        binding.rowChangePassword.setOnClickListener(v -> openModule(
-                "पासवर्ड बदला", BASE + "auth/change_password.php"));
-
-        // About
-        binding.rowAbout.setOnClickListener(v -> openModule(
-                "आमच्याबद्दल", BASE + "?about=1"));
-
-        // Help
-        binding.rowHelp.setOnClickListener(v -> openModule(
-                "मदत / सपोर्ट", BASE + "?help=1"));
+        binding.rowSchoolSettings.setOnClickListener(v -> showSchoolInfo());
+        binding.rowClassSettings.setOnClickListener(v ->
+                startActivity(new Intent(requireContext(), ClassesActivity.class)));
+        binding.rowChangePassword.setOnClickListener(v -> showChangePasswordInfo());
+        binding.rowAbout.setOnClickListener(v -> showAbout());
+        binding.rowHelp.setOnClickListener(v -> showHelp());
 
         // Logout
         binding.btnLogout.setOnClickListener(v -> showLogoutConfirm());
     }
 
-    private void openModule(String title, String url) {
-        Intent intent = new Intent(requireContext(), ModuleWebActivity.class);
-        intent.putExtra(ModuleWebActivity.EXTRA_TITLE, title);
-        intent.putExtra(ModuleWebActivity.EXTRA_URL, url);
-        startActivity(intent);
+    private void showSchoolInfo() {
+        String info = "शाळा: " + session.getDisplaySchoolName()
+                + "\nUDISE: " + UiUtils.orDash(session.getUdise())
+                + "\nजिल्हा: " + UiUtils.orDash(session.getDistrict())
+                + "\nईमेल: " + UiUtils.orDash(session.getEmail())
+                + "\nफोन: " + UiUtils.orDash(session.getPhone())
+                + "\nमुख्याध्यापक/शिक्षक: " + session.getTeacherName()
+                + "\n\nयोजना: " + session.getPlanName()
+                + (session.getSubscriptionEnd().isEmpty() ? "" : "\nवैधता: " + session.getSubscriptionEnd());
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle("शाळा माहिती")
+                .setMessage(info)
+                .setPositiveButton(R.string.ok, null)
+                .setNeutralButton("कॉपी", (d, w) -> {
+                    ClipboardManager cm = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setPrimaryClip(ClipData.newPlainText("school", info));
+                    UiUtils.snack(binding.getRoot(), "कॉपी झाले");
+                })
+                .show();
+    }
+
+    private void showChangePasswordInfo() {
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle("पासवर्ड बदला")
+                .setMessage("सुरक्षेसाठी पासवर्ड बदल OTP पडताळणीसह ईमेलद्वारे केला जातो. "
+                        + "नोंदणीकृत ईमेल: " + UiUtils.orDash(session.getEmail())
+                        + "\n\n'लिंक पाठवा' दाबल्यावर पासवर्ड रीसेट लिंक ईमेलवर पाठवण्याची विनंती केली जाईल.")
+                .setPositiveButton("लिंक पाठवा", (d, w) -> sendEmail(
+                        "support@smartschoolhub.in",
+                        "पासवर्ड रीसेट विनंती — " + session.getDisplaySchoolName(),
+                        "UDISE: " + session.getUdise() + "\nईमेल: " + session.getEmail()))
+                .setNegativeButton(R.string.cancel, null)
+                .show();
+    }
+
+    private void showAbout() {
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle("SmartSchoolHub")
+                .setMessage("आवृत्ती " + BuildConfig.VERSION_NAME
+                        + "\n\nमहाराष्ट्रातील शाळांसाठी संपूर्ण डिजिटल व्यवस्थापन — परिपाठ, HPC, CCE, टाचण, हजेरी, MDM, "
+                        + "फी, प्रश्नपत्रिका, विद्यार्थी, वर्ग, बोनाफाईड व जनरल रजिस्टर.\n\n© TechGuruji")
+                .setPositiveButton(R.string.ok, null)
+                .show();
+    }
+
+    private void showHelp() {
+        String[] items = {"📞 कॉल करा", "💬 WhatsApp", "✉️ ईमेल"};
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle("मदत / सपोर्ट")
+                .setItems(items, (d, which) -> {
+                    if (which == 0) {
+                        startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + SUPPORT_PHONE)));
+                    } else if (which == 1) {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://wa.me/91" + SUPPORT_PHONE + "?text="
+                                        + Uri.encode("नमस्कार, SmartSchoolHub मदत हवी आहे. UDISE: " + session.getUdise()))));
+                    } else {
+                        sendEmail("support@smartschoolhub.in", "SmartSchoolHub मदत — " + session.getDisplaySchoolName(), "");
+                    }
+                })
+                .show();
+    }
+
+    private void sendEmail(String to, String subject, String body) {
+        Intent i = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + to));
+        i.putExtra(Intent.EXTRA_SUBJECT, subject);
+        i.putExtra(Intent.EXTRA_TEXT, body);
+        try {
+            startActivity(i);
+        } catch (ActivityNotFoundException e) {
+            UiUtils.snack(binding.getRoot(), "ईमेल ॲप सापडले नाही");
+        }
     }
 
     private void showLogoutConfirm() {

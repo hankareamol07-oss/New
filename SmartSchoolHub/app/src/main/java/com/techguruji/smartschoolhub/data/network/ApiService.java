@@ -10,6 +10,7 @@ import com.techguruji.smartschoolhub.data.model.LoginRequest;
 import com.techguruji.smartschoolhub.data.model.LoginResponse;
 import com.techguruji.smartschoolhub.data.model.MdmModel;
 import com.techguruji.smartschoolhub.data.model.ParipathData;
+import com.techguruji.smartschoolhub.data.model.PlanModel;
 import com.techguruji.smartschoolhub.data.model.RegisterRequest;
 import com.techguruji.smartschoolhub.data.model.StudentDetailResponse;
 import com.techguruji.smartschoolhub.data.model.StudentListResponse;
@@ -141,4 +142,8 @@ public interface ApiService {
     /** GET /api/profile.php */
     @GET("profile.php")
     Call<DashboardData> getProfile();
+
+    /** GET /api/plans.php */
+    @GET("plans.php")
+    Call<PlanModel.PlansResponse> getPlans();
 }

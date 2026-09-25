@@ -22,8 +22,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
     private static final String BASE_URL = "https://vijetaacademysangli.in/techguruji/api/";
+    private static final String EXAM_BASE_URL = "https://vijetaacademysangli.in/techguruji/exam_paper/";
     private static ApiClient instance;
     private final ApiService apiService;
+    private final ExamApiService examApiService;
     private static Context appContext;
 
     private ApiClient(Context context) {
@@ -71,6 +73,13 @@ public class ApiClient {
                 .build();
 
         apiService = retrofit.create(ApiService.class);
+
+        examApiService = new Retrofit.Builder()
+                .baseUrl(EXAM_BASE_URL)
+                .client(client)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(ExamApiService.class);
     }
 
     public static void init(Context context) {
@@ -87,5 +96,9 @@ public class ApiClient {
 
     public ApiService getApiService() {
         return apiService;
+    }
+
+    public ExamApiService getExamApiService() {
+        return examApiService;
     }
 }

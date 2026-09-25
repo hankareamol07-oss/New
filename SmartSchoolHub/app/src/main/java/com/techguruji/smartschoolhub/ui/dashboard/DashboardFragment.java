@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import androidx.navigation.Navigation;
 
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.snackbar.Snackbar;
@@ -21,10 +20,9 @@ import com.techguruji.smartschoolhub.R;
 import com.techguruji.smartschoolhub.data.model.DashboardData;
 import com.techguruji.smartschoolhub.data.network.ApiClient;
 import com.techguruji.smartschoolhub.databinding.FragmentDashboardBinding;
-import com.techguruji.smartschoolhub.ui.hajeri.HajeriActivity;
-import com.techguruji.smartschoolhub.ui.modules.ModuleWebActivity;
+import com.techguruji.smartschoolhub.ui.modules.ModuleRouter;
+import com.techguruji.smartschoolhub.data.model.ModuleItem;
 import com.techguruji.smartschoolhub.ui.subscription.PlansActivity;
-import com.techguruji.smartschoolhub.ui.tachan.TachanActivity;
 import com.techguruji.smartschoolhub.utils.SessionManager;
 
 import retrofit2.Call;
@@ -80,19 +78,17 @@ public class DashboardFragment extends Fragment {
     }
 
     private void setupQuickActions() {
-        String base = "https://vijetaacademysangli.in/techguruji/";
-
-        setupCardClick(binding.cardParipath, "शालेय परिपाठ", base + "modules/paripath/index.php");
-        setupCardClick(binding.cardHpc, "HPC प्रगती पत्रक", base + "hpc/index.php");
-        setupCardClick(binding.cardCce, "CCE मूल्यमापन", base + "cce/index.php");
-        setupCardClick(binding.cardTachan, "टाचण नियोजन", base + "modules/tachan/index.php");
-        setupCardClick(binding.cardHajeri, "विद्यार्थी हजेरी", base + "modules/hajeri/index.php");
-        setupCardClick(binding.cardMdm, "पोषण आहार (MDM)", base + "modules/mdm/dashboard.php");
-        setupCardClick(binding.cardFee, "फी व्यवस्थापन", base + "modules/fee/index.php");
-        setupCardClick(binding.cardExam, "प्रश्नपत्रिका जनरेटर", base + "modules/exam_paper/index.php");
+        setupCardClick(binding.cardParipath, ModuleItem.KEY_PARIPATH);
+        setupCardClick(binding.cardHpc, ModuleItem.KEY_HPC);
+        setupCardClick(binding.cardCce, ModuleItem.KEY_CCE);
+        setupCardClick(binding.cardTachan, ModuleItem.KEY_TACHAN);
+        setupCardClick(binding.cardHajeri, ModuleItem.KEY_HAJERI);
+        setupCardClick(binding.cardMdm, ModuleItem.KEY_MDM);
+        setupCardClick(binding.cardFee, ModuleItem.KEY_FEE);
+        setupCardClick(binding.cardExam, ModuleItem.KEY_EXAM);
     }
 
-    private void setupCardClick(MaterialCardView card, String title, String url) {
+    private void setupCardClick(MaterialCardView card, String moduleKey) {
         if (card == null) return;
         card.setOnClickListener(v -> {
             card.animate()
@@ -104,7 +100,7 @@ public class DashboardFragment extends Fragment {
                                 .scaleX(1.0f)
                                 .scaleY(1.0f)
                                 .setDuration(120)
-                                .withEndAction(() -> openModule(title, url))
+                                .withEndAction(() -> ModuleRouter.open(requireActivity(), moduleKey))
                                 .start();
                     })
                     .start();
@@ -210,55 +206,6 @@ public class DashboardFragment extends Fragment {
                 .make(binding.getRoot(), message, Snackbar.LENGTH_LONG)
                 .setAction("↺ पुन्हा", v -> loadDashboard())
                 .show();
-    }
-
-    private void openModule(String title, String url) {
-        if (title != null && title.contains("हजेरी")) {
-            Intent intent = new Intent(requireContext(), HajeriActivity.class);
-            startActivity(intent);
-            requireActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            return;
-        }
-        if (title != null && title.contains("टाचण")) {
-            Intent intent = new Intent(requireContext(), TachanActivity.class);
-            startActivity(intent);
-            requireActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            return;
-        }
-        if (title != null && title.contains("HPC")) {
-            try {
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-                        .navigate(R.id.hpcFragment);
-                return;
-            } catch (Exception ignored) {}
-        }
-        if (title != null && title.contains("CCE")) {
-            try {
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-                        .navigate(R.id.cceFragment);
-                return;
-            } catch (Exception ignored) {}
-        }
-        if (title != null && title.contains("परिपाठ")) {
-            try {
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-                        .navigate(R.id.paripathFragment);
-                return;
-            } catch (Exception ignored) {}
-        }
-        if (title != null && title.contains("विद्यार्थी")) {
-            try {
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-                        .navigate(R.id.studentsFragment);
-                return;
-            } catch (Exception ignored) {}
-        }
-
-        Intent intent = new Intent(requireContext(), ModuleWebActivity.class);
-        intent.putExtra(ModuleWebActivity.EXTRA_TITLE, title);
-        intent.putExtra(ModuleWebActivity.EXTRA_URL, url);
-        startActivity(intent);
-        requireActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     @Override

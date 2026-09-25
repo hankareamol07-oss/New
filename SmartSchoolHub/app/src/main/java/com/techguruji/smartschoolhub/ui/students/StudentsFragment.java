@@ -20,7 +20,6 @@ import com.techguruji.smartschoolhub.adapter.StudentAdapter;
 import com.techguruji.smartschoolhub.data.model.StudentListResponse;
 import com.techguruji.smartschoolhub.data.network.ApiClient;
 import com.techguruji.smartschoolhub.databinding.FragmentStudentsBinding;
-import com.techguruji.smartschoolhub.ui.modules.ModuleWebActivity;
 import com.techguruji.smartschoolhub.utils.PdfPrintHelper;
 import com.techguruji.smartschoolhub.utils.SessionManager;
 
@@ -64,7 +63,7 @@ public class StudentsFragment extends Fragment {
     }
 
     private void setupToolbar() {
-        binding.toolbar.inflateMenu(R.menu.menu_web);
+        binding.toolbar.inflateMenu(R.menu.menu_print);
         binding.toolbar.setOnMenuItemClickListener(item -> {
             if (item.getItemId() == R.id.btnPrint) {
                 if (allStudents != null && !allStudents.isEmpty()) {
@@ -82,11 +81,8 @@ public class StudentsFragment extends Fragment {
 
     private void setupRecyclerView() {
         adapter = new StudentAdapter(new ArrayList<>(), student -> {
-            // Open student module in WebView
-            Intent intent = new Intent(requireContext(), ModuleWebActivity.class);
-            intent.putExtra(ModuleWebActivity.EXTRA_TITLE, "विद्यार्थी माहिती");
-            intent.putExtra(ModuleWebActivity.EXTRA_URL,
-                    "https://vijetaacademysangli.in/techguruji/students/edit.php?id=" + student.getId());
+            Intent intent = new Intent(requireContext(), StudentDetailActivity.class);
+            intent.putExtra(StudentDetailActivity.EXTRA_STUDENT_ID, student.getId());
             startActivity(intent);
         });
         binding.rvStudents.setLayoutManager(new LinearLayoutManager(requireContext()));
@@ -107,11 +103,7 @@ public class StudentsFragment extends Fragment {
 
     private void setupFab() {
         binding.fabAddStudent.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), ModuleWebActivity.class);
-            intent.putExtra(ModuleWebActivity.EXTRA_TITLE, "नवीन विद्यार्थी नोंदणी");
-            intent.putExtra(ModuleWebActivity.EXTRA_URL,
-                    "https://vijetaacademysangli.in/techguruji/students/add.php");
-            startActivity(intent);
+            startActivity(new Intent(requireContext(), AddStudentActivity.class));
         });
     }
 

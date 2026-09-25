@@ -21,6 +21,7 @@ import com.techguruji.smartschoolhub.databinding.ActivityHajeriBinding;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
@@ -41,11 +42,19 @@ public class HajeriActivity extends AppCompatActivity {
     private String selectedGrade = "1";
     private String selectedSection = "A";
 
+    public static final String EXTRA_GRADE = "grade";
+    public static final String EXTRA_SECTION = "section";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityHajeriBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        String g = getIntent().getStringExtra(EXTRA_GRADE);
+        String s = getIntent().getStringExtra(EXTRA_SECTION);
+        if (g != null && !g.isEmpty()) selectedGrade = g;
+        if (s != null && !s.isEmpty()) selectedSection = s;
 
         setupToolbar();
         setupFilters();
@@ -72,6 +81,7 @@ public class HajeriActivity extends AppCompatActivity {
         ArrayAdapter<String> gradeAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item, gradeNames);
         binding.spGrade.setAdapter(gradeAdapter);
+        binding.spGrade.setSelection(Math.max(0, Arrays.asList(grades).indexOf(selectedGrade)), false);
         binding.spGrade.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -86,6 +96,7 @@ public class HajeriActivity extends AppCompatActivity {
         ArrayAdapter<String> sectionAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item, sections);
         binding.spSection.setAdapter(sectionAdapter);
+        binding.spSection.setSelection(Math.max(0, Arrays.asList(sections).indexOf(selectedSection)), false);
         binding.spSection.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

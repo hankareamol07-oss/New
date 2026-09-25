@@ -75,7 +75,7 @@ public class TachanActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_web, menu);
+        getMenuInflater().inflate(R.menu.menu_print, menu);
         return true;
     }
 

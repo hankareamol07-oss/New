@@ -59,14 +59,4 @@
         domain="file"
         path="." />
 
-    <!-- ── Allow non-sensitive user settings ── -->
-    <!-- (by inclusion — everything not excluded above is backed up) -->
-    <include
-        domain="sharedpref"
-        path="app_settings.xml" />
-
-    <include
-        domain="sharedpref"
-        path="language_prefs.xml" />
-
 </full-backup-content>
