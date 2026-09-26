@@ -1,0 +1,7 @@
+config.json
+client_secret.json
+youtube_token.json
+schedule_state.json
+output/
+__pycache__/
+*.pyc
