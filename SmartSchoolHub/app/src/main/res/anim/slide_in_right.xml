@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    slide_in_right.xml
+    Fragment/Activity enters from the right side of the screen.
+    Duration: 300ms with decelerate interpolator for a natural feel.
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/decelerate_cubic">
+
+    <!-- Translate from 100% right → 0% (original position) -->
+    <translate
+        android:duration="300"
+        android:fromXDelta="100%p"
+        android:toXDelta="0%p" />
+
+    <!-- Subtle fade-in from 80% opacity -->
+    <alpha
+        android:duration="300"
+        android:fromAlpha="0.8"
+        android:toAlpha="1.0" />
+
+</set>

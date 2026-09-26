@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Hero Banner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient_primary"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:paddingBottom="28dp">
+
+                <TextView
+                    android:id="@+id/tvTeacherName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="स्वागत, शिक्षक"
+                    android:textSize="13sp"
+                    android:textColor="#FFCCBC"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tvSchoolName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="शाळेचे नाव"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/tvUdise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UDISE: —"
+                    android:textSize="12sp"
+                    android:textColor="#FFCCBC"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvAcademicYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="शैक्षणिक वर्ष: 2025-26"
+                    android:textSize="12sp"
+                    android:textColor="#FFE0B2"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Today's date -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#33FFFFFF"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📅 "
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tvTodayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Suvichar -->
+                <TextView
+                    android:id="@+id/tvSuvichar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="italic"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingMultiplier="1.4"/>
+
+                <TextView
+                    android:id="@+id/tvSuvicharSource"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="#FFCCBC"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+            <!-- Shimmer placeholder -->
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View android:layout_width="match_parent" android:layout_height="100dp"
+                        android:background="@color/shimmer_base" android:layout_marginBottom="12dp"/>
+                    <View android:layout_width="match_parent" android:layout_height="80dp"
+                        android:background="@color/shimmer_base" android:layout_marginBottom="12dp"/>
+                    <View android:layout_width="match_parent" android:layout_height="80dp"
+                        android:background="@color/shimmer_base"/>
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <!-- Main content (shown after load) -->
+            <LinearLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <!-- Freemium Banner -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/bannerFreemium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/warning_container"
+                    app:strokeWidth="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🎁 मोफत चाचणी सक्रिय!"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/free_plan_msg"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnUpgradePro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ प्रो"
+                            android:textSize="12sp"
+                            app:cornerRadius="8dp"
+                            android:layout_marginStart="8dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Stats Section Header -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 शाळा सारांश"
+                    style="@style/SectionHeader"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- 2x2 Stat Cards Grid -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:layout_marginBottom="20dp">
+
+                    <!-- Stat: Students -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="👦" android:textSize="24sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/tvStatStudents"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary"/>
+                            <TextView android:text="@string/total_students"
+                                android:textSize="12sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Stat: HPC -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="📋" android:textSize="24sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/tvStatHpc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/module_hpc_icon"/>
+                            <TextView android:text="@string/hpc_cards"
+                                android:textSize="12sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Stat: CCE -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="📊" android:textSize="24sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/tvStatCce"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/secondary"/>
+                            <TextView android:text="@string/cce_evaluated"
+                                android:textSize="12sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Stat: Teachers -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="👩‍🏫" android:textSize="24sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/tvStatTeachers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/tertiary"/>
+                            <TextView android:text="@string/teachers"
+                                android:textSize="12sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </GridLayout>
+
+                <!-- Quick Actions Header -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ जलद प्रवेश"
+                    style="@style/SectionHeader"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Quick Action Cards Grid: 2 columns -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2">
+
+                    <!-- Paripath -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardParipath"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="@color/module_paripath_bg"
+                        app:strokeWidth="0dp"
+                        android:foreground="@drawable/ripple_card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="☀️" android:textSize="28sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"/>
+                            <TextView android:text="@string/paripath"
+                                android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/module_paripath_icon"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="मोफत →"
+                                android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- HPC -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardHpc"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="@color/module_hpc_bg"
+                        app:strokeWidth="0dp"
+                        android:foreground="@drawable/ripple_card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="📋" android:textSize="28sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"/>
+                            <TextView android:text="@string/hpc"
+                                android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/module_hpc_icon"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="NEP 2020 →"
+                                android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- CCE -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardCce"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="@color/module_cce_bg"
+                        app:strokeWidth="0dp"
+                        android:foreground="@drawable/ripple_card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="📈" android:textSize="28sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"/>
+                            <TextView android:text="@string/cce"
+                                android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/module_cce_icon"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="CCE ९.० →"
+                                android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Tachan -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardTachan"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="@color/module_tachan_bg"
+                        app:strokeWidth="0dp"
+                        android:foreground="@drawable/ripple_card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="📖" android:textSize="28sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"/>
+                            <TextView android:text="@string/tachan"
+                                android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/module_tachan_icon"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="दैनिक →"
+                                android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Hajeri -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardHajeri"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="@color/module_hajeri_bg"
+                        app:strokeWidth="0dp"
+                        android:foreground="@drawable/ripple_card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="✅" android:textSize="28sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"/>
+                            <TextView android:text="@string/hajeri"
+                                android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/module_hajeri_icon"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="हजेरी →"
+                                android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- MDM -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardMdm"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="@color/module_mdm_bg"
+                        app:strokeWidth="0dp"
+                        android:foreground="@drawable/ripple_card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="🍱" android:textSize="28sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"/>
+                            <TextView android:text="@string/mdm"
+                                android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/module_mdm_icon"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="MDM →"
+                                android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Fee -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardFee"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="@color/module_fee_bg"
+                        app:strokeWidth="0dp"
+                        android:foreground="@drawable/ripple_card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="💰" android:textSize="28sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"/>
+                            <TextView android:text="@string/fee"
+                                android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/module_fee_icon"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="फी →"
+                                android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Exam -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardExam"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="@color/module_exam_bg"
+                        app:strokeWidth="0dp"
+                        android:foreground="@drawable/ripple_card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_margin="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView android:text="📝" android:textSize="28sp"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"/>
+                            <TextView android:text="@string/exam_paper"
+                                android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/module_exam_icon"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="५०,०००+ →"
+                                android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <!-- Error Layout -->
+            <LinearLayout
+                android:id="@+id/layoutError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="40dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😕"
+                    android:textSize="48sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_internet"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_secondary"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRetry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/retry"
+                    app:cornerRadius="12dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/ModuleToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:subtitle="Exam Paper Generator"
+            app:title="@string/exam_title" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="96dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Step 1 -->
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+                android:text="१. परीक्षा तपशील" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormField"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/exam_name">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etExamName"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textCapWords" android:text="प्रथम सत्र परीक्षा" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormDropdown"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="इयत्ता / माध्यम">
+                <AutoCompleteTextView android:id="@+id/ddStandard" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormDropdown"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/exam_subject">
+                <AutoCompleteTextView android:id="@+id/ddSubject" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormField"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/exam_duration">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDuration"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="number" android:text="120" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Step 2 -->
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp" android:text="२. धडे / पाठ निवडा" />
+
+            <TextView android:id="@+id/tvChapterHint" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="6dp"
+                android:text="प्रथम विषय निवडा" android:textColor="@color/text_secondary" android:textSize="12sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipChapters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAllChapters"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="सर्व निवडा"
+                android:visibility="gone" />
+
+            <!-- Step 3 -->
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp" android:text="३. प्रश्न प्रकार व संख्या" />
+
+            <TextView android:id="@+id/tvTypeHint" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="6dp"
+                android:text="धडे निवडल्यानंतर प्रश्न प्रकार दिसतील" android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutTypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- Summary -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/module_exam_bg"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:id="@+id/tvTotalQ" style="@style/StatValue"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                        <TextView style="@style/StatLabel" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="एकूण प्रश्न" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:id="@+id/tvTotalMarks" style="@style/StatValue"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                        <TextView style="@style/StatLabel" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="@string/exam_total_marks" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swAnswerKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="उत्तरसूची (Answer key) सोबत छापा"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="@string/exam_generate"
+        app:icon="@drawable/ic_print" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

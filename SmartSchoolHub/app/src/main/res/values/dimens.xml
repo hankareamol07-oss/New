@@ -1,0 +1,26 @@
+<resources>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="section_spacing">20dp</dimen>
+    <dimen name="item_spacing">12dp</dimen>
+    <dimen name="icon_size_sm">24dp</dimen>
+    <dimen name="icon_size_md">36dp</dimen>
+    <dimen name="icon_size_lg">48dp</dimen>
+    <dimen name="module_icon_box">52dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="button_radius">12dp</dimen>
+    <dimen name="input_radius">12dp</dimen>
+    <dimen name="text_xs">11sp</dimen>
+    <dimen name="text_sm">13sp</dimen>
+    <dimen name="text_md">15sp</dimen>
+    <dimen name="text_lg">17sp</dimen>
+    <dimen name="text_xl">20sp</dimen>
+    <dimen name="text_2xl">24sp</dimen>
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="stat_card_min_height">96dp</dimen>
+    <dimen name="avatar_size">44dp</dimen>
+    <dimen name="badge_radius">8dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_module_class.xml
+    Classes module icon — chalkboard / blackboard outline style.
+    Material Symbols style, 24×24 viewport.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorPrimary">
+
+    <!-- Chalkboard outer frame -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M2,4 L22,4 L22,16 L2,16 Z"
+        android:strokeWidth="2"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Chalked line 1 (heading) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M5,8 L19,8"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Chalked line 2 -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M5,11 L14,11"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Chalked line 3 (short) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M5,14 L11,14"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Chalk tray base -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M2,16 L2,18 L22,18 L22,16"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Board stand left leg -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M7,18 L5,22"
+        android:strokeWidth="1.8"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Board stand right leg -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M17,18 L19,22"
+        android:strokeWidth="1.8"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+</vector>

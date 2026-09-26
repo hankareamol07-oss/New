@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_module_students.xml
+    Students module icon — group of people / silhouettes outline style.
+    Material Symbols style, 24×24 viewport.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorPrimary">
+
+    <!-- Center person head -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M12,4 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0"
+        android:strokeWidth="1.8"
+        android:strokeColor="#BF360C" />
+
+    <!-- Center person body -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M6,21 C6,17.69 8.69,15 12,15 C15.31,15 18,17.69 18,21"
+        android:strokeWidth="1.8"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Left person head (smaller) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M5,6 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C" />
+
+    <!-- Left person body (partial) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M1,21 C1,18.24 3.24,16 6,16"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Right person head (smaller) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M19,6 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C" />
+
+    <!-- Right person body (partial) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M18,16 C20.76,16 23,18.24 23,21"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+</vector>

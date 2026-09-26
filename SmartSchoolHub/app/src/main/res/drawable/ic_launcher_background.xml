@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_launcher_background.xml
+    Adaptive icon background layer — deep orange gradient (top-left to bottom-right).
+    Primary: #BF360C  →  Secondary: #E65100
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Deep orange radial-style gradient background using two overlapping paths -->
+
+    <!-- Base fill: deep orange #BF360C -->
+    <path
+        android:fillColor="#BF360C"
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z" />
+
+    <!-- Gradient overlay: amber highlight sweeping bottom-right, semi-transparent -->
+    <path
+        android:fillColor="#40E65100"
+        android:pathData="M108,0 C108,0 108,108 0,108 L108,108 Z" />
+
+    <!-- Top-left warm highlight for depth -->
+    <path
+        android:fillColor="#20FF6D00"
+        android:pathData="M0,0 C60,0 108,0 108,0 C108,40 108,108 108,108 C60,60 0,40 0,0 Z" />
+
+    <!-- Subtle center radial highlight -->
+    <path
+        android:fillColor="#15FFFFFF"
+        android:pathData="M54,20 C75,20 88,35 88,54 C88,73 75,88 54,88 C33,88 20,73 20,54 C20,35 33,20 54,20 Z" />
+
+</vector>

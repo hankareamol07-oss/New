@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Auto-Backup Rules — Smart School Hub (Android 6.0 – 11)
+    Excludes sensitive SharedPreferences and database files from cloud backup.
+    Reference this file via android:fullBackupContent in AndroidManifest.xml.
+-->
+<full-backup-content>
+
+    <!-- ── Exclude sensitive SharedPreferences ── -->
+
+    <!-- User auth token / session -->
+    <exclude
+        domain="sharedpref"
+        path="auth_prefs.xml" />
+
+    <!-- Biometric / PIN settings -->
+    <exclude
+        domain="sharedpref"
+        path="security_prefs.xml" />
+
+    <!-- User profile cache (PII) -->
+    <exclude
+        domain="sharedpref"
+        path="user_profile_prefs.xml" />
+
+    <!-- School credentials -->
+    <exclude
+        domain="sharedpref"
+        path="school_prefs.xml" />
+
+    <!-- FCM / Push notification token -->
+    <exclude
+        domain="sharedpref"
+        path="fcm_prefs.xml" />
+
+    <!-- Default app SharedPreferences (may contain tokens) -->
+    <exclude
+        domain="sharedpref"
+        path="com.techguruji.smartschoolhub_preferences.xml" />
+
+    <!-- ── Exclude local database files ── -->
+
+    <!-- Room / SQLite database -->
+    <exclude
+        domain="database"
+        path="smart_school_hub.db" />
+
+    <exclude
+        domain="database"
+        path="smart_school_hub.db-shm" />
+
+    <exclude
+        domain="database"
+        path="smart_school_hub.db-wal" />
+
+    <!-- ── Exclude internal cache / temp files ── -->
+
+    <exclude
+        domain="file"
+        path="." />
+
+</full-backup-content>

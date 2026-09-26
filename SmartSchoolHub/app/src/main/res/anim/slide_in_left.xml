@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    slide_in_left.xml
+    Fragment/Activity enters from the left side of the screen.
+    Used for back-navigation (pop-back) transitions.
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/decelerate_cubic">
+
+    <!-- Translate from -100% left → 0% (original position) -->
+    <translate
+        android:duration="300"
+        android:fromXDelta="-100%p"
+        android:toXDelta="0%p" />
+
+    <!-- Subtle fade-in from 80% opacity -->
+    <alpha
+        android:duration="300"
+        android:fromAlpha="0.8"
+        android:toAlpha="1.0" />
+
+</set>
