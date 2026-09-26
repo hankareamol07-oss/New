@@ -14,7 +14,6 @@ import com.techguruji.smartschoolhub.data.model.PlanModel;
 import com.techguruji.smartschoolhub.data.model.RegisterRequest;
 import com.techguruji.smartschoolhub.data.model.StudentDetailResponse;
 import com.techguruji.smartschoolhub.data.model.StudentListResponse;
-import com.techguruji.smartschoolhub.data.model.TachanModel;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -88,19 +87,6 @@ public interface ApiService {
     /** POST /api/attendance.php — save daily attendance */
     @POST("attendance.php")
     Call<ApiResponse> saveAttendance(@Body AttendanceModel.AttendanceSaveRequest request);
-
-    // ─── TACHAN (दैनिक टाचण) ─────────────────────────────────────────────────
-
-    /** GET /api/tachan.php?date=YYYY-MM-DD&grade=X */
-    @GET("tachan.php")
-    Call<TachanModel.TachanResponse> getTachan(
-            @Query("date") String date,
-            @Query("grade") String grade
-    );
-
-    /** POST /api/tachan.php — add new lesson plan */
-    @POST("tachan.php")
-    Call<ApiResponse> addTachan(@Body TachanModel.AddTachanRequest request);
 
     // ─── MDM (पोषण आहार) ─────────────────────────────────────────────────────
 

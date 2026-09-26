@@ -76,6 +76,22 @@
             android:name=".ui.tachan.TachanActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
+        <activity android:name=".ui.tachan.TachanPlannerActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.tachan.TachanPlanEditActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.tachan.TachanSetupActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+
+        <!-- CCE (सातत्यपूर्ण सर्वंकष मूल्यमापन) -->
+        <activity android:name=".ui.cce.CceHubActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.cce.CceManageActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.cce.CceMarksActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.cce.CceNotesActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.cce.CceReportsActivity" android:exported="false" android:screenOrientation="portrait" />
+
+        <!-- HPC (समग्र प्रगती पत्रक) -->
+        <activity android:name=".ui.hpc.HpcHubActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.hpc.HpcStudentsActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.hpc.HpcFoundationalActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.hpc.HpcStageActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
 
         <activity
             android:name=".ui.mdm.MdmActivity"

@@ -26,6 +26,7 @@ public class ApiClient {
     private static ApiClient instance;
     private final ApiService apiService;
     private final ExamApiService examApiService;
+    private final NativeApi nativeApi;
     private static Context appContext;
 
     private ApiClient(Context context) {
@@ -73,6 +74,7 @@ public class ApiClient {
                 .build();
 
         apiService = retrofit.create(ApiService.class);
+        nativeApi = retrofit.create(NativeApi.class);
 
         examApiService = new Retrofit.Builder()
                 .baseUrl(EXAM_BASE_URL)
@@ -100,5 +102,9 @@ public class ApiClient {
 
     public ExamApiService getExamApiService() {
         return examApiService;
+    }
+
+    public NativeApi getNativeApi() {
+        return nativeApi;
     }
 }

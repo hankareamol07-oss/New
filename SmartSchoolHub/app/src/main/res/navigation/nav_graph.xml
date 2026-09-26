@@ -72,33 +72,6 @@
         android:label="@string/nav_modules"
         tools:layout="@layout/fragment_modules">
 
-        <!-- Action → HPC -->
-        <action
-            android:id="@+id/action_modules_to_hpc"
-            app:destination="@id/hpcFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-
-        <!-- Action → CCE -->
-        <action
-            android:id="@+id/action_modules_to_cce"
-            app:destination="@id/cceFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-
-        <!-- Action → Tachan -->
-        <action
-            android:id="@+id/action_modules_to_tachan"
-            app:destination="@id/tachanFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-
         <!-- Action → Hajeri -->
         <action
             android:id="@+id/action_modules_to_hajeri"
@@ -178,27 +151,6 @@
     <!-- ═══════════════════════════════════════════════════
          Secondary / Child Fragments (not bottom-nav items)
          ═══════════════════════════════════════════════════ -->
-
-    <!-- HPC Progress Cards -->
-    <fragment
-        android:id="@+id/hpcFragment"
-        android:name="com.techguruji.smartschoolhub.ui.hpc.HpcFragment"
-        android:label="@string/module_hpc"
-        tools:layout="@layout/fragment_hpc" />
-
-    <!-- CCE Evaluation -->
-    <fragment
-        android:id="@+id/cceFragment"
-        android:name="com.techguruji.smartschoolhub.ui.cce.CceFragment"
-        android:label="@string/module_cce"
-        tools:layout="@layout/fragment_cce" />
-
-    <!-- Tachan (Lesson Diary) -->
-    <fragment
-        android:id="@+id/tachanFragment"
-        android:name="com.techguruji.smartschoolhub.ui.tachan.TachanFragment"
-        android:label="@string/module_tachan"
-        tools:layout="@layout/fragment_tachan" />
 
     <!-- Hajeri (Attendance) -->
     <fragment

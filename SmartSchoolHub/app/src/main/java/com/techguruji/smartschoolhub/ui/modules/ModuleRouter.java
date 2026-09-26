@@ -17,6 +17,8 @@ import com.techguruji.smartschoolhub.ui.gr.GrRegisterActivity;
 import com.techguruji.smartschoolhub.ui.hajeri.HajeriActivity;
 import com.techguruji.smartschoolhub.ui.mdm.MdmActivity;
 import com.techguruji.smartschoolhub.ui.tachan.TachanActivity;
+import com.techguruji.smartschoolhub.ui.cce.CceHubActivity;
+import com.techguruji.smartschoolhub.ui.hpc.HpcHubActivity;
 
 /**
  * Single place that maps a module key to its native screen.
@@ -32,10 +34,10 @@ public final class ModuleRouter {
                 navigate(activity, R.id.paripathFragment);
                 break;
             case ModuleItem.KEY_HPC:
-                navigate(activity, R.id.hpcFragment);
+                start(activity, HpcHubActivity.class);
                 break;
             case ModuleItem.KEY_CCE:
-                navigate(activity, R.id.cceFragment);
+                start(activity, CceHubActivity.class);
                 break;
             case ModuleItem.KEY_STUDENTS:
                 navigate(activity, R.id.studentsFragment);
