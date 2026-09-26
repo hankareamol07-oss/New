@@ -157,7 +157,7 @@ switch ($action) {
             (int)($_GET['standard'] ?? 0) ?: null, trim($_GET['subject'] ?? '')));
 
     case 'save_assessment':
-        // sections: [{q_no, sub, instruction, marks, qtype, chapter_ids[], items:[{bq_id, text, page_image}]}]
+        // sections: [{q_no, sub, instruction, marks, qtype, answer_space, oral, chapter_ids[], items:[{bq_id, text, page_image}]}]
         $sections = $body['sections'] ?? [];
         if (!$sections) ep_json(['status' => 'error', 'message' => 'Add at least one question section']);
         $clean = [];
@@ -168,7 +168,8 @@ switch ($action) {
                 $text = trim((string)($it['text'] ?? ''));
                 if ($text === '') continue;
                 $img = preg_match('~^\d+/\d{3}(_\d+)?\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
-                $item = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
+                $item = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'page_image' => $img, 'show_image' => $img && !empty($it['show_image']),
+                    'qtype' => preg_match('/^[a-z_]+$/', (string)($it['qtype'] ?? '')) ? $it['qtype'] : ''];
                 if ($pairs = ep_item_pairs(['pairs' => $it['pairs'] ?? null, 'text' => $text])) {
                     $item['pairs'] = $pairs;
                 }
@@ -179,6 +180,8 @@ switch ($action) {
             $clean[] = [
                 'q_no' => (int)($s['q_no'] ?? 0), 'sub' => trim((string)($s['sub'] ?? '')), 'instruction' => $instruction,
                 'marks' => (float)($s['marks'] ?? 0), 'qtype' => trim((string)($s['qtype'] ?? '')),
+                'answer_space' => preg_match('/^[a-z0-9]+(:\d+)?$/', (string)($s['answer_space'] ?? '')) ? $s['answer_space'] : '',
+                'oral' => !empty($s['oral']),
                 'chapter_ids' => array_values(array_filter(array_map('intval', $s['chapter_ids'] ?? []))), 'items' => $items,
             ];
             $totalMarks += (float)($s['marks'] ?? 0);
@@ -188,7 +191,10 @@ switch ($action) {
         $meta = [
             'exam_type' => $examType, 'test_no' => (int)($body['test_no'] ?? 1) ?: 1, 'standard' => (int)($body['standard'] ?? 0),
             'subject' => trim((string)($body['subject'] ?? '')), 'medium' => trim((string)($body['medium'] ?? '')),
-            'student_fields' => !empty($body['student_fields']), 'sections' => $clean,
+            'student_fields' => !empty($body['student_fields']),
+            'format' => ($body['format'] ?? '') === 'standard' ? 'standard' : 'lines',
+            'oral_marks' => (float)($body['oral_marks'] ?? 0),
+            'sections' => $clean,
         ];
         $params = [
             trim($body['title'] ?? '') ?: ($examType === 'aakarik' ? 'आकारिक मूल्यमापन चाचणी' : 'संकलित मूल्यमापन चाचणी'),
@@ -224,7 +230,8 @@ switch ($action) {
             $text = trim((string)($it['text'] ?? ''));
             if ($text === '') continue;
             $img = preg_match('~^\d+/\d{3}(_\d+)?\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
-            $item = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'answer' => trim((string)($it['answer'] ?? '')), 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
+            $item = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'answer' => trim((string)($it['answer'] ?? '')), 'page_image' => $img, 'show_image' => $img && !empty($it['show_image']),
+                    'qtype' => preg_match('/^[a-z_]+$/', (string)($it['qtype'] ?? '')) ? $it['qtype'] : ''];
             if ($pairs = ep_item_pairs(['pairs' => $it['pairs'] ?? null, 'text' => $text])) {
                 $item['pairs'] = $pairs;
             }

@@ -13,6 +13,12 @@
     one_word: 'एका शब्दात', one_sentence: 'एका वाक्यात', short_answer: 'थोडक्यात', reason: 'कारणे', difference: 'फरक', define: 'व्याख्या',
     explain: 'स्पष्ट करा', solve: 'सोडवा', draw: 'आकृती', vocabulary: 'शब्दसंपत्ती', grammar: 'व्याकरण', activity: 'कृती / उपक्रम', descriptive: 'वर्णनात्मक',
   };
+  // answer-space options for the उत्तर-लेखन format (value = mode[:size], '' = auto from question type)
+  const ANS_SPACE = {
+    '': 'उत्तर-जागा: auto', none: 'जागा नाही', inline: 'ओळीत रिकामी जागा', tail: 'प्रश्नापुढे ओळ', short: 'उजवीकडे छोटी ओळ', grid2: 'दोन स्तंभ + छोटी ओळ',
+    'lines:1': '१ ओळ', 'lines:2': '२ ओळी', 'lines:3': '३ ओळी', 'lines:4': '४ ओळी', 'lines:5': '५ ओळी', 'lines:6': '६ ओळी', 'lines:8': '८ ओळी', 'lines:10': '१० ओळी',
+    'blank:20': 'मोकळी जागा 2 cm', 'blank:30': 'मोकळी जागा 3 cm', 'blank:45': 'मोकळी जागा 4.5 cm', 'blank:60': 'मोकळी जागा 6 cm', 'box:45': 'चौकट 4.5 cm', 'box:70': 'चौकट 7 cm',
+  };
   const MR_DIGITS = '०१२३४५६७८९';
   const mrNum = n => String(n).replace(/\d/g, d => MR_DIGITS[d]);
   const STD_MR = ['', 'पहिली', 'दुसरी', 'तिसरी', 'चौथी', 'पाचवी', 'सहावी', 'सातवी', 'आठवी'];
@@ -105,10 +111,12 @@
     } else {
       const m = state.models.find(x => x.model_id == v);
       state.sections = m.sections.map(x => ({
-        q_no: x.q_no, sub: x.sub || '', instruction: x.instruction, marks: x.marks || 0, qtype: guessType(x.instruction),
+        q_no: x.q_no, sub: x.sub || '', instruction: x.instruction, marks: x.marks || 0, qtype: x.qtype || guessType(x.instruction),
+        answer_space: x.answer_space || '', oral: !!x.oral,
         count: x.items.length || Math.max(1, x.marks || 1), items: x.items.map(t => ({ bq_id: null, text: t })),
       }));
       if (m.total_marks) $('#totalMarks').value = m.total_marks;
+      if (m.oral_marks) $('#oralMarks').value = m.oral_marks;
     }
     render();
   };
@@ -117,7 +125,7 @@
   $('#addSection').onclick = e => {
     e.preventDefault();
     const last = state.sections[state.sections.length - 1];
-    state.sections.push({ q_no: (last?.q_no || 0) + 1, sub: '', instruction: '', marks: 4, qtype: '', count: 4, items: [] });
+    state.sections.push({ q_no: (last?.q_no || 0) + 1, sub: '', instruction: '', marks: 4, qtype: '', answer_space: '', oral: false, count: 4, items: [] });
     render();
   };
   // match (जोड्या लावा) questions are edited as: stem line + one "left | right" line per pair; the print view draws the table
@@ -154,6 +162,8 @@
           <div class="row g-2 align-items-center mt-1">
             <div class="col-auto"><select class="form-select form-select-sm" data-f="qtype">${Object.entries(QTYPES).map(([k, v]) => `<option value="${k}" ${k === s.qtype ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
             <div class="col-auto"><div class="input-group input-group-sm"><input type="number" class="form-control" style="width:60px" data-f="count" value="${esc(s.count)}"><span class="input-group-text">questions</span></div></div>
+            <div class="col-auto"><select class="form-select form-select-sm" data-f="answer_space" title="उत्तर लिहिण्याची जागा (उत्तर-लेखन format)">${Object.entries(ANS_SPACE).map(([k, v]) => `<option value="${k}" ${k === (s.answer_space || '') ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+            <div class="col-auto"><label class="small text-nowrap" title="Print in the तोंडी block at the end of the paper"><input type="checkbox" data-f="oral" ${s.oral ? 'checked' : ''}> तोंडी</label></div>
             <div class="col-auto"><button class="btn btn-sm btn-success" data-act="fill"><i class="bi bi-magic"></i> Fill</button> <button class="btn btn-sm btn-outline-secondary" data-act="browse"><i class="bi bi-search"></i> Browse</button> <button class="btn btn-sm btn-outline-secondary" data-act="add-item"><i class="bi bi-plus"></i> Own question</button></div>
             ${s.warn ? `<div class="col-auto small text-warning">${esc(s.warn)}</div>` : ''}
           </div>
@@ -185,7 +195,7 @@
       if (f === 'text' && it.bq_id && it.text !== e.target.value) it.edited = true;
       if (f === 'text') { e.target.style.height = 'auto'; e.target.style.height = e.target.scrollHeight + 2 + 'px'; }
     } else {
-      sec[f] = ['marks', 'count', 'q_no'].includes(f) ? +e.target.value : e.target.value;
+      sec[f] = e.target.type === 'checkbox' ? e.target.checked : (['marks', 'count', 'q_no'].includes(f) ? +e.target.value : e.target.value);
       if (f === 'marks') $('#marksInfo').textContent = `— ${state.sections.length} sections, ${state.sections.reduce((a, s) => a + (+s.marks || 0), 0)} marks`;
     }
   });
@@ -248,8 +258,9 @@
       exam_name: $('#examType').value === 'sankalit' ? 'संकलित मूल्यमापन' : 'आकारिक मूल्यमापन',
       duration: $('#duration').value, exam_date: $('#examDate').value, total_marks: $('#totalMarks').value,
       instructions: $('#instructions').value, student_fields: $('#studentFields').checked,
+      format: $('#paperFormat').value, oral_marks: $('#oralMarks').value,
       chapter_ids: selectedChapters(),
-      sections: state.sections.map(x => ({ ...x, chapter_ids: selectedChapters(), items: x.items.map(i => ({ bq_id: i.bq_id, text: i.text, page_image: i.page_image, show_image: i.show_image })) })),
+      sections: state.sections.map(x => ({ ...x, chapter_ids: selectedChapters(), items: x.items.map(i => ({ bq_id: i.bq_id, text: i.text, page_image: i.page_image, show_image: i.show_image, qtype: i.qtype || '' })) })),
     };
     const r = await api('save_assessment', { body });
     const msg = $('#saveMsg');
@@ -274,6 +285,8 @@
     $('#title').value = editData.title; $('#stdLabel').value = editData.std_label || ''; $('#duration').value = editData.duration || '';
     $('#examDate').value = editData.exam_date || ''; $('#totalMarks').value = editData.total_marks || ''; $('#instructions').value = editData.instructions || '';
     $('#studentFields').checked = m.student_fields !== false;
+    if (m.format) $('#paperFormat').value = m.format;
+    $('#oralMarks').value = m.oral_marks || '';
     state.sections = (m.sections || []).map(x => ({ ...x, count: x.items.length, items: x.items.map(i => ({ ...i, needs_figure: !!i.page_image })) }));
     render();
   } else {

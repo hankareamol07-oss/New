@@ -25,7 +25,7 @@ require __DIR__ . '/includes/header.php';
      data-tree='<?= h(json_encode(ep_book_tree(), JSON_UNESCAPED_UNICODE)) ?>'
      data-edit='<?= $editPaper ? h(json_encode($editPaper, JSON_UNESCAPED_UNICODE)) : '' ?>'>
 <h3 class="mb-1"><?= $editPaper ? 'Edit' : '' ?> संकलित / आकारिक मूल्यमापन चाचणी <small class="text-muted fs-6">Summative / Formative test from textbook exercises</small></h3>
-<p class="text-muted small mb-3">Choose test type, class and textbook subject, tick the chapters covered (संकलित १ = first half, संकलित २ = second half by default), then <b>Auto-fill</b> every section with स्वाध्याय / Exercise questions from the Balbharati textbook. You can also load the layout of a real paper (<?= (int)($modelCounts['sankalit'] ?? 0) ?> संकलित, <?= (int)($modelCounts['aakarik'] ?? 0) ?> आकारिक samples) and edit any question text before saving.</p>
+<p class="text-muted small mb-3">Choose test type, class and textbook subject, tick the chapters covered (संकलित १ = first half, संकलित २ = second half by default), then <b>Auto-fill</b> every section with स्वाध्याय / Exercise questions from the Balbharati textbook. You can also load the layout of a real paper (<?= (int)($modelCounts['sankalit'] ?? 0) ?> संकलित, <?= (int)($modelCounts['aakarik'] ?? 0) ?> आकारिक samples) and edit any question text before saving. The <b>उत्तर-लेखन</b> format prints dotted answer lines / working space under every question (chosen automatically from the question type; change it per section with the <i class="bi bi-pencil-square"></i> answer-space box) and a तोंडी block for sections marked oral.</p>
 
 <div class="row g-4">
   <div class="col-lg-4">
@@ -71,6 +71,14 @@ require __DIR__ . '/includes/header.php';
         <div class="row g-2 mb-2">
           <div class="col-6"><label class="form-label small mb-1">Exam date</label><input type="date" class="form-control" id="examDate"></div>
           <div class="col-6"><label class="form-label small mb-1">Total marks</label><input type="number" step="0.5" class="form-control" id="totalMarks" placeholder="auto"></div>
+        </div>
+        <div class="row g-2 mb-2">
+          <div class="col-7"><label class="form-label small mb-1">Paper format</label>
+            <select class="form-select" id="paperFormat">
+              <option value="lines">उत्तर-लेखन ओळींसह (answer lines &amp; space, minishala style)</option>
+              <option value="standard">Compact — questions only</option>
+            </select></div>
+          <div class="col-5"><label class="form-label small mb-1">तोंडी गुण (oral)</label><input type="number" step="0.5" min="0" class="form-control" id="oralMarks" placeholder="0"></div>
         </div>
         <div class="mb-2"><label class="form-label small mb-1">Instructions (one per line)</label><textarea class="form-control" id="instructions" rows="2"></textarea></div>
         <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="studentFields" checked><label class="form-check-label small" for="studentFields">Print विद्यार्थ्याचे नाव / हजेरी क्र. / गुण lines</label></div>

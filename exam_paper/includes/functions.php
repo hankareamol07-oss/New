@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/answer_space.php';
 
 function h(?string $s): string
 {
@@ -513,6 +514,13 @@ function ep_paper_models(string $examType, ?int $standard, string $subject = '')
     foreach ($rows as &$r) {
         $r['sections'] = json_decode($r['sections_json'], true) ?: [];
         unset($r['sections_json']);
+        foreach ($r['sections'] as &$s) {      // suggested question type + answer space for the उत्तर-लेखन format
+            $s['qtype'] = ep_answer_space_guess_qtype((string)($s['instruction'] ?? ''));
+            $s['oral'] = (bool)preg_match('/तोंडी|\boral\b/iu', (string)($s['instruction'] ?? ''));
+            $sp = ep_answer_space($s, (int)($r['standard'] ?? 0));
+            $s['answer_space'] = $sp['mode'] . (isset($sp['lines']) ? ':' . $sp['lines'] : (isset($sp['mm']) ? ':' . $sp['mm'] : ''));
+        }
+        unset($s);
     }
     return $rows;
 }
