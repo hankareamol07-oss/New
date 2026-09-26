@@ -42,8 +42,12 @@ CREATE TABLE IF NOT EXISTS ep_book_questions (
   answer TEXT DEFAULT NULL,                 -- expected / model answer (teacher key)
   ai_cleaned TINYINT(1) NOT NULL DEFAULT 0, -- text cleaned from OCR noise by AI
   figure_image VARCHAR(80) DEFAULT NULL,    -- cropped figure data/book_figures/<book_id>/<file>.jpg
+  source VARCHAR(10) NOT NULL DEFAULT 'book', -- book = textbook स्वाध्याय exercise | typed = AI-generated MiniShala-style typed set (data/typed_questions.json)
+  marks TINYINT DEFAULT NULL,               -- suggested marks (typed set)
+  model VARCHAR(80) DEFAULT NULL,           -- generating model for AI rows
   INDEX (standard, subject),
   INDEX (chapter_id, qtype),
+  INDEX (chapter_id, source),
   FULLTEXT (text)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

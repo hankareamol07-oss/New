@@ -129,7 +129,7 @@ switch ($action) {
         ep_json(ep_book_tree());
 
     case 'book_random':
-        ep_json(ep_book_random($body['chapter_ids'] ?? [], trim($body['qtype'] ?? ''), (int)($body['count'] ?? 1), $body['exclude'] ?? []));
+        ep_json(ep_book_random($body['chapter_ids'] ?? [], trim($body['qtype'] ?? ''), (int)($body['count'] ?? 1), $body['exclude'] ?? [], (string)($body['source'] ?? '')));
 
     case 'book_browse':
         $ids = array_values(array_filter(array_map('intval', $body['chapter_ids'] ?? [])));
@@ -138,6 +138,7 @@ switch ($action) {
         if ($ids) { $where .= ' AND q.chapter_id IN (' . implode(',', array_fill(0, count($ids), '?')) . ')'; $params = $ids; }
         if (!empty($body['standard'])) { $where .= ' AND q.standard = ?'; $params[] = (int)$body['standard']; }
         if (!empty($body['qtype'])) { $where .= ' AND q.qtype = ?'; $params[] = trim($body['qtype']); }
+        if ($src = ep_book_source($body['source'] ?? '')) { $where .= ' AND q.source = ?'; $params[] = $src; }
         if (!empty($body['search'])) { $where .= ' AND (q.text LIKE ? OR q.instruction LIKE ?)'; $params[] = '%' . $body['search'] . '%'; $params[] = '%' . $body['search'] . '%'; }
         if (!$ids && empty($body['search'])) ep_json(['total' => 0, 'items' => []]);
         $page = max(0, (int)($body['page'] ?? 0));
@@ -157,7 +158,7 @@ switch ($action) {
             (int)($_GET['standard'] ?? 0) ?: null, trim($_GET['subject'] ?? '')));
 
     case 'save_assessment':
-        // sections: [{q_no, sub, instruction, marks, qtype, answer_space, oral, chapter_ids[], items:[{bq_id, text, page_image}]}]
+        // sections: [{q_no, sub, instruction, marks, qtype, answer_space, oral, chapter_ids[], items:[{bq_id, text, page_image, qtype, answer, options[]}]}]
         $sections = $body['sections'] ?? [];
         if (!$sections) ep_json(['status' => 'error', 'message' => 'Add at least one question section']);
         $clean = [];
@@ -170,6 +171,15 @@ switch ($action) {
                 $img = preg_match('~^\d+/\d{3}(_\d+)?\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
                 $item = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'page_image' => $img, 'show_image' => $img && !empty($it['show_image']),
                     'qtype' => preg_match('/^[a-z_]+$/', (string)($it['qtype'] ?? '')) ? $it['qtype'] : ''];
+                if ($src = ep_book_source($it['source'] ?? '')) {
+                    $item['source'] = $src;
+                }
+                if (($ans = trim((string)($it['answer'] ?? ''))) !== '') {
+                    $item['answer'] = mb_substr($ans, 0, 2000);
+                }
+                if (is_array($it['options'] ?? null) && ($opts = array_values(array_filter(array_map(fn($o) => trim((string)$o), $it['options']), 'strlen')))) {
+                    $item['options'] = array_slice($opts, 0, 6);
+                }
                 if ($pairs = ep_item_pairs(['pairs' => $it['pairs'] ?? null, 'text' => $text])) {
                     $item['pairs'] = $pairs;
                 }
@@ -193,6 +203,7 @@ switch ($action) {
             'subject' => trim((string)($body['subject'] ?? '')), 'medium' => trim((string)($body['medium'] ?? '')),
             'student_fields' => !empty($body['student_fields']),
             'format' => ($body['format'] ?? '') === 'standard' ? 'standard' : 'lines',
+            'source' => ep_book_source($body['source'] ?? ''),
             'oral_marks' => (float)($body['oral_marks'] ?? 0),
             'sections' => $clean,
         ];

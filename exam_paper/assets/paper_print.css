@@ -75,6 +75,8 @@ ol.subq { list-style: lower-roman; padding-left: 22px; margin: 2px 0; }
 .match-table th { font-weight: 700; text-align: center; background: #f2f2f2; }
 .match-table td { width: 50%; }
 .match-key { margin: 2px 0 4px; padding: 2px 8px; border-left: 3px solid #198754; background: #f2faf5; font-size: 11pt; white-space: normal; }
+.q-options { margin: 1px 0 3px; white-space: normal; }
+.q-options span { display: inline-block; min-width: 22%; margin-right: 10px; }
 @media print { .match-table th { background: #eee; } }
 .sheet.assessment.two-col ol.items > li { padding-left: 0; }
 

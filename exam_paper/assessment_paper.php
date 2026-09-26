@@ -49,13 +49,19 @@ require __DIR__ . '/includes/header.php';
           <div class="col-4"><label class="form-label small mb-1">Class</label><select class="form-select" id="standard"></select></div>
           <div class="col-8"><label class="form-label small mb-1">Subject (textbook)</label><select class="form-select" id="subject"></select></div>
         </div>
+        <label class="form-label small mb-1">Question source</label>
+        <select class="form-select mb-2" id="qSource" title="स्वाध्याय = textbook exercise questions; AI set = MiniShala-style typed practice questions generated per chapter (with answers)">
+          <option value="">Both — स्वाध्याय + AI सराव प्रश्नसंच</option>
+          <option value="book">स्वाध्याय only (textbook exercises)</option>
+          <option value="typed">AI सराव प्रश्नसंच only (typed set: रिकाम्या जागा / एका शब्दात / कारण / आकृती …)</option>
+        </select>
         <label class="form-label small mb-1 d-flex justify-content-between">Chapters covered <span><a href="#" id="chAll" class="small">all</a> &middot; <a href="#" id="chFirst" class="small">1st half</a> &middot; <a href="#" id="chSecond" class="small">2nd half</a> &middot; <a href="#" id="chNone" class="small">none</a></span></label>
         <div id="chapters" class="border rounded p-2 mb-2 bg-white" style="max-height:220px;overflow:auto"></div>
         <label class="form-label small mb-1">Paper layout</label>
         <select class="form-select mb-2" id="layout"><option value="default">Standard layout (auto by subject)</option></select>
         <div class="d-grid gap-2">
           <button class="btn btn-outline-primary btn-sm" id="loadLayout"><i class="bi bi-layout-text-window"></i> Load layout (replace sections)</button>
-          <button class="btn btn-success" id="autoFill"><i class="bi bi-magic"></i> Auto-fill all sections from textbook</button>
+          <button class="btn btn-success" id="autoFill"><i class="bi bi-magic"></i> Auto-fill all sections from question bank</button>
         </div>
       </div>
     </div>

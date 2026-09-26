@@ -17,7 +17,20 @@ $L = $english
     : ['std' => 'इयत्ता', 'subject' => 'विषय', 'marks' => 'गुण', 'time' => 'वेळ', 'date' => 'दिनांक', 'name' => 'विद्यार्थ्याचे नाव', 'roll' => 'हजेरी क्र.', 'obtained' => 'मिळालेले गुण', 'sign' => 'शिक्षकाची सही', 'q' => 'प्र.', 'inst' => 'सूचना',
        'school' => 'शाळा', 'centre' => 'केंद्र', 'written' => 'लेखी', 'oral' => 'तोंडी', 'total' => 'एकूण गुण', 'got' => 'प्राप्त गुण', 'lo' => 'अध्ययन निष्पत्तीवर आधारित', 'test' => 'चाचणी क्रमांक', 'oral_sec' => 'तोंडी'];
 $editUrl = 'assessment_paper.php?edit=' . (int)$paper['paper_id'];
-$teacherKey = !empty($_GET['key']);   // teacher copy: correct pairing printed under each जोड्या लावा table
+$teacherKey = !empty($_GET['key']);   // teacher copy: correct pairing under each जोड्या लावा table + expected answer under every item that has one
+$keyAnswers = [];   // bq_id => answer from the bank, for items saved without an answer (older papers)
+if ($teacherKey) {
+    $need = [];
+    foreach ($sections as $s) {
+        foreach ($s['items'] ?? [] as $it) {
+            if (!empty($it['bq_id']) && empty($it['answer'])) $need[] = (int)$it['bq_id'];
+        }
+    }
+    foreach (ep_book_questions_by_ids($need) as $q) {
+        if (trim((string)$q['answer']) !== '') $keyAnswers[(int)$q['bq_id']] = $q['answer'];
+    }
+}
+$keyLabel = $english ? 'Ans.' : 'उत्तर :';
 $matchLang = $english ? 'en' : (($meta['medium'] ?? '') === 'Hindi' || ($meta['subject'] ?? '') === 'Hindi' ? 'hi' : 'mr');
 $viewUrl = 'paper_view.php?id=' . (int)$paper['paper_id'];
 
@@ -44,7 +57,7 @@ $writtenSections = $linesFormat ? array_values(array_filter($sections, fn($s) =>
 <div class="toolbar no-print">
   <button onclick="window.print()">&#128424; Print / Save as PDF</button>
   <a href="<?= $editUrl ?>">Edit</a>
-  <a href="<?= $viewUrl . ($teacherKey ? '' : '&key=1') ?><?= $linesFormat ? '&format=lines' : '' ?>"><?= $teacherKey ? 'Student paper' : 'Answer key (जोड्या)' ?></a>
+  <a href="<?= $viewUrl . ($teacherKey ? '' : '&key=1') ?><?= $linesFormat ? '&format=lines' : '' ?>"><?= $teacherKey ? 'Student paper' : 'Answer key (उत्तरसूची)' ?></a>
   <a href="<?= $viewUrl ?>&format=<?= $linesFormat ? 'standard' : 'lines' ?><?= $teacherKey ? '&key=1' : '' ?>"><?= $linesFormat ? 'Compact (no answer lines)' : 'उत्तर-लेखन ओळींसह (answer lines)' ?></a>
   <a href="index.php">All papers</a>
   <?php if (!$linesFormat): ?><label><input type="checkbox" id="twoCol"> Two columns</label><?php endif; ?>
@@ -124,7 +137,7 @@ $writtenSections = $linesFormat ? array_values(array_filter($sections, fn($s) =>
 
   <?php
   // Renders one question section. In the lines format each item gets its answer space (ep_answer_space).
-  $renderSection = function (array $sec, ?int $prevQ) use ($L, $digits, $fmt, $english, $matchLang, $teacherKey, $linesFormat, $std): void {
+  $renderSection = function (array $sec, ?int $prevQ) use ($L, $digits, $fmt, $english, $matchLang, $teacherKey, $linesFormat, $std, $keyAnswers, $keyLabel): void {
       $label = $L['q'] . $digits($sec['q_no']) . ($sec['sub'] !== '' ? ' (' . h($sec['sub']) . ')' : '');
       $space = $linesFormat ? ep_answer_space($sec, $std) : ['mode' => 'none'];
       $mode = $space['mode'];
@@ -159,11 +172,18 @@ $writtenSections = $linesFormat ? array_values(array_filter($sections, fn($s) =>
               <?php else: ?>
                 <?= ep_markup($it['text']) ?>
               <?php endif; ?>
+              <?php if ($opt = ep_options_line($it, $matchLang)): ?>
+                <div class="q-options"><?php foreach ($opt as $o): ?><span><?= h($o) ?></span><?php endforeach; ?></div>
+              <?php endif; ?>
               <?php if (!empty($it['show_image']) && !empty($it['page_image'])): ?>
                 <div><img class="qimg page-img" src="<?= EP_BASE_URL ?>/book_page.php?f=<?= rawurlencode($it['page_image']) ?>" alt=""></div>
               <?php endif; ?>
               <?php if (in_array($itemMode, ['lines', 'blank', 'box'], true)): ?>
                 <?= ep_answer_space_html($itemSpace) ?>
+              <?php endif; ?>
+              <?php $ans = $teacherKey && !$pairs ? trim((string)($it['answer'] ?? $keyAnswers[(int)($it['bq_id'] ?? 0)] ?? '')) : ''; ?>
+              <?php if ($ans !== ''): ?>
+                <div class="match-key ans-key"><b><?= $keyLabel ?></b> <?= ep_markup($ans) ?></div>
               <?php endif; ?>
             </div>
           </li>

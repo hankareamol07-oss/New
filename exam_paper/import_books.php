@@ -5,7 +5,8 @@
  *   mysql -u root -p school < db/schema_books.sql
  *   php import_books.php
  *
- * Reads data/book_questions.json ({books:[...], questions:[...]}) and data/model_papers.json.
+ * Reads data/book_questions.json ({books:[...], questions:[...]}), data/typed_questions.json (AI-generated
+ * MiniShala-style typed set, source = 'typed', bq_id >= 1000000) and data/model_papers.json.
  * Re-runnable: rows are replaced by id, chapters of each book are rebuilt.
  */
 require_once __DIR__ . '/includes/functions.php';
@@ -18,7 +19,7 @@ $dataDir = EP_ROOT . '/data';
 $db = ep_db();
 
 // older installs: add columns introduced after the first release
-foreach (['pairs_json TEXT DEFAULT NULL'] as $col) {
+foreach (['pairs_json TEXT DEFAULT NULL', "source VARCHAR(10) NOT NULL DEFAULT 'book'", 'marks TINYINT DEFAULT NULL', 'model VARCHAR(80) DEFAULT NULL'] as $col) {
     try {
         $db->exec('ALTER TABLE ep_book_questions ADD COLUMN ' . $col);
     } catch (PDOException $e) {
@@ -37,8 +38,8 @@ $delCh = $db->prepare('DELETE FROM ep_book_chapters WHERE book_id = ?');
 $insCh = $db->prepare('INSERT INTO ep_book_chapters (book_id, chapter_no, title, start_page, end_page) VALUES (?,?,?,?,?)');
 $delQ = $db->prepare('DELETE FROM ep_book_questions WHERE book_id = ?');
 $insQ = $db->prepare('INSERT INTO ep_book_questions (bq_id, book_id, chapter_id, standard, subject, lang, page, block, instruction, qtype, text, item_no, needs_figure, page_image,
-                                                     options_json, pairs_json, answer, ai_cleaned, figure_image)
-                      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                                                     options_json, pairs_json, answer, ai_cleaned, figure_image, source, marks, model)
+                      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
 $delPack = $db->prepare('DELETE FROM ep_topic_packs WHERE book_id = ?');
 $insPack = $db->prepare('REPLACE INTO ep_topic_packs (chapter_id, book_id, standard, subject, lang, title, notes_json, quiz_json, model) VALUES (?,?,?,?,?,?,?,?,?)');
 
@@ -68,9 +69,25 @@ foreach ($books['questions'] as $q) {
         $q['needs_figure'] ? 1 : 0, $q['page_image'],
         !empty($q['options']) ? json_encode($q['options'], JSON_UNESCAPED_UNICODE) : null,
         !empty($q['pairs']) ? json_encode($q['pairs'], JSON_UNESCAPED_UNICODE) : null, $q['answer'] ?? null,
-        !empty($q['ai_cleaned']) ? 1 : 0, $q['figure_image'] ?? null,
+        !empty($q['ai_cleaned']) ? 1 : 0, $q['figure_image'] ?? null, 'book', null, null,
     ]);
     $nQ++;
+}
+// AI-generated typed set: one JSON per chapter merged into data/typed_questions.json by books/merge_typed.py
+$nT = 0;
+foreach (json_decode((string)@file_get_contents($dataDir . '/typed_questions.json'), true)['questions'] ?? [] as $q) {
+    $cid = $chapterIds[$q['book_id']][$q['chapter_no']] ?? null;
+    if (!$cid) {
+        continue;
+    }
+    $insQ->execute([
+        $q['id'], $q['book_id'], $cid, $q['std'], $q['subject'], $q['lang'], 0, 'सराव प्रश्नसंच (AI)', mb_substr((string)$q['instruction'], 0, 400), $q['qtype'], $q['text'], $q['item_no'] ?? null,
+        0, null,
+        !empty($q['options']) ? json_encode($q['options'], JSON_UNESCAPED_UNICODE) : null,
+        !empty($q['pairs']) ? json_encode($q['pairs'], JSON_UNESCAPED_UNICODE) : null, $q['answer'] ?? null,
+        1, null, 'typed', $q['marks'] ?? null, $q['model'] ?? null,
+    ]);
+    $nT++;
 }
 $nP = 0;
 foreach (json_decode((string)@file_get_contents($dataDir . '/topic_packs.json'), true) ?: [] as $p) {
@@ -83,7 +100,7 @@ foreach (json_decode((string)@file_get_contents($dataDir . '/topic_packs.json'),
     $nP++;
 }
 $db->commit();
-echo "books=$nBooks chapters=$nCh questions=$nQ topic_packs=$nP\n";
+echo "books=$nBooks chapters=$nCh questions=$nQ typed_questions=$nT topic_packs=$nP\n";
 
 $models = json_decode((string)@file_get_contents($dataDir . '/model_papers.json'), true);
 if ($models) {

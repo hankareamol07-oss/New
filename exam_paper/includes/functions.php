@@ -355,6 +355,20 @@ function ep_match_table(array $pairs, string $lang = 'mr', bool $withKey = false
     return $h;
 }
 
+/** ["(अ) x", "(ब) y", ...] for mcq / odd-one items whose options are not already written inside the question text. */
+function ep_options_line(array $item, string $lang = 'mr'): array
+{
+    $opts = array_values(array_filter(array_map(fn($o) => trim((string)$o), $item['options'] ?? []), 'strlen'));
+    if (count($opts) < 2 || !in_array($item['qtype'] ?? '', ['mcq', 'odd_one'], true)) return [];
+    $text = (string)($item['text'] ?? '');
+    foreach ($opts as $o) if (!str_contains($text, $o)) { $missing = true; break; }
+    if (empty($missing)) return [];
+    $labels = $lang === 'en' ? ['a', 'b', 'c', 'd', 'e', 'f'] : ['अ', 'ब', 'क', 'ड', 'इ', 'फ'];
+    $parts = [];
+    foreach ($opts as $i => $o) $parts[] = '(' . ($labels[$i] ?? $i + 1) . ') ' . $o;
+    return $parts;
+}
+
 /** Teacher key line, e.g. "(१) – (ब), (२) – (अ)" followed by the pairs in words. */
 function ep_match_key_text(array $pairs, string $lang = 'mr'): string
 {
@@ -391,30 +405,33 @@ function ep_topic_pack(int $chapterId): ?array
 /** Classes -> subjects -> books -> chapters (+ question counts) for the textbook bank. */
 function ep_book_tree(): array
 {
-    $rows = ep_db()->query('SELECT b.book_id, b.standard, b.subject, b.medium, b.title, c.chapter_id, c.chapter_no, c.title chapter_title,
-                                   (SELECT COUNT(*) FROM ep_book_questions q WHERE q.chapter_id = c.chapter_id) n
+    $rows = ep_db()->query("SELECT b.book_id, b.standard, b.subject, b.medium, b.title, c.chapter_id, c.chapter_no, c.title chapter_title,
+                                   (SELECT COUNT(*) FROM ep_book_questions q WHERE q.chapter_id = c.chapter_id AND q.source = 'book') n,
+                                   (SELECT COUNT(*) FROM ep_book_questions q WHERE q.chapter_id = c.chapter_id AND q.source = 'typed') nt
                             FROM ep_books b LEFT JOIN ep_book_chapters c ON c.book_id = b.book_id
-                            ORDER BY b.standard, b.subject, b.medium, b.book_id, c.chapter_no')->fetchAll();
+                            ORDER BY b.standard, b.subject, b.medium, b.book_id, c.chapter_no")->fetchAll();
     $tree = [];
     foreach ($rows as $r) {
         $std = (int)$r['standard'];
         $tree[$std] ??= ['standard' => $std, 'subjects' => []];
         $key = $r['subject'] . ' (' . $r['medium'] . ')';
-        $tree[$std]['subjects'][$key] ??= ['name' => $key, 'subject' => $r['subject'], 'medium' => $r['medium'], 'books' => [], 'n' => 0];
+        $tree[$std]['subjects'][$key] ??= ['name' => $key, 'subject' => $r['subject'], 'medium' => $r['medium'], 'books' => [], 'n' => 0, 'nt' => 0];
         $bid = (int)$r['book_id'];
-        $tree[$std]['subjects'][$key]['books'][$bid] ??= ['book_id' => $bid, 'title' => $r['title'], 'chapters' => [], 'n' => 0];
+        $tree[$std]['subjects'][$key]['books'][$bid] ??= ['book_id' => $bid, 'title' => $r['title'], 'chapters' => [], 'n' => 0, 'nt' => 0];
         if ($r['chapter_id']) {
-            $tree[$std]['subjects'][$key]['books'][$bid]['chapters'][] = ['chapter_id' => (int)$r['chapter_id'], 'no' => (int)$r['chapter_no'], 'title' => $r['chapter_title'], 'n' => (int)$r['n']];
-            $tree[$std]['subjects'][$key]['books'][$bid]['n'] += (int)$r['n'];
-            $tree[$std]['subjects'][$key]['n'] += (int)$r['n'];
+            $tree[$std]['subjects'][$key]['books'][$bid]['chapters'][] = ['chapter_id' => (int)$r['chapter_id'], 'no' => (int)$r['chapter_no'], 'title' => $r['chapter_title'], 'n' => (int)$r['n'], 'nt' => (int)$r['nt']];
+            foreach (['n', 'nt'] as $k) {
+                $tree[$std]['subjects'][$key]['books'][$bid][$k] += (int)$r[$k];
+                $tree[$std]['subjects'][$key][$k] += (int)$r[$k];
+            }
         }
     }
     foreach ($tree as &$std) {
         foreach ($std['subjects'] as &$s) {
-            $s['books'] = array_values(array_filter($s['books'], fn($b) => $b['n'] > 0));
+            $s['books'] = array_values(array_filter($s['books'], fn($b) => $b['n'] + $b['nt'] > 0));
         }
         unset($s);
-        $std['subjects'] = array_values(array_filter($std['subjects'], fn($s) => $s['n'] > 0));
+        $std['subjects'] = array_values(array_filter($std['subjects'], fn($s) => $s['n'] + $s['nt'] > 0));
     }
     unset($std);
     return array_values(array_filter($tree, fn($s) => $s['subjects']));
@@ -458,17 +475,28 @@ function ep_book_qtype_group(string $qtype): array
     return [$qtype];
 }
 
-/** Random textbook questions from the given chapters; exact qtype first, then related types. */
-function ep_book_random(array $chapterIds, string $qtype, int $count, array $exclude = []): array
+/** Question source filter for the bank: 'book' (स्वाध्याय), 'typed' (AI typed set) or '' = both. */
+function ep_book_source(?string $s): string
+{
+    return in_array($s, ['book', 'typed'], true) ? $s : '';
+}
+
+/** Random bank questions from the given chapters; exact qtype first, then related types. */
+function ep_book_random(array $chapterIds, string $qtype, int $count, array $exclude = [], string $source = ''): array
 {
     $chapterIds = array_values(array_filter(array_map('intval', $chapterIds)));
     if (!$chapterIds || $count <= 0) {
         return [];
     }
     $exclude = array_values(array_filter(array_map('intval', $exclude)));
-    $pick = function (array $types, int $n) use ($chapterIds, &$exclude): array {
+    $source = ep_book_source($source);
+    $pick = function (array $types, int $n) use ($chapterIds, &$exclude, $source): array {
         $params = $chapterIds;
         $sql = 'SELECT * FROM ep_book_questions WHERE chapter_id IN (' . implode(',', array_fill(0, count($chapterIds), '?')) . ')';
+        if ($source !== '') {
+            $sql .= ' AND source = ?';
+            $params[] = $source;
+        }
         if ($types) {
             $sql .= ' AND qtype IN (' . implode(',', array_fill(0, count($types), '?')) . ')';
             $params = array_merge($params, $types);
