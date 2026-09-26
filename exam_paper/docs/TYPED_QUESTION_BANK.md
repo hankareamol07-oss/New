@@ -6,7 +6,7 @@ The assessment-paper builder can draw questions from two banks that share the
 | `source` | what it is | rows |
 |---|---|---|
 | `book`  | स्वाध्याय / Exercise questions extracted from the textbook OCR (`data/book_questions.json`) | ~12.8k |
-| `typed` | MiniShala-style practice set generated per chapter by an LLM from the chapter OCR text, every question tagged with its `qtype`, with expected answer, marks, options and match pairs (`data/typed_questions.json`) | ~20–45 per chapter |
+| `typed` | MiniShala-style practice set generated per chapter by an LLM from the chapter OCR text, every question tagged with its `qtype`, with expected answer, marks, options and match pairs (`data/typed_questions.json`) | 43,881 (1,205 of 1,219 chapters; the 14 skipped ones are OCR-garbled TOC entries, see `TYPED_MISSING_CHAPTERS.txt`) |
 
 `typed` rows are **not** textbook text: the model was asked to write new
 practice questions in the book's language (Marathi / Hindi / English) covering
