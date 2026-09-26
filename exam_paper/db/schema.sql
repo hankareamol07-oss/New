@@ -100,4 +100,5 @@ INSERT IGNORE INTO ep_settings (setting_key, setting_value) VALUES
   ('school_logo', ''),
   ('paper_footer', 'All the Best'),
   ('watermark_text', ''),
-  ('watermark_logo', '0');
+  ('watermark_logo', '0'),
+  ('default_paper_format', 'lines');

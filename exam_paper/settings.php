@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     ep_save_setting('public_base_url', rtrim(trim($_POST['public_base_url'] ?? ''), '/'));
     ep_save_setting('watermark_logo', !empty($_POST['watermark_logo']) ? '1' : '0');
+    ep_save_setting('default_paper_format', ($_POST['default_paper_format'] ?? '') === 'lines' ? 'lines' : 'standard');
     if (!empty($_FILES['school_logo']['tmp_name']) && is_uploaded_file($_FILES['school_logo']['tmp_name'])) {
         $info = @getimagesize($_FILES['school_logo']['tmp_name']);
         $allowed = [IMAGETYPE_PNG => 'png', IMAGETYPE_JPEG => 'jpg', IMAGETYPE_GIF => 'gif', IMAGETYPE_WEBP => 'webp'];
@@ -68,6 +69,13 @@ require __DIR__ . '/includes/header.php';
   <div class="mb-3">
     <label class="form-label">Paper Footer Text</label>
     <input class="form-control" name="paper_footer" value="<?= h(ep_setting('paper_footer')) ?>">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">संकलित / आकारिक paper format (for papers saved before this option existed)</label>
+    <select class="form-select" name="default_paper_format">
+      <option value="standard" <?= ep_setting('default_paper_format', 'standard') === 'standard' ? 'selected' : '' ?>>Compact — questions only</option>
+      <option value="lines" <?= ep_setting('default_paper_format') === 'lines' ? 'selected' : '' ?>>उत्तर-लेखन ओळींसह — answer lines &amp; writing space under every question</option>
+    </select>
   </div>
   <div class="mb-3">
     <label class="form-label">Watermark Text (optional)</label>
