@@ -38,12 +38,15 @@
   const selectedChapters = () => $$('#chapters input:checked').map(i => +i.value);
   const usedIds = () => state.sections.flatMap(s => s.items.map(i => i.bq_id).filter(Boolean));
   const isEnglish = () => { const s = curSubj(); return s && (s.medium === 'English' || /english/i.test(s.subject)); };
+  const srcSel = $('#qSource');                    // '' = both banks, 'book' = स्वाध्याय only, 'typed' = AI typed set only
+  const qSource = () => srcSel.value;
+  const countOf = c => qSource() === 'book' ? c.n : qSource() === 'typed' ? c.nt : c.n + c.nt;
 
   /* ---------- class / subject / chapters ---------- */
   stdSel.innerHTML = tree.map(s => `<option value="${s.standard}">इयत्ता ${mrNum(s.standard)} (Std ${s.standard})</option>`).join('');
   function fillSubjects() {
     const st = curStd();
-    subjSel.innerHTML = (st?.subjects || []).map(s => `<option value="${esc(s.name)}">${esc(s.name)} — ${s.n} Q</option>`).join('');
+    subjSel.innerHTML = (st?.subjects || []).map(s => `<option value="${esc(s.name)}">${esc(s.name)} — ${s.n} स्वाध्याय + ${s.nt} AI</option>`).join('');
     fillChapters();
   }
   function fillChapters(checked) {
@@ -53,7 +56,7 @@
     $('#chapters').innerHTML = chs.length ? chs.map((c, i) => {
       const on = checked ? checked.includes(c.chapter_id) : ($('#examType').value === 'sankalit' ? (testNo === 1 ? i < half : i >= half) : true);
       return `<div class="form-check small"><input class="form-check-input" type="checkbox" value="${c.chapter_id}" id="ch${c.chapter_id}" ${on ? 'checked' : ''}>
-        <label class="form-check-label" for="ch${c.chapter_id}">${c.no}. ${esc(c.title)} <span class="text-muted">(${c.n})</span></label></div>`;
+        <label class="form-check-label" for="ch${c.chapter_id}">${c.no}. ${esc(c.title)} <span class="text-muted">(${countOf(c)})</span></label></div>`;
     }).join('') : '<div class="text-muted small">No exercise questions extracted for this subject yet.</div>';
     loadModels();
     fillDefaults();
@@ -71,6 +74,7 @@
   stdSel.onchange = fillSubjects;
   subjSel.onchange = () => fillChapters();
   $('#examType').onchange = $('#testNo').onchange = () => fillChapters();
+  srcSel.onchange = () => fillChapters(selectedChapters());
   $('#chAll').onclick = e => { e.preventDefault(); $$('#chapters input').forEach(i => i.checked = true); };
   $('#chNone').onclick = e => { e.preventDefault(); $$('#chapters input').forEach(i => i.checked = false); };
   $('#chFirst').onclick = e => { e.preventDefault(); const l = $$('#chapters input'); l.forEach((i, k) => i.checked = k < Math.ceil(l.length / 2)); };
@@ -129,13 +133,21 @@
     render();
   };
   // match (जोड्या लावा) questions are edited as: stem line + one "left | right" line per pair; the print view draws the table
-  function matchText(q) { return Array.isArray(q.pairs) && q.pairs.length ? q.text + '\n' + q.pairs.map(p => `${p[0]} | ${p[1]}`).join('\n') : q.text; }
-  function bookItem(q) { return { bq_id: q.bq_id, text: matchText(q), page_image: q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype }; }
+  // mcq / odd-one options are appended as one "(अ) .. (ब) .." line when the text itself does not list them yet
+  const OPT_LABELS = { mr: ['अ', 'ब', 'क', 'ड', 'इ', 'फ'], hi: ['अ', 'ब', 'क', 'ड', 'इ', 'फ'], en: ['a', 'b', 'c', 'd', 'e', 'f'] };
+  function optionsText(q) {
+    if (!Array.isArray(q.options) || q.options.length < 2 || !['mcq', 'odd_one'].includes(q.qtype)) return '';
+    if (q.options.every(o => q.text.includes(o))) return '';
+    const L = OPT_LABELS[q.lang] || OPT_LABELS.mr;
+    return '\n' + q.options.map((o, i) => `(${L[i] || i + 1}) ${o}`).join('   ');
+  }
+  function matchText(q) { return Array.isArray(q.pairs) && q.pairs.length ? q.text + '\n' + q.pairs.map(p => `${p[0]} | ${p[1]}`).join('\n') : q.text + optionsText(q); }
+  function bookItem(q) { return { bq_id: q.bq_id, text: matchText(q), page_image: q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype, source: q.source || 'book', answer: q.answer || '', options: q.options || [] }; }
   async function fill(s, need) {
     if (need <= 0) return;
     const chs = selectedChapters();
     if (!chs.length) return alert('Tick at least one chapter');
-    const rows = await api('book_random', { body: { chapter_ids: chs, qtype: s.qtype, count: need, exclude: usedIds() } });
+    const rows = await api('book_random', { body: { chapter_ids: chs, qtype: s.qtype, count: need, exclude: usedIds(), source: qSource() } });
     for (const q of rows) s.items.push(bookItem(q));
     if (rows.length < need) s.warn = `Only ${rows.length} of ${need} found in the selected chapters`;
   }
@@ -174,7 +186,8 @@
             <textarea class="form-control form-control-sm flex-grow-1" rows="1" data-f="text">${esc(it.text)}</textarea>
             <div class="text-nowrap small">
               ${it.needs_figure ? `<label class="me-1" title="Question refers to a picture/figure — print the textbook page image below it"><input type="checkbox" data-f="show_image" ${it.show_image ? 'checked' : ''}> <i class="bi bi-image"></i></label>` : ''}
-              ${it.page ? `<span class="text-muted me-1" title="Textbook page">p.${it.page}</span>` : ''}
+              ${it.source === 'typed' ? '<span class="badge text-bg-info me-1" title="AI-generated typed question (सराव प्रश्नसंच)">AI</span>' : (it.page ? `<span class="text-muted me-1" title="Textbook page">p.${it.page}</span>` : '')}
+              ${it.answer ? `<span class="text-success me-1" title="उत्तर (teacher key): ${esc(it.answer)}"><i class="bi bi-key"></i></span>` : ''}
               <button class="btn btn-sm btn-outline-secondary py-0" data-act="swap" title="Replace with another question"><i class="bi bi-shuffle"></i></button>
               <button class="btn btn-sm btn-outline-danger py-0" data-act="del-item"><i class="bi bi-x"></i></button>
             </div>
@@ -210,7 +223,7 @@
       case 'add-item': s.items.push({ bq_id: null, text: '' }); break;
       case 'del-item': s.items.splice(+li.dataset.ii, 1); break;
       case 'swap': {
-        const rows = await api('book_random', { body: { chapter_ids: selectedChapters(), qtype: s.qtype, count: 1, exclude: usedIds() } });
+        const rows = await api('book_random', { body: { chapter_ids: selectedChapters(), qtype: s.qtype, count: 1, exclude: usedIds(), source: qSource() } });
         if (!rows.length) return alert('No other question available in the selected chapters');
         const q = rows[0];
         s.items[+li.dataset.ii] = bookItem(q);
@@ -227,13 +240,13 @@
   $('#browseType').innerHTML = Object.entries(QTYPES).map(([k, v]) => `<option value="${k}">${v}</option>`).join('');
   function openBrowse(s) { browseSec = s; browsePage = 0; $('#browseType').value = s.qtype; $('#browseSearch').value = ''; modal.show(); browse(); }
   async function browse() {
-    const r = await api('book_browse', { body: { chapter_ids: selectedChapters(), standard: stdSel.value, qtype: $('#browseType').value, search: $('#browseSearch').value, page: browsePage } });
+    const r = await api('book_browse', { body: { chapter_ids: selectedChapters(), standard: stdSel.value, qtype: $('#browseType').value, search: $('#browseSearch').value, page: browsePage, source: qSource() } });
     const used = usedIds();
     $('#browseInfo').textContent = `${r.total} questions — page ${browsePage + 1} of ${Math.max(1, Math.ceil(r.total / r.size))}`;
     $('#browseList').innerHTML = r.items.length ? r.items.map(q => `
       <div class="border rounded p-2 mb-2 d-flex gap-2 align-items-start ${used.includes(q.bq_id) ? 'bg-light' : ''}">
         <div class="flex-grow-1"><div style="white-space:pre-wrap">${esc(matchText(q))}</div>
-          <div class="small text-muted">${esc(q.chapter_title || '')} · p.${q.page} · ${QTYPES[q.qtype] || q.qtype}${q.instruction ? ' · ' + esc(q.instruction) : ''}${+q.needs_figure ? ' · <i class="bi bi-image"></i> figure' : ''}</div></div>
+          <div class="small text-muted">${esc(q.chapter_title || '')} · ${q.source === 'typed' ? '<span class="badge text-bg-info">AI</span>' : 'p.' + q.page} · ${QTYPES[q.qtype] || q.qtype}${q.answer ? ' · <span class="text-success">उत्तर: ' + esc(q.answer) + '</span>' : ''}${q.instruction ? ' · ' + esc(q.instruction) : ''}${+q.needs_figure ? ' · <i class="bi bi-image"></i> figure' : ''}</div></div>
         <button class="btn btn-sm ${used.includes(q.bq_id) ? 'btn-secondary disabled' : 'btn-primary'}" data-add="${q.bq_id}">${used.includes(q.bq_id) ? 'Added' : 'Add'}</button>
       </div>`).join('') : '<div class="text-muted">No questions match.</div>';
     $$('[data-add]', $('#browseList')).forEach(b => b.onclick = () => {
@@ -258,9 +271,9 @@
       exam_name: $('#examType').value === 'sankalit' ? 'संकलित मूल्यमापन' : 'आकारिक मूल्यमापन',
       duration: $('#duration').value, exam_date: $('#examDate').value, total_marks: $('#totalMarks').value,
       instructions: $('#instructions').value, student_fields: $('#studentFields').checked,
-      format: $('#paperFormat').value, oral_marks: $('#oralMarks').value,
+      format: $('#paperFormat').value, oral_marks: $('#oralMarks').value, source: qSource(),
       chapter_ids: selectedChapters(),
-      sections: state.sections.map(x => ({ ...x, chapter_ids: selectedChapters(), items: x.items.map(i => ({ bq_id: i.bq_id, text: i.text, page_image: i.page_image, show_image: i.show_image, qtype: i.qtype || '' })) })),
+      sections: state.sections.map(x => ({ ...x, chapter_ids: selectedChapters(), items: x.items.map(i => ({ bq_id: i.bq_id, text: i.text, page_image: i.page_image, show_image: i.show_image, qtype: i.qtype || '', answer: i.answer || '', options: i.options || [], source: i.source || '' })) })),
     };
     const r = await api('save_assessment', { body });
     const msg = $('#saveMsg');
@@ -278,6 +291,7 @@
     $('#examType').value = m.exam_type || 'sankalit';
     $('#testNo').value = m.test_no || 1;
     if (tree.some(s => s.standard == m.standard)) stdSel.value = m.standard;
+    srcSel.value = m.source || '';
     fillSubjects();
     const subj = (curStd()?.subjects || []).find(s => s.subject === m.subject && s.medium === m.medium);
     if (subj) { subjSel.value = subj.name; fillChapters((m.sections || []).flatMap(x => x.chapter_ids || [])); }
