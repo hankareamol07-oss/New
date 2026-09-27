@@ -33,9 +33,9 @@ if (!$books || empty($books['books'])) {
 }
 
 $db->beginTransaction();
-$insBook = $db->prepare('REPLACE INTO ep_books (book_id, standard, subject, medium, title, file, pages) VALUES (?,?,?,?,?,?,?)');
+$insBook = $db->prepare('REPLACE INTO ep_books (book_id, standard, subject, medium, title, file, pages, source, edition, official_id, tachan_subject) VALUES (?,?,?,?,?,?,?,?,?,?,?)');
 $delCh = $db->prepare('DELETE FROM ep_book_chapters WHERE book_id = ?');
-$insCh = $db->prepare('INSERT INTO ep_book_chapters (book_id, chapter_no, title, start_page, end_page) VALUES (?,?,?,?,?)');
+$insCh = $db->prepare('INSERT INTO ep_book_chapters (book_id, chapter_no, title, start_page, end_page, tachan_seq, old_chapter_no) VALUES (?,?,?,?,?,?,?)');
 $delQ = $db->prepare('DELETE FROM ep_book_questions WHERE book_id = ?');
 $insQ = $db->prepare('INSERT INTO ep_book_questions (bq_id, book_id, chapter_id, standard, subject, lang, page, block, instruction, qtype, text, item_no, needs_figure, page_image,
                                                      options_json, pairs_json, answer, ai_cleaned, figure_image, source, marks, model)
@@ -47,7 +47,9 @@ $medium = fn(string $lang) => ['mr' => 'Marathi', 'hi' => 'Hindi', 'en' => 'Engl
 $chapterIds = [];   // book_id => [chapter_no => chapter_id]
 $nBooks = $nCh = 0;
 foreach ($books['books'] as $b) {
-    $insBook->execute([$b['book_id'], $b['std'], $b['subject'], $medium($b['lang']), $b['title'], $b['file'], $b['pages']]);
+    $official = preg_match('/^(\d{9})\.pdf$/', $b['file'], $m) ? $m[1] : null;
+    $insBook->execute([$b['book_id'], $b['std'], $b['subject'], $medium($b['lang']), $b['title'], $b['file'], $b['pages'],
+        $b['source'] ?? 'legacy_pdf', $b['edition'] ?? null, $official, $b['tachan_subject'] ?? null]);
     $delCh->execute([$b['book_id']]);
     $delQ->execute([$b['book_id']]);
     $delPack->execute([$b['book_id']]);
@@ -56,7 +58,7 @@ foreach ($books['books'] as $b) {
         if ((int)$c['no'] === 0) {
             continue;
         }
-        $insCh->execute([$b['book_id'], $c['no'], $c['title'] ?: ('Chapter ' . $c['no']), $c['start_page'], $c['end_page']]);
+        $insCh->execute([$b['book_id'], $c['no'], $c['title'] ?: ('Chapter ' . $c['no']), $c['start_page'], $c['end_page'], $c['tachan_seq'] ?? null, $c['old_no'] ?? null]);
         $chapterIds[$b['book_id']][$c['no']] = (int)$db->lastInsertId();
         $nCh++;
     }

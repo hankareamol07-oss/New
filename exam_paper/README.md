@@ -135,8 +135,13 @@ Install / refresh:
 ```bash
 mysql -u root -p school < db/schema_books.sql
 mysql -u root -p school < db/schema_packs.sql   # ep_topic_packs (AI notes + 10-MCQ quiz per chapter)
+mysql -u root -p school < db/schema_2026.sql    # 2026 book provenance + tachan topic link on chapters
 php import_books.php          # ep_books, ep_book_chapters, ep_book_questions, ep_paper_models, ep_topic_packs
+php import_competitive.php    # 4th/7th शिष्यवृत्ती + 8th NMMS (MAT/SAT) MCQs from data/competitive -> ep_questions
 ```
+
+Homework / paper "MCQ source" for a lesson = its AI topic quiz (ep_topic_packs) + MCQs of the typed set
+(ep_book_questions.source = 'typed'), merged by `ep_topic_pack()`; scraped-bank chapters remain selectable.
 
 जोड्या लावा / Match the pairs: `ep_book_questions.pairs_json` stores
 `[["left","correct right"], ...]` (existing installs: `php import_books.php`

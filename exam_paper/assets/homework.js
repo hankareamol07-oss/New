@@ -104,7 +104,7 @@
     sel.innerHTML = '<option value="">loading…</option>';
     state.sources = s ? await api('quiz_sources', { query: `&standard=${stdSel.value}&subject=${encodeURIComponent(s.subject)}&medium=${encodeURIComponent(s.medium)}&chapter=${encodeURIComponent(c ? c.title : '')}` }) : [];
     const hasPack = !!(state.pack && state.pack.quiz && state.pack.quiz.length);
-    const opts = hasPack ? [`<option value="pack">★ Topic quiz from textbook lesson — ${state.pack.quiz.length} MCQ (AI-generated)</option>`] : [];
+    const opts = hasPack ? [`<option value="pack">★ Topic MCQs for this lesson — ${state.pack.quiz.length} MCQ (textbook quiz${state.pack.typed_mcq ? ' + typed set' : ''})</option>`] : [];
     let best = null;
     for (const src of state.sources) {
       const grp = `${src.std_name} · ${src.subject_name} (${src.medium || ''})`;
@@ -120,7 +120,7 @@
     else if (best) sel.value = String(best.chapter_id);
     $('#quizSourceInfo').textContent = preferBank
       ? `★ matched question-bank chapter "${best.name}" (unchanged syllabus) for auto MCQs${hasPack ? '; the textbook topic quiz fills any gap' : ''}. Change the source if it's wrong.`
-      : hasPack ? '★ 10-question quiz generated from this textbook lesson will be used. Choose a bank chapter instead if you prefer.'
+      : hasPack ? `★ ${state.pack.quiz.length} MCQs generated for this lesson (topic quiz + typed set) will be used. Choose a bank chapter instead if you prefer.`
       : state.sources.length
         ? (best ? `★ matched question-bank chapter "${best.name}" for auto MCQs. Change the source if it's wrong.` : 'No matching chapter found automatically — choose a bank chapter above, or add quiz questions manually / from the textbook.')
         : (c ? 'No generated quiz found for this lesson: import exam_paper/db/topic_packs.sql into the database (adds a 10-MCQ AI quiz for every chapter of std 1–8), then reload. ' : 'Choose a lesson to get its 10-MCQ AI quiz. ') + 'The scraped MCQ bank only covers some std 5/7/8 subjects; you can also add questions with "MCQ" / "Typed answer" / "From textbook".';
