@@ -424,6 +424,7 @@ function ep_typed_mcq(int $chapterId): array
         if (count($opts) < 3) {
             continue;
         }
+        $opts = array_slice($opts, 0, 4);
         $ans = trim((string)$r['answer']);
         $idx = null;
         foreach ($opts as $i => $o) {
@@ -443,7 +444,7 @@ function ep_typed_mcq(int $chapterId): array
         if ($idx === null) {
             continue;
         }
-        $out[] = ['q' => $r['text'], 'options' => array_slice($opts, 0, 4), 'answer' => $idx, 'explain' => '', 'bq_id' => (int)$r['bq_id'], 'source' => 'typed'];
+        $out[] = ['q' => $r['text'], 'options' => $opts, 'answer' => $idx, 'explain' => '', 'bq_id' => (int)$r['bq_id'], 'source' => 'typed'];
     }
     return $out;
 }
