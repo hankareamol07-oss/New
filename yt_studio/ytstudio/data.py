@@ -21,7 +21,8 @@ class Bank:
                 continue
             with open(p, encoding="utf-8") as f:
                 d = json.load(f)
-            for b in d.get("books", []):
+            books = d.get("books")
+            for b in (books if isinstance(books, list) else []):
                 bk = self.books.setdefault(b["book_id"], dict(b))
                 if "chapters" in b and b["chapters"] and isinstance(b["chapters"][0], dict):
                     bk["chapters"] = b["chapters"]
