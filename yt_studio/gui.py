@@ -4,7 +4,7 @@ import os
 import queue
 import threading
 import tkinter as tk
-from tkinter import filedialog, messagebox, simpledialog, ttk
+from tkinter import filedialog, font as tkfont, messagebox, simpledialog, ttk
 
 from ytstudio import config, pipeline
 from ytstudio.data import Bank
@@ -15,11 +15,22 @@ class App(tk.Tk):
         super().__init__()
         self.title("YT Studio — इयत्ता 1–8 व्हिडिओ")
         self.geometry("900x640")
+        self._fonts()
         self.cfg = config.load()
         self.bank = Bank(self.cfg["data_dir"])
         self.q = queue.Queue()
         self._build()
         self.after(200, self._poll)
+
+    def _fonts(self):
+        fams = set(tkfont.families())
+        fam = next((f for f in ("Nirmala UI", "Mangal", "Noto Sans Devanagari", "Lohit Devanagari") if f in fams), None)
+        if not fam:
+            return
+        for name in ("TkDefaultFont", "TkTextFont", "TkMenuFont", "TkHeadingFont", "TkFixedFont"):
+            tkfont.nametofont(name).configure(family=fam, size=11)
+        self.option_add("*TCombobox*Listbox.font", tkfont.nametofont("TkDefaultFont"))
+        ttk.Style(self).configure(".", font=(fam, 11))
 
     def _build(self):
         f = ttk.Frame(self, padding=10)
