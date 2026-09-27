@@ -68,7 +68,8 @@ def speak(cfg, text, out, lang, log=print):
 
 
 def duration(cfg, path):
-    ffprobe = cfg["ffmpeg"].replace("ffmpeg", "ffprobe")
+    d, base = os.path.split(cfg["ffmpeg"])
+    ffprobe = os.path.join(d, base.replace("ffmpeg", "ffprobe"))
     r = subprocess.run([ffprobe, "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path],
                        capture_output=True, text=True, check=True)
     return float(r.stdout.strip())
