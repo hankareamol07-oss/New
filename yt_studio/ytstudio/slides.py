@@ -24,6 +24,11 @@ class Text:
 
     def __init__(self, lang):
         self.deva = lang in ("mr", "hi")
+        if self.deva and not features.check("raqm"):
+            raise RuntimeError(
+                "Pillow text shaping (raqm/fribidi) not available - Marathi/Hindi would render wrongly. "
+                "Run: python -m pip install --upgrade Pillow ; make sure assets/dll/fribidi-0.dll exists next to config.json."
+            )
         self.layout = ImageFont.Layout.RAQM if features.check("raqm") else ImageFont.Layout.BASIC
         self._cache = {}
 
