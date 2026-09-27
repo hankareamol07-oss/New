@@ -1,0 +1,27 @@
+# Project B — topic explanation videos (yt_explain)
+
+One **full explanation video per 2026-27 tachan topic**, std 1-8 (1,437 topics; 1,011 have a textbook chapter, the rest are
+activity/skill topics explained from the learning outcome). Poems / songs (`is_poem`, 118 topics) get a musical treatment.
+
+```
+cd yt_explain
+copy config.example.json config.json
+python build_topics.py                    # explain.db + data/topics.json + sources/<std>/<subject>/<seq>_<topic>/ (NotebookLM pack)
+python auto.py --list
+python auto.py --unit 6_सामान्य विज्ञान_2 --no-upload
+python auto.py --poems --n 1
+```
+
+## NotebookLM
+`sources/<std>/<subject>/<seq>_<topic>/` holds 4 files to drag into a NotebookLM notebook for that topic:
+`01_textbook.txt` (current book OCR), `02_swadhyay.md` (exercise Q/A), `03_practice.md` (typed set), `04_outcome.md` (LO + activity).
+The same text is what the LLM gets to write `explain_script.json` (sections → checks → summary).
+
+## Poems
+The script also returns `poem.lyrics_lines`, `poem.style_prompt` (English music-generator prompt) and `poem.recite_say`.
+`song_prompt.txt` is written next to the video; generate the song (Suno / Udio / NotebookLM audio), save it as `song.mp3` in the
+output folder, delete `video.mp4` and re-run — the recitation slides then play the song instead of TTS.
+
+## Data
+* `explain.db` – `units` keyed by `topic_key = "std|तचन विषय|घटक क्र."` with status/tries/youtube_url; `questions` = exercise Q of the chapter.
+* `data/topics.json` – the same list (book_id, chapter_no, pages, official_id, learning_outcome, is_poem, sources_dir).
