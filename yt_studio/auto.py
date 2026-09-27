@@ -18,7 +18,7 @@ import sys
 import time
 import traceback
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(os.path.abspath(sys.executable if getattr(sys, "frozen", False) else __file__))
 STATE = os.path.join(ROOT, "auto_state.json")
 MODULES = {"PIL": "Pillow", "edge_tts": "edge-tts", "requests": "requests", "googleapiclient": "google-api-python-client",
            "google_auth_oauthlib": "google-auth-oauthlib"}
