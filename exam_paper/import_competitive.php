@@ -76,8 +76,27 @@ function cq_mathml_to_text(string $s): string
         }
         $x = str_replace("\x1f", '', strip_tags($x));
         $x = preg_replace('/\s*\(\s*\)/u', '', $x);                          // empty groups
-        return ' ' . trim($x) . ' ';
+        return ' ' . trim(cq_plain_letters($x)) . ' ';
     }, $s);
+}
+
+/** 𝑥, 𝐴 (U+1D400 mathematical alphanumerics, 4-byte) -> x, A so they survive 3-byte utf8 columns and print as text. */
+function cq_plain_letters(string $s): string
+{
+    if (class_exists('Normalizer')) {
+        return Normalizer::normalize($s, Normalizer::NFKC) ?: $s;
+    }
+    return preg_replace_callback('/[\x{1D400}-\x{1D7FF}]/u', function ($m) {
+        $cp = mb_ord($m[0], 'UTF-8') - 0x1D400;
+        if ($cp >= 0x3CE) {                                                     // 𝟎-𝟗 (5 styles)
+            return (string)(($cp - 0x3CE) % 10);
+        }
+        if ($cp >= 0x2A4) {                                                     // greek: keep
+            return $m[0];
+        }
+        $i = $cp % 52;                                                          // 13 styles × 52 latin letters
+        return $i < 26 ? chr(65 + $i) : chr(97 + $i - 26);
+    }, str_replace("\u{210E}", 'h', $s));
 }
 
 $clean = fn(?string $s) => trim(preg_replace('/\s+/u', ' ', strip_tags(str_replace(['<br>', '<br/>', '<br />', '</div>', '</p>'], "\n", cq_mathml_to_text((string)$s)))));
