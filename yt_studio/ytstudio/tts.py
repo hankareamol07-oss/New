@@ -1,4 +1,5 @@
-"""Narration: edge-tts (free Microsoft neural voices, mr/hi/en-IN) or Gemini TTS. Writes mp3/wav per segment."""
+"""Narration: edge-tts (free Microsoft neural voices, mr/hi/en-IN), Gemini TTS, or ElevenLabs (cloned voice,
+several API keys rotated when one runs out of credits). Writes mp3/wav per segment."""
 import asyncio
 import base64
 import os
@@ -45,11 +46,44 @@ def _gemini(cfg, text, out):
     os.remove(raw)
 
 
+_EL_DEAD = set()
+
+
+def _elevenlabs(cfg, text, out, log):
+    el = cfg["elevenlabs"]
+    keys = [k for k in el["api_keys"] if k and k not in _EL_DEAD]
+    if not keys or not el["voice_id"]:
+        raise RuntimeError("elevenlabs: no usable api key / voice_id")
+    url = f"https://api.elevenlabs.io/v1/text-to-speech/{el['voice_id']}?output_format=mp3_44100_128"
+    body = {
+        "text": text,
+        "model_id": el["model"],
+        "voice_settings": {"stability": el["stability"], "similarity_boost": el["similarity_boost"]},
+    }
+    for key in keys:
+        r = requests.post(url, json=body, headers={"xi-api-key": key, "accept": "audio/mpeg"}, timeout=300)
+        if r.status_code in (401, 402, 429) or (r.status_code == 400 and "quota" in r.text.lower()):
+            log(f"  [tts] elevenlabs key ...{key[-4:]} exhausted/rejected ({r.status_code}), trying next key")
+            _EL_DEAD.add(key)
+            continue
+        r.raise_for_status()
+        with open(out, "wb") as f:
+            f.write(r.content)
+        return
+    raise RuntimeError("elevenlabs: all api keys exhausted")
+
+
 def speak(cfg, text, out, lang, log=print):
     text = clean(text)
     if not text:
         text = "."
     backend = cfg["tts_backend"]
+    if backend == "elevenlabs":
+        try:
+            _elevenlabs(cfg, text, out, log)
+            return out
+        except (requests.RequestException, RuntimeError) as e:
+            log(f"  [tts] elevenlabs failed ({str(e)[:80]}), falling back to edge-tts")
     if backend == "gemini" and cfg["keys"].get("gemini"):
         try:
             _gemini(cfg, text, out)

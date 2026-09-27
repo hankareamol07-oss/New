@@ -31,6 +31,13 @@ DEFAULTS = {
     "tts_rate": "-5%",
     "gemini_tts_model": "gemini-2.5-flash-preview-tts",
     "gemini_tts_voice": "Kore",
+    "elevenlabs": {
+        "api_keys": [],
+        "voice_id": "",
+        "model": "eleven_multilingual_v2",
+        "stability": 0.5,
+        "similarity_boost": 0.8,
+    },
     "questions_per_video": 12,
     "make_short": True,
     "descript": {"enabled": False, "prompt": "", "captions": "auto", "resolution": "1080p", "agent_model": "auto"},
@@ -84,5 +91,8 @@ def load(path=None):
         "groq": os.environ.get("GROQ_API_KEY") or cfg.get("groq_api_key", ""),
         "descript": os.environ.get("DESCRIPT_API_TOKEN") or cfg.get("descript_api_token", ""),
     }
+    env_el = os.environ.get("ELEVENLABS_API_KEYS", "")
+    if env_el:
+        cfg["elevenlabs"]["api_keys"] = [k.strip() for k in env_el.split(",") if k.strip()]
     cfg["_path"] = path
     return cfg

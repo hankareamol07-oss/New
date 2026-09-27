@@ -78,6 +78,18 @@ Every run writes to `output/<std_subject_lang_ch_title>/`:
 | `video_descript.mp4` | Descript-rendered version (when enabled) |
 | `slides/`, `audio/` | intermediates |
 
+## 2b. Voice (TTS)
+
+`"tts_backend"` in config.json:
+
+* `"edge"` (default, free): Microsoft voices, `"voices": {"mr": "mr-IN-AarohiNeural" | "mr-IN-ManoharNeural", ...}`, `"tts_rate": "-5%"`.
+* `"gemini"`: Gemini TTS, `"gemini_tts_voice": "Kore"` (Puck, Charon, Aoede …) — more natural, uses Gemini quota.
+* `"elevenlabs"`: your own cloned voice. In ElevenLabs → Voices → Add → Instant Voice Clone (upload 1–2 min clear Marathi speech), copy the Voice ID; then
+  `"elevenlabs": {"api_keys": ["key1", "key2"], "voice_id": "..."}` — keys are rotated when one runs out of credits (~1 credit per character; a 6-min video ≈ 5,000 characters).
+  Falls back to edge-tts if all keys are exhausted.
+
+Changing the voice re-narrates only chapters whose `output/<chapter>/audio/` folder + `video.mp4` you delete.
+
 ## 3. Descript (uses your plan credits)
 
 `"descript": {"enabled": true}` or `--descript`. Flow (official API, https://docs.descriptapi.com):
