@@ -41,6 +41,16 @@ DEFAULTS = {
         "schedule": {"enabled": False, "hour": 18, "minute": 0, "every_days": 1},
     },
     "n8n_webhook": "",
+    "auto": {
+        "stds": [6, 7, 8, 5, 4, 3, 2, 1],
+        "langs": ["mr"],
+        "subjects": [],
+        "source": "both",
+        "min_questions": 4,
+        "per_run": 2,
+        "max_retries": 2,
+        "pause_sec": 10,
+    },
 }
 
 

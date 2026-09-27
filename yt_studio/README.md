@@ -12,6 +12,18 @@ chapter ─► questions (book / typed / both) ─► LLM script+SEO (JSON)
         ─► [Descript polish → video_descript.mp4]  ─► [YouTube upload + playlist + schedule]  ─► [n8n webhook]
 ```
 
+## 0. Zero-work mode (autopilot)
+
+1. `INSTALL.bat` (once) — installs Python packages, creates `config.json`. Put your API keys in it (the zip you got from Devin already has them).
+2. Put `client_secret.json` in this folder (Google Cloud Console → APIs & Services → Credentials → *Create credentials → OAuth client ID → Desktop app* → Download JSON; enable *YouTube Data API v3* in the same project).
+3. `AUTO_UPLOAD.bat` — first run opens the browser once for Google sign-in (token saved to `youtube_token.json`). Then it makes the next
+   chapters (default 2 per run, `auto.per_run`) and uploads them as **private, scheduled** videos, one per day at `youtube.schedule.hour`.
+   Re-run (or add it to Windows Task Scheduler daily) and it continues where it left off — `auto_state.json` keeps the done/failed list, so
+   nothing is uploaded twice. `python auto.py --dry` shows the queue, `--no-upload` only renders.
+
+   Queue order = `auto.stds` (default 6,7,8,5,4,3,2,1) × Marathi books × chapters with ≥ `auto.min_questions` questions.
+   Limit with `"subjects": ["Science"]` / `"langs": ["mr","hi"]`.
+
 ## 1. Install (Windows / Linux / macOS)
 
 1. Python 3.10+ → https://www.python.org/downloads/ (tick "Add to PATH").

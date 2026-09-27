@@ -34,10 +34,19 @@ def run(cfg, book, chapter, questions, text="", out_dir=None, log=print, seed=No
         with open(script_path, "w", encoding="utf-8") as f:
             json.dump(script, f, ensure_ascii=False, indent=1)
 
-    r = Renderer(cfg, book, chapter)
-    thumb = os.path.join(out_dir, "thumbnail.png")
-    r.thumbnail(script.get("thumbnail", {})).save(thumb)
-    mp4, short = video.build(cfg, script, r, book, out_dir, log)
+    manifest_path = os.path.join(out_dir, "manifest.json")
+    prev = {}
+    if os.path.exists(manifest_path):
+        with open(manifest_path, encoding="utf-8") as f:
+            prev = json.load(f)
+    if prev.get("video") and os.path.exists(prev["video"]) and os.path.exists(prev.get("thumbnail") or ""):
+        log("[video] reusing rendered video from manifest.json (delete it to re-render)")
+        mp4, short, thumb = prev["video"], prev.get("short") if os.path.exists(prev.get("short") or "") else None, prev["thumbnail"]
+    else:
+        r = Renderer(cfg, book, chapter)
+        thumb = os.path.join(out_dir, "thumbnail.png")
+        r.thumbnail(script.get("thumbnail", {})).save(thumb)
+        mp4, short = video.build(cfg, script, r, book, out_dir, log)
 
     meta = {
         "title": script["title"], "description": script["description"], "tags": script.get("tags", []),
@@ -49,8 +58,12 @@ def run(cfg, book, chapter, questions, text="", out_dir=None, log=print, seed=No
     with open(script_path, "w", encoding="utf-8") as f:
         json.dump(script, f, ensure_ascii=False, indent=1)
 
+    for k in ("descript", "youtube_url", "short_url"):
+        if prev.get(k):
+            meta[k] = prev[k]
+
     use_descript = cfg["descript"]["enabled"] if use_descript is None else use_descript
-    if use_descript and cfg["keys"].get("descript"):
+    if use_descript and cfg["keys"].get("descript") and not meta.get("descript"):
         try:
             meta["descript"] = descript.polish(cfg, mp4, book, chapter, out_dir, log)
             meta["video"] = meta["descript"]["file"]
@@ -60,12 +73,15 @@ def run(cfg, book, chapter, questions, text="", out_dir=None, log=print, seed=No
 
     upload = cfg["youtube"]["enabled"] if upload is None else upload
     if upload:
-        meta["youtube_url"] = youtube.upload(cfg, meta["video"], meta, thumb, log=log)
-        if short:
+        if not meta.get("youtube_url"):
+            meta["youtube_url"] = youtube.upload(cfg, meta["video"], meta, thumb, log=log)
+        else:
+            log(f"[youtube] already uploaded: {meta['youtube_url']}")
+        if short and not meta.get("short_url"):
             meta["short_url"] = youtube.upload(cfg, short, meta, None, is_short=True, log=log)
     youtube.notify_n8n(cfg, meta, log)
 
-    with open(os.path.join(out_dir, "manifest.json"), "w", encoding="utf-8") as f:
+    with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=1)
     with open(os.path.join(out_dir, "youtube_description.txt"), "w", encoding="utf-8") as f:
         f.write(meta["title"] + "\n\n" + meta["description"] + "\n\n⏱ Timestamps:\n" + meta["chapters_text"] + "\n\n" + " ".join(meta["hashtags"]) + "\n\nTags: " + ", ".join(meta["tags"]))

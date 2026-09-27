@@ -4,34 +4,68 @@
   "brand_primary": "#1c3f95",
   "brand_accent": "#f7b500",
   "logo": "",
-
   "data_dir": "../exam_paper/data",
   "out_dir": "output",
   "ffmpeg": "ffmpeg",
-
-  "llm_order": ["gemini", "nvidia", "groq"],
+  "llm_order": [
+    "gemini",
+    "nvidia",
+    "groq"
+  ],
   "gemini_api_key": "",
   "nvidia_api_key": "",
   "groq_api_key": "",
-
   "tts_backend": "edge",
-  "voices": {"mr": "mr-IN-AarohiNeural", "hi": "hi-IN-SwaraNeural", "en": "en-IN-NeerjaNeural"},
+  "voices": {
+    "mr": "mr-IN-AarohiNeural",
+    "hi": "hi-IN-SwaraNeural",
+    "en": "en-IN-NeerjaNeural"
+  },
   "tts_rate": "-5%",
-
   "questions_per_video": 12,
   "make_short": true,
-
-  "descript": {"enabled": true, "captions": "auto", "resolution": "1080p", "agent_model": "auto", "prompt": ""},
+  "descript": {
+    "enabled": true,
+    "captions": "auto",
+    "resolution": "1080p",
+    "agent_model": "auto",
+    "prompt": ""
+  },
   "descript_api_token": "",
-
   "youtube": {
-    "enabled": false,
+    "enabled": true,
     "client_secret": "client_secret.json",
     "privacy": "private",
     "category_id": "27",
     "default_language": "mr",
     "made_for_kids": false,
-    "schedule": {"enabled": true, "hour": 18, "minute": 0, "every_days": 1}
+    "schedule": {
+      "enabled": true,
+      "hour": 18,
+      "minute": 0,
+      "every_days": 1
+    }
   },
-  "n8n_webhook": ""
+  "n8n_webhook": "",
+  "auto": {
+    "stds": [
+      6,
+      7,
+      8,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "langs": [
+      "mr"
+    ],
+    "subjects": [],
+    "source": "both",
+    "min_questions": 4,
+    "per_run": 2,
+    "max_retries": 2,
+    "pause_sec": 10
+  }
 }
