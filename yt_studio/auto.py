@@ -33,8 +33,8 @@ def preflight():
     cfg = config.load()
     ff = cfg["ffmpeg"]
     if not (shutil.which(ff) or os.path.exists(ff)):
-        for cand in ("C:/ffmpeg/bin/ffmpeg.exe", os.path.join(ROOT, "ffmpeg", "bin", "ffmpeg.exe"), os.path.join(ROOT, "ffmpeg.exe")):
-            if os.path.exists(cand):
+        for cand in ("C:/ffmpeg/bin/ffmpeg.exe", "ffmpeg", os.path.join(ROOT, "ffmpeg", "bin", "ffmpeg.exe"), os.path.join(ROOT, "ffmpeg.exe")):
+            if os.path.exists(cand) or shutil.which(cand):
                 cfg["ffmpeg"] = ff = cand
                 break
         else:
