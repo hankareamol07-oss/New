@@ -10,7 +10,7 @@ else:
 REPO = os.path.dirname(ROOT)
 
 DEFAULTS = {
-    "channel_name": "Techedu",
+    "channel_name": "स्वाध्याय",
     "channel_tagline": "इयत्ता 1 ली ते 8 वी - स्वाध्याय, सराव व सोप्या भाषेत स्पष्टीकरण",
     "brand_primary": "#1c3f95",
     "brand_accent": "#f7b500",

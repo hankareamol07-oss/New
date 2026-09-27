@@ -44,6 +44,9 @@ def preflight():
     if not (shutil.which(probe) or os.path.exists(probe)):
         sys.exit(f"ffprobe not found next to ffmpeg ({probe}).")
     print(f"ffmpeg: {ff}")
+    from PIL import features
+    if not features.check("raqm"):
+        print("WARNING: Pillow raqm not available - Marathi/Hindi text will render wrongly. Run: python -m pip install --upgrade Pillow")
     return cfg
 
 
