@@ -9248,9 +9248,9 @@
    "unit_id": "4_मराठी_1",
    "topic_key": "4|मराठी|1",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 1,
    "chapter_title": "1. हीच अमुची प्रार्थना (प्रार्थना)",
    "block": "poem",
@@ -9262,18 +9262,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": true,
     "sources_dir": "sources/4/मराठी/01_1_हीच_अमुची_प्रार्थना_प्रार्थना",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     11,
+     13
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_2",
    "topic_key": "4|मराठी|2",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 2,
    "chapter_title": "2. सरावन मईन्यात (कविता)",
    "block": "poem",
@@ -9285,18 +9288,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": true,
     "sources_dir": "sources/4/मराठी/02_2_सरावन_मईन्यात_कविता",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     14,
+     21
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_3",
    "topic_key": "4|मराठी|3",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 3,
    "chapter_title": "3. कौतुकाची थाप",
    "block": "topic",
@@ -9308,18 +9314,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/03_3_कौतुकाची_थाप",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     22,
+     23
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_4",
    "topic_key": "4|मराठी|4",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 4,
    "chapter_title": "4. आभाळातील फरकांड्या",
    "block": "topic",
@@ -9331,18 +9340,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/04_4_आभाळातील_फरकांड्या",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     24,
+     29
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_5",
    "topic_key": "4|मराठी|5",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 5,
    "chapter_title": "5. तिरंगा (कविता)",
    "block": "poem",
@@ -9354,41 +9366,47 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": true,
     "sources_dir": "sources/4/मराठी/05_5_तिरंगा_कविता",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     30,
+     32
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_6",
    "topic_key": "4|मराठी|6",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 6,
    "chapter_title": "6. माझे गाव (चित्रवर्णन)",
-   "block": "topic",
+   "block": "poem",
    "title": "6. माझे गाव (चित्रवर्णन)",
    "meta": {
     "tachan_subject": "मराठी",
     "tachan_seq": 6,
     "learning_outcome": "मजकुरातील मुख्य कल्पना सविस्तरपणे सांगतो.",
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/4/मराठी/06_6_माझे_गाव_चित्रवर्णन",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     33,
+     35
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_7",
    "topic_key": "4|मराठी|7",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 7,
    "chapter_title": "7. आनंदी-आनंद गडे! (कविता)",
    "block": "poem",
@@ -9400,18 +9418,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": true,
     "sources_dir": "sources/4/मराठी/07_7_आनंदी_आनंद_गडे_कविता",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     36,
+     40
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_8",
    "topic_key": "4|मराठी|8",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 8,
    "chapter_title": "8. डोंगरदादा",
    "block": "topic",
@@ -9423,18 +9444,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/08_8_डोंगरदादा",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     41,
+     45
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_9",
    "topic_key": "4|मराठी|9",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 9,
    "chapter_title": "9. माझ्या आठवणी",
    "block": "topic",
@@ -9446,18 +9470,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/09_9_माझ्या_आठवणी",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     46,
+     50
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_10",
    "topic_key": "4|मराठी|10",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 10,
    "chapter_title": "10. फुलपाखरे (कविता)",
    "block": "poem",
@@ -9469,18 +9496,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": true,
     "sources_dir": "sources/4/मराठी/10_10_फुलपाखरे_कविता",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     51,
+     53
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_11",
    "topic_key": "4|मराठी|11",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 11,
    "chapter_title": "11. मुकी फुले",
    "block": "topic",
@@ -9492,18 +9522,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/11_11_मुकी_फुले",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     54,
+     57
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_12",
    "topic_key": "4|मराठी|12",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 12,
    "chapter_title": "12. आजोबांची अंगठी (चित्रकथा)",
    "block": "topic",
@@ -9515,18 +9548,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/12_12_आजोबांची_अंगठी_चित्रकथा",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     58,
+     61
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_13",
    "topic_key": "4|मराठी|13",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 13,
    "chapter_title": "13. बाभूळ (कविता)",
    "block": "poem",
@@ -9538,18 +9574,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": true,
     "sources_dir": "sources/4/मराठी/13_13_बाभूळ_कविता",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     62,
+     65
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_14",
    "topic_key": "4|मराठी|14",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 14,
    "chapter_title": "14. मला माझ्या आईचा अभिमान",
    "block": "topic",
@@ -9561,18 +9600,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/14_14_मला_माझ्या_आईचा_अभिमान",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     66,
+     69
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_15",
    "topic_key": "4|मराठी|15",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 15,
    "chapter_title": "15. कणाकणांत विज्ञान (नाट्यछटा)",
    "block": "topic",
@@ -9584,18 +9626,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/15_15_कणाकणांत_विज्ञान_नाट्यछटा",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     70,
+     73
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_16",
    "topic_key": "4|मराठी|16",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 16,
    "chapter_title": "16. पुस्तकांच्या सहवासात",
    "block": "topic",
@@ -9607,18 +9652,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/16_16_पुस्तकांच्या_सहवासात",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     74,
+     77
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_17",
    "topic_key": "4|मराठी|17",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 17,
    "chapter_title": "17. वासुदेव आला (कविता)",
    "block": "poem",
@@ -9630,41 +9678,47 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": true,
     "sources_dir": "sources/4/मराठी/17_17_वासुदेव_आला_कविता",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     78,
+     81
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_18",
    "topic_key": "4|मराठी|18",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 18,
    "chapter_title": "18. ग्रंथदिंडी (चित्रवर्णन)",
-   "block": "topic",
+   "block": "poem",
    "title": "18. ग्रंथदिंडी (चित्रवर्णन)",
    "meta": {
     "tachan_subject": "मराठी",
     "tachan_seq": 18,
     "learning_outcome": "दिलेल्या विषयावर सहा ते आठ वाक्यांत स्पष्ट आणि सुसंगत परिच्छेद लेखन करतो.",
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/4/मराठी/18_18_ग्रंथदिंडी_चित्रवर्णन",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     82,
+     84
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_19",
    "topic_key": "4|मराठी|19",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 19,
    "chapter_title": "19. नाते जगाशी (कविता)",
    "block": "poem",
@@ -9676,18 +9730,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": true,
     "sources_dir": "sources/4/मराठी/19_19_नाते_जगाशी_कविता",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     85,
+     87
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_20",
    "topic_key": "4|मराठी|20",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 20,
    "chapter_title": "20. असा बनतो मोती",
    "block": "topic",
@@ -9699,18 +9756,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/20_20_असा_बनतो_मोती",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     88,
+     90
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_21",
    "topic_key": "4|मराठी|21",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 21,
    "chapter_title": "21. सण आला पाडव्याचा! (कविता)",
    "block": "poem",
@@ -9722,18 +9782,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": true,
     "sources_dir": "sources/4/मराठी/21_21_सण_आला_पाडव्याचा_कविता",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     91,
+     93
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_22",
    "topic_key": "4|मराठी|22",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 22,
    "chapter_title": "22. बचत",
    "block": "topic",
@@ -9745,18 +9808,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/22_22_बचत",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     94,
+     96
+    ]
    }
   },
   {
    "unit_id": "4_मराठी_23",
    "topic_key": "4|मराठी|23",
    "std": 4,
-   "subject": "मराठी",
+   "subject": "Marathi",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 20,
    "chapter_no": 23,
    "chapter_title": "23. संतवाणी",
    "block": "topic",
@@ -9768,18 +9834,21 @@
     "activity": "प्रस्तावना व प्रकटवाचन: पूर्वज्ञानावर आधारित प्रश्न विचारून पाठाची प्रस्तावना; शिक्षकाचे आदर्श वाचन व विद्यार्थ्यांचे प्रकटवाचन",
     "is_poem": false,
     "sources_dir": "sources/4/मराठी/23_23_संतवाणी",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     97,
+     100
+    ]
    }
   },
   {
    "unit_id": "4_गणित_1",
    "topic_key": "4|गणित|1",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 1,
    "chapter_title": "1. संख्यांशी खेळू या",
    "block": "topic",
@@ -9791,18 +9860,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/01_1_संख्यांशी_खेळू_या",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     13,
+     29
+    ]
    }
   },
   {
    "unit_id": "4_गणित_2",
    "topic_key": "4|गणित|2",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 2,
    "chapter_title": "2. आकारांची गंमत भारी",
    "block": "topic",
@@ -9814,18 +9886,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/02_2_आकारांची_गंमत_भारी",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     30,
+     45
+    ]
    }
   },
   {
    "unit_id": "4_गणित_3",
    "topic_key": "4|गणित|3",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 3,
    "chapter_title": "3. बेरीज व वजाबाकी",
    "block": "topic",
@@ -9837,18 +9912,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/03_3_बेरीज_व_वजाबाकी",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     46,
+     48
+    ]
    }
   },
   {
    "unit_id": "4_गणित_4",
    "topic_key": "4|गणित|4",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 4,
    "chapter_title": "4. अपूर्णांक",
    "block": "topic",
@@ -9860,18 +9938,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/04_4_अपूर्णांक",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     49,
+     58
+    ]
    }
   },
   {
    "unit_id": "4_गणित_5",
    "topic_key": "4|गणित|5",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 5,
    "chapter_title": "5. लांबी व वजन",
    "block": "topic",
@@ -9883,18 +9964,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/05_5_लांबी_व_वजन",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     59,
+     68
+    ]
    }
   },
   {
    "unit_id": "4_गणित_6",
    "topic_key": "4|गणित|6",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 6,
    "chapter_title": "6. माहितीचे व्यवस्थापन",
    "block": "topic",
@@ -9906,18 +9990,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/06_6_माहितीचे_व्यवस्थापन",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     69,
+     73
+    ]
    }
   },
   {
    "unit_id": "4_गणित_7",
    "topic_key": "4|गणित|7",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 7,
    "chapter_title": "7. नजरी नकाशा",
    "block": "topic",
@@ -9929,18 +10016,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/07_7_नजरी_नकाशा",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     74,
+     79
+    ]
    }
   },
   {
    "unit_id": "4_गणित_8",
    "topic_key": "4|गणित|8",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 8,
    "chapter_title": "8. गुणाकार",
    "block": "topic",
@@ -9952,18 +10042,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/08_8_गुणाकार",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     80,
+     86
+    ]
    }
   },
   {
    "unit_id": "4_गणित_9",
    "topic_key": "4|गणित|9",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 9,
    "chapter_title": "9. भागाकार",
    "block": "topic",
@@ -9975,18 +10068,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/09_9_भागाकार",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     87,
+     98
+    ]
    }
   },
   {
    "unit_id": "4_गणित_10",
    "topic_key": "4|गणित|10",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 10,
    "chapter_title": "10. सममिती",
    "block": "topic",
@@ -9998,18 +10094,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/10_10_सममिती",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     99,
+     103
+    ]
    }
   },
   {
    "unit_id": "4_गणित_11",
    "topic_key": "4|गणित|11",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 11,
    "chapter_title": "11. परिमिती व क्षेत्रफळ",
    "block": "topic",
@@ -10021,18 +10120,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/11_11_परिमिती_व_क्षेत्रफळ",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     104,
+     112
+    ]
    }
   },
   {
    "unit_id": "4_गणित_12",
    "topic_key": "4|गणित|12",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 12,
    "chapter_title": "12. आकारमान व धारकता",
    "block": "topic",
@@ -10044,18 +10146,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/12_12_आकारमान_व_धारकता",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     113,
+     118
+    ]
    }
   },
   {
    "unit_id": "4_गणित_13",
    "topic_key": "4|गणित|13",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 13,
    "chapter_title": "13. कालमापन",
    "block": "topic",
@@ -10067,18 +10172,21 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/13_13_कालमापन",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     119,
+     121
+    ]
    }
   },
   {
    "unit_id": "4_गणित_14",
    "topic_key": "4|गणित|14",
    "std": 4,
-   "subject": "गणित",
+   "subject": "Maths",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 22,
    "chapter_no": 14,
    "chapter_title": "14. आकृतिबंध",
    "block": "topic",
@@ -10090,9 +10198,12 @@
     "activity": "प्रस्तावना व संबोध स्पष्टीकरण: दैनंदिन उदाहरणे व वस्तूंच्या साहाय्याने संबोधाची प्रस्तावना व स्पष्टीकरण",
     "is_poem": false,
     "sources_dir": "sources/4/गणित/14_14_आकृतिबंध",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     122,
+     140
+    ]
    }
   },
   {
@@ -11261,7 +11372,7 @@
     "official_id": null,
     "pages": [
      55,
-     56
+     68
     ]
    }
   },
@@ -11286,8 +11397,8 @@
     "has_textbook": true,
     "official_id": null,
     "pages": [
-     57,
-     58
+     69,
+     83
     ]
    }
   },
@@ -11312,8 +11423,8 @@
     "has_textbook": true,
     "official_id": null,
     "pages": [
-     59,
-     60
+     84,
+     97
     ]
    }
   },
@@ -11338,8 +11449,8 @@
     "has_textbook": true,
     "official_id": null,
     "pages": [
-     61,
-     62
+     98,
+     105
     ]
    }
   },
@@ -11364,8 +11475,8 @@
     "has_textbook": true,
     "official_id": null,
     "pages": [
-     63,
-     64
+     106,
+     117
     ]
    }
   },
@@ -11390,8 +11501,8 @@
     "has_textbook": true,
     "official_id": null,
     "pages": [
-     65,
-     66
+     118,
+     130
     ]
    }
   },
@@ -11416,8 +11527,8 @@
     "has_textbook": true,
     "official_id": null,
     "pages": [
-     67,
-     68
+     131,
+     144
     ]
    }
   },
@@ -11442,8 +11553,8 @@
     "has_textbook": true,
     "official_id": null,
     "pages": [
-     69,
-     70
+     145,
+     154
     ]
    }
   },
@@ -11468,8 +11579,8 @@
     "has_textbook": true,
     "official_id": null,
     "pages": [
-     71,
-     72
+     155,
+     164
     ]
    }
   },
@@ -15993,9 +16104,9 @@
    "unit_id": "6_भूगोल_1",
    "topic_key": "6|भूगोल|1",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 1,
    "chapter_title": "1. मैत्री भूगोलाशी",
    "block": "topic",
@@ -16007,18 +16118,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/01_1_मैत्री_भूगोलाशी",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     18,
+     19
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_2",
    "topic_key": "6|भूगोल|2",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 2,
    "chapter_title": "2. भारतीय भूगोलाचा इतिहास",
    "block": "topic",
@@ -16030,18 +16144,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/02_2_भारतीय_भूगोलाचा_इतिहास",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     20,
+     28
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_3",
    "topic_key": "6|भूगोल|3",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 3,
    "chapter_title": "3. वृत्तांची दुनिया",
    "block": "topic",
@@ -16053,18 +16170,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/03_3_वृत्तांची_दुनिया",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     29,
+     38
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_4",
    "topic_key": "6|भूगोल|4",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 4,
    "chapter_title": "4. प्रात्यक्षिक कार्य",
    "block": "topic",
@@ -16076,18 +16196,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/04_4_प्रात्यक्षिक_कार्य",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     39,
+     48
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_5",
    "topic_key": "6|भूगोल|5",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 5,
    "chapter_title": "5. शिलावरण",
    "block": "topic",
@@ -16099,18 +16222,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/05_5_शिलावरण",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     49,
+     60
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_6",
    "topic_key": "6|भूगोल|6",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 6,
    "chapter_title": "6. वातावरण",
    "block": "topic",
@@ -16122,18 +16248,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/06_6_वातावरण",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     61,
+     70
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_7",
    "topic_key": "6|भूगोल|7",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 7,
    "chapter_title": "7. जलावरण व जीवावरण",
    "block": "topic",
@@ -16145,18 +16274,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/07_7_जलावरण_व_जीवावरण",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     71,
+     81
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_8",
    "topic_key": "6|भूगोल|8",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 8,
    "chapter_title": "8. संसाधने",
    "block": "topic",
@@ -16168,18 +16300,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/08_8_संसाधने",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     82,
+     93
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_9",
    "topic_key": "6|भूगोल|9",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 9,
    "chapter_title": "9. आर्थिक क्रिया",
    "block": "topic",
@@ -16191,18 +16326,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/09_9_आर्थिक_क्रिया",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     94,
+     100
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_10",
    "topic_key": "6|भूगोल|10",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 10,
    "chapter_title": "10. मानवी वस्ती",
    "block": "topic",
@@ -16214,18 +16352,21 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/10_10_मानवी_वस्ती",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     101,
+     112
+    ]
    }
   },
   {
    "unit_id": "6_भूगोल_11",
    "topic_key": "6|भूगोल|11",
    "std": 6,
-   "subject": "भूगोल",
+   "subject": "Geography",
    "lang": "mr",
-   "book_id": null,
+   "book_id": 63,
    "chapter_no": 11,
    "chapter_title": "11. शाश्वत विकासाची दिशा",
    "block": "topic",
@@ -16237,9 +16378,12 @@
     "activity": "प्रस्तावना व चर्चा: पूर्वज्ञान व चित्रांच्या आधारे घटकाची प्रस्तावना; उद्दिष्टे स्पष्ट करणे",
     "is_poem": false,
     "sources_dir": "sources/6/भूगोल/11_11_शाश्वत_विकासाची_दिशा",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     113,
+     124
+    ]
    }
   },
   {
@@ -19109,9 +19253,9 @@
    "unit_id": "4_Semi-Maths_1",
    "topic_key": "4|Semi-Maths|1",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 1,
    "chapter_title": "1. Playing with Numbers",
    "block": "topic",
@@ -19123,18 +19267,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/01_1_Playing_with_Numbers",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     13,
+     29
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_2",
    "topic_key": "4|Semi-Maths|2",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 2,
    "chapter_title": "2. Fun with Shapes",
    "block": "topic",
@@ -19146,18 +19293,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/02_2_Fun_with_Shapes",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     30,
+     44
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_3",
    "topic_key": "4|Semi-Maths|3",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 3,
    "chapter_title": "3. Addition and Subtraction",
    "block": "topic",
@@ -19169,18 +19319,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/03_3_Addition_and_Subtraction",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     45,
+     48
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_4",
    "topic_key": "4|Semi-Maths|4",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 4,
    "chapter_title": "4. Fractions",
    "block": "topic",
@@ -19192,18 +19345,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/04_4_Fractions",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     49,
+     54
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_5",
    "topic_key": "4|Semi-Maths|5",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 5,
    "chapter_title": "5. Length and Weight",
    "block": "topic",
@@ -19215,18 +19371,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/05_5_Length_and_Weight",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     55,
+     68
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_6",
    "topic_key": "4|Semi-Maths|6",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 6,
    "chapter_title": "6. Data Handling",
    "block": "topic",
@@ -19238,18 +19397,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/06_6_Data_Handling",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     69,
+     73
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_7",
    "topic_key": "4|Semi-Maths|7",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 7,
    "chapter_title": "7. Notion of Maps (Najri Nakasha)",
    "block": "topic",
@@ -19261,18 +19423,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/07_7_Notion_of_Maps_Najri_Nakasha",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     74,
+     79
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_8",
    "topic_key": "4|Semi-Maths|8",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 8,
    "chapter_title": "8. Multiplication",
    "block": "topic",
@@ -19284,18 +19449,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/08_8_Multiplication",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     80,
+     86
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_9",
    "topic_key": "4|Semi-Maths|9",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 9,
    "chapter_title": "9. Division",
    "block": "topic",
@@ -19307,18 +19475,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/09_9_Division",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     87,
+     98
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_10",
    "topic_key": "4|Semi-Maths|10",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 10,
    "chapter_title": "10. Symmetry",
    "block": "topic",
@@ -19330,18 +19501,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/10_10_Symmetry",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     99,
+     103
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_11",
    "topic_key": "4|Semi-Maths|11",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 11,
    "chapter_title": "11. Perimeter and Area",
    "block": "topic",
@@ -19353,18 +19527,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/11_11_Perimeter_and_Area",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     104,
+     112
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_12",
    "topic_key": "4|Semi-Maths|12",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 12,
    "chapter_title": "12. Volume and Capacity",
    "block": "topic",
@@ -19376,18 +19553,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/12_12_Volume_and_Capacity",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     113,
+     118
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_13",
    "topic_key": "4|Semi-Maths|13",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 13,
    "chapter_title": "13. Measurement of Time",
    "block": "topic",
@@ -19399,18 +19579,21 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/13_13_Measurement_of_Time",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     119,
+     121
+    ]
    }
   },
   {
    "unit_id": "4_Semi-Maths_14",
    "topic_key": "4|Semi-Maths|14",
    "std": 4,
-   "subject": "Semi-Maths",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "Maths",
+   "lang": "en",
+   "book_id": 21,
    "chapter_no": 14,
    "chapter_title": "14. Patterns",
    "block": "topic",
@@ -19422,9 +19605,12 @@
     "activity": "Introduction & Concept: Introduce the concept with real-life examples and concrete objects",
     "is_poem": false,
     "sources_dir": "sources/4/Semi_Maths/14_14_Patterns",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     122,
+     140
+    ]
    }
   },
   {
@@ -21392,9 +21578,9 @@
    "unit_id": "5_इंग्लिश_1",
    "topic_key": "5|इंग्लिश|1",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 1,
    "chapter_title": "1. Songs and Greetings",
    "block": "poem",
@@ -21406,18 +21592,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/01_1_Songs_and_Greetings",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     10,
+     11
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_2",
    "topic_key": "5|इंग्लिश|2",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 2,
    "chapter_title": "2. 'A' to 'Z' / We Speak English",
    "block": "topic",
@@ -21429,18 +21618,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/02_2_A_to_Z_We_Speak_English",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     12,
+     14
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_3",
    "topic_key": "5|इंग्लिश|3",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 3,
    "chapter_title": "3. Number Work / B-I-N-G-O",
    "block": "topic",
@@ -21452,18 +21644,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/03_3_Number_Work_B_I_N_G_O",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     15,
+     16
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_4",
    "topic_key": "5|इंग्लिश|4",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 4,
    "chapter_title": "4. Talking about Things",
    "block": "topic",
@@ -21475,41 +21670,47 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/04_4_Talking_about_Things",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     17,
+     19
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_5",
    "topic_key": "5|इंग्लिश|5",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 5,
    "chapter_title": "5. Sentence Race / Action Time",
-   "block": "topic",
+   "block": "poem",
    "title": "5. Sentence Race / Action Time",
    "meta": {
     "tachan_subject": "इंग्लिश",
     "tachan_seq": 5,
     "learning_outcome": "Identifies the correct verb forms to describe actions in simple present tense.",
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/05_5_Sentence_Race_Action_Time",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     20,
+     21
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_6",
    "topic_key": "5|इंग्लिश|6",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 6,
    "chapter_title": "6. Words We Know / Say 'Yes' or 'No'!",
    "block": "topic",
@@ -21521,18 +21722,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/06_6_Words_We_Know_Say_Yes_or_No",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     22,
+     24
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_7",
    "topic_key": "5|इंग्लिश|7",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 7,
    "chapter_title": "7. Cuckoo",
    "block": "topic",
@@ -21544,18 +21748,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/07_7_Cuckoo",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     25,
+     26
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_8",
    "topic_key": "5|इंग्लिश|8",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 8,
    "chapter_title": "8. The Little Red Hen",
    "block": "topic",
@@ -21567,18 +21774,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/08_8_The_Little_Red_Hen",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     27,
+     29
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_9",
    "topic_key": "5|इंग्लिश|9",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 9,
    "chapter_title": "9. Just now!",
    "block": "topic",
@@ -21590,18 +21800,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/09_9_Just_now",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     30,
+     30
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_10",
    "topic_key": "5|इंग्लिश|10",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 10,
    "chapter_title": "10. True Friends",
    "block": "topic",
@@ -21613,18 +21826,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/10_10_True_Friends",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     31,
+     31
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_11",
    "topic_key": "5|इंग्लिश|11",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 11,
    "chapter_title": "11. Keeping Quiet",
    "block": "topic",
@@ -21636,18 +21852,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/11_11_Keeping_Quiet",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     32,
+     32
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_12",
    "topic_key": "5|इंग्लिश|12",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 12,
    "chapter_title": "12. Interviews",
    "block": "topic",
@@ -21659,18 +21878,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/12_12_Interviews",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     33,
+     33
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_13",
    "topic_key": "5|इंग्लिश|13",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 13,
    "chapter_title": "13. Friendly Plans",
    "block": "topic",
@@ -21682,18 +21904,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/13_13_Friendly_Plans",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     34,
+     34
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_14",
    "topic_key": "5|इंग्लिश|14",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 14,
    "chapter_title": "14. Words",
    "block": "topic",
@@ -21705,18 +21930,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/14_14_Words",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     35,
+     37
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_15",
    "topic_key": "5|इंग्लिश|15",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 15,
    "chapter_title": "15. Trains",
    "block": "topic",
@@ -21728,18 +21956,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/15_15_Trains",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     38,
+     41
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_16",
    "topic_key": "5|इंग्लिश|16",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 16,
    "chapter_title": "16. The Little Babul Tree",
    "block": "topic",
@@ -21751,18 +21982,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/16_16_The_Little_Babul_Tree",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     42,
+     43
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_17",
    "topic_key": "5|इंग्लिश|17",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 17,
    "chapter_title": "17. Lots of Things",
    "block": "topic",
@@ -21774,64 +22008,73 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/17_17_Lots_of_Things",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     44,
+     45
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_18",
    "topic_key": "5|इंग्लिश|18",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 18,
    "chapter_title": "18. Know your Body",
-   "block": "topic",
+   "block": "poem",
    "title": "18. Know your Body",
    "meta": {
     "tachan_subject": "इंग्लिश",
     "tachan_seq": 18,
     "learning_outcome": "Names the major parts of the human body such as head, torso, arms and legs",
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/18_18_Know_your_Body",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     46,
+     47
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_19",
    "topic_key": "5|इंग्लिश|19",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 19,
    "chapter_title": "19. Alyonushka",
-   "block": "topic",
+   "block": "poem",
    "title": "19. Alyonushka",
    "meta": {
     "tachan_subject": "इंग्लिश",
     "tachan_seq": 19,
     "learning_outcome": "Identifies the main character Alyonushka and describes her role in the story.",
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/19_19_Alyonushka",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     48,
+     50
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_20",
    "topic_key": "5|इंग्लिश|20",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 20,
    "chapter_title": "20. One Thing at a Time",
    "block": "topic",
@@ -21843,18 +22086,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/20_20_One_Thing_at_a_Time",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     51,
+     53
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_21",
    "topic_key": "5|इंग्लिश|21",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 21,
    "chapter_title": "21. Pen-friends",
    "block": "topic",
@@ -21866,64 +22112,73 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/21_21_Pen_friends",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     54,
+     54
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_22",
    "topic_key": "5|इंग्लिश|22",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 22,
    "chapter_title": "22. How Creatures Move",
-   "block": "topic",
+   "block": "poem",
    "title": "22. How Creatures Move",
    "meta": {
     "tachan_subject": "इंग्लिश",
     "tachan_seq": 22,
     "learning_outcome": "Identifies the different ways animals move",
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/22_22_How_Creatures_Move",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     55,
+     55
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_23",
    "topic_key": "5|इंग्लिश|23",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 23,
    "chapter_title": "23. Location Games / Texts",
-   "block": "topic",
+   "block": "poem",
    "title": "23. Location Games / Texts",
    "meta": {
     "tachan_subject": "इंग्लिश",
     "tachan_seq": 23,
     "learning_outcome": "Identifies the main characters and setting in each location game text.",
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/23_23_Location_Games_Texts",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     56,
+     56
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_24",
    "topic_key": "5|इंग्लिश|24",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 24,
    "chapter_title": "24. Shapes and Maps",
    "block": "topic",
@@ -21935,18 +22190,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/24_24_Shapes_and_Maps",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     57,
+     57
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_25",
    "topic_key": "5|इंग्लिश|25",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 25,
    "chapter_title": "25. Tock Tock Tong Tong",
    "block": "topic",
@@ -21958,64 +22216,73 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/25_25_Tock_Tock_Tong_Tong",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     58,
+     58
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_26",
    "topic_key": "5|इंग्लिश|26",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 26,
    "chapter_title": "26. On the Time-line",
-   "block": "topic",
+   "block": "poem",
    "title": "26. On the Time-line",
    "meta": {
     "tachan_subject": "इंग्लिश",
     "tachan_seq": 26,
     "learning_outcome": "Reads the timeline and identifies the sequence of events.",
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/26_26_On_the_Time_line",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     59,
+     59
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_27",
    "topic_key": "5|इंग्लिश|27",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 27,
    "chapter_title": "27. I speak, I say, I talk",
-   "block": "topic",
+   "block": "poem",
    "title": "27. I speak, I say, I talk",
    "meta": {
     "tachan_subject": "इंग्लिश",
     "tachan_seq": 27,
     "learning_outcome": "Uses the verbs ‘speak’, ‘say’ and ‘talk’ correctly in simple sentences",
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/27_27_I_speak_I_say_I_talk",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     60,
+     60
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_28",
    "topic_key": "5|इंग्लिश|28",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 28,
    "chapter_title": "28. Science Funfair",
    "block": "topic",
@@ -22027,18 +22294,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/28_28_Science_Funfair",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     61,
+     61
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_29",
    "topic_key": "5|इंग्लिश|29",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 29,
    "chapter_title": "29. The Wind",
    "block": "topic",
@@ -22050,18 +22320,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/29_29_The_Wind",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     62,
+     62
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_30",
    "topic_key": "5|इंग्लिश|30",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 30,
    "chapter_title": "30. 'Go!' and 'Come!'",
    "block": "topic",
@@ -22073,18 +22346,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/30_30_Go_and_Come",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     63,
+     63
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_31",
    "topic_key": "5|इंग्लिश|31",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 31,
    "chapter_title": "31. The Golden Touch",
    "block": "topic",
@@ -22096,41 +22372,47 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/31_31_The_Golden_Touch",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     64,
+     64
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_32",
    "topic_key": "5|इंग्लिश|32",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 32,
    "chapter_title": "32. Where Go the Boats?",
-   "block": "topic",
+   "block": "poem",
    "title": "32. Where Go the Boats?",
    "meta": {
     "tachan_subject": "इंग्लिश",
     "tachan_seq": 32,
     "learning_outcome": "Identifies the main characters and setting in the story \"Where Go the Boats?\"",
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/32_32_Where_Go_the_Boats",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     65,
+     65
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_33",
    "topic_key": "5|इंग्लिश|33",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 33,
    "chapter_title": "33. Our Solar System",
    "block": "topic",
@@ -22142,18 +22424,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/33_33_Our_Solar_System",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     66,
+     66
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_34",
    "topic_key": "5|इंग्लिश|34",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 34,
    "chapter_title": "34. Guess What!",
    "block": "topic",
@@ -22165,18 +22450,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/34_34_Guess_What",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     67,
+     72
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_35",
    "topic_key": "5|इंग्लिश|35",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 35,
    "chapter_title": "35. A Book Speaks",
    "block": "topic",
@@ -22188,18 +22476,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/35_35_A_Book_Speaks",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     73,
+     87
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_36",
    "topic_key": "5|इंग्लिश|36",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 36,
    "chapter_title": "36. George Washington Carver",
    "block": "topic",
@@ -22211,18 +22502,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/36_36_George_Washington_Carver",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     88,
+     88
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_37",
    "topic_key": "5|इंग्लिश|37",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 37,
    "chapter_title": "37. Question Bank / Dice for your Game",
    "block": "topic",
@@ -22234,18 +22528,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/37_37_Question_Bank_Dice_for_your_Game",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     89,
+     90
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_38",
    "topic_key": "5|इंग्लिश|38",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 38,
    "chapter_title": "38. All about Money",
    "block": "topic",
@@ -22257,18 +22554,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/38_38_All_about_Money",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     91,
+     92
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_39",
    "topic_key": "5|इंग्लिश|39",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 39,
    "chapter_title": "39. Only One Mother",
    "block": "topic",
@@ -22280,41 +22580,47 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/39_39_Only_One_Mother",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     93,
+     94
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_40",
    "topic_key": "5|इंग्लिश|40",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 40,
    "chapter_title": "40. At the Market",
-   "block": "topic",
+   "block": "poem",
    "title": "40. At the Market",
    "meta": {
     "tachan_subject": "इंग्लिश",
     "tachan_seq": 40,
     "learning_outcome": "Identifies common items sold at the market and their prices.",
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
-    "is_poem": false,
+    "is_poem": true,
     "sources_dir": "sources/5/इंग्लिश/40_40_At_the_Market",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     95,
+     96
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_41",
    "topic_key": "5|इंग्लिश|41",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 41,
    "chapter_title": "41. He Knows the Workman",
    "block": "topic",
@@ -22326,18 +22632,21 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/41_41_He_Knows_the_Workman",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     97,
+     98
+    ]
    }
   },
   {
    "unit_id": "5_इंग्लिश_42",
    "topic_key": "5|इंग्लिश|42",
    "std": 5,
-   "subject": "इंग्लिश",
-   "lang": "mr",
-   "book_id": null,
+   "subject": "English",
+   "lang": "en",
+   "book_id": 27,
    "chapter_no": 42,
    "chapter_title": "42. Now I Know!",
    "block": "topic",
@@ -22349,9 +22658,12 @@
     "activity": "Introduction & Listening: Warm-up talk on the theme; teacher reads aloud, students listen and answer simple questions",
     "is_poem": false,
     "sources_dir": "sources/5/इंग्लिश/42_42_Now_I_Know",
-    "has_textbook": false,
+    "has_textbook": true,
     "official_id": null,
-    "pages": null
+    "pages": [
+     99,
+     100
+    ]
    }
   },
   {
