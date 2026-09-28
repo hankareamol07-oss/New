@@ -2,7 +2,7 @@
 import os
 import subprocess
 
-from .tts import duration, speak
+from .tts import duration, prefetch, speak
 
 PAUSE_AFTER_Q = 1.6   # seconds of silence between question and answer
 PAUSE_AFTER_A = 0.8
@@ -52,6 +52,13 @@ def build(cfg, script, renderer, book, out_dir, log=print):
     os.makedirs(au, exist_ok=True)
     items, chapters, t = [], [], 0.0
 
+    plan = [(script.get("intro", {}).get("say"), "01_intro")]
+    for seg in script["segments"]:
+        n = int(seg.get("no", 0)) + 1
+        plan += [(seg.get("say_q"), f"{n:02d}a_q"), (seg.get("say_a"), f"{n:02d}b_a")]
+    plan += [(script.get("summary", {}).get("say"), "98_summary"), (script.get("outro", {}).get("say"), "99_outro")]
+    prefetch(cfg, [(s, os.path.join(au, n + ".mp3")) for s, n in plan if s], lang, log)
+
     def add(img, name, say=None, extra=0.0):
         nonlocal t
         png = os.path.join(sl, name + ".png")
@@ -98,6 +105,7 @@ def build(cfg, script, renderer, book, out_dir, log=print):
         idx = next((i for i, s in enumerate(script["segments"]) if s.get("no") == sh.get("segment_no")), 0)
         seg = script["segments"][idx]
         log("[video] Short")
+        prefetch(cfg, [(seg.get("say_q"), os.path.join(au, "s1.mp3")), (seg.get("say_a"), os.path.join(au, "s2.mp3"))], lang, log)
         sitems = []
         for name, show, say, extra in (("s1", False, seg.get("say_q"), 1.5), ("s2", True, seg.get("say_a"), 1.5)):
             png = os.path.join(sl, name + ".png")

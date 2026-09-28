@@ -29,7 +29,7 @@ from ytstudio.data import SUBJECT_MR
 from ytstudio.llm import chat_json
 from ytstudio.script import LANG_NAME, _fix_chapter_no
 from ytstudio.slides import Renderer
-from ytstudio.tts import duration, speak
+from ytstudio.tts import duration, prefetch, speak
 from ytstudio.video import _concat, _sec
 
 import stickman
@@ -137,6 +137,33 @@ KIND_BADGE = {"example": ("उदाहरण", "Example"), "misconception": ("�
 KIND_POSE = {"example": "point", "misconception": "think", "activity": "cheer"}
 
 
+def _narration_plan(script, out_dir):
+    """(say, slide name) in the exact order build_video speaks them - lets the whole narration go out as one TTS request."""
+    plan = []
+    hook = script.get("hook") if isinstance(script.get("hook"), dict) else None
+    if hook and (hook.get("say") or hook.get("question")):
+        plan.append((hook.get("say"), "00b_hook"))
+    plan.append((script.get("intro", {}).get("say"), "01_intro"))
+    poem = script.get("poem") if isinstance(script.get("poem"), dict) else None
+    if poem and poem.get("lyrics_lines") and not os.path.exists(os.path.join(out_dir, "song.mp3")):
+        plan.append((poem.get("recite_say"), "05_poem_00"))
+    for i, sec in enumerate(script["sections"], 1):
+        for j, (_, _, say) in enumerate(_steps(sec)):
+            plan.append((say, f"{i + 10:02d}_sec_{j:02d}"))
+        if isinstance(sec.get("check"), dict) and sec["check"].get("question"):
+            c = _norm_check(sec["check"], i)
+            plan += [(c.get("say_q"), f"{i + 10:02d}_chka_q"), (c.get("say_a"), f"{i + 10:02d}_chkb_a")]
+    for c in script["checks"]:
+        n = int(c["no"])
+        plan += [(c.get("say_q"), f"{n + 60:02d}a_q"), (c.get("say_a"), f"{n + 60:02d}b_a")]
+    plan.append((script.get("summary", {}).get("say"), "98_summary"))
+    hw = script.get("homework") if isinstance(script.get("homework"), dict) else None
+    if hw and hw.get("task"):
+        plan.append((hw.get("say"), "98b_homework"))
+    plan.append((script.get("outro", {}).get("say"), "99_outro"))
+    return plan
+
+
 def build_video(cfg, script, r, u, out_dir, log=print):
     lang = u["lang"]
     sl, au = os.path.join(out_dir, "slides"), os.path.join(out_dir, "audio")
@@ -146,6 +173,7 @@ def build_video(cfg, script, r, u, out_dir, log=print):
     en = lang == "en"
     sm = bool(cfg.get("stickman", True))
     reserve = stickman.HEIGHT + 60 if sm else 0   # keep the bullet card clear of the figure
+    prefetch(cfg, [(s, os.path.join(au, n + ".mp3")) for s, n in _narration_plan(script, out_dir) if s], lang, log)
 
     def add(img, name, say=None, extra=0.0, audio_file=None, pose="talk"):
         nonlocal t
@@ -252,6 +280,7 @@ def build_short(cfg, script, r, u, out_dir, log=print):
         items.append((png, aud, max(secs, 2.0), pose))
 
     idea = {"question": sh.get("idea", ""), "answer": ""}
+    prefetch(cfg, [(sh.get("say"), os.path.join(au, "s0_idea.mp3"))] + ([(c.get("say_q"), os.path.join(au, "s1_q.mp3")), (c.get("say_a"), os.path.join(au, "s2_a.mp3"))] if c else []), lang, log)
     add(r.short(idea, sh.get("hook", ""), False), "s0_idea", sh.get("say"), 0.8, "point")
     if c:
         add(r.short(c, sh.get("hook", ""), False), "s1_q", c.get("say_q"), 2.0, "think")

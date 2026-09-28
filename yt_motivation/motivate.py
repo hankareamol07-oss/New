@@ -21,7 +21,7 @@ import re
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, features
 
 from ytstudio.llm import chat_json
-from ytstudio.tts import duration, speak
+from ytstudio.tts import duration, prefetch, speak
 from ytstudio.video import _concat
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -230,6 +230,7 @@ def build(cfg, script, out_dir, log=print):
         steps.append((f"{i:02d}_line", l["text"], l.get("key"), l.get("say"), ("line", i, n)))
     steps.append(("99_close", script["close"]["text"], None, script["close"].get("say"), "close"))
     items, total = [], 0.0
+    prefetch(cfg, [(say, os.path.join(au, name + ".mp3")) for name, _, _, say, _ in steps if say], "mr", log)
     for i, (name, text, key, say, kind) in enumerate(steps):
         prog = i / (len(steps) - 1)
         img = S.hook(text, prog) if kind == "hook" else S.close(text, prog) if kind == "close" else S.line(text, key, kind[1], kind[2], prog)

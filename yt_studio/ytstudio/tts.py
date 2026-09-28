@@ -129,10 +129,57 @@ def _elevenlabs(cfg, text, out, log):
     raise RuntimeError("elevenlabs: all api keys exhausted")
 
 
+def _silences(cfg, path):
+    r = subprocess.run([cfg["ffmpeg"], "-i", path, "-af", "silencedetect=noise=-38dB:d=0.3", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", r.stderr)]
+    ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", r.stderr)]
+    return list(zip(starts, ends))
+
+
+def prefetch(cfg, pairs, lang, log=print):
+    """Gemini free tier allows ~10 TTS requests/day, so a whole video's narration is synthesised in ONE request
+    and cut into per-slide files at the pauses between parts. pairs = [(text, out_path)]; later speak() calls
+    find the files ready. Any other backend: no-op (speak() handles each segment)."""
+    pairs = [(clean(t), o) for t, o in pairs if t and clean(t) and not (os.path.exists(o) and os.path.getsize(o) > 0)]
+    if cfg["tts_backend"] != "gemini" or not cfg["keys"].get("gemini") or len(pairs) < 2:
+        return
+    texts = [t if re.search(r"[।.!?]$", t) else t + ("।" if lang != "en" else ".") for t, _ in pairs]
+    whole = "\n\n".join(texts)
+    full = pairs[0][1] + ".full.mp3"
+    try:
+        log(f"  [tts] gemini: one request for {len(pairs)} parts ({len(whole)} chars)")
+        _gemini(cfg, whole, full, log)
+    except (requests.RequestException, KeyError, subprocess.CalledProcessError) as e:
+        log(f"  [tts] gemini batch failed ({str(e)[:80]}); per-part fallback")
+        return
+    total = duration(cfg, full)
+    sil = _silences(cfg, full)
+    lead = sil[0][1] if sil and sil[0][0] < 0.05 else 0.0
+    tail = sil[-1][0] if sil and abs(sil[-1][1] - total) < 0.05 else total
+    speech = tail - lead
+    weights = [len(t) for t in texts]
+    cuts, acc, prev = [], 0, lead
+    for w in weights[:-1]:
+        acc += w
+        target = lead + speech * acc / sum(weights)
+        window = 0.35 * speech * w / sum(weights) + 0.4
+        cands = [(abs((a + b) / 2 - target), (a + b) / 2) for a, b in sil if a > prev + 0.5 and abs((a + b) / 2 - target) <= window]
+        cut = min(cands)[1] if cands else target
+        cuts.append(cut)
+        prev = cut
+    bounds = [0.0] + cuts + [total]
+    for (t, o), a, b in zip(pairs, bounds, bounds[1:]):
+        subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", full, "-c:a", "libmp3lame", "-q:a", "3", o], check=True)
+    os.remove(full)
+
+
 def speak(cfg, text, out, lang, log=print):
     text = clean(text)
     if not text:
         text = "."
+    if os.path.exists(out) and os.path.getsize(out) > 0:
+        return out
     backend = cfg["tts_backend"]
     if backend == "elevenlabs":
         try:
