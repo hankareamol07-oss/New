@@ -9,7 +9,7 @@ for P in yt_swadhyay yt_explain yt_motivation; do
   mkdir -p "$T/yt_studio"
   cp -r yt_studio/ytstudio yt_studio/assets yt_studio/style yt_studio/requirements.txt yt_studio/config.example.json yt_studio/README.md "$T/yt_studio/"
   rsync -a --exclude output --exclude __pycache__ --exclude client_secret.json --exclude youtube_token.json --exclude 'config.json' --exclude '*.db-journal' --exclude '*.pyc' "$P/" "$T/$P/"
-  cp "$P/config.example.json" "$T/$P/config.json"   # blank keys: user copies API keys from their existing config.json
+  if [ "$WITH_KEYS" = 1 ]; then cp "$P/config.json" "$T/$P/config.json"; else cp "$P/config.example.json" "$T/$P/config.json"; fi   # WITH_KEYS=1: local config incl. API keys (private delivery only)
   # one sample output for reference
   S=$(ls -d $P/output/*/ 2>/dev/null | head -1)
   if [ -n "$S" ]; then mkdir -p "$T/$P/output"; rsync -a --include='*/' --include='video.mp4' --include='short.mp4' --include='thumbnail.png' --include='cover.png' --include='script.json' --include='explain_script.json' --include='caption.txt' --include='youtube_description.txt' --exclude='*' "$S" "$T/$P/output/$(basename $S)/"; fi
@@ -27,7 +27,7 @@ python auto.py %*
 pause
 EOF
   find "$T" -name __pycache__ -prune -exec rm -rf {} +
-  rm -f /home/ubuntu/$P.zip
-  (cd "$T" && zip -qr /home/ubuntu/$P.zip .)
-  ls -la /home/ubuntu/$P.zip
+  rm -f ${OUT:-/home/ubuntu}/$P.zip
+  (cd "$T" && zip -qr ${OUT:-/home/ubuntu}/$P.zip .)
+  ls -la ${OUT:-/home/ubuntu}/$P.zip
 done
