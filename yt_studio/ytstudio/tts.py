@@ -5,6 +5,7 @@ import base64
 import os
 import re
 import subprocess
+import time
 
 import requests
 
@@ -27,7 +28,7 @@ def _edge(text, out, voice, rate):
     asyncio.run(run())
 
 
-def _gemini(cfg, text, out):
+def _gemini(cfg, text, out, log=print):
     """gemini_tts_voice may be one name or a list: first voice is used, later ones only if it fails."""
     v = cfg["gemini_tts_voice"]
     voices = v if isinstance(v, list) else [v]
@@ -39,12 +40,19 @@ def _gemini(cfg, text, out):
                 "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}},
             },
         }
-        for key in llm._keys(cfg, "gemini"):
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_tts_model']}:generateContent?key={key}"
-            r = requests.post(url, json=body, timeout=300)
-            if r.status_code == 200 or not llm._quota(r.status_code):
+        for attempt in range(4):
+            for key in llm._keys(cfg, "gemini"):
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_tts_model']}:generateContent?key={key}"
+                r = requests.post(url, json=body, timeout=300)
+                if r.status_code == 200 or not llm._quota(r.status_code):
+                    break
+                llm._rotate("gemini")
+            if r.status_code != 429 or "per_day" in r.text or "PerDay" in r.text:
                 break
-            llm._rotate("gemini")
+            m = re.search(r'"retryDelay":\s*"(\d+)', r.text)
+            wait = min(int(m.group(1)) + 2 if m else 20 * (attempt + 1), 90)
+            log(f"  [tts] gemini rate limit, waiting {wait}s")
+            time.sleep(wait)
         if r.status_code == 200:
             break
     r.raise_for_status()
@@ -140,7 +148,7 @@ def speak(cfg, text, out, lang, log=print):
             log(f"  [tts] sarvam failed ({str(e)[:80]}), falling back to edge-tts")
     if backend == "gemini" and cfg["keys"].get("gemini"):
         try:
-            _gemini(cfg, text, out)
+            _gemini(cfg, text, out, log)
             return out
         except (requests.RequestException, KeyError, subprocess.CalledProcessError) as e:
             log(f"  [tts] gemini failed ({str(e)[:80]}), falling back to edge-tts")
