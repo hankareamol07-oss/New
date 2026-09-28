@@ -15,8 +15,10 @@ def rows():
     out = []
     for r in st.db.execute("SELECT * FROM units ORDER BY std, subject, chapter_no, block"):
         r = dict(r)
+        r["subj"] = f"{r['subject']} ({ {'en': 'English', 'hi': 'हिंदी'}.get(r.get('lang'), 'मराठी') })"
         m = json.loads(r.get("meta_json") or "{}")
-        r["topic"] = f"{m.get('tachan_seq', r['chapter_no'])}. {r['title']}" + (" (कविता)" if m.get("is_poem") else "")
+        t = r["title"] if r["title"][:1].isdigit() else f"{m.get('tachan_seq', r['chapter_no'])}. {r['title']}"
+        r["topic"] = t + (" (कविता)" if m.get("is_poem") else "")
         out.append(r)
     return out
 
@@ -33,5 +35,5 @@ def run(row, upload, log):
 
 
 if __name__ == "__main__":
-    main(Adapter("घटक स्पष्टीकरण व्हिडिओ — इयत्ता 1-8", [("इयत्ता", "std"), ("विषय", "subject"), ("घटक", "topic")],
+    main(Adapter("घटक स्पष्टीकरण व्हिडिओ — इयत्ता 1-8", [("इयत्ता", "std"), ("विषय", "subj"), ("घटक", "topic")],
                  rows, run, upload_default=cfg["youtube"]["enabled"]), cfg["out_dir"])

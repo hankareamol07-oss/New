@@ -44,7 +44,7 @@ def load_cfg():
 
 
 def open_db():
-    db = sqlite3.connect(os.path.join(HERE, "motivation.db"))
+    db = sqlite3.connect(os.path.join(HERE, "motivation.db"), check_same_thread=False)
     db.row_factory = sqlite3.Row
     db.executescript(SCHEMA)
     return db

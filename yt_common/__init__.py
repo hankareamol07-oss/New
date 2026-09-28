@@ -97,7 +97,7 @@ class State:
     """sqlite project DB: one row per video unit; status pending/done/failed + youtube urls."""
 
     def __init__(self, path):
-        self.db = sqlite3.connect(path)
+        self.db = sqlite3.connect(path, check_same_thread=False)
         self.db.row_factory = sqlite3.Row
         self.db.executescript("""
         CREATE TABLE IF NOT EXISTS units (

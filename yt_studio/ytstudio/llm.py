@@ -37,7 +37,7 @@ def _openai(provider, cfg, system, user, max_tokens):
         "max_tokens": max_tokens,
         "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
     }
-    r = requests.post(OPENAI_URLS[provider], json=body, timeout=600,
+    r = requests.post(OPENAI_URLS[provider], json=body, timeout=180,
                       headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
     if r.status_code != 200:
         raise LLMError(f"{provider} HTTP {r.status_code}: {r.text[:200]}")
@@ -54,7 +54,7 @@ def _gemini(cfg, system, user, max_tokens):
         "contents": [{"role": "user", "parts": [{"text": user}]}],
         "generationConfig": {"temperature": 0.4, "maxOutputTokens": max_tokens, "responseMimeType": "application/json"},
     }
-    r = requests.post(url, json=body, timeout=600)
+    r = requests.post(url, json=body, timeout=180)
     if r.status_code != 200:
         raise LLMError(f"gemini HTTP {r.status_code}: {r.text[:200]}")
     return r.json()["candidates"][0]["content"]["parts"][0]["text"]

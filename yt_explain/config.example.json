@@ -4,7 +4,7 @@
   "data_dir": "data",
   "out_dir": "output",
   "ffmpeg": "C:/ffmpeg/bin/ffmpeg.exe",
-  "llm_order": ["gemini", "nvidia", "groq"],
+  "llm_order": ["groq", "gemini", "nvidia"],
   "gemini_api_key": "", "nvidia_api_key": "", "groq_api_key": "",
   "tts_backend": "gemini",
   "gemini_tts_voice": "Kore",
