@@ -33,6 +33,7 @@ DEFAULTS = {
     "tts_rate": "-5%",
     "gemini_tts_model": "gemini-2.5-flash-preview-tts",
     "gemini_tts_voice": "Kore",
+    "sarvam": {"model": "bulbul:v3", "speaker": "shubh", "pace": 0.95},
     "elevenlabs": {
         "api_keys": [],
         "voice_id": "",
@@ -98,6 +99,7 @@ def load(path=None):
         "nvidia": _klist("NVIDIA_API_KEY", "nvidia_api_key"),
         "gemini": _klist("GEMINI_API_KEY", "gemini_api_key"),
         "groq": _klist("GROQ_API_KEY", "groq_api_key"),
+        "sarvam": _klist("SARVAM_API_KEY", "sarvam_api_key"),
         "descript": (_klist("DESCRIPT_API_TOKEN", "descript_api_token") or [""])[0],
     }
     env_el = os.environ.get("ELEVENLABS_API_KEYS", "")

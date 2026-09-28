@@ -38,3 +38,12 @@ translate or paraphrase any quote/speech/song/creator wording. Review each scrip
 
 ## Multiple API keys
 `"gemini_api_key"` (also nvidia/groq) accepts one key or a list, e.g. `"gemini_api_key": ["AIza...1", "AIza...2"]` — the next key is used automatically when one returns 429 (quota).
+
+## Natural Marathi voice (Sarvam AI Bulbul)
+Free-tier, Marathi-native TTS. Get a key at https://dashboard.sarvam.ai → API Keys, then in `config.json`:
+```json
+"sarvam_api_key": "sk_...",
+"tts_backend": "sarvam",
+"sarvam": {"model": "bulbul:v3", "speaker": "shubh", "pace": 0.95}
+```
+Speakers: `shubh`, `aditya`, `rahul` (male); `ritu`, `priya`, `neha` (female). `pace` 0.5–2.0. Falls back to edge-tts if Sarvam fails. Delete a chapter's `audio\` folder + video.mp4 to re-voice it.

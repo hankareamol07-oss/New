@@ -51,6 +51,43 @@ def _gemini(cfg, text, out):
     os.remove(raw)
 
 
+def _sarvam(cfg, text, out, lang):
+    """Sarvam AI Bulbul TTS (Indic-native; mr-IN/hi-IN/en-IN). Long text is split at sentence ends (2500-char limit) and concatenated."""
+    sv = cfg["sarvam"]
+    keys = llm._keys(cfg, "sarvam")
+    lang_code = {"mr": "mr-IN", "hi": "hi-IN", "en": "en-IN"}.get(lang, "mr-IN")
+    chunks, cur = [], ""
+    for s in re.split(r"(?<=[।.!?])\s+", text):
+        if len(cur) + len(s) + 1 > 2400 and cur:
+            chunks.append(cur)
+            cur = ""
+        cur = (cur + " " + s).strip()
+    chunks.append(cur or ".")
+    parts = []
+    for i, chunk in enumerate(chunks):
+        body = {"text": chunk, "language_code": lang_code, "speaker": sv["speaker"], "model": sv["model"],
+                "pace": sv["pace"], "speech_sample_rate": 24000, "output_audio_codec": "wav"}
+        for key in keys:
+            r = requests.post("https://api.sarvam.ai/text-to-speech", json=body,
+                              headers={"api-subscription-key": key, "Content-Type": "application/json"}, timeout=120)
+            if r.status_code == 200 or not llm._quota(r.status_code):
+                break
+            llm._rotate("sarvam")
+        if r.status_code != 200:
+            raise RuntimeError(f"sarvam HTTP {r.status_code}: {r.text[:120]}")
+        p = f"{out}.{i}.wav"
+        with open(p, "wb") as f:
+            f.write(base64.b64decode(r.json()["audios"][0]))
+        parts.append(p)
+    lst = out + ".txt"
+    with open(lst, "w", encoding="utf-8") as f:
+        for p in parts:
+            f.write(f"file '{os.path.abspath(p)}'\n")
+    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, out], check=True)
+    for p in parts + [lst]:
+        os.remove(p)
+
+
 _EL_DEAD = set()
 
 
@@ -89,6 +126,12 @@ def speak(cfg, text, out, lang, log=print):
             return out
         except (requests.RequestException, RuntimeError) as e:
             log(f"  [tts] elevenlabs failed ({str(e)[:80]}), falling back to edge-tts")
+    if backend == "sarvam" and cfg["keys"].get("sarvam"):
+        try:
+            _sarvam(cfg, text, out, lang)
+            return out
+        except (requests.RequestException, KeyError, RuntimeError, subprocess.CalledProcessError) as e:
+            log(f"  [tts] sarvam failed ({str(e)[:80]}), falling back to edge-tts")
     if backend == "gemini" and cfg["keys"].get("gemini"):
         try:
             _gemini(cfg, text, out)
