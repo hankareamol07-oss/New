@@ -37,3 +37,6 @@ daily-life example, worked example, common mistake) → retrieval check after ev
 * `START_GUI.bat` – window: इयत्ता → विषय → घटक, "YouTube upload" tick, ▶ → video (+Short) + optional upload.
 * `BUILD_EXE.bat` – builds `YTExplain.exe` with PyInstaller (run once on your PC). Keep the exe in this folder, next to
   `config.json`, `explain.db`, `data\`, `sources\`; the sibling `..\yt_studio` engine folder must stay.
+
+## Multiple API keys
+`"gemini_api_key"` (also nvidia/groq) accepts one key or a list, e.g. `"gemini_api_key": ["AIza...1", "AIza...2"]` — the next key is used automatically when one returns 429 (quota).

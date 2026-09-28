@@ -35,3 +35,6 @@ translate or paraphrase any quote/speech/song/creator wording. Review each scrip
 `config.json` (copy of `config.example.json`): API keys (`gemini_api_key`, `nvidia_api_key`, `groq_api_key`), `llm_order`,
 `tts_backend` (`gemini` / `edge` / `elevenlabs`), `voices.mr`, `trends.queries`, `themes` (fixed list, optional),
 `youtube.enabled/privacy/schedule`.
+
+## Multiple API keys
+`"gemini_api_key"` (also nvidia/groq) accepts one key or a list, e.g. `"gemini_api_key": ["AIza...1", "AIza...2"]` — the next key is used automatically when one returns 429 (quota).

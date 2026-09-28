@@ -87,11 +87,18 @@ def load(path=None):
             cfg[k] = os.path.normpath(os.path.join(ROOT, cfg[k]))
     if cfg["youtube"].get("client_secret") and not os.path.isabs(cfg["youtube"]["client_secret"]):
         cfg["youtube"]["client_secret"] = os.path.join(ROOT, cfg["youtube"]["client_secret"])
+    def _klist(env, name):
+        """API keys: env var (comma-separated) or config value (string or list). Extra keys rotate on quota errors."""
+        v = os.environ.get(env) or cfg.get(name, "")
+        if isinstance(v, str):
+            v = v.split(",")
+        return [k.strip() for k in v if k and k.strip()]
+
     cfg["keys"] = {
-        "nvidia": os.environ.get("NVIDIA_API_KEY") or cfg.get("nvidia_api_key", ""),
-        "gemini": os.environ.get("GEMINI_API_KEY") or cfg.get("gemini_api_key", ""),
-        "groq": os.environ.get("GROQ_API_KEY") or cfg.get("groq_api_key", ""),
-        "descript": os.environ.get("DESCRIPT_API_TOKEN") or cfg.get("descript_api_token", ""),
+        "nvidia": _klist("NVIDIA_API_KEY", "nvidia_api_key"),
+        "gemini": _klist("GEMINI_API_KEY", "gemini_api_key"),
+        "groq": _klist("GROQ_API_KEY", "groq_api_key"),
+        "descript": (_klist("DESCRIPT_API_TOKEN", "descript_api_token") or [""])[0],
     }
     env_el = os.environ.get("ELEVENLABS_API_KEYS", "")
     if env_el:

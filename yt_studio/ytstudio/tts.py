@@ -8,6 +8,8 @@ import subprocess
 
 import requests
 
+from . import llm
+
 
 def clean(text):
     text = re.sub(r"_{2,}", " रिकामी जागा " if re.search(r"[\u0900-\u097F]", text) else " blank ", text)
@@ -26,8 +28,6 @@ def _edge(text, out, voice, rate):
 
 
 def _gemini(cfg, text, out):
-    key = cfg["keys"]["gemini"]
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_tts_model']}:generateContent?key={key}"
     body = {
         "contents": [{"parts": [{"text": text}]}],
         "generationConfig": {
@@ -35,7 +35,12 @@ def _gemini(cfg, text, out):
             "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": cfg["gemini_tts_voice"]}}},
         },
     }
-    r = requests.post(url, json=body, timeout=300)
+    for key in llm._keys(cfg, "gemini"):
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_tts_model']}:generateContent?key={key}"
+        r = requests.post(url, json=body, timeout=300)
+        if r.status_code == 200 or not llm._quota(r.status_code):
+            break
+        llm._rotate("gemini")
     r.raise_for_status()
     part = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]
     pcm = base64.b64decode(part["data"])
