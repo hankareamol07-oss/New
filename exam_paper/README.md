@@ -90,13 +90,12 @@ question count and marks per question, then *Auto-fill*. Questions can be
 swapped, browsed or removed individually, exactly like the regular builder.
 Add more patterns by appending to `ep_exam_patterns()`.
 
-> **Data note:** downloadpapers.com lists Scholarship / Navodaya / NMMS classes
-> with their chapters and topics, but its question endpoints returned **no
-> questions** for those classes for the accounts we had. The competitive builder
-> therefore draws MCQs from the populated class 1–8 subjects (e.g. 5th गणित for
-> JNVST mental ability / arithmetic, 5th मराठी बालभारती for भाषा). If the source
-> later adds competitive questions, re-run the scraper + importer and they will
-> appear as selectable sources automatically.
+> **Data note:** `data/competitive/questions.json` holds the objective banks of
+> **8) NMMS (MAT/SAT, 14,148 Q)**, 4th शिष्यवृत्ती (10,544) and 7th शिष्यवृत्ती (7,743)
+> with answer keys (`db/full_dump.sql` already contains them as `ep_questions`
+> ids ≥ 5000000; `php import_competitive.php` re-imports from the JSON). Select
+> standard "8) NMMS" in the competitive builder to draw from them. Navodaya has
+> no objective questions on the source, so JNVST papers draw from class 5 subjects.
 
 ### Upgrading an existing install
 
