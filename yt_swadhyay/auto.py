@@ -14,11 +14,12 @@ import sys
 import time
 import traceback
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+HERE = os.path.dirname(os.path.abspath(sys.executable if getattr(sys, "frozen", False) else __file__))
+os.environ.setdefault("YTSTUDIO_ROOT", os.path.join(os.path.dirname(HERE), "yt_studio"))
+sys.path.insert(0, os.path.dirname(HERE))
 from yt_common import State, ocr_text  # noqa: E402  (also puts yt_studio on sys.path)
 from ytstudio import config as ytconfig, pipeline, script as scriptmod  # noqa: E402
 
-HERE = os.path.dirname(os.path.abspath(__file__))
 KIND = ("textbook स्वाध्याय / सरावसंच solutions: solve EVERY given question in the given order, one segment per question, "
         "no extra invented questions; for Maths show the full working step by step")
 
@@ -38,7 +39,7 @@ def _keep_order(qs, n, seed=None):
     return [q for q in qs if q.get("text")][:n]
 
 
-def run_unit(cfg, st, u, upload):
+def run_unit(cfg, st, u, upload, log=print):
     qs = st.questions_of(u["unit_id"])
     book = {"book_id": u["book_id"], "std": u["std"], "subject": u["subject"], "lang": u["lang"], "title": "",
             "official_id": (u.get("meta") or {}).get("official_id")}
@@ -54,7 +55,7 @@ def run_unit(cfg, st, u, upload):
         pass
     out_dir = os.path.join(cfg["out_dir"], f"std{u['std']}_{u['subject']}_{u['lang']}_{u['chapter_no']:02d}_{pipeline._slug(u['chapter_title'])}_{pipeline._slug(u['block'])}")
     scriptmod.pick_questions = _keep_order
-    return pipeline.run(cfg, book, chapter, qs, text, out_dir=out_dir, upload=upload), out_dir
+    return pipeline.run(cfg, book, chapter, qs, text, out_dir=out_dir, upload=upload, log=log), out_dir
 
 
 def main():

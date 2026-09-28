@@ -21,3 +21,8 @@ python auto.py                            # next auto.per_run units, upload/sche
 * `data/units.json` – units with `topic_key = "std|तचन विषय|घटक क्र."` (same key as `ep_book_chapters.tachan_seq` and `hpc_topic_map`), book/chapter/pages, official Balbharati book id.
 * `swadhyay.db` (sqlite) – `units` (status pending/done/failed, tries, out_dir, youtube_url, short_url) and `questions` (textbook order).
   Re-run `build_units.py` after a bank update; status of finished units is kept.
+
+## GUI / EXE (Windows)
+* `START_GUI.bat` – window: इयत्ता → विषय → पाठ → स्वाध्याय/सरावसंच, "YouTube upload" tick, ▶.
+* `BUILD_EXE.bat` – builds `YTSwadhyay.exe` with PyInstaller (run once on your PC). Keep the exe next to `config.json`,
+  `swadhyay.db`, `data\`; the sibling `..\yt_studio` engine folder must stay.

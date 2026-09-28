@@ -25,7 +25,7 @@
   "questions_per_video": 12,
   "make_short": true,
   "descript": {
-    "enabled": true,
+    "enabled": false,
     "captions": "auto",
     "resolution": "1080p",
     "agent_model": "auto",

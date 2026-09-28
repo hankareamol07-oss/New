@@ -145,7 +145,8 @@ class Renderer:
         d.rounded_rectangle([x0 + 6, y0 + 8, x1 + 6, y1 + 8], radius=26, fill=(215, 222, 240))
         d.rounded_rectangle(box, radius=26, fill=fill, outline=outline, width=3)
 
-    def _bullets(self, d, points, x, y, max_w, max_h, start=56):
+    def _bullets(self, d, points, x, y, max_w, max_h, start=56, active=None):
+        """active=None: all points normal. active=i: points > i hidden (segmenting), point i highlighted (signaling)."""
         size = start
         blocks = []
         while size >= 30:
@@ -155,10 +156,15 @@ class Renderer:
                 break
             size -= 4
         lh = int(size * 1.35)
-        for ls in blocks:
-            d.ellipse([x, y + lh // 2 - 12, x + 24, y + lh // 2 + 12], fill=self.accent)
+        for i, ls in enumerate(blocks):
+            if active is not None and i > active:
+                break
+            hl = active is not None and i == active
+            if hl:
+                d.rounded_rectangle([x - 20, y - 6, x + max_w - 20, y + len(ls) * lh + 6], radius=14, fill=(255, 246, 214))
+            d.ellipse([x, y + lh // 2 - 12, x + 24, y + lh // 2 + 12], fill=self.accent if hl or active is None else (190, 196, 215))
             for l in ls:
-                self.t.draw(d, (x + 50, y), l, size)
+                self.t.draw(d, (x + 50, y), l, size, hl, self.primary if hl else (INK if active is None else (110, 115, 135)))
                 y += lh
             y += 16
 
@@ -173,12 +179,13 @@ class Renderer:
         self.t.draw(d, (W // 2, y + 170), f"{self.book['subject']}  |  {self._std()}  |  Maharashtra Board", 44, False, (90, 90, 90), anchor="ma")
         return im
 
-    def points(self, heading, pts, badge=None):
+    def points(self, heading, pts, badge=None, reserve_right=0, active=None):
         im, d = self._base(badge=badge)
+        right = 1840 - reserve_right
         self.t.draw(d, (80, 215), heading, 64, True, self.primary)
-        d.line([80, 305, 1840, 305], fill=self.accent, width=5)
-        self._card(d, (80, 340, 1840, 980))
-        self._bullets(d, pts, 130, 380, 1660, 570)
+        d.line([80, 305, right, 305], fill=self.accent, width=5)
+        self._card(d, (80, 340, right, 980))
+        self._bullets(d, pts, 130, 380, right - 180, 570, active=active)
         return im
 
     def question(self, seg, show_answer=False, badge=None):
@@ -255,7 +262,7 @@ class Renderer:
             body = "\n".join(str(s) for s in (seg.get("steps") or [])) or str(seg.get("answer", ""))
             self.t.block(d, (80, 1385), ("Ans. " if self.en else "उत्तर : ") + body, 920, 390, start=56, min_size=32, bold=True, fill=GREEN)
         else:
-            self.t.draw(d, (w // 2, 1560), "Answer next  ▶" if self.en else "उत्तर पुढे  ▶", 54, True, self.primary, anchor="mm")
+            self.t.draw(d, (w // 2, 1560), "Answer next ..." if self.en else "उत्तर पुढे ...", 54, True, self.primary, anchor="mm")
         return im
 
     def thumbnail(self, thumb):

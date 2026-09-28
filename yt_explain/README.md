@@ -25,3 +25,15 @@ output folder, delete `video.mp4` and re-run — the recitation slides then play
 ## Data
 * `explain.db` – `units` keyed by `topic_key = "std|तचन विषय|घटक क्र."` with status/tries/youtube_url; `questions` = exercise Q of the chapter.
 * `data/topics.json` – the same list (book_id, chapter_no, pages, official_id, learning_outcome, is_poem, sources_dir).
+
+## Video design (research-based flow)
+`explain_script.json` = hook question → learning outcomes → sections (one idea per step, bullet revealed with the narration,
+daily-life example, worked example, common mistake) → retrieval check after every 2-3 sections → recap → homework/transfer → outro.
+6-9 min, standard Balbharati Marathi/Hindi. Config:
+* `"stickman": true` – animated stick-man teacher (wave / point / talk / think / cheer / sway) on the right of every slide (`stickman.py`); `false` = static slides.
+* `"make_short": true` – also renders `short.mp4` (1080×1920, ≤ 60 s: hook + key idea + answer) and uploads it as a YouTube Short; post the same file manually as an Instagram Reel.
+
+## GUI / EXE (Windows)
+* `START_GUI.bat` – window: इयत्ता → विषय → घटक, "YouTube upload" tick, ▶ → video (+Short) + optional upload.
+* `BUILD_EXE.bat` – builds `YTExplain.exe` with PyInstaller (run once on your PC). Keep the exe in this folder, next to
+  `config.json`, `explain.db`, `data\`, `sources\`; the sibling `..\yt_studio` engine folder must stay.

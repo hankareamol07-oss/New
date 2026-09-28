@@ -1,0 +1,53 @@
+{
+  "channel_name": "स्वाध्याय",
+  "channel_tagline": "रोज एक नवा विचार",
+  "out_dir": "output",
+  "ffmpeg": "C:/ffmpeg/bin/ffmpeg.exe",
+  "llm_order": [
+    "groq",
+    "gemini",
+    "nvidia"
+  ],
+  "gemini_api_key": "",
+  "nvidia_api_key": "",
+  "groq_api_key": "",
+  "tts_backend": "gemini",
+  "gemini_tts_voice": "Charon",
+  "voices": {
+    "mr": "mr-IN-ManoharNeural",
+    "hi": "hi-IN-MadhurNeural",
+    "en": "en-IN-PrabhatNeural"
+  },
+  "tts_rate": "-3%",
+  "trends": {
+    "per_query": 15,
+    "days": 30,
+    "refresh_hours": 24,
+    "use_api": true,
+    "queries": [
+      "मराठी motivation shorts",
+      "मराठी प्रेरणादायी विचार",
+      "marathi motivational status",
+      "मराठी सुविचार",
+      "marathi motivation video",
+      "marathi motivation reels"
+    ]
+  },
+  "themes": [],
+  "youtube": {
+    "enabled": true,
+    "client_secret": "client_secret.json",
+    "privacy": "public",
+    "schedule": {
+      "enabled": true,
+      "hour": 8,
+      "minute": 0,
+      "every_days": 1
+    }
+  },
+  "auto": {
+    "per_run": 1,
+    "max_retries": 2,
+    "pause_sec": 10
+  }
+}

@@ -3,7 +3,9 @@ import json
 import os
 import sys
 
-if getattr(sys, "frozen", False):
+if os.environ.get("YTSTUDIO_ROOT"):          # set by the yt_swadhyay / yt_explain / yt_motivation exes
+    ROOT = os.path.abspath(os.environ["YTSTUDIO_ROOT"])
+elif getattr(sys, "frozen", False):
     ROOT = os.path.dirname(os.path.abspath(sys.executable))
 else:
     ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

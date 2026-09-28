@@ -9,14 +9,15 @@ import sys
 import time
 import traceback
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+HERE = os.path.dirname(os.path.abspath(sys.executable if getattr(sys, "frozen", False) else __file__))
+os.environ.setdefault("YTSTUDIO_ROOT", os.path.join(os.path.dirname(HERE), "yt_studio"))
+sys.path.insert(0, os.path.dirname(HERE))
 from yt_common import State  # noqa: E402
 from ytstudio import config as ytconfig  # noqa: E402
 from ytstudio.pipeline import _slug  # noqa: E402
 
 import explain  # noqa: E402
 
-HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 def load_cfg():
@@ -27,6 +28,14 @@ def load_cfg():
         cfg[k] = v if os.path.isabs(v) else os.path.join(HERE, v)
     cfg.setdefault("stds", [1, 2, 3, 4, 5, 6, 7, 8])
     return cfg
+
+
+def run_unit(cfg, st, u, upload, log=print):
+    meta = json.loads(u.get("meta_json") or "{}")
+    src = os.path.join(HERE, meta.get("sources_dir", ""))
+    text = open(os.path.join(src, "01_textbook.txt"), encoding="utf-8").read() if os.path.isdir(src) else ""
+    out_dir = os.path.join(cfg["out_dir"], f"std{u['std']}_{_slug(meta.get('tachan_subject', u['subject']))}_{meta.get('tachan_seq', 0):02d}_{_slug(u['title'])}")
+    return explain.run(cfg, u, meta, text, st.questions_of(u["unit_id"]), out_dir, upload=upload, log=log)
 
 
 def main():
@@ -58,10 +67,7 @@ def main():
         meta = json.loads(u.get("meta_json") or "{}")
         print(f"=== {u['unit_id']}  std {u['std']} {u['subject']}  {u['title']}  {'(poem)' if meta.get('is_poem') else ''}")
         try:
-            src = os.path.join(HERE, meta.get("sources_dir", ""))
-            text = open(os.path.join(src, "01_textbook.txt"), encoding="utf-8").read() if os.path.isdir(src) else ""
-            out_dir = os.path.join(cfg["out_dir"], f"std{u['std']}_{_slug(meta.get('tachan_subject', u['subject']))}_{meta.get('tachan_seq', 0):02d}_{_slug(u['title'])}")
-            m = explain.run(cfg, u, meta, text, st.questions_of(u["unit_id"]), out_dir, upload=upload)
+            m = run_unit(cfg, st, u, upload)
             st.mark(u["unit_id"], "done", meta=m)
         except Exception as e:
             traceback.print_exc()
