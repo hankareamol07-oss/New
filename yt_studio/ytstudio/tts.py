@@ -28,19 +28,25 @@ def _edge(text, out, voice, rate):
 
 
 def _gemini(cfg, text, out):
-    body = {
-        "contents": [{"parts": [{"text": text}]}],
-        "generationConfig": {
-            "responseModalities": ["AUDIO"],
-            "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": cfg["gemini_tts_voice"]}}},
-        },
-    }
-    for key in llm._keys(cfg, "gemini"):
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_tts_model']}:generateContent?key={key}"
-        r = requests.post(url, json=body, timeout=300)
-        if r.status_code == 200 or not llm._quota(r.status_code):
+    """gemini_tts_voice may be one name or a list: first voice is used, later ones only if it fails."""
+    v = cfg["gemini_tts_voice"]
+    voices = v if isinstance(v, list) else [v]
+    for voice in voices:
+        body = {
+            "contents": [{"parts": [{"text": text}]}],
+            "generationConfig": {
+                "responseModalities": ["AUDIO"],
+                "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}},
+            },
+        }
+        for key in llm._keys(cfg, "gemini"):
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_tts_model']}:generateContent?key={key}"
+            r = requests.post(url, json=body, timeout=300)
+            if r.status_code == 200 or not llm._quota(r.status_code):
+                break
+            llm._rotate("gemini")
+        if r.status_code == 200:
             break
-        llm._rotate("gemini")
     r.raise_for_status()
     part = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]
     pcm = base64.b64decode(part["data"])

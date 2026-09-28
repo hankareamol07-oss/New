@@ -12,9 +12,9 @@
   "nvidia_api_key": "",
   "groq_api_key": "",
   "sarvam_api_key": "",
-  "tts_backend": "sarvam",
+  "tts_backend": "gemini",
   "sarvam": {"model": "bulbul:v3", "speaker": "shubh", "pace": 0.95},
-  "gemini_tts_voice": "Charon",
+  "gemini_tts_voice": ["Kore", "Leda", "Charon", "Aoede"],
   "voices": {
     "mr": "mr-IN-ManoharNeural",
     "hi": "hi-IN-MadhurNeural",
