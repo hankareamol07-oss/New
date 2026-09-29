@@ -30,10 +30,20 @@ def _edge(text, out, voice, rate):
     asyncio.run(run())
 
 
+_GEMINI_DAY_DEAD = set()   # keys whose free daily TTS quota is used up (no point retrying until tomorrow)
+
+
+class GeminiQuota(Exception):
+    pass
+
+
 def _gemini(cfg, text, out, log=print):
     """gemini_tts_voice may be one name or a list: first voice is used, later ones only if it fails."""
     v = cfg["gemini_tts_voice"]
     voices = v if isinstance(v, list) else [v]
+    live = [k for k in llm._keys(cfg, "gemini") if k not in _GEMINI_DAY_DEAD]
+    if not live:
+        raise GeminiQuota("gemini TTS daily quota used up for all keys - try again tomorrow")
     for voice in voices:
         body = {
             "contents": [{"parts": [{"text": text}]}],
@@ -43,13 +53,19 @@ def _gemini(cfg, text, out, log=print):
             },
         }
         for attempt in range(4):
-            for key in llm._keys(cfg, "gemini"):
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_tts_model']}:generateContent?key={key}"
-                r = requests.post(url, json=body, timeout=300)
+            for key in live:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_tts_model']}:generateContent"
+                r = requests.post(url, json=body, headers={"x-goog-api-key": key}, timeout=300)
                 if r.status_code == 200 or not llm._quota(r.status_code):
                     break
+                if "per_day" in r.text or "PerDay" in r.text:
+                    _GEMINI_DAY_DEAD.add(key)
+                    log(f"  [tts] gemini key ...{key[-4:]}: daily TTS quota used up")
                 llm._rotate("gemini")
-            if r.status_code != 429 or "per_day" in r.text or "PerDay" in r.text:
+            live = [k for k in live if k not in _GEMINI_DAY_DEAD]
+            if not live:
+                raise GeminiQuota("gemini TTS daily quota used up for all keys - try again tomorrow")
+            if r.status_code != 429:
                 break
             m = re.search(r'"retryDelay":\s*"(\d+)', r.text or "")
             wait = min(int(m.group(1)) + 2 if m else 20 * (attempt + 1), 90)
@@ -149,6 +165,8 @@ def prefetch(cfg, pairs, lang, log=print):
         return
     try:
         _prefetch_gemini(cfg, pairs, lang, log)
+    except GeminiQuota as e:
+        log(f"  [tts] {e}; using edge-tts for this video")
     except Exception as e:  # any split/ffmpeg problem: per-part speak() still works
         log(f"  [tts] gemini batch failed ({type(e).__name__}: {str(e)[:80]}); per-part fallback")
         log(traceback.format_exc())
@@ -210,6 +228,8 @@ def speak(cfg, text, out, lang, log=print):
         try:
             _gemini(cfg, text, out, log)
             return out
+        except GeminiQuota:
+            pass
         except (requests.RequestException, KeyError, subprocess.CalledProcessError) as e:
             log(f"  [tts] gemini failed ({str(e)[:80]}), falling back to edge-tts")
     voice = cfg["voices"].get(lang, cfg["voices"]["en"])
