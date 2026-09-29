@@ -1,11 +1,14 @@
-"""Cartoon teacher avatar for yt_explain (Pillow + ffmpeg, no GPU).
+"""Teacher avatar for yt_explain (Pillow + ffmpeg, no GPU).
 
 Replaces the stick-man when config has  "avatar": {"enabled": true, "gender": "female"|"male"}.
+Two styles: "pro" (default) = illustrated teacher sprite from assets/avatar/<gender>.png (+ .json face boxes made by
+avatar_make.py) with mouth/eyes/head animated on top; "cartoon" = the built-in hand-drawn figure (Teacher).
 The figure stands bottom-right of the slide; its mouth is lip-synced to the narration (loudness envelope
 read from the audio with ffmpeg), it blinks, nods and gestures according to the slide pose
 (wave / point / talk / think / cheer / sway).  Only the small avatar frames are rendered in Python; ffmpeg
 overlays them on the static slide, so a 30-slide video renders in ~1-2 minutes.
 """
+import json
 import math
 import os
 import struct
@@ -13,8 +16,11 @@ import subprocess
 
 from PIL import Image, ImageDraw
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+ASSETS = os.path.join(HERE, "assets", "avatar")
 FPS = 10
 HEIGHT = 380
+PRO_HEIGHT = 540
 MARGIN = (50, 90)
 POSES = ("wave", "point", "talk", "think", "cheer", "sway")
 
@@ -197,24 +203,117 @@ class Teacher:
         return im.resize((W // s, H // s), Image.LANCZOS)
 
 
+class Sprite:
+    """Illustrated teacher (png + json from avatar_make.py) animated in place: lip-sync mouth, blinks, head bob."""
+
+    def __init__(self, name, h=PRO_HEIGHT):
+        png = os.path.join(ASSETS, name + ".png")
+        meta = json.load(open(os.path.join(ASSETS, name + ".json")))
+        im = Image.open(png).convert("RGBA")
+        box = im.getbbox() or (0, 0) + im.size
+        im = im.crop(box)
+        self.k = h / im.height
+        body = im.resize((int(im.width * self.k), h), Image.LANCZOS)
+        pad = int(h * 0.05)                                   # room for the tilt so shoulders/hand are not cut
+        self.base = Image.new("RGBA", (body.width + 2 * pad, h), (0, 0, 0, 0))
+        self.base.alpha_composite(body, (pad, 0))
+        off = (box[0] - pad / self.k, box[1])
+        sc = lambda x, y: ((x - off[0]) * self.k, (y - off[1]) * self.k)
+        mx0, my0, mx1, my1 = meta["mouth"]
+        self.mouth = sc(mx0, my0) + sc(mx1, my1)
+        self.eyes = [sc(a, b) + sc(c, d) for a, b, c, d in meta["eyes"]]
+        self.skin = tuple(meta["skin"])
+        self.lip = tuple(meta["lip"])
+        self.dark = tuple(max(0, int(c * 0.35)) for c in self.lip)
+        self.h = h
+        self._faces = {}
+
+    def _face(self, mouth, blink, wide):
+        key = (mouth, blink, wide)
+        if key not in self._faces:
+            self._faces[key] = self._draw_face(mouth, blink, wide)
+        return self._faces[key]
+
+    def _draw_face(self, mouth, blink, wide):
+        im = self.base.copy()
+        d = ImageDraw.Draw(im)
+        x0, y0, x1, y1 = self.mouth
+        mw, mh = x1 - x0, y1 - y0
+        cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+        if mouth > 0.06:
+            pad = mw * 0.14
+            d.ellipse([x0 - pad, y0 - mh * 0.35, x1 + pad, y1 + mh * 0.45], fill=self.skin)   # hide painted lips
+            op = mh * 0.9 + mouth * mw * 0.42
+            w = mw / 2 * (1.0 - 0.18 * mouth) * wide
+            d.ellipse([cx - w, cy - op * 0.45, cx + w, cy + op * 0.55], fill=self.lip)
+            iw, ih = w * 0.86, op * 0.36
+            d.ellipse([cx - iw, cy - ih * 0.9, cx + iw, cy + ih * 1.3], fill=self.dark)
+            if mouth > 0.28:
+                d.rounded_rectangle([cx - iw * 0.8, cy - ih * 0.9, cx + iw * 0.8, cy - ih * 0.9 + op * 0.16],
+                                    radius=3, fill=(248, 246, 240))
+        if blink:
+            for ex0, ey0, ex1, ey1 in self.eyes:
+                ew, eh = ex1 - ex0, ey1 - ey0
+                d.ellipse([ex0 - ew * 0.15, ey0 - eh * 0.6, ex1 + ew * 0.15, ey1 + eh * 0.4], fill=self.skin)
+                d.arc([ex0 - ew * 0.1, ey0, ex1 + ew * 0.1, ey1 + eh * 0.9], 15, 165, fill=self.dark, width=max(2, int(eh * 0.25)))
+        return im
+
+    def frame(self, pose, phase, mouth=0.0, blink=False):
+        m = round(min(1.0, max(0.0, mouth)) * 6) / 6           # 7 mouth steps -> cached faces
+        wide = 1.0 if m < 0.5 else (0.9 if int(phase * 20) % 2 else 1.05)
+        im = self._face(m, blink, wide)
+        # head/body motion: nod while speaking, slow sway when idle, pose-specific lean
+        w = math.sin(phase * 2 * math.pi)
+        nod = self.h * 0.006 * math.sin(phase * 6 * math.pi) if m > 0.1 else self.h * 0.003 * w
+        tilt = {"point": -1.5, "think": 2.0, "cheer": 2.5 * w, "wave": -1.0 + 1.5 * w}.get(pose, 0.8 * w)
+        rot = im.rotate(tilt, resample=Image.BICUBIC, center=(im.width / 2, im.height), expand=False)
+        out = Image.new("RGBA", (im.width, im.height + int(self.h * 0.02)), (0, 0, 0, 0))
+        out.alpha_composite(rot, (0, int(self.h * 0.01 + nod)))
+        return out
+
+
+def _sprite_name(cfg):
+    av = cfg.get("avatar") or {}
+    name = av.get("name") or av.get("gender", "female")
+    if av.get("style", "pro") == "pro" and os.path.exists(os.path.join(ASSETS, name + ".json")):
+        return name
+    return None
+
+
+def figure_height(cfg):
+    return PRO_HEIGHT if _sprite_name(cfg) else HEIGHT
+
+
+_CACHE = {}
+
+
 def _teacher(cfg):
     av = cfg.get("avatar") or {}
+    name = _sprite_name(cfg)
+    if name:
+        if name not in _CACHE:
+            _CACHE[name] = Sprite(name)
+        return _CACHE[name]
     return Teacher(av.get("gender", "female"),
                    _hex(av.get("color") or cfg.get("brand_primary", "#1e3c78")),
                    _hex(av.get("accent") or cfg.get("brand_accent", "#ffa000")))
 
 
-def compose(cfg, slide, pose, phase, mouth=0.0, blink=False, height=HEIGHT):
+def compose(cfg, slide, pose, phase, mouth=0.0, blink=False, height=None):
     """Single composed RGB frame (used for previews/thumbnails)."""
     fig = _teacher(cfg).frame(pose, phase, mouth, blink)
     portrait = slide.height > slide.width
     if portrait:
-        fig = fig.resize((int(fig.width * 230 / fig.height), 230), Image.LANCZOS)
+        fig = fig.resize((int(fig.width * 300 / fig.height), 300), Image.LANCZOS)
     out = slide.convert("RGBA")
     x = out.width - fig.width - (30 if portrait else MARGIN[0])
-    y = out.height - fig.height - (100 if portrait else MARGIN[1])
+    y = out.height - fig.height - (100 if portrait else _bottom(cfg))
     out.alpha_composite(fig, (x, y))
     return out.convert("RGB")
+
+
+def _bottom(cfg):
+    return -14 if _sprite_name(cfg) else MARGIN[1]    # waist-up sprite sits on (slightly below) the frame edge
 
 
 def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
@@ -225,17 +324,17 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
     fdir = os.path.splitext(slide_png)[0] + "_av"
     os.makedirs(fdir, exist_ok=True)
     env = envelope(cfg, audio, secs)
-    fig_h = 230 if portrait else HEIGHT
+    fig_h = 300 if portrait else figure_height(cfg)
     for i, m in enumerate(env):
         phase = (i / FPS / 2.0) % 1.0
-        blink = (i % (FPS * 3)) == FPS * 2          # one blink every 3 s
+        blink = (i % (FPS * 3)) in (FPS * 2, FPS * 2 + 1) or (i % 71 == 40)    # blink every 3 s (+ an odd one)
         fig = teacher.frame(pose, phase, m, blink)
-        if fig.height != fig_h:
+        if abs(fig.height - fig_h) > fig_h * 0.05:
             fig = fig.resize((int(fig.width * fig_h / fig.height), fig_h), Image.LANCZOS)
         fig.save(os.path.join(fdir, f"{i:04d}.png"))
     w, h = size
     x = f"main_w-overlay_w-{30 if portrait else MARGIN[0]}"
-    y = f"main_h-overlay_h-{100 if portrait else MARGIN[1]}"
+    y = f"main_h-overlay_h-{100 if portrait else _bottom(cfg)}"
     subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error",
                     "-loop", "1", "-framerate", str(FPS), "-i", slide_png,
                     "-framerate", str(FPS), "-i", os.path.join(fdir, "%04d.png"),

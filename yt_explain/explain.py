@@ -176,7 +176,7 @@ def build_video(cfg, script, r, u, out_dir, log=print):
     en = lang == "en"
     av = bool((cfg.get("avatar") or {}).get("enabled"))
     sm = av or bool(cfg.get("stickman", True))
-    reserve = (avatar.HEIGHT if av else stickman.HEIGHT) + 60 if sm else 0   # keep the bullet card clear of the figure
+    reserve = (avatar.figure_height(cfg) if av else stickman.HEIGHT) + 60 if sm else 0   # keep the bullet card clear of the figure
     if av:
         cfg = dict(cfg, avatar=dict({"color": r.theme["primary"], "accent": r.theme["accent"]}, **cfg["avatar"]))
     prefetch(cfg, [(s, os.path.join(au, n + ".mp3")) for s, n in _narration_plan(script, out_dir) if s], lang, log)
