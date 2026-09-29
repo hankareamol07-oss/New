@@ -341,13 +341,15 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
     w, h = size
     x = f"main_w-overlay_w-{30 if portrait else MARGIN[0]}"
     y = f"main_h-overlay_h-{100 if portrait else _bottom(cfg)}"
+    # the frame sequence is looped and the clip cut at exactly `secs` (a frame-sequence input ends one
+    # frame early with shortest=1, and 0.1 s per slide adds up to seconds of drift over a video)
     subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error",
                     "-loop", "1", "-framerate", str(FPS), "-i", slide_png,
-                    "-framerate", str(FPS), "-i", os.path.join(fdir, "%04d.png"),
+                    "-stream_loop", "-1", "-framerate", str(FPS), "-i", os.path.join(fdir, "%04d.png"),
                     "-filter_complex",
                     f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[bg];"
-                    f"[bg][1:v]overlay={x}:{y}:shortest=1,format=yuv420p",
-                    "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
+                    f"[bg][1:v]overlay={x}:{y},format=yuv420p",
+                    "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
     for f in os.listdir(fdir):      # frames are only needed for the encode
         os.remove(os.path.join(fdir, f))
     os.rmdir(fdir)
@@ -367,6 +369,7 @@ def concat_clips(cfg, items, audio_out, video_out, size):
             if not os.path.exists(mp4):
                 clip(cfg, png, pose, secs, aud, mp4, size)
             fv.write(f"file '{os.path.abspath(mp4)}'\n")
+            secs = duration(cfg, mp4) or secs          # pad audio to the clip's real length so slides never drift
             if aud:
                 wav = os.path.splitext(aud)[0] + ".wav"
                 if not os.path.exists(wav):
