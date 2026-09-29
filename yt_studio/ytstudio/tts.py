@@ -354,8 +354,18 @@ def speak(cfg, text, out, lang, log=print):
 
 
 def duration(cfg, path):
+    """Seconds of audio. Uses ffprobe next to the configured ffmpeg; if it is missing, parses ffmpeg's own info."""
     d, base = os.path.split(cfg["ffmpeg"])
     ffprobe = os.path.join(d, base.replace("ffmpeg", "ffprobe"))
-    r = subprocess.run([ffprobe, "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path],
-                       capture_output=True, text=True, encoding="utf-8", errors="replace", check=True)
-    return float(r.stdout.strip())
+    try:
+        r = subprocess.run([ffprobe, "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path],
+                           capture_output=True, text=True, encoding="utf-8", errors="replace", check=True)
+        return float(r.stdout.strip())
+    except FileNotFoundError:
+        pass
+    r = subprocess.run([cfg["ffmpeg"], "-i", path, "-f", "null", "-"], capture_output=True, text=True, encoding="utf-8", errors="replace")
+    m = re.findall(r"time=(\d+):(\d+):([\d.]+)", r.stderr or "")
+    if not m:
+        raise RuntimeError("cannot read duration of " + os.path.basename(path))
+    h, mi, se = m[-1]
+    return int(h) * 3600 + int(mi) * 60 + float(se)
