@@ -30,6 +30,7 @@ from ytstudio.llm import chat_json
 from ytstudio.script import LANG_NAME, _fix_chapter_no
 from ytstudio.slides import Renderer
 from ytstudio.tts import duration, prefetch, speak
+from ytstudio import veo
 from ytstudio.video import _concat, _sec
 
 import stickman
@@ -250,7 +251,15 @@ def build_video(cfg, script, r, u, out_dir, log=print):
         stickman.concat_clips(cfg, items, os.path.join(out_dir, "narration.wav"), mp4, (1920, 1080))
     else:
         _concat(cfg, [(p, a, s) for p, a, s, _ in items], os.path.join(out_dir, "narration.wav"), mp4, (1920, 1080))
-    script["chapters_text"] = "\n".join(f"{_sec(s)} {title}" for s, title in chapters)
+    intro_hint = (script.get("intro") or {}).get("slide_title", "")
+    veo.write_prompt(out_dir, veo.intro_prompt(u["title"], u["subject"], u["std"], intro_hint))
+    clips = veo.find_clips(out_dir)
+    if not clips and cfg.get("veo", {}).get("enabled"):
+        gen = veo.generate(cfg, veo.intro_prompt(u["title"], u["subject"], u["std"], intro_hint), os.path.join(out_dir, "intro.mp4"), log)
+        clips = [gen] if gen else []
+    off = veo.prepend(cfg, clips, mp4, (1920, 1080), log) if clips else 0.0
+    t += off
+    script["chapters_text"] = "\n".join(f"{_sec(s + off)} {title}" for s, title in chapters)
     script["duration_sec"] = round(t, 1)
     return mp4
 

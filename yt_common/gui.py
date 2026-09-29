@@ -7,6 +7,7 @@ A project passes an `Adapter`:
   run(row, upload, log) -> meta dict with 'video' (+ 'youtube_url' / 'short_url')
   extras           optional [(label, key, default)] free inputs (e.g. how many Shorts)
 """
+import glob
 import os
 import queue
 import threading
@@ -74,6 +75,7 @@ class App(tk.Tk):
         self.btn = ttk.Button(b, text="▶ व्हिडिओ तयार करा", command=self._make)
         self.btn.pack(side="left")
         ttk.Button(b, text="Output फोल्डर", command=lambda: os.startfile(self.out_dir) if hasattr(os, "startfile") else None).pack(side="left", padx=8)
+        ttk.Button(b, text="Google Flow (animation clip)", command=self._flow).pack(side="left", padx=8)
         self.log = tk.Text(self, height=26, wrap="word")
         self.log.pack(fill="both", expand=True, padx=10, pady=10)
         self._cascade(0)
@@ -122,6 +124,15 @@ class App(tk.Tk):
             self.log.insert("end", self.q.get() + "\n")
             self.log.see("end")
         self.after(200, self._poll)
+
+    def _flow(self):
+        """Open Google Flow with this video's Veo prompt (flow_prompt.txt of the newest output folder) on the clipboard."""
+        from ytstudio import veo
+        prompts = sorted(glob.glob(os.path.join(self.out_dir, "*", "flow_prompt.txt")), key=os.path.getmtime)
+        text = open(prompts[-1], encoding="utf-8").read().split("\n\nSave the clip")[0] if prompts else ""
+        veo.open_flow(text)
+        self._log(f"[flow] prompt copied to clipboard{' from ' + os.path.basename(os.path.dirname(prompts[-1])) if prompts else ' (none yet - make a video first)'};"
+                  " paste it in Flow, download the clip as intro.mp4 (bg.mp4 for motivation) into that folder, delete video.mp4/short.mp4 and remake")
 
     def _make(self):
         row = self._selected() if self.ad.filters else {}

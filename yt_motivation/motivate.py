@@ -23,6 +23,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont, features
 from ytstudio.llm import chat_json
 from ytstudio.tts import duration, prefetch, speak
 from ytstudio.video import _concat
+from ytstudio import veo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONT_DIR = os.path.join(HERE, "assets", "fonts")
@@ -248,6 +249,13 @@ def build(cfg, script, out_dir, log=print):
     S.cover(script["title"]).save(os.path.join(out_dir, "cover.png"))
     mp4 = os.path.join(out_dir, "short.mp4")
     _concat(cfg, items, os.path.join(out_dir, "narration.wav"), mp4, (W, H))
+    veo.write_prompt(out_dir, veo.motivation_prompt(script.get("theme", "")))
+    bg = veo.find_clips(out_dir, names=("bg",))
+    if not bg and cfg.get("veo", {}).get("enabled"):
+        gen = veo.generate(cfg, veo.motivation_prompt(script.get("theme", "")), os.path.join(out_dir, "bg.mp4"), log, aspect="9:16")
+        bg = [gen] if gen else []
+    if bg:
+        veo.background(cfg, bg[0], mp4, (W, H), log)
     return mp4, total
 
 
