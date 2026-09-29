@@ -2,12 +2,14 @@
 several API keys rotated when one runs out of credits). Writes mp3/wav per segment."""
 import asyncio
 import base64
+import difflib
 import json
 import os
 import re
 import subprocess
 import time
 import traceback
+import unicodedata
 
 import requests
 
@@ -176,32 +178,23 @@ def prefetch(cfg, pairs, lang, log=print):
                 os.remove(p)
 
 
-ALIGN_MODEL = "gemini-2.5-flash"
-ALIGN_PROMPT = ("The attached audio is a reading of the numbered paragraphs below, in order. For every paragraph give the "
-                "timestamp at which its first word is spoken, as a string in the form MM:SS.s (minutes:seconds.tenths). "
-                'Reply with JSON only: {"starts": ["00:00.0", "00:12.4", ...]} with exactly one timestamp per paragraph.\n\n')
+ALIGN_MODEL = "gemini-3.5-transcribe"
 
 
-def _secs(x):
-    """'MM:SS.s' / 'H:MM:SS' / plain number -> seconds."""
-    parts = [float(p) for p in str(x).strip().split(":")]
-    s = 0.0
-    for p in parts:
-        s = s * 60 + p
-    return s
+def _norm(text):
+    """Letters, marks and digits only (no spaces/punctuation), lower-cased, so transcript and script compare
+    despite punctuation and word breaks."""
+    return "".join(c for c in text.lower() if unicodedata.category(c)[0] in "LMN")
 
 
-def _align_llm(cfg, full, texts, log):
-    """Ask a Gemini text model (separate, much larger free quota than TTS) to time-stamp where each paragraph
-    starts in the audio. Returns the n-1 boundary times or None."""
+def _transcribe_words(cfg, full, log):
+    """Gemini's transcription model returns every spoken word with start/end offsets (one request for up to 30 min
+    of audio). Returns [(word, start, end)] or None on HTTP failure."""
     with open(full, "rb") as f:
         audio = base64.b64encode(f.read()).decode()
-    numbered = "\n\n".join(f"{i + 1}. {t}" for i, t in enumerate(texts))
-    body = {
-        "contents": [{"role": "user", "parts": [{"text": ALIGN_PROMPT + numbered},
-                                                {"inlineData": {"mimeType": "audio/mp3", "data": audio}}]}],
-        "generationConfig": {"temperature": 0, "responseMimeType": "application/json"},
-    }
+    body = {"contents": [{"role": "user", "parts": [{"inlineData": {"mimeType": "audio/mp3", "data": audio}}]}],
+            "generationConfig": {"audioTranscriptionConfig": {"wordTimestamp": True}}}
+    r = None
     for attempt in range(4):
         for key in llm._keys(cfg, "gemini"):
             r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{ALIGN_MODEL}:generateContent",
@@ -209,32 +202,96 @@ def _align_llm(cfg, full, texts, log):
             if r.status_code == 200 or not llm._quota(r.status_code):
                 break
             llm._rotate("gemini")
-        if r.status_code in (429, 500, 503) and attempt < 3:  # busy / overloaded: wait and retry
-            log(f"  [tts] align model HTTP {r.status_code}, retrying in 20s")
+        if r.status_code in (429, 500, 503) and attempt < 3:
+            log(f"  [tts] transcribe model HTTP {r.status_code}, retrying in 20s")
             time.sleep(20)
             continue
         break
-    if r.status_code != 200:
-        log(f"  [tts] align model HTTP {r.status_code}; using pause heuristics")
+    if r is None or r.status_code != 200:
+        log(f"  [tts] transcribe model HTTP {r.status_code if r is not None else '?'}")
         return None
-    starts = llm._extract_json(r.json()["candidates"][0]["content"]["parts"][0]["text"])["starts"]
-    starts = [_secs(x) for x in starts]
-    if len(starts) != len(texts) or starts != sorted(starts):
-        log(f"  [tts] align model returned {len(starts)} times for {len(texts)} parts; using pause heuristics")
-        return None
-    return starts[1:]
+    words = []
+    for part in r.json()["candidates"][0]["content"]["parts"]:
+        for w in part.get("audioTranscription", {}).get("words", []):
+            words.append((w["word"], float(w["startOffset"].rstrip("s")), float(w["endOffset"].rstrip("s"))))
+    return words or None
 
 
-def _snap(cuts, inner, prev_gap=0.5):
-    """cuts = first-word times from the model (accurate to ~0.4 s). Cut just before the end of the pause that
-    precedes that word: the pause whose end is nearest to the estimate (within 0.8 s), else 0.3 s before it."""
-    out, prev = [], -1.0
-    for c in cuts:
-        cands = [(abs(b - c), max(a, b - 0.25)) for a, b in inner if a > prev + prev_gap and abs(b - c) <= 0.8]
-        cut = min(cands)[1] if cands else max(c - 0.3, prev + prev_gap)
-        out.append(cut)
-        prev = cut
+def _align_words(texts, words, log):
+    """Match the script to the timed transcript (character-level, so mis-heard words and different word breaks
+    still match around them) and return, per part boundary, (end of last word of part i, start of first word of
+    part i+1); None for a boundary that could not be anchored within its last/first ~25 characters."""
+    exp, starts, pos = "", [], 0
+    for t in texts:
+        starts.append(pos)
+        n = _norm(t)
+        exp += n
+        pos += len(n)
+    tr, owner = "", []
+    for i, (w, _, _) in enumerate(words):
+        n = _norm(w)
+        tr += n
+        owner += [i] * len(n)
+    sm = difflib.SequenceMatcher(None, exp, tr, autojunk=False)
+    blocks = [m for m in sm.get_matching_blocks() if m.size >= 3]
+    matched = sum(m.size for m in blocks)
+    log(f"  [tts] transcript matches {100 * matched // max(1, len(exp))}% of the script")
+    if matched < 0.5 * len(exp):
+        return None
+    out = []
+    for p in starts[1:]:
+        before = [m for m in blocks if m.a < p]
+        after = [m for m in blocks if m.a + m.size > p]
+        if not before or not after:
+            out.append(None)
+            continue
+        mb, ma = before[-1], after[0]
+        end_a = min(p, mb.a + mb.size) - 1            # last script char of part i that is matched
+        start_a = max(p, ma.a)                          # first script char of part i+1 that is matched
+        if p - end_a > 25 or start_a - p > 25:
+            out.append(None)
+            continue
+        wi_end = owner[mb.b + (end_a - mb.a)]
+        wi_start = owner[ma.b + (start_a - ma.a)]
+        if wi_start <= wi_end:                          # boundary falls inside one transcribed word: split it
+            t = words[wi_end][1] + (words[wi_end][2] - words[wi_end][1]) * 0.5
+            out.append((t, t))
+        else:
+            out.append((words[wi_end][2], words[wi_start][1]))
     return out
+
+
+def _cuts_from_words(bounds, inner, lead, tail, weights):
+    """bounds = [(end_prev, start_next) | None] per boundary. Cut in the pause between the two words (snapped to a
+    detected silence inside it), None entries interpolated from text length between the neighbouring anchors."""
+    n = len(bounds)
+    anchors = [lead] + [None] * n + [tail]
+    for i, b in enumerate(bounds):
+        if b:
+            e, s = b
+            gap = [(x, y) for x, y in inner if x >= e - 0.15 and y <= s + 0.15]
+            if gap:
+                x, y = max(gap, key=lambda g: g[1] - g[0])
+                anchors[i + 1] = max(x, y - 0.25) if y - x > 0.5 else (x + y) / 2
+            else:
+                anchors[i + 1] = e + (s - e) * 0.6
+    i = 0
+    while i < len(anchors):
+        if anchors[i] is None:
+            j = i
+            while anchors[j] is None:
+                j += 1
+            k = i - 1
+            span = anchors[j] - anchors[k]
+            w = weights[k:j]
+            acc = 0
+            for m in range(i, j):
+                acc += w[m - k - 1]
+                anchors[m] = anchors[k] + span * acc / sum(w)
+            i = j
+        i += 1
+    cuts = anchors[1:-1]
+    return cuts if cuts == sorted(cuts) else None
 
 
 def _cut_in(a, b):
@@ -288,17 +345,21 @@ def _prefetch_gemini(cfg, pairs, lang, log):
     tail = sil[-1][0] if sil and abs(sil[-1][1] - total) < 0.05 else total
     inner = [(a, b) for a, b in sil if a > lead + 0.3 and b < tail - 0.3]
     weights = [len(t) for t in texts]
+    cuts, how = None, "word timestamps"
     try:
-        cuts = _align_llm(cfg, full, texts, log)
+        words = _transcribe_words(cfg, full, log)
+        bounds = _align_words(texts, words, log) if words else None
+        if bounds:
+            missing = sum(1 for b in bounds if b is None)
+            if missing:
+                log(f"  [tts] {missing}/{len(bounds)} boundaries not heard clearly; estimated from text length")
+            cuts = _cuts_from_words(bounds, inner, lead, tail, weights)
     except (requests.RequestException, llm.LLMError, KeyError, ValueError, json.JSONDecodeError) as e:
-        log(f"  [tts] align model failed ({str(e)[:80]}); using pause heuristics")
+        log(f"  [tts] transcribe failed ({str(e)[:80]}); using pause heuristics")
         cuts = None
-    how = "model timestamps"
-    if cuts:
-        cuts = _snap(cuts, inner)
-        if not _plausible(cuts, lead, tail, weights):
-            log("  [tts] model timestamps implausible; using pause heuristics")
-            cuts = None
+    if cuts and not _plausible(cuts, lead, tail, weights):
+        log("  [tts] word timestamps implausible; using pause heuristics")
+        cuts = None
     if not cuts:
         cuts, how = _cuts_longest(inner, len(pairs), lead, tail, weights), "longest pauses"
     if not cuts:
