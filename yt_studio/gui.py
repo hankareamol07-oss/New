@@ -92,7 +92,8 @@ class App(tk.Tk):
                 meta = fn()
                 self._log(f"\n✔ {meta['video']}\n{meta.get('youtube_url', '')}")
             except Exception as e:
-                self._log(f"\n✖ {e}")
+                import traceback
+                self._log("\n✖ " + traceback.format_exc())
             finally:
                 self.q.put("")
                 self.after(0, lambda: self.btn.config(state="normal"))

@@ -6,6 +6,7 @@ import os
 import re
 import subprocess
 import time
+import traceback
 
 import requests
 
@@ -13,6 +14,7 @@ from . import llm
 
 
 def clean(text):
+    text = "" if text is None else str(text)
     text = re.sub(r"_{2,}", " रिकामी जागा " if re.search(r"[\u0900-\u097F]", text) else " blank ", text)
     text = re.sub(r"[*#`>]+", "", text)
     return re.sub(r"\s+", " ", text).strip()
@@ -49,7 +51,7 @@ def _gemini(cfg, text, out, log=print):
                 llm._rotate("gemini")
             if r.status_code != 429 or "per_day" in r.text or "PerDay" in r.text:
                 break
-            m = re.search(r'"retryDelay":\s*"(\d+)', r.text)
+            m = re.search(r'"retryDelay":\s*"(\d+)', r.text or "")
             wait = min(int(m.group(1)) + 2 if m else 20 * (attempt + 1), 90)
             log(f"  [tts] gemini rate limit, waiting {wait}s")
             time.sleep(wait)
@@ -131,9 +133,10 @@ def _elevenlabs(cfg, text, out, log):
 
 def _silences(cfg, path):
     r = subprocess.run([cfg["ffmpeg"], "-i", path, "-af", "silencedetect=noise=-38dB:d=0.3", "-f", "null", "-"],
-                       capture_output=True, text=True)
-    starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", r.stderr)]
-    ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", r.stderr)]
+                       capture_output=True, text=True, encoding="utf-8", errors="replace")
+    err = r.stderr or ""
+    starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", err)]
+    ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", err)]
     return list(zip(starts, ends))
 
 
@@ -141,18 +144,25 @@ def prefetch(cfg, pairs, lang, log=print):
     """Gemini free tier allows ~10 TTS requests/day, so a whole video's narration is synthesised in ONE request
     and cut into per-slide files at the pauses between parts. pairs = [(text, out_path)]; later speak() calls
     find the files ready. Any other backend: no-op (speak() handles each segment)."""
-    pairs = [(clean(t), o) for t, o in pairs if t and clean(t) and not (os.path.exists(o) and os.path.getsize(o) > 0)]
+    pairs = [(clean(t), o) for t, o in pairs if isinstance(t, str) and clean(t) and not (os.path.exists(o) and os.path.getsize(o) > 0)]
     if cfg["tts_backend"] != "gemini" or not cfg["keys"].get("gemini") or len(pairs) < 2:
         return
+    try:
+        _prefetch_gemini(cfg, pairs, lang, log)
+    except Exception as e:  # any split/ffmpeg problem: per-part speak() still works
+        log(f"  [tts] gemini batch failed ({type(e).__name__}: {str(e)[:80]}); per-part fallback")
+        log(traceback.format_exc())
+        for _, o in pairs:
+            if os.path.exists(o):
+                os.remove(o)
+
+
+def _prefetch_gemini(cfg, pairs, lang, log):
     texts = [t if re.search(r"[।.!?]$", t) else t + ("।" if lang != "en" else ".") for t, _ in pairs]
     whole = "\n\n".join(texts)
     full = pairs[0][1] + ".full.mp3"
-    try:
-        log(f"  [tts] gemini: one request for {len(pairs)} parts ({len(whole)} chars)")
-        _gemini(cfg, whole, full, log)
-    except (requests.RequestException, KeyError, subprocess.CalledProcessError) as e:
-        log(f"  [tts] gemini batch failed ({str(e)[:80]}); per-part fallback")
-        return
+    log(f"  [tts] gemini: one request for {len(pairs)} parts ({len(whole)} chars)")
+    _gemini(cfg, whole, full, log)
     total = duration(cfg, full)
     sil = _silences(cfg, full)
     lead = sil[0][1] if sil and sil[0][0] < 0.05 else 0.0
@@ -172,6 +182,9 @@ def prefetch(cfg, pairs, lang, log=print):
     for (t, o), a, b in zip(pairs, bounds, bounds[1:]):
         subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", full, "-c:a", "libmp3lame", "-q:a", "3", o], check=True)
     os.remove(full)
+    for _, o in pairs:
+        if not (os.path.exists(o) and os.path.getsize(o) > 0):
+            raise RuntimeError("split produced empty part " + os.path.basename(o))
 
 
 def speak(cfg, text, out, lang, log=print):
@@ -214,5 +227,5 @@ def duration(cfg, path):
     d, base = os.path.split(cfg["ffmpeg"])
     ffprobe = os.path.join(d, base.replace("ffmpeg", "ffprobe"))
     r = subprocess.run([ffprobe, "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path],
-                       capture_output=True, text=True, check=True)
+                       capture_output=True, text=True, encoding="utf-8", errors="replace", check=True)
     return float(r.stdout.strip())

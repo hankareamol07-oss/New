@@ -139,7 +139,7 @@ class App(tk.Tk):
                 self._log(f"\n✔ {meta.get('video') or meta.get('short') or 'done'}\n{meta.get('youtube_url') or ''} {meta.get('short_url') or ''}")
             except Exception as e:
                 import traceback
-                self._log("\n✖ " + "".join(traceback.format_exception_only(type(e), e)))
+                self._log("\n✖ " + traceback.format_exc())
             finally:
                 self.after(0, lambda: self.btn.config(state="normal"))
 
