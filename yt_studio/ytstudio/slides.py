@@ -6,6 +6,7 @@ import re
 from PIL import Image, ImageDraw, ImageFont, features
 
 from .config import ROOT
+from . import themes
 
 FONT_DIR = os.path.join(ROOT, "assets", "fonts")
 W, H = 1920, 1080
@@ -106,8 +107,10 @@ class Renderer:
         self.book, self.chapter = book, chapter
         self.en = book["lang"] == "en"
         self.t = Text(book["lang"])
-        self.primary = _hex(cfg["brand_primary"])
-        self.accent = _hex(cfg["brand_accent"])
+        self.theme = themes.pick(cfg, book.get("subject"))
+        self.primary = _hex(self.theme["primary"])
+        self.accent = _hex(self.theme["accent"])
+        self.bg = _hex(self.theme.get("bg", "#f4f7ff"))
         self.logo = None
         if cfg.get("logo") and os.path.exists(cfg["logo"]):
             self.logo = Image.open(cfg["logo"]).convert("RGBA")
@@ -118,9 +121,13 @@ class Renderer:
 
     # ---- chrome -------------------------------------------------------------------------------
     def _base(self, w=W, h=H, badge=None):
-        im = Image.new("RGB", (w, h), (244, 247, 255))
-        d = ImageDraw.Draw(im)
+        im = Image.new("RGB", (w, h), self.bg)
         hh = 110 if w > h else 150
+        themes.draw_pattern(im, self.theme, self.primary, self.accent, self.bg, hh + 8, h - 70)
+        d = ImageDraw.Draw(im)
+        if self.theme.get("icon"):
+            self.t.draw(d, (w - 60, hh + 40), self.theme["icon"], 150 if w > h else 110, True,
+                        tuple(int(self.bg[i] * 0.86 + self.primary[i] * 0.14) for i in range(3)), anchor="ra")
         d.rectangle([0, 0, w, hh], fill=self.primary)
         d.rectangle([0, hh, w, hh + 8], fill=self.accent)
         d.rectangle([0, h - 70, w, h], fill=self.accent)

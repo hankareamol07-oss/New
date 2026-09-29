@@ -34,6 +34,7 @@ from ytstudio import veo
 from ytstudio.video import _concat, _sec
 
 import stickman
+import avatar
 
 SYSTEM = """You are an expert Maharashtra State Board teacher and instructional designer making the BEST possible explanation
 video of ONE topic for std 1-8 students watching alone on YouTube. Output STRICT JSON only.
@@ -173,8 +174,11 @@ def build_video(cfg, script, r, u, out_dir, log=print):
     os.makedirs(au, exist_ok=True)
     items, chapters, t = [], [], 0.0
     en = lang == "en"
-    sm = bool(cfg.get("stickman", True))
-    reserve = stickman.HEIGHT + 60 if sm else 0   # keep the bullet card clear of the figure
+    av = bool((cfg.get("avatar") or {}).get("enabled"))
+    sm = av or bool(cfg.get("stickman", True))
+    reserve = (avatar.HEIGHT if av else stickman.HEIGHT) + 60 if sm else 0   # keep the bullet card clear of the figure
+    if av:
+        cfg = dict(cfg, avatar=dict({"color": r.theme["primary"], "accent": r.theme["accent"]}, **cfg["avatar"]))
     prefetch(cfg, [(s, os.path.join(au, n + ".mp3")) for s, n in _narration_plan(script, out_dir) if s], lang, log)
 
     def add(img, name, say=None, extra=0.0, audio_file=None, pose="talk"):
@@ -247,7 +251,9 @@ def build_video(cfg, script, r, u, out_dir, log=print):
     add(r.title(script), "99_outro", script.get("outro", {}).get("say"), 1.0, pose="wave")
     mp4 = os.path.join(out_dir, "video.mp4")
     log("[video] encoding ...")
-    if sm:
+    if av:
+        avatar.concat_clips(cfg, items, os.path.join(out_dir, "narration.wav"), mp4, (1920, 1080))
+    elif sm:
         stickman.concat_clips(cfg, items, os.path.join(out_dir, "narration.wav"), mp4, (1920, 1080))
     else:
         _concat(cfg, [(p, a, s) for p, a, s, _ in items], os.path.join(out_dir, "narration.wav"), mp4, (1920, 1080))
@@ -297,7 +303,10 @@ def build_short(cfg, script, r, u, out_dir, log=print):
         add(r.short(c, sh.get("hook", ""), True), "s2_a", c.get("say_a"), 1.0, "cheer")
     out = os.path.join(out_dir, "short.mp4")
     log("[video] Short / Reel")
-    if cfg.get("stickman", True):
+    if (cfg.get("avatar") or {}).get("enabled"):
+        cfg = dict(cfg, avatar=dict({"color": r.theme["primary"], "accent": r.theme["accent"]}, **cfg["avatar"]))
+        avatar.concat_clips(cfg, items, os.path.join(out_dir, "short_narration.wav"), out, (1080, 1920))
+    elif cfg.get("stickman", True):
         stickman.concat_clips(cfg, items, os.path.join(out_dir, "short_narration.wav"), out, (1080, 1920))
     else:
         _concat(cfg, [(p, a, s) for p, a, s, _ in items], os.path.join(out_dir, "short_narration.wav"), out, (1080, 1920))
