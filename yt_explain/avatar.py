@@ -206,10 +206,16 @@ class Teacher:
 class Sprite:
     """Illustrated teacher (png + json from avatar_make.py) animated in place: lip-sync mouth, blinks, head bob."""
 
-    def __init__(self, name, h=PRO_HEIGHT):
+    def __init__(self, name, h=PRO_HEIGHT, flip=None):
         png = os.path.join(ASSETS, name + ".png")
         meta = json.load(open(os.path.join(ASSETS, name + ".json")))
         im = Image.open(png).convert("RGBA")
+        if meta.get("flip", False) if flip is None else flip:      # mirror so the teacher faces the slide content
+            im = im.transpose(Image.FLIP_LEFT_RIGHT)
+            fx = lambda x: im.width - x
+            mx0, _, mx1, _ = meta["mouth"]
+            meta["mouth"] = [fx(mx1), meta["mouth"][1], fx(mx0), meta["mouth"][3]]
+            meta["eyes"] = [[fx(c), b, fx(a), d] for a, b, c, d in meta["eyes"]]
         box = im.getbbox() or (0, 0) + im.size
         im = im.crop(box)
         self.k = h / im.height
@@ -292,7 +298,7 @@ def _teacher(cfg):
     name = _sprite_name(cfg)
     if name:
         if name not in _CACHE:
-            _CACHE[name] = Sprite(name)
+            _CACHE[name] = Sprite(name, flip=av.get("flip"))
         return _CACHE[name]
     return Teacher(av.get("gender", "female"),
                    _hex(av.get("color") or cfg.get("brand_primary", "#1e3c78")),
