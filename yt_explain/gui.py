@@ -4,11 +4,10 @@ import json
 import os
 
 import auto
-from yt_common import State
 from yt_common.gui import Adapter, main
 
 cfg = auto.load_cfg()
-st = State(os.path.join(auto.HERE, "explain.db"))
+st = auto.open_state(cfg)
 
 
 def rows():

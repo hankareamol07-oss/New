@@ -30,6 +30,18 @@ def load_cfg():
     return cfg
 
 
+def open_state(cfg=None):
+    """explain.db; when empty (fresh install) it is seeded from data/topics.json shipped with the project."""
+    st = State(os.path.join(HERE, "explain.db"))
+    if st.db.execute("SELECT COUNT(*) FROM units").fetchone()[0] == 0:
+        p = os.path.join((cfg or load_cfg())["data_dir"], "topics.json")
+        if os.path.exists(p):
+            for u in json.load(open(p, encoding="utf-8")).get("units", []):
+                st.upsert_unit(u, [])
+            st.commit()
+    return st
+
+
 def run_unit(cfg, st, u, upload, log=print):
     meta = json.loads(u.get("meta_json") or "{}")
     src = os.path.join(HERE, meta.get("sources_dir", ""))
@@ -47,7 +59,7 @@ def main():
     ap.add_argument("--poems", action="store_true", help="only poem topics")
     a = ap.parse_args()
     cfg = load_cfg()
-    st = State(os.path.join(HERE, "explain.db"))
+    st = open_state(cfg)
     if a.list:
         for u in st.pending(2000, cfg["stds"], 99):
             print(u["unit_id"], u["std"], u["subject"], u["block"], u["title"], u["status"])
