@@ -96,13 +96,14 @@ def generate(cfg, u, meta, text, questions, log=print):
     style = open(os.path.join(ROOT, "style", "reference_style.md"), encoding="utf-8").read()
     is_poem = bool(meta.get("is_poem"))
     qtxt = "\n".join(json.dumps({"q": q["text"], "type": q.get("qtype"), "answer": q.get("answer", "")}, ensure_ascii=False) for q in questions[:25]) or "(none)"
-    user = PROMPT.format(style=style, std=u["std"], subject=u["subject"], subject_mr=SUBJECT_MR.get(u["subject"], meta.get("tachan_subject", u["subject"])),
-                         seq=meta.get("tachan_seq"), topic=u["title"], lang_name=LANG_NAME.get(u["lang"], u["lang"]),
-                         channel=cfg["channel_name"], tagline=cfg["channel_tagline"], lo=meta.get("learning_outcome", ""), act=meta.get("activity", ""),
-                         poem_note=POEM_NOTE if is_poem else "", text=(text or "(no textbook text - explain the learning outcome with activities)")[:22000],
-                         questions=qtxt, poem_json=POEM_JSON if is_poem else "null")
+    def prompt(n):
+        return PROMPT.format(style=style, std=u["std"], subject=u["subject"], subject_mr=SUBJECT_MR.get(u["subject"], meta.get("tachan_subject", u["subject"])),
+                             seq=meta.get("tachan_seq"), topic=u["title"], lang_name=LANG_NAME.get(u["lang"], u["lang"]),
+                             channel=cfg["channel_name"], tagline=cfg["channel_tagline"], lo=meta.get("learning_outcome", ""), act=meta.get("activity", ""),
+                             poem_note=POEM_NOTE if is_poem else "", text=(text or "(no textbook text - explain the learning outcome with activities)")[:n],
+                             questions=qtxt, poem_json=POEM_JSON if is_poem else "null")
     log(f"[explain] asking LLM ({'poem' if is_poem else 'topic'}) ...")
-    script, model = chat_json(cfg, SYSTEM, user, max_tokens=14000, log=log)
+    script, model = chat_json(cfg, SYSTEM, prompt(22000), max_tokens=14000, log=log, shrink=prompt)
     script["model"] = model
     _fix_chapter_no(script, {"no": meta.get("tachan_seq")}, log)
     script["sections"] = [s for s in script.get("sections") or [] if isinstance(s, dict)]

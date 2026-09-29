@@ -83,18 +83,30 @@ def _gemini(cfg, system, user, max_tokens):
     raise LLMError(f"gemini HTTP {r.status_code}: {r.text[:200]}")
 
 
-def chat_json(cfg, system, user, max_tokens=8192, log=print):
+def chat_json(cfg, system, user, max_tokens=8192, log=print, shrink=None):
+    """shrink(n) -> the same prompt with its source text cut to n chars; used when a provider says the request is too large."""
     errors = []
     for provider in cfg["llm_order"]:
-        for attempt in range(2):
+        text, limit = user, len(user)
+        for attempt in range(3):
             try:
                 if provider == "gemini":
-                    out = _gemini(cfg, system, user, max_tokens)
+                    out = _gemini(cfg, system, text, max_tokens)
                 else:
-                    out = _openai(provider, cfg, system, user, max_tokens)
+                    out = _openai(provider, cfg, system, text, max_tokens)
                 return _extract_json(out), f"{provider}/{cfg.get(provider + '_model')}"
             except (LLMError, requests.RequestException, json.JSONDecodeError, KeyError) as e:
                 errors.append(f"{provider}: {e}")
                 log(f"  [llm] {provider} attempt {attempt + 1} failed: {str(e)[:120]}")
-                time.sleep(2)
+                msg = str(e)
+                if "HTTP 413" in msg or "too large" in msg.lower():   # free-tier request size: send half the source text
+                    if not shrink:
+                        break
+                    limit //= 2
+                    text = shrink(limit)
+                    log(f"  [llm] {provider}: prompt too large, retrying with source text cut to {limit} chars")
+                elif "HTTP 503" in msg or "HTTP 429" in msg or "HTTP 500" in msg:   # overloaded: wait
+                    time.sleep(15 * (attempt + 1))
+                else:
+                    time.sleep(2)
     raise LLMError("all providers failed:\n" + "\n".join(errors))

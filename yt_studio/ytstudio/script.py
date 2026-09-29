@@ -126,14 +126,15 @@ def _fix_chapter_no(script, chapter, log):
 def generate(cfg, book, chapter, questions, text="", kind="स्वाध्याय (textbook exercise) solutions", log=print):
     with open(os.path.join(ROOT, "style", "reference_style.md"), encoding="utf-8") as f:
         style = f.read()
-    user = PROMPT.format(
-        style=style, std=book["std"], subject=book["subject"], subject_mr=SUBJECT_MR.get(book["subject"], book["subject"]),
-        lang=book["lang"], lang_name=LANG_NAME.get(book["lang"], book["lang"]), chapter=(f"{chapter['no']}. " if chapter.get("no") else "") + chapter["title"],
-        channel=cfg["channel_name"], tagline=cfg["channel_tagline"], kind=kind,
-        text=text[:18000] if text else "(not available)", questions=_fmt_questions(questions),
-    )
+    def prompt(n):
+        return PROMPT.format(
+            style=style, std=book["std"], subject=book["subject"], subject_mr=SUBJECT_MR.get(book["subject"], book["subject"]),
+            lang=book["lang"], lang_name=LANG_NAME.get(book["lang"], book["lang"]), chapter=(f"{chapter['no']}. " if chapter.get("no") else "") + chapter["title"],
+            channel=cfg["channel_name"], tagline=cfg["channel_tagline"], kind=kind,
+            text=text[:n] if text else "(not available)", questions=_fmt_questions(questions),
+        )
     log(f"[script] asking LLM for {len(questions)} questions ...")
-    script, model = chat_json(cfg, SYSTEM, user, max_tokens=12000, log=log)
+    script, model = chat_json(cfg, SYSTEM, prompt(18000), max_tokens=12000, log=log, shrink=prompt)
     script["model"] = model
     _fix_chapter_no(script, chapter, log)
     script.setdefault("segments", [])

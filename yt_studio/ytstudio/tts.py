@@ -2,6 +2,7 @@
 several API keys rotated when one runs out of credits). Writes mp3/wav per segment."""
 import asyncio
 import base64
+import json
 import os
 import re
 import subprocess
@@ -170,9 +171,107 @@ def prefetch(cfg, pairs, lang, log=print):
     except Exception as e:  # any split/ffmpeg problem: per-part speak() still works
         log(f"  [tts] gemini batch failed ({type(e).__name__}: {str(e)[:80]}); per-part fallback")
         log(traceback.format_exc())
-        for _, o in pairs:
-            if os.path.exists(o):
-                os.remove(o)
+        for p in [o for _, o in pairs] + [pairs[0][1] + ".full.mp3"]:
+            if os.path.exists(p):
+                os.remove(p)
+
+
+ALIGN_MODEL = "gemini-2.5-flash"
+ALIGN_PROMPT = ("The attached audio is a reading of the numbered paragraphs below, in order. For every paragraph give the "
+                "timestamp at which its first word is spoken, as a string in the form MM:SS.s (minutes:seconds.tenths). "
+                'Reply with JSON only: {"starts": ["00:00.0", "00:12.4", ...]} with exactly one timestamp per paragraph.\n\n')
+
+
+def _secs(x):
+    """'MM:SS.s' / 'H:MM:SS' / plain number -> seconds."""
+    parts = [float(p) for p in str(x).strip().split(":")]
+    s = 0.0
+    for p in parts:
+        s = s * 60 + p
+    return s
+
+
+def _align_llm(cfg, full, texts, log):
+    """Ask a Gemini text model (separate, much larger free quota than TTS) to time-stamp where each paragraph
+    starts in the audio. Returns the n-1 boundary times or None."""
+    with open(full, "rb") as f:
+        audio = base64.b64encode(f.read()).decode()
+    numbered = "\n\n".join(f"{i + 1}. {t}" for i, t in enumerate(texts))
+    body = {
+        "contents": [{"role": "user", "parts": [{"text": ALIGN_PROMPT + numbered},
+                                                {"inlineData": {"mimeType": "audio/mp3", "data": audio}}]}],
+        "generationConfig": {"temperature": 0, "responseMimeType": "application/json"},
+    }
+    for attempt in range(4):
+        for key in llm._keys(cfg, "gemini"):
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{ALIGN_MODEL}:generateContent",
+                              json=body, headers={"x-goog-api-key": key}, timeout=300)
+            if r.status_code == 200 or not llm._quota(r.status_code):
+                break
+            llm._rotate("gemini")
+        if r.status_code in (429, 500, 503) and attempt < 3:  # busy / overloaded: wait and retry
+            log(f"  [tts] align model HTTP {r.status_code}, retrying in 20s")
+            time.sleep(20)
+            continue
+        break
+    if r.status_code != 200:
+        log(f"  [tts] align model HTTP {r.status_code}; using pause heuristics")
+        return None
+    starts = llm._extract_json(r.json()["candidates"][0]["content"]["parts"][0]["text"])["starts"]
+    starts = [_secs(x) for x in starts]
+    if len(starts) != len(texts) or starts != sorted(starts):
+        log(f"  [tts] align model returned {len(starts)} times for {len(texts)} parts; using pause heuristics")
+        return None
+    return starts[1:]
+
+
+def _snap(cuts, inner, prev_gap=0.5):
+    """cuts = first-word times from the model (accurate to ~0.4 s). Cut just before the end of the pause that
+    precedes that word: the pause whose end is nearest to the estimate (within 0.8 s), else 0.3 s before it."""
+    out, prev = [], -1.0
+    for c in cuts:
+        cands = [(abs(b - c), max(a, b - 0.25)) for a, b in inner if a > prev + prev_gap and abs(b - c) <= 0.8]
+        cut = min(cands)[1] if cands else max(c - 0.3, prev + prev_gap)
+        out.append(cut)
+        prev = cut
+    return out
+
+
+def _cut_in(a, b):
+    return a + min(0.45, (b - a) / 2)
+
+
+def _plausible(cuts, lead, tail, weights):
+    """Every part's speech time per character must be within a sane band of the median - catches wrong cuts."""
+    bounds = [lead] + cuts + [tail]
+    rates = [(b - a) / max(w, 1) for a, b, w in zip(bounds, bounds[1:], weights)]
+    med = sorted(rates)[len(rates) // 2]
+    return all(0.45 * med <= r <= 2.2 * med for r in rates)
+
+
+def _cuts_longest(inner, n, lead, tail, weights):
+    """The n-1 longest pauses are the paragraph breaks (in-sentence pauses are usually shorter)."""
+    longest = sorted(inner, key=lambda s: s[1] - s[0], reverse=True)[: n - 1]
+    if len(longest) < n - 1 or (longest[-1][1] - longest[-1][0]) < 0.7:
+        return None
+    cuts = sorted(_cut_in(a, b) for a, b in longest)
+    return cuts if _plausible(cuts, lead, tail, weights) else None
+
+
+def _cuts_weighted(inner, lead, tail, weights):
+    """Fallback: expected position from text length, snapped to the nearest pause (>= 0.6 s) inside a window."""
+    speech = tail - lead
+    long = [(a, b) for a, b in inner if b - a >= 0.6] or inner
+    cuts, acc, prev = [], 0, lead
+    for w in weights[:-1]:
+        acc += w
+        target = lead + speech * acc / sum(weights)
+        window = 0.35 * speech * w / sum(weights) + 0.4
+        cands = [(abs(_cut_in(a, b) - target), _cut_in(a, b)) for a, b in long if a > prev + 0.5 and abs(_cut_in(a, b) - target) <= window]
+        cut = min(cands)[1] if cands else target
+        cuts.append(cut)
+        prev = cut
+    return cuts if _plausible(cuts, lead, tail, weights) else None
 
 
 def _prefetch_gemini(cfg, pairs, lang, log):
@@ -182,20 +281,31 @@ def _prefetch_gemini(cfg, pairs, lang, log):
     log(f"  [tts] gemini: one request for {len(pairs)} parts ({len(whole)} chars)")
     _gemini(cfg, whole, full, log)
     total = duration(cfg, full)
+    if total < 0.04 * len(whole):  # Marathi/English speech is ~0.08 s per character; far less = Gemini read only part of the text
+        raise RuntimeError(f"gemini read only part of the text ({total:.0f}s for {len(whole)} chars)")
     sil = _silences(cfg, full)
     lead = sil[0][1] if sil and sil[0][0] < 0.05 else 0.0
     tail = sil[-1][0] if sil and abs(sil[-1][1] - total) < 0.05 else total
-    speech = tail - lead
+    inner = [(a, b) for a, b in sil if a > lead + 0.3 and b < tail - 0.3]
     weights = [len(t) for t in texts]
-    cuts, acc, prev = [], 0, lead
-    for w in weights[:-1]:
-        acc += w
-        target = lead + speech * acc / sum(weights)
-        window = 0.35 * speech * w / sum(weights) + 0.4
-        cands = [(abs((a + b) / 2 - target), (a + b) / 2) for a, b in sil if a > prev + 0.5 and abs((a + b) / 2 - target) <= window]
-        cut = min(cands)[1] if cands else target
-        cuts.append(cut)
-        prev = cut
+    try:
+        cuts = _align_llm(cfg, full, texts, log)
+    except (requests.RequestException, llm.LLMError, KeyError, ValueError, json.JSONDecodeError) as e:
+        log(f"  [tts] align model failed ({str(e)[:80]}); using pause heuristics")
+        cuts = None
+    how = "model timestamps"
+    if cuts:
+        cuts = _snap(cuts, inner)
+        if not _plausible(cuts, lead, tail, weights):
+            log("  [tts] model timestamps implausible; using pause heuristics")
+            cuts = None
+    if not cuts:
+        cuts, how = _cuts_longest(inner, len(pairs), lead, tail, weights), "longest pauses"
+    if not cuts:
+        cuts, how = _cuts_weighted(inner, lead, tail, weights), "text-length estimate"
+    log(f"  [tts] split by {how} ({len(inner)} pauses found)")
+    if not cuts:
+        raise RuntimeError("could not align parts with pauses")
     bounds = [0.0] + cuts + [total]
     for (t, o), a, b in zip(pairs, bounds, bounds[1:]):
         subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", full, "-c:a", "libmp3lame", "-q:a", "3", o], check=True)

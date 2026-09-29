@@ -1,5 +1,6 @@
 """Assemble slides + narration into MP4 with ffmpeg (main 16:9 video and 9:16 Short)."""
 import os
+import shutil
 import subprocess
 
 from .tts import duration, prefetch, speak
@@ -105,7 +106,11 @@ def build(cfg, script, renderer, book, out_dir, log=print):
         idx = next((i for i, s in enumerate(script["segments"]) if s.get("no") == sh.get("segment_no")), 0)
         seg = script["segments"][idx]
         log("[video] Short")
-        prefetch(cfg, [(seg.get("say_q"), os.path.join(au, "s1.mp3")), (seg.get("say_a"), os.path.join(au, "s2.mp3"))], lang, log)
+        sn = int(seg.get("no", idx)) + 1
+        for name, src in (("s1", f"{sn:02d}a_q"), ("s2", f"{sn:02d}b_a")):  # reuse the main video's narration
+            src = os.path.join(au, src + ".mp3")
+            if os.path.exists(src) and not os.path.exists(os.path.join(au, name + ".mp3")):
+                shutil.copy(src, os.path.join(au, name + ".mp3"))
         sitems = []
         for name, show, say, extra in (("s1", False, seg.get("say_q"), 1.5), ("s2", True, seg.get("say_a"), 1.5)):
             png = os.path.join(sl, name + ".png")
