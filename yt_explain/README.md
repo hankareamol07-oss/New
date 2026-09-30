@@ -41,9 +41,12 @@ daily-life example, worked example, common mistake) → retrieval check after ev
 * `"make_short": true` – also renders `short.mp4` (1080×1920, ≤ 60 s: hook + key idea + answer) and uploads it as a YouTube Short; post the same file manually as an Instagram Reel.
 
 ## GUI / EXE (Windows)
-* `START_GUI.bat` – window: इयत्ता → विषय → घटक, शिक्षक (शिक्षिका teacher2 / शिक्षक teacher3 / none), स्लाइड थीम (auto or a
-  subject look), मोड: व्हिडिओ (reuses the saved script) / फक्त स्क्रिप्ट (writes+opens `explain_script.json` to edit `say`/`point`
-  texts; run again with व्हिडिओ — edited text is re-voiced automatically) / नवीन स्क्रिप्ट (regenerate), "YouTube upload" tick, ▶.
+* `START_GUI.bat` – one window (`gui.py`): इयत्ता → विषय → घटक, शिक्षक (शिक्षिका teacher2 / शिक्षक teacher3 / none), स्लाइड थीम
+  (auto or a subject look), मोड: व्हिडिओ (reuses the saved script) / फक्त स्क्रिप्ट (writes the script and opens it in the स्क्रिप्ट tab) /
+  नवीन स्क्रिप्ट (regenerate), "YouTube upload" tick, ▶ or ➕ रांगेत टाका. Left: live preview of a sample slide in the chosen
+  theme with the chosen teacher. Tabs: लॉग | पाठ मजकूर (tick/edit chapter parts) | स्क्रिप्ट (edit `say`/`point` texts in place,
+  JSON-checked on save; edited text is re-voiced on the next व्हिडिओ run) | रांग (queue many chapters, each with its own
+  teacher/theme/mode, rendered one after another; "या विषयाचे न झालेले सर्व घटक टाका" queues a whole subject).
   Changing teacher/theme re-renders only the slide clips (narration is kept, no new TTS request).
 * `BUILD_EXE.bat` – builds `YTExplain.exe` with PyInstaller (run once on your PC). Keep the exe in this folder, next to
   `config.json`, `explain.db`, `data\`, `sources\`; the sibling `..\yt_studio` engine folder must stay.
