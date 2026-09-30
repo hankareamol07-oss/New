@@ -20,8 +20,12 @@ Design follows the evidence on instructional video (Mayer 2020/2021 multimedia p
 Poems: the LLM also returns a musical style prompt (for Suno/Udio/NotebookLM audio). If <out_dir>/song.mp3 exists
 it is used as the audio for the recitation slides; otherwise the poem is recited by TTS.
 """
+import hashlib
 import json
 import os
+import shutil
+import subprocess
+import sys
 
 from ytstudio import youtube
 from ytstudio.config import ROOT
@@ -45,7 +49,13 @@ Rules (evidence-based video design):
 - Include one worked example (step by step) and one "common mistake" (सामान्य चूक) segment with the correction.
 - Ask a guiding question in the hook; after every 2-3 segments add a quick check question (student pauses, answers, then hears the answer).
 - No filler, no jokes about the channel, no repeating the same sentence. Never contradict the textbook text. Numbers as digits with units.
-- Total spoken length 6-9 minutes (about 900-1300 words in all "say" fields). No emojis.
+- Teach like the best Marathi YouTube teacher: start from what the child already knows, then the textbook's own definition
+  (quote it word-for-word in the bullet), then WHY it is so, then an example, then the child does something (कृती / पहा / मोजा).
+- Follow the TEXTBOOK PARTS given below IN ORDER and cover ONLY them: one or two sections per part, section heading = the
+  part heading (or a shorter form of it). Do not bring in material from other parts of the chapter.
+- Every 'say' must sound spoken, not read: short sentences, transitions like 'बघा', 'लक्षात घ्या', 'आता', 'म्हणजे काय?',
+  one rhetorical question per section, no lists read aloud.
+- Total spoken length 6-9 minutes (about 900-1300 words in all "say" fields); if only a few parts are given, keep 4-6 minutes. No emojis.
 - Marathi must be standard Balbharati-textbook Marathi (शुद्ध मराठी): reuse the textbook's own terms; never use Hindi words
   (e.g. अनवांछित, मिट्टी, घुलणे, बिन) or Hindi grammar. Hindi must likewise be standard textbook Hindi."""
 
@@ -58,7 +68,7 @@ Learning outcome (from the annual plan): {lo}
 Suggested classroom activity: {act}
 {poem_note}
 
-TEXTBOOK CHAPTER TEXT (OCR, may be noisy):
+TEXTBOOK PARTS TO COVER (cleaned textbook text, in order; make the video ONLY about these parts):
 <<<
 {text}
 >>>
@@ -87,11 +97,48 @@ Return JSON exactly:
  "poem": {poem_json}
 }}"""
 
-POEM_NOTE = ("THIS TOPIC IS A POEM/SONG: first explain poet, theme and difficult words, then stanza-by-stanza meaning; "
-             "add 'poem': lyrics_lines = exact lines of the poem from the text (clean OCR), "
-             "style_prompt = an English prompt for a music generator (genre, tempo, mood, instruments, child chorus, language) to sing these lyrics, "
-             "recite_say = the poem read rhythmically for TTS.")
-POEM_JSON = '{"lyrics_lines": ["..."], "style_prompt": "...", "recite_say": "..."}'
+POEM_NOTE = ("THIS TOPIC IS A POEM (कविता), so the video is a MUSICAL POEM LESSON: the poem is first recited stanza by stanza "
+             "(with background music), then explained. Sections: 1) poet + what the poem is about (कवी परिचय / कवितेचा विषय), "
+             "2) difficult words with meaning (शब्दार्थ), 3) ONE section per stanza (heading = 'कडवे N: <first words>') whose steps give "
+             "the stanza's meaning line by line in simple words, feelings and pictures the poet draws, 4) central idea / message (मध्यवर्ती कल्पना), "
+             "5) rasa / poetic beauty (alliteration, rhyme, imagery) and a small activity (recite with actions / draw). "
+             "'poem': stanzas = the poem split exactly as printed (each stanza = its lines, exact textbook words, OCR fixed), "
+             "recite_say per stanza = that stanza's lines joined with commas so TTS recites it rhythmically with the rhyme, "
+             "style_prompt = an English prompt for a music generator (genre, tempo, mood, instruments, child chorus, language) to sing these lyrics.")
+POEM_JSON = '{"stanzas": [{"lines": ["..."], "recite_say": "..."}], "style_prompt": "..."}'
+
+
+def _poem_stanzas(poem):
+    """[(lines, recite_say)] from a new-style {stanzas} or old-style {lyrics_lines, recite_say} poem block."""
+    out = []
+    for s in poem.get("stanzas") or []:
+        if isinstance(s, dict) and s.get("lines"):
+            lines = [str(x) for x in s["lines"] if str(x).strip()]
+            out.append((lines, s.get("recite_say") or ", ".join(lines)))
+    if not out and poem.get("lyrics_lines"):
+        lines = [str(x) for x in poem["lyrics_lines"] if str(x).strip()]
+        for i in range(0, len(lines), 4):
+            out.append((lines[i:i + 4], ", ".join(lines[i:i + 4])))
+        if out and poem.get("recite_say"):
+            out[0] = (out[0][0], poem["recite_say"]) if len(out) == 1 else out[0]
+    return out
+
+
+def _music_file(cfg):
+    here = os.path.dirname(os.path.abspath(sys.executable if getattr(sys, "frozen", False) else __file__))
+    p = cfg.get("poem_music") or os.path.join(here, "assets", "music", "poem_bg.mp3")
+    p = p if os.path.isabs(p) else os.path.join(here, p)
+    return p if os.path.exists(p) else None
+
+
+def _with_music(cfg, voice, music, out, gain=0.16):
+    """voice + looped music (soft, fades out) -> out (mp3, same length as the voice)."""
+    secs = duration(cfg, voice)
+    subprocess.run([cfg["ffmpeg"], "-y", "-v", "error", "-i", voice, "-stream_loop", "-1", "-i", music,
+                    "-filter_complex", f"[1:a]volume={gain},atrim=0:{secs:.3f},afade=t=in:d=1,afade=t=out:st={max(secs - 1.5, 0):.3f}:d=1.5[m];"
+                                       f"[0:a][m]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[a]",
+                    "-map", "[a]", "-c:a", "libmp3lame", "-q:a", "3", out], check=True)
+    return out
 
 
 def generate(cfg, u, meta, text, questions, log=print):
@@ -148,8 +195,9 @@ def _narration_plan(script, out_dir):
         plan.append((hook.get("say"), "00b_hook"))
     plan.append((script.get("intro", {}).get("say"), "01_intro"))
     poem = script.get("poem") if isinstance(script.get("poem"), dict) else None
-    if poem and poem.get("lyrics_lines") and not os.path.exists(os.path.join(out_dir, "song.mp3")):
-        plan.append((poem.get("recite_say"), "05_poem_00"))
+    if poem and not os.path.exists(os.path.join(out_dir, "song.mp3")):
+        for i, (_, say) in enumerate(_poem_stanzas(poem)):
+            plan.append((say, f"05_poem_{i:02d}"))
     for i, sec in enumerate(script["sections"], 1):
         for j, (_, _, say) in enumerate(_steps(sec)):
             plan.append((say, f"{i + 10:02d}_sec_{j:02d}"))
@@ -215,15 +263,35 @@ def build_video(cfg, script, r, u, out_dir, log=print):
              "01_intro", intro.get("say"), 0.8, pose="point")
     chapters.append((st if chapters else 0, intro.get("slide_title") or u["title"]))
     poem = script.get("poem") if isinstance(script.get("poem"), dict) else None
-    if poem and poem.get("lyrics_lines"):
+    stanzas = _poem_stanzas(poem) if poem else []
+    if stanzas:
         song = os.path.join(out_dir, "song.mp3")
-        lines = poem["lyrics_lines"]
+        music = None if os.path.exists(song) else _music_file(cfg)
         st = None
-        for i in range(0, len(lines), 6):
-            s = add(r.points(u["title"], lines[i:i + 6], badge="कविता" if not en else "Poem", reserve_right=reserve), f"05_poem_{i // 6:02d}",
-                    poem.get("recite_say") if i == 0 and not os.path.exists(song) else None, 0.6,
-                    audio_file=song if i == 0 else None, pose="sway")
-            st = s if st is None else st
+        if os.path.exists(song):    # a generated song (song.mp3): one slide per stanza, the song cut into equal shares
+            share = duration(cfg, song) / len(stanzas)
+            for i, (lines, _) in enumerate(stanzas):
+                part = os.path.join(au, f"05_poem_{i:02d}_song.mp3")
+                if not os.path.exists(part):
+                    subprocess.run([cfg["ffmpeg"], "-y", "-v", "error", "-ss", f"{i * share:.3f}", "-t", f"{share:.3f}", "-i", song,
+                                    "-c:a", "libmp3lame", "-q:a", "3", part], check=True)
+                s = add(r.points(u["title"], lines, badge=f"कडवे {i + 1}" if not en else f"Stanza {i + 1}", reserve_right=reserve),
+                        f"05_poem_{i:02d}", None, 0.0, audio_file=part, pose="sway")
+                st = s if st is None else st
+        else:                       # recited stanza by stanza (Gemini voice) over soft background music
+            for i, (lines, say) in enumerate(stanzas):
+                name = f"05_poem_{i:02d}"
+                voice = os.path.join(au, name + ".mp3")
+                if say and not os.path.exists(voice):
+                    speak(cfg, say, voice, lang, log)
+                mixed = voice
+                if music and os.path.exists(voice):
+                    mixed = os.path.join(au, name + "_music.mp3")
+                    if not os.path.exists(mixed):
+                        _with_music(cfg, voice, music, mixed)
+                s = add(r.points(u["title"], lines, badge=f"कडवे {i + 1}" if not en else f"Stanza {i + 1}", reserve_right=reserve),
+                        name, None if os.path.exists(mixed) else say, 0.8, audio_file=mixed, pose="sway")
+                st = s if st is None else st
         chapters.append((st, "कविता" if not en else "Poem"))
     for i, sec in enumerate(script["sections"], 1):
         log(f"[video] section {i}: {sec.get('heading', '')[:40]}")
@@ -313,18 +381,96 @@ def build_short(cfg, script, r, u, out_dir, log=print):
     return out
 
 
-def run(cfg, u, meta, text, questions, out_dir, upload=None, log=print):
+def apply_options(cfg, opts):
+    """Per-video choices from the GUI: avatar (teacher name / 'none'), theme name, mode."""
+    opts = opts or {}
+    cfg = dict(cfg)
+    if opts.get("avatar"):
+        av = dict(cfg.get("avatar") or {})
+        if opts["avatar"] == "none":
+            av["enabled"] = False
+            cfg["stickman"] = False
+        else:
+            av.update(enabled=True, name=opts["avatar"])
+        cfg["avatar"] = av
+    if opts.get("theme"):
+        cfg["theme"] = opts["theme"]
+    return cfg
+
+
+def _open_file(path):
+    try:
+        if os.name == "nt":
+            os.startfile(path)  # noqa
+        else:
+            subprocess.Popen(["xdg-open", path])
+    except OSError:
+        pass
+
+
+def _clear_render(out_dir):
+    """Drop everything derived from the script (narration, slide clips, video) so the next build starts clean."""
+    for stale in ("video.mp4", "short.mp4", "narration.wav"):
+        if os.path.exists(os.path.join(out_dir, stale)):
+            os.remove(os.path.join(out_dir, stale))
+    for d in ("audio", "slides"):
+        p = os.path.join(out_dir, d)
+        if os.path.isdir(p):
+            shutil.rmtree(p, ignore_errors=True)
+
+
+def _all_say(o):
+    """Every spoken / shown text of the script, in order (what the narration and slides depend on)."""
+    if isinstance(o, dict):
+        return [v for k, v in o.items() if k in ("say", "point", "question", "answer", "recite_say", "heading") and isinstance(v, str)] + \
+            [x for k, v in o.items() if k not in ("render",) for x in _all_say(v)]
+    if isinstance(o, list):
+        return [x for v in o for x in _all_say(v)]
+    return []
+
+
+def run(cfg, u, meta, text, questions, out_dir, upload=None, log=print, opts=None):
+    """opts: {"avatar": "teacher2|teacher3|none", "theme": "auto|math|...", "mode": "video|script|new"}.
+    mode 'script' writes explain_script.json, opens it for editing and stops; 'new' discards the saved script."""
+    opts = opts or {}
+    cfg = apply_options(cfg, opts)
     os.makedirs(out_dir, exist_ok=True)
     sp = os.path.join(out_dir, "explain_script.json")
-    if os.path.exists(sp):
-        script = json.load(open(sp, encoding="utf-8"))
-        log("[explain] reusing explain_script.json")
+    sig = hashlib.md5((text or "").strip().encode("utf-8")).hexdigest()[:12]
+    script = json.load(open(sp, encoding="utf-8")) if os.path.exists(sp) and opts.get("mode") != "new" else None
+    if script and script.get("text_sig") not in (None, sig):
+        log("[explain] selected text parts changed -> new script")
+        script = None
+    if script:
+        log("[explain] reusing explain_script.json (edit it, or choose 'नवीन स्क्रिप्ट' to regenerate)")
     else:
+        _clear_render(out_dir)
         script = generate(cfg, u, meta, text, questions, log)
+        script["text_sig"] = sig
         json.dump(script, open(sp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    if opts.get("mode") == "script":
+        log(f"[explain] script saved: {sp}\n  edit 'say'/'point' texts, save, then run again with mode 'व्हिडिओ'")
+        _open_file(sp)
+        return {"video": sp, "out_dir": out_dir, "script_only": True}
+    say_sig = hashlib.md5(json.dumps(_all_say(script), ensure_ascii=False).encode("utf-8")).hexdigest()[:12]
+    sig_file = os.path.join(out_dir, "_script_sig.txt")
+    old_sig = open(sig_file, encoding="utf-8").read().strip() if os.path.exists(sig_file) else None
+    if old_sig and old_sig != say_sig:
+        log("[explain] script text was edited -> new narration and render")
+        _clear_render(out_dir)
+    with open(sig_file, "w", encoding="utf-8") as f:
+        f.write(say_sig)
+    look = {"avatar": (cfg.get("avatar") or {}).get("name") if (cfg.get("avatar") or {}).get("enabled") else None,
+            "stickman": bool(cfg.get("stickman")), "theme": cfg.get("theme")}
+    if script.get("render") != look:      # teacher / theme changed: keep the narration, redo only the slide clips
+        log(f"[explain] look changed -> re-rendering slides ({look})")
+        for f in os.listdir(os.path.join(out_dir, "slides")) if os.path.isdir(os.path.join(out_dir, "slides")) else []:
+            if f.endswith(".mp4"):
+                os.remove(os.path.join(out_dir, "slides", f))
+        script["render"] = look
     if isinstance(script.get("poem"), dict) and script["poem"].get("style_prompt"):
         with open(os.path.join(out_dir, "song_prompt.txt"), "w", encoding="utf-8") as f:
-            f.write("STYLE:\n" + script["poem"]["style_prompt"] + "\n\nLYRICS:\n" + "\n".join(script["poem"].get("lyrics_lines", [])) +
+            f.write("STYLE:\n" + script["poem"]["style_prompt"] + "\n\nLYRICS:\n" + "\n\n".join("\n".join(ls) for ls, _ in _poem_stanzas(script["poem"])) +
                     "\n\n(generate with Suno/Udio/NotebookLM audio, save as song.mp3 in this folder, delete video.mp4 and re-run to mix it in)\n")
     book = {"std": u["std"], "subject": u["subject"], "lang": u["lang"]}
     chapter = {"no": meta.get("tachan_seq"), "title": u["title"]}

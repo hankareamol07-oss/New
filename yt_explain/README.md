@@ -17,10 +17,17 @@ python auto.py --poems --n 1
 `01_textbook.txt` (current book OCR), `02_swadhyay.md` (exercise Q/A), `03_practice.md` (typed set), `04_outcome.md` (LO + activity).
 The same text is what the LLM gets to write `explain_script.json` (sections → checks → summary).
 
-## Poems
-The script also returns `poem.lyrics_lines`, `poem.style_prompt` (English music-generator prompt) and `poem.recite_say`.
-`song_prompt.txt` is written next to the video; generate the song (Suno / Udio / NotebookLM audio), save it as `song.mp3` in the
-output folder, delete `video.mp4` and re-run — the recitation slides then play the song instead of TTS.
+## Poems (musical)
+For a कविता the script has `poem.stanzas[] = {lines, recite_say}` + `poem.style_prompt`; the lesson is कवी परिचय → शब्दार्थ →
+one section per stanza (meaning) → मध्यवर्ती कल्पना → काव्यसौंदर्य → कृती. Each stanza gets its own slide, recited by the Gemini voice
+over soft background music (`assets/music/poem_bg.mp3`, override with `"poem_music": "path.mp3"`).
+`song_prompt.txt` is written next to the video; generate a sung version (Suno / Udio / NotebookLM audio), save it as `song.mp3` in the
+output folder, delete `video.mp4` and re-run — the stanza slides then play the song (cut into equal shares) instead of TTS.
+
+## Chapter text parts (पाठ मजकूर)
+The OCR text of the chapter is cleaned and split by the LLM into 4-12 teaching parts on first use and stored in `explain.db`
+(table `unit_text`). GUI button "पाठ मजकूर / भाग निवडा": tick the parts a video should cover, edit heading/text, save.
+The script is written ONLY from the ticked parts, in order; changing the ticks makes the next run write a new script.
 
 ## Data
 * `explain.db` – `units` keyed by `topic_key = "std|तचन विषय|घटक क्र."` with status/tries/youtube_url; `questions` = exercise Q of the chapter.
@@ -34,7 +41,10 @@ daily-life example, worked example, common mistake) → retrieval check after ev
 * `"make_short": true` – also renders `short.mp4` (1080×1920, ≤ 60 s: hook + key idea + answer) and uploads it as a YouTube Short; post the same file manually as an Instagram Reel.
 
 ## GUI / EXE (Windows)
-* `START_GUI.bat` – window: इयत्ता → विषय → घटक, "YouTube upload" tick, ▶ → video (+Short) + optional upload.
+* `START_GUI.bat` – window: इयत्ता → विषय → घटक, शिक्षक (शिक्षिका teacher2 / शिक्षक teacher3 / none), स्लाइड थीम (auto or a
+  subject look), मोड: व्हिडिओ (reuses the saved script) / फक्त स्क्रिप्ट (writes+opens `explain_script.json` to edit `say`/`point`
+  texts; run again with व्हिडिओ — edited text is re-voiced automatically) / नवीन स्क्रिप्ट (regenerate), "YouTube upload" tick, ▶.
+  Changing teacher/theme re-renders only the slide clips (narration is kept, no new TTS request).
 * `BUILD_EXE.bat` – builds `YTExplain.exe` with PyInstaller (run once on your PC). Keep the exe in this folder, next to
   `config.json`, `explain.db`, `data\`, `sources\`; the sibling `..\yt_studio` engine folder must stay.
 

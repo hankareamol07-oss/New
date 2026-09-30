@@ -17,6 +17,7 @@ from ytstudio import config as ytconfig  # noqa: E402
 from ytstudio.pipeline import _slug  # noqa: E402
 
 import explain  # noqa: E402
+import textparts  # noqa: E402
 
 
 
@@ -33,6 +34,7 @@ def load_cfg():
 def open_state(cfg=None):
     """explain.db; when empty (fresh install) it is seeded from data/topics.json shipped with the project."""
     st = State(os.path.join(HERE, "explain.db"))
+    textparts.ensure_table(st.db)
     if st.db.execute("SELECT COUNT(*) FROM units").fetchone()[0] == 0:
         p = os.path.join((cfg or load_cfg())["data_dir"], "topics.json")
         if os.path.exists(p):
@@ -42,12 +44,32 @@ def open_state(cfg=None):
     return st
 
 
-def run_unit(cfg, st, u, upload, log=print):
-    meta = json.loads(u.get("meta_json") or "{}")
+def raw_text(u, meta):
+    """OCR text of the chapter from the shipped source pack ('' if the topic has no textbook pages)."""
     src = os.path.join(HERE, meta.get("sources_dir", ""))
-    text = open(os.path.join(src, "01_textbook.txt"), encoding="utf-8").read() if os.path.isdir(src) else ""
-    out_dir = os.path.join(cfg["out_dir"], f"std{u['std']}_{_slug(meta.get('tachan_subject', u['subject']))}_{meta.get('tachan_seq', 0):02d}_{_slug(u['title'])}")
-    return explain.run(cfg, u, meta, text, st.questions_of(u["unit_id"]), out_dir, upload=upload, log=log)
+    p = os.path.join(src, "01_textbook.txt")
+    return open(p, encoding="utf-8").read() if os.path.isfile(p) else ""
+
+
+def unit_text(cfg, st, u, meta, log=print):
+    """Text for the script: the ticked parts from explain.db (built by the LLM on first use), else the raw OCR text."""
+    raw = raw_text(u, meta)
+    parts = textparts.parts_or_build(cfg, st, u, meta, raw, log)
+    if parts:
+        sel = textparts.selected_text(parts)
+        log(f"[text] {sum(1 for p in parts if p['selected'])}/{len(parts)} parts selected")
+        return sel or raw
+    return raw
+
+
+def out_dir_of(cfg, u, meta):
+    return os.path.join(cfg["out_dir"], f"std{u['std']}_{_slug(meta.get('tachan_subject', u['subject']))}_{meta.get('tachan_seq', 0):02d}_{_slug(u['title'])}")
+
+
+def run_unit(cfg, st, u, upload, log=print, opts=None):
+    meta = json.loads(u.get("meta_json") or "{}")
+    text = unit_text(cfg, st, u, meta, log)
+    return explain.run(cfg, u, meta, text, st.questions_of(u["unit_id"]), out_dir_of(cfg, u, meta), upload=upload, log=log, opts=opts)
 
 
 def main():

@@ -5,7 +5,10 @@ A project passes an `Adapter`:
   filters          [(label, key)] cascading combobox columns read from the unit rows (e.g. std -> subject -> title)
   rows()           list of dict rows (must contain the filter keys, 'unit_id', 'status')
   run(row, upload, log) -> meta dict with 'video' (+ 'youtube_url' / 'short_url')
-  extras           optional [(label, key, default)] free inputs (e.g. how many Shorts)
+  extras           optional [(label, key, default)] free inputs (e.g. how many Shorts) or
+                   (label, key, default, [(shown, value), ...]) dropdown choices; the chosen value lands in row[key]
+  buttons          optional [(label, fn(row, log, app))] project buttons (row = selected unit or None), run in a thread;
+                   use app.after(0, ...) to open Tk windows
 """
 import glob
 import os
@@ -24,8 +27,9 @@ def project_root():
 
 
 class Adapter:
-    def __init__(self, title, filters, rows, run, extras=None, upload_default=True):
+    def __init__(self, title, filters, rows, run, extras=None, upload_default=True, buttons=None):
         self.title, self.filters, self.rows, self.run, self.extras, self.upload_default = title, filters, rows, run, extras or [], upload_default
+        self.buttons = buttons or []
 
 
 class App(tk.Tk):
@@ -61,11 +65,19 @@ class App(tk.Tk):
             cb.bind("<<ComboboxSelected>>", lambda e, i=i: self._cascade(i + 1))
             self.boxes[key] = cb
         r = len(self.ad.filters)
-        self.extra_vars = {}
-        for label, key, default in self.ad.extras:
+        self.extra_vars, self.extra_maps = {}, {}
+        for ex in self.ad.extras:
+            label, key, default = ex[:3]
+            choices = ex[3] if len(ex) > 3 else None
             ttk.Label(f, text=label).grid(row=r, column=0, sticky="w", pady=4)
-            v = tk.StringVar(value=str(default))
-            ttk.Entry(f, textvariable=v, width=12).grid(row=r, column=1, sticky="w", padx=6)
+            if choices:
+                shown = [s for s, _ in choices]
+                self.extra_maps[key] = dict(choices)
+                v = tk.StringVar(value=next((s for s, val in choices if val == default), shown[0]))
+                ttk.Combobox(f, textvariable=v, values=shown, state="readonly", width=40).grid(row=r, column=1, sticky="w", padx=6)
+            else:
+                v = tk.StringVar(value=str(default))
+                ttk.Entry(f, textvariable=v, width=12).grid(row=r, column=1, sticky="w", padx=6)
             self.extra_vars[key] = v
             r += 1
         self.v_upload = tk.BooleanVar(value=self.ad.upload_default)
@@ -76,6 +88,8 @@ class App(tk.Tk):
         self.btn.pack(side="left")
         ttk.Button(b, text="Output फोल्डर", command=lambda: os.startfile(self.out_dir) if hasattr(os, "startfile") else None).pack(side="left", padx=8)
         ttk.Button(b, text="Google Flow (animation clip)", command=self._flow).pack(side="left", padx=8)
+        for label, fn in self.ad.buttons:
+            ttk.Button(b, text=label, command=lambda fn=fn: self._project_button(fn)).pack(side="left", padx=8)
         self.log = tk.Text(self, height=26, wrap="word")
         self.log.pack(fill="both", expand=True, padx=10, pady=10)
         self._cascade(0)
@@ -116,6 +130,24 @@ class App(tk.Tk):
             rows = [r for r in rows if str(r.get(key, "")) == v]
         return rows[0] if rows else None
 
+    def _row_with_extras(self, row):
+        row = dict(row)
+        for k, v in self.extra_vars.items():
+            row[k] = self.extra_maps[k].get(v.get(), v.get()) if k in self.extra_maps else v.get()
+        return row
+
+    def _project_button(self, fn):
+        row = self._selected() if self.ad.filters else {}
+        row = self._row_with_extras(row) if row is not None else None
+
+        def go():
+            try:
+                fn(row, self._log, self)
+            except Exception:
+                import traceback
+                self._log("\n✖ " + traceback.format_exc())
+        threading.Thread(target=go, daemon=True).start()
+
     def _log(self, s):
         self.q.put(str(s))
 
@@ -139,9 +171,7 @@ class App(tk.Tk):
         if row is None:
             messagebox.showwarning("", "सर्व पर्याय निवडा")
             return
-        row = dict(row)
-        for k, v in self.extra_vars.items():
-            row[k] = v.get()
+        row = self._row_with_extras(row)
         self.btn.config(state="disabled")
 
         def go():

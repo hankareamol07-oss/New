@@ -1,0 +1,88 @@
+"""Chapter text as selectable parts (table unit_text in explain.db).
+
+The OCR text of a chapter is noisy and unstructured, so on first use an LLM cleans it and splits it into 4-12
+teaching parts (heading + textbook wording). The GUI lets the teacher tick which parts a video should cover and
+edit the text; explain.generate() then writes the script from exactly those parts.
+"""
+import json
+
+from ytstudio.llm import chat_json
+
+SYSTEM = """You are a careful Maharashtra State Board textbook editor. Output STRICT JSON only."""
+
+PROMPT = """Below is the OCR text of one textbook chapter (std {std}, {subject}, "{title}"). It contains OCR noise
+(broken lines, stray symbols, page headers, figure captions).
+
+Task: split the chapter into its natural teaching parts (4-12 parts, in textbook order): introduction, each
+sub-topic / definition / rule, worked examples, activities (कृती / करून पहा), 'हे करून पहा', summary etc.
+For every part return a short heading (<= 40 chars, in the textbook language) and the cleaned text of that part:
+fix OCR breaks and obvious OCR misspellings of common words (e.g. बच्ताळणे -> चाळणे), keep the textbook's own words and sentences, keep numbers/formulas/examples, drop page numbers,
+figure labels and garbage. Do NOT summarise, do NOT add anything. Exercise questions (स्वाध्याय) go into one last
+part with heading "स्वाध्याय" (or "Exercise").
+{poem_note}
+Return JSON exactly: {{"parts": [{{"heading": "...", "text": "..."}}, ...]}}
+
+CHAPTER TEXT:
+<<<
+{text}
+>>>"""
+
+POEM_NOTE = ("This chapter is a POEM: the first part must be heading 'कविता' with the full poem, one line per line "
+             "(exact words, stanzas separated by a blank line); then parts for poet introduction, difficult words, "
+             "and the meaning of each stanza as printed in the book, if present.")
+
+
+def ensure_table(db):
+    db.executescript("""
+    CREATE TABLE IF NOT EXISTS unit_text (
+      unit_id TEXT, part_no INT, heading TEXT, text TEXT, selected INT DEFAULT 1,
+      PRIMARY KEY (unit_id, part_no));
+    """)
+
+
+def get_parts(st, unit_id):
+    return [dict(r) for r in st.db.execute("SELECT part_no, heading, text, selected FROM unit_text WHERE unit_id=? ORDER BY part_no", (unit_id,))]
+
+
+def save_parts(st, unit_id, parts):
+    st.db.execute("DELETE FROM unit_text WHERE unit_id=?", (unit_id,))
+    for i, p in enumerate(parts, 1):
+        st.db.execute("INSERT INTO unit_text(unit_id, part_no, heading, text, selected) VALUES (?,?,?,?,?)",
+                      (unit_id, i, p.get("heading", "").strip(), p.get("text", "").strip(), 1 if p.get("selected", 1) else 0))
+    st.commit()
+
+
+def build_parts(cfg, u, meta, text, log=print):
+    """LLM: noisy OCR chapter -> [{heading, text}] (empty list when there is no textbook text)."""
+    if not (text or "").strip():
+        return []
+
+    def prompt(n):
+        return PROMPT.format(std=u["std"], subject=u["subject"], title=u["title"], text=text[:n],
+                             poem_note=POEM_NOTE if meta.get("is_poem") else "")
+    log("[text] cleaning chapter text into parts ...")
+    out, _ = chat_json(cfg, SYSTEM, prompt(30000), max_tokens=12000, log=log, shrink=prompt)
+    parts = [p for p in out.get("parts") or [] if isinstance(p, dict) and (p.get("text") or "").strip()]
+    for p in parts:
+        p["selected"] = 1
+    return parts
+
+
+def parts_or_build(cfg, st, u, meta, text, log=print):
+    parts = get_parts(st, u["unit_id"])
+    if not parts and text:
+        parts = build_parts(cfg, u, meta, text, log)
+        if parts:
+            save_parts(st, u["unit_id"], parts)
+            parts = get_parts(st, u["unit_id"])
+    return parts
+
+
+def selected_text(parts):
+    """Text for the script prompt: only ticked parts, each under its heading. '' when nothing is ticked."""
+    sel = [p for p in parts if p.get("selected")]
+    return "\n\n".join(f"## {p['heading']}\n{p['text']}" for p in sel)
+
+
+def as_json(parts):
+    return json.dumps([{k: p[k] for k in ("heading", "text", "selected")} for p in parts], ensure_ascii=False, indent=1)
