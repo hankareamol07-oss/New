@@ -63,5 +63,10 @@
   "gender": "female",
   "style": "pro"
  },
- "theme": "auto"
+ "theme": "auto",
+ "vertex": {
+  "project": "",
+  "location": "global",
+  "key_file": "gcp_key.json"
+ }
 }

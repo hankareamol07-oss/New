@@ -84,10 +84,11 @@ def _gemini(cfg, system, user, max_tokens):
         r = requests.post(url, json=body, headers=h, timeout=180)
         if r.status_code == 200:
             return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+        if label == "vertex":   # any Vertex failure (model not there, quota): fall back to API keys
+            continue
         if not _quota(r.status_code):
             break
-        if label != "vertex":
-            _rotate("gemini")
+        _rotate("gemini")
     if r is None:
         raise LLMError("gemini: vertex credentials failed")
     raise LLMError(f"gemini HTTP {r.status_code}: {r.text[:200]}")

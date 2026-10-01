@@ -49,7 +49,7 @@ def _gemini(cfg, text, out, log=print):
         raise GeminiQuota("gemini TTS daily quota used up for all keys - try again tomorrow")
     for voice in voices:
         body = {
-            "contents": [{"parts": [{"text": text}]}],
+            "contents": [{"role": "user", "parts": [{"text": text}]}],
             "generationConfig": {
                 "responseModalities": ["AUDIO"],
                 "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}},
@@ -61,11 +61,11 @@ def _gemini(cfg, text, out, log=print):
                 if url is None:
                     continue
                 r = requests.post(url, json=body, headers=h, timeout=300)
-                if r.status_code == 200 or not llm._quota(r.status_code):
-                    break
-                if key == "vertex":
+                if key == "vertex" and r.status_code != 200:
                     log(f"  [tts] vertex HTTP {r.status_code}: {r.text[:100]}")
                     continue
+                if r.status_code == 200 or not llm._quota(r.status_code):
+                    break
                 if "per_day" in r.text or "PerDay" in r.text:
                     _GEMINI_DAY_DEAD.add(key)
                     log(f"  [tts] gemini key ...{key[-4:]}: daily TTS quota used up")
@@ -206,10 +206,11 @@ def _transcribe_words(cfg, full, log):
             if url is None:
                 continue
             r = requests.post(url, json=body, headers=h, timeout=300)
+            if key == "vertex" and r.status_code != 200:
+                continue
             if r.status_code == 200 or not llm._quota(r.status_code):
                 break
-            if key != "vertex":
-                llm._rotate("gemini")
+            llm._rotate("gemini")
         if r is not None and r.status_code in (429, 500, 503) and attempt < 3:
             log(f"  [tts] transcribe model HTTP {r.status_code}, retrying in 20s")
             time.sleep(20)
