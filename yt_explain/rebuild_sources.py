@@ -10,6 +10,7 @@ For every rewritten unit the stale LLM parts in unit_text are dropped (they are 
 text on next use) and meta.pages is updated.  Usage: python3 rebuild_sources.py [--dry] [--std 6] [--book 37]
 """
 import difflib
+import functools
 import argparse
 import json
 import os
@@ -36,6 +37,7 @@ def to_int(s):
     return int(s) if s.isdigit() else None
 
 
+@functools.lru_cache(maxsize=None)
 def page_md(d, p):
     fp = os.path.join(d, f"{p:03d}.md")
     return open(fp, encoding="utf-8").read() if os.path.exists(fp) else None
@@ -82,8 +84,10 @@ def heading_score(md, no, title):
                 joined.append(("## " if run[0].startswith("#") else "") + " ".join(x.lstrip("#").strip() for x in run))
     for l in head + joined:
         h = l.lstrip("#").strip()
-        m = re.match(r"^([0-9०-९]+)[\.\)]?\s+(.+)$", h)
-        if m and to_int(m.group(1)) == no:
+        m = re.match(r"^([0-9०-९]+(?:\.[0-9०-९]+)?)[\.\)]?\s+(.+)$", h)
+        if m and "." in m.group(1):  # unit-style "3.8 Title": number carries no chapter info
+            h = m.group(2)
+        elif m and to_int(m.group(1)) == no:
             h = m.group(2)
             score += 1
         elif to_int(h) == no:
@@ -92,7 +96,7 @@ def heading_score(md, no, title):
         nh = norm(h)
         if nt and len(nh) >= 3 and (nh == nt or (nh in nt and len(nh) >= 0.6 * len(nt)) or (nt in nh and len(nt) >= 5)
                                     or (len(nt) >= 6 and difflib.SequenceMatcher(None, nh[:len(nt) + 4], nt).ratio() >= 0.8)):
-            score += 3 if l.startswith("#") or (nh == nt and l in head[:3]) else 2
+            score += 3 if l.startswith("#") or (l in head[:4] and (nh == nt or len(nt) >= 8)) else 2
     return score
 
 
@@ -112,7 +116,82 @@ def find_start(d, c, n_pages, prev_end):
     return (best_p, best) if best_p is not None else (None, 0)
 
 
+def detect(d, chs, n_pages, whole):
+    """Chapter start pages for one book. whole=False: scan forward from the previous chapter's start
+    (catalogue order enforced by construction). whole=True: best hit anywhere, then drop the weaker of
+    any out-of-order pair (handles catalogue placeholder pages). Returns {no: [page, score]}."""
+    found, seen, prev = {}, set(), 0
+    for c in chs:
+        guess = int(c.get("start_page") or 0)
+        placeholder = guess in seen  # catalogue placeholders: several chapters listed on one page
+        seen.add(guess)
+        p, s = find_start(d, c, n_pages, 0 if whole else prev)
+        found[c["no"]] = [p if p is not None else guess, s, guess, placeholder]
+        if not whole and p is not None:
+            prev = p
+    if whole:
+        seq = [c["no"] for c in chs if not found[c["no"]][3]]
+        changed = True
+        while changed:
+            changed = False
+            for i in range(len(seq) - 1):
+                a_, b_ = found[seq[i]], found[seq[i + 1]]
+                if a_[0] >= b_[0] and (a_[1] or b_[1]):
+                    bad = a_ if (a_[1], -abs(a_[0] - a_[2])) <= (b_[1], -abs(b_[0] - b_[2])) else b_
+                    if (bad[0], bad[1]) != (bad[2], 0):
+                        bad[0], bad[1] = bad[2], 0
+                        changed = True
+    for no in found:
+        del found[no][2:]
+    return found
+
+
+def candidates(d, c, n_pages):
+    out = []
+    for p in range(1, n_pages + 1):
+        md = page_md(d, p)
+        if md:
+            sc = heading_score(md, c["no"], c["title"])
+            if sc >= 3:
+                out.append((p, sc))
+    return out
+
+
+def detect_dp(d, chs, n_pages):
+    """Pick one heading hit (or none) per chapter so that picked pages strictly increase in catalogue
+    order, maximising total (score - small distance-from-catalogue-page penalty). Unpicked chapters
+    fall back to their catalogue page. Returns {no: [page, score]}."""
+    guesses = [int(c.get("start_page") or 0) for c in chs]
+    cands = [candidates(d, c, n_pages) for c in chs]
+    # dp[i] = {page: (best_total, prev_choice)} after deciding chapter i (page=0: nothing picked yet)
+    NONE = 0
+    dp = [{NONE: (0.0, None)}]
+    for i, c in enumerate(chs):
+        cur = {}
+        for lp, (tot, _) in dp[-1].items():
+            # skip this chapter
+            if lp not in cur or tot > cur[lp][0]:
+                cur[lp] = (tot, (lp, None))
+            for p, sc in cands[i]:
+                if p <= lp:
+                    continue
+                val = tot + sc - 0.08 * abs(p - guesses[i])
+                if p not in cur or val > cur[p][0]:
+                    cur[p] = (val, (lp, (p, sc)))
+        dp.append(cur)
+    # backtrack
+    found = {}
+    lp = max(dp[-1].items(), key=lambda kv: kv[1][0])[0]
+    for i in range(len(chs) - 1, -1, -1):
+        _, (prev_lp, pick) = dp[i + 1][lp]
+        found[chs[i]["no"]] = [pick[0], pick[1]] if pick else [guesses[i], 0]
+        lp = prev_lp
+    return found
+
+
 def main():
+
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry", action="store_true")
     ap.add_argument("--std", type=int)
@@ -133,18 +212,7 @@ def main():
             continue
         n_pages = max([int(f[:3]) for f in os.listdir(d) if f.endswith(".md")] or [0])
         chs = sorted(b.get("chapters", []), key=lambda c: int(c.get("start_page") or 0))
-        found, prev, seen = {}, 0, set()
-        for c in chs:
-            guess = int(c.get("start_page") or 0)
-            # catalogue placeholders (several chapters on one page) are out of order: search the whole book
-            placeholder = guess in seen
-            seen.add(guess)
-            p, s = find_start(d, c, n_pages, 0 if placeholder else prev)
-            if p is None:
-                p = guess
-            found[c["no"]] = [p, s]
-            if not placeholder:
-                prev = p
+        found = detect_dp(d, chs, n_pages)
         # end = next chapter start - 1
         ordered = sorted(found.items(), key=lambda kv: kv[1][0])
         for i, (no, v) in enumerate(ordered):
