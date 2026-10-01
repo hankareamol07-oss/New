@@ -1,6 +1,7 @@
 """Gemini via Vertex AI (paid Google Cloud project) as an alternative to the free Gemini API keys.
 
 config.json:  "vertex": {"project": "my-project-id", "location": "us-central1", "key_file": "gcp_key.json"}
+          or  "vertex": {"project": "my-project-id", "api_key": "AIza..."}   (API key from APIs & Services > Credentials)
 When present, every Gemini call (text, TTS, transcription) goes to Vertex first; API keys stay as fallback.
 Needs: pip install google-auth
 """
@@ -13,7 +14,7 @@ SCOPE = "https://www.googleapis.com/auth/cloud-platform"
 
 def enabled(cfg):
     v = cfg.get("vertex") or {}
-    return bool(v.get("project") and (v.get("key_file") or os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")))
+    return bool(v.get("api_key") or (v.get("project") and (v.get("key_file") or os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"))))
 
 
 def _token(cfg):
@@ -40,7 +41,13 @@ def endpoint(cfg, model):
     v = cfg["vertex"]
     loc = v.get("location", "us-central1")
     host = "aiplatform.googleapis.com" if loc == "global" else f"{loc}-aiplatform.googleapis.com"
-    url = (f"https://{host}/v1/projects/{v['project']}/locations/{loc}/publishers/google/models/{model}:generateContent")
+    if v.get("api_key"):
+        if v.get("project"):
+            url = f"https://{host}/v1/projects/{v['project']}/locations/{loc}/publishers/google/models/{model}:generateContent"
+        else:   # express mode (no project)
+            url = f"https://aiplatform.googleapis.com/v1/publishers/google/models/{model}:generateContent"
+        return url, {"x-goog-api-key": v["api_key"], "Content-Type": "application/json"}
+    url = f"https://{host}/v1/projects/{v['project']}/locations/{loc}/publishers/google/models/{model}:generateContent"
     return url, {"Authorization": f"Bearer {_token(cfg)}", "Content-Type": "application/json"}
 
 
