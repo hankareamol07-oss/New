@@ -13,7 +13,7 @@ import unicodedata
 
 import requests
 
-from . import llm
+from . import llm, vertex
 
 
 def clean(text):
@@ -44,8 +44,8 @@ def _gemini(cfg, text, out, log=print):
     """gemini_tts_voice may be one name or a list: first voice is used, later ones only if it fails."""
     v = cfg["gemini_tts_voice"]
     voices = v if isinstance(v, list) else [v]
-    live = [k for k in llm._keys(cfg, "gemini") if k not in _GEMINI_DAY_DEAD]
-    if not live:
+    live = [k for k in (llm._keys(cfg, "gemini") if cfg["keys"].get("gemini") else []) if k not in _GEMINI_DAY_DEAD]
+    if not live and not vertex.enabled(cfg):
         raise GeminiQuota("gemini TTS daily quota used up for all keys - try again tomorrow")
     for voice in voices:
         body = {
@@ -56,17 +56,22 @@ def _gemini(cfg, text, out, log=print):
             },
         }
         for attempt in range(4):
-            for key in live:
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_tts_model']}:generateContent"
-                r = requests.post(url, json=body, headers={"x-goog-api-key": key}, timeout=300)
+            r = None
+            for key, url, h in vertex.endpoints(cfg, cfg["gemini_tts_model"], live):
+                if url is None:
+                    continue
+                r = requests.post(url, json=body, headers=h, timeout=300)
                 if r.status_code == 200 or not llm._quota(r.status_code):
                     break
+                if key == "vertex":
+                    log(f"  [tts] vertex HTTP {r.status_code}: {r.text[:100]}")
+                    continue
                 if "per_day" in r.text or "PerDay" in r.text:
                     _GEMINI_DAY_DEAD.add(key)
                     log(f"  [tts] gemini key ...{key[-4:]}: daily TTS quota used up")
                 llm._rotate("gemini")
             live = [k for k in live if k not in _GEMINI_DAY_DEAD]
-            if not live:
+            if r is None or (not live and not vertex.enabled(cfg)):
                 raise GeminiQuota("gemini TTS daily quota used up for all keys - try again tomorrow")
             if r.status_code != 429:
                 break
@@ -164,7 +169,7 @@ def prefetch(cfg, pairs, lang, log=print):
     and cut into per-slide files at the pauses between parts. pairs = [(text, out_path)]; later speak() calls
     find the files ready. Any other backend: no-op (speak() handles each segment)."""
     pairs = [(clean(t), o) for t, o in pairs if isinstance(t, str) and clean(t) and not (os.path.exists(o) and os.path.getsize(o) > 0)]
-    if cfg["tts_backend"] != "gemini" or not cfg["keys"].get("gemini") or len(pairs) < 2:
+    if cfg["tts_backend"] != "gemini" or not (cfg["keys"].get("gemini") or vertex.enabled(cfg)) or len(pairs) < 2:
         return
     try:
         _prefetch_gemini(cfg, pairs, lang, log)
@@ -196,13 +201,16 @@ def _transcribe_words(cfg, full, log):
             "generationConfig": {"audioTranscriptionConfig": {"wordTimestamp": True}}}
     r = None
     for attempt in range(4):
-        for key in llm._keys(cfg, "gemini"):
-            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{ALIGN_MODEL}:generateContent",
-                              json=body, headers={"x-goog-api-key": key}, timeout=300)
+        keys = llm._keys(cfg, "gemini") if cfg["keys"].get("gemini") else []
+        for key, url, h in vertex.endpoints(cfg, ALIGN_MODEL, keys):
+            if url is None:
+                continue
+            r = requests.post(url, json=body, headers=h, timeout=300)
             if r.status_code == 200 or not llm._quota(r.status_code):
                 break
-            llm._rotate("gemini")
-        if r.status_code in (429, 500, 503) and attempt < 3:
+            if key != "vertex":
+                llm._rotate("gemini")
+        if r is not None and r.status_code in (429, 500, 503) and attempt < 3:
             log(f"  [tts] transcribe model HTTP {r.status_code}, retrying in 20s")
             time.sleep(20)
             continue
@@ -395,7 +403,7 @@ def speak(cfg, text, out, lang, log=print):
             return out
         except (requests.RequestException, KeyError, RuntimeError, subprocess.CalledProcessError) as e:
             log(f"  [tts] sarvam failed ({str(e)[:80]}), falling back to edge-tts")
-    if backend == "gemini" and cfg["keys"].get("gemini"):
+    if backend == "gemini" and (cfg["keys"].get("gemini") or vertex.enabled(cfg)):
         try:
             _gemini(cfg, text, out, log)
             return out

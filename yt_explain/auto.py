@@ -28,6 +28,9 @@ def load_cfg():
         v = raw.get(k) or ("data" if k == "data_dir" else "output")
         cfg[k] = v if os.path.isabs(v) else os.path.join(HERE, v)
     cfg.setdefault("stds", [1, 2, 3, 4, 5, 6, 7, 8])
+    kf = (cfg.get("vertex") or {}).get("key_file")
+    if kf and not os.path.isabs(kf):   # service-account key next to config.json
+        cfg["vertex"]["key_file"] = os.path.join(HERE, kf)
     return cfg
 
 

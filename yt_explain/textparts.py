@@ -10,15 +10,16 @@ from ytstudio.llm import chat_json
 
 SYSTEM = """You are a careful Maharashtra State Board textbook editor. Output STRICT JSON only."""
 
-PROMPT = """Below is the OCR text of one textbook chapter (std {std}, {subject}, "{title}"). It contains OCR noise
-(broken lines, stray symbols, page headers, figure captions).
+PROMPT = """Below is the text of one textbook chapter (std {std}, {subject}, "{title}"), transcribed from the printed
+book. It may still contain a little OCR noise (broken lines, stray symbols, '[IMG]' markers, figure captions).
 
 Task: split the chapter into its natural teaching parts (4-12 parts, in textbook order): introduction, each
-sub-topic / definition / rule, worked examples, activities (कृती / करून पहा), 'हे करून पहा', summary etc.
-For every part return a short heading (<= 40 chars, in the textbook language) and the cleaned text of that part:
-fix OCR breaks and obvious OCR misspellings of common words (e.g. बच्ताळणे -> चाळणे), keep the textbook's own words and sentences, keep numbers/formulas/examples, drop page numbers,
-figure labels and garbage. Do NOT summarise, do NOT add anything. Exercise questions (स्वाध्याय) go into one last
-part with heading "स्वाध्याय" (or "Exercise").
+sub-topic / definition / rule, worked examples, activities (कृती / करून पहा / जरा डोके चालवा), 'माहीत आहे का तुम्हांला?',
+summary etc. For every part return a short heading (<= 40 chars, in the textbook language) and the text of that part
+COPIED from the chapter: keep the textbook's own sentences word for word (join lines broken mid-sentence, fix an
+obviously mis-read word only when the correct word is certain), keep numbers/formulas/examples/tables, drop
+'[IMG]', page numbers and garbage. Do NOT summarise, paraphrase, translate or add anything that is not in the text.
+Exercise questions (स्वाध्याय / Exercise / अभ्यास) go into one last part with heading "स्वाध्याय" (or "Exercise").
 {poem_note}
 Return JSON exactly: {{"parts": [{{"heading": "...", "text": "..."}}, ...]}}
 

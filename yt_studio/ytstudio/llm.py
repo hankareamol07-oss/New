@@ -5,6 +5,8 @@ import time
 
 import requests
 
+from . import vertex
+
 OPENAI_URLS = {
     "nvidia": "https://integrate.api.nvidia.com/v1/chat/completions",
     "groq": "https://api.groq.com/openai/v1/chat/completions",
@@ -72,14 +74,22 @@ def _gemini(cfg, system, user, max_tokens):
         "contents": [{"role": "user", "parts": [{"text": user}]}],
         "generationConfig": {"temperature": 0.4, "maxOutputTokens": max_tokens, "responseMimeType": "application/json"},
     }
-    for key in _keys(cfg, "gemini"):
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_model']}:generateContent?key={key}"
-        r = requests.post(url, json=body, timeout=180)
+    keys = _keys(cfg, "gemini") if cfg["keys"].get("gemini") else []
+    if not keys and not vertex.enabled(cfg):
+        raise LLMError("gemini: no API key and no vertex config")
+    r = None
+    for label, url, h in vertex.endpoints(cfg, cfg["gemini_model"], keys):
+        if url is None:
+            continue
+        r = requests.post(url, json=body, headers=h, timeout=180)
         if r.status_code == 200:
             return r.json()["candidates"][0]["content"]["parts"][0]["text"]
         if not _quota(r.status_code):
             break
-        _rotate("gemini")
+        if label != "vertex":
+            _rotate("gemini")
+    if r is None:
+        raise LLMError("gemini: vertex credentials failed")
     raise LLMError(f"gemini HTTP {r.status_code}: {r.text[:200]}")
 
 
