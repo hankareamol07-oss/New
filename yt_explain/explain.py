@@ -76,6 +76,10 @@ TEXTBOOK PARTS TO COVER (cleaned textbook text, in order; make the video ONLY ab
 TEXTBOOK EXERCISE QUESTIONS (use them for the checks at the end, with correct answers):
 {questions}
 
+TEXTBOOK FIGURES available for the slides (number: caption / nearby text [part]). Where a step explains exactly what a
+figure shows, add "fig": <number> to that step so the textbook picture is shown; at most one figure per step, never invent numbers:
+{figures}
+
 Return JSON exactly:
 {{
  "title": "<= 95 chars: इ. {std} वी {subject_mr} | {topic} | संपूर्ण स्पष्टीकरण | Maharashtra Board",
@@ -85,7 +89,7 @@ Return JSON exactly:
  "hook": {{"question": "<= 80 chars curiosity question shown on screen", "say": "10-15 s: a daily-life scene or surprising question that this topic answers; end with the question"}},
  "intro": {{"say": "15-20 s: what you will be able to do after this video", "slide_title": "{topic}", "points": ["3-4 outcome bullets ('...समजेल', '...करता येईल')"]}},
  "sections": [ {{"heading": "<= 40 chars", "kind": "concept|example|misconception|activity",
-                 "steps": [ {{"point": "<= 90 chars bullet", "say": "25-50 words explaining this bullet"}}, "(2-4 steps)" ],
+                 "steps": [ {{"point": "<= 90 chars bullet", "say": "25-50 words explaining this bullet", "fig": "<figure number or omit>"}}, "(2-4 steps)" ],
                  "check": {{"question": "...", "answer": "...", "say_q": "question + 'व्हिडिओ थांबवून उत्तर द्या'", "say_a": "answer + one-line reason"}}
               }}, "(6-10 sections in teaching order: meaning -> parts/rules -> worked example -> common mistake -> where it is used -> activity; check only after every 2-3 sections, otherwise check: null)" ],
  "checks": [ {{"question": "...", "answer": "...", "say_q": "...", "say_a": "answer + one-line reason"}}, "(3-5, from the textbook exercise, easy -> hard)" ],
@@ -141,7 +145,7 @@ def _with_music(cfg, voice, music, out, gain=0.16):
     return out
 
 
-def generate(cfg, u, meta, text, questions, log=print):
+def generate(cfg, u, meta, text, questions, log=print, figures=None):
     style = open(os.path.join(ROOT, "style", "reference_style.md"), encoding="utf-8").read()
     is_poem = bool(meta.get("is_poem"))
     qtxt = "\n".join(json.dumps({"q": q["text"], "type": q.get("qtype"), "answer": q.get("answer", "")}, ensure_ascii=False) for q in questions[:25]) or "(none)"
@@ -150,7 +154,8 @@ def generate(cfg, u, meta, text, questions, log=print):
                              seq=meta.get("tachan_seq"), topic=u["title"], lang_name=LANG_NAME.get(u["lang"], u["lang"]),
                              channel=cfg["channel_name"], tagline=cfg["channel_tagline"], lo=meta.get("learning_outcome", ""), act=meta.get("activity", ""),
                              poem_note=POEM_NOTE if is_poem else "", text=(text or "(no textbook text - explain the learning outcome with activities)")[:n],
-                             questions=qtxt, poem_json=POEM_JSON if is_poem else "null")
+                             questions=qtxt, poem_json=POEM_JSON if is_poem else "null",
+                             figures="\n".join(f"{f['no']}: {f['caption'][:80]} [{f['part'][:30]}]" for f in (figures or [])) or "(none)")
     log(f"[explain] asking LLM ({'poem' if is_poem else 'topic'}) ...")
     script, model = chat_json(cfg, SYSTEM, prompt(22000), max_tokens=14000, log=log, shrink=prompt)
     script["model"] = model
@@ -181,6 +186,16 @@ def _steps(sec):
         pts = [st["point"] for st in steps]
         return [(pts, i, st.get("say")) for i, st in enumerate(steps)]
     return [(sec.get("points") or [sec.get("heading", "")], None, sec.get("say"))]
+
+
+def _step_fig(script, sec, j):
+    """Path of the textbook figure the j-th step of a section asks for ("fig": n), or None."""
+    steps = [st for st in sec.get("steps") or [] if isinstance(st, dict) and st.get("point")]
+    if j >= len(steps):
+        return None
+    n = str(steps[j].get("fig") or "").strip()
+    p = (script.get("figures") or {}).get(n)
+    return p if p and os.path.exists(p) else None
 
 
 KIND_BADGE = {"example": ("उदाहरण", "Example"), "misconception": ("सामान्य चूक", "Common mistake"), "activity": ("कृती", "Activity")}
@@ -300,7 +315,10 @@ def build_video(cfg, script, r, u, out_dir, log=print):
         pose = KIND_POSE.get(sec.get("kind"), "talk" if i % 2 else "point")
         st = None
         for j, (pts, active, say) in enumerate(_steps(sec)):
-            s = add(r.points(sec.get("heading", ""), pts, badge=badge, reserve_right=reserve, active=active), f"{i + 10:02d}_sec_{j:02d}", say, 0.7, pose=pose)
+            fig = _step_fig(script, sec, j)
+            img = (r.points_fig(sec.get("heading", ""), pts, fig, badge=badge, reserve_right=reserve, active=active) if fig
+                   else r.points(sec.get("heading", ""), pts, badge=badge, reserve_right=reserve, active=active))
+            s = add(img, f"{i + 10:02d}_sec_{j:02d}", say, 0.7, pose=pose)
             st = s if st is None else st
         chapters.append((st, sec.get("heading", f"भाग {i}")))
         if isinstance(sec.get("check"), dict) and sec["check"].get("question"):
@@ -429,7 +447,7 @@ def _all_say(o):
     return []
 
 
-def run(cfg, u, meta, text, questions, out_dir, upload=None, log=print, opts=None):
+def run(cfg, u, meta, text, questions, out_dir, upload=None, log=print, opts=None, figures=None):
     """opts: {"avatar": "teacher2|teacher3|none", "theme": "auto|math|...", "mode": "video|script|new"}.
     mode 'script' writes explain_script.json, opens it for editing and stops; 'new' discards the saved script."""
     opts = opts or {}
@@ -445,7 +463,8 @@ def run(cfg, u, meta, text, questions, out_dir, upload=None, log=print, opts=Non
         log("[explain] reusing explain_script.json (edit it, or choose 'नवीन स्क्रिप्ट' to regenerate)")
     else:
         _clear_render(out_dir)
-        script = generate(cfg, u, meta, text, questions, log)
+        script = generate(cfg, u, meta, text, questions, log, figures=figures)
+        script["figures"] = {str(f["no"]): f["file"] for f in (figures or [])}
         script["text_sig"] = sig
         json.dump(script, open(sp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     if opts.get("mode") == "script":

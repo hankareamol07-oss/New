@@ -17,6 +17,7 @@ from ytstudio import config as ytconfig  # noqa: E402
 from ytstudio.pipeline import _slug  # noqa: E402
 
 import explain  # noqa: E402
+import figures
 import textparts  # noqa: E402
 
 
@@ -38,6 +39,7 @@ def open_state(cfg=None):
     """explain.db; when empty (fresh install) it is seeded from data/topics.json shipped with the project."""
     st = State(os.path.join(HERE, "explain.db"))
     textparts.ensure_table(st.db)
+    figures.ensure_table(st.db)
     if st.db.execute("SELECT COUNT(*) FROM units").fetchone()[0] == 0:
         p = os.path.join((cfg or load_cfg())["data_dir"], "topics.json")
         if os.path.exists(p):
@@ -72,7 +74,10 @@ def out_dir_of(cfg, u, meta):
 def run_unit(cfg, st, u, upload, log=print, opts=None):
     meta = json.loads(u.get("meta_json") or "{}")
     text = unit_text(cfg, st, u, meta, log)
-    return explain.run(cfg, u, meta, text, st.questions_of(u["unit_id"]), out_dir_of(cfg, u, meta), upload=upload, log=log, opts=opts)
+    figs = figures.for_script(st, meta, u["unit_id"], textparts.get_parts(st, u["unit_id"]))
+    if figs:
+        log(f"[figures] {len(figs)} textbook figures available")
+    return explain.run(cfg, u, meta, text, st.questions_of(u["unit_id"]), out_dir_of(cfg, u, meta), upload=upload, log=log, opts=opts, figures=figs)
 
 
 def main():

@@ -108,6 +108,7 @@ def main():
     ap.add_argument("--dry", action="store_true")
     ap.add_argument("--std", type=int)
     ap.add_argument("--book", type=int)
+    ap.add_argument("--ocr", default="vertex", help="provenance label written to meta/pages.json")
     a = ap.parse_args()
     books, _ = load_books()
     by_id = {b["book_id"]: b for b in books}
@@ -170,10 +171,10 @@ def main():
         if os.path.exists(old) and not os.path.exists(old + ".tesseract"):
             os.replace(old, old + ".tesseract")
         open(old, "w", encoding="utf-8").write(text + "\n")
-        json.dump({"pdf_pages": [first, last], "ocr": "sarvam", "heading_score": score},
+        json.dump({"pdf_pages": [first, last], "ocr": a.ocr, "heading_score": score},
                   open(os.path.join(src, "01_textbook.pages.json"), "w", encoding="utf-8"), ensure_ascii=False)
         meta["pages"] = [first, last]
-        meta["ocr"] = "sarvam"
+        meta["ocr"] = a.ocr
         st.db.execute("UPDATE units SET meta_json=? WHERE unit_id=?", (json.dumps(meta, ensure_ascii=False), r["unit_id"]))
         st.db.execute("DELETE FROM unit_text WHERE unit_id=?", (r["unit_id"],))
     st.commit()

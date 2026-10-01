@@ -195,6 +195,28 @@ class Renderer:
         self._bullets(d, pts, 130, 380, right - 180, 570, active=active)
         return im
 
+    def points_fig(self, heading, pts, fig_path, badge=None, reserve_right=0, active=None):
+        """Bullets on the left, the textbook figure in a card on the right (the avatar strip stays free)."""
+        im, d = self._base(badge=badge)
+        right = 1840 - reserve_right
+        self.t.draw(d, (80, 215), heading, 64, True, self.primary)
+        d.line([80, 305, right, 305], fill=self.accent, width=5)
+        fw = min(760, max(420, (right - 80) * 0.42))
+        fx0 = int(right - fw)
+        self._card(d, (80, 340, fx0 - 30, 980))
+        self._bullets(d, pts, 130, 380, fx0 - 30 - 130, 570, active=active)
+        self._card(d, (fx0, 340, right, 980), fill=(252, 252, 255))
+        try:
+            fig = Image.open(fig_path).convert("RGB")
+            box_w, box_h = int(right - fx0) - 40, 600
+            k = min(box_w / fig.width, box_h / fig.height)
+            fig = fig.resize((max(1, int(fig.width * k)), max(1, int(fig.height * k))), Image.LANCZOS)
+            im.paste(fig, (fx0 + 20 + (box_w - fig.width) // 2, 360 + (box_h - fig.height) // 2))
+            self.t.draw(d, (fx0 + (right - fx0) // 2, 975), "पाठ्यपुस्तकातील चित्र" if not self.en else "Textbook figure", 24, False, (120, 125, 145), anchor="mm")
+        except Exception:
+            pass
+        return im
+
     def question(self, seg, show_answer=False, badge=None):
         im, d = self._base(badge=badge or seg.get("instruction") or "")
         n = seg.get("no", "")

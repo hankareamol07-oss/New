@@ -4,6 +4,7 @@ The OCR text of a chapter is noisy and unstructured, so on first use an LLM clea
 teaching parts (heading + textbook wording). The GUI lets the teacher tick which parts a video should cover and
 edit the text; explain.generate() then writes the script from exactly those parts.
 """
+import figures
 import json
 
 from ytstudio.llm import chat_json
@@ -76,6 +77,7 @@ def parts_or_build(cfg, st, u, meta, text, log=print):
         if parts:
             save_parts(st, u["unit_id"], parts)
             parts = get_parts(st, u["unit_id"])
+            figures.assign_parts(st, u["unit_id"], parts)
     return parts
 
 
