@@ -120,6 +120,15 @@ def next_chapter_page(d, first, n_pages):
     return n_pages
 
 
+ANSKEY = re.compile(r"^#{0,3}\s*\**(उत्तरसूची|उत्तरे|उत्तर सूची|Answers?( Key)?|ANSWERS)\**\s*$", re.M)
+
+
+def trim_answer_key(txt):
+    """Drop the back-of-book answer key that follows the last chapter."""
+    m = ANSKEY.search(txt, len(txt) // 5)
+    return txt[: m.start()].rstrip() if m else txt
+
+
 def trim_tail(txt, nxt):
     """Cut the text at the heading of the NEXT chapter (dict with no/title) when the last page already starts it."""
     if not nxt:
@@ -321,7 +330,7 @@ def main():
             pages[0] = trim_to_heading(pages[0], r["chapter_no"], r["title"])
         text = "\n\n".join(p for p in pages if p)
         chs_b = by_id[r["book_id"]].get("chapters", [])
-        text = trim_tail(text, next((c for c in chs_b if c["no"] == r["chapter_no"] + 1), None))
+        text = trim_answer_key(trim_tail(text, next((c for c in chs_b if c["no"] == r["chapter_no"] + 1), None)))
         if len(text) < 60:
             n_skip += 1
             print("  short text, skipped:", r["unit_id"], r["title"], first, last)
