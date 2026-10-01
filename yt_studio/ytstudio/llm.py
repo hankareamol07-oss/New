@@ -47,7 +47,61 @@ def _extract_json(text):
         m = re.search(r"[\[{].*[\]}]", text, re.S)
         if not m:
             raise
-        return json.loads(m.group(0))
+        try:
+            return json.loads(m.group(0))
+        except json.JSONDecodeError:
+            return json.loads(_repair_json(m.group(0)))
+
+
+def _repair_json(t):
+    """Fix the usual model slips: LaTeX-style backslashes (\\frac, \\( ), raw newlines inside strings,
+    and output cut off mid-way (drop the incomplete trailing item and close the brackets)."""
+    t = re.sub(r"(?<!\\)\\(?![\\/\"u]|[bfnrt](?![A-Za-z]))", r"\\\\", t)
+    out, in_str, esc = [], False, False
+    for ch in t:
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+            elif ch == "\n":
+                ch = "\\n"
+            elif ch == "\t":
+                ch = " "
+            out.append(ch)
+        else:
+            if ch == '"':
+                in_str = True
+            out.append(ch)
+    t = "".join(out)
+    try:
+        json.loads(t)
+        return t
+    except json.JSONDecodeError:
+        pass
+    i = t.rfind("}")
+    while i > 0:
+        head = t[:i + 1]
+        stack = []
+        ok = True
+        for ch in re.sub(r'"(?:[^"\\]|\\.)*"', "", head):
+            if ch in "[{":
+                stack.append(ch)
+            elif ch in "]}":
+                if not stack or {"]": "[", "}": "{"}[ch] != stack.pop():
+                    ok = False
+                    break
+        if ok:
+            cand = head + "".join({"[": "]", "{": "}"}[c] for c in reversed(stack))
+            try:
+                json.loads(cand)
+                return cand
+            except json.JSONDecodeError:
+                pass
+        i = t.rfind("}", 0, i)
+    return t
 
 
 def _openai(provider, cfg, system, user, max_tokens):
