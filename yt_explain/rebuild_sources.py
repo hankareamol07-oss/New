@@ -9,6 +9,7 @@ Reads books/socr/<book>/<page>.md (see books/sarvam_ocr.py), finds the real firs
 For every rewritten unit the stale LLM parts in unit_text are dropped (they are rebuilt from the clean
 text on next use) and meta.pages is updated.  Usage: python3 rebuild_sources.py [--dry] [--std 6] [--book 37]
 """
+import difflib
 import argparse
 import json
 import os
@@ -72,7 +73,14 @@ def heading_score(md, no, title):
     head = [l.strip() for l in md.splitlines()[:16] if l.strip() and not l.strip().startswith("*")]
     nt = norm(title)
     score = 0
-    for l in head:
+    # titles printed over 2-3 short lines ('## All' / 'about' / 'Money'): also try the joined runs
+    joined = []
+    for i in range(len(head) - 1):
+        for k in (2, 3):
+            run = head[i:i + k]
+            if len(run) == k and all(len(x) <= 24 for x in run):
+                joined.append(("## " if run[0].startswith("#") else "") + " ".join(x.lstrip("#").strip() for x in run))
+    for l in head + joined:
         h = l.lstrip("#").strip()
         m = re.match(r"^([0-9०-९]+)[\.\)]?\s+(.+)$", h)
         if m and to_int(m.group(1)) == no:
@@ -82,7 +90,8 @@ def heading_score(md, no, title):
             score += 1
             continue
         nh = norm(h)
-        if nt and len(nh) >= 3 and (nh == nt or (nh in nt and len(nh) >= 0.6 * len(nt)) or (nt in nh and len(nt) >= 5)):
+        if nt and len(nh) >= 3 and (nh == nt or (nh in nt and len(nh) >= 0.6 * len(nt)) or (nt in nh and len(nt) >= 5)
+                                    or (len(nt) >= 6 and difflib.SequenceMatcher(None, nh[:len(nt) + 4], nt).ratio() >= 0.8)):
             score += 3 if l.startswith("#") else 2
     return score
 
