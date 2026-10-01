@@ -1,0 +1,72 @@
+{
+ "channel_name": "स्वाध्याय",
+ "channel_tagline": "इयत्ता 1 ली ते 8 वी - प्रत्येक घटकाचे संपूर्ण स्पष्टीकरण",
+ "data_dir": "data",
+ "out_dir": "output",
+ "ffmpeg": "C:/ffmpeg/bin/ffmpeg.exe",
+ "llm_order": [
+  "groq",
+  "gemini",
+  "nvidia"
+ ],
+ "gemini_api_key": "",
+ "nvidia_api_key": "",
+ "groq_api_key": "",
+ "sarvam_api_key": "",
+ "tts_backend": "gemini",
+ "sarvam": {
+  "model": "bulbul:v3",
+  "speaker": "shubh",
+  "pace": 0.95
+ },
+ "gemini_tts_voice": [
+  "Kore",
+  "Leda",
+  "Charon",
+  "Aoede"
+ ],
+ "voices": {
+  "mr": "mr-IN-AarohiNeural",
+  "hi": "hi-IN-SwaraNeural",
+  "en": "en-IN-NeerjaNeural"
+ },
+ "make_short": true,
+ "stickman": true,
+ "stds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "youtube": {
+  "enabled": true,
+  "client_secret": "client_secret.json",
+  "privacy": "private",
+  "schedule": {
+   "enabled": true,
+   "hour": 18,
+   "minute": 0,
+   "every_days": 1
+  }
+ },
+ "auto": {
+  "per_run": 2,
+  "max_retries": 2,
+  "pause_sec": 10
+ },
+ "avatar": {
+  "enabled": true,
+  "gender": "female",
+  "style": "pro"
+ },
+ "theme": "auto",
+ "vertex": {
+  "project": "",
+  "location": "global",
+  "key_file": "gcp_key.json"
+ }
+}
