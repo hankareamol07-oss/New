@@ -43,10 +43,30 @@ def page_md(d, p):
     return open(fp, encoding="utf-8").read() if os.path.exists(fp) else None
 
 
+IMGREF = re.compile(r"\b(the|this|in the) (image|illustration|picture)\b|^\d+\.\s*\*\*.*\?\*\*$", re.I)
+ANALYSIS = re.compile(r"^#{2,4}\s*(Analysis|Description|Relevant Knowledge|Integrated Knowledge|Conclusion|Interaction|Background|Art Style|Characters?)\b.*:?$", re.I)
+BOLDLIST = re.compile(r"^(\d+\.|-)\s*\*\*[A-Z][^*]{2,40}\*\*:?")
+DESC = re.compile(r"^\**(The|This) (image|picture|illustration|photo|figure) (depicts|shows|features|is|displays|presents|illustrates)\b", re.I)
+
+
 def clean(md):
-    out, skip_caption = [], False
+    out, skip_caption, in_desc = [], False, False
     for line in md.splitlines():
         s = line.strip()
+        # OCR-generated figure descriptions: an italic block (may span paragraphs) or "The image depicts ..."
+        if in_desc:
+            if s.endswith("*") or s.startswith("#") or s == "[IMG]":
+                in_desc = False
+            if not s.startswith("#"):
+                continue
+        if DESC.search(s) or ANALYSIS.search(s):
+            in_desc = not s.endswith("*") or ANALYSIS.search(s) is not None
+            continue
+        if BOLDLIST.search(s):
+            continue
+        s = re.sub(r"([.\-_…]\s?){6,}", ".....", s)
+        if IMGREF.search(s):  # image-analysis Q&A lines the OCR model sometimes emits
+            continue
         if s == "[IMG]":
             skip_caption = True
             continue
@@ -230,7 +250,7 @@ def main():
             next_p = min([w[0] for _, w in ordered[i + 1:] if w[1]] or [n_pages + 1])
             v.append(prev_p < v[0] < next_p)
         starts[bid] = (d, found, n_pages)
-    n_ok = n_guess = n_skip = 0
+    n_ok = n_guess = n_skip = n_changed = 0
     for r in rows:
         if a.std and r["std"] != a.std:
             continue
@@ -245,7 +265,7 @@ def main():
         meta = json.loads(r["meta_json"] or "{}")
         pages = [clean(page_md(d, p) or "") for p in range(first, last + 1)]
         text = "\n\n".join(p for p in pages if p)
-        if len(text) < 200:
+        if len(text) < 60:
             n_skip += 1
             print("  short text, skipped:", r["unit_id"], r["title"], first, last)
             continue
@@ -267,15 +287,18 @@ def main():
         old = os.path.join(src, "01_textbook.txt")
         if os.path.exists(old) and not os.path.exists(old + ".tesseract"):
             os.replace(old, old + ".tesseract")
+        unchanged = os.path.exists(old) and open(old, encoding="utf-8").read() == text + "\n"
         open(old, "w", encoding="utf-8").write(text + "\n")
         json.dump({"pdf_pages": [first, last], "ocr": a.ocr, "heading_score": score},
                   open(os.path.join(src, "01_textbook.pages.json"), "w", encoding="utf-8"), ensure_ascii=False)
         meta["pages"] = [first, last]
         meta["ocr"] = a.ocr
         st.db.execute("UPDATE units SET meta_json=? WHERE unit_id=?", (json.dumps(meta, ensure_ascii=False), r["unit_id"]))
-        st.db.execute("DELETE FROM unit_text WHERE unit_id=?", (r["unit_id"],))
+        if not unchanged:
+            n_changed += 1
+            st.db.execute("DELETE FROM unit_text WHERE unit_id=?", (r["unit_id"],))
     st.commit()
-    print(f"rewritten: heading found {n_ok}, catalogue page used {n_guess}, skipped {n_skip}")
+    print(f"rewritten: heading found {n_ok}, catalogue page used {n_guess}, skipped {n_skip}, text changed {n_changed}")
 
 
 if __name__ == "__main__":
