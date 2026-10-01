@@ -26,9 +26,9 @@ JUNK = re.compile(r"विनामूल्य वितरणासाठी|F
 
 
 def norm(t):
-    t = re.sub(r"^\s*[0-9०-९]+[\.\)]\s*", "", t or "")
+    t = re.sub(r"^\s*[0-9०-९]+(\.[0-9०-९]+)?[\.\)]?\s+", "", t or "")  # "7." / "3.7" / "९" unit prefixes
     t = re.sub(r"\(.*?\)", "", t)
-    return re.sub(r"[^\w]+", "", t.lower())
+    return re.sub(r"[^\w\u0900-\u097F]+", "", t.lower())  # keep Devanagari matras (not \w)
 
 
 def to_int(s):
@@ -92,7 +92,7 @@ def heading_score(md, no, title):
         nh = norm(h)
         if nt and len(nh) >= 3 and (nh == nt or (nh in nt and len(nh) >= 0.6 * len(nt)) or (nt in nh and len(nt) >= 5)
                                     or (len(nt) >= 6 and difflib.SequenceMatcher(None, nh[:len(nt) + 4], nt).ratio() >= 0.8)):
-            score += 3 if l.startswith("#") else 2
+            score += 3 if l.startswith("#") or (nh == nt and l in head[:3]) else 2
     return score
 
 
@@ -133,13 +133,18 @@ def main():
             continue
         n_pages = max([int(f[:3]) for f in os.listdir(d) if f.endswith(".md")] or [0])
         chs = sorted(b.get("chapters", []), key=lambda c: int(c.get("start_page") or 0))
-        found, prev = {}, 0
+        found, prev, seen = {}, 0, set()
         for c in chs:
-            p, s = find_start(d, c, n_pages, prev)
+            guess = int(c.get("start_page") or 0)
+            # catalogue placeholders (several chapters on one page) are out of order: search the whole book
+            placeholder = guess in seen
+            seen.add(guess)
+            p, s = find_start(d, c, n_pages, 0 if placeholder else prev)
             if p is None:
-                p = int(c.get("start_page") or 0)
+                p = guess
             found[c["no"]] = [p, s]
-            prev = p
+            if not placeholder:
+                prev = p
         # end = next chapter start - 1
         ordered = sorted(found.items(), key=lambda kv: kv[1][0])
         for i, (no, v) in enumerate(ordered):
