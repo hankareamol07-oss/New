@@ -228,14 +228,22 @@ def detect(d, chs, n_pages, whole):
     return found
 
 
+INDEX = re.compile(r"अनुक्रमणिका|अनुक्रम|CONTENTS|Contents|विषय-सूची|विषयसूची")
+
+
 def candidates(d, c, n_pages):
     out = []
+    guess = int(c.get("start_page") or 0)
     for p in range(1, n_pages + 1):
         md = page_md(d, p)
-        if md:
-            sc = heading_score(md, c["no"], c["title"])
-            if sc >= 3:
-                out.append((p, sc))
+        if not md or INDEX.search(md[:400]):
+            continue
+        sc = heading_score(md, c["no"], c["title"])
+        heads = [l.strip() for l in md.splitlines()[:4] if l.startswith("##")]
+        if sc < 3 and heads and heads[0] == "##" and abs(p - guess) <= 2 and len(md.strip()) > 300:
+            sc = 5  # chapter title printed as a picture: empty heading at the top of the page
+        if sc >= 3:
+            out.append((p, sc))
     return out
 
 
@@ -268,6 +276,16 @@ def detect_dp(d, chs, n_pages):
         _, (prev_lp, pick) = dp[i + 1][lp]
         found[chs[i]["no"]] = [pick[0], pick[1]] if pick else [guesses[i], 0]
         lp = prev_lp
+    # a chapter the ordering left out but whose printed heading is found clearly somewhere else: the catalogue
+    # order is wrong for it (lesson renumbered), trust the heading
+    taken = {v[0] for v in found.values() if v[1]}
+    for i, c in enumerate(chs):
+        if found[c["no"]][1]:
+            continue
+        best = max([pc for pc in cands[i] if pc[0] not in taken] or [(0, 0)], key=lambda pc: pc[1])
+        if best[1] >= 8 or (best[1] >= 5 and abs(best[0] - guesses[i]) <= 3):
+            found[c["no"]] = [best[0], best[1]]
+            taken.add(best[0])
     return found
 
 
