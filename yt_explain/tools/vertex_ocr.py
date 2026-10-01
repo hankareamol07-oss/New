@@ -29,6 +29,7 @@ Transcribe ALL text on each page exactly as printed, in natural reading order (c
 headings as '## ', paragraphs, numbered lists, questions, tables as Markdown tables, poems line by line,
 activity boxes (करून पाहा / जरा डोके चालवा / माहीत आहे का तुम्हांला? ...) with their heading. Skip page numbers,
 running headers and the 'free distribution' notice. Write '[IMG]' where a picture/figure is (no description).
+Write any dotted / blank fill-in line as exactly '.....' (five dots) and never repeat dots, dashes or spaces.
 Do NOT translate, summarise, correct or add anything. Use the exact Devanagari spelling as printed.
 If a page begins a NEW chapter / lesson / poem (big chapter number and title at the top), write the number and the
 title as two '## ' lines (e.g. '## ३' then '## विलग करू या घटक'). Do not use '## ' for ordinary sub-headings.
@@ -52,10 +53,10 @@ def find_pdf(name):
 
 
 def call(parts):
-    body = {"contents": [{"role": "user", "parts": parts}], "generationConfig": {"temperature": 0.1, "maxOutputTokens": 16000, "thinkingConfig": {"thinkingBudget": 0}}}
     for attempt in range(8):
         model = MODELS[min(attempt, len(MODELS) - 1)]
         url, h = vertex.endpoint(CFG, model)
+        body = {"contents": [{"role": "user", "parts": parts}], "generationConfig": {"temperature": 0.1, "maxOutputTokens": 16000, **({"thinkingConfig": {"thinkingBudget": 0}} if "flash" in model and "3.5" not in model else {})}}
         try:
             r = requests.post(url, json=body, headers=h, timeout=240)
         except Exception as e:
