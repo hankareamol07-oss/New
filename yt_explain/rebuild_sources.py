@@ -194,6 +194,7 @@ def main():
 
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry", action="store_true")
+    ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--std", type=int)
     ap.add_argument("--book", type=int)
     ap.add_argument("--ocr", default="vertex", help="provenance label written to meta/pages.json")
@@ -220,6 +221,14 @@ def main():
             c = next(c for c in chs if c["no"] == no)
             end = nxt if nxt else int(c.get("end_page") or v[0]) + 1
             v.append(min(max(end, v[0]), n_pages))
+        # a catalogue-page fallback is only trusted when it lies between detected neighbours
+        for i, (no, v) in enumerate(ordered):
+            if v[1]:
+                v.append(True)
+                continue
+            prev_p = max([w[0] for _, w in ordered[:i] if w[1]] or [0])
+            next_p = min([w[0] for _, w in ordered[i + 1:] if w[1]] or [n_pages + 1])
+            v.append(prev_p < v[0] < next_p)
         starts[bid] = (d, found, n_pages)
     n_ok = n_guess = n_skip = 0
     for r in rows:
@@ -232,7 +241,7 @@ def main():
         if r["chapter_no"] not in found:
             n_skip += 1
             continue
-        first, score, last = found[r["chapter_no"]]
+        first, score, last = found[r["chapter_no"]][:3]
         meta = json.loads(r["meta_json"] or "{}")
         pages = [clean(page_md(d, p) or "") for p in range(first, last + 1)]
         text = "\n\n".join(p for p in pages if p)
@@ -240,11 +249,17 @@ def main():
             n_skip += 1
             print("  short text, skipped:", r["unit_id"], r["title"], first, last)
             continue
+        if score < 3 and not found[r["chapter_no"]][3]:
+            n_skip += 1
+            print(f"  unresolved (catalogue page outside detected neighbours), kept old source: std {r['std']} {r['title']} p{first}")
+            continue
         if score < 3:
             n_guess += 1
             print(f"  heading not found, using catalogue page: std {r['std']} {r['title']} p{first}-{last}")
         else:
             n_ok += 1
+            if a.verbose:
+                print(f"  ok: std {r['std']} {r['title']} p{first}-{last} score {score}")
         src = os.path.join(HERE, meta.get("sources_dir", ""))
         if a.dry:
             continue
