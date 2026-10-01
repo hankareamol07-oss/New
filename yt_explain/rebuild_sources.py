@@ -120,6 +120,28 @@ def next_chapter_page(d, first, n_pages):
     return n_pages
 
 
+def trim_tail(txt, nxt):
+    """Cut the text at the heading of the NEXT chapter (dict with no/title) when the last page already starts it."""
+    if not nxt:
+        return txt
+    lines = txt.splitlines()
+    nt = norm(nxt.get("title") or "")
+    for i in range(max(1, len(lines) // 4), len(lines)):
+        l = lines[i]
+        if not l.startswith("## "):
+            continue
+        h = l.lstrip("#").strip()
+        m = re.match(r"^([0-9०-९]+(?:\.[0-9०-९]+)?)[\.\)]?\s*(.*)$", h)
+        body = m.group(2) if m else h
+        num_ok = m is not None and to_int(m.group(1)) == nxt.get("no")
+        nh = norm(body)
+        if (num_ok and (not nh or nh in nt or nt in nh)) or (nt and len(nh) >= 4 and (nh == nt or (nh in nt and len(nh) >= 0.6 * len(nt)) or (nt in nh and len(nt) >= 5))):
+            if not nh and i + 1 < len(lines) and lines[i + 1].startswith("## ") and norm(lines[i + 1].lstrip("#")) not in nt:
+                continue
+            return "\n".join(lines[:i]).strip()
+    return txt
+
+
 def heading_score(md, no, title):
     """How strongly the top of this page looks like the start of chapter `no` / `title`.
     Title match on a '## ' heading is the strong signal; the printed chapter number is often mis-read."""
@@ -298,6 +320,8 @@ def main():
         if score and pages:
             pages[0] = trim_to_heading(pages[0], r["chapter_no"], r["title"])
         text = "\n\n".join(p for p in pages if p)
+        chs_b = by_id[r["book_id"]].get("chapters", [])
+        text = trim_tail(text, next((c for c in chs_b if c["no"] == r["chapter_no"] + 1), None))
         if len(text) < 60:
             n_skip += 1
             print("  short text, skipped:", r["unit_id"], r["title"], first, last)

@@ -76,11 +76,24 @@ def build_parts(cfg, u, meta, text, log=print):
         return PROMPT.format(std=u["std"], subject=u["subject"], title=u["title"], text=text[:n],
                              poem_note=POEM_NOTE if meta.get("is_poem") else "")
     log("[text] cleaning chapter text into parts ...")
-    parts = []
-    for chunk in _chunks(text, 30000):
+    def run(chunk):
+        nonlocal text
         text = chunk
         out, _ = chat_json(cfg, SYSTEM, prompt(30000), max_tokens=12000, log=log, shrink=prompt)
-        parts += [p for p in out.get("parts") or [] if isinstance(p, dict) and (p.get("text") or "").strip()]
+        got = [p for p in out.get("parts") or [] if isinstance(p, dict) and (p.get("text") or "").strip()]
+        cov = sum(len(p["text"]) for p in got) / max(len(chunk), 1)
+        if len(chunk) > 1500 and cov < 0.4:
+            # output was cut short (or the model summarised): redo in two smaller pieces
+            halves = _chunks(chunk, len(chunk) // 2 + 1)
+            if len(halves) > 1 and len(chunk) > 1500:
+                log(f"[text] only {cov:.0%} of the text came back, retrying in {len(halves)} pieces")
+                return [p for h in halves for p in run(h)]
+            raise RuntimeError(f"parts cover only {cov:.0%} of the chapter text")
+        return got
+
+    parts = []
+    for chunk in _chunks(text, 30000):
+        parts += run(chunk)
     for p in parts:
         p["selected"] = 1
     return parts
