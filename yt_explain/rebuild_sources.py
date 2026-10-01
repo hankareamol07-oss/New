@@ -110,6 +110,16 @@ def trim_to_heading(txt, no, title):
     return txt
 
 
+def next_chapter_page(d, first, n_pages):
+    """First page after `first` that opens a new chapter ('## <number>' then '## <title>'), e.g. the civics
+    section after the last history chapter of a combined book; n_pages when there is none."""
+    for p in range(first + 2, n_pages + 1):
+        heads = [l.lstrip("#").strip() for l in page_md(d, p).splitlines()[:6] if l.startswith("## ")]
+        if len(heads) >= 2 and to_int(heads[0]) is not None and len(heads[0]) <= 3 and len(norm(heads[1])) >= 3:
+            return p - 1
+    return n_pages
+
+
 def heading_score(md, no, title):
     """How strongly the top of this page looks like the start of chapter `no` / `title`.
     Title match on a '## ' heading is the strong signal; the printed chapter number is often mis-read."""
@@ -260,7 +270,7 @@ def main():
         for i, (no, v) in enumerate(ordered):
             nxt = ordered[i + 1][1][0] - 1 if i + 1 < len(ordered) else None
             c = next(c for c in chs if c["no"] == no)
-            end = nxt if nxt else int(c.get("end_page") or v[0]) + 1
+            end = nxt if nxt else min(int(c.get("end_page") or v[0]) + 1, next_chapter_page(d, v[0], n_pages))
             v.append(min(max(end, v[0]), n_pages))
         # a catalogue-page fallback is only trusted when it lies between detected neighbours
         for i, (no, v) in enumerate(ordered):

@@ -54,6 +54,19 @@ def save_parts(st, unit_id, parts):
     st.commit()
 
 
+def _chunks(text, n):
+    """Split a long chapter at paragraph breaks into pieces of at most n chars (one LLM call each)."""
+    out, cur = [], ""
+    for para in text.split("\n\n"):
+        if cur and len(cur) + len(para) + 2 > n:
+            out.append(cur)
+            cur = ""
+        cur = (cur + "\n\n" + para) if cur else para
+    if cur:
+        out.append(cur)
+    return out or [text]
+
+
 def build_parts(cfg, u, meta, text, log=print):
     """LLM: noisy OCR chapter -> [{heading, text}] (empty list when there is no textbook text)."""
     if not (text or "").strip():
@@ -63,8 +76,11 @@ def build_parts(cfg, u, meta, text, log=print):
         return PROMPT.format(std=u["std"], subject=u["subject"], title=u["title"], text=text[:n],
                              poem_note=POEM_NOTE if meta.get("is_poem") else "")
     log("[text] cleaning chapter text into parts ...")
-    out, _ = chat_json(cfg, SYSTEM, prompt(30000), max_tokens=12000, log=log, shrink=prompt)
-    parts = [p for p in out.get("parts") or [] if isinstance(p, dict) and (p.get("text") or "").strip()]
+    parts = []
+    for chunk in _chunks(text, 30000):
+        text = chunk
+        out, _ = chat_json(cfg, SYSTEM, prompt(30000), max_tokens=12000, log=log, shrink=prompt)
+        parts += [p for p in out.get("parts") or [] if isinstance(p, dict) and (p.get("text") or "").strip()]
     for p in parts:
         p["selected"] = 1
     return parts
