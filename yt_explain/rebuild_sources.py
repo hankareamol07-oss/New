@@ -75,6 +75,8 @@ def clean(md):
             continue
         if s and not s.startswith("*"):
             skip_caption = False
+        if s.startswith("```"):
+            continue
         if not s or s == "---" or JUNK.search(s):
             if not s:
                 out.append("")
@@ -87,6 +89,23 @@ def clean(md):
             out.append(s)
     txt = "\n".join(out)
     return re.sub(r"\n{3,}", "\n\n", txt).strip()
+
+
+def trim_to_heading(txt, no, title):
+    """Drop the tail of the previous chapter printed above this chapter's heading on its first page."""
+    lines = txt.splitlines()
+    nt = norm(title)
+    for i, l in enumerate(lines[:40]):
+        h = l.lstrip("#").strip()
+        if not l.startswith("#") and to_int(h) != no:
+            continue
+        m = re.match(r"^([0-9०-९]+)[\.\\)]?\s*(.*)$", h)
+        body = m.group(2) if m else h
+        num_ok = m is not None and to_int(m.group(1)) == no
+        nh = norm(body)
+        if (num_ok and (not nh or nh == nt or nh in nt or nt in nh)) or (nt and len(nh) >= 3 and (nh == nt or (nh in nt and len(nh) >= 0.6 * len(nt)) or (nt in nh and len(nt) >= 5))):
+            return "\n".join(lines[i:]).strip() if i else txt
+    return txt
 
 
 def heading_score(md, no, title):
@@ -264,6 +283,8 @@ def main():
         first, score, last = found[r["chapter_no"]][:3]
         meta = json.loads(r["meta_json"] or "{}")
         pages = [clean(page_md(d, p) or "") for p in range(first, last + 1)]
+        if score and pages:
+            pages[0] = trim_to_heading(pages[0], r["chapter_no"], r["title"])
         text = "\n\n".join(p for p in pages if p)
         if len(text) < 60:
             n_skip += 1
