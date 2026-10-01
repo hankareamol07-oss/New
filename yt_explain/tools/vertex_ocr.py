@@ -57,7 +57,7 @@ def call(parts):
         model = MODELS[min(attempt, len(MODELS) - 1)]
         url, h = vertex.endpoint(CFG, model)
         try:
-            r = requests.post(url, json=body, headers=h, timeout=600)
+            r = requests.post(url, json=body, headers=h, timeout=240)
         except Exception as e:
             print("net", e, file=sys.stderr); time.sleep(15); continue
         if r.status_code == 200:
