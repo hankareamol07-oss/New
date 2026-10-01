@@ -64,7 +64,9 @@ def clean(md):
             continue
         if BOLDLIST.search(s):
             continue
+        s = re.sub(r"[ \t]{3,}", " ", s)
         s = re.sub(r"([.\-_…]\s?){6,}", ".....", s)
+        s = re.sub(r"(.)\1{20,}", r"\1\1\1", s)
         if IMGREF.search(s):  # image-analysis Q&A lines the OCR model sometimes emits
             continue
         if s == "[IMG]":
