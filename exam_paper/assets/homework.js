@@ -81,7 +81,7 @@
   function packQuestions(need) {
     const have = new Set(state.quiz.map(q => q.text.trim()));
     return (state.pack?.quiz || []).filter(q => !have.has(q.q.trim())).slice(0, need)
-      .map(q => ({ kind: 'mcq', text: q.q, options: q.options.slice(0, 4), answer: +q.answer, explain: q.explain || '' }));
+      .map(q => ({ kind: 'mcq', text: q.q, options: q.options.slice(0, 4), answer: +q.answer, explain: q.explain || '', image_url: q.image_url || null }));
   }
   function fillDefaults() {
     const std = +stdSel.value, en = isEnglish();

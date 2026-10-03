@@ -4,6 +4,7 @@ Exam Paper module - localhost (XAMPP/WAMP) setup
 2. Create a MySQL database (e.g. "school") with utf8mb4 charset.
 3. Import ALL tables + data in one step (no PHP importers needed):
      mysql -u root -p school < exam_paper/db/full_dump.sql
+     mysql -u root -p school < exam_paper/db/topic_packs.sql     (online-quiz topic packs, shipped separately)
    (or import db/full_dump.sql from phpMyAdmin - it is large, use the command line if phpMyAdmin times out)
    Then the 2026-27 तचन topic bank (std 1-8), used by the builders for topic names:
      mysql -u root -p school < exam_paper/db/tachan_bank_schema.sql

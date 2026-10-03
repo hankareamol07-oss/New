@@ -19,7 +19,7 @@ $dataDir = EP_ROOT . '/data';
 $db = ep_db();
 
 // older installs: add columns introduced after the first release
-foreach (['pairs_json TEXT DEFAULT NULL', "source VARCHAR(10) NOT NULL DEFAULT 'book'", 'marks TINYINT DEFAULT NULL', 'model VARCHAR(80) DEFAULT NULL'] as $col) {
+foreach (['pairs_json TEXT DEFAULT NULL', "source VARCHAR(10) NOT NULL DEFAULT 'book'", 'marks TINYINT DEFAULT NULL', 'model VARCHAR(80) DEFAULT NULL', 'bloom VARCHAR(12) DEFAULT NULL'] as $col) {
     try {
         $db->exec('ALTER TABLE ep_book_questions ADD COLUMN ' . $col);
     } catch (PDOException $e) {
@@ -38,8 +38,8 @@ $delCh = $db->prepare('DELETE FROM ep_book_chapters WHERE book_id = ?');
 $insCh = $db->prepare('INSERT INTO ep_book_chapters (book_id, chapter_no, title, start_page, end_page, tachan_seq, old_chapter_no) VALUES (?,?,?,?,?,?,?)');
 $delQ = $db->prepare('DELETE FROM ep_book_questions WHERE book_id = ?');
 $insQ = $db->prepare('INSERT INTO ep_book_questions (bq_id, book_id, chapter_id, standard, subject, lang, page, block, instruction, qtype, text, item_no, needs_figure, page_image,
-                                                     options_json, pairs_json, answer, ai_cleaned, figure_image, source, marks, model)
-                      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                                                     options_json, pairs_json, answer, ai_cleaned, figure_image, source, marks, model, bloom)
+                      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
 $delPack = $db->prepare('DELETE FROM ep_topic_packs WHERE book_id = ?');
 $insPack = $db->prepare('REPLACE INTO ep_topic_packs (chapter_id, book_id, standard, subject, lang, title, notes_json, quiz_json, model) VALUES (?,?,?,?,?,?,?,?,?)');
 
@@ -71,7 +71,7 @@ foreach ($books['questions'] as $q) {
         $q['needs_figure'] ? 1 : 0, $q['page_image'],
         !empty($q['options']) ? json_encode($q['options'], JSON_UNESCAPED_UNICODE) : null,
         !empty($q['pairs']) ? json_encode($q['pairs'], JSON_UNESCAPED_UNICODE) : null, $q['answer'] ?? null,
-        !empty($q['ai_cleaned']) ? 1 : 0, $q['figure_image'] ?? null, 'book', null, null,
+        !empty($q['ai_cleaned']) ? 1 : 0, $q['figure_image'] ?? null, $q['source'] ?? 'book', $q['marks'] ?? null, $q['model'] ?? null, $q['bloom'] ?? null,
     ]);
     $nQ++;
 }
@@ -87,7 +87,7 @@ foreach (json_decode((string)@file_get_contents($dataDir . '/typed_questions.jso
         0, null,
         !empty($q['options']) ? json_encode($q['options'], JSON_UNESCAPED_UNICODE) : null,
         !empty($q['pairs']) ? json_encode($q['pairs'], JSON_UNESCAPED_UNICODE) : null, $q['answer'] ?? null,
-        1, null, 'typed', $q['marks'] ?? null, $q['model'] ?? null,
+        1, null, 'typed', $q['marks'] ?? null, $q['model'] ?? null, $q['bloom'] ?? null,
     ]);
     $nT++;
 }

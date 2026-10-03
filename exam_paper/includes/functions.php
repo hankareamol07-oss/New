@@ -400,6 +400,12 @@ function ep_topic_pack(int $chapterId): ?array
     $p = $p ?: ['chapter_id' => $chapterId, 'notes_json' => '[]', 'quiz_json' => '[]', 'model' => null];
     $p['notes'] = json_decode($p['notes_json'], true) ?: [];
     $p['quiz'] = json_decode($p['quiz_json'], true) ?: [];
+    foreach ($p['quiz'] as &$qq) {
+        if (!empty($qq['figure_image'])) {
+            $qq['image_url'] = ep_book_image_url($qq['figure_image']);
+        }
+    }
+    unset($qq);
     $seen = array_map(fn($q) => mb_strtolower(trim($q['q'])), $p['quiz']);
     foreach ($typed as $q) {
         if (!in_array(mb_strtolower(trim($q['q'])), $seen, true)) {
@@ -529,7 +535,13 @@ function ep_book_source(?string $s): string
 }
 
 /** Random bank questions from the given chapters; exact qtype first, then related types. */
-function ep_book_random(array $chapterIds, string $qtype, int $count, array $exclude = [], string $source = ''): array
+/** Bloom's taxonomy filter for the bank: one of the six levels or '' = any. */
+function ep_bloom_level(?string $b): string
+{
+    return in_array($b, ['remember', 'understand', 'apply', 'analyze', 'evaluate', 'create'], true) ? $b : '';
+}
+
+function ep_book_random(array $chapterIds, string $qtype, int $count, array $exclude = [], string $source = '', string $bloom = ''): array
 {
     $chapterIds = array_values(array_filter(array_map('intval', $chapterIds)));
     if (!$chapterIds || $count <= 0) {
@@ -537,12 +549,17 @@ function ep_book_random(array $chapterIds, string $qtype, int $count, array $exc
     }
     $exclude = array_values(array_filter(array_map('intval', $exclude)));
     $source = ep_book_source($source);
-    $pick = function (array $types, int $n) use ($chapterIds, &$exclude, $source): array {
+    $bloom = ep_bloom_level($bloom);
+    $pick = function (array $types, int $n) use ($chapterIds, &$exclude, $source, $bloom): array {
         $params = $chapterIds;
         $sql = 'SELECT * FROM ep_book_questions WHERE chapter_id IN (' . implode(',', array_fill(0, count($chapterIds), '?')) . ')';
         if ($source !== '') {
             $sql .= ' AND source = ?';
             $params[] = $source;
+        }
+        if ($bloom !== '') {
+            $sql .= ' AND bloom = ?';
+            $params[] = $bloom;
         }
         if ($types) {
             $sql .= ' AND qtype IN (' . implode(',', array_fill(0, count($types), '?')) . ')';

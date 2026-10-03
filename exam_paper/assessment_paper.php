@@ -55,6 +55,16 @@ require __DIR__ . '/includes/header.php';
           <option value="book">स्वाध्याय only (textbook exercises)</option>
           <option value="typed">AI सराव प्रश्नसंच only (typed set: रिकाम्या जागा / एका शब्दात / कारण / आकृती …)</option>
         </select>
+        <label class="form-label small mb-1">Bloom's level (ब्लूम वर्गीकरण)</label>
+        <select class="form-select mb-2" id="qBloom" title="Pick questions of one Bloom's taxonomy level only; default mixes all levels">
+          <option value="">Any level (mixed)</option>
+          <option value="remember">स्मरण — Remember</option>
+          <option value="understand">आकलन — Understand</option>
+          <option value="apply">उपयोजन — Apply</option>
+          <option value="analyze">विश्लेषण — Analyze</option>
+          <option value="evaluate">मूल्यमापन — Evaluate</option>
+          <option value="create">निर्मिती — Create</option>
+        </select>
         <label class="form-label small mb-1 d-flex justify-content-between">Chapters covered <span><a href="#" id="chAll" class="small">all</a> &middot; <a href="#" id="chFirst" class="small">1st half</a> &middot; <a href="#" id="chSecond" class="small">2nd half</a> &middot; <a href="#" id="chNone" class="small">none</a></span></label>
         <div id="chapters" class="border rounded p-2 mb-2 bg-white" style="max-height:220px;overflow:auto"></div>
         <label class="form-label small mb-1">Paper layout</label>

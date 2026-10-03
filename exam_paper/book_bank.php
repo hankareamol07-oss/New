@@ -9,6 +9,7 @@ $chapterId = (int)($_GET['chapter_id'] ?? 0);
 $qtype = trim($_GET['qtype'] ?? '');
 $search = trim($_GET['q'] ?? '');
 $onlyFigures = !empty($_GET['figures']);
+$bloom = ep_bloom_level($_GET['bloom'] ?? '');
 $page = max(1, (int)($_GET['page'] ?? 1));
 $size = 25;
 
@@ -34,7 +35,8 @@ if ($bookId || $search) {
     if ($chapterId) { $where[] = 'q.chapter_id = ?'; $params[] = $chapterId; }
     if ($qtype) { $where[] = 'q.qtype = ?'; $params[] = $qtype; }
     if ($search) { $where[] = '(q.text LIKE ? OR q.instruction LIKE ?)'; array_push($params, "%$search%", "%$search%"); }
-    if ($onlyFigures) { $where[] = 'q.needs_figure = 1'; }
+    if ($onlyFigures) { $where[] = '(q.needs_figure = 1 OR q.figure_image IS NOT NULL)'; }
+    if ($bloom) { $where[] = 'q.bloom = ?'; $params[] = $bloom; }
     $sql = 'FROM ep_book_questions q LEFT JOIN ep_book_chapters c ON c.chapter_id = q.chapter_id' . ($where ? ' WHERE ' . implode(' AND ', $where) : '');
     $st = $db->prepare("SELECT COUNT(*) $sql");
     $st->execute($params);
@@ -81,6 +83,13 @@ require __DIR__ . '/includes/header.php';
       </select>
     </div>
     <div class="col-md-2">
+      <label class="form-label small">Bloom's level</label>
+      <select name="bloom" class="form-select">
+        <option value="">-- any --</option>
+        <?php foreach (['remember' => 'स्मरण', 'understand' => 'आकलन', 'apply' => 'उपयोजन', 'analyze' => 'विश्लेषण', 'evaluate' => 'मूल्यमापन', 'create' => 'निर्मिती'] as $k => $v): ?><option value="<?= $k ?>" <?= $bloom === $k ? 'selected' : '' ?>><?= $v ?> (<?= $k ?>)</option><?php endforeach; ?>
+      </select>
+    </div>
+    <div class="col-md-2">
       <label class="form-label small">Search</label>
       <div class="input-group"><input name="q" class="form-control" value="<?= h($search) ?>" placeholder="text..."><button class="btn btn-primary">Go</button></div>
     </div>
@@ -109,10 +118,11 @@ require __DIR__ . '/includes/header.php';
       <td class="text-muted small"><?= $q['bq_id'] ?></td>
       <td><?= ep_markup($q['text']) ?>
         <?php if ($q['page_image_url']): ?><div class="small mt-1"><a href="<?= h($q['page_image_url']) ?>" target="_blank"><i class="bi bi-image"></i> page image</a></div><?php endif; ?>
+        <?php if ($q['figure_image_url']): ?><div class="mt-1"><img src="<?= h($q['figure_image_url']) ?>" alt="" style="max-height:90px;max-width:160px;border:1px solid #ddd"></div><?php endif; ?>
       </td>
       <td class="small text-muted"><?= h($q['block']) ?><?= $q['instruction'] ? ' — ' . h($q['instruction']) : '' ?></td>
       <td class="small"><?= $q['chapter_no'] ? $q['chapter_no'] . '. ' : '' ?><?= h($q['chapter_title'] ?? '') ?></td>
-      <td><span class="badge text-bg-secondary"><?= h($q['qtype']) ?></span></td>
+      <td><span class="badge text-bg-secondary"><?= h($q['qtype']) ?></span><?php if (!empty($q['bloom'])): ?> <span class="badge text-bg-light text-dark border" title="Bloom's level"><?= h($q['bloom']) ?></span><?php endif; ?></td>
       <td class="small"><?= (int)$q['page'] ?></td>
     </tr>
   <?php endforeach; ?>
