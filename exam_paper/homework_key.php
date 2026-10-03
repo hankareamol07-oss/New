@@ -71,6 +71,11 @@ $letters = ['A', 'B', 'C', 'D', 'E', 'F'];
     </tr>
   </table>
 
+  <?php if (!empty($hw['notes'])): ?>
+  <div class="hw-title"><?= $english ? 'Short notes' : 'थोडक्यात टिपा' ?></div>
+  <ul class="<?= $english ? '' : 'devanagari' ?>" style="padding-left:22px"><?php foreach ($hw['notes'] as $n): ?><li><?= h($n) ?></li><?php endforeach; ?></ul>
+  <?php endif; ?>
+
   <?php if ($hw['items']): ?>
   <div class="hw-title"><?= $L['hw'] ?></div>
   <ol class="items <?= $english ? '' : 'devanagari' ?>">
@@ -98,7 +103,7 @@ $letters = ['A', 'B', 'C', 'D', 'E', 'F'];
                 <li class="<?= $k === (int)$q['answer'] ? 'ok' : '' ?>"><?= $letters[$k] ?? $k + 1 ?>) <?= h($o) ?><?= $k === (int)$q['answer'] ? ' &#10004;' : '' ?></li>
               <?php endforeach; ?>
             </ul>
-            <div class="ans"><b><?= $L['ans'] ?></b> <?= $letters[(int)$q['answer']] ?? (int)$q['answer'] + 1 ?>) <?= h($q['options'][(int)$q['answer']] ?? '') ?></div>
+            <div class="ans"><b><?= $L['ans'] ?></b> <?= $letters[(int)$q['answer']] ?? (int)$q['answer'] + 1 ?>) <?= h($q['options'][(int)$q['answer']] ?? '') ?><?php if (!empty($q['explain'])): ?> <span class="muted">— <?= h($q['explain']) ?></span><?php endif; ?></div>
           <?php else: ?>
             <div class="ans"><b><?= $L['typed'] ?> :</b> <?= trim((string)$q['answer']) !== '' ? h($q['answer']) : '<span class="muted">' . $L['noans'] . '</span>' ?></div>
           <?php endif; ?>

@@ -1,0 +1,15 @@
+{
+  "_help": "Copy to config.json. Vertex (GCP) is used first for Gemini; gemini_api_keys / nvidia / groq are fallbacks for text-only steps.",
+  "vertex": {"project": "your-gcp-project-id", "location": "global", "key_file": "gcp_key.json"},
+  "gemini_api_keys": [],
+  "gemini_model": "gemini-2.5-flash",
+  "nvidia_api_key": "",
+  "nvidia_model": "meta/llama-3.3-70b-instruct",
+  "groq_api_key": "",
+  "groq_model": "openai/gpt-oss-120b",
+  "llm_order": ["gemini", "groq", "nvidia"],
+  "cost_cap_usd": 100,
+  "workers": 4,
+  "ocr_batch": 3,
+  "db": "explain.db"
+}

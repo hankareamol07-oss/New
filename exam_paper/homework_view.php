@@ -17,9 +17,9 @@ $subjectNames = ['Marathi' => 'मराठी', 'Maths' => 'गणित', 'Eng
     'Science' => 'विज्ञान', 'Hindi' => 'हिंदी', 'Geography' => 'भूगोल', 'History & Civics' => 'इतिहास व नागरिकशास्त्र'];
 $subject = $english ? $hw['subject'] : ($subjectNames[$hw['subject']] ?? $hw['subject']);
 $L = $english
-    ? ['std' => 'Std.', 'subject' => 'Subject', 'date' => 'Date', 'topic' => 'Chapter / Topic', 'teacher' => 'Teacher', 'name' => 'Name', 'roll' => 'Roll No.', 'hw' => 'Homework', 'note' => 'Note', 'quiz' => 'Online Quiz', 'sign' => 'Parent\'s sign',
+    ? ['std' => 'Std.', 'subject' => 'Subject', 'date' => 'Date', 'topic' => 'Chapter / Topic', 'teacher' => 'Teacher', 'name' => 'Name', 'roll' => 'Roll No.', 'hw' => 'Homework', 'notes' => 'Short notes', 'note' => 'Note', 'quiz' => 'Online Quiz', 'sign' => 'Parent\'s sign',
         'quiz_hint' => 'Scan the QR code or open the link on a phone, enter your name and attempt the quiz.', 'qcount' => 'questions', 'min' => 'min']
-    : ['std' => 'इयत्ता', 'subject' => 'विषय', 'date' => 'दिनांक', 'topic' => 'पाठ / घटक', 'teacher' => 'शिक्षक', 'name' => 'नाव', 'roll' => 'हजेरी क्र.', 'hw' => 'गृहपाठ', 'note' => 'सूचना', 'quiz' => 'ऑनलाइन प्रश्नमंजुषा', 'sign' => 'पालकांची सही',
+    : ['std' => 'इयत्ता', 'subject' => 'विषय', 'date' => 'दिनांक', 'topic' => 'पाठ / घटक', 'teacher' => 'शिक्षक', 'name' => 'नाव', 'roll' => 'हजेरी क्र.', 'hw' => 'गृहपाठ', 'notes' => 'थोडक्यात टिपा', 'note' => 'सूचना', 'quiz' => 'ऑनलाइन प्रश्नमंजुषा', 'sign' => 'पालकांची सही',
         'quiz_hint' => 'QR कोड स्कॅन करा किंवा मोबाईलवर लिंक उघडा, नाव लिहा व प्रश्नमंजुषा सोडवा.', 'qcount' => 'प्रश्न', 'min' => 'मिनिटे'];
 $quiz = $hw['quiz'];
 $quizUrl = $quiz ? ep_quiz_url($quiz) : '';
@@ -39,6 +39,8 @@ $std = $hw['std_label'] ?: 'Std ' . $hw['standard'];
 .sheet.homework .item-no { flex: 0 0 26px; font-weight: 600; }
 .sheet.homework .qtext { flex: 1; white-space: pre-wrap; }
 .sheet.homework .page-img { display: block; max-width: 120mm; max-height: 90mm; border: 1px solid #ccc; margin-top: 4px; }
+.sheet.homework ul.notes { margin: 4px 0 8px; padding-left: 22px; }
+.sheet.homework ul.notes li { margin: 2px 0; }
 .sheet.homework .note { margin-top: 12px; padding: 6px 10px; border: 1px dashed #666; border-radius: 4px; white-space: pre-wrap; }
 .sheet.homework .quiz-box { margin-top: 18px; border: 2px solid #000; border-radius: 6px; padding: 10px 12px; display: flex; gap: 14px; align-items: center; page-break-inside: avoid; }
 .sheet.homework .quiz-box .qr { flex: 0 0 34mm; width: 34mm; height: 34mm; }
@@ -89,6 +91,13 @@ $std = $hw['std_label'] ?: 'Std ' . $hw['standard'];
     </tr>
   </table>
   <div class="student-line"><b><?= $L['name'] ?> :</b> ______________________________________ &nbsp; <b><?= $L['roll'] ?> :</b> ________</div>
+
+  <?php if (!empty($hw['notes'])): ?>
+  <div class="hw-title"><?= $L['notes'] ?></div>
+  <ul class="notes <?= $english ? '' : 'devanagari' ?>">
+    <?php foreach ($hw['notes'] as $n): ?><li><?= h($n) ?></li><?php endforeach; ?>
+  </ul>
+  <?php endif; ?>
 
   <?php if ($hw['items']): ?>
   <div class="hw-title"><?= $L['hw'] ?></div>

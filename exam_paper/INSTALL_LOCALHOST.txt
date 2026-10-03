@@ -16,4 +16,5 @@ Alternative (rebuild from JSON instead of the dump):
      mysql -u root -p school < db/schema.sql
      mysql -u root -p school < db/schema_books.sql
      mysql -u root -p school < db/schema_homework.sql
+     mysql -u root -p school < db/schema_packs.sql
      php import_data.php && php import_books.php

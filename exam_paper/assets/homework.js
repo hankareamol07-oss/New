@@ -23,7 +23,8 @@
   const tree = JSON.parse(app.dataset.tree);
   const editData = app.dataset.edit ? JSON.parse(app.dataset.edit) : null;
 
-  const state = { hwId: null, quizId: null, items: [], quiz: [], sources: [] };
+  const state = { hwId: null, quizId: null, items: [], quiz: [], sources: [], pack: null };
+  const OLD_SYLLABUS = [5, 7, 8];   // unchanged syllabus: prefer the downloadpapers MCQ bank, AI pack fills the gaps
   // items: [{bq_id, text, page_image, show_image, needs_figure, page}]
   // quiz:  [{kind:'mcq'|'text', text, options[], answer, question_id, bq_id}]
 
@@ -52,12 +53,35 @@
     if (editLink) { editLink.href = `book_chapters.php?book_id=${book ? book.book_id : 0}`; editLink.classList.toggle('d-none', !book); }
     onChapter();
   }
-  function onChapter() {
+  async function onChapter() {
     const c = curChapter();
     const topic = $('#topic');
     if (!topic.dataset.touched) topic.value = c ? c.title : '';
     fillDefaults();
+    await loadPack();
     loadSources();
+  }
+
+  /* ---------- AI topic pack (short notes + 10 MCQ) ---------- */
+  async function loadPack() {
+    const c = curChapter();
+    state.pack = c ? await api('topic_pack', { query: '&chapter_id=' + c.chapter_id }) : null;
+    const has = !!(state.pack && state.pack.quiz && state.pack.quiz.length);
+    $('#notesLoad').disabled = !(state.pack && state.pack.notes && state.pack.notes.length);
+    $('#notesInfo').textContent = state.pack && state.pack.notes.length ? `${state.pack.notes.length} notes generated from the textbook chapter — edit freely.` : (c ? 'No generated notes for this lesson yet — type your own.' : 'Choose a lesson to load its notes.');
+    if (!editData && !$('#notes').dataset.touched) { $('#notes').value = has && state.pack.notes.length ? state.pack.notes.join('\n') : ''; }
+    return has;
+  }
+  $('#notesOn').onchange = () => { $('#notesBox').style.display = $('#notesOn').checked ? '' : 'none'; };
+  $('#notes').addEventListener('input', e => e.target.dataset.touched = '1');
+  $('#notesLoad').onclick = () => {
+    if (!state.pack || !state.pack.notes.length) return alert('No generated notes for this lesson');
+    $('#notes').value = state.pack.notes.join('\n'); $('#notesOn').checked = true; $('#notesBox').style.display = '';
+  };
+  function packQuestions(need) {
+    const have = new Set(state.quiz.map(q => q.text.trim()));
+    return (state.pack?.quiz || []).filter(q => !have.has(q.q.trim())).slice(0, need)
+      .map(q => ({ kind: 'mcq', text: q.q, options: q.options.slice(0, 4), answer: +q.answer, explain: q.explain || '' }));
   }
   function fillDefaults() {
     const std = +stdSel.value, en = isEnglish();
@@ -79,7 +103,8 @@
     const sel = $('#quizSource');
     sel.innerHTML = '<option value="">loading…</option>';
     state.sources = s ? await api('quiz_sources', { query: `&standard=${stdSel.value}&subject=${encodeURIComponent(s.subject)}&medium=${encodeURIComponent(s.medium)}&chapter=${encodeURIComponent(c ? c.title : '')}` }) : [];
-    const opts = [];
+    const hasPack = !!(state.pack && state.pack.quiz && state.pack.quiz.length);
+    const opts = hasPack ? [`<option value="pack">★ Topic quiz from textbook lesson — ${state.pack.quiz.length} MCQ (AI-generated)</option>`] : [];
     let best = null;
     for (const src of state.sources) {
       const grp = `${src.std_name} · ${src.subject_name} (${src.medium || ''})`;
@@ -89,14 +114,24 @@
       for (const x of src.chapters) if (x.mcq >= 8 && x.score >= 0.34 && (!best || x.score > best.score)) best = x;
     }
     sel.innerHTML = opts.length ? opts.join('') : '<option value="">No MCQ bank for this class/subject — add questions manually or from textbook</option>';
-    if (best) sel.value = String(best.chapter_id);
-    $('#quizSourceInfo').textContent = state.sources.length
-      ? (best ? `★ matched question-bank chapter "${best.name}" for auto MCQs. Change the source if it's wrong.` : 'No matching chapter found automatically — choose a bank chapter above, or add quiz questions manually / from the textbook.')
-      : 'This class/subject has no MCQ bank. Use "MCQ" / "Typed answer" / "From textbook" to add quiz questions yourself.';
+    const preferBank = OLD_SYLLABUS.includes(+stdSel.value) && best;
+    if (preferBank) sel.value = String(best.chapter_id);
+    else if (hasPack) sel.value = 'pack';
+    else if (best) sel.value = String(best.chapter_id);
+    $('#quizSourceInfo').textContent = preferBank
+      ? `★ matched question-bank chapter "${best.name}" (unchanged syllabus) for auto MCQs${hasPack ? '; the textbook topic quiz fills any gap' : ''}. Change the source if it's wrong.`
+      : hasPack ? '★ 10-question quiz generated from this textbook lesson will be used. Choose a bank chapter instead if you prefer.'
+      : state.sources.length
+        ? (best ? `★ matched question-bank chapter "${best.name}" for auto MCQs. Change the source if it's wrong.` : 'No matching chapter found automatically — choose a bank chapter above, or add quiz questions manually / from the textbook.')
+        : 'This class/subject has no MCQ bank or generated quiz yet. Use "MCQ" / "Typed answer" / "From textbook" to add quiz questions yourself.';
   }
 
   /* ---------- homework items ---------- */
-  function bookItem(q) { return { bq_id: q.bq_id, text: q.text, page_image: q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype }; }
+  const OPT_MR = ['अ', 'ब', 'क', 'ड', 'इ', 'फ'];
+  function bookItem(q) {
+    const opts = Array.isArray(q.options) && q.options.length ? '\n' + q.options.map((o, i) => `(${isEnglish() ? OPT[i] : OPT_MR[i]}) ${o}`).join('  ') : '';
+    return { bq_id: q.bq_id, text: q.text + opts, answer: q.answer || '', page_image: q.figure_image || q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype };
+  }
   $('#hwAdd').onclick = () => { state.items.push({ bq_id: null, text: '' }); renderItems(); setTimeout(() => { const t = $$('#hwItems textarea').pop(); t && t.focus(); }); };
   $('#hwFromBook').onclick = async () => {
     const rows = await api('book_random', { body: { chapter_ids: chapterIds(), qtype: '', count: 5, exclude: usedBq() } });
@@ -146,11 +181,19 @@
   $('#quizAuto').onclick = async () => {
     const src = $('#quizSource').value;
     if (!src) return alert('Choose an MCQ source chapter first (or add questions manually)');
-    const need = +$('#quizCount').value - state.quiz.length;
+    let need = +$('#quizCount').value - state.quiz.length;
     if (need <= 0) return alert(`Quiz already has ${state.quiz.length} questions`);
-    const rows = await api('quiz_mcq', { body: { chapter_ids: src.split(','), count: need, exclude: usedQ() } });
-    rows.forEach(q => state.quiz.push({ kind: 'mcq', text: q.text, options: q.options, answer: q.answer, question_id: q.question_id }));
-    if (rows.length < need) alert(`Only ${rows.length} auto-scorable MCQs found; add the rest manually or pick another source chapter.`);
+    if (src !== 'pack') {
+      const rows = await api('quiz_mcq', { body: { chapter_ids: src.split(','), count: need, exclude: usedQ() } });
+      rows.forEach(q => state.quiz.push({ kind: 'mcq', text: q.text, options: q.options, answer: q.answer, question_id: q.question_id }));
+      need -= rows.length;
+    }
+    if (need > 0) {
+      const extra = packQuestions(need);
+      extra.forEach(q => state.quiz.push(q));
+      need -= extra.length;
+    }
+    if (need > 0) alert(`${need} question(s) still missing — add them manually, from the textbook, or pick another source chapter.`);
     renderQuiz();
   };
   $('#quizAddMcq').onclick = () => { state.quiz.push({ kind: 'mcq', text: '', options: ['', '', '', ''], answer: 0 }); renderQuiz(); };
@@ -237,6 +280,7 @@
       hw_id: state.hwId, quiz_id: state.quizId, hw_date: $('#hwDate').value, standard: +stdSel.value, division: $('#division').value, std_label: $('#stdLabel').value,
       subject: s?.subject || '', medium: s?.medium || '', chapter_id: +chSel.value || null, topic: $('#topic').value, teacher: $('#teacher').value,
       title: $('#title').value, note: $('#note').value,
+      notes: $('#notesOn').checked ? $('#notes').value.split('\n').map(s => s.replace(/^[\s\-•*]+/, '').trim()).filter(Boolean) : [],
       items: state.items.map(i => ({ bq_id: i.bq_id, text: i.text, answer: i.answer || '', page_image: i.page_image, show_image: i.show_image })),
       quiz: quizOn ? { title: $('#quizTitle').value, time_limit: +$('#quizTime').value, show_answers: $('#quizShowAns').checked, questions: state.quiz } : { questions: [] },
     };
@@ -262,6 +306,7 @@
     $('#topic').value = editData.topic || ''; $('#title').value = editData.title; $('#stdLabel').value = editData.std_label || '';
     $('#division').value = editData.division || ''; $('#teacher').value = editData.teacher || ''; $('#note').value = editData.note || '';
     state.items = editData.items.map(i => ({ ...i, needs_figure: !!i.page_image }));
+    if (editData.notes && editData.notes.length) { $('#notes').value = editData.notes.join('\n'); $('#notes').dataset.touched = '1'; $('#notesOn').checked = true; $('#notesBox').style.display = ''; }
     if (editData.quiz) {
       state.quiz = editData.quiz.questions;
       $('#quizTitle').value = editData.quiz.title; $('#quizTime').value = editData.quiz.time_limit; $('#quizShowAns').checked = !!+editData.quiz.show_answers;

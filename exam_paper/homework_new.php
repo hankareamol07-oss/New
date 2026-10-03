@@ -65,6 +65,20 @@ require __DIR__ . '/includes/header.php';
 
     <div class="card shadow-sm mb-3">
       <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <span class="fw-semibold"><span class="badge bg-primary me-1">3b</span> Short notes <small class="text-muted fw-normal">(printed on the sheet before the homework items)</small></span>
+        <div class="d-flex gap-2 align-items-center">
+          <button class="btn btn-outline-success btn-sm" id="notesLoad"><i class="bi bi-stars"></i> Load topic notes</button>
+          <div class="form-check form-switch mb-0"><input class="form-check-input" type="checkbox" id="notesOn"><label class="form-check-label small" for="notesOn">Print notes</label></div>
+        </div>
+      </div>
+      <div class="card-body" id="notesBox" style="display:none">
+        <textarea class="form-control form-control-sm" id="notes" rows="6" placeholder="One point per line…"></textarea>
+        <div class="small text-muted mt-1" id="notesInfo"></div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-3">
+      <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
         <span class="fw-semibold"><span class="badge bg-primary me-1">4</span> Topic quiz <small class="text-muted fw-normal">(10–15 questions, auto-scored online)</small></span>
         <div class="form-check form-switch mb-0"><input class="form-check-input" type="checkbox" id="quizOn" checked><label class="form-check-label small" for="quizOn">Attach quiz</label></div>
       </div>
