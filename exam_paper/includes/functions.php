@@ -393,13 +393,66 @@ function ep_topic_pack(int $chapterId): ?array
     $st = ep_db()->prepare('SELECT * FROM ep_topic_packs WHERE chapter_id = ?');
     $st->execute([$chapterId]);
     $p = $st->fetch();
-    if (!$p) {
+    $typed = ep_typed_mcq($chapterId);
+    if (!$p && !$typed) {
         return null;
     }
+    $p = $p ?: ['chapter_id' => $chapterId, 'notes_json' => '[]', 'quiz_json' => '[]', 'model' => null];
     $p['notes'] = json_decode($p['notes_json'], true) ?: [];
     $p['quiz'] = json_decode($p['quiz_json'], true) ?: [];
+    foreach ($p['quiz'] as &$qq) {
+        if (!empty($qq['figure_image'])) {
+            $qq['image_url'] = ep_book_image_url($qq['figure_image']);
+        }
+    }
+    unset($qq);
+    $seen = array_map(fn($q) => mb_strtolower(trim($q['q'])), $p['quiz']);
+    foreach ($typed as $q) {
+        if (!in_array(mb_strtolower(trim($q['q'])), $seen, true)) {
+            $p['quiz'][] = $q;
+        }
+    }
+    $p['typed_mcq'] = count($typed);
     unset($p['notes_json'], $p['quiz_json']);
     return $p;
+}
+
+/** MCQs of the AI typed set (ep_book_questions.source = 'typed') for a chapter, in topic-pack quiz shape {q, options, answer, explain}. */
+function ep_typed_mcq(int $chapterId): array
+{
+    $st = ep_db()->prepare('SELECT bq_id, text, options_json, answer FROM ep_book_questions
+                            WHERE chapter_id = ? AND source = "typed" AND qtype = "mcq" AND options_json IS NOT NULL AND answer IS NOT NULL AND answer <> ""
+                            ORDER BY bq_id');
+    $st->execute([$chapterId]);
+    $out = [];
+    foreach ($st->fetchAll() as $r) {
+        $opts = array_values(array_filter(array_map('strval', json_decode($r['options_json'], true) ?: []), fn($o) => trim($o) !== ''));
+        if (count($opts) < 3) {
+            continue;
+        }
+        $opts = array_slice($opts, 0, 4);
+        $ans = trim((string)$r['answer']);
+        $idx = null;
+        foreach ($opts as $i => $o) {
+            if (mb_strtolower(trim($o)) === mb_strtolower($ans)) {
+                $idx = $i;
+            }
+        }
+        if ($idx === null && preg_match('/^\(?([A-Da-d1-4अबकड१-४])[\)\.]?$/u', $ans, $m)) {
+            foreach ([['A', 'B', 'C', 'D'], ['a', 'b', 'c', 'd'], ['अ', 'ब', 'क', 'ड'], ['1', '2', '3', '4'], ['१', '२', '३', '४']] as $labels) {
+                $k = array_search($m[1], $labels, true);
+                if ($k !== false) {
+                    $idx = $k;
+                    break;
+                }
+            }
+        }
+        if ($idx === null) {
+            continue;
+        }
+        $out[] = ['q' => $r['text'], 'options' => $opts, 'answer' => $idx, 'explain' => '', 'bq_id' => (int)$r['bq_id'], 'source' => 'typed'];
+    }
+    return $out;
 }
 
 /** Classes -> subjects -> books -> chapters (+ question counts) for the textbook bank. */
@@ -482,7 +535,13 @@ function ep_book_source(?string $s): string
 }
 
 /** Random bank questions from the given chapters; exact qtype first, then related types. */
-function ep_book_random(array $chapterIds, string $qtype, int $count, array $exclude = [], string $source = ''): array
+/** Bloom's taxonomy filter for the bank: one of the six levels or '' = any. */
+function ep_bloom_level(?string $b): string
+{
+    return in_array($b, ['remember', 'understand', 'apply', 'analyze', 'evaluate', 'create'], true) ? $b : '';
+}
+
+function ep_book_random(array $chapterIds, string $qtype, int $count, array $exclude = [], string $source = '', string $bloom = ''): array
 {
     $chapterIds = array_values(array_filter(array_map('intval', $chapterIds)));
     if (!$chapterIds || $count <= 0) {
@@ -490,12 +549,17 @@ function ep_book_random(array $chapterIds, string $qtype, int $count, array $exc
     }
     $exclude = array_values(array_filter(array_map('intval', $exclude)));
     $source = ep_book_source($source);
-    $pick = function (array $types, int $n) use ($chapterIds, &$exclude, $source): array {
+    $bloom = ep_bloom_level($bloom);
+    $pick = function (array $types, int $n) use ($chapterIds, &$exclude, $source, $bloom): array {
         $params = $chapterIds;
         $sql = 'SELECT * FROM ep_book_questions WHERE chapter_id IN (' . implode(',', array_fill(0, count($chapterIds), '?')) . ')';
         if ($source !== '') {
             $sql .= ' AND source = ?';
             $params[] = $source;
+        }
+        if ($bloom !== '') {
+            $sql .= ' AND bloom = ?';
+            $params[] = $bloom;
         }
         if ($types) {
             $sql .= ' AND qtype IN (' . implode(',', array_fill(0, count($types), '?')) . ')';

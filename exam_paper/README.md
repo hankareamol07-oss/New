@@ -90,13 +90,12 @@ question count and marks per question, then *Auto-fill*. Questions can be
 swapped, browsed or removed individually, exactly like the regular builder.
 Add more patterns by appending to `ep_exam_patterns()`.
 
-> **Data note:** downloadpapers.com lists Scholarship / Navodaya / NMMS classes
-> with their chapters and topics, but its question endpoints returned **no
-> questions** for those classes for the accounts we had. The competitive builder
-> therefore draws MCQs from the populated class 1–8 subjects (e.g. 5th गणित for
-> JNVST mental ability / arithmetic, 5th मराठी बालभारती for भाषा). If the source
-> later adds competitive questions, re-run the scraper + importer and they will
-> appear as selectable sources automatically.
+> **Data note:** `data/competitive/questions.json` holds the objective banks of
+> **8) NMMS (MAT/SAT, 14,148 Q)**, 4th शिष्यवृत्ती (10,544) and 7th शिष्यवृत्ती (7,743)
+> with answer keys (`db/full_dump.sql` already contains them as `ep_questions`
+> ids ≥ 5000000; `php import_competitive.php` re-imports from the JSON). Select
+> standard "8) NMMS" in the competitive builder to draw from them. Navodaya has
+> no objective questions on the source, so JNVST papers draw from class 5 subjects.
 
 ### Upgrading an existing install
 
@@ -135,8 +134,22 @@ Install / refresh:
 ```bash
 mysql -u root -p school < db/schema_books.sql
 mysql -u root -p school < db/schema_packs.sql   # ep_topic_packs (AI notes + 10-MCQ quiz per chapter)
+mysql -u root -p school < db/schema_2026.sql    # 2026 book provenance + tachan topic link on chapters
+mysql -u root -p school < db/tachan_bank_schema.sql && mysql -u root -p school < db/tachan_bank_2026.sql   # तचन topics std 1-8 (2026-27)
 php import_books.php          # ep_books, ep_book_chapters, ep_book_questions, ep_paper_models, ep_topic_packs
+php import_competitive.php    # 4th/7th शिष्यवृत्ती + 8th NMMS (MAT/SAT) MCQs from data/competitive -> ep_questions
 ```
+
+Homework / paper "MCQ source" for a lesson = its AI topic quiz (ep_topic_packs) + MCQs of the typed set
+(ep_book_questions.source = 'typed'), merged by `ep_topic_pack()`; scraped-bank chapters remain selectable.
+
+2026-27 topic identity: every `ep_book_chapters` row carries `tachan_seq` = position of its topic in
+`tachan_bank` (`std`, `ep_books.tachan_subject`), so the key `std|tachan_subject|tachan_seq` is shared by the
+assessment/homework builders, the topic quiz, the typed set, the HPC module and the YouTube projects. All 63
+books / 1,274 chapters are aligned; 1,257 chapters have a topic pack (10 MCQ + notes) and a typed set — the 16
+without (std 5 Hindi 9, std 7 Hindi 3, std 1 English 2, std 7 Geography 2) are तचन topics whose lesson text
+could not be located in those legacy books (they map to the last page of the book and have no स्वाध्याय);
+one more pack failed the 10-MCQ validity check.
 
 जोड्या लावा / Match the pairs: `ep_book_questions.pairs_json` stores
 `[["left","correct right"], ...]` (existing installs: `php import_books.php`
