@@ -1,7 +1,7 @@
 """The agent: a natural-language instruction -> a plan of tool steps (made by the LLM from the tool list below) -> runs the steps
 with the user's APIs, resumable, logging progress and cost. The plan is shown before running (GUI/CLI can ask for confirmation)."""
 import glob, json, os, re, threading
-from . import ocr, chapters, parts, figures, bank, export
+from . import ocr, chapters, parts, figures, bank, export, notes, office
 from .db import Store
 from .llm import Client
 
@@ -12,6 +12,9 @@ TOOLS = {
     "parts": "Clean each chapter's text and split it into teaching parts (unit_text). args: {books or units}",
     "figures": "Find and crop pictures/diagrams/maps/tables on the chapter pages and link them to parts. args: {books or units}",
     "bank": "Build the question bank per chapter: textbook स्वाध्याय items + 10-15 Bloom-tagged MCQs per topic (+ picture questions). args: {books or units, mcq_min:int, mcq_max:int, figures: bool}",
+    "notes": "Write revision notes (टिपणे) per topic part: summary, key points, definitions, formulas/examples, names & dates, common mistakes. args: {books or units, detail: short|normal|detailed}",
+    "export_excel": "Excel quiz workbook per chapter (+ one per book): MCQ sheet with question, options A-D, answer key, solution, Bloom, page, figure; स्वाध्याय sheet with answers; Answer key; Notes. args: {books or units, out_dir: path}",
+    "export_notes": "Word (.docx) notes file per chapter from the notes step, with textbook figures inline. args: {books or units, out_dir: path}",
     "export_exam_paper": "Write exam_paper data files (book_questions.json, topic_packs.json, figure crops). args: {out_dir: path}",
     "dump": "Dump all tables to JSON/CSV. args: {out_dir: path}",
     "stats": "Print counts of books/pages/chapters/parts/figures/questions. args: {}",
@@ -27,7 +30,7 @@ Instruction from the user:
 \"\"\"{instr}\"\"\"
 
 Return JSON {{"plan": [{{"tool": "...", "args": {{...}}, "why": "one line"}}], "notes": "anything unclear or assumptions"}}.
-Rules: steps must be in dependency order (add_books -> ocr -> chapters -> parts -> figures -> bank -> export); include only what the
+Rules: steps must be in dependency order (add_books -> ocr -> chapters -> parts -> figures -> bank/notes -> export_excel/export_notes/export_exam_paper); include only what the
 instruction asks for, but add prerequisite steps the database still lacks; use book_ids from the database when the user refers to books
 already there; if the user gives a chapter list, pass it as toc; if the user mentions a standard/subject/language for new PDFs, pass them."""
 
@@ -45,7 +48,7 @@ class Agent:
     # ---------- planning ----------
     def stats(self):
         s = self.store
-        return {t: s.count(t) for t in ("books", "pages", "units", "unit_text", "unit_figures", "questions")} | {
+        return {t: s.count(t) for t in ("books", "pages", "units", "unit_text", "unit_figures", "unit_notes", "questions")} | {
             "books_list": [dict(book_id=b["book_id"], std=b["std"], subject=b["subject"], lang=b["lang"], pages=b["n_pages"], title=b["title"]) for b in s.books()]}
 
     def input_files(self):
@@ -138,6 +141,19 @@ class Agent:
                 return
             ne, nm = bank.build_bank(self.client, self.store, u, self.workdir, (int(mcq_min), int(mcq_max)), bool(figures), int(self.cfg.get("workers", 4)), self.log)
             self.log(f"  [bank] {u['unit_id']}: {ne} स्वाध्याय items, {nm} MCQs")
+
+    def t_notes(self, books="all", units=None, detail="normal"):
+        for u in self._units(books, units):
+            if self.stop.is_set():
+                return
+            n, tot = notes.build_notes(self.client, self.store, u, int(self.cfg.get("workers", 4)), detail, self.log)
+            self.log(f"  [notes] {u['unit_id']}: {n} new / {tot} parts")
+
+    def t_export_excel(self, books="all", units=None, out_dir=None):
+        office.export_excel(self.store, self.workdir, out_dir or os.path.join(self.workdir, "export", "excel"), self._units(books, units), True, self.log)
+
+    def t_export_notes(self, books="all", units=None, out_dir=None):
+        office.export_docx(self.store, self.workdir, out_dir or os.path.join(self.workdir, "export", "notes"), self._units(books, units), self.log)
 
     def t_export_exam_paper(self, out_dir=None, books=None):
         export.export_exam_paper(self.store, self.workdir, out_dir or os.path.join(self.workdir, "export", "exam_paper"), books, self.log)

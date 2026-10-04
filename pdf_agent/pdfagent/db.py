@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS unit_figures(unit_id TEXT, fig_no INT, page INT, file
 CREATE TABLE IF NOT EXISTS questions(id INTEGER PRIMARY KEY AUTOINCREMENT, unit_id TEXT, part_no INT, kind TEXT, qtype TEXT, instruction TEXT, text TEXT,
   options_json TEXT, pairs_json TEXT, answer TEXT, explain TEXT, marks INT, bloom TEXT, fig_file TEXT, source TEXT, model TEXT);
 CREATE INDEX IF NOT EXISTS q_unit ON questions(unit_id, kind);
+CREATE TABLE IF NOT EXISTS unit_notes(unit_id TEXT, part_no INT, notes_json TEXT, model TEXT, PRIMARY KEY(unit_id, part_no));
 CREATE TABLE IF NOT EXISTS jobs(key TEXT PRIMARY KEY, status TEXT, detail TEXT, updated_at TEXT DEFAULT CURRENT_TIMESTAMP);
 """
 
@@ -94,6 +95,14 @@ class Store:
         self.db.execute("DELETE FROM unit_figures WHERE unit_id=?", (unit_id,))
         self.db.executemany("INSERT INTO unit_figures VALUES(?,?,?,?,?,?,?,?)",
                             [(unit_id, i + 1, f["page"], f["file"], f.get("caption", ""), f.get("near", ""), f.get("kind", "drawing"), f.get("part_no")) for i, f in enumerate(figs)])
+        self.db.commit()
+
+    # ---- notes ----
+    def notes(self, unit_id):
+        return self.db.execute("SELECT * FROM unit_notes WHERE unit_id=? ORDER BY part_no", (unit_id,)).fetchall()
+
+    def save_notes(self, unit_id, part_no, notes, model=None):
+        self.db.execute("INSERT OR REPLACE INTO unit_notes VALUES(?,?,?,?)", (unit_id, part_no, json.dumps(notes, ensure_ascii=False), model))
         self.db.commit()
 
     # ---- questions ----

@@ -14,6 +14,9 @@ Steps (tools) it knows — the same recipes used to build the std 1-8 database:
 | parts | clean chapter text split into 4-12 teaching parts, exercise part last | `unit_text` |
 | figures | pictures/diagrams/maps/tables located by Gemini, cropped, linked to parts | `unit_figures`, `figures\<book>\` |
 | bank | textbook स्वाध्याय items (or generated set when the book has none) + 10-15 Bloom-tagged MCQs per topic, picture questions | `questions` |
+| notes | revision notes per topic part: summary, key points, definitions, formulas/examples, names & dates, common mistakes | `unit_notes` |
+| export_excel | Excel per chapter + per book: `MCQ` (question, A-D, answer key, solution, Bloom, page, figure), `स्वाध्याय` (with answers), `Answer key`, `Notes` | `export\excel\` |
+| export_notes | Word (.docx) notes per chapter with textbook figures inline | `export\notes\` |
 | export_exam_paper | `book_questions.json`, `topic_packs.json`, `book_figures\` for the school-system exam-paper module | `export\exam_paper\` |
 | dump | every table as JSON + CSV | `export\tables\` |
 
@@ -30,6 +33,7 @@ The SQLite file (`explain.db`) uses the same `units / unit_text / unit_figures` 
 * `input फोल्डरमधील सर्व PDF जोडा, OCR करा, धडे शोधा, भाग व चित्रे काढा, प्रत्येक धड्याचा स्वाध्याय + 12-15 MCQ (Bloom) बनवा, exam_paper export करा`
 * `Add 7_science.pdf as std 7 Science English medium; chapters: 1. The Living World 2. Plants ...; OCR pages 1-60; parts only`
 * `For book 2 rebuild the bank with 10 MCQs per topic, no picture questions`
+* `प्रत्येक धड्याची टिपणे बनवा आणि Word फाईल द्या; MCQ चा Excel (प्रश्न, 4 पर्याय, उत्तर, स्पष्टीकरण) बनवा`
 * `stats`
 
 Everything is resumable: re-running the same instruction skips pages/chapters/jobs already done. Costs: ~$0.003/page OCR,

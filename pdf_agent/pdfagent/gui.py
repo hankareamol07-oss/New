@@ -9,6 +9,8 @@ EXAMPLES = [
     "input फोल्डरमधील सर्व PDF जोडा, OCR करा, धडे शोधा, भाग व चित्रे काढा, प्रत्येक धड्याचा स्वाध्याय + प्रत्येक विषयावर 12-15 MCQ (Bloom) बनवा आणि exam_paper साठी export करा",
     "Add std 7 Science (English medium) PDF 7_science.pdf, OCR pages 1-40, detect chapters and build parts only",
     "For book 2 make question bank with 10 MCQs per topic without picture questions, then export",
+    "प्रत्येक धड्याची टिपणे (notes) बनवा आणि Word फाईल द्या; MCQ चा Excel (प्रश्न, 4 पर्याय, उत्तर, स्पष्टीकरण) बनवा",
+    "For book 1 make detailed notes, then export Excel quiz workbook and Word notes",
     "stats",
 ]
 

@@ -90,7 +90,7 @@ def export_exam_paper(store, workdir, out_data, book_ids=None, log=print):
 
 def dump_tables(store, out_dir, log=print):
     os.makedirs(out_dir, exist_ok=True)
-    for t in ("books", "units", "unit_text", "unit_figures", "questions"):
+    for t in ("books", "units", "unit_text", "unit_figures", "unit_notes", "questions"):
         rows = [dict(r) for r in store.db.execute(f"SELECT * FROM {t}")]
         json.dump(rows, open(os.path.join(out_dir, f"{t}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
         if rows:
