@@ -39,3 +39,20 @@ The SQLite file (`explain.db`) uses the same `units / unit_text / unit_figures` 
 Everything is resumable: re-running the same instruction skips pages/chapters/jobs already done. Costs: ~$0.003/page OCR,
 ~$0.01 per topic MCQ set with gemini-2.5-flash (shown live; the run stops at `cost_cap_usd`).
 Never share `config.json` / `gcp_key.json`.
+
+
+## Competitive / scholarship question papers (`paper` tool)
+Instruction example: "Read nmms_2024.pdf as a competitive question paper (std 8): passages, questions, image options, answer key; export Excel"
+(or in Marathi: "input मधील प्रश्नपत्रिका PDF paper म्हणून वाचा आणि Excel द्या").
+Every page is read with vision: comprehension passages + the questions that belong to them, each question's own figure and picture
+options are cropped from the page at their printed position and saved as `figures/<book>/paper/<page>_q<no>_q.png` (question figure)
+and `<page>_q<no>_A.png … _D.png` (picture options); passage pictures/tables as `<page>_P1.png`. A printed answer key on any page is
+applied to the questions. Excel: `export/excel/paper_<std>_<file>.xlsx` (sheets Questions, Answer key, Passages) with image file names
+in the "Question image / A image … D image" columns; the images are copied next to it in `…_images\`.
+
+## Settings tab – any API
+GUI → "⚙ Settings / API keys": Vertex AI (project + key file or API key), Gemini API keys, Anthropic Claude, OpenAI, OpenRouter (Kimi,
+Qwen, DeepSeek, …), Mistral, Together, Groq, NVIDIA NIM, Sarvam, and a custom OpenAI-compatible URL (Ollama / LM Studio / any server).
+Set key + model per provider, the provider order, cost cap, workers. "Test providers" sends one tiny request per configured provider.
+Saved to `config.json` on your PC only – never put it in the zip/exe. Image steps (OCR, figures, paper) go to vision-capable
+providers (Gemini, Claude, OpenAI, OpenRouter, Mistral; or custom with `custom_vision: true`); the first configured one in the order is used.

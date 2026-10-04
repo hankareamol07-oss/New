@@ -190,3 +190,46 @@ def export_docx(store, workdir, out_dir, units, log=print):
         n += 1
         log(f"  [notes] {os.path.basename(p)}")
     return n
+
+
+def export_paper_excel(store, workdir, out_dir, book, log=print):
+    """One workbook per competitive paper: Question sheet (passage, question, images by position, A-D text + image, answer, solution) + Answer key."""
+    items = store.paper_items(book["book_id"])
+    if not items:
+        return None
+    os.makedirs(out_dir, exist_ok=True)
+    name = SAFE.sub("_", f"paper_std{book['std'] or ''}_{os.path.splitext(os.path.basename(book['pdf']))[0]}")[:80]
+    imgdir = os.path.join(out_dir, name + "_images")
+    os.makedirs(imgdir, exist_ok=True)
+
+    def cp(rel):
+        if not rel:
+            return ""
+        src = os.path.join(workdir, rel)
+        if not os.path.exists(src):
+            return ""
+        import shutil
+        dst = os.path.join(imgdir, os.path.basename(rel))
+        if not os.path.exists(dst):
+            shutil.copy(src, dst)
+        return os.path.basename(rel)
+
+    rows = []
+    for it in items:
+        op = json.loads(it["options_json"] or "[]") + [""] * 4
+        of = json.loads(it["option_files_json"] or "[]") + [None] * 4
+        rows.append([it["page"], it["no"], it["section"] or "", it["passage_id"] or "", it["passage"] or "", cp(it["passage_file"]), it["text"], cp(it["q_file"]),
+                     op[0], cp(of[0]), op[1], cp(of[1]), op[2], cp(of[2]), op[3], cp(of[3]), it["answer"] or "", it["solution"] or "", it["marks"] or ""])
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Questions"
+    _sheet(ws, ["Page", "Q.No", "Section", "Passage id", "Passage text", "Passage image", "Question", "Question image", "A", "A image", "B", "B image",
+                "C", "C image", "D", "D image", "Answer", "Solution", "Marks"], rows,
+           [6, 6, 16, 9, 50, 22, 60, 24, 20, 22, 20, 22, 20, 22, 20, 22, 8, 40, 6])
+    _sheet(wb.create_sheet("Answer key"), ["Q.No", "Answer"], [[r[1], r[16]] for r in rows], [6, 8])
+    _sheet(wb.create_sheet("Passages"), ["Page", "Passage id", "Text", "Image"], [[it["page"], it["passage_id"], it["passage"], cp(it["passage_file"])]
+                                                                                for it in {(i["page"], i["passage_id"]): i for i in items if i["passage_id"]}.values()], [6, 9, 90, 22])
+    p = os.path.join(out_dir, name + ".xlsx")
+    wb.save(p)
+    log(f"  [excel] {os.path.basename(p)} ({len(rows)} questions, images in {os.path.basename(imgdir)}\\)")
+    return p

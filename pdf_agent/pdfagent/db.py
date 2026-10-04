@@ -22,6 +22,9 @@ CREATE TABLE IF NOT EXISTS questions(id INTEGER PRIMARY KEY AUTOINCREMENT, unit_
   options_json TEXT, pairs_json TEXT, answer TEXT, explain TEXT, marks INT, bloom TEXT, fig_file TEXT, source TEXT, model TEXT);
 CREATE INDEX IF NOT EXISTS q_unit ON questions(unit_id, kind);
 CREATE TABLE IF NOT EXISTS unit_notes(unit_id TEXT, part_no INT, notes_json TEXT, model TEXT, PRIMARY KEY(unit_id, part_no));
+CREATE TABLE IF NOT EXISTS paper_items(id INTEGER PRIMARY KEY AUTOINCREMENT, book_id INT, page INT, no TEXT, section TEXT, passage_id TEXT, passage TEXT,
+  passage_file TEXT, text TEXT, q_file TEXT, options_json TEXT, option_files_json TEXT, answer TEXT, solution TEXT, marks INT, model TEXT);
+CREATE INDEX IF NOT EXISTS pi_book ON paper_items(book_id, page);
 CREATE TABLE IF NOT EXISTS jobs(key TEXT PRIMARY KEY, status TEXT, detail TEXT, updated_at TEXT DEFAULT CURRENT_TIMESTAMP);
 """
 
@@ -104,6 +107,25 @@ class Store:
     def save_notes(self, unit_id, part_no, notes, model=None):
         self.db.execute("INSERT OR REPLACE INTO unit_notes VALUES(?,?,?,?)", (unit_id, part_no, json.dumps(notes, ensure_ascii=False), model))
         self.db.commit()
+
+    # ---- competitive papers ----
+    def save_paper_items(self, book_id, page, rows):
+        self.db.execute("DELETE FROM paper_items WHERE book_id=? AND page=?", (book_id, page))
+        self.db.executemany("""INSERT INTO paper_items(book_id,page,no,section,passage_id,passage,passage_file,text,q_file,options_json,option_files_json,answer,solution,marks,model)
+                               VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                            [(book_id, page, r["no"], r["section"], r["passage_id"], r["passage"], r["passage_file"], r["text"], r["q_file"],
+                              json.dumps(r["options"], ensure_ascii=False), json.dumps(r["option_files"]), r["answer"], r["solution"], r["marks"], r["model"]) for r in rows])
+        self.db.commit()
+
+    def apply_answer_key(self, book_id, keys):
+        n = 0
+        for no, a in keys.items():
+            n += self.db.execute("UPDATE paper_items SET answer=? WHERE book_id=? AND no=? AND (answer IS NULL OR answer='')", (a, book_id, no)).rowcount
+        self.db.commit()
+        return n
+
+    def paper_items(self, book_id):
+        return self.db.execute("SELECT * FROM paper_items WHERE book_id=? ORDER BY page, id", (book_id,)).fetchall()
 
     # ---- questions ----
     def save_questions(self, unit_id, kind, items, part_no=None, model=None, source="agent"):

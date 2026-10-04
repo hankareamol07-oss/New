@@ -3,6 +3,7 @@ import json, os, subprocess, sys, threading, queue
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
 from .agent import Agent, TOOLS
+from .settings import SettingsTab
 
 FONT = ("Nirmala UI", 12) if sys.platform.startswith("win") else ("Noto Sans Devanagari", 12)
 EXAMPLES = [
@@ -11,6 +12,8 @@ EXAMPLES = [
     "For book 2 make question bank with 10 MCQs per topic without picture questions, then export",
     "प्रत्येक धड्याची टिपणे (notes) बनवा आणि Word फाईल द्या; MCQ चा Excel (प्रश्न, 4 पर्याय, उत्तर, स्पष्टीकरण) बनवा",
     "For book 1 make detailed notes, then export Excel quiz workbook and Word notes",
+    "input मधील scholarship_paper.pdf हा प्रश्नपत्रिका PDF जोडा (std 5), paper म्हणून वाचा – उतारा, प्रश्न, चित्र पर्याय – आणि Excel द्या",
+    "Read nmms_2024.pdf as a competitive question paper (std 8): passages, questions, image options, answer key; export Excel",
     "stats",
 ]
 
@@ -45,8 +48,13 @@ class App(tk.Tk):
         ex.bind("<<ComboboxSelected>>", lambda e: (self.instr.delete("1.0", "end"), self.instr.insert("1.0", ex.get())))
         self.cost = ttk.Label(row, text="cost: $0.00", font=FONT)
         self.cost.pack(side="right", padx=10)
-        pan = ttk.Panedwindow(self, orient="vertical")
-        pan.pack(fill="both", expand=True, padx=8, pady=4)
+        nb = ttk.Notebook(self)
+        nb.pack(fill="both", expand=True, padx=8, pady=4)
+        work = ttk.Frame(nb)
+        nb.add(work, text="  ▶ Work  ")
+        nb.add(SettingsTab(nb, workdir, FONT, lambda: self.bg(self.init_agent)), text="  ⚙ Settings / API keys  ")
+        pan = ttk.Panedwindow(work, orient="vertical")
+        pan.pack(fill="both", expand=True)
         f1 = ttk.Labelframe(pan, text="Plan (editable JSON)")
         self.plan = scrolledtext.ScrolledText(f1, height=10, font=("Consolas", 11), wrap="word")
         self.plan.pack(fill="both", expand=True)
@@ -63,7 +71,7 @@ class App(tk.Tk):
             self.ag = Agent(self.workdir, self.log)
             self.log(f"workdir: {self.workdir}\nTools: " + ", ".join(TOOLS) + "\nPut PDFs in input\\ , write an instruction, click Plan.")
         except Exception as e:  # noqa: BLE001
-            self.log(f"config error: {e}\nEdit config.json (keys / vertex project) and restart.")
+            self.log(f"config error: {e}\nOpen the Settings tab, enter your API keys and click Save.")
 
     def log(self, *a):
         self.q.put(" ".join(str(x) for x in a))
