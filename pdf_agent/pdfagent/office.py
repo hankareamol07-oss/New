@@ -218,15 +218,20 @@ def export_paper_excel(store, workdir, out_dir, book, log=print):
     for it in items:
         op = json.loads(it["options_json"] or "[]") + [""] * 4
         of = json.loads(it["option_files_json"] or "[]") + [None] * 4
-        rows.append([it["page"], it["no"], it["section"] or "", it["passage_id"] or "", it["passage"] or "", cp(it["passage_file"]), it["text"], cp(it["q_file"]),
+        rows.append([it["page"], it["no"], it["section"] or "", it["topic"] or "", it["passage_id"] or "", it["passage"] or "", cp(it["passage_file"]), it["text"], cp(it["q_file"]),
                      op[0], cp(of[0]), op[1], cp(of[1]), op[2], cp(of[2]), op[3], cp(of[3]), it["answer"] or "", it["solution"] or "", it["marks"] or ""])
     wb = Workbook()
     ws = wb.active
     ws.title = "Questions"
-    _sheet(ws, ["Page", "Q.No", "Section", "Passage id", "Passage text", "Passage image", "Question", "Question image", "A", "A image", "B", "B image",
+    _sheet(ws, ["Page", "Q.No", "Section", "Chapter / Topic", "Passage id", "Passage text", "Passage image", "Question", "Question image", "A", "A image", "B", "B image",
                 "C", "C image", "D", "D image", "Answer", "Solution", "Marks"], rows,
-           [6, 6, 16, 9, 50, 22, 60, 24, 20, 22, 20, 22, 20, 22, 20, 22, 8, 40, 6])
-    _sheet(wb.create_sheet("Answer key"), ["Q.No", "Answer"], [[r[1], r[16]] for r in rows], [6, 8])
+           [6, 6, 16, 22, 9, 50, 22, 60, 24, 20, 22, 20, 22, 20, 22, 20, 22, 8, 40, 6])
+    _sheet(wb.create_sheet("Answer key"), ["Q.No", "Section", "Answer"], [[r[1], r[2], r[17]] for r in rows], [6, 16, 8])
+    chap = {}
+    for r in rows:
+        chap.setdefault((r[2], r[3]), []).append(str(r[1]))
+    _sheet(wb.create_sheet("Chapters"), ["Section", "Chapter / Topic", "Questions", "Q.Nos"],
+           [[k[0], k[1], len(v), ", ".join(v)] for k, v in chap.items()], [16, 30, 10, 60])
     _sheet(wb.create_sheet("Passages"), ["Page", "Passage id", "Text", "Image"], [[it["page"], it["passage_id"], it["passage"], cp(it["passage_file"])]
                                                                                 for it in {(i["page"], i["passage_id"]): i for i in items if i["passage_id"]}.values()], [6, 9, 90, 22])
     p = os.path.join(out_dir, name + ".xlsx")

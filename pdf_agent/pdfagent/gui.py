@@ -14,6 +14,7 @@ EXAMPLES = [
     "For book 1 make detailed notes, then export Excel quiz workbook and Word notes",
     "input मधील scholarship_paper.pdf हा प्रश्नपत्रिका PDF जोडा (std 5), paper म्हणून वाचा – उतारा, प्रश्न, चित्र पर्याय – आणि Excel द्या",
     "Read nmms_2024.pdf as a competitive question paper (std 8): passages, questions, image options, answer key; export Excel",
+    "input मधील सर्व स्कॉलरशिप प्रश्नपत्रिका PDF (इयत्ता 4, scan) paper म्हणून वाचा: विभाग/धड्याचे नाव, 4 पर्याय, उत्तरसूची, चित्रे; Excel द्या",
     "stats",
 ]
 
