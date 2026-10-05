@@ -27,8 +27,11 @@ $insBook = $db->prepare('REPLACE INTO ep_books (book_id, standard, subject, medi
 $delCh = $db->prepare('DELETE FROM ep_book_chapters WHERE book_id = ?');
 $insCh = $db->prepare('INSERT INTO ep_book_chapters (book_id, chapter_no, title, start_page, end_page) VALUES (?,?,?,?,?)');
 $delQ = $db->prepare('DELETE FROM ep_book_questions WHERE book_id = ?');
-$insQ = $db->prepare('INSERT INTO ep_book_questions (bq_id, book_id, chapter_id, standard, subject, lang, page, block, instruction, qtype, text, item_no, needs_figure, page_image)
-                      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+$insQ = $db->prepare('INSERT INTO ep_book_questions (bq_id, book_id, chapter_id, standard, subject, lang, page, block, instruction, qtype, text, item_no, needs_figure, page_image,
+                                                     options_json, answer, ai_cleaned, figure_image)
+                      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+$delPack = $db->prepare('DELETE FROM ep_topic_packs WHERE book_id = ?');
+$insPack = $db->prepare('REPLACE INTO ep_topic_packs (chapter_id, book_id, standard, subject, lang, title, notes_json, quiz_json, model) VALUES (?,?,?,?,?,?,?,?,?)');
 
 $medium = fn(string $lang) => ['mr' => 'Marathi', 'hi' => 'Hindi', 'en' => 'English'][$lang] ?? $lang;
 $chapterIds = [];   // book_id => [chapter_no => chapter_id]
@@ -37,6 +40,7 @@ foreach ($books['books'] as $b) {
     $insBook->execute([$b['book_id'], $b['std'], $b['subject'], $medium($b['lang']), $b['title'], $b['file'], $b['pages']]);
     $delCh->execute([$b['book_id']]);
     $delQ->execute([$b['book_id']]);
+    $delPack->execute([$b['book_id']]);
     $nBooks++;
     foreach ($b['chapters'] as $c) {
         if ((int)$c['no'] === 0) {
@@ -53,11 +57,23 @@ foreach ($books['questions'] as $q) {
         $q['id'], $q['book_id'], $chapterIds[$q['book_id']][$q['chapter_no']] ?? null, $q['std'], $q['subject'], $q['lang'], $q['page'],
         mb_substr((string)$q['block'], 0, 100), mb_substr((string)$q['instruction'], 0, 400), $q['qtype'], $q['text'], $q['item_no'],
         $q['needs_figure'] ? 1 : 0, $q['page_image'],
+        !empty($q['options']) ? json_encode($q['options'], JSON_UNESCAPED_UNICODE) : null, $q['answer'] ?? null,
+        !empty($q['ai_cleaned']) ? 1 : 0, $q['figure_image'] ?? null,
     ]);
     $nQ++;
 }
+$nP = 0;
+foreach (json_decode((string)@file_get_contents($dataDir . '/topic_packs.json'), true) ?: [] as $p) {
+    $cid = $chapterIds[$p['book_id']][$p['chapter_no']] ?? null;
+    if (!$cid || count($p['quiz']) < 5) {
+        continue;
+    }
+    $insPack->execute([$cid, $p['book_id'], $p['std'], $p['subject'], $p['lang'], $p['chapter'],
+        json_encode($p['notes'], JSON_UNESCAPED_UNICODE), json_encode($p['quiz'], JSON_UNESCAPED_UNICODE), $p['model'] ?? null]);
+    $nP++;
+}
 $db->commit();
-echo "books=$nBooks chapters=$nCh questions=$nQ\n";
+echo "books=$nBooks chapters=$nCh questions=$nQ topic_packs=$nP\n";
 
 $models = json_decode((string)@file_get_contents($dataDir . '/model_papers.json'), true);
 if ($models) {

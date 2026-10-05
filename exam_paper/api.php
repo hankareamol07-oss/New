@@ -167,7 +167,7 @@ switch ($action) {
             foreach ($s['items'] ?? [] as $it) {
                 $text = trim((string)($it['text'] ?? ''));
                 if ($text === '') continue;
-                $img = preg_match('~^\d+/\d{3}\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
+                $img = preg_match('~^\d+/\d{3}(_\d+)?\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
                 $items[] = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
             }
             $instruction = trim((string)($s['instruction'] ?? ''));
@@ -210,12 +210,16 @@ switch ($action) {
     case 'quiz_mcq':
         ep_json(ep_quiz_mcq_pool($body['chapter_ids'] ?? [], max(1, min(30, (int)($body['count'] ?? EP_QUIZ_MIN))), $body['exclude'] ?? []));
 
+    case 'topic_pack':
+        // AI short notes + 10-question quiz for a textbook chapter (null when not generated yet)
+        ep_json(ep_topic_pack((int)($_GET['chapter_id'] ?? 0)));
+
     case 'save_homework':
         $items = [];
         foreach ($body['items'] ?? [] as $it) {
             $text = trim((string)($it['text'] ?? ''));
             if ($text === '') continue;
-            $img = preg_match('~^\d+/\d{3}\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
+            $img = preg_match('~^\d+/\d{3}(_\d+)?\.jpg$~', (string)($it['page_image'] ?? '')) ? $it['page_image'] : null;
             $items[] = ['bq_id' => (int)($it['bq_id'] ?? 0) ?: null, 'text' => $text, 'answer' => trim((string)($it['answer'] ?? '')), 'page_image' => $img, 'show_image' => $img && !empty($it['show_image'])];
         }
         $standard = (int)($body['standard'] ?? 0);
@@ -241,17 +245,19 @@ switch ($action) {
         } else {
             $quizId = null;
         }
+        $notes = array_values(array_filter(array_map(fn($n) => trim((string)$n), (array)($body['notes'] ?? [])), fn($n) => $n !== ''));
         $hp = [
             !empty($body['hw_date']) ? $body['hw_date'] : date('Y-m-d'), $standard, trim((string)($body['division'] ?? '')), trim((string)($body['std_label'] ?? '')),
             $subject, $medium, (int)($body['chapter_id'] ?? 0) ?: null, $topic, trim((string)($body['teacher'] ?? '')),
             trim((string)($body['title'] ?? '')) ?: 'गृहपाठ', trim((string)($body['note'] ?? '')), json_encode($items, JSON_UNESCAPED_UNICODE), $quizId,
+            $notes ? json_encode($notes, JSON_UNESCAPED_UNICODE) : null,
         ];
         if (!empty($body['hw_id'])) {
             $hp[] = (int)$body['hw_id'];
-            ep_db()->prepare('UPDATE ep_homework SET hw_date=?, standard=?, division=?, std_label=?, subject=?, medium=?, chapter_id=?, topic=?, teacher=?, title=?, note=?, items_json=?, quiz_id=? WHERE hw_id=?')->execute($hp);
+            ep_db()->prepare('UPDATE ep_homework SET hw_date=?, standard=?, division=?, std_label=?, subject=?, medium=?, chapter_id=?, topic=?, teacher=?, title=?, note=?, items_json=?, quiz_id=?, notes_json=? WHERE hw_id=?')->execute($hp);
             ep_json(['status' => 'success', 'hw_id' => (int)$body['hw_id'], 'quiz_id' => $quizId]);
         }
-        ep_db()->prepare('INSERT INTO ep_homework (hw_date, standard, division, std_label, subject, medium, chapter_id, topic, teacher, title, note, items_json, quiz_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)')->execute($hp);
+        ep_db()->prepare('INSERT INTO ep_homework (hw_date, standard, division, std_label, subject, medium, chapter_id, topic, teacher, title, note, items_json, quiz_id, notes_json) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)')->execute($hp);
         ep_json(['status' => 'success', 'hw_id' => (int)ep_db()->lastInsertId(), 'quiz_id' => $quizId]);
 
     case 'delete_homework':

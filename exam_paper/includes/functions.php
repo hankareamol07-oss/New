@@ -197,10 +197,37 @@ function ep_source_tree(): array
 
 /* ---------------- Textbook (Balbharati) exercise bank ---------------- */
 
+/** URL for a textbook page image ("46/018.jpg") or a cropped figure ("46/018_2.jpg"). */
+function ep_book_image_url(?string $f): ?string
+{
+    return $f ? EP_BASE_URL . '/book_page.php?f=' . rawurlencode($f) : null;
+}
+
 function ep_decode_book_question(array $q): array
 {
-    $q['page_image_url'] = $q['page_image'] ? EP_BASE_URL . '/book_page.php?f=' . rawurlencode($q['page_image']) : null;
+    $q['page_image_url'] = ep_book_image_url($q['page_image'] ?? null);
+    $q['figure_image_url'] = ep_book_image_url($q['figure_image'] ?? null);
+    $q['options'] = !empty($q['options_json']) ? (json_decode($q['options_json'], true) ?: []) : [];
+    unset($q['options_json']);
     return $q;
+}
+
+/** AI topic pack (short notes + 10 MCQ quiz) for a textbook chapter, or null. */
+function ep_topic_pack(int $chapterId): ?array
+{
+    if ($chapterId <= 0) {
+        return null;
+    }
+    $st = ep_db()->prepare('SELECT * FROM ep_topic_packs WHERE chapter_id = ?');
+    $st->execute([$chapterId]);
+    $p = $st->fetch();
+    if (!$p) {
+        return null;
+    }
+    $p['notes'] = json_decode($p['notes_json'], true) ?: [];
+    $p['quiz'] = json_decode($p['quiz_json'], true) ?: [];
+    unset($p['notes_json'], $p['quiz_json']);
+    return $p;
 }
 
 /** Classes -> subjects -> books -> chapters (+ question counts) for the textbook bank. */
