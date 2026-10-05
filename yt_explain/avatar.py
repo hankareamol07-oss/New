@@ -278,10 +278,57 @@ class Sprite:
         return out
 
 
+class Sheet:
+    """The user's own teacher sprite sheet cut by sheet_make.py (assets/avatar/<name>/manifest.json): the drawn frames are
+    shown as they are - talking frames cycle while the narration is loud, idle frames sway in silence, gesture frames
+    (pointing / explaining / thinking / happy / reading) follow the slide pose. No repainting of the face."""
+
+    POSE_GROUP = {"talk": "talking", "point": "pointing", "think": "thinking", "cheer": "happy", "wave": "explaining",
+                  "sway": "idle", "read": "reading"}
+
+    def __init__(self, name, h=PRO_HEIGHT, flip=None):
+        d = os.path.join(ASSETS, name)
+        meta = json.load(open(os.path.join(d, "manifest.json")))
+        self.h = h
+        self.flip = bool(meta.get("flip", False) if flip is None else flip)
+        self.groups = {}
+        for g, files in meta["groups"].items():
+            if g in ("viseme", "eyes"):
+                continue
+            ims = [Image.open(os.path.join(d, f)).convert("RGBA") for f in files]
+            k = h / max(im.height for im in ims)
+            ims = [im.resize((max(1, int(im.width * k)), max(1, int(im.height * k))), Image.LANCZOS) for im in ims]
+            if self.flip:
+                ims = [im.transpose(Image.FLIP_LEFT_RIGHT) for im in ims]
+            W = max(im.width for im in ims) + int(h * 0.06)
+            frames = []
+            for im in ims:                                     # same canvas for the whole group -> no jitter
+                c = Image.new("RGBA", (W, h), (0, 0, 0, 0))
+                c.alpha_composite(im, ((W - im.width) // 2, h - im.height))
+                frames.append(c)
+            self.groups[g] = frames + frames[-2:0:-1]          # ping-pong loop
+        self.idle = self.groups.get("idle") or next(iter(self.groups.values()))
+
+    def frame(self, pose, phase, mouth=0.0, blink=False):
+        g = self.POSE_GROUP.get(pose, "idle")
+        if g == "idle" and mouth > 0.12:
+            g = "talking"
+        seq = self.groups.get(g) or self.idle
+        speed = 2.0 if g in ("idle",) else (4.0 if mouth > 0.12 else 1.5)      # frames per second through the loop
+        idx = int(phase * 2.0 * speed * len(seq) / 2.0) % len(seq)             # phase = 2-second loop
+        im = seq[idx]
+        w = math.sin(phase * 2 * math.pi)
+        nod = self.h * 0.006 * math.sin(phase * 6 * math.pi) if mouth > 0.12 else self.h * 0.003 * w
+        out = Image.new("RGBA", (im.width, im.height + int(self.h * 0.02)), (0, 0, 0, 0))
+        out.alpha_composite(im, (0, int(self.h * 0.01 + nod)))
+        return out
+
+
 def _sprite_name(cfg):
     av = cfg.get("avatar") or {}
     name = av.get("name") or av.get("gender", "female")
-    if av.get("style", "pro") == "pro" and os.path.exists(os.path.join(ASSETS, name + ".json")):
+    if av.get("style", "pro") == "pro" and (os.path.exists(os.path.join(ASSETS, name + ".json"))
+                                            or os.path.exists(os.path.join(ASSETS, name, "manifest.json"))):
         return name
     return None
 
@@ -298,7 +345,8 @@ def _teacher(cfg):
     name = _sprite_name(cfg)
     if name:
         if name not in _CACHE:
-            _CACHE[name] = Sprite(name, flip=av.get("flip"))
+            sheet = os.path.exists(os.path.join(ASSETS, name, "manifest.json"))
+            _CACHE[name] = (Sheet if sheet else Sprite)(name, flip=av.get("flip"))
         return _CACHE[name]
     return Teacher(av.get("gender", "female"),
                    _hex(av.get("color") or cfg.get("brand_primary", "#1e3c78")),

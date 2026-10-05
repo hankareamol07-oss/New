@@ -43,23 +43,34 @@ import avatar
 SYSTEM = """You are an expert Maharashtra State Board teacher and instructional designer making the BEST possible explanation
 video of ONE topic for std 1-8 students watching alone on YouTube. Output STRICT JSON only.
 Rules (evidence-based video design):
-- Narration ("say") in the textbook language, conversational, warm, addressing the student as तुम्ही/तुम/you, age-appropriate words.
+- Narration ("say") ONLY in the language named under LANGUAGE below (English-medium chapters: English throughout), conversational, warm, addressing the student as तुम्ही/तुम/you, age-appropriate words.
 - ONE idea per step: each step = one short bullet (<= 90 chars, key term first) + 25-50 spoken words that explain exactly that bullet.
 - Every concept gets a concrete example from a Maharashtra child's daily life (home, school, farm, market, festival, cricket).
-- Include one worked example (step by step) and one "common mistake" (सामान्य चूक) segment with the correction.
+- Include one worked example (step by step) and one "common mistake" segment with the correction.
 - Ask a guiding question in the hook; after every 2-3 segments add a quick check question (student pauses, answers, then hears the answer).
 - No filler, no jokes about the channel, no repeating the same sentence. Never contradict the textbook text. Numbers as digits with units.
-- Teach like the best Marathi YouTube teacher: start from what the child already knows, then the textbook's own definition
+- Teach like the best YouTube teacher of that language: start from what the child already knows, then the textbook's own definition
   (quote it word-for-word in the bullet), then WHY it is so, then an example, then the child does something (कृती / पहा / मोजा).
 - Follow the TEXTBOOK PARTS given below IN ORDER and cover ONLY them: one or two sections per part, section heading = the
   part heading (or a shorter form of it). Do not bring in material from other parts of the chapter.
-- Every 'say' must sound spoken, not read: short sentences, transitions like 'बघा', 'लक्षात घ्या', 'आता', 'म्हणजे काय?',
+- Every 'say' must sound spoken, not read: short sentences, transitions in the script language (Marathi: 'बघा', 'लक्षात घ्या', 'आता';
+  English: 'look', 'now', 'remember', 'what does that mean?'),
   one rhetorical question per section, no lists read aloud.
 - Total spoken length 6-9 minutes (about 900-1300 words in all "say" fields); if only a few parts are given, keep 4-6 minutes. No emojis.
-- Marathi must be standard Balbharati-textbook Marathi (शुद्ध मराठी): reuse the textbook's own terms; never use Hindi words
+- When the language is Marathi it must be standard Balbharati-textbook Marathi (शुद्ध मराठी): reuse the textbook's own terms; never use Hindi words
   (e.g. अनवांछित, मिट्टी, घुलणे, बिन) or Hindi grammar. Hindi must likewise be standard textbook Hindi."""
 
-PROMPT = """STYLE GUIDE:
+LANG_RULES = {
+    "en": "LANGUAGE: This is an ENGLISH-MEDIUM chapter. EVERY field - title, section headings, bullets, 'say', questions, answers, "
+          "common-mistake text, summary - must be in natural Indian-classroom ENGLISH only. Do NOT write any Marathi/Hindi/Devanagari "
+          "words (no बघा / लक्षात घ्या / सामान्य चूक - use 'look', 'remember', 'common mistake'). Address the student as 'you'.",
+    "hi": "LANGUAGE: सब कुछ (शीर्षक, बुलेट, 'say', प्रश्न) केवल मानक पाठ्यपुस्तक हिंदी में; मराठी या अंग्रेज़ी वाक्य नहीं।",
+    "mr": "LANGUAGE: सर्व मजकूर (शीर्षक, बुलेट, 'say', प्रश्न) फक्त शुद्ध बालभारती मराठीत; हिंदी/इंग्रजी वाक्ये नकोत.",
+}
+
+PROMPT = """{lang_rule}
+
+STYLE GUIDE:
 {style}
 
 TOPIC: std {std} · {subject} ({subject_mr}) · घटक {seq}: {topic}
@@ -150,7 +161,7 @@ def generate(cfg, u, meta, text, questions, log=print, figures=None):
     is_poem = bool(meta.get("is_poem"))
     qtxt = "\n".join(json.dumps({"q": q["text"], "type": q.get("qtype"), "answer": q.get("answer", "")}, ensure_ascii=False) for q in questions[:25]) or "(none)"
     def prompt(n):
-        return PROMPT.format(style=style, std=u["std"], subject=u["subject"], subject_mr=SUBJECT_MR.get(u["subject"], meta.get("tachan_subject", u["subject"])),
+        return PROMPT.format(lang_rule=LANG_RULES.get(u["lang"], LANG_RULES["mr"]), style=style, std=u["std"], subject=u["subject"], subject_mr=SUBJECT_MR.get(u["subject"], meta.get("tachan_subject", u["subject"])),
                              seq=meta.get("tachan_seq"), topic=u["title"], lang_name=LANG_NAME.get(u["lang"], u["lang"]),
                              channel=cfg["channel_name"], tagline=cfg["channel_tagline"], lo=meta.get("learning_outcome", ""), act=meta.get("activity", ""),
                              poem_note=POEM_NOTE if is_poem else "", text=(text or "(no textbook text - explain the learning outcome with activities)")[:n],

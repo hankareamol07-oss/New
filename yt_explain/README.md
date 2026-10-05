@@ -41,7 +41,7 @@ daily-life example, worked example, common mistake) → retrieval check after ev
 * `"make_short": true` – also renders `short.mp4` (1080×1920, ≤ 60 s: hook + key idea + answer) and uploads it as a YouTube Short; post the same file manually as an Instagram Reel.
 
 ## GUI / EXE (Windows)
-* `START_GUI.bat` – one window (`gui.py`): इयत्ता → विषय → घटक, शिक्षक (शिक्षिका teacher2 / शिक्षक teacher3 / none), स्लाइड थीम
+* `START_GUI.bat` – one window (`gui.py`): इयत्ता → विषय → घटक, शिक्षक (शिक्षिका teacher_f / शिक्षक teacher_m = your own sprite sheets cut by `sheet_make.py`; old teacher2/teacher3; none), स्लाइड थीम
   (auto or a subject look), मोड: व्हिडिओ (reuses the saved script) / फक्त स्क्रिप्ट (writes the script and opens it in the स्क्रिप्ट tab) /
   नवीन स्क्रिप्ट (regenerate), "YouTube upload" tick, ▶ or ➕ रांगेत टाका. Left: live preview of a sample slide in the chosen
   theme with the chosen teacher. Tabs: लॉग | पाठ मजकूर (tick/edit chapter parts) | स्क्रिप्ट (edit `say`/`point` texts in place,

@@ -24,7 +24,8 @@ from ytstudio.slides import Renderer
 cfg = auto.load_cfg()
 st = auto.open_state(cfg)
 
-TEACHERS = [("शिक्षिका (teacher2)", "teacher2"), ("शिक्षक (teacher3)", "teacher3"), ("अवतार नाही (फक्त स्लाइड)", "none")]
+TEACHERS = [("शिक्षिका (तुमचा अवतार)", "teacher_f"), ("शिक्षक (तुमचा अवतार)", "teacher_m"),
+            ("शिक्षिका - जुना (teacher2)", "teacher2"), ("शिक्षक - जुना (teacher3)", "teacher3"), ("अवतार नाही (फक्त स्लाइड)", "none")]
 THEMES = [("विषयानुसार (auto)", "auto"), ("गणित - निळा grid", "math"), ("विज्ञान - हिरवा lab", "science"),
           ("मराठी - warm paper", "marathi"), ("हिंदी", "hindi"), ("English - classic", "english"), ("इतिहास - parchment", "history"),
           ("भूगोल - map", "geography"), ("नागरिकशास्त्र", "civics"), ("परिसर अभ्यास", "evs"), ("संस्कृत", "sanskrit"),
@@ -37,7 +38,7 @@ FONT_SIZE = 13
 
 def _avatar_default():
     av = cfg.get("avatar") or {}
-    return (av.get("name") or "teacher2") if av.get("enabled", True) else "none"
+    return (av.get("name") or "teacher_f") if av.get("enabled", True) else "none"
 
 
 def rows():
