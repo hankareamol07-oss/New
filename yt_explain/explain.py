@@ -275,11 +275,11 @@ def build_video(cfg, script, r, u, out_dir, log=print):
 
     def check(c, name, badge):
         c.setdefault("instruction", badge)
-        st = add(r.question(c, False), f"{name}a_q", c.get("say_q"), 2.5, pose="think")   # pause: student answers
-        add(r.question(c, True), f"{name}b_a", c.get("say_a"), 1.0, pose="cheer")
+        st = add(r.question(c, False, reserve_right=reserve), f"{name}a_q", c.get("say_q"), 2.5, pose="think")   # pause: student answers
+        add(r.question(c, True, reserve_right=reserve), f"{name}b_a", c.get("say_a"), 1.0, pose="cheer")
         return st
 
-    add(r.title(script), "00_title", None, extra=2.0, pose="wave")
+    add(r.title(script, reserve_right=reserve), "00_title", None, extra=2.0, pose="wave")
     hook = script.get("hook") if isinstance(script.get("hook"), dict) else None
     if hook and (hook.get("say") or hook.get("question")):
         add(r.points(hook.get("question", ""), [], badge="विचार करा" if not en else "Think", reserve_right=reserve), "00b_hook", hook.get("say"), 1.0, pose="think")
@@ -345,7 +345,7 @@ def build_video(cfg, script, r, u, out_dir, log=print):
     if hw and hw.get("task"):
         st = add(r.points("घरी करून बघा" if not en else "Try at home", [hw["task"]], badge="कृती" if not en else "Task", reserve_right=reserve), "98b_homework", hw.get("say"), 0.8, pose="cheer")
         chapters.append((st, "घरी करून बघा" if not en else "Try at home"))
-    add(r.title(script), "99_outro", script.get("outro", {}).get("say"), 1.0, pose="wave")
+    add(r.title(script, reserve_right=reserve), "99_outro", script.get("outro", {}).get("say"), 1.0, pose="wave")
     mp4 = os.path.join(out_dir, "video.mp4")
     log("[video] encoding ...")
     if av:

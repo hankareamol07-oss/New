@@ -176,20 +176,22 @@ class Renderer:
             y += 16
 
     # ---- slides --------------------------------------------------------------------------------
-    def title(self, script):
+    def title(self, script, reserve_right=0):
         im, d = self._base()
-        self._card(d, (160, 200, 1760, 940))
-        y = self.t.block(d, (W // 2, 260), self.chapter["title"], 1500, 260, start=120, min_size=60, bold=True, fill=self.primary, anchor="ma")
-        d.line([560, y + 20, 1360, y + 20], fill=self.accent, width=6)
+        right = 1840 - reserve_right
+        cx = (80 + right) // 2
+        self._card(d, (80 + (right - 80 - 1600) // 2 if right - 80 > 1600 else 80, 200, min(right, cx + 800), 940))
+        y = self.t.block(d, (cx, 260), self.chapter["title"], min(1500, right - 180), 260, start=120, min_size=60, bold=True, fill=self.primary, anchor="ma")
+        d.line([cx - 400, y + 20, cx + 400, y + 20], fill=self.accent, width=6)
         sub = script.get("thumbnail", {}).get("sub") or ("Exercise | Answers" if self.en else "स्वाध्याय | उत्तरे")
-        self.t.draw(d, (W // 2, y + 60), sub, 60, True, (60, 60, 60), anchor="ma")
-        self.t.draw(d, (W // 2, y + 170), f"{self.book['subject']}  |  {self._std()}  |  Maharashtra Board", 44, False, (90, 90, 90), anchor="ma")
+        self.t.draw(d, (cx, y + 60), sub, 60, True, (60, 60, 60), anchor="ma")
+        self.t.draw(d, (cx, y + 170), f"{self.book['subject']}  |  {self._std()}  |  Maharashtra Board", 44, False, (90, 90, 90), anchor="ma")
         return im
 
     def points(self, heading, pts, badge=None, reserve_right=0, active=None):
         im, d = self._base(badge=badge)
         right = 1840 - reserve_right
-        self.t.draw(d, (80, 215), heading, 64, True, self.primary)
+        self.t.block(d, (80, 215), heading, right - 80, 90, start=64, min_size=40, bold=True, fill=self.primary)
         d.line([80, 305, right, 305], fill=self.accent, width=5)
         self._card(d, (80, 340, right, 980))
         self._bullets(d, pts, 130, 380, right - 180, 570, active=active)
@@ -199,7 +201,7 @@ class Renderer:
         """Bullets on the left, the textbook figure in a card on the right (the avatar strip stays free)."""
         im, d = self._base(badge=badge)
         right = 1840 - reserve_right
-        self.t.draw(d, (80, 215), heading, 64, True, self.primary)
+        self.t.block(d, (80, 215), heading, right - 80, 90, start=64, min_size=40, bold=True, fill=self.primary)
         d.line([80, 305, right, 305], fill=self.accent, width=5)
         fw = min(760, max(420, (right - 80) * 0.42))
         fx0 = int(right - fw)
@@ -217,7 +219,9 @@ class Renderer:
             pass
         return im
 
-    def question(self, seg, show_answer=False, badge=None):
+    def question(self, seg, show_answer=False, badge=None, reserve_right=0):
+        right = 1840 - reserve_right
+        col = (right - 290) // 2
         im, d = self._base(badge=badge or seg.get("instruction") or "")
         n = seg.get("no", "")
         opts = seg.get("options") or []
@@ -226,23 +230,23 @@ class Renderer:
         is_match = bool(pairs) and seg.get("qtype") == "match"
         ans_h = 330 if show_answer else 0
         q_bottom = H - 100 - ans_h - (20 if show_answer else 0)
-        self._card(d, (80, 215, 1840, q_bottom))
+        self._card(d, (80, 215, right, q_bottom))
         d.ellipse([120, 250, 240, 370], fill=self.primary)
         self.t.draw(d, (180, 310), str(n), 70, True, "white", anchor="mm")
         extra = (((len(opts) + 1) // 2) * 66 + 30 if is_mcq else 0) + (min(len(pairs), 6) * 58 + 20 if is_match else 0)
         avail = q_bottom - 250 - 40 - extra
-        y = self.t.block(d, (290, 250), seg.get("question", ""), 1500, max(90, avail), start=60, min_size=34)
+        y = self.t.block(d, (290, 250), seg.get("question", ""), right - 330, max(90, avail), start=60, min_size=34)
         if is_mcq:
             labels = ["a", "b", "c", "d", "e", "f"] if self.en else ["अ", "ब", "क", "ड", "इ", "फ"]
             y += 20
             ans = str(seg.get("answer", "")).strip()
             for i, o in enumerate(opts[:6]):
-                x = 290 + (i % 2) * 760
+                x = 290 + (i % 2) * col
                 if i and i % 2 == 0:
                     y += 66
                 hit = show_answer and (ans == str(o).strip() or ans.lower() == labels[i] or ans.startswith(f"({labels[i]})"))
                 if hit:
-                    d.rounded_rectangle([x - 16, y - 6, x + 720, y + 58], radius=12, fill=(220, 250, 228))
+                    d.rounded_rectangle([x - 16, y - 6, x + col - 40, y + 58], radius=12, fill=(220, 250, 228))
                 self.t.draw(d, (x, y), f"({labels[i]})  {o}", 46, hit, GREEN if hit else (40, 40, 40))
             y += 70
         if is_match:
@@ -252,26 +256,26 @@ class Renderer:
             y += 10
             hdr_a, hdr_b = ("Group A", "Group B") if self.en else ("अ गट", "ब गट")
             self.t.draw(d, (290, y), hdr_a, 40, True, self.primary)
-            self.t.draw(d, (1060, y), hdr_b, 40, True, self.primary)
+            self.t.draw(d, (290 + col, y), hdr_b, 40, True, self.primary)
             y += 56
             for i, p in enumerate(pairs[:6]):
                 self.t.draw(d, (290, y), f"{i + 1}. {p[0]}", 42, False, (40, 40, 40))
-                self.t.draw(d, (1060, y), ("→ " if show_answer else "") + str(right[i]), 42, show_answer, GREEN if show_answer else (40, 40, 40))
+                self.t.draw(d, (290 + col, y), ("→ " if show_answer else "") + str(right[i]), 42, show_answer, GREEN if show_answer else (40, 40, 40))
                 y += 58
         if show_answer:
             top = H - 90 - ans_h
-            d.rounded_rectangle([80, top, 1840, H - 90], radius=26, fill=(230, 252, 236), outline=(0, 150, 70), width=4)
+            d.rounded_rectangle([80, top, right, H - 90], radius=26, fill=(230, 252, 236), outline=(0, 150, 70), width=4)
             label = "Ans." if self.en else "उत्तर :"
             self.t.draw(d, (120, top + 22), label, 44, True, GREEN)
             steps = seg.get("steps") or []
             lx = 120 + self.t.length(d, label, 44, True) + 30
             if steps:
-                y2 = self.t.block(d, (lx, top + 22), "\n".join(str(s) for s in steps), 1840 - lx - 60, ans_h - 40, start=46, min_size=28, bold=False, fill=GREEN, spacing=1.25)
+                y2 = self.t.block(d, (lx, top + 22), "\n".join(str(s) for s in steps), right - lx - 60, ans_h - 40, start=46, min_size=28, bold=False, fill=GREEN, spacing=1.25)
             else:
-                y2 = self.t.block(d, (lx, top + 22), str(seg.get("answer", "")), 1840 - lx - 60, 150, start=54, min_size=34, bold=True, fill=GREEN)
+                y2 = self.t.block(d, (lx, top + 22), str(seg.get("answer", "")), right - lx - 60, 150, start=54, min_size=34, bold=True, fill=GREEN)
                 expl = str(seg.get("say_a", "")).strip()
                 if expl and ans_h - (y2 - top) > 70:
-                    self.t.block(d, (lx, y2 + 10), expl, 1840 - lx - 60, top + ans_h - y2 - 30, start=36, min_size=26, fill=(40, 80, 55), spacing=1.25)
+                    self.t.block(d, (lx, y2 + 10), expl, right - lx - 60, top + ans_h - y2 - 30, start=36, min_size=26, fill=(40, 80, 55), spacing=1.25)
         return im
 
     def short(self, seg, hook, show_answer=False):

@@ -444,6 +444,23 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
 KEY_FPS = 4          # key frames per second for sprite sheets; ffmpeg minterpolate makes the in-between frames
 
 
+def _similar_order(frames):
+    """Nearest-neighbour ordering of drawn frames (by pixel difference) so each interpolation step moves as little as
+    possible; the loop is closed by mirroring back, so no large jump occurs."""
+    if len(frames) < 3:
+        return list(frames)
+    small = [f.resize((48, 64)).convert("L") for f in frames]
+    def dist(a, b):
+        return sum(abs(x - y) for x, y in zip(small[a].getdata(), small[b].getdata()))
+    order, left = [0], set(range(1, len(frames)))
+    while left:
+        nxt = min(left, key=lambda j: dist(order[-1], j))
+        order.append(nxt)
+        left.remove(nxt)
+    path = [frames[j] for j in order]
+    return path + path[-2:0:-1]
+
+
 def _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size, portrait):
     """Sprite-sheet teacher as real animation: a key pose every 1/KEY_FPS s (idle / talking by loudness, the slide's
     gesture in between, eased in from idle and back out), composed on its patch of the slide, then motion-compensated
@@ -462,13 +479,16 @@ def _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size
     loud = [sum(env[i * per:(i + 1) * per]) / per if env[i * per:(i + 1) * per] else 0.0 for i in range(n)]
     g_pose = teacher.POSE_GROUP.get(pose, "idle")
     gesture = teacher.groups.get(g_pose) if g_pose not in ("idle", "talking") else None
+    hold = sum(map(ord, os.path.basename(slide_png))) % len(gesture) if gesture else 0
+    talk_seq = _similar_order(teacher.groups["talking"]) if "talking" in teacher.groups else teacher.idle
+
     def pick(i):
         t = i / KEY_FPS
         talking = loud[i] > 0.08
         if gesture is not None and 0.5 <= t <= secs - 0.5:
-            return "g", gesture[(i // 3) % len(gesture)], talking
+            return "g", gesture[hold], talking        # one drawn gesture per slide; only the breathing bob is animated
         if talking and "talking" in teacher.groups:
-            return "t", teacher.groups["talking"][(i // 2) % len(teacher.groups["talking"])], True
+            return "t", talk_seq[(i // 2) % len(talk_seq)], True
         return "i", teacher.idle[(i // 4) % len(teacher.idle)], False
     picked = [pick(i) for i in range(n)]
     keys = []
