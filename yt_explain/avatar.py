@@ -18,7 +18,7 @@ from PIL import Image, ImageDraw
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(HERE, "assets", "avatar")
-FPS = 10
+FPS = 20
 HEIGHT = 380
 PRO_HEIGHT = 540
 MARGIN = (50, 90)
@@ -300,27 +300,61 @@ class Sheet:
             ims = [im.resize((max(1, int(im.width * k)), max(1, int(im.height * k))), Image.LANCZOS) for im in ims]
             if self.flip:
                 ims = [im.transpose(Image.FLIP_LEFT_RIGHT) for im in ims]
-            W = max(im.width for im in ims) + int(h * 0.06)
+            self.groups[g] = ims
+        W = max(im.width for ims in self.groups.values() for im in ims) + int(h * 0.06)
+        for g, ims in self.groups.items():                     # one canvas for every group -> frames blend without jumps
             frames = []
-            for im in ims:                                     # same canvas for the whole group -> no jitter
+            for im in ims:
                 c = Image.new("RGBA", (W, h), (0, 0, 0, 0))
                 c.alpha_composite(im, ((W - im.width) // 2, h - im.height))
                 frames.append(c)
             self.groups[g] = frames + frames[-2:0:-1]          # ping-pong loop
         self.idle = self.groups.get("idle") or next(iter(self.groups.values()))
 
-    def frame(self, pose, phase, mouth=0.0, blink=False):
+    def _seq(self, pose, mouth):
         g = self.POSE_GROUP.get(pose, "idle")
         if g == "idle" and mouth > 0.12:
             g = "talking"
-        seq = self.groups.get(g) or self.idle
-        speed = 2.0 if g in ("idle",) else (4.0 if mouth > 0.12 else 1.5)      # frames per second through the loop
-        idx = int(phase * 2.0 * speed * len(seq) / 2.0) % len(seq)             # phase = 2-second loop
-        im = seq[idx]
+        return g, (self.groups.get(g) or self.idle)
+
+    @staticmethod
+    def _blend(seq, pos):
+        """Frame at a fractional loop position: cross-fade between the two neighbouring drawn frames."""
+        n = len(seq)
+        i = int(pos) % n
+        f = pos - int(pos)
+        if n == 1 or f < 0.72:                                 # hold the drawn frame, dissolve only in the last ~quarter
+            return seq[i]
+        k = (f - 0.72) / 0.28
+        return Image.blend(seq[i], seq[(i + 1) % n], 0.5 - 0.5 * math.cos(math.pi * k))
+
+    def frame(self, pose, phase, mouth=0.0, blink=False, t=None, secs=None):
+        """t/secs (seconds into the clip / clip length): the gesture eases in from idle over the first 0.5 s and
+        eases back to idle over the last 0.4 s, so consecutive slides join without a jump."""
+        g, seq = self._seq(pose, mouth)
+        speed = 1.0 if g == "idle" else (2.5 if mouth > 0.12 else 1.2)         # drawn frames per second
+        im = self._blend(seq, phase * 2.0 * speed)
+        if g == "talking" and "talking" in self.groups and seq is self.groups["talking"]:
+            k = min(1.0, max(0.0, (mouth - 0.08) / 0.2))                       # idle <-> talking by loudness, no snap
+            if k < 1.0:
+                im = Image.blend(self._blend(self.idle, phase * 2.0), im, k)
+        if t is not None and g != "idle":
+            # pose changes: idle fades out, then the gesture fades in (no overlap of two different drawings)
+            a = 1.0
+            for u in ([t] if secs is None else [t, secs - t]):
+                if u < 0.22:
+                    im, a = self._blend(self.idle, phase * 2.0), min(a, 1.0 - u / 0.22)
+                elif u < 0.44:
+                    a = min(a, (u - 0.22) / 0.22)
+            if a < 1.0:
+                im = im.copy()
+                im.putalpha(im.getchannel("A").point(lambda v: int(v * (0.5 - 0.5 * math.cos(math.pi * a)))))
         w = math.sin(phase * 2 * math.pi)
-        nod = self.h * 0.006 * math.sin(phase * 6 * math.pi) if mouth > 0.12 else self.h * 0.003 * w
-        out = Image.new("RGBA", (im.width, im.height + int(self.h * 0.02)), (0, 0, 0, 0))
-        out.alpha_composite(im, (0, int(self.h * 0.01 + nod)))
+        breathe = self.h * 0.004 * math.sin(phase * 2 * math.pi * 0.5 + 1.0)   # slow 4-second breathing bob
+        nod = (self.h * 0.004 * math.sin(phase * 6 * math.pi) if mouth > 0.12 else self.h * 0.002 * w) + breathe
+        sway = int(self.h * 0.004 * math.sin(phase * 2 * math.pi * 0.5))
+        out = Image.new("RGBA", (im.width + int(self.h * 0.02), im.height + int(self.h * 0.03)), (0, 0, 0, 0))
+        out.alpha_composite(im, (int(self.h * 0.01 + sway), int(self.h * 0.015 + nod)))
         return out
 
 
@@ -380,10 +414,12 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
     os.makedirs(fdir, exist_ok=True)
     env = envelope(cfg, audio, secs)
     fig_h = 300 if portrait else figure_height(cfg)
+    sheet = isinstance(teacher, Sheet)
     for i, m in enumerate(env):
-        phase = (i / FPS / 2.0) % 1.0
+        t = i / FPS
+        phase = (t / 2.0) % 1.0 if not sheet else t / 2.0                      # sheets take an unwrapped phase (slow sway)
         blink = (i % (FPS * 3)) in (FPS * 2, FPS * 2 + 1) or (i % 71 == 40)    # blink every 3 s (+ an odd one)
-        fig = teacher.frame(pose, phase, m, blink)
+        fig = teacher.frame(pose, phase, m, blink, t=t, secs=secs) if sheet else teacher.frame(pose, phase, m, blink)
         if abs(fig.height - fig_h) > fig_h * 0.05:
             fig = fig.resize((int(fig.width * fig_h / fig.height), fig_h), Image.LANCZOS)
         fig.save(os.path.join(fdir, f"{i:04d}.png"))
