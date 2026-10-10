@@ -410,16 +410,16 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
     slide = Image.open(slide_png)
     portrait = slide.height > slide.width
     teacher = _teacher(cfg)
+    if isinstance(teacher, Sheet):
+        return _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size, portrait)
     fdir = os.path.splitext(slide_png)[0] + "_av"
     os.makedirs(fdir, exist_ok=True)
     env = envelope(cfg, audio, secs)
     fig_h = 300 if portrait else figure_height(cfg)
-    sheet = isinstance(teacher, Sheet)
     for i, m in enumerate(env):
-        t = i / FPS
-        phase = (t / 2.0) % 1.0 if not sheet else t / 2.0                      # sheets take an unwrapped phase (slow sway)
+        phase = (i / FPS / 2.0) % 1.0
         blink = (i % (FPS * 3)) in (FPS * 2, FPS * 2 + 1) or (i % 71 == 40)    # blink every 3 s (+ an odd one)
-        fig = teacher.frame(pose, phase, m, blink, t=t, secs=secs) if sheet else teacher.frame(pose, phase, m, blink)
+        fig = teacher.frame(pose, phase, m, blink)
         if abs(fig.height - fig_h) > fig_h * 0.05:
             fig = fig.resize((int(fig.width * fig_h / fig.height), fig_h), Image.LANCZOS)
         fig.save(os.path.join(fdir, f"{i:04d}.png"))
@@ -436,6 +436,83 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
                     f"[bg][1:v]overlay={x}:{y},format=yuv420p",
                     "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
     for f in os.listdir(fdir):      # frames are only needed for the encode
+        os.remove(os.path.join(fdir, f))
+    os.rmdir(fdir)
+    return out_mp4
+
+
+KEY_FPS = 4          # key frames per second for sprite sheets; ffmpeg minterpolate makes the in-between frames
+
+
+def _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size, portrait):
+    """Sprite-sheet teacher as real animation: a key pose every 1/KEY_FPS s (idle / talking by loudness, the slide's
+    gesture in between, eased in from idle and back out), composed on its patch of the slide, then motion-compensated
+    frame interpolation (ffmpeg minterpolate) to 30 fps, so arms and head travel between the drawn poses instead of
+    cutting or fading."""
+    w, h = size
+    bg = slide.convert("RGB")
+    k = min(w / bg.width, h / bg.height)
+    bg = bg.resize((int(bg.width * k), int(bg.height * k)), Image.LANCZOS)
+    canvas = Image.new("RGB", (w, h), (255, 255, 255))
+    canvas.paste(bg, ((w - bg.width) // 2, (h - bg.height) // 2))
+    fig_h = 300 if portrait else figure_height(cfg)
+    env = envelope(cfg, audio, secs)
+    n = max(2, int(math.ceil(secs * KEY_FPS)) + 1)
+    per = max(1, len(env) // max(1, n - 1))
+    loud = [sum(env[i * per:(i + 1) * per]) / per if env[i * per:(i + 1) * per] else 0.0 for i in range(n)]
+    g_pose = teacher.POSE_GROUP.get(pose, "idle")
+    gesture = teacher.groups.get(g_pose) if g_pose not in ("idle", "talking") else None
+    def pick(i):
+        t = i / KEY_FPS
+        talking = loud[i] > 0.08
+        if gesture is not None and 0.5 <= t <= secs - 0.5:
+            return "g", gesture[(i // 3) % len(gesture)], talking
+        if talking and "talking" in teacher.groups:
+            return "t", teacher.groups["talking"][(i // 2) % len(teacher.groups["talking"])], True
+        return "i", teacher.idle[(i // 4) % len(teacher.idle)], False
+    picked = [pick(i) for i in range(n)]
+    keys = []
+    for i, (kind, im, talking) in enumerate(picked):
+        # a change between the full-figure idle/talking drawings and a waist-up gesture is faded out / in over
+        # three keys each side (same drawing, changing opacity), so the interpolator never morphs two different poses
+        a = 1.0
+        for j in (1, 2, 3):
+            if i - j >= 0 and (picked[i - j][0] == "g") != (kind == "g"):
+                a = min(a, j / 3.5)
+            if i + j < n and (picked[i + j][0] == "g") != (kind == "g"):
+                a = min(a, j / 3.5)
+        if a < 1.0:
+            im = im.copy()
+            im.putalpha(im.getchannel("A").point(lambda v: int(v * a)))
+        bob = int(fig_h * 0.006 * math.sin(i * 0.45)) if talking else int(fig_h * 0.003 * math.sin(i * 0.25))
+        keys.append((im, bob))
+    fw = max(im.width for im, _ in keys) + 8
+    fh = fig_h + 12
+    if portrait:
+        fw, fh = int(fw * 300 / fig_h) + 8, 312
+    fw, fh = fw + fw % 2, fh + fh % 2
+    x0 = w - fw - (30 if portrait else MARGIN[0]) + 4
+    y0 = h - fh - (100 if portrait else _bottom(cfg)) + 6
+    x0, y0 = max(0, min(x0, w - fw)), max(0, min(y0, h - fh))
+    fdir = os.path.splitext(slide_png)[0] + "_av"
+    os.makedirs(fdir, exist_ok=True)
+    for i, (im, bob) in enumerate(keys):
+        if portrait:
+            im = im.resize((int(im.width * 300 / im.height), 300), Image.LANCZOS)
+        patch = canvas.crop((x0, y0, x0 + fw, y0 + fh)).copy()
+        patch.paste(im, ((fw - im.width) // 2, fh - im.height - 6 + bob), im)
+        patch.save(os.path.join(fdir, f"{i:04d}.png"))
+    patch_mp4 = os.path.join(fdir, "patch.mp4")
+    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-framerate", str(KEY_FPS), "-i", os.path.join(fdir, "%04d.png"),
+                    "-vf", "minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:scd=fdiff:scd_threshold=8,tpad=stop_mode=clone:stop_duration=2",
+                    "-t", f"{secs:.3f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", patch_mp4], check=True)
+    canvas_png = os.path.join(fdir, "canvas.png")
+    canvas.save(canvas_png)
+    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", canvas_png,
+                    "-i", patch_mp4,
+                    "-filter_complex", f"[0:v][1:v]overlay={x0}:{y0},format=yuv420p",
+                    "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
+    for f in os.listdir(fdir):
         os.remove(os.path.join(fdir, f))
     os.rmdir(fdir)
     return out_mp4
