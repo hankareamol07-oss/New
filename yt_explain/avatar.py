@@ -14,6 +14,8 @@ import os
 import struct
 import subprocess
 
+import rig
+
 from PIL import Image, ImageDraw
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -381,7 +383,10 @@ def _teacher(cfg):
     if name:
         if name not in _CACHE:
             sheet = os.path.exists(os.path.join(ASSETS, name, "manifest.json"))
-            _CACHE[name] = (Sheet if sheet else Sprite)(name, flip=av.get("flip"))
+            if name in rig.RIG and av.get("rig", True):
+                _CACHE[name] = rig.Rig(name, PRO_HEIGHT)
+            else:
+                _CACHE[name] = (Sheet if sheet else Sprite)(name, flip=av.get("flip"))
         return _CACHE[name]
     return Teacher(av.get("gender", "female"),
                    _hex(av.get("color") or cfg.get("brand_primary", "#1e3c78")),
@@ -410,6 +415,8 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
     slide = Image.open(slide_png)
     portrait = slide.height > slide.width
     teacher = _teacher(cfg)
+    if isinstance(teacher, rig.Rig):
+        return _clip_rig(cfg, teacher, slide_png, pose, secs, audio, out_mp4, size, portrait)
     if isinstance(teacher, Sheet):
         return _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size, portrait)
     fdir = os.path.splitext(slide_png)[0] + "_av"
@@ -436,6 +443,41 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
                     f"[bg][1:v]overlay={x}:{y},format=yuv420p",
                     "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
     for f in os.listdir(fdir):      # frames are only needed for the encode
+        os.remove(os.path.join(fdir, f))
+    os.rmdir(fdir)
+    return out_mp4
+
+
+RIG_FPS = 30
+
+
+def _clip_rig(cfg, teacher, slide_png, pose, secs, audio, out_mp4, size, portrait):
+    """Puppet-rig teacher rendered frame by frame at 30 fps (mouth from the audio envelope, blink, nod, arm)."""
+    fdir = os.path.splitext(slide_png)[0] + "_av"
+    os.makedirs(fdir, exist_ok=True)
+    env = envelope(cfg, audio, secs, fps=RIG_FPS)
+    n = int(round(secs * RIG_FPS))
+    fig_h = 300 if portrait else figure_height(cfg)
+    for i in range(n):
+        t = i / RIG_FPS
+        j = min(len(env) - 1, int(i * len(env) / max(1, n)))
+        m = env[j] if env else 0.0
+        blink = (i % (RIG_FPS * 3)) in (RIG_FPS * 2, RIG_FPS * 2 + 1, RIG_FPS * 2 + 2) or (i % 97 in (50, 51))
+        fig = teacher.frame(pose, t, m, blink, secs=secs)
+        if portrait:
+            fig = fig.resize((int(fig.width * fig_h / fig.height), fig_h), Image.LANCZOS)
+        fig.save(os.path.join(fdir, f"{i:04d}.png"))
+    w, h = size
+    x = f"main_w-overlay_w-{30 if portrait else MARGIN[0]}"
+    y = f"main_h-overlay_h-{100 if portrait else _bottom(cfg)}"
+    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error",
+                    "-loop", "1", "-framerate", str(RIG_FPS), "-i", slide_png,
+                    "-framerate", str(RIG_FPS), "-i", os.path.join(fdir, "%04d.png"),
+                    "-filter_complex",
+                    f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[bg];"
+                    f"[1:v]tpad=stop_mode=clone:stop_duration=1[av];[bg][av]overlay={x}:{y},format=yuv420p",
+                    "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
+    for f in os.listdir(fdir):
         os.remove(os.path.join(fdir, f))
     os.rmdir(fdir)
     return out_mp4
