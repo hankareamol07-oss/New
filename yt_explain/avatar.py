@@ -478,9 +478,9 @@ def _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size
         a = 1.0
         for j in (1, 2, 3):
             if i - j >= 0 and (picked[i - j][0] == "g") != (kind == "g"):
-                a = min(a, j / 3.5)
+                a = min(a, (j - 1) / 3.0)
             if i + j < n and (picked[i + j][0] == "g") != (kind == "g"):
-                a = min(a, j / 3.5)
+                a = min(a, (j - 1) / 3.0)
         if a < 1.0:
             im = im.copy()
             im.putalpha(im.getchannel("A").point(lambda v: int(v * a)))
