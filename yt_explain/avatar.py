@@ -327,8 +327,9 @@ class Sheet:
 def _sprite_name(cfg):
     av = cfg.get("avatar") or {}
     name = av.get("name") or av.get("gender", "female")
-    if av.get("style", "pro") == "pro" and (os.path.exists(os.path.join(ASSETS, name + ".json"))
-                                            or os.path.exists(os.path.join(ASSETS, name, "manifest.json"))):
+    if name == "cartoon" or (not av.get("name") and av.get("style") == "cartoon"):
+        return None
+    if os.path.exists(os.path.join(ASSETS, name + ".json")) or os.path.exists(os.path.join(ASSETS, name, "manifest.json")):
         return name
     return None
 
