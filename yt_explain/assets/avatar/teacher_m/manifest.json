@@ -43,16 +43,10 @@
   ],
   "talking": [
    "035.png",
-   "036.png",
-   "037.png",
-   "038.png",
-   "039.png",
    "040.png",
-   "041.png",
    "042.png"
   ],
   "pointing": [
-   "043.png",
    "044.png",
    "045.png",
    "046.png"
@@ -64,28 +58,23 @@
    "050.png"
   ],
   "explaining": [
-   "051.png",
-   "052.png",
-   "053.png",
-   "054.png"
+   "063.png",
+   "064.png",
+   "045.png"
   ],
   "holding": [
    "055.png",
    "056.png",
-   "057.png",
-   "058.png"
+   "057.png"
   ],
   "thinking": [
    "059.png",
-   "060.png",
    "061.png",
    "062.png"
   ],
   "happy": [
    "063.png",
-   "064.png",
-   "065.png",
-   "066.png"
+   "064.png"
   ],
   "surprised": [
    "067.png",
@@ -105,5 +94,6 @@
   1024
  ],
  "source": "ChatGPT_Image_Sep_29_2026_09_09_15_PM.png",
- "flip": true
+ "flip": true,
+ "curated": true
 }

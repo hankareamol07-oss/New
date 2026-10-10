@@ -44,30 +44,23 @@
   "talking": [
    "035.png",
    "036.png",
-   "037.png",
-   "038.png",
    "039.png",
    "040.png",
    "041.png",
    "042.png"
   ],
   "pointing": [
-   "043.png",
    "044.png",
    "045.png",
    "046.png"
   ],
   "reading": [
    "047.png",
-   "048.png",
-   "049.png",
    "050.png"
   ],
   "explaining": [
-   "051.png",
-   "052.png",
    "053.png",
-   "054.png"
+   "046.png"
   ],
   "holding": [
    "055.png",
@@ -84,7 +77,6 @@
   "happy": [
    "063.png",
    "064.png",
-   "065.png",
    "066.png"
   ],
   "surprised": [
@@ -96,8 +88,7 @@
   "sad": [
    "071.png",
    "072.png",
-   "073.png",
-   "074.png"
+   "073.png"
   ]
  },
  "size": [
@@ -105,5 +96,6 @@
   1024
  ],
  "source": "dc0de9f0-4574-4ece-b07a-c18c10bcce25.png",
- "flip": true
+ "flip": true,
+ "curated": true
 }
