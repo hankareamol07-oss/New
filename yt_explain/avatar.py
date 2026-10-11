@@ -374,7 +374,7 @@ def _sprite_name(cfg):
 def figure_height(cfg):
     name = _sprite_name(cfg)
     if name in vrig.RIGS:
-        return int(PRO_HEIGHT * 1.35)   # slim full-body vector figure: a bit taller so the face stays readable
+        return int(PRO_HEIGHT * 0.72)   # calm small figure in the corner, slide content keeps most of the width
     return PRO_HEIGHT if name else HEIGHT
 
 
