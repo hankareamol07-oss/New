@@ -112,7 +112,7 @@ class VRig:
     WIDE = 1.45             # zoom-out limit: mid shot (knees up) - she always stays big on screen
 
     BINDI = (-12.0, 31.5)   # red tikali: point in the eye-symbol space (centre above the brows), radius in file units
-    BINDI_R = 2.7
+    BINDI_R = 1.4
 
     def _zoom(self, pose, t, secs):
         """Fixed waist-up presenter framing - no camera movement."""
