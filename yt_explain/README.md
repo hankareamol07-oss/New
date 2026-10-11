@@ -62,3 +62,14 @@ Free-tier, Marathi-native TTS. Get a key at https://dashboard.sarvam.ai → API 
 "sarvam": {"model": "bulbul:v3", "speaker": "shubh", "pace": 0.95}
 ```
 Speakers: `shubh`, `aditya`, `rahul` (male); `ritu`, `priya`, `neha` (female). `pace` 0.5–2.0. Falls back to edge-tts if Sarvam fails. Delete a chapter's `audio\` folder + video.mp4 to re-voice it.
+
+## 📈 Growth / Analytics tab (vidIQ-style)
+* `📊 Analytics आणा` – channel + top videos for the last 28 days from the YouTube Analytics API (views, watch time, avg view %, CTR,
+  subs, likes/comments/shares, traffic sources, devices, countries) + an SEO score (0-100) per video with fixes. Saved to `output/_growth/analytics.json`.
+  Needs **YouTube Analytics API** enabled in the same Google Cloud project as `client_secret.json`; delete an old `youtube_token.json`
+  once so the login asks for the analytics permission.
+* `🧭 काय करायचे?` – LLM action plan from the numbers: today/this-week checklist, videos to fix (new title/thumbnail), next 6 videos, Shorts,
+  best posting day/time, thumbnail rules, community posts, 28-day targets (`_growth/plan.json`).
+* `🔥 Trend / कीवर्ड` – what ranks on YouTube now for our topics (search, last 90 days) + keyword demand/competition, 10 topics, hashtags, 4-week calendar.
+* `📲 Share मजकूर` – WhatsApp / Telegram / SMS text for the selected rendered video (`share_text.txt`).
+* `🔎 YouTube SEO` tab – title, alt titles, description + timestamps, tags, hashtags, keywords, thumbnail text, pinned comment, community post per video (`youtube_seo.txt/json`).

@@ -17,6 +17,7 @@ from tkinter import font as tkfont, messagebox, ttk
 
 import auto
 import avatar
+import growth
 import textparts
 from explain import apply_options
 from ytstudio.slides import Renderer
@@ -304,6 +305,66 @@ class SeoTab(ttk.Frame):
         self.app.log(f"[seo] कॉपी झाले: {key or 'सर्व'}")
 
 
+class GrowthTab(ttk.Frame):
+    """vidIQ-style: channel analytics, what-to-do plan, keyword/trend finder, share texts."""
+
+    def __init__(self, master, app):
+        super().__init__(master, padding=8)
+        self.app = app
+        top = ttk.Frame(self)
+        top.pack(fill="x")
+        ttk.Button(top, text="📊 Analytics आणा (28 दिवस)", command=lambda: self.run("stats")).pack(side="left")
+        ttk.Button(top, text="🧭 काय करायचे? (plan)", command=lambda: self.run("plan")).pack(side="left", padx=6)
+        ttk.Label(top, text="विषय:").pack(side="left", padx=(12, 2))
+        self.v_topic = tk.StringVar()
+        ttk.Entry(top, textvariable=self.v_topic, width=28, font=app.font).pack(side="left")
+        ttk.Button(top, text="🔥 Trend / कीवर्ड शोधा", command=lambda: self.run("trends")).pack(side="left", padx=6)
+        ttk.Button(top, text="📲 Share मजकूर (निवडलेला व्हिडिओ)", command=lambda: self.run("share")).pack(side="left", padx=6)
+        ttk.Button(top, text="📋 कॉपी", command=self.copy).pack(side="right")
+        self.lbl = ttk.Label(self, text="पहिल्यांदा Google login विंडो उघडेल (YouTube Analytics परवानगी). जुने youtube_token.json असेल तर ते हटवून पुन्हा login करा.", wraplength=1000)
+        self.lbl.pack(anchor="w", pady=4)
+        self.txt = tk.Text(self, wrap="word", font=app.font)
+        self.txt.pack(fill="both", expand=True, pady=6)
+        d = growth.load(cfg)
+        if d:
+            self.show(growth.summary_text(d))
+
+    def show(self, s):
+        self.txt.delete("1.0", "end")
+        self.txt.insert("1.0", s)
+
+    def copy(self):
+        self.clipboard_clear()
+        self.clipboard_append(self.txt.get("1.0", "end").strip())
+
+    def run(self, what):
+        u = self.app.selected_unit() if what == "share" else None
+        topic = self.v_topic.get().strip()
+
+        def go():
+            try:
+                self.app.ui(lambda: self.lbl.config(text="⏳ ..."))
+                if what == "stats":
+                    out = growth.summary_text(growth.fetch(cfg, log=self.app.log))
+                elif what == "plan":
+                    d = growth.load(cfg) or growth.fetch(cfg, log=self.app.log)
+                    out = growth.plan_text(growth.plan(cfg, d, log=self.app.log))
+                elif what == "trends":
+                    out = growth.trends_text(growth.trends(cfg, growth.load(cfg), topic, log=self.app.log))
+                else:
+                    if not u:
+                        out = "घटक निवडा"
+                    else:
+                        out = growth.share_text(auto.out_dir_of(cfg, u, _meta(u)))
+                self.app.ui(lambda: (self.show(out), self.lbl.config(text=f"✔ {what}  (फाईल: {growth.gdir(cfg)})")))
+            except Exception:
+                import traceback
+                err = traceback.format_exc()
+                self.app.log("✖ " + err)
+                self.app.ui(lambda: self.lbl.config(text="✖ चूक - लॉग पहा"))
+        threading.Thread(target=go, daemon=True).start()
+
+
 class QueueTab(ttk.Frame):
     """Chapters queued with their own teacher/theme/mode; rendered one after another."""
 
@@ -468,8 +529,9 @@ class App(tk.Tk):
         self.logbox = tk.Text(logf, wrap="word", font=self.font)
         self.logbox.pack(fill="both", expand=True)
         self.parts_tab, self.script_tab, self.queue_tab = PartsTab(self.nb, self), ScriptTab(self.nb, self), QueueTab(self.nb, self)
-        self.seo_tab = SeoTab(self.nb, self)
-        for w, name in [(logf, "लॉग"), (self.parts_tab, "📖 पाठ मजकूर / भाग"), (self.script_tab, "📝 स्क्रिप्ट"), (self.seo_tab, "🔎 YouTube SEO"), (self.queue_tab, "📋 रांग")]:
+        self.seo_tab, self.growth_tab = SeoTab(self.nb, self), GrowthTab(self.nb, self)
+        for w, name in [(logf, "लॉग"), (self.parts_tab, "📖 पाठ मजकूर / भाग"), (self.script_tab, "📝 स्क्रिप्ट"), (self.seo_tab, "🔎 YouTube SEO"),
+                        (self.growth_tab, "📈 Growth / Analytics"), (self.queue_tab, "📋 रांग")]:
             self.nb.add(w, text=name)
         self._cascade(0)
 
