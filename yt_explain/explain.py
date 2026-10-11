@@ -95,7 +95,12 @@ Return JSON exactly:
 {{
  "title": "<= 95 chars: इ. {std} वी {subject_mr} | {topic} | संपूर्ण स्पष्टीकरण | Maharashtra Board",
  "description": "6-10 lines summary + 'या व्हिडिओमध्ये:' one line per section + 12-15 keywords",
- "tags": ["12-20 tags"], "hashtags": ["#... 4-6"], "playlist": "std {std} {subject} explained",
+ "alt_titles": ["3 alternative SEO titles (<= 95 chars) in different styles: question style, 'in 5 minutes' style, exam style"],
+ "tags": ["15-25 tags mixing Marathi, Hindi/English transliteration, e.g. 'std {std} {subject}', 'इयत्ता {std} वी', 'Maharashtra board class {std}', chapter name in Marathi + roman"],
+ "hashtags": ["#... 5-8 (chapter, subject, std, #maharashtraboard #balbharati)"], "playlist": "std {std} {subject} explained",
+ "keywords": ["10-15 search keywords (what students/parents type on YouTube/Google), Marathi + roman"],
+ "pinned_comment": "2-3 lines comment to pin: 1 question to the viewers + ask to subscribe/share",
+ "community_post": "2 lines post text for the YouTube community tab announcing this video",
  "thumbnail": {{"headline": "<= 5 words topic name", "sub": "संपूर्ण स्पष्टीकरण", "badge": "इ. {std} वी {subject_mr}"}},
  "hook": {{"question": "<= 80 chars curiosity question shown on screen", "say": "10-15 s: a daily-life scene or surprising question that this topic answers; end with the question"}},
  "intro": {{"say": "15-20 s: what you will be able to do after this video", "slide_title": "{topic}", "points": ["3-4 outcome bullets ('...समजेल', '...करता येईल')"]}},
@@ -521,6 +526,47 @@ def run(cfg, u, meta, text, questions, out_dir, upload=None, log=print, opts=Non
         if short:
             meta_out["short_url"] = youtube.upload(cfg, short, meta_out, None, is_short=True, log=log)
     json.dump(meta_out, open(os.path.join(out_dir, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    with open(os.path.join(out_dir, "youtube_description.txt"), "w", encoding="utf-8") as f:
-        f.write(meta_out["title"] + "\n\n" + meta_out["description"] + "\n\n⏱ Timestamps:\n" + meta_out["chapters_text"] + "\n\n" + " ".join(meta_out["hashtags"]))
+    write_seo_pack(out_dir, meta_out, script)
     return meta_out
+
+
+def full_description(meta_out):
+    """Description text ready to paste in YouTube Studio (summary + timestamps + hashtags)."""
+    return meta_out["title"] + "\n\n" + meta_out["description"] + "\n\n⏱ Timestamps:\n" + meta_out["chapters_text"] + "\n\n" + " ".join(meta_out["hashtags"])
+
+
+def write_seo_pack(out_dir, meta_out, script):
+    """youtube_description.txt (paste-ready description) + youtube_seo.txt (every upload field) + youtube_seo.json."""
+    sh = script.get("short") if isinstance(script.get("short"), dict) else {}
+    th = script.get("thumbnail") if isinstance(script.get("thumbnail"), dict) else {}
+    desc = full_description(meta_out)
+    pack = {
+        "title": meta_out["title"], "alt_titles": script.get("alt_titles", []), "description": desc,
+        "tags": meta_out["tags"], "tags_csv": ", ".join(meta_out["tags"]), "hashtags": meta_out["hashtags"],
+        "keywords": script.get("keywords", []), "playlist": meta_out.get("playlist"),
+        "thumbnail_text": " / ".join(x for x in (th.get("headline"), th.get("sub"), th.get("badge")) if x),
+        "short_title": meta_out.get("short_title"), "short_description": (sh.get("description") or meta_out["title"]) + "\n" + " ".join(meta_out["hashtags"][:3] + ["#Shorts"]),
+        "pinned_comment": script.get("pinned_comment", ""), "community_post": script.get("community_post", ""),
+        "category": "Education", "language": {"mr": "Marathi", "hi": "Hindi", "en": "English"}.get(meta_out.get("lang"), "Marathi"),
+        "duration_sec": meta_out.get("duration_sec"), "video": meta_out.get("video"), "short": meta_out.get("short"), "thumbnail": meta_out.get("thumbnail"),
+    }
+    with open(os.path.join(out_dir, "youtube_description.txt"), "w", encoding="utf-8") as f:
+        f.write(desc + "\n\nTags: " + pack["tags_csv"])
+    json.dump(pack, open(os.path.join(out_dir, "youtube_seo.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    lines = ["=== शीर्षक (Title) ===", pack["title"], ""]
+    if pack["alt_titles"]:
+        lines += ["=== पर्यायी शीर्षके (Alt titles) ==="] + [f"- {t}" for t in pack["alt_titles"]] + [""]
+    lines += ["=== वर्णन (Description - copy whole block) ===", desc, "",
+              "=== टॅग्ज (Tags - paste in the Tags box, comma separated) ===", pack["tags_csv"], "",
+              "=== हॅशटॅग (Hashtags) ===", " ".join(pack["hashtags"]), "",
+              "=== कीवर्ड (SEO keywords) ===", ", ".join(pack["keywords"]), "",
+              "=== थंबनेल मजकूर (Thumbnail text) ===", pack["thumbnail_text"], "",
+              "=== प्लेलिस्ट (Playlist) ===", pack["playlist"] or "", "",
+              "=== Shorts शीर्षक / वर्णन ===", pack["short_title"] or "", pack["short_description"], "",
+              "=== पिन कमेंट (Pinned comment) ===", pack["pinned_comment"], "",
+              "=== Community post ===", pack["community_post"], "",
+              "=== सेटिंग्ज ===", f"Category: {pack['category']}   Language: {pack['language']}   Audience: Not made for kids (education)   Visibility: Public",
+              f"Duration: {pack['duration_sec']} s   Video: {pack['video']}   Thumbnail: {pack['thumbnail']}"]
+    with open(os.path.join(out_dir, "youtube_seo.txt"), "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+    return pack

@@ -259,6 +259,51 @@ class ScriptTab(ttk.Frame):
         self.lbl.config(text=f"जतन झाले ✔  {self.path}")
 
 
+class SeoTab(ttk.Frame):
+    """Show youtube_seo.txt of the selected chapter (title, description, tags, hashtags ...) with copy buttons."""
+
+    def __init__(self, master, app):
+        super().__init__(master, padding=8)
+        self.app, self.pack_data = app, {}
+        top = ttk.Frame(self)
+        top.pack(fill="x")
+        self.lbl = ttk.Label(top, text="घटक निवडा -> 'SEO लोड करा' (व्हिडिओ बनल्यावर उपलब्ध)")
+        self.lbl.pack(side="left")
+        ttk.Button(top, text="🔎 SEO लोड करा", command=self.load).pack(side="right")
+        bb = ttk.Frame(self)
+        bb.pack(fill="x", pady=4)
+        for label, key in [("शीर्षक", "title"), ("वर्णन", "description"), ("टॅग्ज", "tags_csv"), ("हॅशटॅग", "hashtags"),
+                           ("पिन कमेंट", "pinned_comment"), ("Shorts शीर्षक", "short_title")]:
+            ttk.Button(bb, text=f"📋 {label} कॉपी", command=lambda k=key: self.copy(k)).pack(side="left", padx=2)
+        ttk.Button(bb, text="📋 सर्व कॉपी", command=lambda: self.copy(None)).pack(side="left", padx=8)
+        self.txt = tk.Text(self, wrap="word", font=app.font)
+        self.txt.pack(fill="both", expand=True, pady=6)
+
+    def load(self):
+        u = self.app.selected_unit()
+        if not u:
+            self.app.log("[seo] घटक निवडा")
+            return
+        d = auto.out_dir_of(cfg, u, _meta(u))
+        p = os.path.join(d, "youtube_seo.txt")
+        if not os.path.exists(p):
+            self.lbl.config(text=f"{u['title']} - SEO अजून नाही; 'व्हिडिओ' मोडने ▶ करा")
+            return
+        pj = os.path.join(d, "youtube_seo.json")
+        self.pack_data = json.load(open(pj, encoding="utf-8")) if os.path.exists(pj) else {}
+        self.txt.delete("1.0", "end")
+        self.txt.insert("1.0", open(p, encoding="utf-8").read())
+        self.lbl.config(text=f"{u['title']} - {p}")
+
+    def copy(self, key):
+        v = self.txt.get("1.0", "end").strip() if key is None else self.pack_data.get(key, "")
+        if isinstance(v, list):
+            v = " ".join(v)
+        self.clipboard_clear()
+        self.clipboard_append(v or "")
+        self.app.log(f"[seo] कॉपी झाले: {key or 'सर्व'}")
+
+
 class QueueTab(ttk.Frame):
     """Chapters queued with their own teacher/theme/mode; rendered one after another."""
 
@@ -423,7 +468,8 @@ class App(tk.Tk):
         self.logbox = tk.Text(logf, wrap="word", font=self.font)
         self.logbox.pack(fill="both", expand=True)
         self.parts_tab, self.script_tab, self.queue_tab = PartsTab(self.nb, self), ScriptTab(self.nb, self), QueueTab(self.nb, self)
-        for w, name in [(logf, "लॉग"), (self.parts_tab, "📖 पाठ मजकूर / भाग"), (self.script_tab, "📝 स्क्रिप्ट"), (self.queue_tab, "📋 रांग")]:
+        self.seo_tab = SeoTab(self.nb, self)
+        for w, name in [(logf, "लॉग"), (self.parts_tab, "📖 पाठ मजकूर / भाग"), (self.script_tab, "📝 स्क्रिप्ट"), (self.seo_tab, "🔎 YouTube SEO"), (self.queue_tab, "📋 रांग")]:
             self.nb.add(w, text=name)
         self._cascade(0)
 
