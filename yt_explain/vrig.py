@@ -4,7 +4,7 @@ import math
 import os
 
 import skia
-from PIL import Image
+from PIL import Image, ImageDraw
 
 import xfl
 
@@ -25,6 +25,22 @@ RIGS = {
         breath=("Layer_2", "Layer_4", "Layer_5", "Layer_7", "Layer_12", "Layer_13"),   # far hand, pallu, far arm, torso, back pallu, hair
     ),
 }
+
+
+def _inst_matrix(doc, root, layer, frame=0):
+    """Matrix of the symbol instance on `layer` at `frame` (tween-interpolated), in root space."""
+    tl = doc.timeline(doc.symbol(root))
+    for L in doc.layers(tl):
+        if L.get("name") == layer:
+            df, nxt = doc.frame_at(L, frame)
+            if df is None:
+                return skia.Matrix()
+            inst = df.find(".//" + NS + "DOMSymbolInstance")
+            nxt_el = nxt.find(".//" + NS + "DOMSymbolInstance") if nxt is not None and df.get("tweenType") == "motion" else None
+            idx, dur = int(df.get("index", 0)), int(df.get("duration", 1) or 1)
+            t = (frame - idx) / dur if dur > 1 else 0.0
+            return doc._interp_matrix(inst, nxt_el, t) if nxt_el is not None else xfl._mat(inst.find(NS + "matrix"))
+    return skia.Matrix()
 
 
 def _pivot(doc, root, layer, frame=0):
@@ -95,30 +111,12 @@ class VRig:
 
     WIDE = 1.45             # zoom-out limit: mid shot (knees up) - she always stays big on screen
 
+    BINDI = (-12.0, 31.5)   # red tikali: point in the eye-symbol space (centre above the brows), radius in file units
+    BINDI_R = 2.7
+
     def _zoom(self, pose, t, secs):
-        """Camera: waist-up close shot almost all the time. One gentle zoom-out to a mid shot while she points at the
-        slide start, back in; a second one only on very long slides (> 40 s), halfway. No continuous loops."""
-        Z, Wd = self.CLOSE, self.WIDE
-        if self.POSES.get(pose, 0.5) <= 0.0 or (secs is not None and secs < 5.0):
-            return Z
-        def ease(a, b, u):
-            u = min(1.0, max(0.0, u)); u = 0.5 - 0.5 * math.cos(math.pi * u)
-            return a + (b - a) * u
-        def cycle(c):
-            if c < 0.6:
-                return Z
-            if c < 2.0:
-                return ease(Z, Wd, (c - 0.6) / 1.4)
-            if c < 4.6:
-                return Wd
-            if c < 6.4:
-                return ease(Wd, Z, (c - 4.6) / 1.8)
-            return Z
-        if secs is not None and secs > 40.0:
-            mid = secs / 2.0 - 3.2
-            if mid <= t < mid + 7.0:
-                return cycle(t - mid + 0.6)
-        return cycle(t)
+        """Fixed waist-up presenter framing - no camera movement."""
+        return self.CLOSE
 
     def frame(self, pose, t, mouth=0.0, blink=False, secs=None):
         d = self.doc
@@ -168,6 +166,18 @@ class VRig:
         top = int(26 * (z - 1.0) / max(0.01, self.CLOSE - 1.0)) if z > 1.0 else (H - self.bottom - pil.height)
         cx = int(nx - W * 0.10) if z > 1.0 else pil.width // 2   # a little room on the slide side for the hand
         out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        out.alpha_composite(pil, (W // 2 - cx, max(-pil.height, top)) if W // 2 - cx >= 0 and top >= 0 else (0, 0),
-                            (max(0, cx - W // 2), max(0, -top)))
+        dst = (W // 2 - cx, max(-pil.height, top)) if W // 2 - cx >= 0 and top >= 0 else (0, 0)
+        src = (max(0, cx - W // 2), max(0, -top))
+        out.alpha_composite(pil, dst, src)
+        # red tikali on the forehead, following the head's nod transform
+        hm = _inst_matrix(d, self.root, spec["head"], fi)
+        q = hm.mapXY(*self.BINDI)
+        q = d.layer_xform[spec["head"]].mapXY(q.x(), q.y())
+        bx = (q.x() - self.bounds[0]) * self.scale * z
+        by = (q.y() - self.bounds[1]) * self.scale * z
+        if self.flip:
+            bx = pil.width - bx
+        bx, by = bx - src[0] + dst[0], by - src[1] + dst[1]
+        rr = self.BINDI_R * self.scale * z
+        ImageDraw.Draw(out).ellipse((bx - rr, by - rr * 1.05, bx + rr, by + rr * 1.05), fill=(205, 20, 30, 255))
         return out
