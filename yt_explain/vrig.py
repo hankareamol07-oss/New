@@ -51,7 +51,7 @@ def _pivot(doc, root, layer, frame=0):
 class VRig:
     POSES = {"point": 1.0, "wave": 0.75, "cheer": 0.9, "think": 0.35, "talk": 0.5, "sway": 0.0, "read": 0.0}
 
-    CLOSE = 2.05            # camera zoom of the waist-up presenter shot (1.0 = full figure)
+    CLOSE = 1.95            # camera zoom of the waist-up presenter shot (1.0 = full figure)
 
     def __init__(self, name, h, flip=None, bottom=0):
         spec = RIGS[name]

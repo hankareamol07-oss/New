@@ -374,7 +374,7 @@ def _sprite_name(cfg):
 def figure_height(cfg):
     name = _sprite_name(cfg)
     if name in vrig.RIGS:
-        return int(PRO_HEIGHT * 0.95)   # presenter box (waist-up shot / full figure on zoom-out)
+        return 648   # presenter box: 60% of a 1080p frame (waist-up shot, mid shot on zoom-out)
     return PRO_HEIGHT if name else HEIGHT
 
 
