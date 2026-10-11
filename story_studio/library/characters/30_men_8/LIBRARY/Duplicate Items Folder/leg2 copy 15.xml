@@ -1,0 +1,44 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/leg2 copy 15" itemID="6565b989-00005d02" symbolType="graphic" lastModified="1701067740">
+  <timeline>
+    <DOMTimeline name="leg2 copy 15" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#CBCA95"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#747354"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-1586 701S5|-1622 1939!-1622 1939[-1640 2542 -1668 3077!-1668 3077[-1673 3170 -1677 3260!-1677 3260[-1677 3261 -1677 3262!-1677 3262[-1677 3956 -1187 4447!-1187 4447[-696 4937 -2 4937!-2 4937[692 4937 1182 4447!1182 4447[1673 3956 1673
+ 3262!1673 3262|1674 3262!1674 3262[1692 2551 1584 1752!1584 1752|1584 -4062!1584 -4062[1420 -4955 223 -4937!223 -4937[#FFFABA.CB -4861 -1522 -3631!-1522 -3631|-1522 -2435"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-1030 3260S7[-1169 2788 -1287 2187!-1287 2187[-1418 1523 -1586 701!779 2885[372 2343 3 1587!3 1587[-754 39 -1522 -2435"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-1522 -2435S5|-1586 701"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,76 @@
+{
+ "name": "30_boy_copy_5",
+ "label": "मुलगा 1",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/Boy copy 5",
+  "frame": 0,
+  "bounds": [
+   1480.0,
+   288.0,
+   1784.0,
+   1044.0
+  ],
+  "faces": "left",
+  "head": "face",
+  "neck": [
+   1640.5,
+   477.44
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 21": {
+    "closed": 0,
+    "mid": 28,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eyebrow copy 21": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "RArm",
+   "fore": "RHand",
+   "shoulder": [
+    1595.0,
+    511.94
+   ],
+   "elbow": [
+    1564.09,
+    625.0
+   ]
+  },
+  "arm_back": {
+   "upper": "LArm",
+   "fore": "LHand",
+   "shoulder": [
+    1719.5,
+    514.62
+   ],
+   "elbow": [
+    1748.35,
+    632.25
+   ]
+  },
+  "legs": [
+   "Foot2",
+   "Foot1"
+  ],
+  "hips": {
+   "Foot2": [
+    1591.75,
+    844.5
+   ],
+   "Foot1": [
+    1676.0,
+    855.0
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/Boy copy 5"
+}

@@ -1,0 +1,75 @@
+{
+ "name": "ganpat",
+ "label": "गणपत (दाढी)",
+ "gender": "male",
+ "pack": "All Character",
+ "rig": {
+  "root": "Duplicate Items Folder/boy2 copy 11",
+  "frame": 0,
+  "bounds": [
+   -20.0,
+   -16.0,
+   176.0,
+   484.0
+  ],
+  "faces": "left",
+  "head": "Layer_3",
+  "neck": [
+   65.0,
+   71.24
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth 2 copy 75": {
+    "closed": 0,
+    "mid": 8,
+    "open": 6
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eye 5 copy 6": {
+    "open": 0,
+    "blink": [
+     5,
+     6,
+     7,
+     8
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Layer_8",
+   "fore": null,
+   "shoulder": [
+    22.25,
+    86.0
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "Layer_2",
+   "fore": null,
+   "shoulder": [
+    136.75,
+    88.5
+   ],
+   "elbow": null
+  },
+  "legs": [
+   "Layer_7",
+   "Layer_6"
+  ],
+  "hips": {
+   "Layer_7": [
+    71.75,
+    265.5
+   ],
+   "Layer_6": [
+    105.25,
+    217.5
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/boy2 copy 11"
+}

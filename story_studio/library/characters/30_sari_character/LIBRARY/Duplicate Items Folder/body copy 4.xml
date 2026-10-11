@@ -1,0 +1,66 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/body copy 4" itemID="6565afe7-00004191" symbolType="graphic" lastModified="1701022057">
+  <timeline>
+    <DOMTimeline name="body copy 4" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#330000"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#DB936C"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#280000"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#1A0000"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B5754D"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1653 -546S6|1633 -452!1633 -452[2105 429 1709 1088!1709 1088[#64A.2F #4E5.AA 1504 1493"/>
+                        <Edge fillStyle1="3" strokeStyle="1" edges="!1504 1493S6|1442 1626"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="!1442 1626S7[217 1747 -1614 1486"/>
+                        <Edge fillStyle1="3" strokeStyle="1" edges="!-1614 1486S6|-1614 1365"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-1614 1365S6[#FFF9A2.37 #2F5.B6 -1870.5 -216.5!-1870.5 -216.5[#FFF7C0.DE #FFFB59.3C -1728 -1597!-1728 -1597[-1501 -1693 -1221 -1785"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!-1221 -1785S7[-685 -807 660 -749!660 -749[1185 -855 1246 -1136!1246 -1136[1302 -1398 1225 -1576"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1225 -1576S6[1256 -1563 1286 -1551!1286 -1551[1292 -1549 1397 -1496!1397 -1496[1502 -1444 1592 -1385"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="2" edges="!768 -1629S7[740 -1720 719 -1820"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="!-1221 -1785S6[-967 -1869 -669 -1951!-669 -1951[-657 -1954 -644 -1958!-644 -1958[-543 -2345 -565 -2763!-565 -2763|653 -2763!653 -2763[645 -2281 696 -1951!696 -1951[706 -1882 719 -1820"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="2" edges="!984 -1384S7[853 -1410 590 -1410!590 -1410[360 -1246 104 -1424"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="!719 -1820S6[991 -1675 1225 -1576"/>
+                        <Edge fillStyle1="1" edges="!1592 -1385S2|1653 -546"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="!1442 1626S6[#49C.F7 #789.03 1162 2607!1162 2607[328 2931 -1758 2698!-1758 2698[#FFF9A6.C5 #835.86 -1614 1486"/>
+                        <Edge fillStyle0="3" fillStyle1="1" edges="!1504 1493S3[#DA.02 #62A.BC -1614 1365"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="2" edges="!38 -1428S7[-222 -1467 -540 -1472"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

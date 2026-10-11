@@ -1,0 +1,49 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/back hair copy 9" itemID="65671154-00001164" symbolType="graphic" lastModified="1700925008">
+  <timeline>
+    <DOMTimeline name="back hair copy 9" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="0.283477783203125" d="0.283477783203125" tx="-331.6" ty="-156.75"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix a="0.283477783203125" d="0.283477783203125" tx="-331.6" ty="-156.75"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#262212"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#1A1918"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!17476 10937S6[16845 9632 16638 8102!16638 8102[19913 699 27394 5713!27394 5713[29530 6864 29323 11482!29323 11482[30479 12546 30510 13824!30510 13824[30050 15971 31323 16356!31323 16356[31419 16495 30884 16652!30884 16652[30532 16785
+ 30141 16856!30141 16856[30647 17112 31362 17178!31362 17178[31154 17891 30371 18073!30371 18073[29152 18389 28136 18046!28136 18046[23279 16999 19139 18425!19139 18425[16151 18445 15941 17452!15941 17452[16689 17282 16948 16949!16948
+ 16949[15699 17032 15425 16302!15425 16302[16121 16237 16554 15499!16554 15499[16577 14787 16662 14179!16662 14179[16701 13202 16982 12253!16982 12253[17348 11396 17476 10937"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!17476 10937S7|17670 10953"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

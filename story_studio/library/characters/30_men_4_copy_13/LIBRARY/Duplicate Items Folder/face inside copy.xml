@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/face inside copy" itemID="6565b966-00005b47" symbolType="graphic" lastModified="1701061550">
+  <timeline>
+    <DOMTimeline name="face inside copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFAC7D"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#F3A173"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#B3643E"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!3563 -1773[3663 -459 3494 860!3494 860[3377 1778 2926 2729!2926 2729[2475 3679 2000 4195!2000 4195[1524 4710 792 4653"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!792 4653[#FFFF7A.5C #1246.FB -1128.5 3931!-1128.5 3931[#FFF7B4.A4 #C6F.05 -2689 1716!-2689 1716[-3718 172 -3584 -1685!-3584 -1685[-3311 -3625 -1401 -4336!-1401 -4336[#FFFF91.13 #FFED32.A8 1171 -4633.5"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1171 -4633.5[#660.0B #FFEE27.4C 2092 -4419!2092 -4419[3830 -3855 3563 -1773"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!1171 -4633.5[#FFF4B9.C5 #FFF90C.6F -1669 2057!-1669 2057[#FFFC19.5F #1047.0B 792 4653"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

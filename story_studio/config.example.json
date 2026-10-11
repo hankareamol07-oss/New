@@ -1,0 +1,27 @@
+{
+ "lang": "mr",
+ "shorts": false,
+ "music": "calm",
+ "music_volume": 0.16,
+ "captions": true,
+ "tts_engine": "edge",
+ "llm_order": [
+  "gemini",
+  "nvidia",
+  "groq"
+ ],
+ "gemini_api_key": "",
+ "nvidia_api_key": "",
+ "groq_api_key": "",
+ "sarvam_api_key": "",
+ "gemini_model": "gemini-2.5-flash",
+ "nvidia_model": "meta/llama-3.3-70b-instruct",
+ "groq_model": "llama-3.3-70b-versatile",
+ "vertex": {
+  "project": "",
+  "location": "us-central1",
+  "key_file": ""
+ },
+ "cost_cap_inr": 100,
+ "voices": {}
+}

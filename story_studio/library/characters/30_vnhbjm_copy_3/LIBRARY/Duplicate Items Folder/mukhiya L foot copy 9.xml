@@ -1,0 +1,60 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/mukhiya L foot copy 9" itemID="6565b7a5-00005111" symbolType="graphic" lastModified="1696329496">
+  <timeline>
+    <DOMTimeline name="mukhiya L foot copy 9" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#CCCCCC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-311 -9311[1497 -9707 2932 -8211!2932 -8211[3264 -7864 3280 -7415!3280 -7415[3311 -6566 3231 -6057!3231 -6057[3058 -4939 2258 -4219!2258 -4219[2186 -4154 2100 -4106!2100 -4106[2026 -4064 1940 -4035!1940 -4035[606 -3578 -1293 -3868!-1293
+ -3868[-1610 -3915 -1799 -4063!-1799 -4063[-1850 -4102 -1892 -4150!-1892 -4150[-2720 -5089 -3198 -6421!-3198 -6421[-3579 -7482 -2351 -8370"/>
+                        <Edge strokeStyle="1" edges="
+!-2364 -8387|-2351 -8370!-354 -9365|-311 -9311"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-2351 -8370[-1895 -8700 -1218 -9005!-1218 -9005[-753 -9215 -311 -9311"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_4" color="#FF4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/LFoot copy 31" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="2.31332397460938" d="2.31332397460938" tx="-218.05" ty="3.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="102.3" y="20.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,78 @@
+{
+ "name": "30_police_man",
+ "label": "पोलीस 1",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "police man",
+  "frame": 0,
+  "bounds": [
+   -112.0,
+   -476.0,
+   548.0,
+   1344.0
+  ],
+  "faces": "left",
+  "head": "Face",
+  "neck": [
+   191.25,
+   -141.54
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 18": {
+    "closed": 0,
+    "mid": 36,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 16": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "Hip",
+   "fore": "leg_middle_part_2",
+   "shoulder": [
+    302.81,
+    334.78
+   ],
+   "elbow": [
+    142.03,
+    523.28
+   ]
+  },
+  "arm_back": {
+   "upper": "Hip",
+   "fore": "leg_middle_part_1",
+   "shoulder": [
+    302.81,
+    334.78
+   ],
+   "elbow": [
+    295.34,
+    525.28
+   ]
+  },
+  "legs": [
+   "Foot_down_2",
+   "foot_down"
+  ],
+  "hips": {
+   "Foot_down_2": [
+    118.5,
+    832.5
+   ],
+   "foot_down": [
+    315.25,
+    821.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "police man"
+}

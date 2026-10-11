@@ -1,0 +1,49 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="gfdg" itemID="653f445b-000002c4" symbolType="graphic" lastModified="1701011662">
+  <timeline>
+    <DOMTimeline name="gfdg" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#DF956D"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#C48F3C"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#854F3A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                    <StrokeStyle index="2">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#664717"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="2" edges="!1440 31[#2C2.7F #FFFFAE.27 180 722"/>
+                    <Edge fillStyle0="2" strokeStyle="2" edges="!180 722[#FFFEF4.35 #710.91 -13 4885!-13 4885|197 4957"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="2" edges="!197 4957[1049 5252 1562 5148"/>
+                    <Edge fillStyle0="2" strokeStyle="2" edges="!1562 5148[1809 5098 1977 4955!1977 4955[1934 3735 2038 2207!2038 2207[2192 509 1440 31"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!197 4957|278 6735!278 6735[278 6980 451 7154!451 7154[624 7327 869 7327!869 7327[1114 7327 1288 7154!1288 7154[1461 6980 1461 6735!1461 6735|1562 5148"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

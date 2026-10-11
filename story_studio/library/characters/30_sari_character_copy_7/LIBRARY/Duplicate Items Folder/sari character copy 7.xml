@@ -1,0 +1,190 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/sari character copy 7" itemID="6565bb42-000060b6" symbolType="graphic" lastModified="1701068907" lastUniqueIdentifier="12">
+  <timeline>
+    <DOMTimeline name="sari character copy 7" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Hand1" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/hand1 copy 76" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.997894287109375" b="-0.0615234375" c="0.0615234375" d="0.997894287109375" tx="-329" ty="14.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.45" y="-81.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Face" color="#009999" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="tyuyokiu" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.242721557617188" d="0.242721557617188" tx="180.45" ty="-521.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1844.7" y="1023.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="sari_upper" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sari1 copy 9" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-250.85" ty="7.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-46.05" y="-264.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Choon" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/front pallu copy 5" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-265.25" ty="284.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="27.65" y="-323.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="sari_down" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sari down copy 7" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-245.05" ty="280.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.15" y="-318.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Arm1" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/arm1 copy 77" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.987823486328125" b="0.155487060546875" c="-0.155487060546875" d="0.987823486328125" tx="-320.55" ty="-149.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-8.05" y="-102.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="body" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/body copy 14" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-235.85" ty="-167.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="hand2" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/hand2 copy 73" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.9940185546875" b="-0.10675048828125" c="0.10675048828125" d="0.9940185546875" tx="-131.9" ty="-12.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-1" y="-64.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="arm2" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/arm2 copy 75" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.987960815429688" b="-0.154541015625" c="0.154541015625" d="0.987960815429688" tx="-153.15" ty="-148.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="5.8" y="-91.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="anchal" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/pallu copy 33" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-342.15" ty="57.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-11.55" y="-261.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shadow" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4298" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#333333"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-1313 11194[-1313 11809 -2314 12244!-2314 12244[-3314 12679 -4729 12679!-4729 12679[-6144 12679 -7145 12244!-7145 12244[-8145 11809 -8145 11194!-8145 11194[-8145 10579 -7145 10144!-7145 10144[-6144 9709 -4729 9709!-4729 9709[-3314 9709
+ -2314 10144!-2314 10144[-1313 10579 -1313 11194"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+              <frameColor>
+                <Color alphaMultiplier="0.171875"/>
+              </frameColor>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

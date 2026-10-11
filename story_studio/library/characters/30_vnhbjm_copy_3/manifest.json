@@ -1,0 +1,78 @@
+{
+ "name": "30_vnhbjm_copy_3",
+ "label": "आजोबा 2",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/vnhbjm copy 3",
+  "frame": 0,
+  "bounds": [
+   1416.0,
+   280.0,
+   1896.0,
+   1760.0
+  ],
+  "faces": "right",
+  "head": "Face",
+  "neck": [
+   1672.25,
+   534.26
+  ],
+  "mouth": {
+   "Duplicate Items Folder/old man mouth copy 3": {
+    "closed": 0,
+    "mid": 36,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 24": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "Arm2",
+   "fore": "hand2",
+   "shoulder": [
+    1748.25,
+    602.82
+   ],
+   "elbow": [
+    1714.39,
+    844.35
+   ]
+  },
+  "arm_back": {
+   "upper": "arm1",
+   "fore": "hand1",
+   "shoulder": [
+    1507.75,
+    616.66
+   ],
+   "elbow": [
+    1554.34,
+    849.78
+   ]
+  },
+  "legs": [
+   "L_foot",
+   "R_foot"
+  ],
+  "hips": {
+   "L_foot": [
+    1560.0,
+    1357.0
+   ],
+   "R_foot": [
+    1749.5,
+    1384.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/vnhbjm copy 3"
+}

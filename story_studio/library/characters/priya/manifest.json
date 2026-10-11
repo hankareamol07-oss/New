@@ -1,0 +1,75 @@
+{
+ "name": "priya",
+ "label": "प्रिया (साडी)",
+ "gender": "female",
+ "pack": "3D Women Character",
+ "rig": {
+  "root": "Duplicate Items Folder/dfsff copy",
+  "frame": 0,
+  "bounds": [
+   820.0,
+   92.0,
+   1388.0,
+   2068.0
+  ],
+  "faces": "right",
+  "head": "face",
+  "neck": [
+   923.5,
+   706.7
+  ],
+  "mouth": {
+   "Duplicate Items Folder/ajdadj copy 4": {
+    "closed": 0,
+    "mid": 6,
+    "open": 9
+   }
+  },
+  "eyes": {
+   "Eyes": {
+    "open": 0,
+    "blink": [
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Layer_15",
+   "fore": "Layer_16",
+   "shoulder": [
+    1195.0,
+    577.04
+   ],
+   "elbow": [
+    1265.6,
+    877.22
+   ]
+  },
+  "arm_back": {
+   "upper": "hand",
+   "fore": "Layer_14",
+   "shoulder": [
+    910.5,
+    577.58
+   ],
+   "elbow": [
+    869.39,
+    883.02
+   ]
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [
+   "Rleg",
+   "Lleg"
+  ],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/dfsff copy"
+}

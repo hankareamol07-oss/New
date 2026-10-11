@@ -1,0 +1,68 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/hand53w copy 2" itemID="5959fa37-00000d74" sourceFlashFilepath="F:\SELL\Premium Character and Background for Adobe Animate\Free Gift\2D Premium Characters.fla" sourceLibraryItemHRef="Duplicate Items Folder/hand53w copy 2" sourceLastModified="1498826968" symbolType="graphic" lastModified="1498826968" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="hand53w copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#A94F84"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#964675"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#FFD79B"/>
+                    </FillStyle>
+                    <FillStyle index="4">
+                      <SolidColor color="#FFBB55"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.5">
+                        <fill>
+                          <SolidColor color="#FF9F0F"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="4" edges="!21 614.5[#9.82 #2A3.E5 0 743"/>
+                    <Edge fillStyle0="3" edges="!348 9[#AE.97 #5D.0F 78 387.5!78 387.5[#30.5E #1DE.4B 26 589.5"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!765 2053|764 2050"/>
+                    <Edge fillStyle0="3" strokeStyle="1" edges="!764 2050[706 1044 471 101!471 101[416 -30 348 9"/>
+                    <Edge fillStyle0="2" fillStyle1="3" edges="!27 613.5[#1A.74 #259.5C 26 589.5"/>
+                    <Edge fillStyle0="2" fillStyle1="4" edges="!21 614.5|27 613.5"/>
+                    <Edge fillStyle0="2" edges="!26 589.5[#17.6D #259.C9 21 614.5"/>
+                    <Edge fillStyle0="4" fillStyle1="3" edges="!381.5 2059[#177.98 #7EE.1F 369 2000!369 2000[332 1830 234 1507!234 1507[127 1158 91 1009!91 1009[#24.B6 #310.71 27 613.5"/>
+                    <Edge fillStyle0="3" edges="!381.5 2059|764 2053"/>
+                    <Edge fillStyle0="1" fillStyle1="3" edges="!764 2050|764 2053"/>
+                    <Edge fillStyle0="1" edges="!764 2053|765 2053"/>
+                    <Edge fillStyle0="4" edges="!152 2056[196 2069 362 2060!362 2060|381.5 2059"/>
+                    <Edge fillStyle0="4" strokeStyle="1" edges="!0 743|152 2056"/>
+                    <Edge cubics="!26 590(26,590;44,1041 289,1585 382,2059q26 590Q33 769q91 1009Q127 1158q234 1507Q332 1830q369 2000 382 2059);"/>
+                    <Edge cubics="!26 590(;24,598 22,606 21,615q26 590Q23 602q21 615);"/>
+                    <Edge cubics="!78 388(78,388;58,448 41,515 26,590q78 388Q48 478q26 590);"/>
+                    <Edge cubics="!471 101(;434,14 393,-17 348,9q471 101Q416 -30q348 9);"/>
+                    <Edge cubics="!21 615(21,615;14,656 7,698 0,743q21 615Q10 676q0 743);"/>
+                    <Edge cubics="!348 9(;233,65 143,191 78,388q348 9Q175 93q78 388);"/>
+                    <Edge cubics="!362 2060(;362,2060 382,2059 382,2059q362 2060 382 2059);"/>
+                    <Edge cubics="!152 2056(;181,2065 251,2066 362,2060q152 2056Q196 2069q362 2060);"/>
+                    <Edge cubics="!765 2053(;765,2053 764,2050 764,2050q765 2053 764 2050);"/>
+                    <Edge cubics="!0 743(;0,743 152,2056 152,2056q0 743 152 2056);"/>
+                    <Edge cubics="!764 2050(;725,1379 628,730 471,101q764 2050Q706 1044q471 101);"/>
+                    <Edge cubics="!382 2059(;382,2059 765,2053 765,2053q382 2059 765 2053);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

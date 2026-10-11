@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/L leg copy 12" itemID="6565ae84-00003307" symbolType="graphic" lastModified="1696072756">
+  <timeline>
+    <DOMTimeline name="L leg copy 12" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#87B8C5"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#4C737E"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-2884 -3834S6|-2884 -3835!-2884 -3835[-2890 -5437 -2721 -6840!-2721 -6840[-2613 -7737 -1874 -8153!-1874 -8153[-1326 -8460 -666 -8554!-666 -8554[349 -8698 1402 -8201!1402 -8201[2355 -7752 2579 -6440!2579 -6440[2967 -4169 2627 -1407!2627
+ -1407[2563 -884 2508 -397!2508 -397[2503 -355 2498 -313"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!2703 6721S5[#B5A.CE #1605.CC 2703 4421!2703 4421[#A9C.94 #9D5.9D 2498 -313"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!2498 -313S7[2323 1180 2043 2426!-2884 -3834[-1698 -1137 -109 -297"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-2389 7064S6[-3078 3592 -2884 -3834"/>
+                        <Edge fillStyle0="1" edges="
+!-2389 7064S1|2703 6721"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

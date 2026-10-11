@@ -1,0 +1,82 @@
+{
+ "name": "ramesh",
+ "label": "रमेश (शर्ट)",
+ "gender": "male",
+ "pack": "2D Premium Characters",
+ "rig": {
+  "root": "Duplicate Items Folder/Chairman copy 4",
+  "frame": 0,
+  "bounds": [
+   -92.0,
+   -260.0,
+   104.0,
+   252.0
+  ],
+  "faces": "left",
+  "head": "head",
+  "neck": [
+   1.75,
+   -152.44
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth 2 copy 20": {
+    "closed": 0,
+    "mid": 8,
+    "open": 6
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eye 1 copy 4": {
+    "open": 0,
+    "blink": [
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "cfbh",
+   "fore": "cfgh",
+   "shoulder": [
+    -22.75,
+    -127.6
+   ],
+   "elbow": [
+    -29.66,
+    -53.72
+   ]
+  },
+  "arm_back": {
+   "upper": "vgyhmj",
+   "fore": "gvhmk",
+   "shoulder": [
+    61.5,
+    -118.4
+   ],
+   "elbow": [
+    70.66,
+    -47.05
+   ]
+  },
+  "legs": [
+   "xdfyh",
+   "xdfghcgfh"
+  ],
+  "hips": {
+   "xdfyh": [
+    -9.75,
+    30.5
+   ],
+   "xdfghcgfh": [
+    38.0,
+    30.0
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/Chairman copy 4"
+}

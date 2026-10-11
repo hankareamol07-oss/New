@@ -1,0 +1,64 @@
+{
+ "name": "30_sari_character_copy_14",
+ "label": "स्त्री (साडी) 3",
+ "gender": "female",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/sari character copy 14",
+  "frame": 0,
+  "bounds": [
+   -416.0,
+   -488.0,
+   -56.0,
+   644.0
+  ],
+  "faces": "right",
+  "head": "Face",
+  "neck": [
+   -231.75,
+   -267.58
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Old female mouth  copy 7": {
+    "closed": 8,
+    "mid": 12,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eyebrow copy 37": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "Arm2",
+   "fore": "Hand2",
+   "shoulder": [
+    -169.0,
+    -219.62
+   ],
+   "elbow": [
+    -174.52,
+    -69.77
+   ]
+  },
+  "arm_back": {
+   "upper": "Arm1",
+   "fore": "Hand",
+   "shoulder": [
+    -305.5,
+    -226.48
+   ],
+   "elbow": [
+    -317.63,
+    -61.18
+   ]
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/sari character copy 14"
+}

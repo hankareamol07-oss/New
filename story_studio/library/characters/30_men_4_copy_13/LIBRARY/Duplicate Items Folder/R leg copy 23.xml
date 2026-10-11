@@ -1,0 +1,57 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/R leg copy 23" itemID="6565b966-00005b27" symbolType="graphic" lastModified="1701062082">
+  <timeline>
+    <DOMTimeline name="R leg copy 23" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-1450.65" ty="-1024.4"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-1450.65" ty="-1024.4"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#F1F2EF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="3">
+                            <fill>
+                              <SolidColor color="#ABABAB"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!27614 28801S6[#63A8.C5 #675C.9B 26659 22057!26659 22057[#67A5.8E #5065.67 26780 18515!26780 18515[#6804.3B #390A.31 26827 13001!26827 13001[#6B97.DC #2C2F.39 29224 11548!29224 11548[#7826.B7 #2DC4.5D 31487 13234!31487 13234[#7C3F.DB
+ #43B2.6F 31766 21108!31766 21108[#7BE8.3A #62E6.9B 30835 27895"/>
+                        <Edge fillStyle0="1" edges="
+!27614 28801S1[#6EBC.BC #736B.2F 29493 29445!29493 29445[#7715.89 #72AD.C5 30835 27895"/>
+                        <Edge cubics="!29224 11548(;30247,11660 31002,12222 31487,13234q29224 11548Q30759 11716q31487 13234);"/>
+                        <Edge cubics="!26827 13001(;27305,11874 28104,11390 29224,11548q26827 13001Q27544 11311q29224 11548);"/>
+                        <Edge cubics="!26659 22057(;26576,21073 26616,19892 26780,18515q26659 22057Q26534 20581q26780 18515);"/>
+                        <Edge cubics="!29493 29445(;30155,29387 30602,28870 30835,27895q29493 29445Q30486 29358q30835 27895);"/>
+                        <Edge cubics="!27614 28801(;28104,29298 28730,29513 29493,29445q27614 28801Q28349 29547q29493 29445);"/>
+                        <Edge cubics="!31766 21108(;31735,23915 31425,26178 30835,27895q31766 21108Q31720 25319q30835 27895);"/>
+                        <Edge cubics="!27614 28801(;26213,27241 25895,24993 26659,22057q27614 28801Q25513 26461q26659 22057);"/>
+                        <Edge cubics="!31487 13234(;31701,15965 31794,18589 31766,21108q31487 13234Q31808 17330q31766 21108);"/>
+                        <Edge cubics="!26780 18515(;26679,15906 26694,14068 26827,13001q26780 18515Q26628 14602q26827 13001);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

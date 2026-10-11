@@ -1,0 +1,68 @@
+{
+ "name": "30_sari_character",
+ "label": "आजी (काठी) 1",
+ "gender": "female",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "sari character",
+  "frame": 0,
+  "bounds": [
+   -416.0,
+   -472.0,
+   68.0,
+   644.0
+  ],
+  "faces": "right",
+  "head": "Face",
+  "neck": [
+   -175.5,
+   -267.8
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Old female mouth  copy 2": {
+    "closed": 0,
+    "mid": 20,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 17": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "arm2",
+   "fore": null,
+   "shoulder": [
+    -122.75,
+    -239.0
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "Arm1",
+   "fore": "Hand1",
+   "shoulder": [
+    -277.5,
+    -237.86
+   ],
+   "elbow": [
+    -335.58,
+    -81.05
+   ]
+  },
+  "legs": [
+   "Choon"
+  ],
+  "hips": {
+   "Choon": [
+    -265.25,
+    -38.5
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "sari character"
+}
