@@ -8,7 +8,10 @@ try:
     from . import enc
 except ImportError:                     # exe frozen before enc.py existed: CPU encoder
     import types
-    enc = types.SimpleNamespace(h264=lambda cfg, crf=20: ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf)])
+    import subprocess as _sp
+    enc = types.SimpleNamespace(h264=lambda cfg, crf=20: ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf)],
+                                detect=lambda cfg: None, disable=lambda cfg, why="": None,
+                                run=lambda cfg, cmd, crf=20: _sp.run(cmd(enc.h264(cfg, crf)), check=True))
 
 PAUSE_AFTER_Q = 1.6   # seconds of silence between question and answer
 PAUSE_AFTER_A = 0.8
@@ -44,10 +47,10 @@ def _concat(cfg, items, audio_out, video_out, size):
                 f.write(f"file '{os.path.abspath(silence)}'\ninpoint 0\noutpoint {gap:.3f}\n")
     subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", alst,
                     "-ar", "24000", "-ac", "1", audio_out], check=True)
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-i", audio_out,
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-i", audio_out,
                     "-vf", f"scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2,format=yuv420p",
-                    "-r", "30", *enc.h264(cfg),
-                    "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", video_out], check=True)
+                    "-r", "30", *codec,
+                    "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", video_out])
 
 
 def build(cfg, script, renderer, book, out_dir, log=print):

@@ -14,7 +14,10 @@ try:
     from ytstudio import enc
 except ImportError:                     # exe frozen before enc.py existed: CPU encoder
     import types
-    enc = types.SimpleNamespace(h264=lambda cfg, crf=20: ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf)])
+    import subprocess as _sp
+    enc = types.SimpleNamespace(h264=lambda cfg, crf=20: ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf)],
+                                detect=lambda cfg: None, disable=lambda cfg, why="": None,
+                                run=lambda cfg, cmd, crf=20: _sp.run(cmd(enc.h264(cfg, crf)), check=True))
 
 FPS = 8            # animation frame rate (stick figure loop)
 FRAMES = 16        # frames per loop (2 s)
@@ -118,10 +121,10 @@ def clip(cfg, slide_png, pose, secs, out_mp4, size, talking=True, height=HEIGHT)
     for i in range(FRAMES):
         compose(slide, pose, i / FRAMES, talking, height).save(os.path.join(fdir, f"{i:02d}.png"))
     w, h = size
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-stream_loop", "-1", "-framerate", str(FPS),
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error", "-stream_loop", "-1", "-framerate", str(FPS),
                     "-i", os.path.join(fdir, "%02d.png"), "-t", f"{secs:.3f}",
                     "-vf", f"scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2,format=yuv420p",
-                    "-r", "30", *enc.h264(cfg), "-an", out_mp4], check=True)
+                    "-r", "30", *codec, "-an", out_mp4])
     return out_mp4
 
 

@@ -23,7 +23,10 @@ try:
     from ytstudio import enc
 except ImportError:                     # exe frozen before enc.py existed: CPU encoder
     import types
-    enc = types.SimpleNamespace(h264=lambda cfg, crf=20: ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf)])
+    import subprocess as _sp
+    enc = types.SimpleNamespace(h264=lambda cfg, crf=20: ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf)],
+                                detect=lambda cfg: None, disable=lambda cfg, why="": None,
+                                run=lambda cfg, cmd, crf=20: _sp.run(cmd(enc.h264(cfg, crf)), check=True))
 
 HERE = os.path.dirname(sys.executable) if getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(__file__))   # exe: assets next to it
 ASSETS = os.path.join(HERE, "assets", "avatar")
@@ -447,13 +450,13 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
     y = f"main_h-overlay_h-{100 if portrait else _bottom(cfg)}"
     # the frame sequence is looped and the clip cut at exactly `secs` (a frame-sequence input ends one
     # frame early with shortest=1, and 0.1 s per slide adds up to seconds of drift over a video)
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error",
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error",
                     "-loop", "1", "-framerate", str(FPS), "-i", slide_png,
                     "-stream_loop", "-1", "-framerate", str(FPS), "-i", os.path.join(fdir, "%04d.png"),
                     "-filter_complex",
                     f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[bg];"
                     f"[bg][1:v]overlay={x}:{y},format=yuv420p",
-                    "-t", f"{secs:.3f}", "-r", "30", *enc.h264(cfg), "-an", out_mp4], check=True)
+                    "-t", f"{secs:.3f}", "-r", "30", *codec, "-an", out_mp4])
     for f in os.listdir(fdir):      # frames are only needed for the encode
         os.remove(os.path.join(fdir, f))
     os.rmdir(fdir)
@@ -478,31 +481,45 @@ def _clip_rig(cfg, teacher, slide_png, pose, secs, audio, out_mp4, size, portrai
         first = first.resize((int(first.width * fig_h / first.height), fig_h), Image.LANCZOS)
     fw, fh = first.size
     # raw RGBA frames are piped straight into ffmpeg (no PNG per frame on disk)
-    proc = subprocess.Popen([cfg["ffmpeg"], "-y", "-loglevel", "error",
-                             "-loop", "1", "-framerate", str(RIG_FPS), "-i", slide_png,
-                             "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{fw}x{fh}", "-framerate", str(RIG_FPS), "-i", "pipe:0",
-                             "-filter_complex",
-                             f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[bg];"
-                             f"[1:v]tpad=stop_mode=clone:stop_duration=1[av];[bg][av]overlay={x}:{y},format=yuv420p",
-                             "-t", f"{secs:.3f}", "-r", "30", *enc.h264(cfg), "-an", out_mp4],
-                            stdin=subprocess.PIPE)
-    try:
-        for i in range(n):
-            t = i / RIG_FPS
-            j = min(len(env) - 1, int(i * len(env) / max(1, n)))
-            m = env[j] if env else 0.0
-            blink = (i % (RIG_FPS * 3)) in (RIG_FPS * 2, RIG_FPS * 2 + 1, RIG_FPS * 2 + 2) or (i % 97 in (50, 51))
-            fig = teacher.frame(pose, t, m, blink, secs=secs)
-            if portrait:
-                fig = fig.resize((fw, fh), Image.LANCZOS)
-            elif fig.size != (fw, fh):
-                fig = fig.resize((fw, fh))
-            proc.stdin.write(fig.tobytes())
-    finally:
-        proc.stdin.close()
-        rc = proc.wait()
+    def encode(codec):
+        proc = subprocess.Popen([cfg["ffmpeg"], "-y", "-loglevel", "error",
+                                 "-loop", "1", "-framerate", str(RIG_FPS), "-i", slide_png,
+                                 "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{fw}x{fh}", "-framerate", str(RIG_FPS), "-i", "pipe:0",
+                                 "-filter_complex",
+                                 f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[bg];"
+                                 f"[1:v]tpad=stop_mode=clone:stop_duration=1[av];[bg][av]overlay={x}:{y},format=yuv420p",
+                                 "-t", f"{secs:.3f}", "-r", "30", *codec, "-an", out_mp4],
+                                stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+        try:
+            for i in range(n):
+                t = i / RIG_FPS
+                j = min(len(env) - 1, int(i * len(env) / max(1, n)))
+                m = env[j] if env else 0.0
+                blink = (i % (RIG_FPS * 3)) in (RIG_FPS * 2, RIG_FPS * 2 + 1, RIG_FPS * 2 + 2) or (i % 97 in (50, 51))
+                fig = teacher.frame(pose, t, m, blink, secs=secs)
+                if portrait:
+                    fig = fig.resize((fw, fh), Image.LANCZOS)
+                elif fig.size != (fw, fh):
+                    fig = fig.resize((fw, fh))
+                try:
+                    proc.stdin.write(fig.tobytes())
+                except (BrokenPipeError, OSError):
+                    break                                   # encoder died: rc below tells us
+        finally:
+            try:
+                proc.stdin.close()
+            except OSError:
+                pass
+            err = proc.stderr.read().decode("utf-8", "replace")
+            rc = proc.wait()
+        return rc, err
+
+    rc, err = encode(enc.h264(cfg))
+    if rc != 0 and enc.detect(cfg):
+        enc.disable(cfg, err.strip().splitlines()[-1] if err.strip() else "")
+        rc, err = encode(enc.h264(cfg))
     if rc != 0:
-        raise RuntimeError(f"ffmpeg failed for {out_mp4}")
+        raise RuntimeError(f"ffmpeg failed for {out_mp4}:\n{err[-1500:]}")
     os.rmdir(fdir)
     return out_mp4
 
@@ -589,15 +606,15 @@ def _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size
         patch.paste(im, ((fw - im.width) // 2, fh - im.height - 6 + bob), im)
         patch.save(os.path.join(fdir, f"{i:04d}.png"))
     patch_mp4 = os.path.join(fdir, "patch.mp4")
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-framerate", str(KEY_FPS), "-i", os.path.join(fdir, "%04d.png"),
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error", "-framerate", str(KEY_FPS), "-i", os.path.join(fdir, "%04d.png"),
                     "-vf", "minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:scd=fdiff:scd_threshold=8,tpad=stop_mode=clone:stop_duration=2",
-                    "-t", f"{secs:.3f}", *enc.h264(cfg, 16), "-pix_fmt", "yuv420p", patch_mp4], check=True)
+                    "-t", f"{secs:.3f}", *codec, "-pix_fmt", "yuv420p", patch_mp4], crf=16)
     canvas_png = os.path.join(fdir, "canvas.png")
     canvas.save(canvas_png)
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", canvas_png,
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", canvas_png,
                     "-i", patch_mp4,
                     "-filter_complex", f"[0:v][1:v]overlay={x0}:{y0},format=yuv420p",
-                    "-t", f"{secs:.3f}", "-r", "30", *enc.h264(cfg), "-an", out_mp4], check=True)
+                    "-t", f"{secs:.3f}", "-r", "30", *codec, "-an", out_mp4])
     for f in os.listdir(fdir):
         os.remove(os.path.join(fdir, f))
     os.rmdir(fdir)
@@ -616,6 +633,7 @@ def _render_clips(cfg, todo, size):
     if len(todo) < 2 or workers < 2:
         return
     import concurrent.futures as cf
+    cfg = dict(cfg, gpu=enc.detect(cfg) or "off")
     try:
         with cf.ProcessPoolExecutor(max_workers=min(workers, len(todo))) as ex:
             list(ex.map(_clip_job, [(cfg, png, pose, secs, aud, mp4, size) for png, pose, secs, aud, mp4 in todo]))
