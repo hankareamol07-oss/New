@@ -3,6 +3,7 @@ that swings about the elbow, and a swappable head (mouth shapes from the viseme 
 and tilts.  Everything is drawn from the user's own sheet; nothing is redrawn."""
 import math
 import os
+import sys
 
 from PIL import Image, ImageDraw
 
@@ -59,7 +60,7 @@ class Rig:
 
     def __init__(self, name, h, flip=True):
         spec = RIG[name]
-        d = os.path.join(os.path.dirname(__file__), "assets", "avatar", name)
+        d = os.path.join(os.path.dirname(sys.executable) if getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(__file__)), "assets", "avatar", name)
         src = Image.open(os.path.join(d, spec["body"])).convert("RGBA")
         self.flip, self.h = flip, h
         w0, h0 = src.size

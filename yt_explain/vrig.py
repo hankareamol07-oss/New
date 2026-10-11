@@ -2,13 +2,15 @@
 per video frame — idle body animation from the file, mouth from the audio envelope, blinks, head nod, arm pointing."""
 import math
 import os
+import sys
 
 import skia
 from PIL import Image, ImageDraw
 
 import xfl
 
-ASSETS = os.path.join(os.path.dirname(__file__), "assets", "avatar")
+HERE = os.path.dirname(sys.executable) if getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(__file__))
+ASSETS = os.path.join(HERE, "assets", "avatar")
 NS = xfl.NS
 
 RIGS = {

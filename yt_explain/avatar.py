@@ -11,6 +11,7 @@ overlays them on the static slide, so a 30-slide video renders in ~1-2 minutes.
 import json
 import math
 import os
+import sys
 import struct
 import subprocess
 
@@ -19,7 +20,7 @@ import vrig
 
 from PIL import Image, ImageDraw
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(sys.executable) if getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(__file__))   # exe: assets next to it
 ASSETS = os.path.join(HERE, "assets", "avatar")
 FPS = 20
 HEIGHT = 380
