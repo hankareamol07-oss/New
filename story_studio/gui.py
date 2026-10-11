@@ -117,7 +117,7 @@ class CharPicker(tk.Toplevel):
         self.flt = tk.StringVar(value="all")
         for t, v in (("सर्व", "all"), ("स्त्री", "female"), ("पुरुष", "male")):
             ttk.Radiobutton(top, text=t, value=v, variable=self.flt, command=self.fill).pack(side="left", padx=4)
-        ttk.Button(top, text="✔ निवडा", command=self.ok).pack(side="right")
+        ttk.Button(top, text="निवडा", command=self.ok).pack(side="right")
         self.cv = tk.Canvas(self, bg="white")
         sb = ttk.Scrollbar(self, orient="vertical", command=self.cv.yview)
         self.cv.configure(yscrollcommand=sb.set)
@@ -184,7 +184,7 @@ class App:
         nb.pack(fill="both", expand=True)
         self.nb = nb
         for name, cls in (("गोष्ट", StoryTab), ("AI गोष्ट", AITab), ("पात्रे", CharsTab), ("रिग", RigTab),
-                          ("पार्श्वभूमी व संगीत", MediaTab), ("⏳ रांग व लॉग", QueueTab), ("सेटिंग्ज", SettingsTab)):
+                          ("पार्श्वभूमी व संगीत", MediaTab), ("रांग व लॉग", QueueTab), ("सेटिंग्ज", SettingsTab)):
             tab = cls(nb, self)
             nb.add(tab, text=name)
             setattr(self, cls.__name__.lower(), tab)
@@ -212,7 +212,7 @@ class App:
         self.cb_music.pack(side="left")
         self.v_shorts = tk.BooleanVar(value=bool(cfg.get("shorts")))
         ttk.Checkbutton(f, text="Shorts (उभा 9:16)", variable=self.v_shorts).pack(side="left", padx=6)
-        ttk.Button(f, text="➕ रांगेत", command=lambda: self.enqueue(start=False)).pack(side="right")
+        ttk.Button(f, text="रांगेत", command=lambda: self.enqueue(start=False)).pack(side="right")
         ttk.Button(f, text="▶ व्हिडिओ बनवा", style="Big.TButton", command=lambda: self.enqueue(start=True)).pack(side="right", padx=4)
 
     def lang(self):
@@ -288,11 +288,11 @@ class App:
                 render.render(job["story"], job["out"], shorts=job["shorts"], log=lambda s: self.ui.put(("log", s)),
                               progress=lambda i, n, j=job: j.update(pct=int(100 * i / max(1, n))),
                               cancel=self.cancel_flag.is_set)
-                job["status"] = "✔ तयार"
+                job["status"] = "तयार"
             except render.Cancelled:
                 job["status"] = "थांबवले"
             except Exception as e:
-                job["status"] = "✖ चूक"
+                job["status"] = "चूक"
                 self.ui.put(("log", f"चूक: {type(e).__name__}: {e}"))
             self.ui.put(("jobs", None))
 
@@ -344,8 +344,8 @@ class StoryTab(ttk.Frame):
         self.lb.bind("<<ListboxSelect>>", lambda e: self.pick_scene())
         bf = ttk.Frame(left)
         bf.pack(fill="x")
-        for t, fn in (("➕", self.add_scene), ("⧉", self.copy_scene), ("", self.del_scene), ("⬆", lambda: self.move_scene(-1)),
-                      ("⬇", lambda: self.move_scene(1))):
+        for t, fn in (("नवीन दृश्य", self.add_scene), ("कॉपी", self.copy_scene), ("काढा", self.del_scene), ("वर", lambda: self.move_scene(-1)),
+                      ("खाली", lambda: self.move_scene(1))):
             ttk.Button(bf, text=t, width=3, command=fn).pack(side="left")
         # centre: preview + lines
         mid = ttk.Frame(pw)
@@ -371,8 +371,8 @@ class StoryTab(ttk.Frame):
         self.txt.pack(side="left", fill="x", expand=True)
         bf = ttk.Frame(lf)
         bf.pack(fill="x")
-        for t, fn in (("➕ नवीन ओळ", self.add_line), ("✔ बदला", self.upd_line), ("", self.del_line), ("⬆", lambda: self.move_line(-1)),
-                      ("⬇", lambda: self.move_line(1)), ("ऐका", self.listen), ("स्क्रिप्ट पेस्ट", self.paste_script)):
+        for t, fn in (("नवीन ओळ", self.add_line), ("बदला", self.upd_line), ("काढा", self.del_line), ("वर", lambda: self.move_line(-1)),
+                      ("खाली", lambda: self.move_line(1)), ("ऐका", self.listen), ("स्क्रिप्ट पेस्ट", self.paste_script)):
             ttk.Button(bf, text=t, command=fn).pack(side="left", padx=1)
         # right: scene settings + cast + scene characters
         right = ttk.Frame(pw)
@@ -408,10 +408,10 @@ class StoryTab(ttk.Frame):
         ttk.Combobox(g, textvariable=self.v_vstyle, values=["auto"] + list(tts.STYLES), width=12, state="readonly").grid(row=2, column=1, sticky="w")
         bf = ttk.Frame(cf)
         bf.pack(fill="x")
-        ttk.Button(bf, text="➕ पात्र जोडा", command=self.add_cast).pack(side="left")
-        ttk.Button(bf, text="✔", width=3, command=self.upd_cast).pack(side="left")
+        ttk.Button(bf, text="पात्र जोडा", command=self.add_cast).pack(side="left")
+        ttk.Button(bf, text="बदला", command=self.upd_cast).pack(side="left")
         ttk.Button(bf, text="पात्र बदला", command=self.swap_cast).pack(side="left")
-        ttk.Button(bf, text="", width=3, command=self.del_cast).pack(side="left")
+        ttk.Button(bf, text="काढा", command=self.del_cast).pack(side="left")
         af = ttk.LabelFrame(right, text="या दृश्यातील पात्रे (स्टेज)", padding=4)
         af.pack(fill="x")
         self.at = ttk.Treeview(af, columns=("id", "pos", "enter", "exit", "scale"), show="headings", height=4)
@@ -438,9 +438,9 @@ class StoryTab(ttk.Frame):
         ttk.Combobox(g, textvariable=self.v_face, values=["", "left", "right"], width=9, state="readonly").grid(row=5, column=1)
         bf = ttk.Frame(af)
         bf.pack(fill="x")
-        ttk.Button(bf, text="➕ स्टेजवर", command=self.add_actor).pack(side="left")
-        ttk.Button(bf, text="✔ बदला", command=self.upd_actor).pack(side="left")
-        ttk.Button(bf, text="", width=3, command=self.del_actor).pack(side="left")
+        ttk.Button(bf, text="स्टेजवर", command=self.add_actor).pack(side="left")
+        ttk.Button(bf, text="बदला", command=self.upd_actor).pack(side="left")
+        ttk.Button(bf, text="काढा", command=self.del_actor).pack(side="left")
 
     # helpers
     def scene(self):
@@ -634,7 +634,7 @@ class StoryTab(ttk.Frame):
                     sc["characters"].append({"id": ln["speaker"], "position": free.pop(0)})
             w.destroy()
             self.reload()
-        ttk.Button(w, text="✔ जोडा", command=ok).pack(pady=6)
+        ttk.Button(w, text="जोडा", command=ok).pack(pady=6)
 
     # cast
     def pick_cast(self):
@@ -771,7 +771,7 @@ class AITab(ttk.Frame):
         ttk.Label(self, text="पाठ्यपुस्तकातील धडा (ऐच्छिक) - इथे पेस्ट करा:").pack(anchor="w", pady=(8, 0))
         self.txt = tk.Text(self, height=14, font=UI_FONT, wrap="word")
         self.txt.pack(fill="both", expand=True)
-        self.btn = ttk.Button(self, text="✨ AI ने गोष्ट लिहा", style="Big.TButton", command=self.go)
+        self.btn = ttk.Button(self, text="AI ने गोष्ट लिहा", style="Big.TButton", command=self.go)
         self.btn.pack(pady=8)
         ttk.Label(self, text="AI साठी सेटिंग्जमध्ये Gemini / NVIDIA / Groq key किंवा GCP key file लागते. गोष्ट 'गोष्ट' टॅबमध्ये उघडते, तिथे बदला.").pack()
 
@@ -787,7 +787,7 @@ class AITab(ttk.Frame):
                     backgrounds=backgrounds(), log=self.app.log)
 
         def done(st):
-            self.btn.configure(state="normal", text="✨ AI ने गोष्ट लिहा")
+            self.btn.configure(state="normal", text="AI ने गोष्ट लिहा")
             st["music"] = self.app.v_music.get() or "calm"
             self.app.story, self.app.path = st, None
             self.app.load_story_into_ui()
@@ -797,7 +797,7 @@ class AITab(ttk.Frame):
             try:
                 return story_ai.generate(config.load(), **args)
             finally:
-                self.app.ui.put(("call", lambda: self.btn.configure(state="normal", text="✨ AI ने गोष्ट लिहा")))
+                self.app.ui.put(("call", lambda: self.btn.configure(state="normal", text="AI ने गोष्ट लिहा")))
         self.app.bg(work, done)
 
 
@@ -944,7 +944,7 @@ class RigTab(ttk.Frame):
         jf.grid(row=len(rows) + 1, column=0, columnspan=2, sticky="w")
         for i, (lab, _) in enumerate(self.JOINTS):
             ttk.Radiobutton(jf, text=lab, value=i, variable=self.v_joint).pack(side="left")
-        ttk.Button(form, text="↻ लागू करा (पूर्वदृश्य)", command=self.apply).grid(row=len(rows) + 2, column=1, sticky="e", pady=8)
+        ttk.Button(form, text="लागू करा (पूर्वदृश्य)", command=self.apply).grid(row=len(rows) + 2, column=1, sticky="e", pady=8)
         self.t0 = time.time()
         self.after(150, self.tick)
 
@@ -1114,7 +1114,7 @@ class MediaTab(ttk.Frame):
         bf.pack(fill="both", expand=True)
         t = ttk.Frame(bf)
         t.pack(fill="x")
-        ttk.Button(t, text="➕ चित्रे जोडा", command=self.add_bg).pack(side="left")
+        ttk.Button(t, text="चित्रे जोडा", command=self.add_bg).pack(side="left")
         ttk.Button(t, text="फोल्डर जोडा", command=self.add_bg_folder).pack(side="left", padx=4)
         ttk.Button(t, text="FLA मधून पार्श्वभूमी", command=self.add_bg_fla).pack(side="left", padx=4)
         ttk.Button(t, text="काढा", command=self.del_bg).pack(side="left")
@@ -1129,7 +1129,7 @@ class MediaTab(ttk.Frame):
         self.ml.pack(side="left", fill="x", expand=True)
         b = ttk.Frame(mf)
         b.pack(side="left", padx=4)
-        ttk.Button(b, text="➕ संगीत जोडा", command=self.add_music).pack(fill="x")
+        ttk.Button(b, text="संगीत जोडा", command=self.add_music).pack(fill="x")
         ttk.Button(b, text="▶ ऐका", command=self.play_music).pack(fill="x")
         ttk.Button(b, text="काढा", command=self.del_music).pack(fill="x")
         self.sel = tk.StringVar()
@@ -1231,7 +1231,7 @@ class QueueTab(ttk.Frame):
         t = ttk.Frame(self)
         t.pack(fill="x")
         ttk.Button(t, text="▶ रांग सुरू", command=app.start_queue).pack(side="left")
-        ttk.Button(t, text="⏹ थांबवा", command=app.cancel_flag.set).pack(side="left", padx=4)
+        ttk.Button(t, text="थांबवा", command=app.cancel_flag.set).pack(side="left", padx=4)
         ttk.Button(t, text="यादीतून काढा", command=self.remove).pack(side="left")
         ttk.Button(t, text="▶ व्हिडिओ पहा", command=self.play).pack(side="left", padx=4)
         ttk.Button(t, text="output फोल्डर", command=lambda: (os.makedirs(paths.OUTPUT, exist_ok=True), open_file(paths.OUTPUT))).pack(side="left")
