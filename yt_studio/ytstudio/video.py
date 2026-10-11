@@ -4,7 +4,11 @@ import shutil
 import subprocess
 
 from .tts import duration, prefetch, speak
-from . import enc
+try:
+    from . import enc
+except ImportError:                     # exe frozen before enc.py existed: CPU encoder
+    import types
+    enc = types.SimpleNamespace(h264=lambda cfg, crf=20: ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf)])
 
 PAUSE_AFTER_Q = 1.6   # seconds of silence between question and answer
 PAUSE_AFTER_A = 0.8

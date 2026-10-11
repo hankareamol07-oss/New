@@ -10,7 +10,11 @@ import os
 import subprocess
 
 from PIL import Image, ImageDraw
-from ytstudio import enc
+try:
+    from ytstudio import enc
+except ImportError:                     # exe frozen before enc.py existed: CPU encoder
+    import types
+    enc = types.SimpleNamespace(h264=lambda cfg, crf=20: ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf)])
 
 FPS = 8            # animation frame rate (stick figure loop)
 FRAMES = 16        # frames per loop (2 s)

@@ -19,7 +19,11 @@ import rig
 import vrig
 
 from PIL import Image, ImageDraw
-from ytstudio import enc
+try:
+    from ytstudio import enc
+except ImportError:                     # exe frozen before enc.py existed: CPU encoder
+    import types
+    enc = types.SimpleNamespace(h264=lambda cfg, crf=20: ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf)])
 
 HERE = os.path.dirname(sys.executable) if getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(__file__))   # exe: assets next to it
 ASSETS = os.path.join(HERE, "assets", "avatar")
