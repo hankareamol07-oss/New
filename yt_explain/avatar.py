@@ -465,27 +465,39 @@ def _clip_rig(cfg, teacher, slide_png, pose, secs, audio, out_mp4, size, portrai
     env = envelope(cfg, audio, secs, fps=RIG_FPS)
     n = int(round(secs * RIG_FPS))
     fig_h = 300 if portrait else figure_height(cfg)
-    for i in range(n):
-        t = i / RIG_FPS
-        j = min(len(env) - 1, int(i * len(env) / max(1, n)))
-        m = env[j] if env else 0.0
-        blink = (i % (RIG_FPS * 3)) in (RIG_FPS * 2, RIG_FPS * 2 + 1, RIG_FPS * 2 + 2) or (i % 97 in (50, 51))
-        fig = teacher.frame(pose, t, m, blink, secs=secs)
-        if portrait:
-            fig = fig.resize((int(fig.width * fig_h / fig.height), fig_h), Image.LANCZOS)
-        fig.save(os.path.join(fdir, f"{i:04d}.png"))
     w, h = size
     x = f"main_w-overlay_w-{30 if portrait else MARGIN[0]}"
     y = f"main_h-overlay_h-{100 if portrait else _bottom(cfg)}"
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error",
-                    "-loop", "1", "-framerate", str(RIG_FPS), "-i", slide_png,
-                    "-framerate", str(RIG_FPS), "-i", os.path.join(fdir, "%04d.png"),
-                    "-filter_complex",
-                    f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[bg];"
-                    f"[1:v]tpad=stop_mode=clone:stop_duration=1[av];[bg][av]overlay={x}:{y},format=yuv420p",
-                    "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
-    for f in os.listdir(fdir):
-        os.remove(os.path.join(fdir, f))
+    first = teacher.frame(pose, 0.0, 0.0, False, secs=secs)
+    if portrait:
+        first = first.resize((int(first.width * fig_h / first.height), fig_h), Image.LANCZOS)
+    fw, fh = first.size
+    # raw RGBA frames are piped straight into ffmpeg (no PNG per frame on disk)
+    proc = subprocess.Popen([cfg["ffmpeg"], "-y", "-loglevel", "error",
+                             "-loop", "1", "-framerate", str(RIG_FPS), "-i", slide_png,
+                             "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{fw}x{fh}", "-framerate", str(RIG_FPS), "-i", "pipe:0",
+                             "-filter_complex",
+                             f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[bg];"
+                             f"[1:v]tpad=stop_mode=clone:stop_duration=1[av];[bg][av]overlay={x}:{y},format=yuv420p",
+                             "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4],
+                            stdin=subprocess.PIPE)
+    try:
+        for i in range(n):
+            t = i / RIG_FPS
+            j = min(len(env) - 1, int(i * len(env) / max(1, n)))
+            m = env[j] if env else 0.0
+            blink = (i % (RIG_FPS * 3)) in (RIG_FPS * 2, RIG_FPS * 2 + 1, RIG_FPS * 2 + 2) or (i % 97 in (50, 51))
+            fig = teacher.frame(pose, t, m, blink, secs=secs)
+            if portrait:
+                fig = fig.resize((fw, fh), Image.LANCZOS)
+            elif fig.size != (fw, fh):
+                fig = fig.resize((fw, fh))
+            proc.stdin.write(fig.tobytes())
+    finally:
+        proc.stdin.close()
+        rc = proc.wait()
+    if rc != 0:
+        raise RuntimeError(f"ffmpeg failed for {out_mp4}")
     os.rmdir(fdir)
     return out_mp4
 
@@ -587,6 +599,25 @@ def _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size
     return out_mp4
 
 
+def _clip_job(args):
+    cfg, png, pose, secs, aud, mp4, size = args
+    clip(cfg, png, pose, secs, aud, mp4, size)
+    return mp4
+
+
+def _render_clips(cfg, todo, size):
+    """Render the slide clips on several CPU cores (each worker loads its own teacher); falls back to in-process."""
+    workers = int((cfg.get("avatar") or {}).get("workers") or max(1, (os.cpu_count() or 2) - 1))
+    if len(todo) < 2 or workers < 2:
+        return
+    import concurrent.futures as cf
+    try:
+        with cf.ProcessPoolExecutor(max_workers=min(workers, len(todo))) as ex:
+            list(ex.map(_clip_job, [(cfg, png, pose, secs, aud, mp4, size) for png, pose, secs, aud, mp4 in todo]))
+    except Exception as e:   # e.g. frozen exe without multiprocessing support: the sequential loop below renders what is missing
+        print(f"[avatar] parallel render failed ({str(e)[:100]}); rendering sequentially")
+
+
 def concat_clips(cfg, items, audio_out, video_out, size):
     """items: list of (png, audio_or_None, seconds, pose) -> final MP4 (same contract as stickman.concat_clips)."""
     from ytstudio.tts import duration
@@ -595,6 +626,8 @@ def concat_clips(cfg, items, audio_out, video_out, size):
     subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", "10", silence], check=True)
     alst, vlst = os.path.join(d, "_audio.txt"), os.path.join(d, "_clips.txt")
     with open(alst, "w", encoding="utf-8") as fa, open(vlst, "w", encoding="utf-8") as fv:
+        todo = [(png, pose, secs, aud, os.path.splitext(png)[0] + ".mp4") for png, aud, secs, pose in items if not os.path.exists(os.path.splitext(png)[0] + ".mp4")]
+        _render_clips(cfg, todo, size)
         for png, aud, secs, pose in items:
             mp4 = os.path.splitext(png)[0] + ".mp4"
             if not os.path.exists(mp4):

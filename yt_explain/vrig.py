@@ -120,12 +120,29 @@ class VRig:
         """Fixed waist-up presenter framing - no camera movement."""
         return self.CLOSE
 
+    CACHE_MAX = 600
+
     def frame(self, pose, t, mouth=0.0, blink=False, secs=None):
+        """Frames are cached by their quantised pose (arm angles, nod, breath phase, mouth state, blink): most of a
+        slide the arm rests and only nod/mouth change, so the vector render runs for a few hundred distinct frames."""
+        up, fore = self._arm_angles(pose, t, mouth, secs)
+        nod = 0.6 * math.sin(t * 2 * math.pi / 3.1) + (0.8 * math.sin(t * 2 * math.pi * 2.1) * min(1.0, mouth * 3) if mouth > 0.04 else 0.0)
+        breathe = 1.0 + 0.004 * math.sin(t * 2 * math.pi / 3.6)   # gentle breathing of the whole figure about the feet
+        key = (round(up), round(fore), round(nod * 4) / 4, round(breathe, 3), bool(blink), mouth > 0.12)
+        if not hasattr(self, "_cache"):
+            self._cache = {}
+        im = self._cache.get(key)
+        if im is None:
+            im = self._draw(up, fore, nod, breathe, blink, mouth)
+            if len(self._cache) >= self.CACHE_MAX:
+                self._cache.pop(next(iter(self._cache)))
+            self._cache[key] = im
+        return im
+
+    def _draw(self, up, fore, nod, breathe, blink, mouth):
         d = self.doc
         spec = self.spec
         fi = 0                                        # calm: no walking/swaying idle loop from the file
-        up, fore = self._arm_angles(pose, t, mouth, secs)
-        nod = 0.6 * math.sin(t * 2 * math.pi / 3.1) + (0.8 * math.sin(t * 2 * math.pi * 2.1) * min(1.0, mouth * 3) if mouth > 0.04 else 0.0)
         tilt = 0.0
         shoulder = _pivot(d, self.root, spec["upper_arm"], fi)
         elbow = _pivot(d, self.root, spec["forearm"], fi)
@@ -140,7 +157,6 @@ class VRig:
             spec["head"]: skia.Matrix.RotateDeg(nod + tilt, skia.Point(*neck)),
         }
         d.layer_frame = {}
-        breathe = 1.0 + 0.004 * math.sin(t * 2 * math.pi / 3.6)   # gentle breathing of the whole figure about the feet
         B = skia.Matrix.Scale(1.0, breathe)
         B.postTranslate(0, self.bounds[3] * (1 - breathe))
         for key in ("head", "upper_arm", "forearm"):
@@ -154,7 +170,7 @@ class VRig:
             d.frame_override = {spec["eyes"]: 0}
         d.frame_override[spec["lips"]] = spec["lips_open"] if mouth > 0.12 else spec["lips_closed"]
         self._mouth_scale = min(1.0, max(0.35, mouth * 2.2)) if mouth > 0.12 else 1.0
-        z = self._zoom(pose, t, secs)
+        z = self.CLOSE
         img, _ = xfl.render(d, self.root, fi, scale=self.scale * z, bounds=self.bounds)
         pil = xfl.to_pil(img)
         if self.flip:
