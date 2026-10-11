@@ -17,16 +17,20 @@ def service(cfg):
     from google_auth_oauthlib.flow import InstalledAppFlow
     from googleapiclient.discovery import build
 
+    token_file = cfg["youtube"].get("token_file") or TOKEN_FILE
     creds = None
-    if os.path.exists(TOKEN_FILE):
-        creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
+    if os.path.exists(token_file):
+        creds = Credentials.from_authorized_user_file(token_file, SCOPES)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(cfg["youtube"]["client_secret"], SCOPES)
+            cs = cfg["youtube"]["client_secret"]
+            if not os.path.exists(cs):
+                raise FileNotFoundError(f"client_secret.json not found: {cs} - copy your Google OAuth client file there")
+            flow = InstalledAppFlow.from_client_secrets_file(cs, SCOPES)
             creds = flow.run_local_server(port=0)
-        with open(TOKEN_FILE, "w") as f:
+        with open(token_file, "w") as f:
             f.write(creds.to_json())
     return build("youtube", "v3", credentials=creds)
 

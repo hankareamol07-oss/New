@@ -32,6 +32,10 @@ def load_cfg():
     kf = (cfg.get("vertex") or {}).get("key_file")
     if kf and not os.path.isabs(kf):   # service-account key next to config.json
         cfg["vertex"]["key_file"] = os.path.join(HERE, kf)
+    yt = cfg.setdefault("youtube", {})
+    cs = (raw.get("youtube") or {}).get("client_secret") or "client_secret.json"   # OAuth client + token live next to config.json
+    yt["client_secret"] = cs if os.path.isabs(cs) else os.path.join(HERE, cs)
+    yt.setdefault("token_file", os.path.join(HERE, "youtube_token.json"))
     return cfg
 
 
