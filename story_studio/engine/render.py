@@ -33,8 +33,10 @@ def ffmpeg_bin():
     return shutil.which("ffmpeg") or "ffmpeg"
 
 
-def font(size, bold=True):
-    f = os.path.join(paths.FONTS, "NotoSansDevanagari-Bold.ttf" if bold else "NotoSansDevanagari-Regular.ttf")
+def font(size, bold=True, text=None):
+    deva = text is None or any("\u0900" <= ch <= "\u097f" for ch in text)
+    fam = "NotoSansDevanagari" if deva else "NotoSans"
+    f = os.path.join(paths.FONTS, fam + ("-Bold.ttf" if bold else "-Regular.ttf"))
     try:
         return ImageFont.truetype(f, size, layout_engine=ImageFont.Layout.RAQM)
     except Exception:
@@ -56,7 +58,7 @@ def wrap(text, fnt, max_w):
 
 
 def caption_img(W, name, text, color, size):
-    fnt, fn = font(size), font(int(size * 0.8))
+    fnt, fn = font(size, text=text), font(int(size * 0.8), text=name or "")
     lines = wrap(text, fnt, W * 0.84)
     lh = int(size * 1.45)
     head = int(size * 1.15) if name else 0
