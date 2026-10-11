@@ -415,6 +415,10 @@ def build_short(cfg, script, r, u, out_dir, log=print):
     return out
 
 
+MALE_TEACHERS = {"teacher_m", "teacher3", "male"}
+MALE_VOICES = {"mr": "mr-IN-ManoharNeural", "hi": "hi-IN-MadhurNeural", "en": "en-IN-PrabhatNeural"}
+
+
 def apply_options(cfg, opts):
     """Per-video choices from the GUI: avatar (teacher name / 'none'), theme name, mode."""
     opts = opts or {}
@@ -426,6 +430,10 @@ def apply_options(cfg, opts):
             cfg["stickman"] = False
         else:
             av.update(enabled=True, name=opts["avatar"])
+            av["gender"] = "male" if opts["avatar"] in MALE_TEACHERS else "female"
+            if av["gender"] == "male":   # male teacher -> male narration voice (edge-tts / Gemini)
+                cfg["voices"] = dict(cfg.get("voices") or {}, **(cfg.get("voices_male") or MALE_VOICES))
+                cfg["gemini_tts_voice"] = cfg.get("gemini_tts_voice_male") or ["Charon", "Puck", "Fenrir", "Orus"]
         cfg["avatar"] = av
     if opts.get("theme"):
         cfg["theme"] = opts["theme"]
@@ -495,6 +503,11 @@ def run(cfg, u, meta, text, questions, out_dir, upload=None, log=print, opts=Non
         _clear_render(out_dir)
     with open(sig_file, "w", encoding="utf-8") as f:
         f.write(say_sig)
+    voice_sig = json.dumps(cfg.get("voices"), sort_keys=True)
+    if script.get("voice") not in (None, voice_sig):   # teacher gender changed -> narration must be re-spoken
+        log("[explain] voice changed -> new narration and render")
+        _clear_render(out_dir)
+    script["voice"] = voice_sig
     look = {"avatar": (cfg.get("avatar") or {}).get("name") if (cfg.get("avatar") or {}).get("enabled") else None,
             "stickman": bool(cfg.get("stickman")), "theme": cfg.get("theme")}
     if script.get("render") != look:      # teacher / theme changed: keep the narration, redo only the slide clips
