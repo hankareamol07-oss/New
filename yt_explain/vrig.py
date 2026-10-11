@@ -74,6 +74,7 @@ class VRig:
     def __init__(self, name, h, flip=None, bottom=0):
         spec = RIGS[name]
         self.spec = spec
+        self.spec_name = name
         self.h = h
         self.doc = xfl.Doc(os.path.join(ASSETS, name))
         self.root = spec["root"]
@@ -133,11 +134,47 @@ class VRig:
             self._cache = {}
         im = self._cache.get(key)
         if im is None:
-            im = self._draw(up, fore, nod, breathe, blink, mouth)
+            im = self._disk_get(key)
+            if im is None:
+                im = self._draw(up, fore, nod, breathe, blink, mouth)
+                self._disk_put(key, im)
             if len(self._cache) >= self.CACHE_MAX:
                 self._cache.pop(next(iter(self._cache)))
             self._cache[key] = im
         return im
+
+    # drawn poses are also kept as PNGs on disk (per rig / size), shared by all worker processes and later videos
+    def _disk_dir(self):
+        d = getattr(self, "_ddir", None)
+        if d is None:
+            d = os.path.join(ASSETS, self.spec_name, f"_frames_{self.h}_{self.bottom}_{int(self.flip)}_{self.CLOSE}")
+            os.makedirs(d, exist_ok=True)
+            self._ddir = d
+        return d
+
+    def _disk_name(self, key):
+        up, fore, nod, breathe, blink, mouth = key
+        return os.path.join(self._disk_dir(), f"{up}_{fore}_{nod:+.2f}_{breathe:.3f}_{int(blink)}{int(mouth)}.png")
+
+    def _disk_get(self, key):
+        f = self._disk_name(key)
+        if os.path.exists(f):
+            try:
+                im = Image.open(f)
+                im.load()
+                return im.convert("RGBA")
+            except OSError:
+                return None
+        return None
+
+    def _disk_put(self, key, im):
+        f = self._disk_name(key)
+        tmp = f"{f}.{os.getpid()}.tmp"
+        try:
+            im.save(tmp, "PNG", compress_level=1)
+            os.replace(tmp, f)
+        except OSError:
+            pass
 
     def _draw(self, up, fore, nod, breathe, blink, mouth):
         d = self.doc

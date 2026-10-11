@@ -640,7 +640,8 @@ def _clip_job(args):
 
 def _render_clips(cfg, todo, size):
     """Render the slide clips on several CPU cores (each worker loads its own teacher); falls back to in-process."""
-    workers = int((cfg.get("avatar") or {}).get("workers") or max(1, (os.cpu_count() or 2) - 1))
+    # one worker per physical core (cpu_count reports threads): more only fight for the same cores
+    workers = int((cfg.get("avatar") or {}).get("workers") or max(1, min(6, (os.cpu_count() or 2) // 2)))
     if len(todo) < 2 or workers < 2:
         return
     import concurrent.futures as cf
