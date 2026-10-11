@@ -14,6 +14,7 @@ import os
 import sys
 import struct
 import subprocess
+import time
 
 import rig
 import vrig
@@ -450,7 +451,7 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
     y = f"main_h-overlay_h-{100 if portrait else _bottom(cfg)}"
     # the frame sequence is looped and the clip cut at exactly `secs` (a frame-sequence input ends one
     # frame early with shortest=1, and 0.1 s per slide adds up to seconds of drift over a video)
-    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error",
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error",
                     "-loop", "1", "-framerate", str(FPS), "-i", slide_png,
                     "-stream_loop", "-1", "-framerate", str(FPS), "-i", os.path.join(fdir, "%04d.png"),
                     "-filter_complex",
@@ -482,7 +483,7 @@ def _clip_rig(cfg, teacher, slide_png, pose, secs, audio, out_mp4, size, portrai
     fw, fh = first.size
     # raw RGBA frames are piped straight into ffmpeg (no PNG per frame on disk)
     def encode(codec):
-        proc = subprocess.Popen([cfg["ffmpeg"], "-y", "-loglevel", "error",
+        proc = subprocess.Popen([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error",
                                  "-loop", "1", "-framerate", str(RIG_FPS), "-i", slide_png,
                                  "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{fw}x{fh}", "-framerate", str(RIG_FPS), "-i", "pipe:0",
                                  "-filter_complex",
@@ -606,12 +607,12 @@ def _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size
         patch.paste(im, ((fw - im.width) // 2, fh - im.height - 6 + bob), im)
         patch.save(os.path.join(fdir, f"{i:04d}.png"))
     patch_mp4 = os.path.join(fdir, "patch.mp4")
-    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error", "-framerate", str(KEY_FPS), "-i", os.path.join(fdir, "%04d.png"),
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-framerate", str(KEY_FPS), "-i", os.path.join(fdir, "%04d.png"),
                     "-vf", "minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:scd=fdiff:scd_threshold=8,tpad=stop_mode=clone:stop_duration=2",
                     "-t", f"{secs:.3f}", *codec, "-pix_fmt", "yuv420p", patch_mp4], crf=16)
     canvas_png = os.path.join(fdir, "canvas.png")
     canvas.save(canvas_png)
-    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", canvas_png,
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", canvas_png,
                     "-i", patch_mp4,
                     "-filter_complex", f"[0:v][1:v]overlay={x0}:{y0},format=yuv420p",
                     "-t", f"{secs:.3f}", "-r", "30", *codec, "-an", out_mp4])
@@ -621,9 +622,19 @@ def _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size
     return out_mp4
 
 
+def _ok_clip(cfg, mp4):
+    from ytstudio.tts import duration
+    try:
+        return os.path.getsize(mp4) > 1000 and duration(cfg, mp4) > 0.1
+    except Exception:
+        return False
+
+
 def _clip_job(args):
     cfg, png, pose, secs, aud, mp4, size = args
+    t0 = time.time()
     clip(cfg, png, pose, secs, aud, mp4, size)
+    print(f"[avatar] clip {os.path.basename(mp4)} {secs:.0f}s video in {time.time() - t0:.0f}s", flush=True)
     return mp4
 
 
@@ -646,27 +657,35 @@ def concat_clips(cfg, items, audio_out, video_out, size):
     from ytstudio.tts import duration
     d = os.path.dirname(video_out)
     silence = os.path.join(d, "_silence.wav")
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", "10", silence], check=True)
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", "10", silence], check=True)
     alst, vlst = os.path.join(d, "_audio.txt"), os.path.join(d, "_clips.txt")
     with open(alst, "w", encoding="utf-8") as fa, open(vlst, "w", encoding="utf-8") as fv:
+        for png, aud, secs, pose in items:                       # clips left broken by a failed encoder (0 bytes / unreadable) are redone
+            mp4 = os.path.splitext(png)[0] + ".mp4"
+            if os.path.exists(mp4) and not _ok_clip(cfg, mp4):
+                print(f"[avatar] broken clip {os.path.basename(mp4)} - re-rendering")
+                os.remove(mp4)
         todo = [(png, pose, secs, aud, os.path.splitext(png)[0] + ".mp4") for png, aud, secs, pose in items if not os.path.exists(os.path.splitext(png)[0] + ".mp4")]
         _render_clips(cfg, todo, size)
-        for png, aud, secs, pose in items:
+        for k, (png, aud, secs, pose) in enumerate(items, 1):
             mp4 = os.path.splitext(png)[0] + ".mp4"
             if not os.path.exists(mp4):
+                t0 = time.time()
                 clip(cfg, png, pose, secs, aud, mp4, size)
+                print(f"[avatar] clip {k}/{len(items)} {os.path.basename(mp4)} {secs:.0f}s video in {time.time() - t0:.0f}s")
             fv.write(f"file '{os.path.abspath(mp4)}'\n")
             secs = duration(cfg, mp4) or secs          # pad audio to the clip's real length so slides never drift
             if aud:
                 wav = os.path.splitext(aud)[0] + ".wav"
                 if not os.path.exists(wav):
-                    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-i", aud, "-ar", "24000", "-ac", "1", wav], check=True)
+                    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-i", aud, "-ar", "24000", "-ac", "1", wav], check=True)
                 fa.write(f"file '{os.path.abspath(wav)}'\n")
                 gap = secs - duration(cfg, aud)
             else:
                 gap = secs
             if gap > 0.05:
                 fa.write(f"file '{os.path.abspath(silence)}'\ninpoint 0\noutpoint {gap:.3f}\n")
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", alst, "-ar", "24000", "-ac", "1", audio_out], check=True)
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", vlst, "-i", audio_out,
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", alst, "-ar", "24000", "-ac", "1", audio_out], check=True)
+    print(f"[avatar] joining {len(items)} clips + audio -> {os.path.basename(video_out)}")
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", vlst, "-i", audio_out,
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", video_out], check=True)

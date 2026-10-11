@@ -121,7 +121,7 @@ def clip(cfg, slide_png, pose, secs, out_mp4, size, talking=True, height=HEIGHT)
     for i in range(FRAMES):
         compose(slide, pose, i / FRAMES, talking, height).save(os.path.join(fdir, f"{i:02d}.png"))
     w, h = size
-    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error", "-stream_loop", "-1", "-framerate", str(FPS),
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-stream_loop", "-1", "-framerate", str(FPS),
                     "-i", os.path.join(fdir, "%02d.png"), "-t", f"{secs:.3f}",
                     "-vf", f"scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2,format=yuv420p",
                     "-r", "30", *codec, "-an", out_mp4])
@@ -133,7 +133,7 @@ def concat_clips(cfg, items, audio_out, video_out, size):
     from ytstudio.tts import duration
     d = os.path.dirname(video_out)
     silence = os.path.join(d, "_silence.wav")
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", "10", silence], check=True)
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", "10", silence], check=True)
     alst, vlst = os.path.join(d, "_audio.txt"), os.path.join(d, "_clips.txt")
     with open(alst, "w", encoding="utf-8") as fa, open(vlst, "w", encoding="utf-8") as fv:
         for png, aud, secs, pose in items:
@@ -144,13 +144,13 @@ def concat_clips(cfg, items, audio_out, video_out, size):
             if aud:
                 wav = os.path.splitext(aud)[0] + ".wav"
                 if not os.path.exists(wav):
-                    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-i", aud, "-ar", "24000", "-ac", "1", wav], check=True)
+                    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-i", aud, "-ar", "24000", "-ac", "1", wav], check=True)
                 fa.write(f"file '{os.path.abspath(wav)}'\n")
                 gap = secs - duration(cfg, aud)
             else:
                 gap = secs
             if gap > 0.05:
                 fa.write(f"file '{os.path.abspath(silence)}'\ninpoint 0\noutpoint {gap:.3f}\n")
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", alst, "-ar", "24000", "-ac", "1", audio_out], check=True)
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", vlst, "-i", audio_out,
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", alst, "-ar", "24000", "-ac", "1", audio_out], check=True)
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", vlst, "-i", audio_out,
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", video_out], check=True)

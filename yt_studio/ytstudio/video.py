@@ -32,22 +32,22 @@ def _concat(cfg, items, audio_out, video_out, size):
         f.write(f"file '{os.path.abspath(items[-1][0])}'\n")
     alst = os.path.join(os.path.dirname(video_out), "_audio.txt")
     silence = os.path.join(os.path.dirname(video_out), "_silence.wav")
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", "10", silence], check=True)
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", "10", silence], check=True)
     with open(alst, "w", encoding="utf-8") as f:
         for png, aud, secs in items:
             if aud:
                 wav = os.path.splitext(aud)[0] + ".wav"
                 if not os.path.exists(wav):
-                    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-i", aud, "-ar", "24000", "-ac", "1", wav], check=True)
+                    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-i", aud, "-ar", "24000", "-ac", "1", wav], check=True)
                 f.write(f"file '{os.path.abspath(wav)}'\n")
                 gap = secs - duration(cfg, aud)
             else:
                 gap = secs
             if gap > 0.05:
                 f.write(f"file '{os.path.abspath(silence)}'\ninpoint 0\noutpoint {gap:.3f}\n")
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", alst,
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", alst,
                     "-ar", "24000", "-ac", "1", audio_out], check=True)
-    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-i", audio_out,
+    enc.run(cfg, lambda codec: [cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-i", audio_out,
                     "-vf", f"scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2,format=yuv420p",
                     "-r", "30", *codec,
                     "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", video_out])

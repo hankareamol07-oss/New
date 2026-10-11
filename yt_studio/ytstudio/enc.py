@@ -18,7 +18,7 @@ _cache = {}
 def _works(ffmpeg, args):
     out = os.path.join(tempfile.gettempdir(), "_enc_probe.mp4")
     try:
-        r = subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-f", "lavfi", "-i", "color=c=black:s=1920x1080:r=30", "-t", "0.5",
+        r = subprocess.run([ffmpeg, "-y", "-nostdin", "-loglevel", "error", "-f", "lavfi", "-i", "color=c=black:s=1920x1080:r=30", "-t", "0.5",
                             *args, "-pix_fmt", "yuv420p", out], capture_output=True, timeout=30)
         return r.returncode == 0 and os.path.getsize(out) > 0
     except Exception:

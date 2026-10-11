@@ -87,7 +87,7 @@ def _gemini(cfg, text, out, log=print):
     raw = out + ".pcm"
     with open(raw, "wb") as f:
         f.write(pcm)
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", raw, out], check=True)
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", raw, out], check=True)
     os.remove(raw)
 
 
@@ -123,7 +123,7 @@ def _sarvam(cfg, text, out, lang):
     with open(lst, "w", encoding="utf-8") as f:
         for p in parts:
             f.write(f"file '{os.path.abspath(p)}'\n")
-    subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, out], check=True)
+    subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, out], check=True)
     for p in parts + [lst]:
         os.remove(p)
 
@@ -378,7 +378,7 @@ def _prefetch_gemini(cfg, pairs, lang, log):
         raise RuntimeError("could not align parts with pauses")
     bounds = [0.0] + cuts + [total]
     for (t, o), a, b in zip(pairs, bounds, bounds[1:]):
-        subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", full, "-c:a", "libmp3lame", "-q:a", "3", o], check=True)
+        subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", full, "-c:a", "libmp3lame", "-q:a", "3", o], check=True)
     os.remove(full)
     for _, o in pairs:
         if not (os.path.exists(o) and os.path.getsize(o) > 0):
