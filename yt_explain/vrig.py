@@ -51,7 +51,9 @@ def _pivot(doc, root, layer, frame=0):
 class VRig:
     POSES = {"point": 1.0, "wave": 0.75, "cheer": 0.9, "think": 0.35, "talk": 0.5, "sway": 0.0, "read": 0.0}
 
-    def __init__(self, name, h, flip=None):
+    CLOSE = 2.05            # camera zoom of the waist-up presenter shot (1.0 = full figure)
+
+    def __init__(self, name, h, flip=None, bottom=0):
         spec = RIGS[name]
         self.spec = spec
         self.h = h
@@ -67,6 +69,8 @@ class VRig:
         x0, y0, x1, y1 = b
         self.bounds = (x0 - 70, y0 - 30, x1 + 30, y1 + 6)   # room for the raised arm
         self.scale = h / (self.bounds[3] - self.bounds[1])
+        self.bottom = int(bottom)                     # extra px below the box so the waist cut lands on the slide edge
+        self.box_w = int(h * 0.82)
 
     # ---------------------------------------------------------------
     GESTURE_HOLD = 2.6      # seconds the hand stays up at the start of a slide
@@ -88,6 +92,31 @@ class VRig:
         up = 22.0 * k + beat * 0.3          # upper arm swings forward a little (shoulder cap stays on the blouse)
         fore = 96.0 * k + beat              # forearm bends up so the hand points at the slide
         return up, fore
+
+    def _zoom(self, pose, t, secs):
+        """Camera: waist-up close shot by default; on gesture slides zoom out to the full figure while she points,
+        then back in. Smooth ease in/out."""
+        Z = self.CLOSE
+        if self.POSES.get(pose, 0.5) <= 0.0 or (secs is not None and secs < 5.0):
+            return Z - 0.06 * math.sin(t * 2 * math.pi / 9.0) - 0.06
+        def ease(a, b, u):
+            u = min(1.0, max(0.0, u)); u = 0.5 - 0.5 * math.cos(math.pi * u)
+            return a + (b - a) * u
+        if t < 0.6:
+            return Z
+        if t < 2.0:
+            return ease(Z, 1.0, (t - 0.6) / 1.4)
+        if t < 4.6:
+            return 1.0
+        if t < 6.4:
+            return ease(1.0, Z, (t - 4.6) / 1.8)
+        # long slides: a slow zoom-out/in around each later gesture
+        c = (t - 6.4) % self.GESTURE_EVERY
+        g0 = self.GESTURE_EVERY - self.GESTURE_HOLD - 1.5 - 1.2
+        if c < g0:
+            return Z - 0.05 * math.sin(c * 2 * math.pi / 9.0)
+        u = (c - g0) / (self.GESTURE_EVERY - g0)
+        return ease(Z, 1.35, u * 2) if u < 0.5 else ease(1.35, Z, (u - 0.5) * 2)
 
     def frame(self, pose, t, mouth=0.0, blink=False, secs=None):
         d = self.doc
@@ -123,8 +152,20 @@ class VRig:
             d.frame_override = {spec["eyes"]: 0}
         d.frame_override[spec["lips"]] = spec["lips_open"] if mouth > 0.12 else spec["lips_closed"]
         self._mouth_scale = min(1.0, max(0.35, mouth * 2.2)) if mouth > 0.12 else 1.0
-        img, _ = xfl.render(d, self.root, fi, scale=self.scale, bounds=self.bounds)
+        z = self._zoom(pose, t, secs)
+        img, _ = xfl.render(d, self.root, fi, scale=self.scale * z, bounds=self.bounds)
         pil = xfl.to_pil(img)
         if self.flip:
             pil = pil.transpose(Image.FLIP_LEFT_RIGHT)
-        return pil
+        # camera box: fixed size, figure's head kept near the top, centred on the neck; bottom edge = slide edge
+        H = self.h + self.bottom
+        W = self.box_w
+        nx = (neck[0] - self.bounds[0]) * self.scale * z
+        if self.flip:
+            nx = pil.width - nx
+        top = int(26 * (z - 1.0) / max(0.01, self.CLOSE - 1.0)) if z > 1.0 else (H - self.bottom - pil.height)
+        cx = int(nx - W * 0.10) if z > 1.0 else pil.width // 2   # a little room on the slide side for the hand
+        out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        out.alpha_composite(pil, (W // 2 - cx, max(-pil.height, top)) if W // 2 - cx >= 0 and top >= 0 else (0, 0),
+                            (max(0, cx - W // 2), max(0, -top)))
+        return out

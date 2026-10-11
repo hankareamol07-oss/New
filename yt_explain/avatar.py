@@ -374,7 +374,7 @@ def _sprite_name(cfg):
 def figure_height(cfg):
     name = _sprite_name(cfg)
     if name in vrig.RIGS:
-        return int(PRO_HEIGHT * 0.72)   # calm small figure in the corner, slide content keeps most of the width
+        return int(PRO_HEIGHT * 0.95)   # presenter box (waist-up shot / full figure on zoom-out)
     return PRO_HEIGHT if name else HEIGHT
 
 
@@ -388,7 +388,7 @@ def _teacher(cfg):
         if name not in _CACHE:
             sheet = os.path.exists(os.path.join(ASSETS, name, "manifest.json"))
             if name in vrig.RIGS:
-                _CACHE[name] = vrig.VRig(name, figure_height(cfg), flip=av.get("flip"))
+                _CACHE[name] = vrig.VRig(name, figure_height(cfg), flip=av.get("flip"), bottom=_bottom(cfg))
             elif name in rig.RIG and av.get("rig", True):
                 _CACHE[name] = rig.Rig(name, PRO_HEIGHT)
             else:
