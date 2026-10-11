@@ -74,7 +74,7 @@ class VRig:
 
     # ---------------------------------------------------------------
     GESTURE_HOLD = 2.6      # seconds the hand stays up at the start of a slide
-    GESTURE_EVERY = 14.0    # a short gesture again every N seconds on long slides
+    GESTURE_EVERY = 24.0    # a short gesture again every N seconds on long slides
 
     def _arm_angles(self, pose, t, mouth, secs):
         target = self.POSES.get(pose, 0.5)
@@ -93,30 +93,32 @@ class VRig:
         fore = 96.0 * k + beat              # forearm bends up so the hand points at the slide
         return up, fore
 
+    WIDE = 1.45             # zoom-out limit: mid shot (knees up) - she always stays big on screen
+
     def _zoom(self, pose, t, secs):
-        """Camera: waist-up close shot by default; on gesture slides zoom out to the full figure while she points,
-        then back in. Smooth ease in/out."""
-        Z = self.CLOSE
+        """Camera: waist-up close shot almost all the time. One gentle zoom-out to a mid shot while she points at the
+        slide start, back in; a second one only on very long slides (> 40 s), halfway. No continuous loops."""
+        Z, Wd = self.CLOSE, self.WIDE
         if self.POSES.get(pose, 0.5) <= 0.0 or (secs is not None and secs < 5.0):
-            return Z - 0.06 * math.sin(t * 2 * math.pi / 9.0) - 0.06
+            return Z
         def ease(a, b, u):
             u = min(1.0, max(0.0, u)); u = 0.5 - 0.5 * math.cos(math.pi * u)
             return a + (b - a) * u
-        if t < 0.6:
+        def cycle(c):
+            if c < 0.6:
+                return Z
+            if c < 2.0:
+                return ease(Z, Wd, (c - 0.6) / 1.4)
+            if c < 4.6:
+                return Wd
+            if c < 6.4:
+                return ease(Wd, Z, (c - 4.6) / 1.8)
             return Z
-        if t < 2.0:
-            return ease(Z, 1.0, (t - 0.6) / 1.4)
-        if t < 4.6:
-            return 1.0
-        if t < 6.4:
-            return ease(1.0, Z, (t - 4.6) / 1.8)
-        # long slides: a slow zoom-out/in around each later gesture
-        c = (t - 6.4) % self.GESTURE_EVERY
-        g0 = self.GESTURE_EVERY - self.GESTURE_HOLD - 1.5 - 1.2
-        if c < g0:
-            return Z - 0.05 * math.sin(c * 2 * math.pi / 9.0)
-        u = (c - g0) / (self.GESTURE_EVERY - g0)
-        return ease(Z, 1.35, u * 2) if u < 0.5 else ease(1.35, Z, (u - 0.5) * 2)
+        if secs is not None and secs > 40.0:
+            mid = secs / 2.0 - 3.2
+            if mid <= t < mid + 7.0:
+                return cycle(t - mid + 0.6)
+        return cycle(t)
 
     def frame(self, pose, t, mouth=0.0, blink=False, secs=None):
         d = self.doc
