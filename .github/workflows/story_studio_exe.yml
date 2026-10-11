@@ -4,6 +4,8 @@ on:
     branches: [devin/1791711512-story-studio]
     paths: [story_studio/**, yt_studio/ytstudio/**, .github/workflows/story_studio_exe.yml]
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: windows-latest
@@ -42,3 +44,11 @@ jobs:
         with:
           name: StoryStudio_Windows
           path: story_studio/StoryStudio_Windows.zip
+      - name: Publish download (release story-studio-latest)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: story-studio-latest
+          name: Story Studio (Windows)
+          prerelease: true
+          target_commitish: ${{ github.sha }}
+          files: story_studio/StoryStudio_Windows.zip
