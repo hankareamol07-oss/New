@@ -1,0 +1,106 @@
+{
+ "name": "kavita",
+ "label": "कविता (केशरी साडी)",
+ "gender": "female",
+ "pack": "All Character",
+ "rig": {
+  "root": "Duplicate Items Folder/Symbol 2 copy 18",
+  "frame": 0,
+  "bounds": [
+   -84.0,
+   -8.0,
+   100.0,
+   444.0
+  ],
+  "faces": "left",
+  "head": "Layer_3",
+  "neck": [
+   1.75,
+   72.58
+  ],
+  "mouth": {
+   "Duplicate Items Folder/father lips copy 20": {
+    "closed": 0,
+    "mid": 16,
+    "open": 12
+   },
+   "Duplicate Items Folder/father lips copy 19": {
+    "closed": 0,
+    "mid": 16,
+    "open": 12
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/girl eye copy 4": {
+    "open": 0,
+    "blink": [
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ]
+   },
+   "Duplicate Items Folder/girl eye copy 5": {
+    "open": 0,
+    "blink": [
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Layer_9",
+   "fore": "Layer_8",
+   "shoulder": [
+    -20.0,
+    100.22
+   ],
+   "elbow": [
+    -34.32,
+    161.45
+   ]
+  },
+  "arm_back": {
+   "upper": "Layer_5",
+   "fore": "Layer_2",
+   "shoulder": [
+    42.5,
+    92.16
+   ],
+   "elbow": [
+    69.34,
+    143.25
+   ]
+  },
+  "legs": [
+   "Layer_16",
+   "Layer_15"
+  ],
+  "hips": {
+   "Layer_16": [
+    4.75,
+    200.0
+   ],
+   "Layer_15": [
+    26.5,
+    199.0
+   ]
+  },
+  "feet": [
+   "Layer_10",
+   "Layer_11"
+  ],
+  "shadow": [
+   "Symbol_2"
+  ]
+ },
+ "root": "Duplicate Items Folder/Symbol 2 copy 18"
+}

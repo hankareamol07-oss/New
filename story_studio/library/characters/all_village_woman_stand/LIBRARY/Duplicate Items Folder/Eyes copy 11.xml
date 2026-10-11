@@ -1,0 +1,1271 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Eyes copy 11" itemID="64ea4134-00001aca" symbolType="graphic" lastModified="1671527763" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="Eyes copy 11" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Right_Eyebrow" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Eyebrow copy 10" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.824813842773438" d="0.824813842773438" tx="93.6" ty="-14.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="2.95" y="39.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="154.95" centerPoint3DY="36.7" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.817855834960938" b="0.1068115234375" c="-0.1068115234375" d="0.817855834960938" tx="97.85" ty="9.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3" y="39.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="154.95" centerPoint3DY="36.7" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.817855834960938" b="0.1068115234375" c="-0.1068115234375" d="0.817855834960938" tx="97.85" ty="9.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3" y="39.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="153.75" centerPoint3DY="5.6" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.824813842773438" d="0.824813842773438" tx="93.6" ty="-14.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="2.95" y="39.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Eyebrow copy 10" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.824813842773438" d="0.824813842773438" tx="93.6" ty="-14.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="2.95" y="39.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="154.95" centerPoint3DY="36.7" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.817855834960938" b="0.1068115234375" c="-0.1068115234375" d="0.817855834960938" tx="97.85" ty="9.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3" y="39.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="107" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="154.95" centerPoint3DY="36.7" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.817855834960938" b="0.1068115234375" c="-0.1068115234375" d="0.817855834960938" tx="97.85" ty="9.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3" y="39.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Eyebrow copy 10" symbolType="graphic" centerPoint3DX="153.75" centerPoint3DY="5.6" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.824813842773438" d="0.824813842773438" tx="93.6" ty="-14.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="2.95" y="39.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Left_Eyebrow" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Left Eyebrow copy 10" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.694320678710938" d="0.694320678710938" tx="285.65" ty="4.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="208.35" y="47.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Left Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="356.7" centerPoint3DY="51.75" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.6905517578125" b="-0.0719451904296875" c="0.0719451904296875" d="0.6905517578125" tx="283" ty="42.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="208.45" y="47.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Left Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="356.7" centerPoint3DY="51.75" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.6905517578125" b="-0.0719451904296875" c="0.0719451904296875" d="0.6905517578125" tx="283" ty="42.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="208.45" y="47.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Left Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="358" centerPoint3DY="20.7" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.694320678710938" d="0.694320678710938" tx="285.65" ty="4.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="208.35" y="47.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Left Eyebrow copy 10" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.694320678710938" d="0.694320678710938" tx="285.65" ty="4.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="208.35" y="47.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Left Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="356.7" centerPoint3DY="51.75" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.6905517578125" b="-0.0719451904296875" c="0.0719451904296875" d="0.6905517578125" tx="283" ty="42.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="208.45" y="47.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="107" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Left Eyebrow copy 10" selected="true" symbolType="graphic" centerPoint3DX="356.7" centerPoint3DY="51.75" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.6905517578125" b="-0.0719451904296875" c="0.0719451904296875" d="0.6905517578125" tx="283" ty="42.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="208.45" y="47.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Left Eyebrow copy 10" symbolType="graphic" centerPoint3DX="358" centerPoint3DY="20.7" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.694320678710938" d="0.694320678710938" tx="285.65" ty="4.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="208.35" y="47.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Mask" color="#FF4F4F" locked="true" autoNamed="false" visible="false" layerType="mask">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#ACACAC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1872 1669[2266 1397 2720 1296!2720 1296[3628 1094 3927 1955!3927 1955[3708 2255 3341 2367!3341 2367[2608 2595 1872 1669"/>
+                        <Edge cubics="!1872 1669(;1872,1669 3447,579 3927,1955q1872 1669Q2266 1397q2720 1296Q3628 1094q3927 1955);"/>
+                        <Edge cubics="!3927 1955(;3927,1955 3049,3150 1872,1669q3927 1955Q3708 2255q3341 2367Q2608 2595q1872 1669);"/>
+                        <Edge cubics="!2720 1231(;3325,1096 3728,1338 3927,1955q2720 1231Q3628 1029p3927 1955);"/>
+                        <Edge cubics="!2720 1231(;2417,1298 2134,1444 1872,1669q2720 1231Q2266 1331p1872 1669);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Palak" color="#009999" parentLayerIndex="2" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="shape" keyMode="17922" acceleration="100" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#6.F, #4.CB" startPointB="#6.F, #7.87" strokeIndex1="0" strokeIndex2="0">
+                    <MorphCurves controlPointA="#6.FA, #4.78" anchorPointA="#7.04, #4.24" controlPointB="#6.FA, #5.D6" anchorPointB="#7.04, #4.24" isLine="true"/>
+                    <MorphCurves controlPointA="#B.A5, #4.8A" anchorPointA="#10.45, #4.EF" controlPointB="#B.A5, #4.8A" anchorPointB="#10.45, #4.EF" isLine="true"/>
+                    <MorphCurves controlPointA="#10.3B, #5.43" anchorPointA="#10.3, #5.96" controlPointB="#10.3B, #6.A1" anchorPointB="#10.3, #8.52" isLine="true"/>
+                    <MorphCurves controlPointA="#B.E6, #4.52" anchorPointA="#6.F, #4.CB" controlPointB="#B.6F, #B.4B" anchorPointB="#6.F, #7.87"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="#6.F, #4.CB" startPointB="#6.F, #7.87" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#6.FA, #4.78" anchorPointA="#7.04, #4.24" controlPointB="#6.FA, #5.D6" anchorPointB="#7.04, #4.24" isLine="true"/>
+                    <MorphCurves controlPointA="#B.A5, #4.8A" anchorPointA="#10.45, #4.EF" controlPointB="#B.A5, #4.8A" anchorPointB="#10.45, #4.EF" isLine="true"/>
+                    <MorphCurves controlPointA="#10.3B, #5.43" anchorPointA="#10.3, #5.96" controlPointB="#10.3B, #6.A1" anchorPointB="#10.3, #8.52" isLine="true"/>
+                    <MorphCurves controlPointA="#B.E6, #4.52" anchorPointA="#6.F, #4.CB" controlPointB="#B.6F, #B.4B" anchorPointB="#6.F, #7.87"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1796 1060|4165 1263!4165 1263|4144 1430!4144 1430[3046 1106 1776 1227!1776 1227|1796 1060"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1796 1060|4165 1263!4165 1263/4144 2130!4144 2130[2927 2891 1776 1927!1776 1927/1796 1060"/>
+                    <Edge cubics="!4165 1263(;4165,1263 4144,2130 4144,2130q4165 1263 4144 2130);"/>
+                    <Edge cubics="!1776 1927(;1776,1927 1796,1060 1796,1060q1776 1927 1796 1060);"/>
+                    <Edge cubics="!4144 2130(;3333,2637 2543,2569 1776,1927q4144 2130Q2927 2891q1776 1927);"/>
+                    <Edge cubics="!1796 1060(;1796,1060 4165,1263 4165,1263q1796 1060 4165 1263);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="6" tweenType="shape" keyMode="17922" acceleration="-100" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#6.F, #7.87" startPointB="#6.F, #4.CB" strokeIndex1="0" strokeIndex2="0">
+                    <MorphCurves controlPointA="#6.FA, #5.D6" anchorPointA="#7.04, #4.24" controlPointB="#6.FA, #4.78" anchorPointB="#7.04, #4.24" isLine="true"/>
+                    <MorphCurves controlPointA="#B.A5, #4.8A" anchorPointA="#10.45, #4.EF" controlPointB="#B.A5, #4.8A" anchorPointB="#10.45, #4.EF" isLine="true"/>
+                    <MorphCurves controlPointA="#10.3B, #6.A1" anchorPointA="#10.3, #8.52" controlPointB="#10.3B, #5.43" anchorPointB="#10.3, #5.96" isLine="true"/>
+                    <MorphCurves controlPointA="#B.6F, #B.4B" anchorPointA="#6.F, #7.87" controlPointB="#B.E6, #4.52" anchorPointB="#6.F, #4.CB"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="#6.F, #7.87" startPointB="#6.F, #4.CB" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#6.FA, #5.D6" anchorPointA="#7.04, #4.24" controlPointB="#6.FA, #4.78" anchorPointB="#7.04, #4.24" isLine="true"/>
+                    <MorphCurves controlPointA="#B.A5, #4.8A" anchorPointA="#10.45, #4.EF" controlPointB="#B.A5, #4.8A" anchorPointB="#10.45, #4.EF" isLine="true"/>
+                    <MorphCurves controlPointA="#10.3B, #6.A1" anchorPointA="#10.3, #8.52" controlPointB="#10.3B, #5.43" anchorPointB="#10.3, #5.96" isLine="true"/>
+                    <MorphCurves controlPointA="#B.6F, #B.4B" anchorPointA="#6.F, #7.87" controlPointB="#B.E6, #4.52" anchorPointB="#6.F, #4.CB"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1796 1060|4165 1263!4165 1263/4144 2130!4144 2130[2927 2891 1776 1927!1776 1927/1796 1060"/>
+                    <Edge cubics="!4165 1263(;4165,1263 4144,2130 4144,2130q4165 1263 4144 2130);"/>
+                    <Edge cubics="!1776 1927(;1776,1927 1796,1060 1796,1060q1776 1927 1796 1060);"/>
+                    <Edge cubics="!4144 2130(;3333,2637 2543,2569 1776,1927q4144 2130Q2927 2891q1776 1927);"/>
+                    <Edge cubics="!1796 1060(;1796,1060 4165,1263 4165,1263q1796 1060 4165 1263);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1796 1060S6|4165 1263!4165 1263|4144 1430!4144 1430[3046 1106 1776 1227!1776 1227|1796 1060"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="shape" keyMode="17922" acceleration="100" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#6.F, #4.CB" startPointB="#6.F, #7.87" strokeIndex1="0" strokeIndex2="0">
+                    <MorphCurves controlPointA="#6.FA, #4.78" anchorPointA="#7.04, #4.24" controlPointB="#6.FA, #5.D6" anchorPointB="#7.04, #4.24" isLine="true"/>
+                    <MorphCurves controlPointA="#B.A5, #4.8A" anchorPointA="#10.45, #4.EF" controlPointB="#B.A5, #4.8A" anchorPointB="#10.45, #4.EF" isLine="true"/>
+                    <MorphCurves controlPointA="#10.3B, #5.43" anchorPointA="#10.3, #5.96" controlPointB="#10.3B, #6.A1" anchorPointB="#10.3, #8.52" isLine="true"/>
+                    <MorphCurves controlPointA="#B.E6, #4.52" anchorPointA="#6.F, #4.CB" controlPointB="#B.6F, #B.4B" anchorPointB="#6.F, #7.87"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="#6.F, #4.CB" startPointB="#6.F, #7.87" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#6.FA, #4.78" anchorPointA="#7.04, #4.24" controlPointB="#6.FA, #5.D6" anchorPointB="#7.04, #4.24" isLine="true"/>
+                    <MorphCurves controlPointA="#B.A5, #4.8A" anchorPointA="#10.45, #4.EF" controlPointB="#B.A5, #4.8A" anchorPointB="#10.45, #4.EF" isLine="true"/>
+                    <MorphCurves controlPointA="#10.3B, #5.43" anchorPointA="#10.3, #5.96" controlPointB="#10.3B, #6.A1" anchorPointB="#10.3, #8.52" isLine="true"/>
+                    <MorphCurves controlPointA="#B.E6, #4.52" anchorPointA="#6.F, #4.CB" controlPointB="#B.6F, #B.4B" anchorPointB="#6.F, #7.87"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1796 1060S6|4165 1263!4165 1263|4144 1430!4144 1430[3046 1106 1776 1227!1776 1227|1796 1060"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" keyMode="9728" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1796 1060|4165 1263!4165 1263/4144 2130!4144 2130[2927 2891 1776 1927!1776 1927/1796 1060"/>
+                    <Edge cubics="!4165 1263(;4165,1263 4144,2130 4144,2130q4165 1263 4144 2130);"/>
+                    <Edge cubics="!1776 1927(;1776,1927 1796,1060 1796,1060q1776 1927 1796 1060);"/>
+                    <Edge cubics="!4144 2130(;3333,2637 2543,2569 1776,1927q4144 2130Q2927 2891q1776 1927);"/>
+                    <Edge cubics="!1796 1060(;1796,1060 4165,1263 4165,1263q1796 1060 4165 1263);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="107" duration="6" tweenType="shape" keyMode="17922" acceleration="-100" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#6.F, #7.87" startPointB="#6.F, #4.CB" strokeIndex1="0" strokeIndex2="0">
+                    <MorphCurves controlPointA="#6.FA, #5.D6" anchorPointA="#7.04, #4.24" controlPointB="#6.FA, #4.78" anchorPointB="#7.04, #4.24" isLine="true"/>
+                    <MorphCurves controlPointA="#B.A5, #4.8A" anchorPointA="#10.45, #4.EF" controlPointB="#B.A5, #4.8A" anchorPointB="#10.45, #4.EF" isLine="true"/>
+                    <MorphCurves controlPointA="#10.3B, #6.A1" anchorPointA="#10.3, #8.52" controlPointB="#10.3B, #5.43" anchorPointB="#10.3, #5.96" isLine="true"/>
+                    <MorphCurves controlPointA="#B.6F, #B.4B" anchorPointA="#6.F, #7.87" controlPointB="#B.E6, #4.52" anchorPointB="#6.F, #4.CB"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="#6.F, #7.87" startPointB="#6.F, #4.CB" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#6.FA, #5.D6" anchorPointA="#7.04, #4.24" controlPointB="#6.FA, #4.78" anchorPointB="#7.04, #4.24" isLine="true"/>
+                    <MorphCurves controlPointA="#B.A5, #4.8A" anchorPointA="#10.45, #4.EF" controlPointB="#B.A5, #4.8A" anchorPointB="#10.45, #4.EF" isLine="true"/>
+                    <MorphCurves controlPointA="#10.3B, #6.A1" anchorPointA="#10.3, #8.52" controlPointB="#10.3B, #5.43" anchorPointB="#10.3, #5.96" isLine="true"/>
+                    <MorphCurves controlPointA="#B.6F, #B.4B" anchorPointA="#6.F, #7.87" controlPointB="#B.E6, #4.52" anchorPointB="#6.F, #4.CB"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1796 1060|4165 1263!4165 1263/4144 2130!4144 2130[2927 2891 1776 1927!1776 1927/1796 1060"/>
+                    <Edge cubics="!4165 1263(;4165,1263 4144,2130 4144,2130q4165 1263 4144 2130);"/>
+                    <Edge cubics="!1776 1927(;1776,1927 1796,1060 1796,1060q1776 1927 1796 1060);"/>
+                    <Edge cubics="!4144 2130(;3333,2637 2543,2569 1776,1927q4144 2130Q2927 2891q1776 1927);"/>
+                    <Edge cubics="!1796 1060(;1796,1060 4165,1263 4165,1263q1796 1060 4165 1263);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1796 1060S6|4165 1263!4165 1263|4144 1430!4144 1430[3046 1106 1776 1227!1776 1227|1796 1060"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Right_Puple" color="#FF800A" parentLayerIndex="2" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":67855,"b":0,"c":0,"d":65536,"tx":-117,"ty":0}'>
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="1.03538513183594" tx="49.5" ty="-6.65"/>
+                  </matrix>
+                  <members>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="1.03514099121094" tx="-75.3" ty="-388.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <LinearGradient>
+                            <matrix>
+                              <Matrix a="-0.0009765625" b="-0.011749267578125" c="-0.011749267578125" d="0.0010986328125" tx="208.7" ty="484.15"/>
+                            </matrix>
+                            <GradientEntry color="#723316" ratio="0"/>
+                            <GradientEntry color="#552210" ratio="1"/>
+                          </LinearGradient>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle0="1" edges="!3650 9560S1[3652 9778 3804 9932!3804 9932[3956 10086 4168 10085!4168 10085[4380 10084 4528 9929!4528 9929[4676 9774 4674 9556!4674 9556[4671 9338 4519 9185!4519 9185[4367 9031 4155 9032!4155 9032[3943 9034 3796 9188!3796 9188[3649 9342
+ 3650 9560"/>
+                        <Edge cubics="!3650 9560(;3653,9851 3885,10086 4168,10085q3650 9560Q3652 9778q3804 9932Q3956 10086q4168 10085);"/>
+                        <Edge cubics="!4168 10085(;4450,10083 4677,9847 4674,9556q4168 10085Q4380 10084q4528 9929Q4676 9774q4674 9556);"/>
+                        <Edge cubics="!4674 9556(;4670,9266 4438,9031 4155,9032q4674 9556Q4671 9338q4519 9185Q4367 9031q4155 9032);"/>
+                        <Edge cubics="!4155 9032(;3872,9034 3648,9270 3650,9560q4155 9032Q3943 9034q3796 9188Q3649 9342q3650 9560);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="1.03514099121094" tx="-75.3" ty="-388.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <LinearGradient>
+                            <matrix>
+                              <Matrix a="-0.0009765625" b="-0.011749267578125" c="-0.011749267578125" d="0.0010986328125" tx="208.75" ty="484.15"/>
+                            </matrix>
+                            <GradientEntry color="#823919" ratio="0"/>
+                            <GradientEntry color="#672814" ratio="1"/>
+                          </LinearGradient>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle0="1" edges="
+!3728 9560S1[3730 9746 3859 9876!3859 9876[3988 10007 4168 10006!4168 10006[4348 10005 4474 9874!4474 9874[4600 9742 4598 9557!4598 9557[4596 9371 4467 9241!4467 9241[4338 9110 4158 9111!4158 9111[3978 9112 3852 9243!3852 9243[3725 9375
+ 3728 9560"/>
+                        <Edge cubics="!3728 9560(;3730,9808 3928,10007 4168,10006q3728 9560Q3730 9746q3859 9876Q3988 10007q4168 10006);"/>
+                        <Edge cubics="!4168 10006(;4408,10005 4601,9804 4598,9557q4168 10006Q4348 10005q4474 9874Q4600 9742q4598 9557);"/>
+                        <Edge cubics="!4598 9557(;4595,9309 4398,9110 4158,9111q4598 9557Q4596 9371q4467 9241Q4338 9110q4158 9111);"/>
+                        <Edge cubics="!4158 9111(;3918,9112 3724,9313 3728,9560q4158 9111Q3978 9112q3852 9243Q3725 9375q3728 9560);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="1.03514099121094" tx="-75.3" ty="-388.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle0="1" edges="
+!3854 9559[3854 9689 3945 9781!3945 9781[4036 9873 4165 9875!4165 9875[4293 9873 4382 9781!4382 9781[4471 9689 4469 9561!4469 9561|4469 9557!4469 9557[4469 9427 4378 9335!4378 9335[4287 9244 4157 9242!4157 9242[4029 9244 3941 9337!3941
+ 9337[3852 9429 3854 9557!3854 9557|3854 9559"/>
+                        <Edge cubics="!3854 9559(;3854,9732 3993,9872 4165,9875q3854 9559Q3854 9689q3945 9781Q4036 9873q4165 9875);"/>
+                        <Edge cubics="!4165 9875(;4336,9872 4472,9732 4469,9561q4165 9875Q4293 9873q4382 9781Q4471 9689q4469 9561);"/>
+                        <Edge cubics="!4469 9561(;4469,9560 4469,9558 4469,9557q4469 9561 4469 9557);"/>
+                        <Edge cubics="!4469 9557(;4469,9384 4330,9244 4157,9242q4469 9557Q4469 9427q4378 9335Q4287 9244q4157 9242);"/>
+                        <Edge cubics="!4157 9242(;3987,9245 3851,9386 3854,9557q4157 9242Q4029 9244q3941 9337Q3852 9429q3854 9557);"/>
+                        <Edge cubics="!3854 9557(;3854,9558 3854,9559 3854,9559q3854 9557 3854 9559);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="1.03514099121094" tx="-75.3" ty="-388.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle0="1" edges="
+!4004 9451[4004 9497 4049 9510!4049 9510[4077 9518 4160 9518!4160 9518[4244 9517 4271 9509!4271 9509[4316 9496 4316 9450!4316 9450[4316 9399 4270 9364!4270 9364[4223 9328 4158 9328!4158 9328[4093 9328 4048 9364!4048 9364[4003 9400 4004
+ 9451"/>
+                        <Edge cubics="!4004 9451(;4004,9519 4073,9518 4160,9518q4004 9451Q4004 9497q4049 9510Q4077 9518q4160 9518);"/>
+                        <Edge cubics="!4160 9518(;4247,9517 4316,9518 4316,9450q4160 9518Q4244 9517q4271 9509Q4316 9496q4316 9450);"/>
+                        <Edge cubics="!4316 9450(;4316,9382 4245,9328 4158,9328q4316 9450Q4316 9399q4270 9364Q4223 9328q4158 9328);"/>
+                        <Edge cubics="!4158 9328(;4071,9328 4003,9384 4004,9451q4158 9328Q4093 9328q4048 9364Q4003 9400q4004 9451);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="1.03514099121094" tx="-75.3" ty="-388.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle0="1" edges="
+!4128 9773[4127 9789 4138 9800!4138 9800[4149 9811 4165 9812!4165 9812[4181 9811 4191 9799!4191 9799[4202 9786 4200 9770!4200 9770[4199 9756 4188 9746!4188 9746[4178 9736 4164 9735!4164 9735[4149 9736 4138 9746!4138 9746[4127 9757 4128
+ 9772!4128 9772|4128 9773"/>
+                        <Edge cubics="!4128 9773(;4127,9794 4144,9811 4165,9812q4128 9773Q4127 9789q4138 9800Q4149 9811q4165 9812);"/>
+                        <Edge cubics="!4165 9812(;4186,9810 4202,9792 4200,9770q4165 9812Q4181 9811q4191 9799Q4202 9786q4200 9770);"/>
+                        <Edge cubics="!4200 9770(;4198,9751 4183,9736 4164,9735q4200 9770Q4199 9756q4188 9746Q4178 9736q4164 9735);"/>
+                        <Edge cubics="!4164 9735(;4144,9736 4127,9752 4128,9772q4164 9735Q4149 9736q4138 9746Q4127 9757q4128 9772);"/>
+                        <Edge cubics="!4128 9772(;4128,9773 4128,9773 4128,9773q4128 9772 4128 9773);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="1.03514099121094" tx="-75.3" ty="-388.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#B36033"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle0="1" edges="
+!4061 9936[4061 9961 4092 9978!4092 9978[4123 9996 4166 9996!4166 9996[4209 9996 4240 9978!4240 9978[4271 9960 4271 9936!4271 9936[4270 9916 4240 9917!4240 9917[4195 9923 4166 9923!4166 9923[4110 9918 4091 9917!4091 9917[4061 9916 4061
+ 9936"/>
+                        <Edge cubics="!4061 9936(;4061,9969 4109,9996 4166,9996q4061 9936Q4061 9961q4092 9978Q4123 9996q4166 9996);"/>
+                        <Edge cubics="!4166 9996(;4224,9996 4271,9968 4271,9936q4166 9996Q4209 9996q4240 9978Q4271 9960q4271 9936);"/>
+                        <Edge cubics="!4271 9936(;4270,9903 4224,9922 4166,9923q4271 9936Q4270 9916q4240 9917Q4195 9923q4166 9923);"/>
+                        <Edge cubics="!4166 9923(;4107,9923 4061,9903 4061,9936q4166 9923Q4110 9918q4091 9917Q4061 9916q4061 9936);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="RWhite_Eye" color="#669900" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":61966,"b":0,"c":0,"d":65536,"tx":157,"ty":0}'>
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="-0.8013916015625" d="0.921875" tx="433.05" ty="-4.65"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="-0.8013916015625" d="0.921875" tx="433.05" ty="-4.65"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#4B1902"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#ACACAC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#1C0900"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="2" edges="
+!8472 1911[7980 1616 7413 1507!7413 1507[6280 1288 5907 2222"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="
+!5907 2222[6280 1217 7413 1436!7413 1436[7980 1545 8472 1911"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!5907 2222[6180 2547 6638 2669!6638 2669[7553 2916 8472 1911"/>
+                        <Edge cubics="!8472 1911(;8472,1911 6506,729 5907,2222q8472 1911Q7980 1616q7413 1507Q6280 1288q5907 2222);"/>
+                        <Edge cubics="!5907 2222(;5907,2222 7003,3518 8472,1911q5907 2222Q6180 2547q6638 2669Q7553 2916q8472 1911);"/>
+                        <Edge cubics="!7413 1436(;6658,1290 6156,1552 5907,2222q7413 1436Q6280 1217p5907 2222);"/>
+                        <Edge cubics="!7413 1436(;7791,1509 8144,1667 8472,1911q7413 1436Q7980 1545p8472 1911);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Mask" color="#FF4F4F" locked="true" autoNamed="false" visible="false" layerType="mask">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#ACACAC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!8472 1911[7980 1616 7413 1507!7413 1507[6280 1288 5907 2222!5907 2222[6180 2547 6638 2669!6638 2669[7553 2916 8472 1911"/>
+                        <Edge cubics="!8472 1911(;8472,1911 6506,729 5907,2222q8472 1911Q7980 1616q7413 1507Q6280 1288q5907 2222);"/>
+                        <Edge cubics="!5907 2222(;5907,2222 7003,3518 8472,1911q5907 2222Q6180 2547q6638 2669Q7553 2916q8472 1911);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Palak" color="#00FFFF" parentLayerIndex="6" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="shape" keyMode="17922" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#16.9D, #5.5E" startPointB="#16.9D, #5.5E" strokeIndex1="0" strokeIndex2="0">
+                    <MorphCurves controlPointA="#1C.0D, #5.5E" anchorPointA="#21.7D, #5.5E" controlPointB="#1C.0D, #5.5E" anchorPointB="#21.7D, #5.5E" isLine="true"/>
+                    <MorphCurves controlPointA="#21.7D, #5.CE" anchorPointA="#21.7D, #6.3D" controlPointB="#21.7D, #6.FF" anchorPointB="#21.7D, #8.9F" isLine="true"/>
+                    <MorphCurves controlPointA="#1C.11, #4.C8" anchorPointA="#16.9D, #6.3D" controlPointB="#1C.05, #D.4C" anchorPointB="#16.9D, #8.9F"/>
+                    <MorphCurves controlPointA="#16.9D, #5.CE" anchorPointA="#16.9D, #5.5E" controlPointB="#16.9D, #6.FF" anchorPointB="#16.9D, #5.5E" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="#16.9D, #5.5E" startPointB="#16.9D, #5.5E" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#1C.0D, #5.5E" anchorPointA="#21.7D, #5.5E" controlPointB="#1C.0D, #5.5E" anchorPointB="#21.7D, #5.5E" isLine="true"/>
+                    <MorphCurves controlPointA="#21.7D, #5.CE" anchorPointA="#21.7D, #6.3D" controlPointB="#21.7D, #6.FF" anchorPointB="#21.7D, #8.9F" isLine="true"/>
+                    <MorphCurves controlPointA="#1C.11, #4.C8" anchorPointA="#16.9D, #6.3D" controlPointB="#1C.05, #D.4C" anchorPointB="#16.9D, #8.9F"/>
+                    <MorphCurves controlPointA="#16.9D, #5.CE" anchorPointA="#16.9D, #5.5E" controlPointB="#16.9D, #6.FF" anchorPointB="#16.9D, #5.5E" isLine="true"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!5789 1374S6|8573 1374!8573 1374|8573 1597!8573 1597[7185 1224 5789 1597!5789 1597|5789 1374"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!5789 1374|8573 1374!8573 1374/8573 2207!8573 2207[7173 3404 5789 2207!5789 2207/5789 1374"/>
+                    <Edge cubics="!8573 1374(;8573,1374 8573,2207 8573,2207q8573 1374 8573 2207);"/>
+                    <Edge cubics="!5789 2207(;5789,2207 5789,1374 5789,1374q5789 2207 5789 1374);"/>
+                    <Edge cubics="!8573 2207(;7640,3005 6712,3005 5789,2207q8573 2207Q7173 3404q5789 2207);"/>
+                    <Edge cubics="!5789 1374(;5789,1374 8573,1374 8573,1374q5789 1374 8573 1374);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="6" tweenType="shape" keyMode="17922" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#16.9D, #5.5E" startPointB="#16.9D, #5.5E" strokeIndex1="0" strokeIndex2="0">
+                    <MorphCurves controlPointA="#1C.0D, #5.5E" anchorPointA="#21.7D, #5.5E" controlPointB="#1C.0D, #5.5E" anchorPointB="#21.7D, #5.5E" isLine="true"/>
+                    <MorphCurves controlPointA="#21.7D, #6.FF" anchorPointA="#21.7D, #8.9F" controlPointB="#21.7D, #5.CE" anchorPointB="#21.7D, #6.3D" isLine="true"/>
+                    <MorphCurves controlPointA="#1C.05, #D.4C" anchorPointA="#16.9D, #8.9F" controlPointB="#1C.11, #4.C8" anchorPointB="#16.9D, #6.3D"/>
+                    <MorphCurves controlPointA="#16.9D, #6.FF" anchorPointA="#16.9D, #5.5E" controlPointB="#16.9D, #5.CE" anchorPointB="#16.9D, #5.5E" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="#16.9D, #5.5E" startPointB="#16.9D, #5.5E" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#1C.0D, #5.5E" anchorPointA="#21.7D, #5.5E" controlPointB="#1C.0D, #5.5E" anchorPointB="#21.7D, #5.5E" isLine="true"/>
+                    <MorphCurves controlPointA="#21.7D, #6.FF" anchorPointA="#21.7D, #8.9F" controlPointB="#21.7D, #5.CE" anchorPointB="#21.7D, #6.3D" isLine="true"/>
+                    <MorphCurves controlPointA="#1C.05, #D.4C" anchorPointA="#16.9D, #8.9F" controlPointB="#1C.11, #4.C8" anchorPointB="#16.9D, #6.3D"/>
+                    <MorphCurves controlPointA="#16.9D, #6.FF" anchorPointA="#16.9D, #5.5E" controlPointB="#16.9D, #5.CE" anchorPointB="#16.9D, #5.5E" isLine="true"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!5789 1374|8573 1374!8573 1374/8573 2207!8573 2207[7173 3404 5789 2207!5789 2207/5789 1374"/>
+                    <Edge cubics="!8573 1374(;8573,1374 8573,2207 8573,2207q8573 1374 8573 2207);"/>
+                    <Edge cubics="!5789 2207(;5789,2207 5789,1374 5789,1374q5789 2207 5789 1374);"/>
+                    <Edge cubics="!8573 2207(;7640,3005 6712,3005 5789,2207q8573 2207Q7173 3404q5789 2207);"/>
+                    <Edge cubics="!5789 1374(;5789,1374 8573,1374 8573,1374q5789 1374 8573 1374);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!5789 1374|8573 1374!8573 1374|8573 1597!8573 1597[7185 1224 5789 1597!5789 1597|5789 1374"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="shape" keyMode="17922" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#16.9D, #5.5E" startPointB="#16.9D, #5.5E" strokeIndex1="0" strokeIndex2="0">
+                    <MorphCurves controlPointA="#1C.0D, #5.5E" anchorPointA="#21.7D, #5.5E" controlPointB="#1C.0D, #5.5E" anchorPointB="#21.7D, #5.5E" isLine="true"/>
+                    <MorphCurves controlPointA="#21.7D, #5.CE" anchorPointA="#21.7D, #6.3D" controlPointB="#21.7D, #6.FF" anchorPointB="#21.7D, #8.9F" isLine="true"/>
+                    <MorphCurves controlPointA="#1C.11, #4.C8" anchorPointA="#16.9D, #6.3D" controlPointB="#1C.05, #D.4C" anchorPointB="#16.9D, #8.9F"/>
+                    <MorphCurves controlPointA="#16.9D, #5.CE" anchorPointA="#16.9D, #5.5E" controlPointB="#16.9D, #6.FF" anchorPointB="#16.9D, #5.5E" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="#16.9D, #5.5E" startPointB="#16.9D, #5.5E" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#1C.0D, #5.5E" anchorPointA="#21.7D, #5.5E" controlPointB="#1C.0D, #5.5E" anchorPointB="#21.7D, #5.5E" isLine="true"/>
+                    <MorphCurves controlPointA="#21.7D, #5.CE" anchorPointA="#21.7D, #6.3D" controlPointB="#21.7D, #6.FF" anchorPointB="#21.7D, #8.9F" isLine="true"/>
+                    <MorphCurves controlPointA="#1C.11, #4.C8" anchorPointA="#16.9D, #6.3D" controlPointB="#1C.05, #D.4C" anchorPointB="#16.9D, #8.9F"/>
+                    <MorphCurves controlPointA="#16.9D, #5.CE" anchorPointA="#16.9D, #5.5E" controlPointB="#16.9D, #6.FF" anchorPointB="#16.9D, #5.5E" isLine="true"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!5789 1374S6|8573 1374!8573 1374|8573 1597!8573 1597[7185 1224 5789 1597!5789 1597|5789 1374"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!5789 1374|8573 1374!8573 1374/8573 2207!8573 2207[7173 3404 5789 2207!5789 2207/5789 1374"/>
+                    <Edge cubics="!8573 1374(;8573,1374 8573,2207 8573,2207q8573 1374 8573 2207);"/>
+                    <Edge cubics="!5789 2207(;5789,2207 5789,1374 5789,1374q5789 2207 5789 1374);"/>
+                    <Edge cubics="!8573 2207(;7640,3005 6712,3005 5789,2207q8573 2207Q7173 3404q5789 2207);"/>
+                    <Edge cubics="!5789 1374(;5789,1374 8573,1374 8573,1374q5789 1374 8573 1374);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="107" duration="6" tweenType="shape" keyMode="17922" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#16.9D, #5.5E" startPointB="#16.9D, #5.5E" strokeIndex1="0" strokeIndex2="0">
+                    <MorphCurves controlPointA="#1C.0D, #5.5E" anchorPointA="#21.7D, #5.5E" controlPointB="#1C.0D, #5.5E" anchorPointB="#21.7D, #5.5E" isLine="true"/>
+                    <MorphCurves controlPointA="#21.7D, #6.FF" anchorPointA="#21.7D, #8.9F" controlPointB="#21.7D, #5.CE" anchorPointB="#21.7D, #6.3D" isLine="true"/>
+                    <MorphCurves controlPointA="#1C.05, #D.4C" anchorPointA="#16.9D, #8.9F" controlPointB="#1C.11, #4.C8" anchorPointB="#16.9D, #6.3D"/>
+                    <MorphCurves controlPointA="#16.9D, #6.FF" anchorPointA="#16.9D, #5.5E" controlPointB="#16.9D, #5.CE" anchorPointB="#16.9D, #5.5E" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="#16.9D, #5.5E" startPointB="#16.9D, #5.5E" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#1C.0D, #5.5E" anchorPointA="#21.7D, #5.5E" controlPointB="#1C.0D, #5.5E" anchorPointB="#21.7D, #5.5E" isLine="true"/>
+                    <MorphCurves controlPointA="#21.7D, #6.FF" anchorPointA="#21.7D, #8.9F" controlPointB="#21.7D, #5.CE" anchorPointB="#21.7D, #6.3D" isLine="true"/>
+                    <MorphCurves controlPointA="#1C.05, #D.4C" anchorPointA="#16.9D, #8.9F" controlPointB="#1C.11, #4.C8" anchorPointB="#16.9D, #6.3D"/>
+                    <MorphCurves controlPointA="#16.9D, #6.FF" anchorPointA="#16.9D, #5.5E" controlPointB="#16.9D, #5.CE" anchorPointB="#16.9D, #5.5E" isLine="true"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!5789 1374|8573 1374!8573 1374/8573 2207!8573 2207[7173 3404 5789 2207!5789 2207/5789 1374"/>
+                    <Edge cubics="!8573 1374(;8573,1374 8573,2207 8573,2207q8573 1374 8573 2207);"/>
+                    <Edge cubics="!5789 2207(;5789,2207 5789,1374 5789,1374q5789 2207 5789 1374);"/>
+                    <Edge cubics="!8573 2207(;7640,3005 6712,3005 5789,2207q8573 2207Q7173 3404q5789 2207);"/>
+                    <Edge cubics="!5789 1374(;5789,1374 8573,1374 8573,1374q5789 1374 8573 1374);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CB8769"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#8B533A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!5789 1374|8573 1374!8573 1374|8573 1597!8573 1597[7185 1224 5789 1597!5789 1597|5789 1374"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Left_Puple" color="#9933CC" parentLayerIndex="6" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="-17.35"/>
+                  </matrix>
+                  <members>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-138.4" ty="-381.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <LinearGradient>
+                            <matrix>
+                              <Matrix a="-0.0011138916015625" b="0.013397216796875" c="-0.0118865966796875" d="-0.0011138916015625" tx="481.8" ty="493.35"/>
+                            </matrix>
+                            <GradientEntry color="#723316" ratio="0"/>
+                            <GradientEntry color="#552210" ratio="1"/>
+                          </LinearGradient>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="
+!10168 9671S2[10167 9892 10015 10046!10015 10046[9864 10201 9652 10198!9652 10198[9440 10196 9290 10039!9290 10039[9140 9881 9141 9661!9141 9661[9143 9440 9294 9285!9294 9285[9445 9131 9658 9133!9658 9133[9871 9135 10020 9293!10020 9293
+[10168 9450 10168 9671"/>
+                        <Edge cubics="!10168 9671(;10166,9965 9935,10202 9652,10198q10168 9671Q10167 9892q10015 10046Q9864 10201q9652 10198);"/>
+                        <Edge cubics="!9652 10198(;9369,10195 9140,9955 9141,9661q9652 10198Q9440 10196q9290 10039Q9140 9881q9141 9661);"/>
+                        <Edge cubics="!9141 9661(;9143,9366 9374,9130 9658,9133q9141 9661Q9143 9440q9294 9285Q9445 9131q9658 9133);"/>
+                        <Edge cubics="!9658 9133(;9942,9136 10168,9376 10168,9671q9658 9133Q9871 9135q10020 9293Q10168 9450q10168 9671);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-138.4" ty="-381.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <LinearGradient>
+                            <matrix>
+                              <Matrix a="-0.0011138916015625" b="0.013397216796875" c="-0.0118865966796875" d="-0.0011138916015625" tx="481.75" ty="493.35"/>
+                            </matrix>
+                            <GradientEntry color="#823919" ratio="0"/>
+                            <GradientEntry color="#672814" ratio="1"/>
+                          </LinearGradient>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="
+!10090 9670[10090 9857 9961 9989!9961 9989[9832 10120 9652 10118!9652 10118[9472 10117 9344 9983!9344 9983[9217 9848 9218 9661!9218 9661[9219 9474 9347 9342!9347 9342[9475 9211 9656 9212!9656 9212[9837 9214 9964 9348!9964 9348[10091 9482
+ 10090 9670"/>
+                        <Edge cubics="!10090 9670(;10090,9920 9892,10121 9652,10118q10090 9670Q10090 9857q9961 9989Q9832 10120q9652 10118);"/>
+                        <Edge cubics="!9652 10118(;9412,10116 9216,9911 9218,9661q9652 10118Q9472 10117q9344 9983Q9217 9848q9218 9661);"/>
+                        <Edge cubics="!9218 9661(;9219,9411 9415,9210 9656,9212q9218 9661Q9219 9474q9347 9342Q9475 9211q9656 9212);"/>
+                        <Edge cubics="!9656 9212(;9898,9215 10091,9419 10090,9670q9656 9212Q9837 9214q9964 9348Q10091 9482q10090 9670);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-138.4" ty="-381.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="
+!9962 9668[9962 9801 9871 9894!9871 9894[9780 9987 9653 9985!9653 9985[9525 9984 9435 9889!9435 9889[9344 9794 9345 9662!9345 9662[9344 9533 9433 9440!9433 9440[9523 9347 9652 9345!9652 9345|9656 9345!9656 9345[9783 9347 9873 9441!9873
+ 9441[9963 9536 9962 9668"/>
+                        <Edge cubics="!9962 9668(;9962,9845 9822,9988 9653,9985q9962 9668Q9962 9801q9871 9894Q9780 9987q9653 9985);"/>
+                        <Edge cubics="!9653 9985(;9483,9983 9344,9839 9345,9662q9653 9985Q9525 9984q9435 9889Q9344 9794q9345 9662);"/>
+                        <Edge cubics="!9345 9662(;9343,9490 9480,9348 9652,9345q9345 9662Q9344 9533q9433 9440Q9523 9347q9652 9345);"/>
+                        <Edge cubics="!9652 9345(;9654,9345 9655,9345 9656,9345q9652 9345 9656 9345);"/>
+                        <Edge cubics="!9656 9345(;9825,9347 9963,9491 9962,9668q9656 9345Q9783 9347q9873 9441Q9963 9536q9962 9668);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-138.4" ty="-381.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="
+!9811 9558[9811 9604 9766 9617!9766 9617[9739 9625 9655 9625!9655 9625[9573 9624 9544 9615!9544 9615[9499 9601 9498 9555!9498 9555[9498 9504 9544 9468!9544 9468[9591 9432 9656 9433!9656 9433[9721 9434 9767 9470!9767 9470[9812 9507 9811
+ 9558"/>
+                        <Edge cubics="!9811 9558(;9811,9627 9742,9625 9655,9625q9811 9558Q9811 9604q9766 9617Q9739 9625q9655 9625);"/>
+                        <Edge cubics="!9655 9625(;9568,9624 9499,9623 9498,9555q9655 9625Q9573 9624q9544 9615Q9499 9601q9498 9555);"/>
+                        <Edge cubics="!9498 9555(;9498,9487 9569,9432 9656,9433q9498 9555Q9498 9504q9544 9468Q9591 9432q9656 9433);"/>
+                        <Edge cubics="!9656 9433(;9743,9434 9812,9490 9811,9558q9656 9433Q9721 9434q9767 9470Q9812 9507q9811 9558);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-138.4" ty="-381.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="
+!9690 9883[9691 9899 9680 9910!9680 9910[9669 9921 9654 9922!9654 9922|9653 9922!9653 9922[9637 9921 9626 9910!9626 9910[9615 9898 9615 9882!9615 9882[9615 9866 9626 9855!9626 9855[9637 9843 9653 9843!9653 9843|9654 9843!9654 9843[9669
+ 9844 9680 9855!9680 9855[9691 9867 9690 9882!9690 9882|9690 9883"/>
+                        <Edge cubics="!9690 9883(;9691,9904 9674,9921 9654,9922q9690 9883Q9691 9899q9680 9910Q9669 9921q9654 9922);"/>
+                        <Edge cubics="!9654 9922(;9653,9922 9653,9922 9653,9922q9654 9922 9653 9922);"/>
+                        <Edge cubics="!9653 9922(;9632,9921 9615,9903 9615,9882q9653 9922Q9637 9921q9626 9910Q9615 9898q9615 9882);"/>
+                        <Edge cubics="!9615 9882(;9615,9861 9632,9843 9653,9843q9615 9882Q9615 9866q9626 9855Q9637 9843q9653 9843);"/>
+                        <Edge cubics="!9653 9843(;9653,9843 9653,9843 9654,9843q9653 9843 9654 9843);"/>
+                        <Edge cubics="!9654 9843(;9674,9844 9691,9862 9690,9882q9654 9843Q9669 9844q9680 9855Q9691 9867q9690 9882);"/>
+                        <Edge cubics="!9690 9882(;9690,9883 9690,9883 9690,9883q9690 9882 9690 9883);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-138.4" ty="-381.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#B36033"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="
+!9757 10048[9757 10073 9726 10090!9726 10090[9695 10108 9652 10108!9652 10108[9609 10108 9578 10089!9578 10089[9547 10071 9547 10045!9547 10045[9548 10025 9578 10026!9578 10026[9597 10027 9652 10033!9652 10033[9682 10033 9727 10028!9727
+ 10028[9757 10027 9757 10048"/>
+                        <Edge cubics="!9757 10048(;9757,10081 9709,10108 9652,10108q9757 10048Q9757 10073q9726 10090Q9695 10108q9652 10108);"/>
+                        <Edge cubics="!9652 10108(;9595,10108 9547,10079 9547,10045q9652 10108Q9609 10108q9578 10089Q9547 10071q9547 10045);"/>
+                        <Edge cubics="!9547 10045(;9548,10012 9594,10032 9652,10033q9547 10045Q9548 10025q9578 10026Q9597 10027q9652 10033);"/>
+                        <Edge cubics="!9652 10033(;9711,10033 9757,10014 9757,10048q9652 10033Q9682 10033q9727 10028Q9757 10027q9757 10048);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="LWhite_Eye" color="#FF0000" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#4B1902"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#ACACAC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#1C0900"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="2" edges="
+!8472 1911[7980 1616 7413 1507!7413 1507[6280 1288 5907 2222"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="
+!5907 2222[6280 1217 7413 1436!7413 1436[7980 1545 8472 1911"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!5907 2222[6180 2547 6638 2669!6638 2669[7553 2916 8472 1911"/>
+                        <Edge cubics="!8472 1911(;8472,1911 6506,729 5907,2222q8472 1911Q7980 1616q7413 1507Q6280 1288q5907 2222);"/>
+                        <Edge cubics="!5907 2222(;5907,2222 7003,3518 8472,1911q5907 2222Q6180 2547q6638 2669Q7553 2916q8472 1911);"/>
+                        <Edge cubics="!8472 1840(;8144,1643 7791,1509 7413,1436q8472 1840Q7980 1545q7413 1436);"/>
+                        <Edge cubics="!7413 1436(;6658,1290 6156,1552 5907,2222q7413 1436Q6280 1217p5907 2222);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

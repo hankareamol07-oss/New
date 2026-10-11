@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Left Leg" itemID="679e0ed2-00001631" symbolType="graphic" lastModified="1738407370" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="Left Leg" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Left_Leg_Lower_Side" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="28" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/foot2 copy 3" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.652999877929688" b="-0.0792236328125" c="-0.0716705322265625" d="0.580856323242188" tx="-18.75" ty="89.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.05" y="-110.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Left_Leg_Upper_Side" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="28" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/leg2 copy 3" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.65606689453125" b="-0.04290771484375" c="-0.0482330322265625" d="0.583709716796875" tx="4.25" ty="-120.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.25" y="-356"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

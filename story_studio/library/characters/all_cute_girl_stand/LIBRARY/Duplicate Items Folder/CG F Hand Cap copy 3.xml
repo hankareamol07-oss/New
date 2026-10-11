@@ -1,0 +1,62 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/CG F Hand Cap copy 3" itemID="64ea41bc-00002608" symbolType="graphic" lastModified="1690402875">
+  <timeline>
+    <DOMTimeline name="CG F Hand Cap copy 3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="-1002.95" ty="-455.45"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="-1002.95" ty="-455.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#393C3C"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#525353"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#1E2020"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!21693 9419[21737 9480 21755 9547!21755 9547[21748 9529 21739 9513!21739 9513[21708 9463 21610 9437!21610 9437[21513 9411 21380 9417!21380 9417[21240 9422 21101 9462!21101 9462[20947 9505 20823 9581!20823 9581[20782 9607 20742 9636"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!20742 9636[20527 9792 20342 10050!20342 10050[20171 10289 20070 10549!20070 10549[20053 10433 20062 10254!20062 10254[20080 9897 20209 9581!20209 9581[20244 9496 20286 9427"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!20286 9427[20387 9267 20540 9195!20540 9195[20603 9165 20684 9146!20684 9146[20740 9132 20832 9118!20832 9118[20926 9104 21038 9111!21038 9111[21162 9119 21277 9151!21277 9151[21559 9230 21693 9419"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!20742 9636[20742 9609 20738 9586!20738 9586[20717 9466 20571 9431!20571 9431[20460 9404 20286 9427"/>
+                        <Edge cubics="!21693 9419(;21723,9461 21743,9504 21755,9547q21693 9419Q21737 9480q21755 9547);"/>
+                        <Edge cubics="!21755 9547(;21751,9535 21746,9524 21739,9513q21755 9547Q21748 9529q21739 9513);"/>
+                        <Edge cubics="!21739 9513(;21656,9377 21170,9369 20823,9581q21739 9513Q21708 9463q21610 9437Q21513 9411q21380 9417Q21240 9422q21101 9462Q20947 9505q20823 9581);"/>
+                        <Edge cubics="!20823 9581(;20796,9598 20769,9616 20742,9636q20823 9581Q20782 9607q20742 9636);"/>
+                        <Edge cubics="!20742 9636(;20443,9853 20198,10220 20070,10549q20742 9636Q20527 9792q20342 10050Q20171 10289q20070 10549);"/>
+                        <Edge cubics="!20070 10549(;20070,10549 20002,10086 20209,9581q20070 10549Q20053 10433q20062 10254Q20080 9897q20209 9581);"/>
+                        <Edge cubics="!20209 9581(;20233,9522 20259,9471 20286,9427q20209 9581Q20244 9496q20286 9427);"/>
+                        <Edge cubics="!20286 9427(;20435,9189 20632,9148 20832,9118q20286 9427Q20387 9267q20540 9195Q20603 9165q20684 9146Q20740 9132q20832 9118);"/>
+                        <Edge cubics="!20832 9118(;21067,9083 21496,9141 21693,9419q20832 9118Q20926 9104q21038 9111Q21162 9119q21277 9151Q21559 9230q21693 9419);"/>
+                        <Edge cubics="!20742 9636(;20742,9619 20741,9603 20738,9586q20742 9636Q20742 9609q20738 9586);"/>
+                        <Edge cubics="!20738 9586(;20707,9409 20473,9402 20286,9427q20738 9586Q20717 9466q20571 9431Q20460 9404q20286 9427);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,50 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Face" itemID="60a2055d-0000013b" symbolType="graphic" lastModified="1621239546">
+  <timeline>
+    <DOMTimeline name="Face" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_3" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="64" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/ajdadj copy 4" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="1.65414428710938" d="1.65414428710938" tx="571.75" ty="649.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="32" y="14.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" duration="64" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Eyes" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="729.25" y="410.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="64" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="hair.png">
+                  <matrix>
+                    <Matrix a="0.786102294921875" d="0.754257202148438" tx="211" ty="551"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

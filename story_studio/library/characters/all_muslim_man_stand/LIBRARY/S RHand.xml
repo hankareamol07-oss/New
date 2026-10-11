@@ -1,0 +1,47 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="S RHand" itemID="6389c097-0000028f" symbolType="graphic" lastModified="1671479905">
+  <timeline>
+    <DOMTimeline name="S RHand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="-651.1" ty="-105.8"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#333333"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#0B0B0B"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!17719 2693|17616 2765!17616 2765[17490 2875 17373 3061!17373 3061[17000 3656 16862 4793!16862 4793[16756 5668 16515 6691!16515 6691[16429 7053 16409 7209!16409 7209[16381 7435 16422 7613!16422 7613[16465 7801 16677 7897!16677 7897[16874
+ 7987 17138 7964!17138 7964[17408 7941 17621 7808!17621 7808[17858 7661 17943 7423!17943 7423[18148 6826 18343 6153!18343 6153[18732 4808 18682 4433!18682 4433[18632 4058 18552 3758!18552 3758|18482 3533"/>
+                    <Edge fillStyle0="1" edges="
+!18482 3533[#46D8.89 #9CA.D6 17719 2693"/>
+                    <Edge cubics="!17719 2693(;17719,2693 17082,2973 16862,4793q17719 2693Q17719 2693q17616 2765Q17490 2875q17373 3061Q17000 3656q16862 4793);"/>
+                    <Edge cubics="!16862 4793(;16642,6613 16302,7093 16422,7613q16862 4793Q16756 5668q16515 6691Q16429 7053q16409 7209Q16381 7435q16422 7613);"/>
+                    <Edge cubics="!16422 7613(;16542,8133 17704,8093 17943,7423q16422 7613Q16465 7801q16677 7897Q16874 7987q17138 7964Q17408 7941q17621 7808Q17858 7661q17943 7423);"/>
+                    <Edge cubics="!17943 7423(;17943,7423 18762,5033 18682,4433q17943 7423Q18148 6826q18343 6153Q18732 4808q18682 4433);"/>
+                    <Edge cubics="!18682 4433(;18602,3833 18482,3533 18482,3533q18682 4433Q18632 4058q18552 3758Q18482 3533q18482 3533);"/>
+                    <Edge cubics="!18482 3533(;18482,3533 17719,2693 17719,2693q18482 3533 17719 2693);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

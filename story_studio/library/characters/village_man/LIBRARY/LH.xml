@@ -1,0 +1,52 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="LH" itemID="67470f52-0000091d" symbolType="graphic" lastModified="1732791075">
+  <timeline>
+    <DOMTimeline name="LH" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#B6EBFF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.1">
+                            <fill>
+                              <SolidColor color="#6DAAC2"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!247 714[259 639 276 386!276 386[293 132 277 -395!277 -395[260 -923 87 -1004!87 -1004[-5 -1048 -98 -981!-98 -981[-112 -975 -132 -946!-132 -946[-171 -891 -198 -788!-198 -788[-284 -455 -258 -41!-258 -41[-233 372 -253 532!-253 532[#FFFEF9.91
+ #25C.0B -275 686.5!-275 686.5[-284 #2D0.3F -284 758!-284 758[-284 867 -206 944!-206 944[-129 1022 -20 1022!-20 1022[89 1022 167 944!167 944[244 867 244 758!244 758[244 #2DF.4C 240.5 714"/>
+                        <Edge fillStyle0="1" edges="
+!240.5 714|247 714"/>
+                        <Edge cubics="!-98 -981(;-107,-977 -119,-965 -132,-946q-98 -981Q-112 -975q-132 -946);"/>
+                        <Edge cubics="!-132 -946(;-158,-909 -180,-857 -198,-788q-132 -946Q-171 -891q-198 -788);"/>
+                        <Edge cubics="!-258 -41(;-241,234 -240,425 -253,532q-258 -41Q-233 372q-253 532);"/>
+                        <Edge cubics="!-198 -788(;-255,-566 -275,-317 -258,-41q-198 -788Q-284 -455q-258 -41);"/>
+                        <Edge cubics="!87 -1004(;26,-1033 -36,-1026 -98,-981q87 -1004Q-5 -1048q-98 -981);"/>
+                        <Edge cubics="!-253 532(;-260,588 -269,649 -279,714q-253 532 -279 714);"/>
+                        <Edge cubics="!276 386(;287,217 288,-44 277,-395q276 386Q293 132q277 -395);"/>
+                        <Edge cubics="!277 -395(;266,-747 202,-950 87,-1004q277 -395Q260 -923q87 -1004);"/>
+                        <Edge cubics="!-279 714(;-279,714 247,714 247,714q-279 714 247 714);"/>
+                        <Edge cubics="!247 714(;255,664 265,555 276,386q247 714Q259 639q276 386);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

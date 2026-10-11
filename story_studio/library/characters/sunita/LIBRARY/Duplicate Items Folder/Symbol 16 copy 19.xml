@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Symbol 16 copy 19" itemID="5f630f99-00000f52" symbolType="graphic" lastModified="1501157657">
+  <timeline>
+    <DOMTimeline name="Symbol 16 copy 19" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <transformationPoint>
+                    <Point y="16.65"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <transformationPoint>
+                        <Point y="16.65"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#282828"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#1B1B1B"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor color="#1B1B1B"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!-7 -66[-8 -65 -10 -62!-10 -62[-46 -28 -90 27!-90 27[-132 82 -148 151!-148 151[-163 218 -158 306!-158 306[-151 425 -84 514!-84 514[-21 593 39 593!39 593[117 593 165 525!165 525[225 439 215 269!215 269[210 175 176 76"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!176 76[243 206 250 338!250 338[259 491 193 620!193 620[130 743 54 743!54 743[-61 743 -156 597!-156 597[-242 463 -251 310!-251 310[-260 157 -151 36!-151 36[-80 -44 -7 -66"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!176 76[170 68 166 58!166 58[109 -45 50 -76!50 -76[22 -76 -7 -66"/>
+                        <Edge cubics="!250 338(;263,550 150,743 54,743q250 338Q259 491q193 620Q130 743q54 743);"/>
+                        <Edge cubics="!54 743(54,743;-108,743 -240,499 -251,310q54 743Q-61 743q-156 597Q-242 463q-251 310);"/>
+                        <Edge cubics="!-151 36(;-105,-18 -56,-51 -7,-66q-151 36Q-80 -44q-7 -66);"/>
+                        <Edge cubics="!-7 -66(;11,-74 32,-76 50,-76q-7 -66Q22 -76q50 -76);"/>
+                        <Edge cubics="!50 -76(;89,-56 128,-11 166,58q50 -76Q109 -45q166 58);"/>
+                        <Edge cubics="!-251 310(;-257,209 -225,118 -151,36q-251 310Q-260 157q-151 36);"/>
+                        <Edge cubics="!-90 27(;-145,103 -164,191 -158,306q-90 27Q-132 82q-148 151Q-163 218q-158 306);"/>
+                        <Edge cubics="!-158 306(;-148,475 -35,593 39,593q-158 306Q-151 425q-84 514Q-21 593q39 593);"/>
+                        <Edge cubics="!39 593(39,593;124,593 230,518 215,269q39 593Q117 593q165 525Q225 439q215 269);"/>
+                        <Edge cubics="!166 58(166,58;169,65 173,71 176,76q166 58Q170 68q176 76);"/>
+                        <Edge cubics="!-7 -66(-7,-66;-7,-65 -9,-64 -10,-62q-7 -66Q-8 -65q-10 -62);"/>
+                        <Edge cubics="!-10 -62(;-34,-39 -61,-10 -90,27q-10 -62Q-46 -28q-90 27);"/>
+                        <Edge cubics="!215 269(215,269;212,206 198,143 176,76q215 269Q210 175q176 76);"/>
+                        <Edge cubics="!176 76(;220,164 245,249 250,338q176 76Q243 206q250 338);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

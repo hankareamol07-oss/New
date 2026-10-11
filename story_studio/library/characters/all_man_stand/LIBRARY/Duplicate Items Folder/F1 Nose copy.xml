@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/F1 Nose copy" itemID="64ea43ec-0000712d" symbolType="graphic" lastModified="1669533309">
+  <timeline>
+    <DOMTimeline name="F1 Nose copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#DF8A68"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#99553A"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!46 92|88 202!88 202[#92.85 #15F.EA 88.5 518!88.5 518[#1E.AF #2AB.FE 59 763!59 763[#35.01 #3D2.E9 36.5 1172.5!36.5 1172.5[#14.02 #556.47 151 1338!151 1338[#11A.01 #51D.AF 303.5 1267!303.5 1267[#13C.BE #4D8.57 354 1268!354 1268[#179.5
+ #4FD.CB 400 1268!400 1268[442 1237 439 1212!439 1212[433 1162 352 1144"/>
+                    <Edge fillStyle1="1" edges="
+!46 92[273 -324 352 1144"/>
+                    <Edge cubics="!46 92(;197,-185 299,165 352,1144q46 92Q273 -324q352 1144);"/>
+                    <Edge cubics="!46 92(;46,92 88,202 88,202q46 92 88 202);"/>
+                    <Edge cubics="!88 202(;127,302 128,407 89,518q88 202Q147 352q89 518);"/>
+                    <Edge cubics="!89 518(;50,629 40,710 59,763q89 518Q31 684q59 763);"/>
+                    <Edge cubics="!59 763(;55,907 33,1055 -6,1206q59 763Q53 979q-6 1206);"/>
+                    <Edge cubics="!439 1212(;435,1179 406,1156 352,1144q439 1212Q433 1162q352 1144);"/>
+                    <Edge cubics="!295 1273(;315,1240 352,1243 407,1280q295 1273Q325 1224q407 1280);"/>
+                    <Edge cubics="!407 1280(;430,1251 441,1229 439,1212q407 1280Q442 1237q439 1212);"/>
+                    <Edge cubics="!101 1370(;210,1337 274,1305 295,1273q101 1370Q264 1321q295 1273);"/>
+                    <Edge cubics="!-6 1206(;-43,1348 -8,1403 101,1370q-6 1206Q-62 1419q101 1370);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

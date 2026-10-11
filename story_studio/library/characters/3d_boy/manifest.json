@@ -1,0 +1,85 @@
+{
+ "name": "3d_boy",
+ "label": "Boy",
+ "gender": "male",
+ "pack": "3D MEN Character",
+ "rig": {
+  "root": "Duplicate Items Folder/Boy",
+  "frame": 0,
+  "bounds": [
+   292.0,
+   -8.0,
+   688.0,
+   1088.0
+  ],
+  "faces": "left",
+  "head": "Layer_1",
+  "neck": [
+   505.75,
+   232.24
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth copy 14": {
+    "closed": 9,
+    "mid": 6,
+    "open": 3
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyes copy 5": {
+    "open": 0,
+    "blink": [
+     8,
+     9,
+     10,
+     11,
+     12,
+     13
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Arm2",
+   "fore": "hand2",
+   "shoulder": [
+    434.25,
+    310.38
+   ],
+   "elbow": [
+    405.72,
+    457.58
+   ]
+  },
+  "arm_back": {
+   "upper": "Arm1",
+   "fore": "hand1",
+   "shoulder": [
+    618.25,
+    300.72
+   ],
+   "elbow": [
+    645.57,
+    459.6
+   ]
+  },
+  "legs": [
+   "leftleg",
+   "rightleg"
+  ],
+  "hips": {
+   "leftleg": [
+    448.25,
+    534.5
+   ],
+   "rightleg": [
+    545.75,
+    530.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Layer_2"
+  ]
+ },
+ "root": "Duplicate Items Folder/Boy"
+}

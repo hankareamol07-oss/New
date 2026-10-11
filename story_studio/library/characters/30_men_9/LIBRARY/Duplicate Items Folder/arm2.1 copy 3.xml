@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/arm2.1 copy 3" itemID="6517f42a-00000981" symbolType="graphic" lastModified="1701018685">
+  <timeline>
+    <DOMTimeline name="arm2.1 copy 3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#DF956D"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#854F3A"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-707 2192S6[#FFFD51.A6 #2A6.F5 -761 -699!-761 -699[#FFFC81.7F #FFFB49.31 -847.5 -1880!-847.5 -1880[#FFFCDF.72 #FFF606.AA -508 -2893!-508 -2893[#243.C7 #FFF446.E7 730.5 -1323!730.5 -1323[#371.2B #163.12 850 1261.5!850 1261.5[#332.F1 #877.F9
+ 819 2192!819 2192[819 2508 595 2731!595 2731[372 2955 56 2955!56 2955[-259 2955 -484 2731!-484 2731[-707 2508 -707 2192"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,98 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="LH2" itemID="67470f4c-00000918" symbolType="graphic" lastModified="1732791202">
+  <timeline>
+    <DOMTimeline name="LH2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="40" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#B6EBFF"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#A7DDF1"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#6DAAC2"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                    <StrokeStyle index="2">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#6DAAC2"/>
+                        </fill>
+                        <VariablePointWidth>
+                          <WidthMarker position="0" left="0" right="0" type="corner"/>
+                          <WidthMarker position="0.5" left="0.5" right="0.5"/>
+                          <WidthMarker position="1" left="0" right="0" type="corner"/>
+                        </VariablePointWidth>
+                      </SolidStroke>
+                    </StrokeStyle>
+                    <StrokeStyle index="3">
+                      <SolidStroke scaleMode="normal" weight="0.1">
+                        <fill>
+                          <SolidColor color="#6DAAC2"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!459 -690[359 -576 294 -397!294 -397[163 -40 334 283"/>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="!458.5 -687[#1CA.D9 #FFFD4F.7B 459 -690"/>
+                    <Edge fillStyle0="2" strokeStyle="2" edges="!457 -668.5[#1C9.C6 #FFFD5A.1F 458.5 -687"/>
+                    <Edge fillStyle0="1" strokeStyle="3" edges="!-20 -1248[-35 -1160 -54 -1060!-54 -1060|-66 -1005!-66 -1005[-87 -905 -121 -712!-121 -712[-156 -519 -193 -154!-193 -154|-235 63!-235 63[-285 291 -314 342!-314 342|-260 385!-260 385[-190 435 -118 469!-118 469[115 578 297 486!297 486[#13C.2C
+ #184.D7 334 283"/>
+                    <Edge fillStyle0="2" strokeStyle="3" edges="
+!334 283[#173.46 #3F.32 403 -194!403 -194[#1B2.9F #FFFE34.66 455 -650!455 -650|457 -668.5"/>
+                    <Edge fillStyle0="1" strokeStyle="3" edges="
+!459 -690[490 -1006 506 -1248"/>
+                    <Edge fillStyle0="1" edges="
+!506 -1248|-20 -1248"/>
+                    <Edge cubics="!-193 -154(;-193,-154 -267,260 -314,342q-193 -154Q-193 -154q-235 63Q-285 291q-314 342);"/>
+                    <Edge cubics="!-314 342(;-314,342 6,634 297,486q-314 342Q-314 342q-260 385Q-190 435q-118 469Q115 578q297 486);"/>
+                    <Edge cubics="!297 486(;309,424 321,359 334,283q297 486 334 283);"/>
+                    <Edge cubics="!334 283(;358,143 381,-19 403,-194q334 283Q371 63q403 -194);"/>
+                    <Edge cubics="!-66 -1005(;-80,-938 -98,-841 -121,-712q-66 -1005Q-87 -905q-121 -712);"/>
+                    <Edge cubics="!-54 -1060(;-54,-1060 -66,-1005 -66,-1005q-54 -1060 -66 -1005);"/>
+                    <Edge cubics="!-121 -712(;-144,-583 -168,-397 -193,-154q-121 -712Q-156 -519q-193 -154);"/>
+                    <Edge cubics="!-20 -1248(;-30,-1188 -41,-1126 -54,-1060q-20 -1248 -54 -1060);"/>
+                    <Edge cubics="!459 -690(;479,-891 495,-1077 506,-1248q459 -690Q490 -1006q506 -1248);"/>
+                    <Edge cubics="!-20 -1248(;-20,-1248 506,-1248 506,-1248q-20 -1248 506 -1248);"/>
+                    <Edge cubics="!459 -687(;459,-688 459,-689 459,-690q459 -687Q459 -689q459 -690);"/>
+                    <Edge cubics="!457 -668(;458,-675 458,-681 459,-687q457 -668Q458 -678q459 -687);"/>
+                    <Edge cubics="!455 -650(;455,-650 457,-668 457,-668q455 -650 457 -668);"/>
+                    <Edge cubics="!403 -194(;424,-371 442,-523 455,-650q403 -194Q435 -460q455 -650);"/>
+                    <Edge cubics="!459 -690(;459,-690 60,-234 334,283q459 -690Q359 -576q294 -397Q163 -40q334 283);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="40" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HAND" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-7.55" ty="45.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

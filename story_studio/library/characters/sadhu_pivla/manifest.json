@@ -1,0 +1,93 @@
+{
+ "name": "sadhu_pivla",
+ "label": "साधू (पिवळा)",
+ "gender": "male",
+ "pack": "2D Premium Characters",
+ "rig": {
+  "root": "Sadhu",
+  "frame": 0,
+  "bounds": [
+   8.0,
+   -8.0,
+   416.0,
+   1084.0
+  ],
+  "faces": "left",
+  "head": "Head",
+  "neck": [
+   216.25,
+   291.14
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth 2 copy 18": {
+    "closed": 0,
+    "mid": 8,
+    "open": 6
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/EYES copy": {
+    "open": 0,
+    "blink": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ]
+   },
+   "Duplicate Items Folder/man eyes": {
+    "open": 0,
+    "blink": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "dhoti",
+   "fore": null,
+   "shoulder": [
+    201.5,
+    474.0
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "Larm",
+   "fore": "Lhand1",
+   "shoulder": [
+    357.25,
+    241.48
+   ],
+   "elbow": [
+    381.45,
+    412.48
+   ]
+  },
+  "legs": [
+   "Rleg",
+   "Lleg"
+  ],
+  "hips": {
+   "Rleg": [
+    177.5,
+    809.5
+   ],
+   "Lleg": [
+    248.75,
+    790.5
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Sadhu"
+}

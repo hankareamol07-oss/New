@@ -1,0 +1,78 @@
+{
+ "name": "30_king_copy_5",
+ "label": "राजा 3",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/king copy 5",
+  "frame": 0,
+  "bounds": [
+   -428.0,
+   -464.0,
+   184.0,
+   732.0
+  ],
+  "faces": "left",
+  "head": "Face",
+  "neck": [
+   -59.0,
+   -149.32
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 26": {
+    "closed": 0,
+    "mid": 20,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 38": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "Arm1",
+   "fore": "Hand1",
+   "shoulder": [
+    -138.5,
+    -83.0
+   ],
+   "elbow": [
+    -169.52,
+    87.08
+   ]
+  },
+  "arm_back": {
+   "upper": "Arm2",
+   "fore": "Hand2",
+   "shoulder": [
+    88.25,
+    -89.5
+   ],
+   "elbow": [
+    100.2,
+    66.65
+   ]
+  },
+  "legs": [
+   "foot1",
+   "Foot2"
+  ],
+  "hips": {
+   "foot1": [
+    -280.0,
+    344.0
+   ],
+   "Foot2": [
+    -176.75,
+    376.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/king copy 5"
+}

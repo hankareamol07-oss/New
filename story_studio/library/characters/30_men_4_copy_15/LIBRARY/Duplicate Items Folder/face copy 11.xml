@@ -1,0 +1,165 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/face copy 11" itemID="6565b966-00005b45" symbolType="graphic" lastModified="1701061924" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="face copy 11" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_10" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="1641" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix tx="10.4" ty="13.55"/>
+                  </matrix>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#B3643E"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!-8221 -5773S4[-8199 -5576 -8179 -5406!-8179 -5406[-8098 -4690 -8280 -3969!-8280 -3969[-8483 -3210 -8851 -2741!-8851 -2741[-9273 -2286 -8959 -1935!-8959 -1935[-8620 -1690 -8252 -1819!-8252 -1819[-8197 -1775 -8147 -1725!-8147 -1725[-7991
+ -1563 -7758 -1723!-7758 -1723[-7685 -1773 -7605 -1804!-8527 -1960[-8378 -1915 -8252 -1819!-6731 -2496[-6464 -1986 -6790 -1757!-6790 -1757[-7262 -1506 -7605 -1804!-7605 -1804[-7422 -1873 -7206 -1841"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_9" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" duration="1641" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Mouth copy 23" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.97711181640625" b="0.0132904052734375" c="-0.0132904052734375" d="0.97711181640625" tx="-452.6" ty="-71.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="77.65" y="58.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_8" color="#FF4F4F">
+          <frames>
+            <DOMFrame index="0" duration="1641" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/x" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="4.22998046875" b="0.256759643554688" c="-0.276519775390625" d="4.55528259277344" tx="-326.2" ty="-255.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.05" y="0.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Ear_1" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1641" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="-1.67399597167969" b="-0.0796051025390625" c="-0.0796051025390625" d="1.67399597167969" tx="1254.9" ty="-1064.05"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix a="-1.67399597167969" b="-0.0796051025390625" c="-0.0796051025390625" d="1.67399597167969" tx="1254.9" ty="-1064.05"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#F3A173"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B3643E"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!14033 10036S7[14172 10066 14286 10154!14286 10154[13741 10870 14329 11485!14286 10154[14535 10348 14663 10823"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!15148 11113S5[14888 10416 14582 9855!14582 9855[14275 9293 13936 9675!13936 9675[13380 10579 14077 11718!14077 11718[14352 12135 14694 12329!14694 12329[14859 12412 14984 12407"/>
+                        <Edge fillStyle0="1" edges="
+!14984 12407S1[15129 12371 15217 12210!15217 12210|15217 12209!15217 12209[15552 11612 15148 11113"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Hair" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1641" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="-1.67399597167969" b="-0.0796051025390625" c="-0.0796051025390625" d="1.67399597167969" tx="1254.9" ty="-1064.05"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix a="-1.67399597167969" b="-0.0796051025390625" c="-0.0796051025390625" d="1.67399597167969" tx="1254.9" ty="-1064.05"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#140100"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#0E0100"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!15242 8941S5[15547 8144 16385 7932!16385 7932[17223 7720 17969 7334!17969 7334[17399 7883 16705 8227!16705 8227[18235 8156 19607 7038!19607 7038[19007 7887 18116 8529!18116 8529[19587 8195 20495 7093!20495 7093[20430 7947 20873 8283
+!20873 8283[20962 8517 21167 8841!21167 8841[22302 7339 21195 5478!21195 5478[20119 3673 16985 4140!16985 4140[13719 4556 13234 7247!13234 7247[12748 9938 14098 11751!14098 11751[13607 10625 15250 10764!15250 10764[14973 9647 15242 8941"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!15242 8941S7[13993 8897 13356 8894"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Face" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1641" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/face inside copy" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-1.67399597167969" b="-0.0796051025390625" c="-0.0796051025390625" d="1.67399597167969" tx="-260.65" ty="-237.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,49 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/dhoti cover copy 2" itemID="650ac9c9-000009f8" symbolType="graphic" lastModified="1700930380">
+  <timeline>
+    <DOMTimeline name="dhoti cover copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-941.05" ty="-141.2"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-941.05" ty="-141.2"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#87B8C5"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#5B8691"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!15165 2551S6[#3A42.4E #837.4E 15165 1854!15165 1854[#4860.24 #B5F.8B 22491 1946!22491 1946[#585B.2D #7E5.C 22614 2198!22614 2198[#5851.03 #92D.A2 22510 2422!22510 2422[#5782.2E #9D1.E9 22459 2589!22459 2589[#5828.67 #A85.94 22512 2829
+!22512 2829[#57B8.C3 #B7E.9C 22537 2996.5!22537 2996.5[#5859.03 #BEA.82 22594 3149!22594 3149[#582C.4A #CB0.C9 22495 3268!22495 3268[#4B49.96 #10E6.61 15325 3256!15325 3256[#3B8C.A2 #CA5.0F 15166 3234!15166 3234[#3AE2.6 #C9C.29 15050
+ 3148!15050 3148[#3A89.9A #B8A.34 15121 2828!15121 2828[#3ACB.73 #A86.A4 15165 2551"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!15799 3047S7[#4A3E.BE #DD7.76 21994 3158!15165 2551[#4765.7 #C74.E9 20708 2804"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

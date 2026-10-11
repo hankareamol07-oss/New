@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Bloj" itemID="6381ddf2-0000016f" lastModified="1672602249">
+  <timeline>
+    <DOMTimeline name="Bloj" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#6D3A00"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#2C1700"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!1887 2809|1320 0!1320 0|0 560!0 560|270 1343!270 1343[573 2177 842 2809!842 2809|1887 2809"/>
+                    <Edge cubics="!1320 0(;1320,0 0,560 0,560q1320 0 0 560);"/>
+                    <Edge cubics="!0 560(;0,560 270,1343 270,1343q0 560 270 1343);"/>
+                    <Edge cubics="!1887 2809(;1887,2809 1320,0 1320,0q1887 2809 1320 0);"/>
+                    <Edge cubics="!270 1343(;472,1899 663,2388 842,2809q270 1343Q573 2177p842 2809);"/>
+                    <Edge cubics="!1887 2809(;1887,2809 842,2809 842,2809q1887 2809 842 2809);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

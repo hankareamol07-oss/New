@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/leg middle part 2" itemID="6565b976-00005bfa" symbolType="graphic" lastModified="1696094531">
+  <timeline>
+    <DOMTimeline name="leg middle part 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#414037"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#1E1D14"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!-1705 -4181S2|1704 -4181!1704 -4181[#6A5.EA #FFEFCC.12 1700 -4115!1700 -4115[#6A3.CF -4112 1699.5 -4109!1699.5 -4109|1696 -4109!1696 -4109|1696 -4106!1696 -4106|1699.5 -4106"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1699.5 -4106S6[#647.14 #FFF5AA.DE 1532 -1440!1532 -1440[1398 682 1412 2665!1412 2665[1413 2700 1413 2735!1413 2735|1413 2736!1413 2736[1413 3335 990 3759!990 3759[566 4182 -33 4182!-33 4182[-632 4182 -1056 3759!-1056 3759[-1479 3335
+ -1479 2736!-1479 2736|-1479 2735!-1479 2735[-1479 2685 -1476 2636!-1476 2636|-1476 934!-1476 934[-1690 -1595 -1705 -4181"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

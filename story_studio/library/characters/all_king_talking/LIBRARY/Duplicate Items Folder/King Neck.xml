@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/King Neck" itemID="63d288b9-00000874" lastModified="1661532159">
+  <timeline>
+    <DOMTimeline name="King Neck" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF7C3E"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#B23900"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!593 1176[#255.6D #490.6E 603 1159!603 1159[#26C.F1 #468.BC 660 998.5!660 998.5[#2BB.08 #364.11 720 756!720 756|734 661!734 661|734 341!734 341[#2DF.5A #FFFEA6.1D 1108 -411.5!1108 -411.5[#5C8.B2 #FFFE22.E1 2487.5 -796!2487.5 -796[#DA6.0F
+ #FFFBA5.05 3968 -785.5!3968 -785.5[#115A.05 #FFFE37.FF 4373 0!4373 0|4307 422!4307 422[4245 887 4266 1087!4266 1087[#10C1.81 #4B0.87 4303.5 1304"/>
+                    <Edge fillStyle1="1" edges="
+!4303.5 1304[#1133.6B #7F2.2 4033 2250!4033 2250[#FA5.9B #8E1.AE 3978 2297!3978 2297[3422 2764 2823 2974!2823 2974[2301 3155 1776 3131!1776 3131[#37C.1D #C12.E1 486.5 2538!486.5 2538[#50.A6 #7C1.5C 577 1200!577 1200[#246.86 #4A8.B7 593
+ 1176"/>
+                    <Edge cubics="!4765 1443(;4765,1443 4722,1510 4638,1615q4765 1443Q4722 1510q4638 1615);"/>
+                    <Edge cubics="!4638 1615(;4518,1768 4312,2006 4034,2249q4638 1615Q4367 1958q4034 2249);"/>
+                    <Edge cubics="!4034 2249(;3718,2523 3309,2804 2823,2974q4034 2249 3978 2297Q3422 2764q2823 2974);"/>
+                    <Edge cubics="!2823 2974(;2506,3084 2156,3148 1776,3131q2823 2974Q2301 3155q1776 3131);"/>
+                    <Edge cubics="!1776 3131(;439,3069 88,2144 16,1634q1776 3131Q892 3091q422 2552Q93 2173q16 1634);"/>
+                    <Edge cubics="!16 1634(;-10,1452 0,1326 12,1305q16 1634Q0 1512q0 1409Q0 1324q12 1305);"/>
+                    <Edge cubics="!12 1305(;59,1231 458,1219 575,1135q12 1305Q36 1266q267 1223Q517 1176q575 1135);"/>
+                    <Edge cubics="!575 1135(;617,1104 648,1033 672,954q575 1135Q629 1095q672 954);"/>
+                    <Edge cubics="!4373 0(;4373,0 4230,766 4266,1087q4373 0Q4373 0q4307 422Q4245 887q4266 1087);"/>
+                    <Edge cubics="!4266 1087(;4266,1087 4564,1326 4765,1443q4266 1087Q4266 1087q4440 1221Q4641 1369q4765 1443);"/>
+                    <Edge cubics="!1244 -411(;1402,-455 1817,-583 2488,-796q1244 -411Q1481 -477q2488 -796);"/>
+                    <Edge cubics="!2488 -796(;3159,-1009 3652,-1005 3968,-785q2488 -796Q3494 -1115q3968 -785);"/>
+                    <Edge cubics="!672 954(;690,897 706,831 720,756q672 954Q699 868q720 756);"/>
+                    <Edge cubics="!734 661(;734,661 734,341 734,341q734 661 734 341);"/>
+                    <Edge cubics="!720 756(;720,756 734,661 734,661q720 756 734 661);"/>
+                    <Edge cubics="!3968 -785(;4284,-566 4419,-304 4373,0q3968 -785Q4442 -456q4373 0);"/>
+                    <Edge cubics="!734 341(;916,-117 1086,-368 1244,-411q734 341Q1007 -346q1244 -411);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

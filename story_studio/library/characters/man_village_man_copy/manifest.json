@@ -1,0 +1,68 @@
+{
+ "name": "man_village_man_copy",
+ "label": "Village Man copy",
+ "gender": "male",
+ "pack": "Man Village",
+ "rig": {
+  "root": "Duplicate Items Folder/Village Man copy",
+  "frame": 0,
+  "bounds": [
+   -80.0,
+   -320.0,
+   32.0,
+   -148.0
+  ],
+  "faces": "left",
+  "head": "Face",
+  "neck": [
+   -24.0,
+   -280.36
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Lips Sync With Joulinee copy": {
+    "closed": 0,
+    "mid": 0,
+    "open": 0
+   },
+   "Duplicate Items Folder/Lips Sync With Jounline copy": {
+    "closed": 0,
+    "mid": 12,
+    "open": 24
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyes copy": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Left_Arm",
+   "fore": null,
+   "shoulder": [
+    -40.25,
+    -275.5
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "Right_Arm",
+   "fore": null,
+   "shoulder": [
+    1.75,
+    -275.0
+   ],
+   "elbow": null
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/Village Man copy"
+}

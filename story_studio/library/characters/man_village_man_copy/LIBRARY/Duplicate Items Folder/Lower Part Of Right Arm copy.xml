@@ -1,0 +1,77 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Lower Part Of Right Arm copy" itemID="679e0e78-00001483" symbolType="graphic" lastModified="1738398136">
+  <timeline>
+    <DOMTimeline name="Lower Part Of Right Arm copy" currentFrame="6" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Lower_Side_Of_Right_Arm" color="#00FFFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#8EC74B"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#0BB7C7"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#8EB238"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#0B9FB8"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!1386 3048|1126 -3134!1126 -3134[1112 -3410 1034 -3711"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="2" edges="!-875 3188[374 3495 1386 3048"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="!1386 3048[1468 3245 1416 3408!1416 3408[407 3869 -875 3628!-875 3628[-934 3332 -875 3188"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-1435 -2713[-1294 98 -875 3188"/>
+                        <Edge fillStyle1="1" edges="!-1435 -2713|1034 -3711"/>
+                        <Edge cubics="!-1435 -2713(;-1341,-839 -1154,1128 -875,3188q-1435 -2713Q-1294 98q-875 3188);"/>
+                        <Edge cubics="!-875 3188(;-42,3393 711,3346 1386,3048q-875 3188Q374 3495q1386 3048);"/>
+                        <Edge cubics="!1386 3048(;1386,3048 1126,-3134 1126,-3134q1386 3048 1126 -3134);"/>
+                        <Edge cubics="!1416 3408(;1451,3299 1441,3179 1386,3048q1416 3408Q1468 3245q1386 3048);"/>
+                        <Edge cubics="!-875 3188(;-914,3284 -914,3431 -875,3628q-875 3188Q-934 3332q-875 3628);"/>
+                        <Edge cubics="!-875 3628(;-20,3789 743,3715 1416,3408q-875 3628Q407 3869q1416 3408);"/>
+                        <Edge cubics="!1126 -3134(;1117,-3318 1086,-3510 1034,-3711q1126 -3134Q1112 -3410q1034 -3711);"/>
+                        <Edge cubics="!-1435 -2713(;-1435,-2713 1034,-3711 1034,-3711q-1435 -2713 1034 -3711);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Right_HaND" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right HaND copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-24.75" ty="258.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

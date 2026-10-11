@@ -1,0 +1,107 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Eyebrow copy 14" itemID="6565aeec-00003be8" symbolType="graphic" lastModified="1700922388">
+  <timeline>
+    <DOMTimeline name="Eyebrow copy 14" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#E9E9E9"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B6B6B6"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-21549 -12065S5[-21517 -11856 -21320 -11752!-21320 -11752[-20431 -12047 -19809 -11608!-19809 -11608[-19901 -11945 -20217 -12075!-20217 -12075[-20826 -12140 -21549 -12065"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-22703 -11873S6[-22739 -11681 -22902 -11558!-22902 -11558[-23286 -11694 -23979 -11584!-23979 -11584[-24511 -11426 -25002 -11000!-25002 -11000[-24663 -11611 -23875 -11888!-23875 -11888[-23296 -11975 -22703 -11873"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#262212"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-21239 -12307S5[-21335 -12045 -21278 -11925!-21278 -11925[-21230 -11836 -21145 -11846!-21145 -11846[-20847 -11867 -20544 -11880!-20544 -11880[-20090 -11904 -19639 -11296!-19639 -11296[-19816 -12122 -20673 -12072!-20673 -12072[-21229
+ -12027 -21239 -12307!-22976 -12375[-22967 -12113 -23680 -12105!-23680 -12105[-24605 -12048 -25132 -11001!-25132 -11001[-24276 -11989 -23192 -11890!-23192 -11890[-23096 -11881 -23035 -11880!-23035 -11880[-22995 -11882 -22970 -11910!-22970
+ -11910[-22881 -12019 -22976 -12375"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="1.02940368652344" b="-0.1490478515625" c="0.1490478515625" d="1.02940368652344" tx="120.35" ty="31.55"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="1.02940368652344" b="-0.1490478515625" c="0.1490478515625" d="1.02940368652344" tx="120.35" ty="31.55"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#262212"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-21040 -15279[-21384 -15123 -21241 -14839!-21241 -14839[-21085 -14664 -20757 -14778!-20757 -14778[-20329 -14922 -20073 -15032!-20073 -15032[-19794 -15156 -19613 -15014!-19613 -15014[-19583 -14990 -19555 -14959!-19555 -14959[-19690 -15373
+ -20057 -15259!-20057 -15259[-20383 -15133 -20705 -15014!-20705 -15014[-20869 -14953 -21000 -14984!-21000 -14984[-21215 -15066 -21040 -15279"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-24139 -15274[-23933 -15808 -23573 -15683!-23573 -15683|-22618 -15248!-22618 -15248[-22201 -15059 -22125 -15306!-22125 -15306[-22091 -15416 -22237 -15581!-22237 -15581[-21923 -15358 -21939 -15142!-21939 -15142[-21986 -14800 -22471 -14870
+!-22471 -14870[-22809 -14932 -23598 -15381!-23598 -15381[-23867 -15512 -24139 -15274"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

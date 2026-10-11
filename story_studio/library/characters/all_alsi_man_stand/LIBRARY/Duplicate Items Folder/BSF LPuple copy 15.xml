@@ -1,0 +1,28 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/BSF LPuple copy 15" itemID="631ca828-00001852" lastModified="1662714068">
+  <timeline>
+    <DOMTimeline name="BSF LPuple copy 15" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMSymbolInstance libraryItemName="Duplicate Items Folder/BSF RPuple copy 15">
+                      <matrix>
+                        <Matrix a="0.89691162109375" d="0.89691162109375" tx="-0.05"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="4.8" y="4.8"/>
+                      </transformationPoint>
+                    </DOMSymbolInstance>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

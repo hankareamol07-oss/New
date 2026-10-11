@@ -1,0 +1,66 @@
+{
+ "name": "30_men1_copy_3",
+ "label": "गावकरी 6",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/Men1 copy 3",
+  "frame": 0,
+  "bounds": [
+   392.0,
+   444.0,
+   1024.0,
+   2084.0
+  ],
+  "faces": "right",
+  "head": "Face",
+  "neck": [
+   731.25,
+   799.84
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 13": {
+    "closed": 0,
+    "mid": 20,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 13": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "L_arm",
+   "fore": "L_hand",
+   "shoulder": [
+    841.25,
+    872.44
+   ],
+   "elbow": [
+    898.35,
+    1084.08
+   ]
+  },
+  "arm_back": {
+   "upper": "R_arm",
+   "fore": "R_hand",
+   "shoulder": [
+    541.0,
+    887.28
+   ],
+   "elbow": [
+    463.39,
+    1127.72
+   ]
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Men1 copy 3"
+}

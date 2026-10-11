@@ -1,0 +1,69 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Nose copy 30" itemID="64ea437b-000051ff" lastModified="1661532231">
+  <timeline>
+    <DOMTimeline name="Nose copy 30" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isDrawingObject="true">
+                  <matrix>
+                    <Matrix a="2.34507751464844" b="0.430892944335938" c="-0.430892944335938" d="2.34507751464844" tx="-1077" ty="-478.5"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF7C3E"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#B23900"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!9831 2750[9814 2764 9792 2772!9792 2772[9747 2790 9720 2767!9720 2767[9682 2735 9697 2689!9697 2689[9713 2638 9789 2646!9789 2646|9831 2750"/>
+                    <Edge cubics="!9831 2750(;9831,2750 9763,2804 9720,2767q9831 2750Q9814 2764q9792 2772Q9747 2790q9720 2767);"/>
+                    <Edge cubics="!9720 2767(;9678,2731 9678,2634 9789,2646q9720 2767Q9682 2735q9697 2689Q9713 2638q9789 2646);"/>
+                    <Edge cubics="!9789 2646(;9810,2698 9810,2698 9831,2750q9789 2646 9831 2750);"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF7C3E"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#B23900"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!719 1|730 243!730 243[728 529 654 760!654 760[606 715 544 697!544 697[416 656 336 781!336 781[241 924 278 1037!278 1037[312 1143 428 1160!428 1160[471 1165 592 1202!592 1202[686 1229 829 1234!829 1234[998 1240 1046 1106!1046 1106[1094
+ 980 1007 937"/>
+                    <Edge fillStyle0="1" edges="
+!1007 937|719 1"/>
+                    <Edge cubics="!719 1(;719,1 773,391 654,760q719 1Q719 1q730 243Q728 529q654 760);"/>
+                    <Edge cubics="!654 760(;654,760 467,580 336,781q654 760Q606 715q544 697Q416 656q336 781);"/>
+                    <Edge cubics="!336 781(;204,980 281,1140 428,1160q336 781Q241 924q278 1037Q312 1143q428 1160);"/>
+                    <Edge cubics="!428 1160(;577,1180 583,1225 829,1234q428 1160Q471 1165q592 1202Q686 1229q829 1234);"/>
+                    <Edge cubics="!829 1234(;1077,1243 1103,983 1007,937q829 1234Q998 1240q1046 1106Q1094 980q1007 937);"/>
+                    <Edge cubics="!1007 937(;862,469 862,469 719,1q1007 937 719 1);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

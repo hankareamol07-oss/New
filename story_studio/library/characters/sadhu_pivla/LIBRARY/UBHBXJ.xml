@@ -1,0 +1,91 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UBHBXJ" itemID="5f71e54b-00000af9" symbolType="graphic" lastModified="1601299787">
+  <timeline>
+    <DOMTimeline name="UBHBXJ" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-40.15" ty="-201.25"/>
+                  </matrix>
+                  <members>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix tx="-908.55" ty="-228.25"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix tx="-908.55" ty="-228.25"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor/>
+                            </FillStyle>
+                          </fills>
+                          <strokes>
+                            <StrokeStyle index="1">
+                              <SolidStroke scaleMode="normal">
+                                <fill>
+                                  <SolidColor alpha="0"/>
+                                </fill>
+                              </SolidStroke>
+                            </StrokeStyle>
+                          </strokes>
+                          <edges>
+                            <Edge fillStyle1="1" strokeStyle="1" edges="!19758 5126S6[#4D3D.2F #12C2.CC 19949 4732!19949 4732[#4F47.1F #1225.ED 20844 4732!20844 4732[#522B.38 #12A6.D 21113 4863!21113 4863[#5305.8A 4991.5 21238 5120!21238 5120[#5272.DC #1364.8F 20808 4881!20808 4881[#5015.1E #12CA.D8 20241
+ 4881!20241 4881[#4DB0.4C #1358.2D 19758 5126"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-40.15" ty="-201.25"/>
+                  </matrix>
+                  <members>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix tx="-908.55" ty="-228.25"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix tx="-908.55" ty="-228.25"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor/>
+                            </FillStyle>
+                          </fills>
+                          <strokes>
+                            <StrokeStyle index="1">
+                              <SolidStroke scaleMode="normal">
+                                <fill>
+                                  <SolidColor alpha="0"/>
+                                </fill>
+                              </SolidStroke>
+                            </StrokeStyle>
+                          </strokes>
+                          <edges>
+                            <Edge fillStyle1="1" strokeStyle="1" edges="
+!19334 5054S6[#4B6A.57 #1320.1 19054 4828!19054 4828[18767.5 #12A6.CA 18481 4828!18481 4828[#4753.27 #1319.7C 18344 5084!18344 5084[#472C.26 #139F.24 18185 4942!18185 4942[#46CB.1 #12BF.0F 18344 4637!18344 4637[#4930.8E #1180.2A 19088
+ 4667!19088 4667[#4BEF.62 #12F5.A8 19334 5054"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

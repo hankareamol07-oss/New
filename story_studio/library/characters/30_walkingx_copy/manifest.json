@@ -1,0 +1,78 @@
+{
+ "name": "30_walkingx_copy",
+ "label": "गावकरी 18 (चालणे)",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "walkingx copy",
+  "frame": 0,
+  "bounds": [
+   1772.0,
+   164.0,
+   2216.0,
+   1404.0
+  ],
+  "faces": "left",
+  "head": "head",
+  "neck": [
+   1984.5,
+   405.38
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 24": {
+    "closed": 0,
+    "mid": 28,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eyebrow copy 31": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "arm2",
+   "fore": "hand2",
+   "shoulder": [
+    1909.5,
+    459.94
+   ],
+   "elbow": [
+    1946.09,
+    646.1
+   ]
+  },
+  "arm_back": {
+   "upper": "arm1",
+   "fore": "hand1",
+   "shoulder": [
+    2107.75,
+    471.72
+   ],
+   "elbow": [
+    2065.03,
+    671.02
+   ]
+  },
+  "legs": [
+   "Foot_down_2",
+   "foot_down"
+  ],
+  "hips": {
+   "Foot_down_2": [
+    1894.0,
+    1078.5
+   ],
+   "foot_down": [
+    2097.0,
+    1068.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "walkingx copy"
+}

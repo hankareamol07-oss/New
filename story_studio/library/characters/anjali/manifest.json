@@ -1,0 +1,75 @@
+{
+ "name": "anjali",
+ "label": "अंजली (ड्रेस)",
+ "gender": "female",
+ "pack": "All Character",
+ "rig": {
+  "root": "Duplicate Items Folder/character copy 3",
+  "frame": 0,
+  "bounds": [
+   -136.0,
+   -216.0,
+   296.0,
+   852.0
+  ],
+  "faces": "right",
+  "head": "face",
+  "neck": [
+   -83.0,
+   99.86
+  ],
+  "mouth": {
+   "Duplicate Items Folder/father lips copy 24": {
+    "closed": 0,
+    "mid": 16,
+    "open": 12
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/girl eye copy 8": {
+    "open": 0,
+    "blink": [
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "RArm",
+   "fore": "Rhand",
+   "shoulder": [
+    9.5,
+    30.54
+   ],
+   "elbow": [
+    -36.02,
+    179.7
+   ]
+  },
+  "arm_back": null,
+  "legs": [
+   "RLeg",
+   "Lleg"
+  ],
+  "hips": {
+   "RLeg": [
+    32.25,
+    305.0
+   ],
+   "Lleg": [
+    142.75,
+    320.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Layer_4"
+  ]
+ },
+ "root": "Duplicate Items Folder/character copy 3"
+}

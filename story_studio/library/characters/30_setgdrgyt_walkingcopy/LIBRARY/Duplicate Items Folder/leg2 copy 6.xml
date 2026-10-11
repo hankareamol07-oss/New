@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/leg2 copy 6" itemID="6565ae41-00002ff6" symbolType="graphic" lastModified="1701016025">
+  <timeline>
+    <DOMTimeline name="leg2 copy 6" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#CCCCCC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!2257 4991S5[2394 2231 2183 -626!2183 -626|1729 -6647!1729 -6647[1324 -7152 33 -7131!33 -7131[-1514 -7059 -2048 -6336!-2048 -6336[-2575 -551 -2045 5035!-2045 5035[-2027 5891 -1417 6503!-1417 6503[-787 7132 105 7132!105 7132[996 7132 1626
+ 6503!1626 6503[2253 5876 2257 4991"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!1133 2160S7[-990 -178 -2225 -3611!116 4989[-1794 3322 -2299 -349"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

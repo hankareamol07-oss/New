@@ -1,0 +1,28 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Lips Sync With Joulinee copy" itemID="679e0e78-0000147b" symbolType="graphic" lastModified="1738403299">
+  <timeline>
+    <DOMTimeline name="Lips Sync With Joulinee copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Audio" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Lips_Sync_With_Jounline" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Lips Sync With Jounline copy" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

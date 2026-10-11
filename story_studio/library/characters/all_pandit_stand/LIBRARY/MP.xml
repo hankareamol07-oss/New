@@ -1,0 +1,49 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MP" itemID="630e8f72-000085a8" symbolType="graphic" lastModified="1661898610">
+  <timeline>
+    <DOMTimeline name="MP" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-341.15" ty="-848.85"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true" isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-341.15" ty="-848.85"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FCAF42"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#B96C00"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!9021 17267|9044 17517!9044 17517[9071 17835 9091 18183!9091 18183[9152 19289 9113 20240!9113 20240[9058 21572 8810 22404!8810 22404[8499 23445 7901 23641!7901 23641[7588 23744 7347 23450!7347 23450[7126 23179 6991 22607!6991 22607[6863
+ 22066 6832 21351!6832 21351[6802 20646 6872 19922!6872 19922[6944 19173 7110 18560!7110 18560[7288 17901 7547 17504!7547 17504[7831 17069 8184 16993!8184 16993[8572 16910 9021 17267"/>
+                        <Edge cubics="!9021 17267(;9021,17267 9640,23070 7901,23641q9021 17267Q9021 17267q9044 17517Q9071 17835q9091 18183Q9152 19289q9113 20240Q9058 21572q8810 22404Q8499 23445q7901 23641);"/>
+                        <Edge cubics="!7901 23641(;6162,24213 6522,15277 9021,17267q7901 23641Q7588 23744q7347 23450Q7126 23179q6991 22607Q6863 22066q6832 21351Q6802 20646q6872 19922Q6944 19173q7110 18560Q7288 17901q7547 17504Q7831 17069q8184 16993Q8572 16910q9021 17267)
+;"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

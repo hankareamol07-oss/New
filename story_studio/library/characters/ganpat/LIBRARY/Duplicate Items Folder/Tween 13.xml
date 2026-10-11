@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Tween 13" itemID="5f630ffa-00000f69" symbolType="graphic" lastModified="1566917016">
+  <timeline>
+    <DOMTimeline name="Tween 13" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="vghtn hu" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-27.05" ty="-97.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.2" y="-3.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="gfchntrhyujn&amp;#032" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-4.9" ty="-29.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="23.35" y="-1.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

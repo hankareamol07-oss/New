@@ -1,0 +1,63 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/RE copy 3" itemID="64ea4258-00003034" lastModified="1671481297">
+  <timeline>
+    <DOMTimeline name="RE copy 3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="-5" ty="-84.5"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="-5" ty="-84.5"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FDD2B8"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#9C552B"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#A87B60"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!215 1790|229 1811!229 1811[254 1856 271 1908!271 1908[324 2075 264 2250!264 2250[208 2162 173 2061!173 2061[104 1858 215 1790"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!206 1776|215 1790"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!134 1742|117 1845!117 1845[100 1969 100 2078!100 2078[101 2426 272 2488!272 2488[368 2523 386 2372!386 2372[402 2241 358 2040!358 2040[#13D.FC #741.99 261.5 1760.5!261.5 1760.5[#102.FB #6DC.0E 256.5 1752!256.5 1752[#FE.CD #6D4.D9 253
+ 1746!253 1746[183 1637 134 1742"/>
+                        <Edge cubics="!134 1742(;134,1742 -2,2389 272,2488q134 1742Q134 1742q117 1845Q100 1969q100 2078Q101 2426q272 2488);"/>
+                        <Edge cubics="!264 2250(;264,2250 38,1899 215,1790q264 2250Q208 2162q173 2061Q104 1858q215 1790);"/>
+                        <Edge cubics="!229 1811(;246,1841 260,1873 271,1908q229 1811Q254 1856q271 1908);"/>
+                        <Edge cubics="!215 1790(;215,1790 229,1811 229,1811p215 1790q229 1811);"/>
+                        <Edge cubics="!206 1776(;206,1776 215,1790 215,1790q206 1776p215 1790);"/>
+                        <Edge cubics="!271 1908(;306,2019 304,2133 264,2250q271 1908Q324 2075q264 2250);"/>
+                        <Edge cubics="!257 1752(;256,1750 254,1748 253,1746q257 1752Q255 1749q253 1746);"/>
+                        <Edge cubics="!262 1761(;260,1758 258,1755 257,1752q262 1761Q259 1756q257 1752);"/>
+                        <Edge cubics="!253 1746(;206,1673 167,1672 134,1742q253 1746Q183 1637q134 1742);"/>
+                        <Edge cubics="!272 2488(;336,2511 374,2473 386,2372q272 2488Q368 2523q386 2372);"/>
+                        <Edge cubics="!386 2372(;397,2285 387,2174 358,2040q386 2372Q402 2241q358 2040);"/>
+                        <Edge cubics="!358 2040(;331,1919 299,1826 262,1761q358 2040Q318 1858q262 1761);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

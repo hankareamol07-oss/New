@@ -1,0 +1,52 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Peeth copy 5" itemID="64ea4134-00001adf" lastModified="1669456233">
+  <timeline>
+    <DOMTimeline name="Peeth copy 5" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-582.2" ty="-216.3"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-582.2" ty="-216.3"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#E9A285"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#A85E3F"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!11818 4604S6[#2E50.41 #10D1.86 12243 4328!12243 4328[#30F5.B7 #1116.05 12875 4565!12875 4565[#3679.B2 #142D.97 13707 5860!13707 5860[#33EB.F7 #1BE1.3 12549 6997!12549 6997[#2D4D.EC #19A5.5E 11646 5883!11646 5883[#2E47.53 #1485.FC 11818
+ 4604"/>
+                        <Edge cubics="!11818 4604(;11837,5037 11780,5464 11646,5883p11818 4604Q11847 5254q11646 5883);"/>
+                        <Edge cubics="!11646 5883(;11614,6338 11915,6709 12549,6997q11646 5883Q11598 6565q12549 6997);"/>
+                        <Edge cubics="!12549 6997(;13044,7090 13430,6711 13707,5860q12549 6997Q13292 7137q13707 5860);"/>
+                        <Edge cubics="!12243 4328(;12437,4359 12648,4438 12875,4565q12243 4328Q12534 4374q12875 4565);"/>
+                        <Edge cubics="!11818 4604(;11843,4405 11985,4313 12243,4328q11818 4604Q11856 4306q12243 4328);"/>
+                        <Edge cubics="!13707 5860(;13866,5397 13589,4966 12875,4565q13707 5860Q13946 5166q12875 4565);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,89 @@
+{
+ "name": "seth_seth_charactr_stand",
+ "label": "Seth Charactr Stand",
+ "gender": "male",
+ "pack": "Seth Charactr",
+ "rig": {
+  "root": "Seth Charactr Stand",
+  "frame": 0,
+  "bounds": [
+   -8.0,
+   -8.0,
+   992.0,
+   2064.0
+  ],
+  "faces": "right",
+  "head": "Seth_Head",
+  "neck": [
+   426.0,
+   483.08
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Seth Lips copy": {
+    "closed": 0,
+    "mid": 0,
+    "open": 0
+   },
+   "Duplicate Items Folder/Seth Lipand jowline copy": {
+    "closed": 8,
+    "mid": 7,
+    "open": 9
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Seth Eyes copy": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/Seth Eyeball copy": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "Seth_Front_Hand",
+   "fore": null,
+   "shoulder": [
+    782.75,
+    495.0
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "Seth_Back_Hand",
+   "fore": "Seth_Back_Part_2",
+   "shoulder": [
+    279.0,
+    609.0
+   ],
+   "elbow": [
+    164.16,
+    1151.35
+   ]
+  },
+  "legs": [
+   "Seth_Back_Lag",
+   "Seth_Front_Lag"
+  ],
+  "hips": {
+   "Seth_Back_Lag": [
+    308.25,
+    1303.5
+   ],
+   "Seth_Front_Lag": [
+    583.75,
+    1072.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadwo"
+  ]
+ },
+ "root": "Seth Charactr Stand"
+}

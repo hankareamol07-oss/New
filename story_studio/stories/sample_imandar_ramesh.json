@@ -1,0 +1,27 @@
+{
+ "title": "प्रामाणिक रमेश",
+ "lang": "mr",
+ "narrator": {"voice": "mr-IN-AarohiNeural", "style": "narrator"},
+ "cast": {
+  "ramesh": {"name": "रमेश", "character": "ramesh", "voice": "mr-IN-ManoharNeural", "gender": "male"},
+  "sita": {"name": "सीता काकू", "character": "sita", "voice": "mr-IN-AarohiNeural", "gender": "female", "style": "bright"}
+ },
+ "scenes": [
+  {
+   "background": "village",
+   "camera": "slow-zoom",
+   "transition": "fade",
+   "characters": [
+    {"id": "sita", "position": "left", "enter": null},
+    {"id": "ramesh", "position": "right", "enter": "right"}
+   ],
+   "lines": [
+    {"speaker": "narrator", "text": "एका गावात रमेश नावाचा प्रामाणिक मुलगा राहत होता."},
+    {"speaker": "ramesh", "text": "सीता काकू, ही तुमची पर्स रस्त्यावर पडली होती.", "action": "explain"},
+    {"speaker": "sita", "text": "अरे वा रमेश! यात माझे सगळे पैसे आहेत. खूप खूप धन्यवाद!", "action": "greet"},
+    {"speaker": "ramesh", "text": "काकू, दुसऱ्याची वस्तू परत करणे हे आपले कर्तव्य आहे.", "action": "point"},
+    {"speaker": "narrator", "text": "तात्पर्य: प्रामाणिकपणा हाच सर्वात मोठा गुण आहे."}
+   ]
+  }
+ ]
+}

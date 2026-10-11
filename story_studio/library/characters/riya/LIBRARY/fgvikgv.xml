@@ -1,0 +1,94 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="fgvikgv" itemID="608e334b-00000f0f" symbolType="graphic" lastModified="1619938960">
+  <timeline>
+    <DOMTimeline name="fgvikgv" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="0.795394897460938" d="1.05636596679688" tx="-363.75" ty="-903.5"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="0.795394897460938" d="1.05636596679688" tx="-363.75" ty="-903.5"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#00071C"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#0B3149"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#0F1F32"/>
+                        </FillStyle>
+                        <FillStyle index="4">
+                          <SolidColor color="#515E5F"/>
+                        </FillStyle>
+                        <FillStyle index="5">
+                          <SolidColor color="#000619"/>
+                        </FillStyle>
+                        <FillStyle index="6">
+                          <SolidColor color="#00071A"/>
+                        </FillStyle>
+                        <FillStyle index="7">
+                          <SolidColor color="#575D57"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="1.5">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!15812 19926|15312 17703!15312 17703|15121 17160!15121 17160[13565 18593 10983 17106!10983 17106|10673 17691!10673 17691|9570 19539"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!11060 18518|10935 18794"/>
+                        <Edge fillStyle0="3" fillStyle1="1" strokeStyle="1" edges="!11103 18423|11060 18518"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!11683 18017|11323 17935!11323 17935|11103 18423"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="!11683 18017|11781 18039"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!11781 18039|12683 18245"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="!11781 18039[11515 18655 11060 18518"/>
+                        <Edge fillStyle0="3" fillStyle1="2" strokeStyle="1" edges="!11683 18017[11492 18489 11103 18423"/>
+                        <Edge fillStyle0="1" fillStyle1="4" strokeStyle="1" edges="!9570 19601|9406 19567!9406 19567|9570 19664"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!9570 19601|9570 19664"/>
+                        <Edge fillStyle0="1" fillStyle1="4" strokeStyle="1" edges="!9570 19539|9570 19601"/>
+                        <Edge fillStyle0="4" strokeStyle="1" edges="!9570 19539[9413 19486 9278 19539!9278 19539|9147 19962!9147 19962[9889 20626 11007 20958!11007 20958[12032 21265 13148 21191!13148 21191|13869 21101"/>
+                        <Edge fillStyle0="4" fillStyle1="4" strokeStyle="1" edges="!10697 20499|11030 20565"/>
+                        <Edge fillStyle0="1" fillStyle1="4" strokeStyle="1" edges="!9570 19664|11030 20565"/>
+                        <Edge fillStyle0="1" fillStyle1="5" strokeStyle="1" edges="!13973 18311|14191 18299!14191 18299|14257 19527!14257 19527|13881 19712!13881 19712|13860 19476"/>
+                        <Edge fillStyle0="5" fillStyle1="6" strokeStyle="1" edges="!13973 18311|14048 19384!14048 19384|13860 19476"/>
+                        <Edge fillStyle0="6" fillStyle1="1" strokeStyle="1" edges="!13973 18311|13756 18323!13756 18323|13860 19476"/>
+                        <Edge fillStyle0="7" fillStyle1="1" strokeStyle="1" edges="!15834 20022|15950 20022!15950 20022|15855 20118"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!15834 20022|15855 20118"/>
+                        <Edge fillStyle0="7" fillStyle1="1" strokeStyle="1" edges="!15812 19926|15834 20022"/>
+                        <Edge fillStyle0="7" strokeStyle="1" edges="!13869 21101[15198 21175 16129 20475!16129 20475|16069 19974!16069 19974[15941 19891 15812 19926"/>
+                        <Edge fillStyle0="1" fillStyle1="7" strokeStyle="1" edges="!13935 20565|15437 20565!15437 20565|15157 20487!15157 20487[15536 20382 15855 20118"/>
+                        <Edge fillStyle0="1" fillStyle1="4" strokeStyle="1" edges="!11030 20565[12240 20793 13702 20541!13702 20541|13583 20451!13583 20451[13780 20459 13935 20565"/>
+                        <Edge fillStyle0="7" fillStyle1="4" strokeStyle="1" edges="!13935 20565|13869 21101"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+                <DOMSymbolInstance libraryItemName="9f9sdfo" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="59.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="92.4" y="25.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

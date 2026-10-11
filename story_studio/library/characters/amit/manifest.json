@@ -1,0 +1,79 @@
+{
+ "name": "amit",
+ "label": "अमित (पांढरा कुर्ता)",
+ "gender": "male",
+ "pack": "All Character",
+ "rig": {
+  "root": "Duplicate Items Folder/Men copy 6",
+  "frame": 0,
+  "bounds": [
+   284.0,
+   196.0,
+   792.0,
+   1604.0
+  ],
+  "faces": "right",
+  "head": "Face",
+  "neck": [
+   552.5,
+   493.5
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth copy 16": {
+    "closed": 9,
+    "mid": 6,
+    "open": 3
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyes1 copy 8": {
+    "open": 0,
+    "blink": [
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "LHand",
+   "fore": null,
+   "shoulder": [
+    682.75,
+    511.5
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "RHand",
+   "fore": null,
+   "shoulder": [
+    371.5,
+    507.0
+   ],
+   "elbow": null
+  },
+  "legs": [
+   "Layer_8",
+   "Layer_9"
+  ],
+  "hips": {
+   "Layer_8": [
+    440.75,
+    956.5
+   ],
+   "Layer_9": [
+    599.25,
+    936.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Layer_2"
+  ]
+ },
+ "root": "Duplicate Items Folder/Men copy 6"
+}

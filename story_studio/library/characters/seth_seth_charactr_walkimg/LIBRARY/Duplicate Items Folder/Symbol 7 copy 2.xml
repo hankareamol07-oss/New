@@ -1,0 +1,63 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Symbol 7 copy 2" itemID="6795063b-00001f78" symbolType="graphic" lastModified="1737817397">
+  <timeline>
+    <DOMTimeline name="Symbol 7 copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFF7D8"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#E9E2C5"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#C0BAA2"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!6775 4617[6775 4624 6775 4631!6775 4631[6775 4641 6775 4651"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!6775 4651[6768 5944 5841 6859!5841 6859[4908 7783 3587 7783!3587 7783[3032 7783 2545 7620"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!6775 4617[6769 4429 6753 4241!6753 4241[6574 2101 5139 0!5139 0[1550 384 589 218!589 218[-485 2066 399 4628"/>
+                        <Edge fillStyle0="1" edges="!6775 4651|6776 4651"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!6776 4651[6776 4634 6775 4617"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!409 4657[1139 4375 3508 3767!3508 3767[2327 4831 1082 4601"/>
+                        <Edge fillStyle1="2" edges="!1082 4601[979 4582 876 4554!876 4554[858 4593 841 4633"/>
+                        <Edge fillStyle0="1" edges="!841 4633[836 4645 831 4657"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!409 4657[422 4657 436 4657!436 4657|462 4657"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!462 4657[647 4653 841 4633"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!841 4633[960 4620 1082 4601"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!1082 4601[2160 4433 3508 3767"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!399 4628[404 4643 409 4657"/>
+                        <Edge strokeStyle="1" edges="!399 4671[399 4651 399 4631!399 4631[399 4630 399 4628"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!409 4657[404 4664 399 4671"/>
+                        <Edge fillStyle0="2" edges="!831 4657|462 4657"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!2545 7620[2173 7495 1841 7275"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1841 7275[1573 7098 1332 6859!1332 6859[1007 6538 795 6170"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!795 6170[408 5498 399 4671"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!795 6170[572 5303 831 4657"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!3879 6932[3144 7363 2545 7620"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!3879 6932[2612 7404 1841 7275"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

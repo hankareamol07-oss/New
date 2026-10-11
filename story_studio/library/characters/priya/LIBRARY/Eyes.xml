@@ -1,0 +1,121 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Eyes" itemID="60a20564-00000140" symbolType="graphic" lastModified="1621245622">
+  <timeline>
+    <DOMTimeline name="Eyes" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_3" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="7" duration="2" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFB17E"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!13360 9414S1[#393E.86 #226C.AF 16139 9347!16139 9347[#3C97.06 #20D1.51 14678 8432!14678 8432[#3606.8D #20F3.08 13360 9414"/>
+                    <Edge fillStyle1="1" edges="!9286 9525S2[#25E8.9 #21DB.1A 10313 8620!10313 8620[#2B47.18 #217E.2C 11559 9536!11559 9536[10422 9065 9286 9525"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="2" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFB17E"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!13318 9475[#3908.7B #282F.7E 16175 9409!16175 9409[#3CB1.DB #20C3.E6 14678 8432!14678 8432[#3606.8D #20F3.08 13318 9475"/>
+                    <Edge fillStyle1="1" edges="!9256 9571[#25B2.07 #21E8.05 10313 8620!10313 8620[#2B47.18 #217E.2C 11559 9536!11559 9536[#286E.AD #283E.9 9256 9571"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" duration="5" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFB17E"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!13315 9479S1[#3582.82 #2876.9D 14609 10502!14609 10502[#3A21.EC #2927.CD 15162 10446!15162 10446[#3DE5.E9 #27D7.01 16175 9409!16175 9409[#3CB1.DB #20C3.E6 14678 8432!14678 8432[#3606.8D #20F3.08 13315 9479"/>
+                    <Edge fillStyle1="1" edges="!9256 9571S2[#25B2.07 #21E8.05 10313 8620!10313 8620[#2B47.18 #217E.2C 11559 9536!11559 9536[#2C4A.3A #27CF.91 10774 10435!10774 10435[#2942.DB #2923.ED 10312 10507!10312 10507[#252B.36 #286E.47 9256 9571"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="16" duration="2" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFB17E"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!13315 9479[#3582.82 #2876.9D 14609 10502!14609 10502[#3A21.EC #2927.CD 15162 10446!15162 10446[#3DE5.E9 #27D7.01 16175 9409!16175 9409[#3CB1.DB #20C3.E6 14678 8432!14678 8432[#3606.8D #20F3.08 13315 9479"/>
+                    <Edge fillStyle1="1" edges="!9256 9571[#25B2.07 #21E8.05 10313 8620!10313 8620[#2B47.18 #217E.2C 11559 9536!11559 9536[#2C4A.3A #27CF.91 10774 10435!10774 10435[#2942.DB #2923.ED 10312 10507!10312 10507[#252B.36 #286E.47 9256 9571"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="2" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFB17E"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!13318 9475[#3908.7B #282F.7E 16175 9409!16175 9409[#3CB1.DB #20C3.E6 14678 8432!14678 8432[#3606.8D #20F3.08 13318 9475"/>
+                    <Edge fillStyle1="1" edges="!9256 9571[#25B2.07 #21E8.05 10313 8620!10313 8620[#2B47.18 #217E.2C 11559 9536!11559 9536[#286E.AD #283E.9 9256 9571"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="20" duration="2" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFB17E"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!13360 9414[#393E.86 #226C.AF 16139 9347!16139 9347[#3C97.06 #20D1.51 14678 8432!14678 8432[#3606.8D #20F3.08 13360 9414"/>
+                    <Edge fillStyle1="1" edges="!9286 9525[#25E8.9 #21DB.1A 10313 8620!10313 8620[#2B47.18 #217E.2C 11559 9536!11559 9536[10422 9065 9286 9525"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="22" duration="51" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="73" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="3D.png">
+                  <matrix>
+                    <Matrix a="0.759628295898438" d="0.759628295898438"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

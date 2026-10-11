@@ -1,0 +1,91 @@
+{
+ "name": "all_cute_girl_stand",
+ "label": "Cute Girl Stand",
+ "gender": "female",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Cute Girl Stand",
+  "frame": 0,
+  "bounds": [
+   24.0,
+   -20.0,
+   532.0,
+   868.0
+  ],
+  "faces": "left",
+  "head": "CG_Head",
+  "neck": [
+   315.81,
+   440.1
+  ],
+  "mouth": {
+   "Duplicate Items Folder/CG Lips copy 2": {
+    "closed": 0,
+    "mid": 8,
+    "open": 4
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/CG Eyes copy 2": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/CG R Eyebrow": {
+    "open": 0,
+    "blink": []
+   },
+   "Duplicate Items Folder/CG L Eyebrow": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "CH_RHand",
+   "fore": "CH_RHand2",
+   "shoulder": [
+    230.75,
+    364.96
+   ],
+   "elbow": [
+    200.38,
+    472.88
+   ]
+  },
+  "arm_back": {
+   "upper": "CG_LHand",
+   "fore": "CG_LHand2",
+   "shoulder": [
+    398.5,
+    369.88
+   ],
+   "elbow": [
+    418.9,
+    476.0
+   ]
+  },
+  "legs": [
+   "CG_Right_Leg",
+   "CG_Left_Leg"
+  ],
+  "hips": {
+   "CG_Right_Leg": [
+    227.25,
+    652.0
+   ],
+   "CG_Left_Leg": [
+    390.0,
+    661.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Cute Girl Stand"
+}

@@ -1,0 +1,120 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/GHead copy 3" itemID="62ff9ba2-00002c40" lastModified="1671734217" lastUniqueIdentifier="3">
+  <timeline>
+    <DOMTimeline name="GHead copy 3" currentFrame="41" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="GHair1" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65087,"b":7440,"c":-7440,"d":65087,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/GHair1 copy 3" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.993148803710938" b="0.116851806640625" c="-0.116851806640625" d="0.993148803710938" tx="28.4" ty="103.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.2" y="130.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="GHair2" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65087,"b":7440,"c":-7440,"d":65087,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/GHair2 copy 3" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.993148803710938" b="0.116851806640625" c="-0.116851806640625" d="0.993148803710938" tx="94.8" ty="49.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="118.75" y="164.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Lips" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65087,"b":7440,"c":-7440,"d":65087,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Lips copy 7" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.993148803710938" b="0.116851806640625" c="-0.116851806640625" d="0.993148803710938" tx="96.05" ty="284"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="44.6" y="30.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Nose" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65087,"b":7440,"c":-7440,"d":65087,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Nose copy 13" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.993148803710938" b="0.116851806640625" c="-0.116851806640625" d="0.993148803710938" tx="105.55" ty="240.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="21.85" y="31.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="GEyes" color="#FF0000" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65087,"b":7440,"c":-7440,"d":65087,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/GEyes copy 3" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.993148803710938" b="0.116851806640625" c="-0.116851806640625" d="0.993148803710938" tx="59.6" ty="170.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="102.6" y="48"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="GBH1" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65087,"b":7440,"c":-7440,"d":65087,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/GBH1 copy 3" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.993148803710938" b="0.116851806640625" c="-0.116851806640625" d="0.993148803710938" tx="59.4" ty="-18.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="165.55" y="142.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="GPF" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65087,"b":7440,"c":-7440,"d":65087,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/GPF copy 3" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.993148803710938" b="0.116851806640625" c="-0.116851806640625" d="0.993148803710938" tx="75.3" ty="30.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="126.6" y="161.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
