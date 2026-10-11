@@ -10,6 +10,7 @@ import os
 import subprocess
 
 from PIL import Image, ImageDraw
+from ytstudio import enc
 
 FPS = 8            # animation frame rate (stick figure loop)
 FRAMES = 16        # frames per loop (2 s)
@@ -116,7 +117,7 @@ def clip(cfg, slide_png, pose, secs, out_mp4, size, talking=True, height=HEIGHT)
     subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-stream_loop", "-1", "-framerate", str(FPS),
                     "-i", os.path.join(fdir, "%02d.png"), "-t", f"{secs:.3f}",
                     "-vf", f"scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2,format=yuv420p",
-                    "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
+                    "-r", "30", *enc.h264(cfg), "-an", out_mp4], check=True)
     return out_mp4
 
 

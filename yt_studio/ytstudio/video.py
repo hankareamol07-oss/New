@@ -4,6 +4,7 @@ import shutil
 import subprocess
 
 from .tts import duration, prefetch, speak
+from . import enc
 
 PAUSE_AFTER_Q = 1.6   # seconds of silence between question and answer
 PAUSE_AFTER_A = 0.8
@@ -41,7 +42,7 @@ def _concat(cfg, items, audio_out, video_out, size):
                     "-ar", "24000", "-ac", "1", audio_out], check=True)
     subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-i", audio_out,
                     "-vf", f"scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2,format=yuv420p",
-                    "-r", "30", "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-tune", "stillimage",
+                    "-r", "30", *enc.h264(cfg),
                     "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", video_out], check=True)
 
 

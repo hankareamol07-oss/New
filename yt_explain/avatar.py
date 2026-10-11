@@ -19,6 +19,7 @@ import rig
 import vrig
 
 from PIL import Image, ImageDraw
+from ytstudio import enc
 
 HERE = os.path.dirname(sys.executable) if getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(__file__))   # exe: assets next to it
 ASSETS = os.path.join(HERE, "assets", "avatar")
@@ -448,7 +449,7 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
                     "-filter_complex",
                     f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[bg];"
                     f"[bg][1:v]overlay={x}:{y},format=yuv420p",
-                    "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
+                    "-t", f"{secs:.3f}", "-r", "30", *enc.h264(cfg), "-an", out_mp4], check=True)
     for f in os.listdir(fdir):      # frames are only needed for the encode
         os.remove(os.path.join(fdir, f))
     os.rmdir(fdir)
@@ -479,7 +480,7 @@ def _clip_rig(cfg, teacher, slide_png, pose, secs, audio, out_mp4, size, portrai
                              "-filter_complex",
                              f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[bg];"
                              f"[1:v]tpad=stop_mode=clone:stop_duration=1[av];[bg][av]overlay={x}:{y},format=yuv420p",
-                             "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4],
+                             "-t", f"{secs:.3f}", "-r", "30", *enc.h264(cfg), "-an", out_mp4],
                             stdin=subprocess.PIPE)
     try:
         for i in range(n):
@@ -586,13 +587,13 @@ def _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size
     patch_mp4 = os.path.join(fdir, "patch.mp4")
     subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-framerate", str(KEY_FPS), "-i", os.path.join(fdir, "%04d.png"),
                     "-vf", "minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:scd=fdiff:scd_threshold=8,tpad=stop_mode=clone:stop_duration=2",
-                    "-t", f"{secs:.3f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", patch_mp4], check=True)
+                    "-t", f"{secs:.3f}", *enc.h264(cfg, 16), "-pix_fmt", "yuv420p", patch_mp4], check=True)
     canvas_png = os.path.join(fdir, "canvas.png")
     canvas.save(canvas_png)
     subprocess.run([cfg["ffmpeg"], "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", canvas_png,
                     "-i", patch_mp4,
                     "-filter_complex", f"[0:v][1:v]overlay={x0}:{y0},format=yuv420p",
-                    "-t", f"{secs:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", out_mp4], check=True)
+                    "-t", f"{secs:.3f}", "-r", "30", *enc.h264(cfg), "-an", out_mp4], check=True)
     for f in os.listdir(fdir):
         os.remove(os.path.join(fdir, f))
     os.rmdir(fdir)
