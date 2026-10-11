@@ -1,0 +1,155 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Seth Charactr Stand" itemID="6794deab-0000109c" symbolType="graphic" lastModified="1737809708" lastUniqueIdentifier="25">
+  <timeline>
+    <DOMTimeline name="Seth Charactr Stand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Seth_Front_Hand" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Front Hand copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.998825073242188" b="-0.0468597412109375" c="0.0468597412109375" d="0.998825073242188" tx="629.5" ty="497.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="33.7" y="78.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Head" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Head copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="267.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="303.95" y="397.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Bodey" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Bodey copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="81" ty="364.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="360" y="507.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Front_Lag" color="#009999" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 3 copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.998947143554688" b="0.0445556640625" c="-0.0445556640625" d="0.998947143554688" tx="379.65" ty="1070"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="207.8" y="228.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Back_Part" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 6 copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="352.9" ty="1060.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="224.7" y="227.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Back_Lag" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 5 copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.99969482421875" b="-0.020843505859375" c="0.020843505859375" d="0.99969482421875" tx="130.2" ty="1310.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="176.55" y="-35.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Back_Part_2" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 7 copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="136.8" ty="1075.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="169.4" y="194.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Back_Hand" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Hand copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-21.05" ty="511.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="325.45" y="87.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shadwo" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!19678 39336[19678 40056 16796 40564!16796 40564[13914 41072 9839 41072!9839 41072[5764 41072 2881 40564!2881 40564[0 40056 0 39336!0 39336[0 38617 2881 38109!2881 38109[5764 37600 9839 37600!9839 37600[13914 37600 16796 38109!16796 38109
+[19678 38617 19678 39336"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

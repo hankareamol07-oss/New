@@ -1,0 +1,57 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Upper Side Of Left Arm copy" itemID="679e0e78-00001487" symbolType="graphic" lastModified="1738397264">
+  <timeline>
+    <DOMTimeline name="Upper Side Of Left Arm copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#8EC74B"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#8EB238"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!1063 3520[1832 595 1746 -2799!1746 -2799|-465 -4749!-465 -4749[-1522 -3825 -1739 3112"/>
+                        <Edge fillStyle0="1" edges="!-1739 3112|1063 3520"/>
+                        <Edge cubics="!1746 -2799(;1746,-2799 -465,-4749 -465,-4749q1746 -2799 -465 -4749);"/>
+                        <Edge cubics="!1063 3520(;1576,1570 1803,-536 1746,-2799q1063 3520Q1832 595q1746 -2799);"/>
+                        <Edge cubics="!-465 -4749(;-1170,-4133 -1594,-1513 -1739,3112q-465 -4749Q-1522 -3825q-1739 3112);"/>
+                        <Edge cubics="!-1739 3112(;-1739,3112 1063,3520 1063,3520q-1739 3112 1063 3520);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-40.3" ty="135.6"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#8EC74B"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!1880 621[1880 1207 1466 1621!1466 1621[1052 2036 466 2036!466 2036[-119 2036 -535 1621!-535 1621[-949 1207 -949 621!-949 621[-949 36 -535 -378!-535 -378[-119 -793 466 -793!466 -793[1052 -793 1466 -378!1466 -378[1880 36 1880 621"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

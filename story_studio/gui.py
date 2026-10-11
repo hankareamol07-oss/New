@@ -20,7 +20,7 @@ from tkinter import filedialog, messagebox, ttk
 
 from PIL import Image, ImageTk
 
-from engine import (autorig, bgmaker, config, library, library_build, musicmaker, paths, render, rig, story_ai,
+from engine import (autorig, bg_import, bgmaker, config, library, library_build, musicmaker, paths, render, rig, story_ai,
                     tts, xfl)
 
 cfg = config.load()
@@ -1116,6 +1116,7 @@ class MediaTab(ttk.Frame):
         t.pack(fill="x")
         ttk.Button(t, text="➕ चित्रे जोडा", command=self.add_bg).pack(side="left")
         ttk.Button(t, text="फोल्डर जोडा", command=self.add_bg_folder).pack(side="left", padx=4)
+        ttk.Button(t, text="FLA मधून पार्श्वभूमी", command=self.add_bg_fla).pack(side="left", padx=4)
         ttk.Button(t, text="काढा", command=self.del_bg).pack(side="left")
         self.cv = tk.Canvas(bf, bg="white", height=360)
         sb = ttk.Scrollbar(bf, orient="vertical", command=self.cv.yview)
@@ -1181,6 +1182,20 @@ class MediaTab(ttk.Frame):
             fs = [f for f in glob.glob(os.path.join(d, "**", "*"), recursive=True) if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp"))]
             self._copy(fs, paths.BGS)
             messagebox.showinfo("Story Studio", f"{len(fs)} चित्रे जोडली.")
+
+    def add_bg_fla(self):
+        fs = filedialog.askopenfilenames(filetypes=[("Adobe Animate", "*.fla")])
+        if not fs:
+            return
+        self.app.log("FLA पार्श्वभूमी आयात सुरू ...")
+
+        def work():
+            return sum(len(bg_import.from_fla(f, log=self.app.log)) for f in fs)
+
+        def done(n):
+            self.fill()
+            messagebox.showinfo("Story Studio", f"{n} पार्श्वभूमी जोडल्या.")
+        self.app.bg(work, done)
 
     def del_bg(self):
         if self.sel.get() and messagebox.askyesno("Story Studio", "ही पार्श्वभूमी काढायची?"):

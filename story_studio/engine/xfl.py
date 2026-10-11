@@ -393,7 +393,10 @@ class Doc:
                         sh = skia.GradientShader.MakeTwoPointConical(skia.Point(fr * R, 0), 0, skia.Point(0, 0), R, cols, pos, mode, localMatrix=m)
                     else:
                         sh = skia.GradientShader.MakeRadial(skia.Point(0, 0), R, cols, pos, mode, localMatrix=m)
-                p.setShader(sh)
+                if sh is not None:
+                    p.setShader(sh)
+                else:
+                    p.setColor4f(cols[-1])
             elif n == 'BitmapFill':
                 img = self.image(ch.get('bitmapPath', ''))
                 if img is not None:

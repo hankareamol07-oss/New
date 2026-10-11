@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Ear copy 3" itemID="679e0ed2-0000165b" symbolType="graphic" lastModified="1738394571">
+  <timeline>
+    <DOMTimeline name="Ear copy 3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-2336.1" ty="-897.75"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-2336.1" ty="-897.75"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#F4A984"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#D58C66"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#FEA082"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!46526 17349S3|46594 17625!46594 17625[#B69D.FE #4478.18 46870 17827!46870 17827[#B687.C7 #4961.3C 46267 18717!46267 18717[#B590.05 #48C2.05 46507 18349!46507 18349[#B57B.7B #4725.3E 46432 18091!46432 18091[#B4F6.2D #44D0.AF 46526 17349"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!46207 17145S6[#B68C.81 #3F91.6E 47258 16994!47258 16994[#BA12.68 #4538.04 46988 18597!46988 18597|46848 18887!46848 18887[46542.5 #4B9C.7C 46237 19207!46237 19207[#B40A.1B #4A90.DE 46077 18956!46077 18956[#B3F8.BF #49DF.3D 46083.5 18865"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!46083.5 18865S7[#B40B.59 #498F.59 46107 18797"/>
+                        <Edge fillStyle1="1" edges="!46083.5 18865S2[#B396.75 18005 46207 17145"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
