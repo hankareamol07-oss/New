@@ -1,0 +1,76 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="RHand" itemID="649c9192-0000081b" symbolType="graphic" lastModified="1687982932">
+  <timeline>
+    <DOMTimeline name="RHand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Hand2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix ty="46.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="81.55" y="86"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMShape isDrawingObject="true">
+                  <matrix>
+                    <Matrix a="5.68685913085938" d="5.68685913085938" tx="-385.9" ty="-631.35"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF7EAF"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#B63868"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!2039 2394[2059 2335 2027 2282!2027 2282[1995 2228 1934 2221!1934 2221|1931 2221!1931 2221[1867 2214 1796 2274!1796 2274[1725 2333 1711 2404!1711 2404[1697 2480 1804 2529!1804 2529[1914 2580 1974 2504!1974 2504[2019 2446 2039 2394"/>
+                    <Edge cubics="!2039 2394(;2066,2316 2016,2230 1934,2221q2039 2394Q2059 2335q2027 2282Q1995 2228q1934 2221);"/>
+                    <Edge cubics="!1934 2221(;1933,2221 1932,2221 1931,2221q1934 2221 1931 2221);"/>
+                    <Edge cubics="!1931 2221(;1846,2212 1729,2309 1711,2404q1931 2221Q1867 2214q1796 2274Q1725 2333q1711 2404);"/>
+                    <Edge cubics="!1711 2404(;1693,2499 1890,2610 1974,2504q1711 2404Q1697 2480q1804 2529Q1914 2580q1974 2504);"/>
+                    <Edge cubics="!1974 2504(;2010,2458 2028,2423 2039,2394q1974 2504Q2019 2446q2039 2394);"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#DC4385"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#A51E58"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!2933 1852[3047 1511 3172 1158!3172 1158[3428 453 3508 407!3508 407[3633 339 3263 140!3263 140|3024 663!3024 663[2740 1203 2530 1255!2530 1255[2319 1311 2143 1249!2143 1249|2007 1169"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!2007 1169[#7E7.E #541.2F 2166 1482!2166 1482[2422 1801 2933 1852"/>
+                    <Edge cubics="!2933 1852(;2933,1852 3383,476 3508,407q2933 1852Q3047 1511q3172 1158Q3428 453q3508 407);"/>
+                    <Edge cubics="!3508 407(;3633,339 3263,140 3263,140q3508 407Q3633 339q3263 140);"/>
+                    <Edge cubics="!3263 140(;3263,140 2865,1169 2530,1255q3263 140Q3263 140q3024 663Q2740 1203q2530 1255);"/>
+                    <Edge cubics="!2530 1255(;2189,1346 2007,1169 2007,1169q2530 1255Q2319 1311q2143 1249Q2007 1169q2007 1169);"/>
+                    <Edge cubics="!2007 1169(;2007,1169 2115,1772 2933,1852q2007 1169Q2007 1169q2166 1482Q2422 1801q2933 1852);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

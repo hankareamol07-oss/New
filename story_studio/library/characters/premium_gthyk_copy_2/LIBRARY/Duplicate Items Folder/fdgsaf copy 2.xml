@@ -1,0 +1,83 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/fdgsaf copy 2" itemID="6090da64-000002f2" symbolType="graphic" lastModified="1620105738">
+  <timeline>
+    <DOMTimeline name="fdgsaf copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#323D4E"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#041B33"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!5759 822[5097 309 4316 119!4316 119[4527 1210 3820 1694!3820 1694[3122 2000 2521 1512!2521 1512[1940 1003 1594 0!1594 0|1431 74!1431 74[-112 169 22 1677!22 1677|81 3726!81 3726[219 6409 0 9695!0 9695[3284 11012 5455 9534!5455 9534[5272
+ 4948 5411 4146"/>
+                        <Edge fillStyle0="1" edges="
+!5411 4146[5324 2538 5759 822"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FBC2A7"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#BD6A56"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#651901"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!4321 130S5|3963 52!3963 52[#F1E.5C -329.53125 3978 -1368!3978 -1368|2255 -1421!2255 -1421[2318 -445 2207 -119!2207 -119|1606 13"/>
+                        <Edge fillStyle0="1" strokeStyle="2" edges="
+!1606 13S5[1642 574 1846 1110!1846 1110[2050 1646 2375 1959!2375 1959[3769 2770 4235 1936!4235 1936[4701 1101 4321 130"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

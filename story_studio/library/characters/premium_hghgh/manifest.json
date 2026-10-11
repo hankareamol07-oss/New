@@ -1,0 +1,72 @@
+{
+ "name": "premium_hghgh",
+ "label": "hghgh",
+ "gender": "female",
+ "pack": "PREMIUM WOMEN",
+ "rig": {
+  "root": "Duplicate Items Folder/hghgh",
+  "frame": 0,
+  "bounds": [
+   820.0,
+   76.0,
+   1368.0,
+   2068.0
+  ],
+  "faces": "right",
+  "head": "face",
+  "neck": [
+   1071.0,
+   446.18
+  ],
+  "mouth": {
+   "Duplicate Items Folder/ajdadj copy 21": {
+    "closed": 0,
+    "mid": 6,
+    "open": 9
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eyes copy 23": {
+    "open": 0,
+    "blink": [
+     14,
+     15,
+     16,
+     17
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Layer_15",
+   "fore": "Layer_16",
+   "shoulder": [
+    1195.0,
+    577.04
+   ],
+   "elbow": [
+    1265.16,
+    881.12
+   ]
+  },
+  "arm_back": {
+   "upper": "hand",
+   "fore": "Layer_14",
+   "shoulder": [
+    910.5,
+    577.58
+   ],
+   "elbow": [
+    869.39,
+    883.02
+   ]
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [
+   "Rleg",
+   "Lleg"
+  ],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/hghgh"
+}

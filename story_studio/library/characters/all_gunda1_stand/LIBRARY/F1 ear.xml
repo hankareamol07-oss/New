@@ -1,0 +1,60 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="F1 ear" itemID="6308b028-00000239" symbolType="graphic" lastModified="1678706488">
+  <timeline>
+    <DOMTimeline name="F1 ear" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-177.9" ty="-92.65"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-177.9" ty="-92.65"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#E8A17E"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#B36A44"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!3674 2019S6[3751 1946 3849 1897!3849 1897[4044 1799 4150 1920!4150 1920[4211 1990 4188 2094!4188 2094[4168 2190 4085 2288!4085 2288[4004 2385 3896 2447!3896 2447[3780 2513 3674 2516!3674 2516[3633 2513 3600 2484!3600 2484[3534 2427 3571
+ 2301"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!3688 2185S7[3697 2161 3749 2134!3749 2134[#EBE.FC #848.A3 3808 2109.5!3728 2312[3773 2283 3805 2243!3805 2243[3869 2163 3808 2109.5"/>
+                        <Edge fillStyle1="1" edges="
+!3571 2301S2|3674 2019"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!3808 2109.5S7[#F43.F2 #81C.4A 4072 2065"/>
+                        <Edge cubics="!3674 2019(;3674,2019 3981,1726 4150,1920q3674 2019Q3751 1946q3849 1897Q4044 1799q4150 1920);"/>
+                        <Edge cubics="!4150 1920(;4319,2114 3967,2509 3674,2516q4150 1920Q4211 1990q4188 2094Q4168 2190q4085 2288Q4004 2385q3896 2447Q3780 2513q3674 2516);"/>
+                        <Edge cubics="!3674 2516(;3674,2516 3511,2502 3571,2301q3674 2516Q3633 2513q3600 2484Q3534 2427q3571 2301);"/>
+                        <Edge cubics="!3728 2312(;3728,2312 3906,2194 3808,2110q3728 2312Q3773 2283q3805 2243Q3869 2163q3808 2110);"/>
+                        <Edge cubics="!3688 2185(;3694,2169 3714,2152 3749,2134q3688 2185Q3697 2161q3749 2134);"/>
+                        <Edge cubics="!3749 2134(;3766,2125 3786,2117 3808,2110q3749 2134Q3775 2121p3808 2110);"/>
+                        <Edge cubics="!3808 2110(;3875,2087 3963,2072 4072,2065p3808 2110Q3908 2076q4072 2065);"/>
+                        <Edge cubics="!3571 2301(;3571,2301 3674,2019 3674,2019q3571 2301 3674 2019);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,88 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Tantrik Head" itemID="6411869d-000019ab" symbolType="graphic" lastModified="1678870173" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="Tantrik Head" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="F2_Nose_copy" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 Nose copy 6" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.02532958984375" b="0.0581207275390625" c="-0.0581207275390625" d="2.02532958984375" tx="78.6" ty="216.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.85" y="21.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Front_Top_hair" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Front Top hair" selected="true" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="15.55" ty="-47.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="156.35" y="147.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_Lips_copy" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 Lips copy 6" symbolType="graphic" centerPoint3DX="103.55" centerPoint3DY="327.65" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.02532958984375" b="0.0581207275390625" c="-0.0581207275390625" d="2.02532958984375" tx="67" ty="323.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="21.7" y="6.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_Eyes_copy" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 Eyes copy 6" symbolType="graphic" centerPoint3DX="108.2" centerPoint3DY="212.9" loop="loop">
+                  <matrix>
+                    <Matrix a="2.02532958984375" b="0.0581207275390625" c="-0.0581207275390625" d="2.02532958984375" tx="23.55" ty="176.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="42.2" y="16.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_PF_copy" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 PF copy 6" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.02532958984375" b="0.0581207275390625" c="-0.0581207275390625" d="2.02532958984375" tx="10.4" ty="32.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="68.15" y="95.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

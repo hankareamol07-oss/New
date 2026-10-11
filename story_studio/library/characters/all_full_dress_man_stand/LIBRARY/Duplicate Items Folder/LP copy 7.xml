@@ -1,0 +1,50 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/LP copy 7" itemID="64ea42e6-000049ee" lastModified="1660509767">
+  <timeline>
+    <DOMTimeline name="LP copy 7" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-62.1" ty="-18.9"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1470 493[1470 540 1437 574!1437 574[1403 607 1356 607!1356 607[1309 607 1275 574!1275 574[1242 540 1242 493!1242 493[1242 446 1275 412!1275 412[1309 378 1356 378!1356 378[1403 378 1437 412!1437 412[1470 446 1470 493"/>
+                    <Edge cubics="!1470 493(;1470,556 1419,607 1356,607q1470 493Q1470 540q1437 574Q1403 607q1356 607);"/>
+                    <Edge cubics="!1356 607(;1293,607 1242,556 1242,493q1356 607Q1309 607q1275 574Q1242 540q1242 493);"/>
+                    <Edge cubics="!1242 493(;1242,430 1293,378 1356,378q1242 493Q1242 446q1275 412Q1309 378q1356 378);"/>
+                    <Edge cubics="!1356 378(;1419,378 1470,430 1470,493q1356 378Q1403 378q1437 412Q1470 446q1470 493);"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-62.1" ty="-18.9"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1492 456[1492 475 1479 488!1479 488[1466 501 1447 501!1447 501[1428 501 1415 488!1415 488[1401 475 1401 456!1401 456[1401 437 1415 424!1415 424[1428 411 1447 411!1447 411[1466 411 1479 424!1479 424[1492 437 1492 456"/>
+                    <Edge cubics="!1492 456(;1492,481 1472,501 1447,501q1492 456Q1492 475q1479 488Q1466 501q1447 501);"/>
+                    <Edge cubics="!1447 501(;1422,501 1401,481 1401,456q1447 501Q1428 501q1415 488Q1401 475q1401 456);"/>
+                    <Edge cubics="!1401 456(;1401,431 1422,411 1447,411q1401 456Q1401 437q1415 424Q1428 411q1447 411);"/>
+                    <Edge cubics="!1447 411(;1472,411 1492,431 1492,456q1447 411Q1466 411q1479 424Q1492 437q1492 456);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

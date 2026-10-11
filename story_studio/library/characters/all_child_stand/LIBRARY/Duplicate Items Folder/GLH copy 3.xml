@@ -1,0 +1,53 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/GLH copy 3" itemID="62ff9ba2-00002c61" lastModified="1660809842">
+  <timeline>
+    <DOMTimeline name="GLH copy 3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFE3B7"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B26B51"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!319 3276[318 3039 271 2699!271 2699[177 2108 160 1898!160 1898[139 1820 130 1764!130 1764|130 1763!130 1763[51 1394 18 936!18 936[-14 483 12 139!12 139[14 104 26 0!26 0[435 192 672 588!672 588[824 846 896 1166!896 1166[1041 1829 1095
+ 2106!1095 2106[1205 2655 1226 2900!1226 2900[1232 2968 1235 3039"/>
+                        <Edge fillStyle1="1" edges="
+!1235 3039[1205 3408 852 3492!852 3492[478 3522 319 3276"/>
+                        <Edge cubics="!319 3276(;320,2832 188,2250 160,1898q319 3276Q318 3039q271 2699Q177 2108q160 1898);"/>
+                        <Edge cubics="!160 1898(;149,1856 138,1811 130,1764q160 1898Q139 1820q130 1764);"/>
+                        <Edge cubics="!130 1764(;130,1764 130,1764 130,1763q130 1764 130 1763);"/>
+                        <Edge cubics="!130 1763(;23,1267 -23,594 12,139q130 1763Q51 1394q18 936Q-14 483q12 139);"/>
+                        <Edge cubics="!12 139(;15,91 21,43 26,0q12 139Q14 104q26 0);"/>
+                        <Edge cubics="!26 0(;292,124 513,321 672,588q26 0Q435 192q672 588);"/>
+                        <Edge cubics="!672 588(;771,755 847,947 896,1166q672 588Q824 846q896 1166);"/>
+                        <Edge cubics="!896 1166(;1020,1737 1194,2524 1226,2900q896 1166Q1041 1829q1095 2106Q1205 2655q1226 2900);"/>
+                        <Edge cubics="!1226 2900(;1230,2946 1233,2993 1235,3039q1226 2900 1235 3039);"/>
+                        <Edge cubics="!852 3492(;603,3512 425,3440 319,3276q852 3492Q478 3522q319 3276);"/>
+                        <Edge cubics="!1235 3039(;1210,3183 1082,3334 852,3492q1235 3039Q1197 3255q852 3492);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

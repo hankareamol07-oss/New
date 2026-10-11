@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/GW Head" itemID="640da6e6-00000412" symbolType="graphic" lastModified="1690992329" lastUniqueIdentifier="5">
+  <timeline>
+    <DOMTimeline name="GW Head" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Mouth" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="280" keyMode="9728" rigPropagationMatrix='{"a":65213,"b":-6288,"c":6288,"d":65213,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Mouth copy 15" selected="true" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.99505615234375" b="-0.099151611328125" c="0.099151611328125" d="0.99505615234375" tx="53.1" ty="149"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="39.95" y="11.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="AM_Eyes" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="280" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/AM Eyes" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.99505615234375" b="-0.099151611328125" c="0.099151611328125" d="0.99505615234375" tx="51.45" ty="94.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Plane_Face" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="280" keyMode="9728" rigPropagationMatrix='{"a":65213,"b":-6288,"c":6288,"d":65213,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Plane Face copy 15" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.99505615234375" b="-0.099151611328125" c="0.099151611328125" d="0.99505615234375" tx="-15.65" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="75.55" y="98.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

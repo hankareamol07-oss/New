@@ -1,0 +1,78 @@
+{
+ "name": "premium_womwn_copy",
+ "label": "Womwn copy",
+ "gender": "female",
+ "pack": "PREMIUM WOMEN",
+ "rig": {
+  "root": "Duplicate Items Folder/Womwn copy",
+  "frame": 0,
+  "bounds": [
+   -64.0,
+   -16.0,
+   92.0,
+   444.0
+  ],
+  "faces": "left",
+  "head": "face",
+  "neck": [
+   4.75,
+   71.58
+  ],
+  "mouth": {
+   "Duplicate Items Folder/ajdadj copy 23": {
+    "closed": 0,
+    "mid": 6,
+    "open": 9
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eyes copy 24": {
+    "open": 0,
+    "blink": [
+     14,
+     15,
+     16,
+     17
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Layer_9",
+   "fore": null,
+   "shoulder": [
+    -19.25,
+    88.5
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "Layer_5",
+   "fore": "Layer_2",
+   "shoulder": [
+    42.75,
+    88.38
+   ],
+   "elbow": [
+    58.93,
+    144.43
+   ]
+  },
+  "legs": [
+   "Layer_15"
+  ],
+  "hips": {
+   "Layer_15": [
+    34.5,
+    197.0
+   ]
+  },
+  "feet": [
+   "Layer_10",
+   "Layer_11"
+  ],
+  "shadow": [
+   "Symbol_2"
+  ]
+ },
+ "root": "Duplicate Items Folder/Womwn copy"
+}

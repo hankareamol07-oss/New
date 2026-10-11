@@ -1,0 +1,66 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/RWH copy 5" itemID="64ea4134-00001ad9" lastModified="1669456233">
+  <timeline>
+    <DOMTimeline name="RWH copy 5" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9A285"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#A85E3F"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!129 3060|-27 3534!-27 3534[-192 4069 -232 4381!-232 4381[-121 4547 80 4634!80 4634[480 4808 920 4410!920 4410|1325 3183!1325 3183[1242 2804 1052 2601!1052 2601[670 2192 129 3060"/>
+                    <Edge cubics="!129 3060(;129,3060 -168,3883 -232,4381q129 3060Q129 3060q-27 3534Q-192 4069q-232 4381);"/>
+                    <Edge cubics="!-232 4381(;-232,4381 216,5046 920,4410q-232 4381Q-121 4547q80 4634Q480 4808q920 4410);"/>
+                    <Edge cubics="!920 4410(;920,4410 1325,3183 1325,3183q920 4410 1325 3183);"/>
+                    <Edge cubics="!1325 3183(;1325,3183 995,1671 129,3060q1325 3183Q1242 2804q1052 2601Q670 2192q129 3060);"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-500.3" ty="-75.75"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#EC7E00"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#753E00"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!10438 2553|10219 3570!10219 3570[10000 4603 10006 4684!10006 4684|10064 4740!10064 4740[10145 4808 10262 4872!10262 4872[10636 5077 11228 5161!11228 5161[11402 4801 11572 4285!11572 4285[11912 3252 11890 2468!11890 2468[11878 2017 11691
+ 1756!11691 1756[11519 1513 11265 1515!11265 1515[11007 1517 10788 1772!10788 1772[10546 2053 10438 2553"/>
+                    <Edge cubics="!10438 2553(;10438,2553 9997,4554 10006,4684q10438 2553Q10438 2553q10219 3570Q10000 4603q10006 4684);"/>
+                    <Edge cubics="!10006 4684(;10006,4684 10280,5027 11228,5161q10006 4684Q10006 4684q10064 4740Q10145 4808q10262 4872Q10636 5077q11228 5161);"/>
+                    <Edge cubics="!11228 5161(;11228,5161 11925,3722 11890,2468q11228 5161Q11402 4801q11572 4285Q11912 3252q11890 2468);"/>
+                    <Edge cubics="!11890 2468(;11856,1215 10741,1151 10438,2553q11890 2468Q11878 2017q11691 1756Q11519 1513q11265 1515Q11007 1517q10788 1772Q10546 2053q10438 2553);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

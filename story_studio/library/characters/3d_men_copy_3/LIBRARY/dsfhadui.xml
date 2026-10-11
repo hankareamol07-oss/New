@@ -1,0 +1,96 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="dsfhadui" itemID="60a53df5-0000134b" symbolType="graphic" lastModified="1621442037">
+  <timeline>
+    <DOMTimeline name="dsfhadui" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-348" ty="-415.7"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-348" ty="-415.7"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#0252C4"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#001554"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#FFB691"/>
+                        </FillStyle>
+                        <FillStyle index="4">
+                          <SolidColor color="#003075"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#15478E"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#12448C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!10539 11789S7[10539 11824 10514 11849!10514 11849[10489 11874 10454 11874!10454 11874[10419 11874 10394 11849!10394 11849[10369 11824 10369 11789!10369 11789[10369 11754 10394 11729!10394 11729[10419 11704 10454 11704!10454 11704[10489
+ 11704 10514 11729!10514 11729[10539 11754 10539 11789"/>
+                        <Edge fillStyle0="3" fillStyle1="4" strokeStyle="2" edges="
+!10945 11213S7[10918.5 11042.5 11112 10932!11112 10932[#2F56.76 #2986.4E 12256 10014!9396 9606[#23AA.D1 #2741.C1 9712 10525!9712 10525[#2771.81 #2A14.CD 10483 10856!10483 10856[#2988.8D #2B24.9B 10597 11182"/>
+                        <Edge fillStyle0="4" strokeStyle="2" edges="
+!12538 10127S5[#308A.4A #274B.C3 12256 10014"/>
+                        <Edge fillStyle1="3" strokeStyle="2" edges="
+!9396 9606S6[#2534.FC #25B2.EA 9693 9528!9693 9528[#2753.0E #231E.49 10160 8314!10160 8314|11538 8477!11538 8477[#2C97.57 #2477.2F 11927 9960!11927 9960[#2F48.A6 #26F5.19 12256 10014"/>
+                        <Edge fillStyle0="4" fillStyle1="1" strokeStyle="2" edges="
+!10945 11213S7[#2F8A.C7 #2B72.BD 12538 10127"/>
+                        <Edge fillStyle0="4" strokeStyle="2" edges="
+!9396 9606S5|9174 9686!9174 9686[#23AE.43 #25E3.3B 9122 9743"/>
+                        <Edge fillStyle1="1" strokeStyle="2" edges="
+!7708 13003S6|7708 10229!7708 10229[#2085.9 #26E9.DA 9122 9743"/>
+                        <Edge fillStyle0="4" fillStyle1="1" strokeStyle="2" edges="
+!9122 9743S7[#2328.5C #27D2.5C 9298 10589!9298 10589[#2646.13 #2B7A.D 10597 11182!7619 16009[#1E5B.C3 #40D8.EF 8092 17080!8092 17080[#1F7A.03 #41A1.2E 8184 16578!8184 16578[#21D9.B8 #439C.B 9590 17242!9590 17242[#2182.CB #40F9.5B 8177
+ 15443!8177 15443[8578.5 #3D87.21 8980 15783!8980 15783[#210E.E1 #3B5F.DD 8285 14493!8285 14493[#21D6.36 #39CF.C7 9011 14833!9011 14833[#2034.0C #367A.64 7708 13003"/>
+                        <Edge fillStyle1="4" strokeStyle="2" edges="
+!7619 16009S6[#1E1A.43 #3AF2.FE 7708 14153!7708 14153|7708 13003"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!10615 12472S7[10615 12513 10586 12542!10586 12542[10557 12571 10516 12571!10516 12571[10475 12571 10446 12542!10446 12542[10417 12513 10417 12472!10417 12472[10417 12431 10446 12402!10446 12402[10475 12373 10516 12373!10516 12373[10557
+ 12373 10586 12402!10586 12402[10615 12431 10615 12472"/>
+                        <Edge fillStyle0="3" fillStyle1="1" strokeStyle="2" edges="
+!10597 11182S7|10728 12469!10728 12469|10789 12469!10789 12469|10945 11213"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!10664 13027S7[10664 13067 10635 13095!10635 13095[10607 13124 10567 13124!10567 13124[10527 13124 10498 13095!10498 13095[10470 13067 10470 13027!10470 13027[10470 12987 10498 12958!10498 12958[10527 12930 10567 12930!10567 12930[10607
+ 12930 10635 12958!10635 12958[10664 12987 10664 13027"/>
+                        <Edge fillStyle1="1" strokeStyle="2" edges="
+!7516.5 16878S6[#1D99.5B #403D.BA 7619 16009"/>
+                        <Edge fillStyle1="4" strokeStyle="2" edges="
+!7037 19739S6[#1BCC.5E #4A1A.36 7278 18219!7278 18219[#1CFC.E #4492.02 7516.5 16878"/>
+                        <Edge fillStyle0="4" fillStyle1="1" strokeStyle="2" edges="
+!7037 19739S7[#20D7.0A #4F4F.1C 9543 19644!9543 19644[#2128.3A #4C68.DB 7806 18965!7806 18965[#2132.C6 #4A25.16 9165 18818!9165 18818[#1FDF.04 #467D.5E 7516.5 16878"/>
+                        <Edge fillStyle1="1" strokeStyle="2" edges="
+!12538 10127S6[#336A.0F #28FD.22 13126 11513!13126 11513[#33CC.11 #3839.B6 12846 16909!12846 16909[#332E.F1 #434E.F8 12964 17526!12964 17526[#3253.BF #451D.DF 12959 18137!12959 18137[#32B6.04 #475E.8F 13095.5 18449.5!13095.5 18449.5[#3398.F2
+ #48C4.76 13212 18716!13212 18716[#3459.65 #4E1E.37 13266 21299!13266 21299[#2F9B.27 #5765.F2 8037 21763!8037 21763[#1CA2.FA #549F.BD 6960 21299!6960 21299[#1B2D.1B #501E.28 7037 19739"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

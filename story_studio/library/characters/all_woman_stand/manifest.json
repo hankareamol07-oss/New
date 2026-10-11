@@ -1,0 +1,86 @@
+{
+ "name": "all_woman_stand",
+ "label": "Woman Stand",
+ "gender": "female",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Woman Stand",
+  "frame": 0,
+  "bounds": [
+   508.0,
+   156.0,
+   912.0,
+   1132.0
+  ],
+  "faces": "right",
+  "head": "W_Head",
+  "neck": [
+   694.25,
+   377.94
+  ],
+  "mouth": {
+   "Mouth": {
+    "closed": 16,
+    "mid": 4,
+    "open": 20
+   }
+  },
+  "eyes": {
+   "Eyes": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/Left Eyebrow copy 2": {
+    "open": 0,
+    "blink": []
+   },
+   "Duplicate Items Folder/Right Eyebrow copy 2": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "W_LHand",
+   "fore": "W_LHand2",
+   "shoulder": [
+    752.25,
+    434.34
+   ],
+   "elbow": [
+    763.04,
+    547.17
+   ]
+  },
+  "arm_back": {
+   "upper": "W_RHand",
+   "fore": "W_RHand2",
+   "shoulder": [
+    594.5,
+    417.38
+   ],
+   "elbow": [
+    582.0,
+    535.8
+   ]
+  },
+  "legs": [
+   "W_Saree"
+  ],
+  "hips": {
+   "W_Saree": [
+    706.25,
+    590.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Woman Stand"
+}

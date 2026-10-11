@@ -1,0 +1,58 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/FDM REyebrow" itemID="64ea42fe-00004e1d" symbolType="graphic" lastModified="1672236958">
+  <timeline>
+    <DOMTimeline name="FDM REyebrow" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-2.3" ty="-14.85"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-2.3" ty="-14.85"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#0F0F0F"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!385 348S5[280 281 184 302!184 302[97 322 46 405"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!46 405S5[134 359 221 394!221 394[252 407 290 434!290 434[312 448 352 477!352 477[452 546 483 562!483 562[555 600 602 587!602 587[644 576 669 537!669 537|683 500"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!683 500S5[605 502 525 449!525 449[436 380 385 348"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!683 500S3[602 560 508 511!508 511[477 495 429 458!429 458[372 416 352 403!352 403[248 338 172 343!172 343[109 348 46 405"/>
+                        <Edge cubics="!385 348(;238,255 111,301 46,405q385 348Q280 281q184 302Q97 322q46 405);"/>
+                        <Edge cubics="!46 405(;183,334 274,425 352,477q46 405Q134 359q221 394Q252 407q290 434Q312 448q352 477);"/>
+                        <Edge cubics="!352 477(;438,537 530,607 602,587q352 477Q452 546q483 562Q555 600q602 587);"/>
+                        <Edge cubics="!602 587(;670,569 683,500 683,500q602 587Q644 576q669 537Q683 500q683 500);"/>
+                        <Edge cubics="!683 500(;558,503 488,412 385,348q683 500Q605 502q525 449Q436 380q385 348);"/>
+                        <Edge cubics="!352 403(;204,310 121,337 46,405q352 403Q248 338q172 343Q109 348q46 405);"/>
+                        <Edge cubics="!683 500(;554,595 455,467 352,403q683 500Q602 560q508 511Q477 495q429 458Q372 416q352 403);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

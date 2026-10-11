@@ -1,0 +1,91 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/GBH1 copy 3" itemID="62ff9ba2-00002c57" lastModified="1660727452">
+  <timeline>
+    <DOMTimeline name="GBH1 copy 3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-16.4"/>
+                  </matrix>
+                  <members>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="1.2080078125" d="1.2080078125" tx="-950.1" ty="-103.6"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <RadialGradient>
+                            <matrix>
+                              <Matrix a="0.232421875" d="-0.232421875" tx="856.2" ty="122.5"/>
+                            </matrix>
+                            <GradientEntry color="#484241" ratio="0"/>
+                            <GradientEntry color="#383432" ratio="1"/>
+                          </RadialGradient>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!21211 4571[21110 4809 20850 5084!20850 5084[20605 5344 20442 5409!20442 5409[20414 5471 20253 5894!20253 5894[20109 6273 20033 6418!20033 6418[20025 6197 20018 6058!20018 6058[20007 5805 19991 5626!19991 5626[19975 5441 19845 5298!19845
+ 5298[19792 5239 19575 5070!19575 5070[19379 4916 19279 4782!19279 4782[19124 4573 19102 4314!19102 4314[19080 4056 18928 3987!18928 3987[18867 3959 18754 3944!18754 3944[18612 3928 18529 3916!18529 3916[18309 3883 17533 3902!17533 3902
+[16906 3918 16461 3948!16461 3948[16355 3956 16246 3981!16246 3981[16132 4011 16081 4023!16081 4023[15904 4064 15730 4011!15730 4011[15799 3675 15941 3363!15941 3363[16002 3225 16094 3069!16094 3069[16454 2465 17038 2119!17038 2119[17714
+ 1719 18616 1715!18616 1715[19455 1711 20057 2181!20057 2181[20572 2582 20881 3296!20881 3296[21135 3882 21211 4571"/>
+                        <Edge cubics="!21211 4571(;21070,4904 20646,5327 20442,5409q21211 4571Q21110 4809q20850 5084Q20605 5344q20442 5409);"/>
+                        <Edge cubics="!20442 5409(;20352,5608 20165,6166 20033,6418q20442 5409Q20414 5471q20253 5894Q20109 6273q20033 6418);"/>
+                        <Edge cubics="!20033 6418(;20025,6230 20016,5909 19991,5626q20033 6418Q20025 6197q20018 6058Q20007 5805q19991 5626);"/>
+                        <Edge cubics="!19991 5626(;19966,5344 19766,5219 19575,5070q19991 5626Q19975 5441q19845 5298Q19792 5239q19575 5070);"/>
+                        <Edge cubics="!19575 5070(;19384,4920 19135,4704 19102,4314q19575 5070Q19379 4916q19279 4782Q19124 4573q19102 4314);"/>
+                        <Edge cubics="!19102 4314(;19069,3923 18861,3965 18529,3916q19102 4314Q19080 4056q18928 3987Q18867 3959q18754 3944Q18612 3928q18529 3916);"/>
+                        <Edge cubics="!18529 3916(;18197,3866 16894,3919 16461,3948q18529 3916Q18309 3883q17533 3902Q16906 3918q16461 3948);"/>
+                        <Edge cubics="!16461 3948(;16122,3972 16029,4102 15730,4011q16461 3948Q16355 3956q16246 3981Q16132 4011q16081 4023Q15904 4064q15730 4011);"/>
+                        <Edge cubics="!15730 4011(;15774,3798 15843,3579 15941,3363q15730 4011Q15799 3675q15941 3363);"/>
+                        <Edge cubics="!15941 3363(;15985,3264 16037,3166 16094,3069q15941 3363Q16002 3225q16094 3069);"/>
+                        <Edge cubics="!16094 3069(;16531,2335 17334,1721 18616,1715q16094 3069Q16454 2465q17038 2119Q17714 1719q18616 1715);"/>
+                        <Edge cubics="!18616 1715(;19216,1712 19688,1893 20057,2181q18616 1715Q19455 1711q20057 2181);"/>
+                        <Edge cubics="!20057 2181(;20803,2762 21123,3776 21211,4571q20057 2181Q20572 2582q20881 3296Q21135 3882q21211 4571);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMSymbolInstance libraryItemName="Duplicate Items Folder/&amp;#060Path&amp;#062_2_2 copy 3" blendMode="screen">
+                      <matrix>
+                        <Matrix a="1.2080078125" d="1.2080078125" tx="186.2" ty="42.7"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="30.2" y="19.3"/>
+                      </transformationPoint>
+                      <color>
+                        <Color alphaMultiplier="0.3984375"/>
+                      </color>
+                    </DOMSymbolInstance>
+                    <DOMSymbolInstance libraryItemName="Duplicate Items Folder/&amp;#060Path&amp;#062_1_6 copy 3" blendMode="screen">
+                      <matrix>
+                        <Matrix a="1.2080078125" d="1.2080078125" tx="11.8" ty="80.4"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="17.35" y="11.8"/>
+                      </transformationPoint>
+                      <color>
+                        <Color alphaMultiplier="0.3984375"/>
+                      </color>
+                    </DOMSymbolInstance>
+                    <DOMSymbolInstance libraryItemName="Duplicate Items Folder/&amp;#060Path&amp;#062_18 copy 3" blendMode="multiply">
+                      <matrix>
+                        <Matrix a="1.2080078125" d="1.2080078125" tx="43.25" ty="26.75"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="119.3" y="106.6"/>
+                      </transformationPoint>
+                      <color>
+                        <Color alphaMultiplier="0.3984375"/>
+                      </color>
+                    </DOMSymbolInstance>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,49 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Left Mooch copy 15" itemID="631ca828-0000184e" lastModified="1678558898">
+  <timeline>
+    <DOMTimeline name="Left Mooch copy 15" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-203.85" ty="-155"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#100600"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.5" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!4770 3365[4734 3396 4693 3410!4693 3410[4611 3438 4587 3355!4587 3355[4553 3240 4523 3204!4523 3204[4480 3151 4379 3145!4379 3145[4348 3143 4216 3105!4216 3105[4149 3086 4097 3137!4097 3137[4093 3148 4085 3149!4085 3149[4075 3151 4077
+ 3162!4077 3162[4079 3168 4085 3170!4085 3170[4094 3173 4102 3186!4102 3186[4103 3187 4122 3222!4122 3222[4133 3242 4162 3261!4162 3261[4180 3273 4234 3305!4234 3305[4237 3307 4305 3374!4305 3374[4368 3436 4423 3465!4423 3465[4601 3558
+ 4770 3365"/>
+                    <Edge cubics="!4770 3365(;4770,3365 4626,3488 4587,3355q4770 3365Q4734 3396q4693 3410Q4611 3438q4587 3355);"/>
+                    <Edge cubics="!4587 3355(;4548,3223 4525,3154 4379,3145q4587 3355Q4553 3240q4523 3204Q4480 3151q4379 3145);"/>
+                    <Edge cubics="!4379 3145(;4233,3137 4185,3050 4097,3137q4379 3145Q4348 3143q4216 3105Q4149 3086q4097 3137);"/>
+                    <Edge cubics="!4097 3137(;4097,3137 4093,3148 4085,3149q4097 3137Q4093 3148q4085 3149);"/>
+                    <Edge cubics="!4085 3149(;4079,3150 4076,3156 4077,3162q4085 3149Q4075 3151q4077 3162);"/>
+                    <Edge cubics="!4077 3162(;4078,3166 4081,3169 4085,3170q4077 3162Q4079 3168q4085 3170);"/>
+                    <Edge cubics="!4085 3170(;4099,3175 4105,3191 4122,3222q4085 3170Q4094 3173q4102 3186Q4103 3187q4122 3222);"/>
+                    <Edge cubics="!4122 3222(;4139,3253 4173,3266 4234,3305q4122 3222Q4133 3242q4162 3261Q4180 3273q4234 3305);"/>
+                    <Edge cubics="!4234 3305(;4294,3344 4500,3672 4770,3365q4234 3305Q4237 3307q4305 3374Q4368 3436q4423 3465Q4601 3558q4770 3365);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

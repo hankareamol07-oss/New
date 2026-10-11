@@ -1,0 +1,86 @@
+{
+ "name": "premium_symbol_1_copy",
+ "label": "Symbol 1 copy",
+ "gender": "female",
+ "pack": "PREMIUM WOMEN",
+ "rig": {
+  "root": "Duplicate Items Folder/Symbol 1 copy",
+  "frame": 0,
+  "bounds": [
+   -64.0,
+   -24.0,
+   92.0,
+   444.0
+  ],
+  "faces": "left",
+  "head": "face",
+  "neck": [
+   5.75,
+   70.1
+  ],
+  "mouth": {
+   "Duplicate Items Folder/ajdadj copy 16": {
+    "closed": 0,
+    "mid": 6,
+    "open": 9
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eyes copy 18": {
+    "open": 0,
+    "blink": [
+     14,
+     15,
+     16,
+     17
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Layer_9",
+   "fore": "Layer_8",
+   "shoulder": [
+    -18.25,
+    96.52
+   ],
+   "elbow": [
+    -22.72,
+    159.95
+   ]
+  },
+  "arm_back": {
+   "upper": "Layer_5",
+   "fore": "Layer_2",
+   "shoulder": [
+    42.75,
+    88.38
+   ],
+   "elbow": [
+    58.9,
+    144.43
+   ]
+  },
+  "legs": [
+   "Layer_16",
+   "Layer_15"
+  ],
+  "hips": {
+   "Layer_16": [
+    -3.75,
+    193.5
+   ],
+   "Layer_15": [
+    34.5,
+    197.0
+   ]
+  },
+  "feet": [
+   "Layer_10",
+   "Layer_11"
+  ],
+  "shadow": [
+   "Symbol_2"
+  ]
+ },
+ "root": "Duplicate Items Folder/Symbol 1 copy"
+}

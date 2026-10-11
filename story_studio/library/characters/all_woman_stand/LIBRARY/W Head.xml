@@ -1,0 +1,165 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="W Head" itemID="640dec26-00005370" symbolType="graphic" lastModified="1678634022" lastUniqueIdentifier="24">
+  <timeline>
+    <DOMTimeline name="W Head" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Mouth" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Mouth" symbolType="graphic" centerPoint3DX="115.95" centerPoint3DY="172.95" loop="single frame">
+                  <matrix>
+                    <Matrix a="-0.198287963867188" d="0.198287963867188" tx="142.8" ty="170.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="126.35" y="39.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Eyes" color="#00FFFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Eyes" selected="true" symbolType="graphic" centerPoint3DX="125.05" centerPoint3DY="111.75" loop="play once">
+                  <matrix>
+                    <Matrix a="-0.278228759765625" d="0.278228759765625" tx="187.8" ty="93.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="225.55" y="66.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="SHair" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SHair" symbolType="graphic" loop="play once">
+                  <matrix>
+                    <Matrix tx="164.8" ty="107.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="4.95" y="34.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="LHair" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="LHair" symbolType="graphic" loop="play once">
+                  <matrix>
+                    <Matrix tx="55.65" ty="41.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="22.3" y="63.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Bindi" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Bindi">
+                  <matrix>
+                    <Matrix a="0.433334350585938" d="0.433334350585938" tx="117.25" ty="90.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="6" y="6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Nose" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Nose">
+                  <matrix>
+                    <Matrix tx="118.85" ty="103.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="8.45" y="23.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="REar" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="REar">
+                  <matrix>
+                    <Matrix tx="19.7" ty="117.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.95" y="24.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Plan_Face" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Plan Face">
+                  <matrix>
+                    <Matrix tx="19.7" ty="36.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="81.65" y="85.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Head_Hair" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Head Hair">
+                  <transformationPoint>
+                    <Point x="93.3" y="89.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="LEar" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="LEar">
+                  <matrix>
+                    <Matrix tx="161.4" ty="111.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="9.55" y="26.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

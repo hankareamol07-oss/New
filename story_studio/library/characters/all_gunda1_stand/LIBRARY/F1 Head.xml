@@ -1,0 +1,85 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="F1 Head" itemID="6308aa5f-000001d2" symbolType="graphic" lastModified="1669669303" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="F1 Head" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="F1_ear" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="F1 ear">
+                  <matrix>
+                    <Matrix tx="129.25" ty="116.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.9" y="16.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F1_Nose" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="F1 Nose" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="38.15" ty="78.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="11" y="34.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F1_Eyes" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="F1 Eyes" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="9.85" ty="81.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="46.1" y="22.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F1_Lips" color="#FF0000" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="F1 Lips" selected="true" symbolType="graphic" centerPoint3DX="36.2" centerPoint3DY="171.95" loop="single frame">
+                  <matrix>
+                    <Matrix a="-1" tx="154" ty="150.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="74.55" y="99.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F1_PF" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="F1 PF">
+                  <transformationPoint>
+                    <Point x="79.95" y="99.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

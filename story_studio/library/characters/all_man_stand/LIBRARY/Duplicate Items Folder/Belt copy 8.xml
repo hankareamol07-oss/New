@@ -1,0 +1,59 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Belt copy 8" itemID="63b97ec9-00000afb" symbolType="graphic" lastModified="1672763225">
+  <timeline>
+    <DOMTimeline name="Belt copy 8" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-385.3" ty="-848.55"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-385.3" ty="-848.55"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#303030"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!10998 17498.5S7[#2AAB.C1 #4526.4 10964 17906!10964 17906|11024 17906!11024 17906[#2B1C.A9 #4600.34 11049.5 17931.5"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!12022 17931S6[#2C75.4E #46A4.13 11101 17967!11101 17967[#2B43.29 #4623.0D 11049.5 17931.5"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!12022 17931S5[#2EFD.FA #4608.F3 12038 17927!12038 17927[#30FF.4C #45CA.1A 12995 17768"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!12093 17411.5S7[#2F74.91 #453B.9 12022 17931"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!10998 17498.5S6[#2D22.0E #444C.06 12093 17411.5"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!9139.5 17983.5S7[#23B6.31 #4638.5C 9145 17969!9145 17969[#23B1.DF #4513.A 9216 17437!9216 17437|9590 17483!9590 17483[#2523.87 #4547.38 9459.5 17996"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!9459.5 17996S6[#24DA.A8 #46D2.6 9419 18267!9419 18267[#24A7.2C #47C0.5 9145 18301!9145 18301[#2351.E5 #4748.05 9139.5 17983.5"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!9139.5 17983.5S6[#211C.D3 17948.5 7830 17838!7830 17838[#1D9D.9E #44F0.86 7830 17069!7830 17069[#21FD.6F #43D4.16 9637 17450!9637 17450[#2859.E8 #446C.06 10998 17498.5"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!9459.5 17996S5[#2803.7E #465F.F9 11049.5 17931.5"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!12995 17768S7[#32C9.4F #4558.07 13009 17735!13009 17735[#32D4.4F #4452.D 13097 17266!13097 17266|13331 17214!13331 17214[#3455.5B #43FC.AB 13353 17647!13353 17647[#342A.6F #4500.AF 13355.5 17681.5"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!12093 17411.5S6[#32FC.35 17283 13957 16971!13957 16971[#36F7.75 17233 13957 17495!13957 17495[#3566.8D #44BE.36 13355.5 17681.5"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!13355.5 17681.5S6[#3439.C9 #4618.22 13258 17976!13258 17976[13160.5 #464A.69 13063 17976!13063 17976[#327B.74 #4620.CF 12995 17768"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

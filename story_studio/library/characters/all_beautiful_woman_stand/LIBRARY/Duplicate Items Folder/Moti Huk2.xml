@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Moti Huk2" itemID="6318bd48-0000124a" lastModified="1647885888">
+  <timeline>
+    <DOMTimeline name="Moti Huk2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-204.4" ty="-154.2"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#707D91"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.25" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#4A505B"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!4112 3278|4125 3304!4125 3304[4143 3331 4168 3336!4168 3336[4206 3345 4241 3312!4241 3312[4283 3273 4274 3202!4274 3202[4265 3136 4216 3121!4216 3121|4168 3118!4168 3118|4168 3087!4168 3087|4190 3084!4190 3084[4216 3082 4238 3090!4238
+ 3090[4308 3115 4308 3227!4308 3227[4308 3291 4276 3337!4276 3337[4248 3380 4206 3390!4206 3390[4163 3400 4131 3370!4131 3370[4095 3338 4088 3267!4088 3267|4112 3278"/>
+                    <Edge cubics="!4112 3278(;4112,3278 4128,3328 4168,3336q4112 3278Q4112 3278q4125 3304Q4143 3331q4168 3336);"/>
+                    <Edge cubics="!4168 3336(;4208,3345 4288,3308 4274,3202q4168 3336Q4206 3345q4241 3312Q4283 3273q4274 3202);"/>
+                    <Edge cubics="!4274 3202(;4260,3097 4168,3118 4168,3118q4274 3202Q4265 3136q4216 3121Q4168 3118q4168 3118);"/>
+                    <Edge cubics="!4168 3118(;4168,3118 4168,3087 4168,3087q4168 3118 4168 3087);"/>
+                    <Edge cubics="!4168 3087(;4168,3087 4308,3047 4308,3227q4168 3087Q4168 3087q4190 3084Q4216 3082q4238 3090Q4308 3115q4308 3227);"/>
+                    <Edge cubics="!4308 3227(;4308,3407 4108,3467 4088,3267q4308 3227Q4308 3291q4276 3337Q4248 3380q4206 3390Q4163 3400q4131 3370Q4095 3338q4088 3267);"/>
+                    <Edge cubics="!4088 3267(;4088,3267 4112,3278 4112,3278q4088 3267 4112 3278);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

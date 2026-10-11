@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/King Dowb Dhoti" itemID="63d288ba-0000092a" lastModified="1661533288">
+  <timeline>
+    <DOMTimeline name="King Dowb Dhoti" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="King_D" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/King D">
+                  <matrix>
+                    <Matrix tx="-0.35" ty="-0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="174.95" y="73.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="King_Latkun_" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/King Latkun'">
+                  <matrix>
+                    <Matrix tx="134.05" ty="137.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="46" y="98.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

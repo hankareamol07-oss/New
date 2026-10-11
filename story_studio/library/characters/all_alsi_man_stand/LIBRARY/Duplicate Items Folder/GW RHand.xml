@@ -1,0 +1,58 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/GW RHand" itemID="640da690-000003f4" symbolType="graphic" lastModified="1690991732">
+  <timeline>
+    <DOMTimeline name="GW RHand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <transformationPoint>
+                    <Point x="40.7" y="10.95"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <transformationPoint>
+                        <Point x="40.7" y="10.95"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#EA915F"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A5592E"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!177 1610|695 3069!695 3069|881 3928!881 3928[#3C1.18 #10AC.29 1420.5 4153.5!1420.5 4153.5[#757.BF #FC6.9D 1928.5 3889!1928.5 3889[#7B9.53 3739.5 1942 3639!1942 3639|1797 2758!1797 2758[#5E1.B4 #5F6.21 1467.5 1098.5!1467.5 1098.5[#595.27
+ #29F.01 1090 370"/>
+                        <Edge fillStyle0="1" edges="
+!1090 370[#3AF.2D #111.D5 595 431!595 431[#F6.E #24C.2D 177 1610"/>
+                        <Edge cubics="!695 3069(;695,3069 881,3928 881,3928q695 3069 881 3928);"/>
+                        <Edge cubics="!177 1610(;177,1610 695,3069 695,3069q177 1610 695 3069);"/>
+                        <Edge cubics="!1090 370(;992,306 827,326 595,431q1090 370Q943 274q595 431);"/>
+                        <Edge cubics="!595 431(;363,536 224,929 177,1610q595 431Q247 588q177 1610);"/>
+                        <Edge cubics="!1468 1099(;1442,814 1316,571 1090,370q1468 1099Q1429 671q1090 370);"/>
+                        <Edge cubics="!1797 2758(;1603,1937 1493,1384 1468,1099q1797 2758Q1506 1526q1468 1099);"/>
+                        <Edge cubics="!1913 3903(;1932,3778 1941,3690 1942,3639q1913 3903Q1941 3716q1942 3639);"/>
+                        <Edge cubics="!1942 3639(;1942,3639 1797,2758 1797,2758q1942 3639 1797 2758);"/>
+                        <Edge cubics="!1423 4179(;1730,4120 1894,4028 1913,3903q1423 4179Q1884 4090q1913 3903);"/>
+                        <Edge cubics="!881 3928(;934,4155 1115,4238 1423,4179q881 3928Q961 4268q1423 4179);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

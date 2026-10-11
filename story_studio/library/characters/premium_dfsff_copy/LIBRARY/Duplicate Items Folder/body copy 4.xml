@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/body copy 4" itemID="6090232a-00000c67" symbolType="graphic" lastModified="1620057622">
+  <timeline>
+    <DOMTimeline name="body copy 4" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAC8AC"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#BD6A56"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!0 2594S6|1730 1534!1730 1534[2217 862 2399 0!2399 0|4077 0!4077 0[4076 849 3923 1657!3923 1657|6095 2604"/>
+                        <Edge fillStyle1="1" edges="!1040 4056S2|0 2594!6095 2604|5961 4118"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!1040 4056S5|1689 8756!1689 8756[1719 9879 1030 11281!1030 11281[497 12528 451 13372!451 13372|6850 13372!6850 13372|6414 11633!6414 11633[6148 10303 5961 8740!5961 8740|5961 4118"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
