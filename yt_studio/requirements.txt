@@ -7,3 +7,5 @@ google-auth>=2.20
 google-auth-oauthlib>=1.2
 google-auth-httplib2>=0.2
 yt-dlp
+skia-python>=87.0
+lxml>=4.9

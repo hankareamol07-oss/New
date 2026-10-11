@@ -24,7 +24,8 @@ from ytstudio.slides import Renderer
 cfg = auto.load_cfg()
 st = auto.open_state(cfg)
 
-TEACHERS = [("शिक्षिका (तुमचा अवतार)", "teacher_f"), ("शिक्षक (तुमचा अवतार)", "teacher_m"),
+TEACHERS = [("शिक्षिका - साडी (FLA अ‍ॅनिमेटेड)", "teacher_v"),
+    ("शिक्षिका (तुमचा अवतार)", "teacher_f"), ("शिक्षक (तुमचा अवतार)", "teacher_m"),
             ("शिक्षिका - जुना (teacher2)", "teacher2"), ("शिक्षक - जुना (teacher3)", "teacher3"), ("अवतार नाही (फक्त स्लाइड)", "none")]
 THEMES = [("विषयानुसार (auto)", "auto"), ("गणित - निळा grid", "math"), ("विज्ञान - हिरवा lab", "science"),
           ("मराठी - warm paper", "marathi"), ("हिंदी", "hindi"), ("English - classic", "english"), ("इतिहास - parchment", "history"),

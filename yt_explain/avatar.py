@@ -15,6 +15,7 @@ import struct
 import subprocess
 
 import rig
+import vrig
 
 from PIL import Image, ImageDraw
 
@@ -371,7 +372,10 @@ def _sprite_name(cfg):
 
 
 def figure_height(cfg):
-    return PRO_HEIGHT if _sprite_name(cfg) else HEIGHT
+    name = _sprite_name(cfg)
+    if name in vrig.RIGS:
+        return int(PRO_HEIGHT * 1.35)   # slim full-body vector figure: a bit taller so the face stays readable
+    return PRO_HEIGHT if name else HEIGHT
 
 
 _CACHE = {}
@@ -383,7 +387,9 @@ def _teacher(cfg):
     if name:
         if name not in _CACHE:
             sheet = os.path.exists(os.path.join(ASSETS, name, "manifest.json"))
-            if name in rig.RIG and av.get("rig", True):
+            if name in vrig.RIGS:
+                _CACHE[name] = vrig.VRig(name, figure_height(cfg), flip=av.get("flip"))
+            elif name in rig.RIG and av.get("rig", True):
                 _CACHE[name] = rig.Rig(name, PRO_HEIGHT)
             else:
                 _CACHE[name] = (Sheet if sheet else Sprite)(name, flip=av.get("flip"))
@@ -415,7 +421,7 @@ def clip(cfg, slide_png, pose, secs, audio, out_mp4, size):
     slide = Image.open(slide_png)
     portrait = slide.height > slide.width
     teacher = _teacher(cfg)
-    if isinstance(teacher, rig.Rig):
+    if isinstance(teacher, (rig.Rig, vrig.VRig)):
         return _clip_rig(cfg, teacher, slide_png, pose, secs, audio, out_mp4, size, portrait)
     if isinstance(teacher, Sheet):
         return _clip_sheet(cfg, teacher, slide, slide_png, pose, secs, audio, out_mp4, size, portrait)
