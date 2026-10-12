@@ -412,6 +412,8 @@ def speak(cfg, text, out, lang, log=print):
             pass
         except (requests.RequestException, KeyError, subprocess.CalledProcessError) as e:
             log(f"  [tts] gemini failed ({str(e)[:80]}), falling back to edge-tts")
+    if lang == "en" and re.search(r"[\u0900-\u097f]", text):   # bilingual English+Marathi narration: the Marathi voice reads both
+        lang = "mr"
     voice = cfg["voices"].get(lang, cfg["voices"]["en"])
     for attempt in range(3):
         try:

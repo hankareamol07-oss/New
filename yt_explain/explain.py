@@ -43,7 +43,7 @@ import avatar
 SYSTEM = """You are an expert Maharashtra State Board teacher and instructional designer making the BEST possible explanation
 video of ONE topic for std 1-8 students watching alone on YouTube. Output STRICT JSON only.
 Rules (evidence-based video design):
-- Narration ("say") ONLY in the language named under LANGUAGE below (English-medium chapters: English throughout), conversational, warm, addressing the student as तुम्ही/तुम/you, age-appropriate words.
+- Narration ("say") in the language(s) named under LANGUAGE below, conversational, warm, addressing the student as तुम्ही/तुम/you, age-appropriate words.
 - ONE idea per step: each step = one short bullet (<= 90 chars, key term first) + 25-50 spoken words that explain exactly that bullet.
 - Every concept gets a concrete example from a Maharashtra child's daily life (home, school, farm, market, festival, cricket).
 - Include one worked example (step by step) and one "common mistake" segment with the correction.
@@ -61,9 +61,15 @@ Rules (evidence-based video design):
   (e.g. अनवांछित, मिट्टी, घुलणे, बिन) or Hindi grammar. Hindi must likewise be standard textbook Hindi."""
 
 LANG_RULES = {
-    "en": "LANGUAGE: This is an ENGLISH-MEDIUM chapter. EVERY field - title, section headings, bullets, 'say', questions, answers, "
-          "common-mistake text, summary - must be in natural Indian-classroom ENGLISH only. Do NOT write any Marathi/Hindi/Devanagari "
-          "words (no बघा / लक्षात घ्या / सामान्य चूक - use 'look', 'remember', 'common mistake'). Address the student as 'you'.",
+    "en": "LANGUAGE: This is an ENGLISH-MEDIUM chapter. Title, section headings, bullets, questions, answers, summary - everything SHOWN "
+          "on the slides - in simple Indian-classroom ENGLISH (short sentences, everyday words a rural std-{std} child knows; textbook "
+          "terms kept as in the book). Address the student as 'you'.",
+    "en_mix": "LANGUAGE: This is an ENGLISH-MEDIUM chapter taught to MARATHI-speaking rural students. Everything SHOWN on the slides "
+          "(title, headings, bullets, questions, answers, summary) in simple English, textbook terms exactly as in the book. "
+          "Every SPOKEN 'say' (and say_q/say_a) is BILINGUAL the way a village teacher explains: first read the English key sentence / term "
+          "slowly, then explain its meaning in simple spoken Marathi (मराठीत समजावून सांगा), repeating the English term inside the Marathi "
+          "sentence (e.g. 'Light travels in a straight line. म्हणजे प्रकाश सरळ रेषेत जातो, वाकडा जात नाही. straight line म्हणजे सरळ रेषा.'). "
+          "Roughly 40% English / 60% Marathi, very short sentences, no difficult English words, numbers as digits.",
     "hi": "LANGUAGE: सब कुछ (शीर्षक, बुलेट, 'say', प्रश्न) केवल मानक पाठ्यपुस्तक हिंदी में; मराठी या अंग्रेज़ी वाक्य नहीं।",
     "mr": "LANGUAGE: सर्व मजकूर (शीर्षक, बुलेट, 'say', प्रश्न) फक्त शुद्ध बालभारती मराठीत; हिंदी/इंग्रजी वाक्ये नकोत.",
 }
@@ -166,7 +172,8 @@ def generate(cfg, u, meta, text, questions, log=print, figures=None):
     is_poem = bool(meta.get("is_poem"))
     qtxt = "\n".join(json.dumps({"q": q["text"], "type": q.get("qtype"), "answer": q.get("answer", "")}, ensure_ascii=False) for q in questions[:25]) or "(none)"
     def prompt(n):
-        return PROMPT.format(lang_rule=LANG_RULES.get(u["lang"], LANG_RULES["mr"]), style=style, std=u["std"], subject=u["subject"], subject_mr=SUBJECT_MR.get(u["subject"], meta.get("tachan_subject", u["subject"])),
+        rule = "en_mix" if u["lang"] == "en" and (cfg.get("en_narration") or "mix") == "mix" else u["lang"]
+        return PROMPT.format(lang_rule=LANG_RULES.get(rule, LANG_RULES["mr"]).replace("{std}", str(u["std"])), style=style, std=u["std"], subject=u["subject"], subject_mr=SUBJECT_MR.get(u["subject"], meta.get("tachan_subject", u["subject"])),
                              seq=meta.get("tachan_seq"), topic=u["title"], lang_name=LANG_NAME.get(u["lang"], u["lang"]),
                              channel=cfg["channel_name"], tagline=cfg["channel_tagline"], lo=meta.get("learning_outcome", ""), act=meta.get("activity", ""),
                              poem_note=POEM_NOTE if is_poem else "", text=(text or "(no textbook text - explain the learning outcome with activities)")[:n],
@@ -503,7 +510,7 @@ def run(cfg, u, meta, text, questions, out_dir, upload=None, log=print, opts=Non
         _clear_render(out_dir)
     with open(sig_file, "w", encoding="utf-8") as f:
         f.write(say_sig)
-    voice_sig = json.dumps(cfg.get("voices"), sort_keys=True)
+    voice_sig = json.dumps([cfg.get("voices"), cfg.get("en_narration") or "mix" if u["lang"] == "en" else None], sort_keys=True)
     if script.get("voice") not in (None, voice_sig):   # teacher gender changed -> narration must be re-spoken
         log("[explain] voice changed -> new narration and render")
         _clear_render(out_dir)

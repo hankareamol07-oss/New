@@ -674,13 +674,19 @@ def concat_clips(cfg, items, audio_out, video_out, size):
                 t0 = time.time()
                 clip(cfg, png, pose, secs, aud, mp4, size)
                 print(f"[avatar] clip {k}/{len(items)} {os.path.basename(mp4)} {secs:.0f}s video in {time.time() - t0:.0f}s")
+            real = duration(cfg, mp4) or secs
+            if abs(real - secs) > 0.25:                # encoder (usually GPU) cut the clip short: redo it on the CPU once
+                print(f"[avatar] clip {os.path.basename(mp4)} is {real:.1f}s, expected {secs:.1f}s - re-rendering on CPU")
+                os.remove(mp4)
+                clip(dict(cfg, gpu="off"), png, pose, secs, aud, mp4, size)
+                real = duration(cfg, mp4) or secs
             fv.write(f"file '{os.path.abspath(mp4)}'\n")
-            secs = duration(cfg, mp4) or secs          # pad audio to the clip's real length so slides never drift
+            secs = real                                # audio is cut/padded to the clip's real length so slides never drift
             if aud:
                 wav = os.path.splitext(aud)[0] + ".wav"
                 if not os.path.exists(wav):
                     subprocess.run([cfg["ffmpeg"], "-y", "-nostdin", "-loglevel", "error", "-i", aud, "-ar", "24000", "-ac", "1", wav], check=True)
-                fa.write(f"file '{os.path.abspath(wav)}'\n")
+                fa.write(f"file '{os.path.abspath(wav)}'\ninpoint 0\noutpoint {secs:.3f}\n")
                 gap = secs - duration(cfg, aud)
             else:
                 gap = secs
