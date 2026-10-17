@@ -99,6 +99,9 @@ Add more patterns by appending to `ep_exam_patterns()`.
 
 ### Upgrading an existing install
 
+Hindi 2026 (std 6 हिंदी सुलभभारती + Hindi in the classic builder for every class/medium): import `db/update_hindi_2026.sql` on top of an existing database, or `php import_books.php && php import_bridge.php`.
+
+
 If `ep_papers` was created from an older `schema.sql`, run:
 
 ```sql
@@ -137,6 +140,7 @@ mysql -u root -p school < db/schema_packs.sql   # ep_topic_packs (AI notes + 10-
 mysql -u root -p school < db/schema_2026.sql    # 2026 book provenance + tachan topic link on chapters
 mysql -u root -p school < db/tachan_bank_schema.sql && mysql -u root -p school < db/tachan_bank_2026.sql   # तचन topics std 1-8 (2026-27)
 php import_books.php          # ep_books, ep_book_chapters, ep_book_questions, ep_paper_models, ep_topic_packs
+php import_bridge.php         # textbook subjects "(पाठ्यपुस्तक)" for the classic Create-Paper builder where the scraped bank has none (e.g. Hindi std 5-8)
 php import_competitive.php    # 4th/7th शिष्यवृत्ती + 8th NMMS (MAT/SAT) MCQs from data/competitive -> ep_questions
 ```
 
