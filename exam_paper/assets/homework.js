@@ -81,7 +81,7 @@
   function packQuestions(need) {
     const have = new Set(state.quiz.map(q => q.text.trim()));
     return (state.pack?.quiz || []).filter(q => !have.has(q.q.trim())).slice(0, need)
-      .map(q => ({ kind: 'mcq', text: q.q, options: q.options.slice(0, 4), answer: +q.answer, explain: q.explain || '' }));
+      .map(q => ({ kind: 'mcq', text: q.q, options: q.options.slice(0, 4), answer: +q.answer, explain: q.explain || '', image_url: q.image_url || null }));
   }
   function fillDefaults() {
     const std = +stdSel.value, en = isEnglish();
@@ -104,7 +104,7 @@
     sel.innerHTML = '<option value="">loading…</option>';
     state.sources = s ? await api('quiz_sources', { query: `&standard=${stdSel.value}&subject=${encodeURIComponent(s.subject)}&medium=${encodeURIComponent(s.medium)}&chapter=${encodeURIComponent(c ? c.title : '')}` }) : [];
     const hasPack = !!(state.pack && state.pack.quiz && state.pack.quiz.length);
-    const opts = hasPack ? [`<option value="pack">★ Topic quiz from textbook lesson — ${state.pack.quiz.length} MCQ (AI-generated)</option>`] : [];
+    const opts = hasPack ? [`<option value="pack">★ Topic MCQs for this lesson — ${state.pack.quiz.length} MCQ (textbook quiz${state.pack.typed_mcq ? ' + typed set' : ''})</option>`] : [];
     let best = null;
     for (const src of state.sources) {
       const grp = `${src.std_name} · ${src.subject_name} (${src.medium || ''})`;
@@ -113,17 +113,17 @@
         src.chapters.map(x => `<option value="${x.chapter_id}" ${x.score >= 0.34 ? 'class="fw-semibold"' : ''}>${esc(x.name)} — ${x.mcq} MCQ${x.score >= 0.34 ? ' ★' : ''}</option>`).join('') + '</optgroup>');
       for (const x of src.chapters) if (x.mcq >= 8 && x.score >= 0.34 && (!best || x.score > best.score)) best = x;
     }
-    sel.innerHTML = opts.length ? opts.join('') : '<option value="">No MCQ bank for this class/subject — add questions manually or from textbook</option>';
+    sel.innerHTML = opts.length ? opts.join('') : '<option value="">No MCQ source for this lesson — import db/topic_packs.sql (AI quiz per chapter) or add questions manually</option>';
     const preferBank = OLD_SYLLABUS.includes(+stdSel.value) && best;
     if (preferBank) sel.value = String(best.chapter_id);
     else if (hasPack) sel.value = 'pack';
     else if (best) sel.value = String(best.chapter_id);
     $('#quizSourceInfo').textContent = preferBank
       ? `★ matched question-bank chapter "${best.name}" (unchanged syllabus) for auto MCQs${hasPack ? '; the textbook topic quiz fills any gap' : ''}. Change the source if it's wrong.`
-      : hasPack ? '★ 10-question quiz generated from this textbook lesson will be used. Choose a bank chapter instead if you prefer.'
+      : hasPack ? `★ ${state.pack.quiz.length} MCQs generated for this lesson (topic quiz + typed set) will be used. Choose a bank chapter instead if you prefer.`
       : state.sources.length
         ? (best ? `★ matched question-bank chapter "${best.name}" for auto MCQs. Change the source if it's wrong.` : 'No matching chapter found automatically — choose a bank chapter above, or add quiz questions manually / from the textbook.')
-        : 'This class/subject has no MCQ bank or generated quiz yet. Use "MCQ" / "Typed answer" / "From textbook" to add quiz questions yourself.';
+        : (c ? 'No generated quiz found for this lesson: import exam_paper/db/topic_packs.sql into the database (adds a 10-MCQ AI quiz for every chapter of std 1–8), then reload. ' : 'Choose a lesson to get its 10-MCQ AI quiz. ') + 'The scraped MCQ bank only covers some std 5/7/8 subjects; you can also add questions with "MCQ" / "Typed answer" / "From textbook".';
   }
 
   /* ---------- homework items ---------- */

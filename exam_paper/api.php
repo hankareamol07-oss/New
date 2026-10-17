@@ -129,7 +129,7 @@ switch ($action) {
         ep_json(ep_book_tree());
 
     case 'book_random':
-        ep_json(ep_book_random($body['chapter_ids'] ?? [], trim($body['qtype'] ?? ''), (int)($body['count'] ?? 1), $body['exclude'] ?? [], (string)($body['source'] ?? '')));
+        ep_json(ep_book_random($body['chapter_ids'] ?? [], trim($body['qtype'] ?? ''), (int)($body['count'] ?? 1), $body['exclude'] ?? [], (string)($body['source'] ?? ''), (string)($body['bloom'] ?? '')));
 
     case 'book_browse':
         $ids = array_values(array_filter(array_map('intval', $body['chapter_ids'] ?? [])));
@@ -139,6 +139,7 @@ switch ($action) {
         if (!empty($body['standard'])) { $where .= ' AND q.standard = ?'; $params[] = (int)$body['standard']; }
         if (!empty($body['qtype'])) { $where .= ' AND q.qtype = ?'; $params[] = trim($body['qtype']); }
         if ($src = ep_book_source($body['source'] ?? '')) { $where .= ' AND q.source = ?'; $params[] = $src; }
+        if ($bl = ep_bloom_level($body['bloom'] ?? '')) { $where .= ' AND q.bloom = ?'; $params[] = $bl; }
         if (!empty($body['search'])) { $where .= ' AND (q.text LIKE ? OR q.instruction LIKE ?)'; $params[] = '%' . $body['search'] . '%'; $params[] = '%' . $body['search'] . '%'; }
         if (!$ids && empty($body['search'])) ep_json(['total' => 0, 'items' => []]);
         $page = max(0, (int)($body['page'] ?? 0));
