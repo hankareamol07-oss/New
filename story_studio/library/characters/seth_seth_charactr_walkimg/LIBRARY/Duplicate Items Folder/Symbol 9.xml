@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Symbol 9" itemID="6795063a-00001ebe" symbolType="graphic" lastModified="1737809981">
+  <timeline>
+    <DOMTimeline name="Symbol 9" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix ty="-274.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="222.1" y="311.5"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix ty="-274.2"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="222.1" y="311.5"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FCA068"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#D48657"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!272 11046S6[56 11009 0 10800!0 10800[420 10288 1365 9437!1365 9437[2288 8490 2449 7984!2449 7984|2537 5543!2537 5543|4783 5484!4783 5484|4859 8404!4859 8404[5730 9980 4915 10261!4915 10261[4689 10338 4537 10313!4537 10313[4644 11005
+ 3579 11081!3579 11081[3216 11730 2412 11527!2412 11527[2216 11499 2114 11415"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!4537 10313S7[4502 10056 4667 9794"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!756 11238S6[432 11335 272 11046"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!1265 11379S7[1236 11121 1416 11038!1416 11038|2185 10444!272 11046[407 10840 597 10732!597 10732[852 10569 1002 10343"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!1265 11379S6[944 11460 756 11238"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!756 11238S7[847 11029 973 10928!973 10928[1246 10717 1504 10471!2114 11415[1922 10989 2428 10712!2428 10712[2528 10778 2681 10743!2681 10743[2914 10772 3059 10917!2428 10712[2554 10582 2764 10434"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!2114 11415S6[1607 11608 1265 11379"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="gfig" itemID="608e4e86-00003daf" symbolType="graphic" lastModified="1621239880">
+  <timeline>
+    <DOMTimeline name="gfig" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FEB784"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#BD6A56"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!16 1250S6[-20 1164 23 1110!23 1110[101 1016 232 768!232 768[362 520 284 0!284 0[998 108 1379 422!1379 422[1309 578 1343 802!1343 802[1377 896 1271 1102!1271 1102[#4EA.94 #4F4.4 1648 1555"/>
+                        <Edge fillStyle1="1" edges="!1648 1555S2[1506 1693 1310 1764!1310 1764[1113 1835 885 1794!885 1794[656 1752 466 1674!466 1674[277 1596 113 1400!113 1400[46 1321 16 1250"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

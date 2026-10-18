@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Left Arm" itemID="679dcc03-000008f4" symbolType="graphic" lastModified="1738405937">
+  <timeline>
+    <DOMTimeline name="Left Arm" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Upper_Side_Of_Left_Arm" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Upper Side Of Left Arm" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="40.3" ty="-135.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-28.45" y="-221.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Lower_Part_Of_Left_Arm" color="#669900" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Lower Part Of Left Arm" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-17.05" ty="197"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40.45" y="-165.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

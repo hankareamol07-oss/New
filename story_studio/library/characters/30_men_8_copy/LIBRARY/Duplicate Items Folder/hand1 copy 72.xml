@@ -1,0 +1,322 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/hand1 copy 72" itemID="6565b989-00005d1f" symbolType="graphic" lastModified="1701067259">
+  <timeline>
+    <DOMTimeline name="hand1 copy 72" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="-0.9095458984375" b="-0.14788818359375" c="-0.14788818359375" d="0.9095458984375" tx="19.5" ty="-18.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="6.4" y="82.05"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="-0.9095458984375" b="-0.14788818359375" c="-0.14788818359375" d="0.9095458984375" tx="19.5" ty="-18.35"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="6.4" y="82.05"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFBB95"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A15C49"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!224 1560[543 1936 474 2123!474 2123[471 2215 512 2298!512 2298[553 2383 507 2423!507 2423[440 2453 385 2344!385 2344[352 2273 336 2185!336 2185[320 2107 277 2081!277 2081[247 2367 295 2634!295 2634[372 2820 356 2931!356 2931[350 2965
+ 329 2956!329 2956[308 2947 287 2920!287 2920|235 2849"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!118 2353[84 2358 39 2351!39 2351[-4 2345 -50 2348!156 2340[139 2349 118 2353!235 2849|228 2839!228 2839[177 2787 170 2709!170 2709[152 2518 118 2353!145 2993[118 2942 75 2884!75 2884[22 2820 16 2755!16 2755[-3 2546 -50 2348!-50 2348
+[-73 2350 -96 2353!-96 2353[-140 2361 -173 2355!-173 2355[-128 2622 2 2866!2 2866[9 2880 17 2893"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!235 2849[316 2997 224 3104!224 3104[201 3136 173 3059!173 3059[163 3028 145 2993"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!17 2893[59 2963 127 3030!127 3030[154 3048 145 2993"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!17 2893[65 3008 0 3024!0 3024[-22 3020 -43 2986!-43 2986[-260 2673 -277 2280!-277 2280[-231 1944 -134 1592"/>
+                        <Edge fillStyle1="1" edges="
+!-134 1592|224 1560"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <transformationPoint>
+                    <Point x="14.8" y="49.6"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <transformationPoint>
+                        <Point x="14.8" y="49.6"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFBB95"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A15C49"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!287 1097[379 1020 459 1205!459 1205[481 1257 491 1303"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!491 1303[436 1360 328 1359!328 1359|226 1354!472 1502|231 1491!231 1491[153 1486 97 1529"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!472 1502[468 1508 465 1516!465 1516[425 1579 330 1596!330 1596|153 1610"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!153 1610[113 1614 79 1630!287 1097[289 1200 410 1225"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!491 1303[518 1418 472 1502"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!287 1097[283 1047 288 987!-105 1065[-81 1228 -99 1391!-99 1391[-116 1555 -39 1640!-39 1640[98 1820 256 1995!256 1995[380 2125 526 2224!526 2224[558 2139 484 2050!484 2050[296 1827 153 1610"/>
+                        <Edge fillStyle0="1" edges="
+!288 987|-105 1065"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!214 1320[129 1463 -13 1572"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="0.368927001953125" d="0.368927001953125" tx="7.85" ty="-2.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="18.85" y="148"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="0.368927001953125" d="0.368927001953125" tx="7.85" ty="-2.05"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="18.85" y="148"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFBB95"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A15C49"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-761 4199[-759 4177 -755 4151!-755 4151[-695 3781 -586 3660!-586 3660[-504 3580 -260 3591!-260 3591[-14 3601 105 3432!105 3432[244 3202 276 3003"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-193 4187[-26 4401 -213 4880!-213 4880[-143 5532 283 5393!283 5393[86 4781 409 4058!409 4058[465 3470 342 2984"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-878 3206[-935 3300 -978 3416!-978 3416[-979 3706 -1057 4016!-1057 4016|-1086 4573"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-1237 3625[-1129 3420 -878 3206"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-621 2958[-793 3070 -878 3206"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-193 4187[-511 4124 -761 4199"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-193 4187[-233 4136 -294 4100!-1395 4984[-1362 4687 -1364 4424!-1364 4424[-1369 4305 -1356 4234!-1356 4234|-1237 3625"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-1086 4573[-1102 4969 -1395 4984"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-1086 4573[-804 4565 -761 4199"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-1395 4984[-1447 5262 -1711 5244!-1711 5244[-1661 4988 -1668 4754!-1668 4754[-1667 4688 -1661 4632"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-1661 4632[-1659 4596 -1656 4562!-1656 4562[-1606 4297 -1574 4023"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-1661 4632[-1844 4772 -2004 4948!-2004 4948[-2319 5300 -2587 5077!-2587 5077[-2069 4588 -1574 4023!-1574 4023[-1420 3774 -1237 3625"/>
+                        <Edge fillStyle0="1" edges="
+!342 2984|-621 2958"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="-0.7364501953125" b="0.197311401367188" c="0.197311401367188" d="0.7364501953125" tx="-10.2" ty="-6.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="14.1" y="74.7"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="-0.7364501953125" b="0.197311401367188" c="0.197311401367188" d="0.7364501953125" tx="-10.2" ty="-6.25"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="14.1" y="74.7"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFBB95"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A15C49"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!471 2410|523 2360!-143 2320[-30 2294 70 2238!70 2238[116 2213 158 2179!158 2179|247 2104!1 2507[126 2449 241 2374!241 2374|288 2340!288 2340[364 2287 436 2227"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!1 2507[64 2574 182 2595!182 2595|306 2528!306 2528[396 2473 471 2410!471 2410[470 2805 532 3164!532 3164[608 3277 713 3209!713 3209|682 2843!682 2843[664 2565 677 2152!677 2152[416 1903 271 1497!-39 1529[-227 1629 -184 1900!-184 1900
+[-132 1927 -102 1955!-102 1955|-92 1967!-92 1967[-124 1978 -144 1992!-144 1992[-180 2017 -223 2073!-223 2073[-221 2153 -200 2216!-200 2216[-180 2274 -143 2320!-143 2320[-121 2443 -20 2516!-20 2516|1 2507"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-52 2030|-32 2002!-52 2030[-85 2073 -126 2093!-92 1967|-52 2030"/>
+                        <Edge fillStyle0="1" edges="
+!271 1497|-39 1529"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="-0.8360595703125" b="0.043548583984375" c="0.043548583984375" d="0.8360595703125" tx="4.6" ty="-13.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-6.45" y="79.4"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="-0.8360595703125" b="0.043548583984375" c="0.043548583984375" d="0.8360595703125" tx="4.6" ty="-13.2"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="-6.45" y="79.4"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFBB95"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A15C49"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!761 1935[691 1872 609 1868"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!1016 1872[1107 1871 1006 1762!1006 1762[754 1504 286 1481!1449 2222[1526 2177 1369 2099!1369 2099[1262 2042 1158 1969!1158 1969[1085 1918 1016 1872"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!1016 1872[835 1757 676 1684!1449 2222[1442 2220 1437 2218!1437 2218[1234 2149 1128 2074!1128 2074[972 1977 830 1929"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!1097 2397|1354 2447!1354 2447[1379 2452 1399 2434!1399 2434[1437 2386 1409 2357"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!1409 2357[1406 2354 1402 2351!1402 2351[1337 2307 1251 2286!1251 2286[1097 2240 984 2169!984 2169[837 2080 702 2037"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!1409 2357[1518 2375 1533 2321!1533 2321[1549 2260 1449 2222!-145 1618[-236 1963 88 2129!88 2129[402 2278 856 2410!856 2410[998 2479 1075 2451!1075 2451[1109 2430 1097 2397"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!1097 2397[1095 2390 1089 2382!1089 2382[866 2299 741 2215!741 2215[667 2164 592 2158!465 2176[453 2122 405 2119"/>
+                        <Edge fillStyle0="1" edges="
+!286 1481|-145 1618"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="5" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix d="1.04289245605469" ty="2.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-1" y="-51.6"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix d="1.04289245605469" ty="2.2"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="-1" y="-51.6"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFBB95"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A15C49"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!303 -1032[366 -403 334 127!334 127|280 1033!280 1033|-99 1004!-99 1004[-215 518 -285 -39!-285 -39[-350 -541 -344 -1032"/>
+                        <Edge fillStyle1="1" edges="
+!-344 -1032|303 -1032"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,1235 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Muslim Man Stand" itemID="63a176ba-00002909" symbolType="graphic" lastModified="1671526074" lastUniqueIdentifier="17">
+  <timeline>
+    <DOMTimeline name="Muslim Man Stand" currentFrame="18" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="S_Rhand2" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Rhand2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix ty="458.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.65" y="9.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Rhand2" symbolType="graphic" centerPoint3DX="45.65" centerPoint3DY="597" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.996627807617188" b="-0.0820465087890625" c="0.0820465087890625" d="0.996627807617188" tx="-0.6" ty="469.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.6" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Rhand2" symbolType="graphic" centerPoint3DX="51.65" centerPoint3DY="589.35" loop="single frame">
+                  <matrix>
+                    <Matrix tx="16" ty="458.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.65" y="9.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Rhand2" selected="true" symbolType="graphic" centerPoint3DX="51.65" centerPoint3DY="589.35" loop="single frame">
+                  <matrix>
+                    <Matrix tx="16" ty="458.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.65" y="9.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Rhand2" selected="true" symbolType="graphic" centerPoint3DX="45.65" centerPoint3DY="597" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.996627807617188" b="-0.0820465087890625" c="0.0820465087890625" d="0.996627807617188" tx="-0.6" ty="469.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.6" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Rhand2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix ty="458.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.65" y="9.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_RHand" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RHand" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="1.7" ty="288"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.4" y="8.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RHand" symbolType="graphic" centerPoint3DX="47.15" centerPoint3DY="401.3" loop="single frame">
+                  <matrix>
+                    <Matrix tx="1.7" ty="296"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.4" y="8.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RHand" symbolType="graphic" centerPoint3DX="63.15" centerPoint3DY="393.3" loop="single frame">
+                  <matrix>
+                    <Matrix tx="17.7" ty="288"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.4" y="8.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RHand" selected="true" symbolType="graphic" centerPoint3DX="63.15" centerPoint3DY="393.3" loop="single frame">
+                  <matrix>
+                    <Matrix tx="17.7" ty="288"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.4" y="8.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RHand" selected="true" symbolType="graphic" centerPoint3DX="47.15" centerPoint3DY="401.3" loop="single frame">
+                  <matrix>
+                    <Matrix tx="1.7" ty="296"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.4" y="8.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RHand" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="1.7" ty="288"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.4" y="8.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Head" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Head copy 17" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-1.38645935058594" d="1.38645935058594" tx="290.8" ty="25.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="96.6" y="161.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Head copy 17" selected="true" symbolType="graphic" firstFrame="6" centerPoint3DX="206.4" centerPoint3DY="185.25" loop="loop">
+                  <matrix>
+                    <Matrix a="-1.37547302246094" b="-0.174118041992188" c="-0.174118041992188" d="1.37547302246094" tx="317.8" ty="57.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="96.6" y="161.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Head copy 17" selected="true" symbolType="graphic" firstFrame="13" centerPoint3DX="216.75" centerPoint3DY="166.25" loop="loop">
+                  <matrix>
+                    <Matrix a="-1.38645935058594" d="1.38645935058594" tx="311.2" ty="25.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="96.6" y="161.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Head copy 17" selected="true" symbolType="graphic" firstFrame="100" centerPoint3DX="216.75" centerPoint3DY="166.25" loop="loop">
+                  <matrix>
+                    <Matrix a="-1.38645935058594" d="1.38645935058594" tx="311.2" ty="25.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="96.6" y="161.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Head copy 17" selected="true" symbolType="graphic" firstFrame="106" centerPoint3DX="206.4" centerPoint3DY="185.25" loop="loop">
+                  <matrix>
+                    <Matrix a="-1.37547302246094" b="-0.174118041992188" c="-0.174118041992188" d="1.37547302246094" tx="317.8" ty="57.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="96.6" y="161.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Head copy 17" selected="true" symbolType="graphic" firstFrame="113" loop="loop">
+                  <matrix>
+                    <Matrix a="-1.38645935058594" d="1.38645935058594" tx="290.8" ty="25.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="96.6" y="161.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_Neck" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Neck" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.990814208984375" d="0.990814208984375" tx="146.3" ty="210.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="39.65" y="26.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Neck" symbolType="graphic" centerPoint3DX="185.4" centerPoint3DY="245.2" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.990814208984375" d="0.990814208984375" tx="146.3" ty="219.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="39.65" y="26.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Neck" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.990814208984375" d="0.990814208984375" tx="163.2" ty="210.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="39.65" y="26.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Neck" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.990814208984375" d="0.990814208984375" tx="163.2" ty="210.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="39.65" y="26.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Neck" selected="true" symbolType="graphic" centerPoint3DX="185.4" centerPoint3DY="245.2" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.990814208984375" d="0.990814208984375" tx="146.3" ty="219.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="39.65" y="26.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Neck" selected="true" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.990814208984375" d="0.990814208984375" tx="146.3" ty="210.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="39.65" y="26.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_Body" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S Body copy 2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="38.4" ty="234.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="121.6" y="240.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S Body copy 2" symbolType="graphic" centerPoint3DX="159.95" centerPoint3DY="475.55" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.98907470703125" tx="38.4" ty="243.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="121.65" y="240.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S Body copy 2" symbolType="graphic" centerPoint3DX="167.95" centerPoint3DY="475.55" loop="single frame">
+                  <matrix>
+                    <Matrix c="-0.018157958984375" tx="55.15" ty="234.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="121.65" y="240.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S Body copy 2" selected="true" symbolType="graphic" centerPoint3DX="167.95" centerPoint3DY="475.55" loop="single frame">
+                  <matrix>
+                    <Matrix c="-0.018157958984375" tx="55.15" ty="234.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="121.65" y="240.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S Body copy 2" selected="true" symbolType="graphic" centerPoint3DX="159.95" centerPoint3DY="475.55" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.98907470703125" tx="38.4" ty="243.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="121.65" y="240.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S Body copy 2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="38.4" ty="234.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="121.6" y="240.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_LHand2" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="251.05" ty="462.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="29" y="27.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand2" symbolType="graphic" centerPoint3DX="305.8" centerPoint3DY="584.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.9969482421875" b="-0.0778656005859375" c="0.0778656005859375" d="0.9969482421875" tx="248.95" ty="473"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="29" y="27.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand2" symbolType="graphic" centerPoint3DX="315.05" centerPoint3DY="577.9" loop="single frame">
+                  <matrix>
+                    <Matrix tx="267.05" ty="462.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="29" y="27.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand2" selected="true" symbolType="graphic" centerPoint3DX="315.05" centerPoint3DY="577.9" loop="single frame">
+                  <matrix>
+                    <Matrix tx="267.05" ty="462.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="29" y="27.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand2" selected="true" symbolType="graphic" centerPoint3DX="305.8" centerPoint3DY="584.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.9969482421875" b="-0.0778656005859375" c="0.0778656005859375" d="0.9969482421875" tx="248.95" ty="473"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="29" y="27.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand2" selected="true" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="251.05" ty="462.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="29" y="27.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_LHand" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="237.1" ty="289.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand" symbolType="graphic" centerPoint3DX="268.1" centerPoint3DY="402.3" loop="single frame">
+                  <matrix>
+                    <Matrix tx="237.1" ty="297.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand" symbolType="graphic" centerPoint3DX="284.1" centerPoint3DY="394.3" loop="single frame">
+                  <matrix>
+                    <Matrix tx="253.1" ty="289.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand" selected="true" symbolType="graphic" centerPoint3DX="284.1" centerPoint3DY="394.3" loop="single frame">
+                  <matrix>
+                    <Matrix tx="253.1" ty="289.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand" selected="true" symbolType="graphic" centerPoint3DX="268.1" centerPoint3DY="402.3" loop="single frame">
+                  <matrix>
+                    <Matrix tx="237.1" ty="297.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LHand" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="237.1" ty="289.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_Middle_Lungi" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Middle Lungi" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="138.9" ty="669.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="36.45" y="19.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64775,"tx":0,"ty":220}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Middle Lungi" symbolType="graphic" centerPoint3DX="175.6" centerPoint3DY="798.9" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.988388061523438" tx="138.9" ty="672.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="36.45" y="19.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":65536,"b":0,"c":-1757,"d":65536,"tx":506,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Middle Lungi" symbolType="graphic" centerPoint3DX="179.55" centerPoint3DY="797.15" loop="single frame">
+                  <matrix>
+                    <Matrix c="-0.0268096923828125" tx="146.25" ty="669.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="36.45" y="19.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100" rigPropagationMatrix='{"a":65536,"b":0,"c":-1757,"d":65536,"tx":506,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Middle Lungi" selected="true" symbolType="graphic" centerPoint3DX="179.55" centerPoint3DY="797.15" loop="single frame">
+                  <matrix>
+                    <Matrix c="-0.0268096923828125" tx="146.25" ty="669.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="36.45" y="19.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64775,"tx":0,"ty":220}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Middle Lungi" selected="true" symbolType="graphic" centerPoint3DX="175.6" centerPoint3DY="798.9" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.988388061523438" tx="138.9" ty="672.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="36.45" y="19.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S Middle Lungi" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="138.9" ty="669.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="36.45" y="19.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_RLungi" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RLungi" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="58.25" ty="637.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="29.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64775,"tx":0,"ty":220}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RLungi" symbolType="graphic" centerPoint3DX="117.6" centerPoint3DY="788.55" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.988388061523438" tx="58.25" ty="641.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="29.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":65536,"b":0,"c":-1757,"d":65536,"tx":506,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RLungi" symbolType="graphic" centerPoint3DX="121.8" centerPoint3DY="786.7" loop="single frame">
+                  <matrix>
+                    <Matrix c="-0.0268096923828125" tx="66.45" ty="637.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="29.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100" rigPropagationMatrix='{"a":65536,"b":0,"c":-1757,"d":65536,"tx":506,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RLungi" selected="true" symbolType="graphic" centerPoint3DX="121.8" centerPoint3DY="786.7" loop="single frame">
+                  <matrix>
+                    <Matrix c="-0.0268096923828125" tx="66.45" ty="637.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="29.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64775,"tx":0,"ty":220}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RLungi" selected="true" symbolType="graphic" centerPoint3DX="117.6" centerPoint3DY="788.55" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.988388061523438" tx="58.25" ty="641.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="29.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S RLungi" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="58.25" ty="637.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="29.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_RLeg" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S RLeg copy 2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="83.3" ty="872.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="27.35" y="36.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S RLeg copy 2" symbolType="graphic" centerPoint3DX="114.8" centerPoint3DY="966.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="83.3" ty="872.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="27.35" y="36.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":65536,"b":0,"c":-1225,"d":65536,"tx":397,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S RLeg copy 2" symbolType="graphic" centerPoint3DX="116.6" centerPoint3DY="966.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" c="-0.01483154296875" d="0.79412841796875" tx="86.8" ty="872.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="27.35" y="36.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100" rigPropagationMatrix='{"a":65536,"b":0,"c":-1225,"d":65536,"tx":397,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S RLeg copy 2" selected="true" symbolType="graphic" centerPoint3DX="116.6" centerPoint3DY="966.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" c="-0.01483154296875" d="0.79412841796875" tx="86.8" ty="872.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="27.35" y="36.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S RLeg copy 2" selected="true" symbolType="graphic" centerPoint3DX="114.8" centerPoint3DY="966.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="83.3" ty="872.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="27.35" y="36.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S RLeg copy 2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="83.3" ty="872.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="27.35" y="36.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_LLungi" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LLungi" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="177.1" ty="643.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="46.6" y="32.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64775,"tx":0,"ty":220}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LLungi" symbolType="graphic" centerPoint3DX="223.7" centerPoint3DY="795.5" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.988388061523438" tx="177.1" ty="647.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="46.6" y="32.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":65536,"b":0,"c":-1757,"d":65536,"tx":506,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LLungi" symbolType="graphic" centerPoint3DX="227.7" centerPoint3DY="793.7" loop="single frame">
+                  <matrix>
+                    <Matrix c="-0.0268096923828125" tx="185.1" ty="643.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="46.6" y="32.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100" rigPropagationMatrix='{"a":65536,"b":0,"c":-1757,"d":65536,"tx":506,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LLungi" selected="true" symbolType="graphic" centerPoint3DX="227.7" centerPoint3DY="793.7" loop="single frame">
+                  <matrix>
+                    <Matrix c="-0.0268096923828125" tx="185.1" ty="643.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="46.6" y="32.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64775,"tx":0,"ty":220}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LLungi" selected="true" symbolType="graphic" centerPoint3DX="223.7" centerPoint3DY="795.5" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.988388061523438" tx="177.1" ty="647.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="46.6" y="32.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="S LLungi" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="177.1" ty="643.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="46.6" y="32.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="S_LLeg" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S LLeg copy 2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="201.75" ty="867.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.25" y="67.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S LLeg copy 2" symbolType="graphic" centerPoint3DX="241.7" centerPoint3DY="953.75" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="201.75" ty="867.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.25" y="67.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":65536,"b":0,"c":-1225,"d":65536,"tx":397,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S LLeg copy 2" symbolType="graphic" centerPoint3DX="243.7" centerPoint3DY="953.75" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" c="-0.01483154296875" d="0.79412841796875" tx="205.35" ty="867.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.3" y="67.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" acceleration="100" rigPropagationMatrix='{"a":65536,"b":0,"c":-1225,"d":65536,"tx":397,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S LLeg copy 2" selected="true" symbolType="graphic" centerPoint3DX="243.7" centerPoint3DY="953.75" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" c="-0.01483154296875" d="0.79412841796875" tx="205.35" ty="867.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.3" y="67.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S LLeg copy 2" selected="true" symbolType="graphic" centerPoint3DX="241.7" centerPoint3DY="953.75" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="201.75" ty="867.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.25" y="67.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/S LLeg copy 2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="201.75" ty="867.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.25" y="67.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shadow" color="#669900" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="shape" keyMode="17922" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#2.09, #51.49" startPointB="#2.C7, #51.49" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#2.09, #50.85" anchorPointA="#5.88, #4F.FC" controlPointB="#2.C7, #50.85" anchorPointB="#6.0E, #4F.FC"/>
+                    <MorphCurves controlPointA="#9.07, #4F.72" anchorPointA="#D.F9, #4F.72" controlPointB="#9.56, #4F.72" anchorPointB="#D.FA, #4F.72"/>
+                    <MorphCurves controlPointA="#12.EA, #4F.72" anchorPointA="#16.69, #4F.FC" controlPointB="#12.9D, #4F.72" anchorPointB="#15.E4, #4F.FC"/>
+                    <MorphCurves controlPointA="#19.E8, #50.85" anchorPointA="#19.E8, #51.49" controlPointB="#19.2C, #50.85" anchorPointB="#19.2C, #51.49"/>
+                    <MorphCurves controlPointA="#19.E8, #52.0C" anchorPointA="#16.69, #52.96" controlPointB="#19.2C, #52.0C" anchorPointB="#15.E4, #52.96"/>
+                    <MorphCurves controlPointA="#12.EA, #53.2" anchorPointA="#D.F9, #53.2" controlPointB="#12.9D, #53.2" anchorPointB="#D.FA, #53.2"/>
+                    <MorphCurves controlPointA="#9.07, #53.2" anchorPointA="#5.88, #52.96" controlPointB="#9.56, #53.2" anchorPointB="#6.0E, #52.96"/>
+                    <MorphCurves controlPointA="#2.09, #52.0C" anchorPointA="#2.09, #51.49" controlPointB="#2.C7, #52.0C" anchorPointB="#2.C7, #51.49"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!6632 20809[6632 21004 5737 21142!5737 21142[4842 21280 3577 21280!3577 21280[2311 21280 1416 21142!1416 21142[521 21004 521 20809!521 20809[521 20613 1416 20476!1416 20476[2311 20338 3577 20338!3577 20338[4842 20338 5737 20476!5737 20476
+[6632 20613 6632 20809"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="shape" keyMode="17922" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#2.C7, #51.49" startPointB="#2.E, #51.49" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#2.C7, #50.85" anchorPointA="#6.0E, #4F.FC" controlPointB="#2.E, #50.85" anchorPointB="#6.5E, #4F.FC"/>
+                    <MorphCurves controlPointA="#9.56, #4F.72" anchorPointA="#D.FA, #4F.72" controlPointB="#9.DC, #4F.72" anchorPointB="#E.CC, #4F.72"/>
+                    <MorphCurves controlPointA="#12.9D, #4F.72" anchorPointA="#15.E4, #4F.FC" controlPointB="#13.BC, #4F.72" anchorPointB="#17.39, #4F.FC"/>
+                    <MorphCurves controlPointA="#19.2C, #50.85" anchorPointA="#19.2C, #51.49" controlPointB="#1A.B7, #50.85" anchorPointB="#1A.B7, #51.49"/>
+                    <MorphCurves controlPointA="#19.2C, #52.0C" anchorPointA="#15.E4, #52.96" controlPointB="#1A.B7, #52.0C" anchorPointB="#17.39, #52.96"/>
+                    <MorphCurves controlPointA="#12.9D, #53.2" anchorPointA="#D.FA, #53.2" controlPointB="#13.BC, #53.2" anchorPointB="#E.CC, #53.2"/>
+                    <MorphCurves controlPointA="#9.56, #53.2" anchorPointA="#6.0E, #52.96" controlPointB="#9.DC, #53.2" anchorPointB="#6.5E, #52.96"/>
+                    <MorphCurves controlPointA="#2.C7, #52.0C" anchorPointA="#2.C7, #51.49" controlPointB="#2.E, #52.0C" anchorPointB="#2.E, #51.49"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6444 20809[6444 21004 5604 21142!5604 21142[4765 21280 3578 21280!3578 21280[2390 21280 1550 21142!1550 21142[711 21004 711 20809!711 20809[711 20613 1550 20476!1550 20476[2390 20338 3578 20338!3578 20338[4765 20338 5604 20476!5604 20476
+[6444 20613 6444 20809"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6839 20809S2[6839 21004 5945 21142!5945 21142[5052 21280 3788 21280!3788 21280[2524 21280 1630 21142!1630 21142[736 21004 736 20809!736 20809[736 20613 1630 20476!1630 20476[2524 20338 3788 20338!3788 20338[5052 20338 5945 20476!5945
+ 20476[6839 20613 6839 20809"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="shape" keyMode="17922" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#2.E, #51.49" startPointB="#2.C7, #51.49" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#2.E, #50.85" anchorPointA="#6.5E, #4F.FC" controlPointB="#2.C7, #50.85" anchorPointB="#6.0E, #4F.FC"/>
+                    <MorphCurves controlPointA="#9.DC, #4F.72" anchorPointA="#E.CC, #4F.72" controlPointB="#9.56, #4F.72" anchorPointB="#D.FA, #4F.72"/>
+                    <MorphCurves controlPointA="#13.BC, #4F.72" anchorPointA="#17.39, #4F.FC" controlPointB="#12.9D, #4F.72" anchorPointB="#15.E4, #4F.FC"/>
+                    <MorphCurves controlPointA="#1A.B7, #50.85" anchorPointA="#1A.B7, #51.49" controlPointB="#19.2C, #50.85" anchorPointB="#19.2C, #51.49"/>
+                    <MorphCurves controlPointA="#1A.B7, #52.0C" anchorPointA="#17.39, #52.96" controlPointB="#19.2C, #52.0C" anchorPointB="#15.E4, #52.96"/>
+                    <MorphCurves controlPointA="#13.BC, #53.2" anchorPointA="#E.CC, #53.2" controlPointB="#12.9D, #53.2" anchorPointB="#D.FA, #53.2"/>
+                    <MorphCurves controlPointA="#9.DC, #53.2" anchorPointA="#6.5E, #52.96" controlPointB="#9.56, #53.2" anchorPointB="#6.0E, #52.96"/>
+                    <MorphCurves controlPointA="#2.E, #52.0C" anchorPointA="#2.E, #51.49" controlPointB="#2.C7, #52.0C" anchorPointB="#2.C7, #51.49"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6839 20809S2[6839 21004 5945 21142!5945 21142[5052 21280 3788 21280!3788 21280[2524 21280 1630 21142!1630 21142[736 21004 736 20809!736 20809[736 20613 1630 20476!1630 20476[2524 20338 3788 20338!3788 20338[5052 20338 5945 20476!5945
+ 20476[6839 20613 6839 20809"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="shape" keyMode="17922" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#2.C7, #51.49" startPointB="#2.09, #51.49" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#2.C7, #50.85" anchorPointA="#6.0E, #4F.FC" controlPointB="#2.09, #50.85" anchorPointB="#5.88, #4F.FC"/>
+                    <MorphCurves controlPointA="#9.56, #4F.72" anchorPointA="#D.FA, #4F.72" controlPointB="#9.07, #4F.72" anchorPointB="#D.F9, #4F.72"/>
+                    <MorphCurves controlPointA="#12.9D, #4F.72" anchorPointA="#15.E4, #4F.FC" controlPointB="#12.EA, #4F.72" anchorPointB="#16.69, #4F.FC"/>
+                    <MorphCurves controlPointA="#19.2C, #50.85" anchorPointA="#19.2C, #51.49" controlPointB="#19.E8, #50.85" anchorPointB="#19.E8, #51.49"/>
+                    <MorphCurves controlPointA="#19.2C, #52.0C" anchorPointA="#15.E4, #52.96" controlPointB="#19.E8, #52.0C" anchorPointB="#16.69, #52.96"/>
+                    <MorphCurves controlPointA="#12.9D, #53.2" anchorPointA="#D.FA, #53.2" controlPointB="#12.EA, #53.2" anchorPointB="#D.F9, #53.2"/>
+                    <MorphCurves controlPointA="#9.56, #53.2" anchorPointA="#6.0E, #52.96" controlPointB="#9.07, #53.2" anchorPointB="#5.88, #52.96"/>
+                    <MorphCurves controlPointA="#2.C7, #52.0C" anchorPointA="#2.C7, #51.49" controlPointB="#2.09, #52.0C" anchorPointB="#2.09, #51.49"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6444 20809S2[6444 21004 5604 21142!5604 21142[4765 21280 3578 21280!3578 21280[2390 21280 1550 21142!1550 21142[711 21004 711 20809!711 20809[711 20613 1550 20476!1550 20476[2390 20338 3578 20338!3578 20338[4765 20338 5604 20476!5604
+ 20476[6444 20613 6444 20809"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6632 20809[6632 21004 5737 21142!5737 21142[4842 21280 3577 21280!3577 21280[2311 21280 1416 21142!1416 21142[521 21004 521 20809!521 20809[521 20613 1416 20476!1416 20476[2311 20338 3577 20338!3577 20338[4842 20338 5737 20476!5737 20476
+[6632 20613 6632 20809"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

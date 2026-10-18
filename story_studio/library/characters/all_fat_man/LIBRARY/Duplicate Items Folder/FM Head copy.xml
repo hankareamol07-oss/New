@@ -1,0 +1,88 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/FM Head copy" itemID="64ea43ec-0000713a" symbolType="graphic" lastModified="1669529490">
+  <timeline>
+    <DOMTimeline name="FM Head copy" currentFrame="51" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="FM_Eyes" color="#00FFFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FM Eyes copy 4" selected="true" symbolType="graphic" centerPoint3DX="73.65" centerPoint3DY="123.6" loop="play once">
+                  <matrix>
+                    <Matrix a="-0.252899169921875" d="0.252899169921875" tx="135.3" ty="99.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="244.35" y="102.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FM_Lips" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FM Lips copy 4" symbolType="graphic" centerPoint3DX="68.95" centerPoint3DY="217.3" loop="single frame">
+                  <matrix>
+                    <Matrix a="-0.252899169921875" d="0.252899169921875" tx="99.4" ty="208"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="120.4" y="36.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FM_Ear" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FM Ear copy 4" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="156.65" ty="120.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.9" y="27.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FM_Nose" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FM Nose copy 4" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="41.65" ty="132.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="19.15" y="31.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Plane_Face" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Plane Face copy 11" symbolType="graphic" centerPoint3DX="93.95" centerPoint3DY="131.9" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.252899169921875" d="0.252899169921875" tx="181.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="359.25" y="521.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

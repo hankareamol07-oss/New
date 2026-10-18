@@ -1,0 +1,54 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Ear copy 2" itemID="6795063b-00001f62" symbolType="graphic" lastModified="1735181816">
+  <timeline>
+    <DOMTimeline name="Seth Ear copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="0.999893188476562" b="-0.0136566162109375" c="0.0136566162109375" d="0.999893188476562" tx="-839.8" ty="-261.75"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix a="0.999893188476562" b="-0.0136566162109375" c="0.0136566162109375" d="0.999893188476562" tx="-839.8" ty="-261.75"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FCA068"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#D48657"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!17169 5910S7[17383 5577 17617 5714!17617 5714[17740 5797 17780 6094!17169 5910[17340 6092 17227 6275!17227 6275[17124 6341 17022 6197!17290 7006[17231 6845 17108 6888!17108 6888[16988 6810 17021 6603!17021 6603[17274 6476 17539 6762
+!17233 7677[17177 7788 17097 7832!17594 5828[17479 5955 17456 6187!17456 6187[18014 6490 17667 7129!17667 7129[17615 7358 17478 7492!16984 6928[17339 7155 17334 7265!17334 7265[17304 7529 17233 7677!16994 6266[17008 6231 17022 6197"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!16768 6249S6[16935 5569 17481 5476!17481 5476[17966 5452 18048 6307!18048 6307[18063 6907 17614 7541!17614 7541[17691 8933 17009 8535"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!17022 6197S7[17094 6025 17169 5910!17053 7976[17257 8126 17289 8323"/>
+                        <Edge fillStyle0="1" edges="
+!16768 6249S1[16562 7392 17009 8535"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!17233 7677S7[17482 7757 17516 8067"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

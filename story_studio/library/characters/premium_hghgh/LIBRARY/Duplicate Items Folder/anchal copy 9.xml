@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/anchal copy 9" itemID="60b3a3fd-00000d0c" symbolType="graphic" lastModified="1620057453">
+  <timeline>
+    <DOMTimeline name="anchal copy 9" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-875.85" ty="-513.9"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-875.85" ty="-513.9"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#500100"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#FF0201"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle0="1" edges="!17983 28466S1|18244 29699!18244 29699[#51CB.19 #6D40.BB 23875 19799!23875 19799[#6047.42 #4061.5 24865 12918!24865 12918[#613C.98 #2C00.BB 23875 10526!23875 10526|23165 10278!23165 10278|23710 13562!23710 13562|23583.5 14650"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!23583.5 14650S3|23495 15410!23495 15410[#5B2E.91 #492A.B1 17983 28466"/>
+                        <Edge fillStyle0="1" edges="!19024 19403S1|19147 19001!19147 19001[#4960.51 #4A3D.54 18622 19331!18622 19331|18242 21053"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!19024 19403S3[#485D.3F #4FAB.4A 18369 21539!18369 21539[#4733.DD #53B5.9B 18242 21053"/>
+                        <Edge fillStyle0="2" edges="!18242 21053S1[#44CF.74 #54F0.43 17517 23253!17517 23890|17517 25209"/>
+                        <Edge fillStyle0="1" edges="!17517 25209S1|17517 26404"/>
+                        <Edge fillStyle0="2" edges="!17517 26404S1|17983 28466"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!17517 25209S3[#575A.D7 #4DF9.D9 22880 17873!22880 17873[#5817.EF #4E03.8D 17517 26404!17517 23253[#4C58.8A #546A.BF 20672 20841!20672 20841[#4DD0.96 #5413.8B 17517 23890"/>
+                        <Edge fillStyle0="2" edges="!23583.5 14650S1[#5894.3B 17786 21017 19080!21017 19080[#4D08.92 #4CFE.A9 19024 19403"/>
+                        <Edge fillStyle0="1" edges="!17517 23253S1|17517 23890"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

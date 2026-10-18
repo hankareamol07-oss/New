@@ -1,0 +1,67 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/RH22" itemID="674b00ae-00000a1b" symbolType="graphic" lastModified="1732791100">
+  <timeline>
+    <DOMTimeline name="RH22" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" duration="40" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#B6EBFF"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#A7DDF1"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.1">
+                            <fill>
+                              <SolidColor color="#6DAAC2"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!319 -1373[#139.1C #FFFAB6.C8 312.5 -1349!312.5 -1349[#139.61 #FFFABA.FC 323 -1364!323 -1364[#144.D1 #FFFAA9.29 326.5 -1369"/>
+                        <Edge fillStyle1="2" edges="!326.5 -1369[#14E.77 #FFFA9E.6B 342.5 -1371.5!342.5 -1371.5[#15A.99 #FFFAA7.A2 349.5 -1368.5!349.5 -1368.5[#161.32 #FFFAA5.42 356 -1375!356 -1375[#17C.2A #FFFABB.7 401 -1364"/>
+                        <Edge fillStyle1="1" edges="!319 -1373[#142.FE #FFFAA5.7C 326.5 -1369"/>
+                        <Edge fillStyle0="2" edges="!319 -1373[#139.36 #FFFAAD.AA 314.5 -1361!314.5 -1361[#125.3 #FFFAA7.37 277.5 -1358"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!401 -1364[#195.EF #FFFAC0.74 415.5 -1335"/>
+                        <Edge fillStyle0="1" edges="!415.5 -1335[#19F.2D #FFFAC2.FC 415 -1347!415 -1347[#195.E5 #FFFABC.88 401 -1364"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!277.5 -1358[#CF.4B #FFFAE2.33 248 -892!248 -892[#D9.57 -671.6875 248 -432!248 -432[#D0.9E #FFFF01.17 152 64!152 64[#59.9F #F2.71 244.5 311.5"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-163 -1263|-238 244!-238 244[-14.96875 #186.B5 244.5 311.5"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!244.5 311.5[#F6.B6 #136.B8 249 310!249 310|379 -636!379 -636[#1A7.2 #FFFBF8.D4 415.5 -1335"/>
+                        <Edge fillStyle1="1" edges="!-163 -1263[#34.4A #FFFAC6.A4 277.5 -1358"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="40" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Hand 2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-4.95" ty="38.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

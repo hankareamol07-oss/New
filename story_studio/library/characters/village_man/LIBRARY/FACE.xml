@@ -1,0 +1,136 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="FACE" itemID="67483d96-0000098e" symbolType="graphic" lastModified="1732798326">
+  <timeline>
+    <DOMTimeline name="FACE" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="EAR" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="EAR" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="32.75" ty="14.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.25" y="0.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="MOONCH" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MOONCH" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-22.95" ty="43.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="NOSE" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="NOSE" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-22.35" ty="20.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FM_Eyes_copy" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FM Eyes copy" symbolType="graphic" centerPoint3DX="-16.45" centerPoint3DY="-1.35" loop="play once">
+                  <matrix>
+                    <Matrix a="-0.125534057617188" d="0.125534057617188" tx="14" ty="-13.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="243.35" y="103.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Mouth_copy" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Mouth copy" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.16741943359375" b="-0.005615234375" c="0.005615234375" d="0.16741943359375" tx="-35.35" ty="36.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="78.6" y="60.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="HAIR" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HAIR" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix ty="-25.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FACE_PLANE" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FACE PLANE" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-9.9" ty="3.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="BACK_HAIR" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="BACK HAIR" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="28.15" ty="29.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

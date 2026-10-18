@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Tween 8" itemID="5d654597-00000ffe" symbolType="graphic" lastModified="1566916565">
+  <timeline>
+    <DOMTimeline name="Tween 8" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix tx="-93.45" ty="-452.8"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.2"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!3347 9443S2[2735 9603 1869 9603!1869 9603[1003 9603 391 9443!391 9443[-221 9283 -221 9056!-221 9056[-221 8829 391 8669!391 8669[1003 8509 1869 8509!1869 8509[2735 8509 3347 8669!3347 8669[3959 8829 3959 9056!3959 9056[3959 9283 3347
+ 9443"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

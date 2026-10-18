@@ -1,0 +1,79 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/King Latkun'" itemID="63d288ba-00000931" lastModified="1661533280">
+  <timeline>
+    <DOMTimeline name="King Latkun'" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="2.3846435546875" d="2.3846435546875" tx="-1151.9" ty="-834.9"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true" isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="2.38409423828125" d="2.38409423828125" tx="-1151.9" ty="-834.9"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFA819"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!10429 8478[10409 8517 10299 8555!10299 8555[10156 8598 10079 8625!10079 8625[9968 8665 9917 8661!9917 8661[9861 8656 9796 8596!9796 8596|9776 8577!9776 8577[9707 8508 9674 7976!9674 7976[9641 7435 9695 7156!9695 7156[9711 7076 9732 7038
+!9732 7038|9947 7023!9947 7023[10026 7017 10079 7005!10079 7005|10131 7303!10131 7303[10195 7646 10261 7873!10261 7873[10284 7953 10397 8289!10397 8289[10448 8442 10429 8478"/>
+                        <Edge cubics="!10429 8478(;10396,8541 10232,8570 10079,8625q10429 8478Q10409 8517q10299 8555Q10156 8598q10079 8625);"/>
+                        <Edge cubics="!10079 8625(;9936,8676 9885,8679 9796,8596q10079 8625Q9968 8665q9917 8661Q9861 8656q9796 8596);"/>
+                        <Edge cubics="!9796 8596(;9789,8590 9783,8584 9776,8577q9796 8596 9776 8577);"/>
+                        <Edge cubics="!9776 8577(;9686,8487 9621,7537 9695,7156q9776 8577Q9707 8508q9674 7976Q9641 7435q9695 7156);"/>
+                        <Edge cubics="!9695 7156(;9705,7106 9717,7065 9732,7038q9695 7156Q9711 7076q9732 7038);"/>
+                        <Edge cubics="!9947 7023(;9999,7019 10048,7012 10079,7005q9947 7023Q10026 7017q10079 7005);"/>
+                        <Edge cubics="!10079 7005(;10079,7005 10156,7509 10261,7873q10079 7005Q10079 7005q10131 7303Q10195 7646q10261 7873);"/>
+                        <Edge cubics="!10261 7873(;10367,8238 10462,8416 10429,8478q10261 7873Q10284 7953q10397 8289Q10448 8442q10429 8478);"/>
+                        <Edge cubics="!9732 7038(;9732,7038 9947,7023 9947,7023q9732 7038 9947 7023);"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMSymbolInstance libraryItemName="Duplicate Items Folder/&amp;#060Path&amp;#062_2_0" selected="true" blendMode="layer">
+                      <matrix>
+                        <Matrix a="2.38409423828125" d="2.38409423828125" tx="19.55" ty="1.35"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="3.95" y="35.55"/>
+                      </transformationPoint>
+                      <color>
+                        <Color alphaMultiplier="0.51171875"/>
+                      </color>
+                    </DOMSymbolInstance>
+                    <DOMSymbolInstance libraryItemName="Duplicate Items Folder/&amp;#060Path&amp;#062_1_4 copy" selected="true" blendMode="layer">
+                      <matrix>
+                        <Matrix a="2.38409423828125" d="2.38409423828125" tx="2.25" ty="-0.35"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="18.95" y="41.55"/>
+                      </transformationPoint>
+                      <color>
+                        <Color alphaMultiplier="0.25"/>
+                      </color>
+                    </DOMSymbolInstance>
+                    <DOMSymbolInstance libraryItemName="Duplicate Items Folder/&amp;#060Path&amp;#062_7 copy 2" selected="true" blendMode="layer">
+                      <matrix>
+                        <Matrix a="2.38409423828125" d="2.38409423828125" tx="4.75" ty="63.35"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="4.25" y="21.9"/>
+                      </transformationPoint>
+                      <color>
+                        <Color alphaMultiplier="0.4296875"/>
+                      </color>
+                    </DOMSymbolInstance>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

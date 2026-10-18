@@ -1,0 +1,44 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/pallu copy 16" itemID="6565aece-00003828" symbolType="graphic" lastModified="1700935722">
+  <timeline>
+    <DOMTimeline name="pallu copy 16" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#CC6666"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#8D4F45"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!162 -8281S6|710 -8281!710 -8281[819 -1421 1784 5975!1784 5975[843 6585 328 7674!328 7674[-671 7253 -958 7851!-958 7851[-1040 8023 -1134 8141!-1134 8141[-1302 8364 -1504 8234!-1504 8234[-1688 8117 -1784 7753!-1784 7753[-1436 -85 -585
+ -8281!-585 -8281|-184 -8281"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!626 6567S7[-148 -1472 162 -8281!-743 5679[-779 -849 -184 -8281"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!162 -8281S5|-184 -8281"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

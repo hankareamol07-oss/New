@@ -1,0 +1,54 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/LE copy 3" itemID="64ea4258-00003035" lastModified="1661899580">
+  <timeline>
+    <DOMTimeline name="LE copy 3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-106.55" ty="-91.25"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-106.55" ty="-91.25"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FDD2B8"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#A87B60"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!2131 2309S6[2133 2193 2171 2075!2171 2075[2247 1838 2428 1825!2428 1825[2530 1818 2548 1988!2548 1988[2564 2143 2508 2342!2508 2342[2450 2547 2360 2632!2360 2632[2256 2732 2156 2609"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!2385 2340S7[2394 2295 2389 2245!2389 2245[#94C.0C #860.8A 2314.5 2116.5!2314.5 2116.5[#931.D8 #7EF.38 2414 2016!2261 2340[2266 2268 2288 2191!2288 2191[#8FB.D6 #864.9E 2314.5 2116.5"/>
+                        <Edge fillStyle1="1" edges="!2156 2609S2|2131 2309"/>
+                        <Edge cubics="!2131 2309(;2131,2309 2138,1846 2428,1825q2131 2309Q2133 2193q2171 2075Q2247 1838q2428 1825);"/>
+                        <Edge cubics="!2428 1825(;2717,1804 2442,2962 2156,2609q2428 1825Q2530 1818q2548 1988Q2564 2143q2508 2342Q2450 2547q2360 2632Q2256 2732q2156 2609);"/>
+                        <Edge cubics="!2156 2609(;2156,2609 2131,2309 2131,2309q2156 2609 2131 2309);"/>
+                        <Edge cubics="!2261 2340(;2261,2340 2270,2215 2315,2117q2261 2340Q2266 2268q2288 2191 2315 2117);"/>
+                        <Edge cubics="!2315 2117(;2336,2070 2368,2028 2414,2016q2315 2117Q2354 2031q2414 2016);"/>
+                        <Edge cubics="!2389 2245(;2383,2178 2358,2136 2315,2117q2389 2245Q2380 2145q2315 2117);"/>
+                        <Edge cubics="!2385 2340(;2391,2310 2392,2278 2389,2245q2385 2340Q2394 2295q2389 2245);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

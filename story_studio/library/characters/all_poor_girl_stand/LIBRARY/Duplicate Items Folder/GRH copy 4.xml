@@ -1,0 +1,63 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/GRH copy 4" itemID="63fcde3a-00008089" lastModified="1660738423">
+  <timeline>
+    <DOMTimeline name="GRH copy 4" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-42.7" ty="-405"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-42.7" ty="-405"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFE3B7"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B26B51"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1730 8151S6[#843.C6 #1F55.58 2241 8225!2241 8225[#93E.71 #20EC.CA 2288.5 8975.5!2288.5 8975.5[#8A2.32 #2531.EE 2064 9967.5!2064 9967.5[#77D.DC #28AD.37 1871.5 10694!1871.5 10694[#721.6A #2ADE.C3 1741.5 11287.5"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!1779 8151S7[#6D9.72 #1FD6.3A 1730 8151"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!854 11204.5S6[#35C.45 #2B93.3A 865 11101!865 11101[#373.8C #2A8B.C8 880 10609!880 10609[858 10011 868 9799!868 9799[#38D.0C #23E7.AB 1067 8734!1067 8734[#4C8.F4 #2054.55 1730 8151"/>
+                        <Edge fillStyle0="1" edges="!854 11204.5S1[#39C.28 #2D1D.55 1301 11567!1301 11567[#677.54 #2D48.FD 1741.5 11287.5"/>
+                        <Edge cubics="!1779 8151(;1762,8150 1745,8150 1730,8151q1779 8151Q1753 8150q1730 8151);"/>
+                        <Edge cubics="!1067 8734(;1172,8429 1393,8234 1730,8151q1067 8734Q1225 8276q1730 8151);"/>
+                        <Edge cubics="!1730 8151(;1987,8064 2158,8089 2241,8225q1730 8151Q2116 8021q2241 8225);"/>
+                        <Edge cubics="!2241 8225(;2324,8361 2340,8611 2289,8976q2241 8225Q2366 8429q2289 8976);"/>
+                        <Edge cubics="!868 9799(;895,9394 962,9039 1067,8734q868 9799Q909 9192q1067 8734);"/>
+                        <Edge cubics="!854 11205(;858,11174 862,11141 865,11101q854 11205 865 11101);"/>
+                        <Edge cubics="!865 11101(;877,10966 882,10800 880,10609q865 11101Q884 10892q880 10609);"/>
+                        <Edge cubics="!880 10609(;865,10210 861,9940 868,9799q880 10609Q858 10011q868 9799);"/>
+                        <Edge cubics="!854 11205(;855,11220 860,11236 867,11248q854 11205Q855 11225q867 11248);"/>
+                        <Edge cubics="!867 11248(;896,11306 987,11366 1137,11425q867 11248Q911 11334q1137 11425);"/>
+                        <Edge cubics="!1137 11425(;1185,11445 1235,11463 1291,11481q1137 11425 1291 11481);"/>
+                        <Edge cubics="!2064 9968(;1967,10265 1903,10507 1872,10694q2064 9968Q1918 10413q1872 10694);"/>
+                        <Edge cubics="!1742 11288(;1797,11079 1841,10881 1872,10694q1742 11288Q1825 10975q1872 10694);"/>
+                        <Edge cubics="!2289 8976(;2236,9340 2161,9671 2064,9968q2289 8976Q2210 9522q2064 9968);"/>
+                        <Edge cubics="!1291 11481(;1535,11560 1685,11496 1742,11288q1291 11481Q1657 11600q1742 11288);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

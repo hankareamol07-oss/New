@@ -1,0 +1,44 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Right Palak copy" itemID="679e0e78-00001474" symbolType="graphic" lastModified="1738401638">
+  <timeline>
+    <DOMTimeline name="Right Palak copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-64.4" ty="35.4"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-64.4" ty="35.4"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle0="1" edges="!328 -921S1[267 -847 341 -790!341 -790[418 -739 679 -736!679 -736[941 -736 1229 -750!1229 -750[2016 -784 2277 -403!2277 -403[2225 -648 2000 -831!2000 -831[1770 -1018 1189 -1009!1189 -1009[884 -1018 639 -1007!639 -1007[389 -993 328 -921"/>
+                        <Edge cubics="!679 -736(;853,-736 1038,-741 1229,-750q679 -736Q941 -736q1229 -750);"/>
+                        <Edge cubics="!2277 -403(;2243,-567 2151,-709 2000,-831q2277 -403Q2225 -648q2000 -831);"/>
+                        <Edge cubics="!2000 -831(;1847,-953 1578,-1016 1189,-1009q2000 -831Q1770 -1018q1189 -1009);"/>
+                        <Edge cubics="!1229 -750(;1754,-775 2101,-657 2277,-403q1229 -750Q2016 -784q2277 -403);"/>
+                        <Edge cubics="!328 -921(;287,-871 292,-826 341,-790q328 -921Q267 -847q341 -790);"/>
+                        <Edge cubics="!341 -790(;393,-757 506,-739 679,-736q341 -790Q418 -739q679 -736);"/>
+                        <Edge cubics="!1189 -1009(;988,-1016 803,-1016 639,-1007q1189 -1009Q884 -1018q639 -1007);"/>
+                        <Edge cubics="!639 -1007(;474,-1000 368,-968 328,-921q639 -1007Q389 -993q328 -921);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

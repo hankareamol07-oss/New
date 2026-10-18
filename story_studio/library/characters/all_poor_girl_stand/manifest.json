@@ -1,0 +1,83 @@
+{
+ "name": "all_poor_girl_stand",
+ "label": "Poor Girl Stand",
+ "gender": "female",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Poor Girl Stand",
+  "frame": 0,
+  "bounds": [
+   -44.0,
+   24.0,
+   348.0,
+   1036.0
+  ],
+  "faces": "left",
+  "head": "GHead",
+  "neck": [
+   119.48,
+   400.54
+  ],
+  "mouth": {
+   "Lips": {
+    "closed": 24,
+    "mid": 8,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "GEyes": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "GRH",
+   "fore": "GRH2",
+   "shoulder": [
+    85.75,
+    434.64
+   ],
+   "elbow": [
+    59.72,
+    551.9
+   ]
+  },
+  "arm_back": {
+   "upper": "GLH",
+   "fore": "GLH2",
+   "shoulder": [
+    242.75,
+    433.68
+   ],
+   "elbow": [
+    264.49,
+    561.4
+   ]
+  },
+  "legs": [
+   "GLL",
+   "GRL"
+  ],
+  "hips": {
+   "GLL": [
+    82.5,
+    764.5
+   ],
+   "GRL": [
+    178.75,
+    774.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Poor Girl Stand"
+}

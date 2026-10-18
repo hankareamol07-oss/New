@@ -1,0 +1,11 @@
+config.json
+gcp_key.json
+*.key.json
+cache/
+output/
+library/_fla/
+__pycache__/
+build/
+dist/
+*.spec
+StoryStudio.exe

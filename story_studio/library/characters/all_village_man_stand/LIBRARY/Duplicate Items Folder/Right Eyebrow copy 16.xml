@@ -1,0 +1,93 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Right Eyebrow copy 16" itemID="64ea426a-000030b4" lastModified="1679470526">
+  <timeline>
+    <DOMTimeline name="Right Eyebrow copy 16" currentFrame="2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#1A1A1A"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!0 145|31 72!31 72[72 -1 120 0!120 0[235 3 335 33!335 33[493 79 492 173!492 173[448 152 364 138!364 138[197 111 0 145"/>
+                    <Edge cubics="!0 145(;0,145 43,-1 120,0q0 145Q0 145q31 72Q72 -1q120 0);"/>
+                    <Edge cubics="!120 0(;196,2 493,27 492,173q120 0Q235 3q335 33Q493 79q492 173);"/>
+                    <Edge cubics="!492 173(;492,173 315,90 0,145q492 173Q448 152q364 138Q197 111q0 145);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <transformationPoint>
+                    <Point x="23.15" y="8.25"/>
+                  </transformationPoint>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#1A1A1A"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!125 -150|95 -76!95 -76[72 5 107 38!107 38[190 117 283 166!283 166[426 245 493 178!493 178[447 162 377 112!377 112[240 13 125 -150"/>
+                    <Edge cubics="!125 -150(;125,-150 51,-16 107,38q125 -150Q125 -150q95 -76Q72 5q107 38);"/>
+                    <Edge cubics="!107 38(;162,89 389,282 493,178q107 38Q190 117q283 166Q426 245q493 178);"/>
+                    <Edge cubics="!493 178(;493,178 309,112 125,-150q493 178Q447 162q377 112Q240 13q125 -150);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#1A1A1A"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!46 365|36 286!36 286[36 202 77 179!77 179[179 124 280 100!280 100[440 60 486 142!486 142[438 146 358 176!358 176[200 236 46 365"/>
+                    <Edge cubics="!46 365(;46,365 11,217 77,179q46 365Q46 365q36 286Q36 202q77 179);"/>
+                    <Edge cubics="!77 179(;144,143 414,15 486,142q77 179Q179 124q280 100Q440 60q486 142);"/>
+                    <Edge cubics="!486 142(;486,142 291,159 46,365q486 142Q438 146q358 176Q200 236q46 365);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

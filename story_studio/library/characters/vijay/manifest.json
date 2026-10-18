@@ -1,0 +1,65 @@
+{
+ "name": "vijay",
+ "label": "विजय (जांभळा कुर्ता)",
+ "gender": "male",
+ "pack": "All Character",
+ "rig": {
+  "root": "Duplicate Items Folder/boy2 copy 7",
+  "frame": 0,
+  "bounds": [
+   -44.0,
+   -8.0,
+   168.0,
+   500.0
+  ],
+  "faces": "left",
+  "head": "FACE",
+  "neck": [
+   66.75,
+   74.72
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth 2 copy 22": {
+    "closed": 0,
+    "mid": 8,
+    "open": 6
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eye 5 copy 12": {
+    "open": 0,
+    "blink": [
+     45,
+     46,
+     47,
+     48
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "H2",
+   "fore": null,
+   "shoulder": [
+    6.75,
+    96.5
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "H1",
+   "fore": null,
+   "shoulder": [
+    121.5,
+    100.0
+   ],
+   "elbow": null
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [],
+  "shadow": [
+   "Layer_5"
+  ]
+ },
+ "root": "Duplicate Items Folder/boy2 copy 7"
+}

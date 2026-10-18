@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="NECK2" itemID="67483d8c-0000098a" symbolType="graphic" lastModified="1732791146">
+  <timeline>
+    <DOMTimeline name="NECK2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#DF956D"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.1">
+                            <fill>
+                              <SolidColor color="#B15B2B"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-582 -226|-292 554!-292 554|513 169!513 169[481 94 449 -27!449 -27[387 -269 363 -591!363 -591[#F1.D2 #FFFCC1.5F -149.5 -872!-149.5 -872[#FFFDE3.2E #FFFC6E.A1 -582 -226"/>
+                        <Edge cubics="!-512 -96(;-512,-96 -292,554 -292,554q-512 -96 -292 554);"/>
+                        <Edge cubics="!-292 554(;-292,554 513,169 513,169q-292 554 513 169);"/>
+                        <Edge cubics="!513 169(;513,169 383,-133 393,-496q513 169Q481 94q449 -27Q387 -269q393 -496);"/>
+                        <Edge cubics="!393 -496(;393,-496 -299,-773 -512,-96q393 -496Q220 -565q20 -550Q-379 -519q-512 -96);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

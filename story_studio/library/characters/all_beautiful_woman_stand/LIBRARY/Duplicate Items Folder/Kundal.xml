@@ -1,0 +1,136 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Kundal" itemID="6318bd48-0000122b" lastModified="1678553186" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="Kundal" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Moti" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti">
+                  <matrix>
+                    <Matrix ty="14.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti" centerPoint3DX="11.4" centerPoint3DY="24">
+                  <matrix>
+                    <Matrix a="0.9578857421875" b="-0.287078857421875" c="0.287078857421875" d="0.9578857421875" tx="-1.35" ty="16.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.05" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti" selected="true" centerPoint3DX="7.65" centerPoint3DY="23.5">
+                  <matrix>
+                    <Matrix a="0.977386474609375" b="0.211456298828125" c="-0.211456298828125" d="0.977386474609375" tx="0.2" ty="10.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti" centerPoint3DX="11.4" centerPoint3DY="25.5">
+                  <matrix>
+                    <Matrix a="0.99249267578125" b="-0.12213134765625" c="0.12213134765625" d="0.99249267578125" tx="0.05" ty="15.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.05" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="23" duration="77" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti" centerPoint3DX="10" centerPoint3DY="25.45">
+                  <matrix>
+                    <Matrix ty="14.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Moti_Huk" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti Huk">
+                  <matrix>
+                    <Matrix tx="3.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.95" y="6.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti Huk" centerPoint3DX="9.85" centerPoint3DY="7.65">
+                  <matrix>
+                    <Matrix a="0.986434936523438" b="0.16412353515625" c="-0.16412353515625" d="0.986434936523438" tx="4.65" ty="-0.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1" y="6.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti Huk" selected="true" centerPoint3DX="10" centerPoint3DY="8.7">
+                  <matrix>
+                    <Matrix d="0.856185913085938" tx="3.5" ty="1.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.95" y="6.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti Huk" centerPoint3DX="10" centerPoint3DY="7.45">
+                  <matrix>
+                    <Matrix tx="3.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.95" y="6.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="23" duration="77" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Moti Huk" centerPoint3DX="10" centerPoint3DY="7.45">
+                  <matrix>
+                    <Matrix tx="3.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.95" y="6.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

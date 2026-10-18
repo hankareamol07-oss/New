@@ -1,0 +1,57 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="A6" itemID="6540b4fc-00000613" symbolType="graphic" lastModified="1701092836">
+  <timeline>
+    <DOMTimeline name="A6" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#DF956D"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#FFE99B"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#F3D989"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#A99351"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                    <StrokeStyle index="2">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#966044"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="2" edges="!166 1685[#5B.E7 #106.31 615.5 185.5!615.5 185.5[#473.23 #6C.D1 1207 164"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!1207 164[#5ED.08 #1C4.FE 1672 1147!1672 1147|2179 3706"/>
+                    <Edge fillStyle0="3" strokeStyle="1" edges="!703 4118[470 4509 703 4838!703 4838[755 4837 991 4806"/>
+                    <Edge fillStyle0="3" fillStyle1="1" strokeStyle="1" edges="!991 4806[1576 4792 2344 4608"/>
+                    <Edge fillStyle0="3" strokeStyle="1" edges="!2344 4608[2433 4586 2522 4563!2522 4563[2465 3792 2179 3706"/>
+                    <Edge fillStyle0="1" strokeStyle="2" edges="!991 4806|1287 6726!1287 6726[1288 6735 1290 6744"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!2640 6537[2683 6816 2515 7044!2515 7044[2348 7273 2069 7316!2069 7316[1789 7359 1560 7191!1560 7191[1333 7023 1290 6744"/>
+                    <Edge fillStyle0="1" strokeStyle="2" edges="!2640 6537[2638 6526 2637 6516!2637 6516|2344 4608"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!703 4118|166 1685"/>
+                    <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="!703 4118[1581 3920 2179 3706"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

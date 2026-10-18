@@ -1,0 +1,616 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/hand2body builder copy" itemID="651d0859-00000497" symbolType="graphic" lastModified="1695553958">
+  <timeline>
+    <DOMTimeline name="hand2body builder copy" currentFrame="7" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_4" color="#FF4FFF" locked="true" layerType="mask">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="7" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.444091796875" d="0.1873779296875" tx="-416.15" ty="262.45"/>
+                        </matrix>
+                        <GradientEntry color="#7B4930" ratio="0"/>
+                        <GradientEntry color="#9A6346" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.734771728515625" d="0.27581787109375" tx="552.9" ty="-72.4"/>
+                        </matrix>
+                        <GradientEntry color="#7B4930" ratio="0"/>
+                        <GradientEntry color="#9A6346" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#B37856"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!535 3071S6[502 2872 316 2379!316 2379[229 2284 81 2336!81 2336[-38 2378 -39 2538!-39 2538[-138 2473 -249 2493!-249 2493[-349 2515 -410 2598!-410 2598[-537 2548 -652 2582!-652 2582[-788 2536 -980 2530!-980 2530[-940 2455 -950 2358!-950
+ 2358[-478 2623 -213 1555!-213 1555|22545 -5967!22545 -5967|23097 -4215!23097 -4215|535 3071"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!-1531 2179S6[-1496 2487 -1393 2776!-1393 2776[-1347 2882 -1250 2911!-1250 2911|-1047 3686.5!-1047 3686.5|-15005 8319!-15005 8319|-15599 6492!-15599 6492|-1531 2179"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_3" color="#FF800A" parentLayerIndex="0" locked="true" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="7" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <LinearGradient>
+                            <matrix>
+                              <Matrix a="-0.0026397705078125" b="-0.0081329345703125" c="1.137451171875" d="-0.3702392578125" tx="188.7" ty="63.2"/>
+                            </matrix>
+                            <GradientEntry color="#7B4930" ratio="0"/>
+                            <GradientEntry color="#9A6346" ratio="1"/>
+                          </LinearGradient>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#683E29"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-14727 7683|22497 -4506!22497 -4506|22282 -5196!22282 -5196|-14901 7013!-14901 7013[-14898 7328 -14727 7683"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="0.929183959960938" b="0.06463623046875" c="-0.06463623046875" d="0.929183959960938" tx="5.05" ty="7.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-43.05" y="134.5"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="0.929183959960938" b="0.06463623046875" c="-0.06463623046875" d="0.929183959960938" tx="5.05" ty="7.4"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="-43.05" y="134.5"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B8734C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-47 4153[205 4088 308 4219!308 4219[478 4439 322 4783!322 4783[238 4984 252 5139!252 5139[297 5509 674 5546!674 5546[707 4886 933 4120!933 4120[642 3200 159 2362"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-47 4153[-128 4621 -19 5229!-19 5229|253 5919!253 5919[372 6281 194 6405!194 6405[128 6439 77 6360"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-16 4001[-34 4075 -47 4153"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-859 2679|-1353 4394!-1353 4394|-1421 5629!-1421 5629|-1124 6365!-1124 6365[-814 6193 -1044 5616!-1044 5616[-1073 5536 -1016 5377"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-1252 4429|-1023 5354!-1023 5354[-1021 5366 -1016 5377"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-1016 5377[-975 5524 -883 5638!-883 5638[-289 6392 -102 6362"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-626 4066[-539 4647 -482 5242!-482 5242[-446 5422 -358 5548!-358 5548[-96 5968 77 6360!-1013 4272|-723 5432!-723 5432[-668 5621 -539 5790!-539 5790|-102 6362"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-102 6362|-62 6414!-62 6414[-14 6488 77 6360"/>
+                        <Edge fillStyle0="1" edges="
+!159 2362|-859 2679"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Finger2 copy 5" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-2.11582946777344" b="0.97515869140625" c="0.97515869140625" d="2.11582946777344" tx="-0.3" ty="219.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.35" y="-40.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="1.00146484375" b="-0.14886474609375" c="0.14886474609375" d="1.00146484375" tx="-35.7" ty="-3.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-27.15" y="135.1"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="1.00146484375" b="-0.14886474609375" c="0.14886474609375" d="1.00146484375" tx="-35.7" ty="-3.95"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="-27.15" y="135.1"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B8734C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!318 4668[294 4676 263 4679!263 4679[145 4705 14 4694"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!258 5487[378 5374 455 5237!455 5237[715 4786 707 4476!707 4476[693 3581 468 2827"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-59 5335[78 5221 171 5074!171 5074[195 5032 212 4957!212 4957|263 4679!258 5487[201 5544 130 5595!130 5595[-26 5705 -250 5957"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-507 2682[-806 3004 -967 3369!-967 3369[-1058 3578 -1057 3795!-1057 3795[-1042 4290 -1476 4936!-1476 4936[-1294 5123 -982 4795!-982 4795[-867 4660 -808 4398!-808 4398[-773 4187 -634 4024"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!224 4399[157 3960 -84 3664!-84 3664[-183 3547 -119 3337!-119 3337[-44 3097 179 2863"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-634 4024[-555 4228 -549 4320!-549 4320[-513 4751 -570 5451!-570 5451[-583 5597 -554 5743!-554 5743[-537 5852 -483 5814"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-326 5591[-223 5481 -59 5335"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-476 6083[-521 6004 -488 5834!-488 5834[-488 5825 -483 5814"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-483 5814[-454 5732 -326 5591!-326 5591[-224 5047 -263 4636!-263 4636[-119 4684 14 4694!-355 6078[-303 6014 -250 5957!-353 6175[-363 6127 -355 6078"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-190 6307[-188 6311 -184 6317!-184 6317[-149 6365 -101 6329!-101 6329[-50 6294 -38 6251!-38 6251[52 5812 258 5487"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-190 6307[-270 6179 -250 5957"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-190 6307[-294 6313 -333 6223!-333 6223[-345 6201 -353 6175!-353 6175[-374 6232 -433 6188!-433 6188[-488 6146 -476 6083"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-355 6078[-431 6156 -476 6083!-634 4024[-749 3732 -643 3692"/>
+                        <Edge fillStyle0="1" edges="
+!468 2827|-507 2682"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-59 5335[25 4754 14 4694"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="0.15" ty="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="8.8" y="138.05"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="0.15" ty="-0.05"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="8.8" y="138.05"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B8734C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-437 4404|-574 4824!-574 4824[-920 5298 -960 5624!-960 5624[-943 5808 -726 5801!-726 5801[-251 4848 125 4351!125 4351[107 3403 206 2748!-884 2727|-850 3040!-850 3040|-1381 3219!-1381 3219[-1659 3227 -1987 3191!-1987 3191[-2201 3327 -2031
+ 3450!-2031 3450|-1364 3567!-1364 3567|-838 3518!-838 3518|-830 3520!-830 3520|-1346 3848!-1346 3848[-1769 3765 -2214 3783!-2214 3783[-2496 3957 -2280 4096!-2280 4096[-1708 4117 -1299 4234!-1299 4234[-979 4080 -651 3992"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-830 3520|-700 3503!-651 3992|-547 3960!-437 4404|-253 4285"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-651 3992|-1182 4431!-1182 4431[-1748 4534 -2146 4664!-2146 4664[-2373 4847 -2087 4999!-2087 4999[-1518 4879 -1035 4834!-1035 4834|-437 4404"/>
+                        <Edge fillStyle1="1" edges="
+!-884 2727|206 2748"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <transformationPoint>
+                    <Point x="-14.4" y="129.05"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape selected="true">
+                      <transformationPoint>
+                        <Point x="-14.4" y="129.05"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B8734C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!426 4190S7[225 3853 232 3528!232 3528[233 3370 67 3400!67 3400[-3 3419 -57 3501"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!153 2673S6[813 3325 680 4186!680 4186[494 4534 107 4512"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-997 3945S7[-1017 3930 -1038 3916!-57 3501[-200 3379 -464 3600!-57 3501[-68 3515 -79 3532!-79 3532[-265 3866 107 4512!-335 3073[-302 3261 -374 3467!-374 3467[-700 3673 -997 3945!-464 3600[-664 3678 -852 3851!-852 3851|-845 4010"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-1217 4369S6[-1400 4239 -1402 3943!-1402 3943[-1438 3244 -724 2611"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-448 4073S7[-505 4045 -577 4028!-577 4028[-715 4047 -845 4010!-776 4442|-714 4669!-714 4669[-684 4681 -657 4688!-309 4614[-277 4589 -256 4531!-256 4531[-188 4198 -448 4073!-300 4657|-309 4614"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-300 4657S6[-464 4747 -657 4688"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-776 4442S7[-610 4481 -460 4600!-460 4600[-369 4656 -309 4614!-1217 4369[-1197 4383 -1174 4396!-1174 4396[-1047 4451 -843 4432!-843 4432[-810 4436 -776 4442"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-657 4688S6[-571 5246 -443 5873!-443 5873[-456 5942 -490 5995!-490 5995[-522 6051 -585 6092!-585 6092[-700 6132 -768 5959!-768 5959[-929 5197 -1217 4369"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-464 3600S7[-499 3805 -448 4073!-845 4010[-922 3986 -997 3945"/>
+                        <Edge fillStyle1="1" edges="
+!-724 2611S2|153 2673"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!107 4512S6[-45 4721 -300 4657"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="5" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="-2.15179443359375" d="2.15179443359375" tx="-10.75" ty="10.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16.25" y="59.3"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="-2.15179443359375" d="2.15179443359375" tx="-10.75" ty="10.6"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="16.25" y="59.3"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B8734C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!311 1181[435 1304 484 1529!484 1529[620 1707 802 1738!802 1738[746 1866 645 1858!645 1858[543 1850 464 1762!464 1762[388 1669 278 1646!278 1646[147 1792 59 1936!59 1936[18 1997 5 2075!5 2075[-42 2281 -72 2494!-72 2494[-98 2571 -172 2585"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!27 1155[59 1295 25 1447!25 1447[-157 1566 -235 1718"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-402 1970[-413 1959 -418 1950!-418 1950[-441 1836 -443 1713!-443 1713[-342 1363 -131 1068"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-237 1922[-259 1907 -278 1893!-237 1922[-244 1859 -255 1802!-159 2116|-118 2140!-118 2140[-49 2032 -112 1993!-112 1993[-121 1989 -131 1984!-402 1970[-387 1983 -361 1997!-361 1997|-231 2073!-236 2187[-231 2127 -231 2073!-236 2187|-252
+ 2172!-313 2299|-206 2405!-206 2405[-182 2396 -166 2379"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-402 1970[-407 2067 -405 2159!-405 2159[-404 2218 -320 2292!-320 2292|-313 2299"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-166 2379[-134 2346 -136 2279!-136 2279|-170 2248!-170 2248|-236 2187!-231 2073|-159 2116!-159 2116[-169 2181 -170 2248"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-313 2299|-276 2596!-276 2596[-264 2636 -228 2641!-228 2641[-186 2633 -172 2585"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-166 2379[-174 2479 -172 2585!-131 1984[-190 1953 -237 1922!-101 1898[-118 1941 -131 1984"/>
+                        <Edge fillStyle1="1" edges="
+!-131 1068|311 1181"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="-0.35" ty="-1.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-45.6" y="82.3"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="-0.35" ty="-1.95"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="-45.6" y="82.3"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B8734C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!304 1649[#127.E3 #747.DC 794 2146!794 2146[#50C.09 #97C.0B 2029 2861!2029 2861[2729 3207 2583 3341!2583 3341[2556 3364 2529 3382!2529 3382[2653 3402 2870 3499!2870 3499[3017 3562 2993 3700!2993 3700[2981 3726 2964 3738"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!2964 3738[2891 3819 2771 3774!2771 3774[2337 3599 1826 3462!1826 3462[1319 3328 802 3060"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!2964 3738[3016 3881 2875 3940!2875 3940[2873 3940 2872 3941"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!2529 3382[2363 3467 1981 3271!1981 3271[1337 2950 893 2783!2872 3941[2729 3994 2103 3815!2103 3815[1319 3654 684 3334!2013 4009[1946 3990 1875 3969!1875 3969[1821 3955 1764 3938!1764 3938[1093 3842 600 3583"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!2013 4009[2089 4044 2002 4077!2002 4077[1872 4132 1119 3914!1119 3914[366 3696 -246 3219!-246 3219[-858 2742 -909 1649!2872 3941[2911 4090 2797 4137!2797 4137[2605 4168 2013 4009"/>
+                        <Edge fillStyle1="1" edges="
+!-909 1649|304 1649"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B37856"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!535 3071[502 2872 316 2379!316 2379[229 2284 81 2336!81 2336[-38 2378 -39 2538"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!162 3270[298 3362 415 3319!415 3319[516 3284 542 3139!542 3139[542 3119 539 3094!539 3094[538 3088 537 3084!537 3084|535 3071!-223 3449.5|-223 3450!-223 3450[-94 3510 18 3460!18 3460[112 3424 161 3270!161 3270|162 3270!535 3071[394 2072
+ 151 1651"/>
+                        <Edge fillStyle0="1" edges="
+!151 1651[37 1470 -180 1420!-180 1420[-431 1371 -692 1530"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-39 2538[-138 2473 -249 2493!-249 2493[-349 2515 -410 2598!-410 2598[-537 2548 -652 2582!-410 2598|-358 2830!-358 2830[-433 2656 -652 2582!-980 2530[-940 2455 -950 2358!-1250 2911[-1217 2921 -1176 2923!-1176 2923[-986 2911 -788 2943"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-692 1530[-1137 1808 -1531 2179!-1531 2179[-1496 2487 -1393 2776!-1393 2776[-1347 2882 -1250 2911"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-1013 2573[-994 2552 -980 2530!-950 2358[-954 2326 -963 2292"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-1250 2911|-1047 3687!-1047 3687[-975 3822 -826 3789!-826 3789[-682 3756 -640 3590"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-788 2943[-558 2979 -320 3073!-320 3073|-320 3072"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-640 3590[-519 3661 -408 3631!-408 3631[-287 3607 -224 3449!-224 3449[#FFFF20.97 3449 -223 3449.5"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-223 3449.5|-320 3072!-652 2582[-788 2536 -980 2530!-320 3072[-313 2934 -358 2830!-640 3590|-788 2943!-950 2358[-478 2623 -213 1555!-77 1860[-123 2100 -68 2403!162 3270|-39 2538"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="6" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <transformationPoint>
+                    <Point x="1.35" y="-123.7"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <transformationPoint>
+                        <Point x="1.35" y="-123.7"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B37856"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!1081 -2474[1417 -608 204 2761!204 2761|-873 2761!-873 2761[-1325 -313 -1027 -2474"/>
+                        <Edge fillStyle1="1" edges="
+!-1027 -2474|1081 -2474"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix d="0.82781982421875" ty="-21.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.35" y="-123.9"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix d="0.82781982421875" ty="-21.3"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="1.35" y="-123.9"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B37856"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!1081 -2474[1417 -608 204 2761!204 2761|-873 2761!-873 2761[-1325 -313 -1027 -2474"/>
+                        <Edge fillStyle1="1" edges="
+!-1027 -2474|1081 -2474"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix d="0.8148193359375" ty="-22.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.35" y="-123.85"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix d="0.8148193359375" ty="-22.95"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="1.35" y="-123.85"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FAAA7C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B37856"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!1081 -2474[1417 -608 204 2761!204 2761|-873 2761!-873 2761[-1325 -313 -1027 -2474"/>
+                        <Edge fillStyle1="1" edges="
+!-1027 -2474|1081 -2474"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

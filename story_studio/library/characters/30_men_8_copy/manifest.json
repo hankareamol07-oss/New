@@ -1,0 +1,78 @@
+{
+ "name": "30_men_8_copy",
+ "label": "तरुण (पांढरा शर्ट) 2",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/men 8 copy",
+  "frame": 0,
+  "bounds": [
+   860.0,
+   220.0,
+   1184.0,
+   1032.0
+  ],
+  "faces": "left",
+  "head": "Face",
+  "neck": [
+   1001.5,
+   370.18
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 25": {
+    "closed": 0,
+    "mid": 28,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 32": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "shirt",
+   "fore": "leg2",
+   "shoulder": [
+    1015.0,
+    374.18
+   ],
+   "elbow": [
+    975.33,
+    614.12
+   ]
+  },
+  "arm_back": {
+   "upper": "shirt",
+   "fore": "L_leg",
+   "shoulder": [
+    1015.0,
+    374.18
+   ],
+   "elbow": [
+    1050.23,
+    612.17
+   ]
+  },
+  "legs": [
+   "foot2",
+   "L_foot"
+  ],
+  "hips": {
+   "foot2": [
+    955.25,
+    794.0
+   ],
+   "L_foot": [
+    1072.0,
+    796.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/men 8 copy"
+}

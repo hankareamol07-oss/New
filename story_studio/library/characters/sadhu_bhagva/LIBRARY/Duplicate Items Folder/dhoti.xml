@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/dhoti" itemID="61eed590-0000133b" symbolType="graphic" lastModified="1643040905">
+  <timeline>
+    <DOMTimeline name="dhoti" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-862.65" ty="-973.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="905.45" y="988.75"/>
+                  </transformationPoint>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FE7039"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#F26030"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.25">
+                        <fill>
+                          <SolidColor color="#F26030"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!18123 19753[18701 19410 18870 20257!18870 20257[18788 23103 19168 27510!19168 27510|19333 29063!19333 29063[18879 29340 18449 28700!18449 28700[18420 28365 18201 28382"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!18201 28382[18177 28390 18143 28398!18143 28398[17685 28493 17458 28006!17458 28006|17284 23165!17284 23165[17284 23111 17280 23062!17280 23062[17165 20141 17545 19691!17545 19691[17809 19232 18123 19753"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!18094 20009[18288 20715 18395 21913!18395 21913[18470 22702 18606 24408!18606 24408[18965 27762 18875 28601!18875 28601[18858 28770 18800 28811!18800 28811[18581 28328 18437 27246!18437 27246[18300 26056 18230 25631!18230 25631|18185
+ 25627!18185 25627|18148 25961!18148 25961[18172 26994 18201 28382"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="
+!18123 19753[18110 19877 18094 20009"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!18094 20009[17863 22735 18548 27151"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

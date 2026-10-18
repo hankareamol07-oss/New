@@ -1,0 +1,60 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Back Eybrow copy 2" itemID="6795063b-00001f65" symbolType="graphic" lastModified="1735870429" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="Seth Back Eybrow copy 2" currentFrame="108" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Seth_Back_Eybrow_In" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="106" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Eybrow In copy 2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.4" y="15.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Eybrow In copy 2" symbolType="graphic" firstFrame="2" centerPoint3DX="29.15" centerPoint3DY="7.2" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.4" y="15.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="156" duration="35" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Eybrow In copy 2" symbolType="graphic" firstFrame="1" centerPoint3DX="29.15" centerPoint3DY="7.2" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.4" y="15.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" duration="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Eybrow In copy 2" symbolType="graphic" centerPoint3DX="29.15" centerPoint3DY="7.2" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.4" y="15.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

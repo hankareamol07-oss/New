@@ -1,0 +1,38 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/hugkhuol copy" itemID="65671154-00001168" symbolType="graphic" lastModified="1696419270">
+  <timeline>
+    <DOMTimeline name="hugkhuol copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#666666"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#999999"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!8531 1351S2[8531 1911 7282 2306!7282 2306[6033 2702 4265 2702!4265 2702[2498 2702 1249 2306!1249 2306[0 1911 0 1351!0 1351[0 791 1249 395!1249 395[2498 0 4265 0!4265 0[6033 0 7282 395!7282 395[8531 791 8531 1351"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+              <frameColor>
+                <Color alphaMultiplier="0.3515625"/>
+              </frameColor>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

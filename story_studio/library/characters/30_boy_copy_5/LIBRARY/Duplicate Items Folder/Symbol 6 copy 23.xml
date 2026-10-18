@@ -1,0 +1,80 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Symbol 6 copy 23" itemID="6565b064-000045a5" symbolType="graphic" lastModified="1694958423">
+  <timeline>
+    <DOMTimeline name="Symbol 6 copy 23" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#250505"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#E7E7E7"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.5">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!442 -3[440 -4 437 -5!437 -5[427 -14 426 -26!426 -26[423 -38 432 -48!432 -48[440 -59 452 -61!452 -61[464 -62 475 -54!475 -54[481 -50 483 -44"/>
+                        <Edge fillStyle0="3" fillStyle1="2" edges="!483 -44[486 -39 487 -34!487 -34[489 -21 480 -11!480 -11[472 0 459 1!459 1[450 2 442 -3"/>
+                        <Edge fillStyle0="1" fillStyle1="3" edges="!483 -44[499 -45 510 -37!510 -37[523 -26 525 -8!525 -8[527 9 517 23!517 23[506 37 489 39!489 39[471 41 457 30!457 30[443 20 441 2!441 2[441 0 442 -3"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!369 3[373 51 411 85!411 85[450 117 498 112!498 112[547 109 579 69!579 69[612 31 607 -17!607 -17[605 -65 565 -99!565 -99[527 -130 478 -127!478 -127[429 -122 397 -84!397 -84[366 -46 369 3"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#200404"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#E7E7E7"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.5">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="3" edges="!-616 -80S3[-618 -84 -618 -88!-618 -88[-620 -99 -615 -106!-615 -106[-609 -115 -600 -116!-600 -116[-590 -117 -583 -110!-583 -110[-580 -109 -578 -106"/>
+                        <Edge fillStyle0="2" fillStyle1="3" edges="!-578 -106S3[-573 -101 -572 -93!-572 -93[-571 -83 -578 -74!-578 -74[-583 -68 -593 -67!-593 -67[-601 -66 -610 -71!-610 -71[-615 -75 -616 -80"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!-578 -106S3|-577 -106!-577 -106[-556 -109 -541 -98!-541 -98[-524 -85 -522 -67!-522 -67[-519 -48 -533 -35!-533 -35[-544 -20 -565 -18!-565 -18[-585 -16 -603 -27!-603 -27[-617 -38 -620 -57!-620 -57[-621 -70 -616 -80"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-659 -58S5[-655 -12 -620 22!-620 22[-585 54 -542 50!-542 50[-498 48 -469 11!-469 11[-442 -26 -446 -72!-446 -72[-450 -118 -486 -152!-486 -152[-520 -184 -565 -180!-565 -180[-609 -176 -636 -141!-636 -141[-664 -105 -659 -58"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

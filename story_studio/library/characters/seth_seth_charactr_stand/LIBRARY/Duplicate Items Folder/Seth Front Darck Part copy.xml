@@ -1,0 +1,96 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Front Darck Part copy" itemID="6794defe-0000119e" symbolType="graphic" lastModified="1735871595" lastUniqueIdentifier="3">
+  <timeline>
+    <DOMTimeline name="Seth Front Darck Part copy" currentFrame="69" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="106" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sb in S copy" symbolType="graphic" firstFrame="4" loop="single frame">
+                  <matrix>
+                    <Matrix tx="2.2" ty="-8.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57.95" y="30.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sb in S copy" symbolType="graphic" firstFrame="2" centerPoint3DX="60.15" centerPoint3DY="21.75" loop="single frame">
+                  <matrix>
+                    <Matrix tx="2.2" ty="-8.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57.95" y="30.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="43" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sb in S copy" symbolType="graphic" firstFrame="1" centerPoint3DX="60.15" centerPoint3DY="21.75" loop="single frame">
+                  <matrix>
+                    <Matrix tx="2.2" ty="-8.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57.95" y="30.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="156" duration="7" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sb in S copy" symbolType="graphic" firstFrame="3" centerPoint3DX="60.15" centerPoint3DY="21.75" loop="single frame">
+                  <matrix>
+                    <Matrix tx="2.2" ty="-8.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57.95" y="30.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="163" duration="27" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sb in S copy" symbolType="graphic" centerPoint3DX="60.15" centerPoint3DY="21.75" loop="single frame">
+                  <matrix>
+                    <Matrix tx="2.2" ty="-8.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57.95" y="30.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="190" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sb in S copy" symbolType="graphic" firstFrame="3" centerPoint3DX="60.15" centerPoint3DY="21.75" loop="single frame">
+                  <matrix>
+                    <Matrix tx="2.2" ty="-8.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57.95" y="30.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" duration="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sb in S copy" symbolType="graphic" firstFrame="4" centerPoint3DX="60.15" centerPoint3DY="21.75" loop="single frame">
+                  <matrix>
+                    <Matrix tx="2.2" ty="-8.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57.95" y="30.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

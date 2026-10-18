@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/S Pagadi Latka" itemID="6389c0bb-0000029f" symbolType="graphic" lastModified="1669972155">
+  <timeline>
+    <DOMTimeline name="S Pagadi Latka" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF1E00"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#A11300"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!3178 241[3223 537 3260 1010!3260 1010[3335 1957 3296 2843!3296 2843[3242 4083 2969 5024!2969 5024[2628 6201 1963 6842!1963 6842[1869 6846 1736 6808!1736 6808[1471 6734 1280 6531!1280 6531[1089 6328 540 6332!540 6332[368 6333 182 6355
+!182 6355|29 6376!29 6376[-10 6284 3 6148!3 6148[27 5877 283 5656!283 5656[453 5510 773 5038!773 5038[1131 4512 1437 3916!1437 3916[1805 3203 1991 2590!1991 2590[2211 1864 2147 1363!2147 1363[2083 862 2211 514!2211 514[2319 220 2540 85
+!2540 85[2737 -34 2931 14!2931 14[3125 62 3178 241"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!1738 3934[2042 3345 2343 2620!2343 2620[2947 1169 2938 490!538 6122|748 5718!748 5718[998 5248 1201 4922!1638 6446[1878 6016 2117 5435!2117 5435[2594 4274 2585 3525"/>
+                    <Edge cubics="!3178 241(;3178,241 3898,4978 1963,6842q3178 241Q3223 537q3260 1010Q3335 1957q3296 2843Q3242 4083q2969 5024Q2628 6201q1963 6842);"/>
+                    <Edge cubics="!1963 6842(;1963,6842 1585,6856 1280,6531q1963 6842Q1869 6846q1736 6808Q1471 6734q1280 6531);"/>
+                    <Edge cubics="!1280 6531(;975,6206 29,6376 29,6376q1280 6531Q1089 6328q540 6332Q368 6333q182 6355Q29 6376q29 6376);"/>
+                    <Edge cubics="!29 6376(;29,6376 -126,6009 283,5656q29 6376Q-10 6284q3 6148Q27 5877q283 5656);"/>
+                    <Edge cubics="!283 5656(;693,5303 2330,2800 2147,1363q283 5656Q453 5510q773 5038Q1131 4512q1437 3916Q1805 3203q1991 2590Q2211 1864q2147 1363);"/>
+                    <Edge cubics="!2147 1363(;1963,-75 3036,-233 3178,241q2147 1363Q2083 862q2211 514Q2319 220q2540 85Q2737 -34q2931 14Q3125 62q3178 241);"/>
+                    <Edge cubics="!1738 3934(;1738,3934 2952,1577 2938,490q1738 3934Q2042 3345q2343 2620Q2947 1169q2938 490);"/>
+                    <Edge cubics="!1638 6446(;1638,6446 2599,4724 2585,3525q1638 6446Q1878 6016q2117 5435Q2594 4274q2585 3525);"/>
+                    <Edge cubics="!538 6122(;538,6122 876,5444 1201,4922q538 6122Q538 6122q748 5718Q998 5248q1201 4922);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,87 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/shirt copy 2" itemID="60a4ea2b-00001089" symbolType="graphic" lastModified="1621323598">
+  <timeline>
+    <DOMTimeline name="shirt copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-643.65" ty="-386.9"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-643.65" ty="-386.9"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#F6AD75"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#0D8EA8"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#0C667D"/>
+                        </FillStyle>
+                        <FillStyle index="4">
+                          <SolidColor color="#003399"/>
+                        </FillStyle>
+                        <FillStyle index="5">
+                          <SolidColor color="#08687B"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#037692"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#07677C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" edges="!15449 7738S1|14688 7792"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="!16110 8785S7[#3EAD.3A #24C9.CF 15837 10004!15837 10004[#3CB1.6E #261C.15 15115 9649!15115 9649|15015 9857!15015 9857|14454 9937"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!14600 15355S6|14407 15735!14407 15735|14407 15922!14407 15922[#3514.E6 #3E5D.7A 12873 15722!12873 15722[#327E.0A #3851.9E 13135 13210!13135 13210[#349A.AD #2C14.93 13019 9720!13019 9720[#33E6.4A #2551.3F 13512.5 9359.5"/>
+                        <Edge fillStyle1="3" strokeStyle="1" edges="!13512.5 9359.5S6[#3612.03 #2375.5C 14084 8738!14084 8738|14688 7792"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="!14688 7792S7|14601 8654!14601 8654|14120 9322!14120 9322|14454 9937"/>
+                        <Edge fillStyle0="4" fillStyle1="2" strokeStyle="2" edges="!14456 10284S7[14456 10313 14476 10333!14476 10333[14497 10354 14526 10354!14526 10354[14555 10354 14575 10333!14575 10333[14596 10313 14596 10284!14596 10284[14596 10255 14575 10234!14575 10234[14555 10214 14526 10214!14526 10214[14497
+ 10214 14476 10234!14476 10234[14456 10255 14456 10284!14369 11315[14369 11348 14392 11371!14392 11371[14415 11394 14448 11394!14448 11394[14481 11394 14504 11371!14504 11371[14527 11348 14527 11315!14527 11315[14527 11282 14504 11259
+!14504 11259[14481 11236 14448 11236!14448 11236[14415 11236 14392 11259!14392 11259[14369 11282 14369 11315"/>
+                        <Edge fillStyle0="5" fillStyle1="2" strokeStyle="1" edges="
+!16198 10785S7[15583 #2AB9.31 14968 10785!14968 10785|15042 11781!15042 11781[#3B2F.7 #2EB8.3D 15409 12022!15409 12022[#3CEE.C9 #2F2F.EA 15764 12022!15764 12022[#3E92.A4 #2EAE.1C 16198 11754!16198 11754|16198 10785"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="
+!14454 9937S7|14019 9583!14019 9583|13819 9957!13819 9957[#3516.FA #261D.53 13512.5 9359.5"/>
+                        <Edge fillStyle0="3" strokeStyle="1" edges="
+!16110 8785S5|15449 7738"/>
+                        <Edge fillStyle0="3" fillStyle1="1" strokeStyle="1" edges="
+!15449 7738S7|15690 8580!15690 8580[#3DE6.C7 #2311.D6 14454 9937"/>
+                        <Edge fillStyle0="4" fillStyle1="2" strokeStyle="2" edges="
+!14508 13513S7[14508 13546 14531 13569!14531 13569[14554 13592 14587 13592!14587 13592[14620 13592 14643 13569!14643 13569[14666 13546 14666 13513!14666 13513[14666 13480 14643 13457!14643 13457[14620 13434 14587 13434!14587 13434[14554
+ 13434 14531 13457!14531 13457[14508 13480 14508 13513!14391 12447[14391 12478 14413 12500!14413 12500[14436 12523 14467 12523!14467 12523[14498 12523 14520 12500!14520 12500[14543 12478 14543 12447!14543 12447[14543 12416 14520 12393
+!14520 12393[14498 12371 14467 12371!14467 12371[14436 12371 14413 12393!14413 12393[14391 12416 14391 12447"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!14600 15355S5|14527 15695!14527 15695[#38A1.1E #3E21.9 14687 15922!14687 15922[#3CC5.FC #3E89.4D 16224 15922!16224 15922[#4290.3C #3DBB.91 17162 15172!17162 15172[#428C.54 #3075.56 17368 9527!17368 9527[#41BF.09 #23DE.2C 16110 8785"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!14600 15355S7[#36DA.58 #2C03.9D 14454 9937"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,88 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Head copy 11" itemID="64ea4258-0000302a" symbolType="graphic" lastModified="1671481248">
+  <timeline>
+    <DOMTimeline name="Head copy 11" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="F2_Lips_copy" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 Lips copy 3" symbolType="graphic" centerPoint3DX="763.1" centerPoint3DY="316.5" loop="single frame">
+                  <matrix>
+                    <Matrix a="-2.03204345703125" b="0.23834228515625" c="0.23834228515625" d="2.03204345703125" tx="799.55" ty="308.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="21.7" y="6.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_Nose_copy" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 Nose copy 3" centerPoint3DX="761.25" centerPoint3DY="246.95">
+                  <matrix>
+                    <Matrix a="-2.03204345703125" b="0.23834228515625" c="0.23834228515625" d="2.03204345703125" tx="778.35" ty="202.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.8" y="21.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_Eyes_copy" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 Eyes copy 3" selected="true" symbolType="graphic" centerPoint3DX="748.25" centerPoint3DY="201.45" loop="loop">
+                  <matrix>
+                    <Matrix a="-2.03204345703125" b="0.23834228515625" c="0.23834228515625" d="2.03204345703125" tx="830.2" ty="157.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="42.2" y="16.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_PF_copy" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 PF copy 3">
+                  <matrix>
+                    <Matrix a="-2.03204345703125" b="0.23834228515625" c="0.23834228515625" d="2.03204345703125" tx="830.6" ty="11.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="68.1" y="95.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Chut" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Chut" symbolType="graphic" loop="play once">
+                  <matrix>
+                    <Matrix tx="414.4" ty="-10.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="109.05" y="112.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

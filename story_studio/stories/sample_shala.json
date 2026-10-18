@@ -1,0 +1,5 @@
+{"title":"शाळेचा पहिला दिवस","lang":"mr","music":"bansuri_flute","cast":{"aai":{"name":"आई","character":"sunita"},"amit":{"name":"अमित","character":"amit"}},
+"scenes":[{"background":"home_interior_9.jpg","camera":"slow-zoom","transition":"fade","characters":[{"id":"aai","position":"left"},{"id":"amit","position":"right","enter":"right"}],
+"lines":[{"speaker":"narrator","text":"आज अमितचा शाळेचा पहिला दिवस होता."},{"speaker":"aai","text":"अमित, दप्तर तयार आहे ना?","action":"explain"},{"speaker":"amit","text":"हो आई, मी तयार आहे!","action":"wave"}]},
+{"background":"school_1_1.jpg","camera":"pan","transition":"fade","characters":[{"id":"amit","position":"center","enter":"left"}],
+"lines":[{"speaker":"amit","text":"किती मोठी शाळा आहे! मी रोज मन लावून शिकेन.","action":"point"},{"speaker":"narrator","text":"तात्पर्य: नवीन सुरुवात आनंदाने करावी."}]}]}

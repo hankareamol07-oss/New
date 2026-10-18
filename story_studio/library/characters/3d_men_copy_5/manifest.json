@@ -1,0 +1,72 @@
+{
+ "name": "3d_men_copy_5",
+ "label": "Men copy 5",
+ "gender": "male",
+ "pack": "3D MEN Character",
+ "rig": {
+  "root": "Duplicate Items Folder/Men copy 5",
+  "frame": 0,
+  "bounds": [
+   284.0,
+   404.0,
+   792.0,
+   1612.0
+  ],
+  "faces": "right",
+  "head": "Face",
+  "neck": [
+   573.25,
+   468.12
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth copy 15": {
+    "closed": 9,
+    "mid": 6,
+    "open": 3
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyes1 copy 7": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "LHand",
+   "fore": null,
+   "shoulder": [
+    682.75,
+    511.5
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "RHand",
+   "fore": null,
+   "shoulder": [
+    371.5,
+    507.0
+   ],
+   "elbow": null
+  },
+  "legs": [
+   "Layer_8",
+   "Layer_9"
+  ],
+  "hips": {
+   "Layer_8": [
+    440.75,
+    956.5
+   ],
+   "Layer_9": [
+    599.25,
+    936.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Layer_2"
+  ]
+ },
+ "root": "Duplicate Items Folder/Men copy 5"
+}

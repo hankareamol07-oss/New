@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Right Arm copy" itemID="679e0e78-00001481" symbolType="graphic" lastModified="1738397570">
+  <timeline>
+    <DOMTimeline name="Right Arm copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Upper_Part_Of_Right_Arm" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Upper Part Of Right Arm copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-9.45" ty="-157.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Lower_Part_Of_Right_Arm" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Lower Part Of Right Arm copy" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="77" ty="213.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-11.3" y="-163.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

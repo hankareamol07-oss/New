@@ -1,0 +1,80 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Neck" itemID="6381db68-0000015a" lastModified="1672602365">
+  <timeline>
+    <DOMTimeline name="Neck" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#CD8669"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#6E3C28"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!251 1919|540 1803!540 1803[#339.43 #6A9.4F 1120.5 1657.5!1120.5 1657.5[#4B2.C4 #66C.65 1286 1635!1286 1635[#93A.FE #5E7.69 3210 2062!3210 2062[#CFA.93 #857.04 3431 2220!3431 2220[3946 2623 3779 3028!3779 3028[3637 3372 3064 3630!3064
+ 3630[2538 3867 1977 3902!1977 3902[1393 3939 1211 3720!1211 3720[1076 3558 740 3281!740 3281[372 2977 251 2850!251 2850[21 2606 2 2403!2 2403[-21 2157 251 1919"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!1291 2460|1358 2447!1358 2447[1442 2434 1526 2433!1526 2433[1796 2428 1971 2540!1971 2540[2246 2717 2583 2486!2583 2486[2638 2449 2798 2443!2798 2443[2966 2437 3051 2480"/>
+                        <Edge cubics="!251 1919(;251,1919 600,1743 1121,1658q251 1919 540 1803Q825 1705q1121 1658);"/>
+                        <Edge cubics="!1121 1658(;1691,1564 2470,1581 3210,2062q1121 1658 1286 1635Q2363 1511q3210 2062);"/>
+                        <Edge cubics="!3210 2062(;3288,2113 3360,2164 3431,2220q3210 2062Q3323 2135q3431 2220);"/>
+                        <Edge cubics="!3431 2220(;4911,3380 1711,4320 1211,3720q3431 2220Q3946 2623q3779 3028Q3637 3372q3064 3630Q2538 3867q1977 3902Q1393 3939q1211 3720);"/>
+                        <Edge cubics="!1211 3720(;711,3120 -529,2599 251,1919q1211 3720Q1076 3558q740 3281Q372 2977q251 2850Q21 2606q2 2403Q-21 2157q251 1919);"/>
+                        <Edge cubics="!1291 2460(;1291,2460 1691,2360 1971,2540q1291 2460Q1291 2460q1358 2447Q1442 2434q1526 2433Q1796 2428q1971 2540);"/>
+                        <Edge cubics="!1971 2540(;2251,2720 2516,2532 2583,2486q1971 2540Q2246 2717q2583 2486);"/>
+                        <Edge cubics="!2583 2486(;2651,2440 2931,2420 3051,2480q2583 2486Q2638 2449q2798 2443Q2966 2437q3051 2480);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#CD8669"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#6E3C28"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!1111 1760|1271 0!1271 0|3263 330!3263 330|2796 2310"/>
+                        <Edge fillStyle1="1" edges="
+!2796 2310[#6C3.85 #A17.8F 1111 1760"/>
+                        <Edge cubics="!1271 0(;1271,0 3471,340 3471,340q1271 0 3471 340);"/>
+                        <Edge cubics="!1111 1760(;1111,1760 1271,0 1271,0q1111 1760 1271 0);"/>
+                        <Edge cubics="!3171 2320(;2212,2496 1525,2309 1111,1760q3171 2320Q1732 2584q1111 1760);"/>
+                        <Edge cubics="!3471 340(;3471,340 3171,2320 3171,2320q3471 340 3171 2320);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

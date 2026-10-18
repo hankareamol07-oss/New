@@ -1,0 +1,62 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/F1 LPuple copy" itemID="64ea43ec-00007130" symbolType="graphic" lastModified="1669670018">
+  <timeline>
+    <DOMTimeline name="F1 LPuple copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape selected="true">
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#360C00"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="!366 183S2[366 259 313 313!313 313[259 366 183 366!183 366[107 366 54 313!54 313[0 259 0 183!0 183[0 107 54 54!54 54[107 0 183 0!183 0[259 0 313 54!313 54[366 107 366 183"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape selected="true">
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#190500"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="!319 184S2[319 240 279 280!279 280[239 320 183 320!183 320[126 320 86 280!86 280[46 240 46 184!46 184[46 127 86 87!86 87[126 48 183 48!183 48[239 48 279 87!279 87[319 127 319 184"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape selected="true">
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="!341 286S2[341 307 326 321!326 321[312 336 291 336!291 336[271 336 255 321!255 321[241 307 241 286!241 286[241 265 255 251!255 251[271 237 291 237!291 237[312 237 326 251!326 251[341 265 341 286"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

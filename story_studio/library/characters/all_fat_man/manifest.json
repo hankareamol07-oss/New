@@ -1,0 +1,79 @@
+{
+ "name": "all_fat_man",
+ "label": "Fat Man",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Fat Man",
+  "frame": 0,
+  "bounds": [
+   -24.0,
+   -208.0,
+   444.0,
+   1064.0
+  ],
+  "faces": "right",
+  "head": "FM_Head",
+  "neck": [
+   163.25,
+   53.84
+  ],
+  "mouth": {
+   "Duplicate Items Folder/FM Lips copy 4": {
+    "closed": 8,
+    "mid": 0,
+    "open": 4
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/FM Eyes copy 4": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/Right Eyebrow copy 23": {
+    "open": 0,
+    "blink": []
+   },
+   "Duplicate Items Folder/Left Eyebrow copy 23": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "FM_LHand",
+   "fore": "FM_LHand2",
+   "shoulder": [
+    334.0,
+    105.64
+   ],
+   "elbow": [
+    392.95,
+    276.92
+   ]
+  },
+  "arm_back": {
+   "upper": "FM_Rhand",
+   "fore": "FM_RHand2",
+   "shoulder": [
+    99.25,
+    93.96
+   ],
+   "elbow": [
+    67.79,
+    244.85
+   ]
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Fat Man"
+}

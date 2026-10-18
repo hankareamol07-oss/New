@@ -1,0 +1,52 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/pallu copy 2" itemID="650ac9c9-000009f7" symbolType="graphic" lastModified="1700930380">
+  <timeline>
+    <DOMTimeline name="pallu copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-987.95" ty="-431.4"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-987.95" ty="-431.4"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#87B8C5"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#5B8691"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!18867.5 14745.5S6[#49AD.BC #3991.3C 18856 14729!18856 14729[#4810.8E #3742.CB 17551 13902!17551 13902[#48EB.37 #2297.14 18884 2567!18884 2567[#49DE.EF #937.B5 18995 2254!18995 2254[#4B06.4 #804.BF 19502 2248!19502 2248[#4D48.84 #7D8.32
+ 20103 2248!20103 2248[#4F96.C #832.29 20594 2163!20594 2163[#512B.54 #8B9.E7 20829 2462!20829 2462[#5190.CB #2265.1C 21967 13769!21967 13769[#5233.F4 #3723.C7 20481 14729!20481 14729[#4FEF.57 #399C.39 20445.5 14766.5"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!20116 7301S7[#4E4E.15 #13A9.06 20092 2536!19006 7465[#4B5F.F7 #142A.7F 19404 2500!18867.5 14745.5[#4AE4.03 #3449.5E 19267 11839"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!18867.5 14745.5S5[#4AAE.41 #3AF1.29 19632 15127!19632 15127[#4E68.3A #3B2D.F6 20445.5 14766.5"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!20445.5 14766.5S7[#4E6C.2E #2DB9.D2 20108 8244"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

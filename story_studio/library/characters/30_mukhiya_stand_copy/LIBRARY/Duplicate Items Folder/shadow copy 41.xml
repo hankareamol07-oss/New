@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/shadow copy 41" itemID="6565aeec-00003bf0" symbolType="graphic" lastModified="1696412749">
+  <timeline>
+    <DOMTimeline name="shadow copy 41" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#333333"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!9941 -325[9941 335 7124 801!7124 801[4308 1268 325 1268!325 1268[-3658 1268 -6475 801!-6475 801[-9291 335 -9291 -325!-9291 -325[-9291 -985 -6475 -1451!-6475 -1451[-3658 -1918 325 -1918!325 -1918[4308 -1918 7124 -1451!7124 -1451[9941
+ -985 9941 -325"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+              <frameColor>
+                <Color alphaMultiplier="0.25"/>
+              </frameColor>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

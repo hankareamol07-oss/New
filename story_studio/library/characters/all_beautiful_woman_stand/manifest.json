@@ -1,0 +1,91 @@
+{
+ "name": "all_beautiful_woman_stand",
+ "label": "Beautiful Woman Stand",
+ "gender": "female",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Beautiful Woman Stand",
+  "frame": 0,
+  "bounds": [
+   512.0,
+   152.0,
+   896.0,
+   1128.0
+  ],
+  "faces": "right",
+  "head": "BW_Head",
+  "neck": [
+   709.52,
+   376.32
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 6": {
+    "closed": 0,
+    "mid": 12,
+    "open": 20
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyes copy 2": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/Left Eyebrow": {
+    "open": 0,
+    "blink": []
+   },
+   "Duplicate Items Folder/Right Eyebrow": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "BW_LHand",
+   "fore": "BW_LHand2",
+   "shoulder": [
+    753.5,
+    435.04
+   ],
+   "elbow": [
+    780.77,
+    545.67
+   ]
+  },
+  "arm_back": {
+   "upper": "BW_Chest_Blowj",
+   "fore": "BW_Back_Pallu",
+   "shoulder": [
+    671.75,
+    370.0
+   ],
+   "elbow": [
+    603.5,
+    431.0
+   ]
+  },
+  "legs": [
+   "BW_RShoes",
+   "BW_LShoes"
+  ],
+  "hips": {
+   "BW_RShoes": [
+    666.75,
+    834.5
+   ],
+   "BW_LShoes": [
+    737.0,
+    831.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Beautiful Woman Stand"
+}

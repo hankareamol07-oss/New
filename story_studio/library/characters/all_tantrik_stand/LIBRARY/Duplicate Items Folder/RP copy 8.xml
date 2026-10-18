@@ -1,0 +1,47 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/RP copy 8" itemID="64ea4317-00004fcd" lastModified="1671480995">
+  <timeline>
+    <DOMTimeline name="RP copy 8" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#000C19"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!221 110[221 156 189 189!189 189[157 221 111 221!111 221[65 221 33 189!33 189[0 156 0 110!0 110[0 64 33 32!33 32[65 0 111 0!111 0[157 0 189 32!189 32[221 64 221 110"/>
+                    <Edge cubics="!221 110(;221,172 172,221 111,221q221 110Q221 156q189 189Q157 221q111 221);"/>
+                    <Edge cubics="!111 221(;50,221 0,172 0,110q111 221Q65 221q33 189Q0 156q0 110);"/>
+                    <Edge cubics="!0 110(;0,49 50,0 111,0q0 110Q0 64q33 32Q65 0q111 0);"/>
+                    <Edge cubics="!111 0(;172,0 221,49 221,110q111 0Q157 0q189 32Q221 64q221 110);"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-9" ty="-18.45"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!407 443[407 463 393 478!393 478[378 493 357 493!357 493[337 493 322 478!322 478[307 463 307 443!307 443[307 422 322 408!322 408[337 393 357 393!357 393[378 393 393 408!393 408[407 422 407 443"/>
+                    <Edge cubics="!407 443(;407,470 385,493 357,493q407 443Q407 463q393 478Q378 493q357 493);"/>
+                    <Edge cubics="!357 493(;330,493 307,470 307,443q357 493Q337 493q322 478Q307 463q307 443);"/>
+                    <Edge cubics="!307 443(;307,415 330,393 357,393q307 443Q307 422q322 408Q337 393q357 393);"/>
+                    <Edge cubics="!357 393(;385,393 407,415 407,443q357 393Q378 393q393 408Q407 422q407 443);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

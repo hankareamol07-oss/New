@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/arm2 copy 52" itemID="6565b7a5-000050fb" symbolType="graphic" lastModified="1695923703">
+  <timeline>
+    <DOMTimeline name="arm2 copy 52" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-1755" ty="-722.55"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-1755" ty="-722.55"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FEDA72"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#BEA355"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!36026 16604S5|35925 13722!35925 13722[35961 12687 35801 11686!35801 11686[35613 11462 35248 11444!35248 11444[34827 11424 34546 11867!34546 11867[34297 12209 34175 12607!34175 12607[34209 14787 34316 16604!34316 16604|34317 16604!34317
+ 16604|34317 16605!34317 16605[34317 16960 34566 17209!34566 17209[34816 17460 35170 17460!35170 17460[35526 17460 35775 17209!35775 17209[36025 16960 36025 16605!36025 16605|36025 16604!36025 16604|36026 16604"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

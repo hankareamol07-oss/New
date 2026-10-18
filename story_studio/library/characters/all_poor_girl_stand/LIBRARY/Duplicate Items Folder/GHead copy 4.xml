@@ -1,0 +1,120 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/GHead copy 4" itemID="63fcde3a-00008084" lastModified="1678801275">
+  <timeline>
+    <DOMTimeline name="GHead copy 4" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="GHair1" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GHair1">
+                  <matrix>
+                    <Matrix tx="-0.1" ty="125.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.2" y="130.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="GHair2" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GHair2">
+                  <matrix>
+                    <Matrix tx="59.55" ty="64.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="118.75" y="164"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Lips" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Lips" symbolType="graphic" firstFrame="12" loop="single frame">
+                  <matrix>
+                    <Matrix tx="88.2" ty="296.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="44.55" y="30.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Nose" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Nose copy 18">
+                  <matrix>
+                    <Matrix tx="92.55" ty="252.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="21.8" y="31.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="GEyes" color="#FF0000" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GEyes" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="38.7" ty="188.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="102.6" y="47.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="GBH1" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GBH1">
+                  <matrix>
+                    <Matrix tx="16.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="165.5" y="142"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="GPF" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GPF">
+                  <matrix>
+                    <Matrix tx="38" ty="47.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="126.5" y="161.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

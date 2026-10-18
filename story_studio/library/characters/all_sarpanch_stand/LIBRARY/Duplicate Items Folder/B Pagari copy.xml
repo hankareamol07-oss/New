@@ -1,0 +1,54 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/B Pagari copy" itemID="64ea43ec-00007175" lastModified="1669481924">
+  <timeline>
+    <DOMTimeline name="B Pagari copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-24.7" ty="-87.4"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-24.7" ty="-87.4"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#D11800"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A11300"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!3011 2522S6[2668 2705 2201 2879!2201 2879[1470 3151 622 3327!622 3327[587 3347 549 3349!549 3349[#210.D #D16.54 513 3345!513 3345[#1D5.AD #CA1.F7 526 3103!526 3103[#3A4.41 #897.53 1659 1849!1659 1849[#913.58 #623.C5 3266 2055!3266 2055
+[#D02.79 #85F.84 3233.5 2334.5!3233.5 2334.5[#C4C.32 #991.38 3011 2522"/>
+                        <Edge cubics="!3011 2522(;2733,2670 1925,3057 622,3327q3011 2522Q2668 2705q2201 2879Q1470 3151q622 3327);"/>
+                        <Edge cubics="!622 3327(;599,3340 574,3348 549,3349q622 3327Q587 3347q549 3349);"/>
+                        <Edge cubics="!549 3349(;536,3350 524,3348 513,3345q549 3349Q529 3350q513 3345);"/>
+                        <Edge cubics="!3234 2335(;3177,2411 3102,2473 3011,2522q3234 2335Q3148 2449q3011 2522);"/>
+                        <Edge cubics="!526 3103(;489,3190 484,3271 513,3345q526 3103Q470 3234q513 3345);"/>
+                        <Edge cubics="!1659 1849(;1174,2082 797,2500 526,3103q1659 1849Q932 2199q526 3103);"/>
+                        <Edge cubics="!3234 2335(;3298,2208 3309,2114 3266,2055q3234 2335Q3330 2144q3266 2055);"/>
+                        <Edge cubics="!3266 2055(;2637,1733 2102,1664 1659,1849q3266 2055Q2323 1572q1659 1849);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

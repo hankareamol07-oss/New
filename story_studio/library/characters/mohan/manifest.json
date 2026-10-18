@@ -1,0 +1,67 @@
+{
+ "name": "mohan",
+ "label": "मोहन (लाल कुर्ता)",
+ "gender": "male",
+ "pack": "All Character",
+ "rig": {
+  "root": "Duplicate Items Folder/boy2 copy 5",
+  "frame": 0,
+  "bounds": [
+   -76.0,
+   -20.0,
+   200.0,
+   496.0
+  ],
+  "faces": "left",
+  "head": "Layer_3",
+  "neck": [
+   73.5,
+   73.88
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth 2 copy 21": {
+    "closed": 0,
+    "mid": 8,
+    "open": 6
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eye 5 copy 11": {
+    "open": 0,
+    "blink": [
+     45,
+     46,
+     47,
+     48
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Layer_2",
+   "fore": null,
+   "shoulder": [
+    45.75,
+    97.0
+   ],
+   "elbow": null
+  },
+  "arm_back": null,
+  "legs": [
+   "Layer_7",
+   "Layer_6"
+  ],
+  "hips": {
+   "Layer_7": [
+    72.5,
+    278.0
+   ],
+   "Layer_6": [
+    106.75,
+    246.5
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/boy2 copy 5"
+}

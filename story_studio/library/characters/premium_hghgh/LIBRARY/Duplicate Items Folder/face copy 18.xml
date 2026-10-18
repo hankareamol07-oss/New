@@ -1,0 +1,49 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/face copy 18" itemID="60b3a3fd-00000d07" symbolType="graphic" lastModified="1622275632">
+  <timeline>
+    <DOMTimeline name="face copy 18" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="mouth" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/ajdadj copy 21" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.50701904296875" d="2.50701904296875" tx="352.85" ty="880.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="32.1" y="14.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="eyes" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1298" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/eyes copy 23" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="2.57801818847656" b="-0.15740966796875" c="0.15740966796875" d="2.57801818847656" tx="-1878.1" ty="-285.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="867.75" y="394.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="fgace" color="#00FFFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1298" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="girle12.png"/>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

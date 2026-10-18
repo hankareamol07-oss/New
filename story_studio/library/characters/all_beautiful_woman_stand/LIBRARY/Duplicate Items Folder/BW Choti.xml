@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/BW Choti" itemID="6419ad99-000018b7" lastModified="1679404441" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="BW Choti" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="C" color="#00FFFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/C">
+                  <transformationPoint>
+                    <Point x="18.15" y="9.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

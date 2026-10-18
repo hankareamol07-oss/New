@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/King LH" itemID="63d288b9-00000850" lastModified="1661531658">
+  <timeline>
+    <DOMTimeline name="King LH" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-450.65" ty="-389.65"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-450.65" ty="-389.65"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FF7C3E"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B23900"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!9252 11069S6[9190 10838 9145 10614!9145 10614[9000 9893 9014 9183!9014 9183[9019 9064 9028 8956!9028 8956[9090 8265 9431 7967!9431 7967[9741 7695 10132 7847!10132 7847[10519 7998 10800 8713!10800 8713[11074 9414 11146 10397!11146 10397
+[11241 11682 11186 12257!11186 12257[#2B79.17 #3237.39 10916.5 13177.5!10916.5 13177.5[#2798.A1 #36FD.8E 9299 11216.5!9299 11216.5[#243E.74 #2B96.29 9252 11069"/>
+                        <Edge cubics="!9252 11069(;9224,10964 9183,10807 9145,10614q9252 11069Q9190 10838q9145 10614);"/>
+                        <Edge cubics="!9145 10614(;9071,10249 9002,9748 9014,9183q9145 10614Q9000 9893q9014 9183);"/>
+                        <Edge cubics="!9014 9183(;9016,9104 9021,9028 9028,8956q9014 9183Q9019 9064q9028 8956);"/>
+                        <Edge cubics="!9028 8956(;9116,7983 9646,7657 10132,7847q9028 8956Q9090 8265q9431 7967Q9741 7695q10132 7847);"/>
+                        <Edge cubics="!10132 7847(;10654,8050 11050,9104 11146,10397q10132 7847Q10519 7998q10800 8713Q11074 9414q11146 10397);"/>
+                        <Edge cubics="!9299 11217(;9285,11178 9269,11128 9252,11069q9299 11217Q9278 11158q9252 11069);"/>
+                        <Edge cubics="!9299 11217(;9623,11412 9934,11644 10232,11911q9299 11217Q9785 11510q10232 11911);"/>
+                        <Edge cubics="!11186 12257(;11148,12656 11058,12963 10917,13178q11186 12257Q11129 12855q10917 13178);"/>
+                        <Edge cubics="!10232 11911(;10813,12438 11041,12860 10917,13178q10232 11911Q11103 12701q10917 13178);"/>
+                        <Edge cubics="!11146 10397(;11209,11254 11223,11874 11186,12257q11146 10397Q11241 11682q11186 12257);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
