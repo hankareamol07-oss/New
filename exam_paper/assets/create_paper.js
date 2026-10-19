@@ -27,7 +27,7 @@
     resetChapters();
     if (!e.target.value) return;
     const subjects = await api('subjects', { query: '&standard_id=' + e.target.value });
-    subjects.forEach(s => sel.add(new Option(`${s.name} (${s.question_count} questions)`, s.subject_id)));
+    subjects.filter(s => Number(s.question_count) > 0).forEach(s => sel.add(new Option(`${s.name} (${s.question_count} questions)`, s.subject_id)));
     sel.disabled = false;
   });
 
@@ -245,7 +245,7 @@
     $('#standard').value = editData.standard_id;
     const subjects = await api('subjects', { query: '&standard_id=' + editData.standard_id });
     const sel = $('#subject');
-    subjects.forEach(s => sel.add(new Option(`${s.name} (${s.question_count} questions)`, s.subject_id)));
+    subjects.filter(s => Number(s.question_count) > 0).forEach(s => sel.add(new Option(`${s.name} (${s.question_count} questions)`, s.subject_id)));
     sel.disabled = false;
     sel.value = editData.subject_id;
     await loadSubject(+editData.subject_id);
