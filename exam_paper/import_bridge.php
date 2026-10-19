@@ -45,6 +45,13 @@ $subjectLabel = function (array $b): string {
     $name = $b['subject'];
     if ($b['subject'] === 'Hindi') $name = str_contains($t, 'Sugam') ? 'हिंदी सुगमभारती' : 'हिंदी सुलभभारती';
     elseif ($b['subject'] === 'Marathi') $name = 'मराठी बालभारती';
+    elseif ($b['medium'] === 'Marathi') {
+        $name = match ($b['subject']) {
+            'Maths' => 'गणित', 'Science' => 'विज्ञान', 'Geography' => 'भूगोल', 'History & Civics' => 'इतिहास व नागरिकशास्त्र',
+            'EVS' => 'परिसर अभ्यास', 'EVS Part 1' => 'परिसर अभ्यास भाग १', 'EVS Part 2' => 'परिसर अभ्यास भाग २', 'English' => 'इंग्रजी',
+            default => $b['subject'],
+        };
+    }
     return $name . ' (पाठ्यपुस्तक)';
 };
 // bank qtype -> [classic type, question number]
