@@ -164,7 +164,7 @@ function ep_clean_quiz_questions(array $raw): array
         } else {
             $item['answer'] = trim((string)($it['answer'] ?? ''));
         }
-        if (!empty($it['image_url']) && preg_match('~^[\w/.\-]*image\.php\?id=\d+(&n=\w+)?$~', (string)$it['image_url'])) {
+        if (!empty($it['image_url']) && preg_match('~^[\w/.\-]*(image\.php\?id=\d+(&n=\w+)?|book_page\.php\?f=[\w%./\-]+)$~', (string)$it['image_url'])) {
             $item['image_url'] = $it['image_url'];
         }
         $clean[] = $item;

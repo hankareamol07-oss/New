@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS ep_book_questions (
   source VARCHAR(10) NOT NULL DEFAULT 'book', -- book = textbook स्वाध्याय exercise | typed = AI-generated MiniShala-style typed set (data/typed_questions.json)
   marks TINYINT DEFAULT NULL,               -- suggested marks (typed set)
   model VARCHAR(80) DEFAULT NULL,           -- generating model for AI rows
+  bloom VARCHAR(12) DEFAULT NULL,           -- Bloom's taxonomy level: remember | understand | apply | analyze | evaluate | create
   INDEX (standard, subject),
   INDEX (chapter_id, qtype),
   INDEX (chapter_id, source),
