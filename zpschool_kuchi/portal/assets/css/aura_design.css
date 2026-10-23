@@ -1,0 +1,523 @@
+/**
+ * TechGuruji Aura UI 3.0 — NextGen Educational SaaS Design System
+ * 100% Original, Modern, Flutter-Ready & Touch-Friendly Visual Framework
+ * Designed specifically for Indian Primary & Secondary School Portals.
+ */
+
+:root {
+  /* Brand Primary: Royal Indigo & Iris */
+  --aura-primary: #4f46e5;
+  --aura-primary-hover: #4338ca;
+  --aura-primary-dark: #3730a3;
+  --aura-primary-light: #eef2ff;
+  --aura-primary-glow: rgba(79, 70, 229, 0.16);
+
+  /* Growth Emerald (Success & Completion) */
+  --aura-emerald: #059669;
+  --aura-emerald-hover: #047857;
+  --aura-emerald-light: #ecfdf5;
+  --aura-emerald-text: #065f46;
+  --aura-emerald-glow: rgba(5, 150, 105, 0.14);
+
+  /* Warm Sunlight (Accents & Alerts) */
+  --aura-amber: #d97706;
+  --aura-amber-hover: #b45309;
+  --aura-amber-light: #fffbeb;
+  --aura-amber-text: #92400e;
+
+  /* Accent Coral (Errors / Pending) */
+  --aura-coral: #e11d48;
+  --aura-coral-light: #fff1f2;
+
+  /* Neutrals: Ultra-clean Slate Palette */
+  --aura-bg: #f8fafc;
+  --aura-surface: #ffffff;
+  --aura-surface-elevated: #ffffff;
+  --aura-surface-alt: #f1f5f9;
+  --aura-border: #e2e8f0;
+  --aura-border-focus: #818cf8;
+  --aura-border-subtle: #f1f5f9;
+
+  /* Typography Colors */
+  --aura-text-main: #0f172a;
+  --aura-text-secondary: #334155;
+  --aura-text-muted: #64748b;
+  --aura-text-inverse: #ffffff;
+
+  /* Radius & Curves */
+  --aura-radius-xs: 6px;
+  --aura-radius-sm: 10px;
+  --aura-radius-md: 14px;
+  --aura-radius-lg: 20px;
+  --aura-radius-xl: 28px;
+  --aura-radius-full: 9999px;
+
+  /* Elevation Shadows */
+  --aura-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --aura-shadow-sm: 0 2px 8px -1px rgba(15, 23, 42, 0.06);
+  --aura-shadow-md: 0 6px 18px -2px rgba(15, 23, 42, 0.08);
+  --aura-shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.1);
+  --aura-shadow-glow: 0 8px 24px -2px var(--aura-primary-glow);
+
+  /* Transitions */
+  --aura-trans-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --aura-trans-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --aura-trans-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* =========================================================
+   BASE & TYPOGRAPHY
+   ========================================================= */
+body.aura-ui, .aura-wrapper {
+  background-color: var(--aura-bg);
+  color: var(--aura-text-main);
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================================
+   FLUTTER-READY SEGMENTED CHIPS & PILLS
+   ========================================================= */
+.aura-chip-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px 10px 2px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.aura-chip-group::-webkit-scrollbar {
+  display: none;
+}
+
+.aura-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: var(--aura-radius-full);
+  background: var(--aura-surface);
+  color: var(--aura-text-secondary);
+  border: 1.5px solid var(--aura-border);
+  text-decoration: none !important;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--aura-trans-fast);
+  user-select: none;
+  box-shadow: var(--aura-shadow-xs);
+}
+
+.aura-chip:hover {
+  background: var(--aura-primary-light);
+  color: var(--aura-primary);
+  border-color: #c7d2fe;
+  transform: translateY(-1px);
+}
+
+.aura-chip.active {
+  background: var(--aura-primary);
+  color: var(--aura-text-inverse);
+  border-color: var(--aura-primary);
+  box-shadow: 0 4px 12px var(--aura-primary-glow);
+}
+
+.aura-chip .chip-badge {
+  font-size: 0.72rem;
+  padding: 2px 7px;
+  border-radius: var(--aura-radius-full);
+  background: rgba(255, 255, 255, 0.25);
+  color: inherit;
+  font-weight: 700;
+}
+.aura-chip:not(.active) .chip-badge {
+  background: var(--aura-surface-alt);
+  color: var(--aura-text-muted);
+}
+
+/* =========================================================
+   AURA HERO BANNER (SaaS Modern Gradient)
+   ========================================================= */
+.aura-hero-banner {
+  background: linear-gradient(135deg, #3730a3 0%, #4f46e5 50%, #6366f1 100%);
+  color: var(--aura-text-inverse);
+  border-radius: var(--aura-radius-lg);
+  padding: 26px 30px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.aura-hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.aura-hero-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 20%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, rgba(99, 102, 241, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.aura-hero-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.aura-hero-sub {
+  font-size: 0.96rem;
+  opacity: 0.92;
+  margin-bottom: 0;
+  max-width: 650px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   AURA MODULE & METRIC CARDS
+   ========================================================= */
+.aura-card {
+  background: var(--aura-surface);
+  border: 1px solid var(--aura-border);
+  border-radius: var(--aura-radius-md);
+  padding: 20px;
+  box-shadow: var(--aura-shadow-sm);
+  transition: all var(--aura-trans-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.aura-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--aura-shadow-md);
+  transform: translateY(-2px);
+}
+
+.aura-action-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none !important;
+  color: inherit !important;
+  border-radius: var(--aura-radius-md);
+  background: var(--aura-surface);
+  border: 1.5px solid var(--aura-border);
+  padding: 16px 18px;
+  transition: all var(--aura-trans-normal);
+  cursor: pointer;
+  position: relative;
+}
+
+.aura-action-card:hover {
+  border-color: var(--aura-border-focus);
+  background: #ffffff;
+  box-shadow: var(--aura-shadow-glow);
+  transform: translateY(-2px);
+}
+
+.aura-action-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--aura-radius-sm);
+  background: var(--aura-primary-light);
+  color: var(--aura-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  flex-shrink: 0;
+  transition: transform var(--aura-trans-spring);
+}
+
+.aura-action-card:hover .aura-action-icon {
+  transform: scale(1.08) rotate(3deg);
+  background: var(--aura-primary);
+  color: var(--aura-text-inverse);
+}
+
+.aura-action-card.emerald .aura-action-icon {
+  background: var(--aura-emerald-light);
+  color: var(--aura-emerald);
+}
+.aura-action-card.emerald:hover .aura-action-icon {
+  background: var(--aura-emerald);
+  color: #fff;
+}
+
+.aura-action-card.amber .aura-action-icon {
+  background: var(--aura-amber-light);
+  color: var(--aura-amber);
+}
+.aura-action-card.amber:hover .aura-action-icon {
+  background: var(--aura-amber);
+  color: #fff;
+}
+
+.aura-action-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.aura-action-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--aura-text-main);
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+
+.aura-action-desc {
+  font-size: 0.8rem;
+  color: var(--aura-text-muted);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.aura-action-arrow {
+  color: #94a3b8;
+  font-size: 1.25rem;
+  transition: transform var(--aura-trans-fast), color var(--aura-trans-fast);
+}
+.aura-action-card:hover .aura-action-arrow {
+  color: var(--aura-primary);
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   FLUTTER-READY STICKY ACTION BAR & FAB
+   ========================================================= */
+.aura-sticky-action-bar {
+  position: sticky;
+  bottom: 16px;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid var(--aura-border);
+  border-radius: var(--aura-radius-lg);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.aura-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 10px 20px;
+  border-radius: var(--aura-radius-full);
+  border: none;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all var(--aura-trans-fast);
+  white-space: nowrap;
+}
+
+.aura-btn-primary {
+  background: linear-gradient(135deg, var(--aura-primary) 0%, var(--aura-primary-hover) 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px var(--aura-primary-glow);
+}
+.aura-btn-primary:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
+  color: #ffffff !important;
+}
+
+.aura-btn-emerald {
+  background: linear-gradient(135deg, var(--aura-emerald) 0%, var(--aura-emerald-hover) 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px var(--aura-emerald-glow);
+}
+.aura-btn-emerald:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
+  color: #ffffff !important;
+}
+
+.aura-btn-outline {
+  background: var(--aura-surface);
+  color: var(--aura-text-secondary) !important;
+  border: 1.5px solid var(--aura-border);
+}
+.aura-btn-outline:hover {
+  background: var(--aura-surface-alt);
+  border-color: #cbd5e1;
+  color: var(--aura-text-main) !important;
+}
+
+/* Live Auto-save indicator */
+.aura-save-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--aura-text-muted);
+}
+.aura-save-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--aura-emerald);
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: auraPulse 2s infinite;
+}
+@keyframes auraPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* =========================================================
+   AURA SPREADSHEET FAST ENTRY TABLE (High Density)
+   ========================================================= */
+.aura-table-container {
+  background: var(--aura-surface);
+  border: 1px solid var(--aura-border);
+  border-radius: var(--aura-radius-md);
+  box-shadow: var(--aura-shadow-sm);
+  overflow: hidden;
+}
+
+.aura-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.88rem;
+}
+
+.aura-table thead th {
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 700;
+  padding: 10px 8px;
+  border-bottom: 2px solid var(--aura-border);
+  border-right: 1px solid var(--aura-border-subtle);
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.aura-table thead th.th-highlight {
+  background: #eef2ff;
+  color: #3730a3;
+  border-bottom: 2px solid #818cf8;
+}
+
+.aura-table thead th.th-summative {
+  background: #ecfdf5;
+  color: #065f46;
+  border-bottom: 2px solid #34d399;
+}
+
+.aura-table tbody td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--aura-border);
+  border-right: 1px solid var(--aura-border-subtle);
+  vertical-align: middle;
+  background: #ffffff;
+  transition: background var(--aura-trans-fast);
+}
+
+.aura-table tbody tr:hover td {
+  background: #f8fafc;
+}
+
+.aura-table input.mark-input {
+  width: 100%;
+  min-width: 44px;
+  max-width: 60px;
+  height: 38px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--aura-radius-xs);
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  transition: all var(--aura-trans-fast);
+}
+
+.aura-table input.mark-input:focus {
+  outline: none;
+  border-color: var(--aura-primary);
+  box-shadow: 0 0 0 3px var(--aura-primary-glow);
+  background: #fefce8;
+}
+
+.aura-table .sticky-col-roll {
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  background: inherit;
+  font-weight: 700;
+  text-align: center;
+  width: 45px;
+}
+.aura-table .sticky-col-name {
+  position: sticky;
+  left: 45px;
+  z-index: 5;
+  background: inherit;
+  font-weight: 600;
+  min-width: 150px;
+  max-width: 220px;
+  border-right: 2px solid #cbd5e1 !important;
+}
+
+/* =========================================================
+   MOBILE / RESPONSIVE ENHANCEMENTS
+   ========================================================= */
+@media (max-width: 768px) {
+  .aura-hero-banner {
+    padding: 20px 18px;
+    border-radius: var(--aura-radius-md);
+  }
+  .aura-hero-title {
+    font-size: 1.35rem;
+  }
+  .aura-hero-sub {
+    font-size: 0.85rem;
+  }
+  .aura-sticky-action-bar {
+    border-radius: var(--aura-radius-md);
+    padding: 8px 12px;
+    bottom: 8px;
+  }
+  .aura-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>सातत्यपूर्ण मूल्यमापन — TechGuruji Smart School Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="192x192" href="http://localhost/hpc/zpschool2kuchi/portal/assets/images/techguruji_logo.png?v=1791818932">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://localhost/hpc/zpschool2kuchi/portal/assets/images/favicon.png?v=1791818932">
+    <link rel="icon" type="image/svg+xml" href="http://localhost/hpc/zpschool2kuchi/portal/assets/images/favicon.svg?v=1791818932">
+    <link rel="apple-touch-icon" href="http://localhost/hpc/zpschool2kuchi/portal/assets/images/techguruji_logo.png?v=1791818932">
+    <link rel="shortcut icon" href="http://localhost/hpc/zpschool2kuchi/portal/favicon.ico?v=1791818932">
+    <link href="http://localhost/hpc/zpschool2kuchi/portal/assets/css/style.css?v=1791860490" rel="stylesheet">
+    <link href="http://localhost/hpc/zpschool2kuchi/portal/assets/css/cce.css?v=1791788992" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"><meta name="theme-color" content="#0B3D2E"><link href="http://localhost/hpc/zpschool2kuchi/portal/assets/css/theme.css?v=1791860481" rel="stylesheet"></head>
+<body class="tg-app">
+<div class="tg-backdrop" data-tg-close></div>
+<aside class="tg-sidebar" id="tgSidebar" aria-label="मुख्य मेनू">
+    <a class="tg-brand" href="http://localhost/hpc/zpschool2kuchi/portal/dashboard.php">
+        <span class="tg-logo"><img src="http://localhost/hpc/zpschool2kuchi/portal/assets/images/logo-icon.svg?v=1791818932" alt="" width="40" height="40" loading="eager" onerror="this.remove();this.parentNode.textContent='T'"></span>
+        <span><span class="tg-brand-name d-block">TechGuruji</span><span class="tg-brand-sub d-block text-truncate" style="max-width:170px">जिल्हा परिषद शाळा नं २ कुची</span></span>
+    </a>
+    <nav class="tg-nav">
+                                                <a href="http://localhost/hpc/zpschool2kuchi/portal/dashboard.php" class="" ><i class="bi bi-grid-1x2"></i><span>डॅशबोर्ड</span></a>
+                                <div class="tg-nav-label">शैक्षणिक</div>                            <a href="http://localhost/hpc/zpschool2kuchi/portal/modules/classes/index.php" class="" ><i class="bi bi-easel2"></i><span>वर्ग हब</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/index.php" class="active" aria-current="page"><i class="bi bi-journal-check"></i><span>सातत्यपूर्ण मूल्यमापन</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/hpc/index.php" class="active" aria-current="page"><i class="bi bi-clipboard2-data"></i><span>समग्र प्रगती पत्रक</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/modules/tachan/index.php" class="" ><i class="bi bi-pencil"></i><span>टाचण</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/modules/paripath/index.php" class="" ><i class="bi bi-brightness-high"></i><span>परिपाठ</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/modules/exam_paper/index.php" class="" ><i class="bi bi-file-earmark-text"></i><span>प्रश्नपत्रिका</span></a>
+                                <div class="tg-nav-label">शाळा व्यवस्थापन</div>                            <a href="http://localhost/hpc/zpschool2kuchi/portal/students/list.php" class="" ><i class="bi bi-people"></i><span>विद्यार्थी</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/teachers/list.php" class="" ><i class="bi bi-person-badge"></i><span>शिक्षक</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/modules/mdm/dashboard.php" class="" ><i class="bi bi-basket"></i><span>पोषण आहार</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/modules/classes/bonafide.php" class="" ><i class="bi bi-patch-check"></i><span>बोनाफाईड दाखला</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/export_csv.php" class="" ><i class="bi bi-download"></i><span>डेटा निर्यात</span></a>
+                                <div class="tg-nav-label">खाते</div>                            <a href="http://localhost/hpc/zpschool2kuchi/portal/school/profile.php" class="" ><i class="bi bi-building"></i><span>शाळा प्रोफाइल</span></a>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/subscription/plans.php" class="" ><i class="bi bi-gem"></i><span>सदस्यता योजना</span></a>
+                        </nav>
+    <div class="tg-side-foot"><div class="mb-2"><a class="tg-side-help text-decoration-none py-1.5 px-2 rounded-3 d-flex align-items-center gap-2" style="background:rgba(255,255,255,0.08);color:#FDE047;" href="https://play.google.com/store/apps/details?id=com.techguruji" target="_blank" rel="noopener"><i class="bi bi-google-play fs-5"></i><span class="lh-1 text-start"><strong class="d-block" style="font-size:0.75rem;">Android ॲप</strong><small style="opacity:.8;font-size:0.68rem;">Play Store वरून घ्या</small></span></a></div><a class="tg-side-help" href="http://localhost/hpc/zpschool2kuchi/portal/pages/view.php?page=contact"><i class="bi bi-life-preserver me-1"></i> मदत हवी आहे?<br><small style="opacity:.75">संपर्क केंद्र उघडा</small></a></div></aside>
+<div class="tg-content">
+    <header class="tg-topbar">
+        <button class="tg-icon-btn d-lg-none" type="button" data-tg-toggle aria-label="मेनू उघडा"><i class="bi bi-list"></i></button>
+        <div class="tg-topbar-title flex-grow-1">सातत्यपूर्ण मूल्यमापन</div>
+        <span class="tg-chip d-none d-md-inline-flex"><i class="bi bi-calendar3"></i>UDISE 27350302306</span>                <div class="dropdown">
+            <button class="btn d-flex align-items-center gap-2 p-1 border-0" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                <span class="tg-avatar">ज</span>
+                <span class="d-none d-md-block text-start lh-sm"><span class="fw-semibold d-block text-truncate" style="max-width:180px">जिल्हा परिषद शाळा नं २ कुची</span><small class="text-muted">UDISE: 27350302306</small></span>
+                <i class="bi bi-chevron-down small text-muted d-none d-md-inline"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item " href="http://localhost/hpc/zpschool2kuchi/portal/school/profile.php"><i class="bi bi-building me-2"></i>शाळा प्रोफाइल व लोगो</a></li>
+                                    <li><a class="dropdown-item " href="http://localhost/hpc/zpschool2kuchi/portal/subscription/plans.php"><i class="bi bi-gem me-2"></i>सदस्यता योजना</a></li>
+                                    <li><a class="dropdown-item text-success" href="https://play.google.com/store/apps/details?id=com.techguruji"><i class="bi bi-google-play me-2"></i>Google Play Store ॲप</a></li>
+                                    <li><a class="dropdown-item " href="http://localhost/hpc/zpschool2kuchi/portal/cce/export_csv.php"><i class="bi bi-filetype-csv me-2"></i>सर्व डेटा CSV निर्यात</a></li>
+                <li><hr class="dropdown-divider"></li>                    <li><a class="dropdown-item text-danger" href="http://localhost/hpc/zpschool2kuchi/portal/auth/logout.php"><i class="bi bi-box-arrow-right me-2"></i>बाहेर पडा</a></li>
+                            </ul>
+        </div>
+            </header>
+        
+<main class="tg-main">
+    <div class="container">
+                
+<style>
+/* Clean & Minimalist Dashboard Styles */
+.cce-min-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0.5rem 0.5rem 3rem;
+    font-family: 'Mukta', 'Mukta', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.cce-topbar {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.cce-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1 1 auto;
+}
+.cce-back-btn {
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    transition: background-color 0.15s, color 0.15s;
+    flex-shrink: 0;
+}
+.cce-back-btn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+.cce-brand-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    background: #167A5B;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(22, 122, 91, 0.25);
+}
+.cce-selector-card {
+    background: #ffffff;
+    border: 1.5px solid #DDD6FE;
+    border-radius: 14px;
+    padding: 14px 18px;
+    box-shadow: 0 2px 10px rgba(22, 122, 91, 0.06);
+    margin-bottom: 24px;
+}
+.cce-sec-title {
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.cce-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 0.5rem;
+}
+@media (max-width: 640px) {
+    .cce-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.cce-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration: none !important;
+    color: inherit;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+.cce-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1.5px);
+    color: inherit;
+}
+.cce-card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    background: #EFF8F4;
+    color: #167A5B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+}
+.cce-card-content {
+    min-width: 0;
+    flex: 1;
+}
+.cce-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 3px;
+    line-height: 1.3;
+}
+.cce-card-desc {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.45;
+}
+#mgmtChevron {
+    transition: transform 0.25s ease;
+}
+[aria-expanded="true"] #mgmtChevron {
+    transform: rotate(180deg);
+}
+</style>
+
+<div class="cce-min-wrap">
+
+    <!-- TOP HEADER -->
+    <div class="cce-topbar">
+        <div class="cce-topbar-left">
+            <a href="http://localhost/hpc/zpschool2kuchi/portal/dashboard.php" class="cce-back-btn" title="मुख्य डॅशबोर्डवर परत जा">
+                <i class="bi bi-arrow-left fs-5"></i>
+            </a>
+            <div class="cce-brand-badge">
+                <i class="bi bi-bar-chart-steps"></i>
+            </div>
+            <div class="min-w-0">
+                <div class="fw-bold text-slate-900 text-truncate" style="font-size:1.05rem; color:#0f172a;">
+                    सातत्यपूर्ण मूल्यमापन
+                </div>
+                <div class="text-truncate" style="font-size:0.8rem; color:#64748b;">
+                    <strong class="text-slate-800" style="color:#1e293b;">जिल्हा परिषद शाळा नं २ कुची</strong> · 2026-27                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/export_csv.php" class="btn btn-sm btn-outline-secondary d-none d-sm-inline-flex align-items-center gap-1" style="font-size:0.8rem; border-radius:8px;">
+                <i class="bi bi-file-earmark-excel text-success"></i> Excel एक्सपोर्ट
+            </a>
+            <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/reports.php?std=6&division=%E0%A4%85" class="btn btn-sm fw-semibold d-inline-flex align-items-center gap-1" style="font-size:0.8rem; border-radius:8px; background:#EFF8F4; color:#167A5B; border:1px solid #DDD6FE;">
+                <i class="bi bi-printer-fill"></i> अहवाल केंद्र
+            </a>
+        </div>
+    </div>
+
+    <!-- TEACHER & CLASS SELECTOR BAR (शिक्षक व वर्ग निवड) -->
+    <div class="cce-selector-card">
+        <form method="GET" id="cceContextForm" class="m-0">
+            <div class="row g-2 align-items-end">
+                <!-- 1. Teacher Selector Dropdown -->
+                <div class="col-md-5">
+                    <label class="form-label small fw-bold text-muted mb-1 d-flex align-items-center gap-1">
+                        <i class="bi bi-person-badge-fill text-primary"></i> शिक्षक निवडा (Teacher):
+                    </label>
+                    <select name="teacher_id" class="form-select form-select-sm fw-semibold shadow-sm" onchange="this.form.submit()" style="border-radius:8px;">
+                        <option value="0">-- सर्व वर्ग / मुख्याध्यापक --</option>
+                                                    <option value="16" >
+                                अपर्णा दत्तात्रय पाटील (पोळ) (वर्गशिक्षक: पहिली &#039;A&#039;)                            </option>
+                                                    <option value="7" >
+                                अमोल किसन हंकारे (वर्गशिक्षक: सहावी &#039;A&#039;)                            </option>
+                                                    <option value="18" >
+                                उर्मिला महादेव जाधव (वर्गशिक्षक: तिसरी &#039;A&#039;)                            </option>
+                                                    <option value="10" >
+                                कविता मोरे                            </option>
+                                                    <option value="13" >
+                                गणेश कांबळे                            </option>
+                                                    <option value="6" >
+                                नंदा सुशांत चव्हाण (वर्गशिक्षक: पाचवी &#039;A&#039;)                            </option>
+                                                    <option value="17" >
+                                नीता केशव पाटील (वर्गशिक्षक: दुसरी &#039;A&#039;)                            </option>
+                                                    <option value="8" >
+                                पद्मजा राजेंद्र पोसणे (वर्गशिक्षक: आठवी &#039;अ&#039;)                            </option>
+                                                    <option value="9" >
+                                महेश शिंदे                            </option>
+                                                    <option value="15" >
+                                संगीता जयवंत पाटील                            </option>
+                                                    <option value="11" >
+                                सचिन पाटील                            </option>
+                                                    <option value="19" >
+                                सिंधुताई रावसाहेब पाटील (वर्गशिक्षक: चौथी &#039;A&#039;)                            </option>
+                                            </select>
+                </div>
+
+                <!-- 2. Standard & Division Selector -->
+                <div class="col-md-4">
+                    <label class="form-label small fw-bold text-muted mb-1 d-flex align-items-center gap-1">
+                        <i class="bi bi-mortarboard-fill" style="color:#167A5B;"></i> चालू वर्ग व तुकडी:
+                    </label>
+                    <div class="input-group input-group-sm shadow-sm" style="border-radius:8px; overflow:hidden;">
+                        <select name="std" class="form-select fw-semibold" onchange="this.form.submit()">
+                                                            <option value="6" selected>
+                                    इयत्ता सहावी                                 </option>
+                                                    </select>
+                        <select name="division" class="form-select fw-semibold" onchange="this.form.submit()" style="max-width:90px;">
+                                                            <option value="A" >
+                                    तुकडी A                                </option>
+                                                            <option value="अ" selected>
+                                    तुकडी अ                                </option>
+                                                    </select>
+                    </div>
+                </div>
+
+                <!-- 3. Continue Work & Student Registration Buttons -->
+                <div class="col-md-3 d-flex gap-1.5">
+                                            <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/marks_entry.php?std=6&division=%E0%A4%85" 
+                           class="btn btn-sm btn-primary flex-fill fw-bold d-inline-flex align-items-center justify-content-center gap-1 shadow-sm"
+                           style="background:#167A5B; border-color:#167A5B; border-radius:8px; height:31px;">
+                            <span>काम सुरू करा</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                                        <a href="http://localhost/hpc/zpschool2kuchi/portal/students/add.php?std=6&division=%E0%A4%85&return=cce" 
+                       class="btn btn-sm fw-bold d-inline-flex align-items-center justify-content-center gap-1 shadow-sm text-nowrap"
+                       title="या वर्गात नवीन विद्यार्थी नोंदवा"
+                       style="background:#EFF8F4; color:#167A5B; border:1.5px solid #DDD6FE; border-radius:8px; height:31px; font-size:0.8rem;">
+                        <i class="bi bi-person-plus-fill"></i>
+                        <span>+ विद्यार्थी</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Active Teacher Context Badge & Details -->
+            <div class="mt-2.5 pt-2 border-top d-flex flex-wrap align-items-center justify-content-between gap-2" style="font-size:0.8rem; color:#475569;">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                                            <span class="text-muted">
+                            <i class="bi bi-info-circle me-1"></i>विशिष्ट शिक्षकाचे वर्ग व विषय आपोआप पाहण्यासाठी वरील ड्रॉपडाउनमधून शिक्षक निवडा.
+                        </span>
+                                    </div>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="http://localhost/hpc/zpschool2kuchi/portal/students/add.php?std=6&division=%E0%A4%85&return=cce" 
+                       class="badge text-decoration-none py-1.5 px-2.5 d-inline-flex align-items-center gap-1.5"
+                       style="background:#DCF0E7; color:#13644B; border:1px solid #DDD6FE; font-size:0.75rem;">
+                        <i class="bi bi-person-plus-fill"></i>
+                        <strong>+ विद्यार्थी नोंदणी</strong>
+                    </a>
+                    <span class="badge bg-purple-subtle text-purple border" style="background:#EFF8F4; color:#167A5B; border-color:#DDD6FE;">
+                        निवडलेला वर्ग: <strong>इयत्ता सहावी 'अ'</strong>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Upgrade Banner for Locked Standards (इ. ६ ते ८ on Free Plan) -->
+    
+    <!-- QUICK ACTIONS FOR SELECTED CLASS: विद्यार्थी नोंदणी व वर्ग व्यवस्थापन -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 p-2.5 px-3 mb-4 bg-white border rounded-3 shadow-xs" style="border-color:#DDD6FE !important; background: linear-gradient(to right, #ffffff, #faf5ff) !important;">
+        <div class="d-flex align-items-center gap-2">
+            <span class="badge" style="background:#DCF0E7; color:#13644B; border:1px solid #DDD6FE; font-size:0.85rem; padding: 6px 10px;">
+                <i class="bi bi-mortarboard-fill me-1"></i> इयत्ता सहावी 'अ'
+            </span>
+            <span class="small fw-semibold text-secondary d-none d-sm-inline">
+                विद्यार्थी व्यवस्थापन व नोंदणी:
+            </span>
+        </div>
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+            <a href="http://localhost/hpc/zpschool2kuchi/portal/students/add.php?std=6&division=%E0%A4%85&return=cce" 
+               class="btn btn-sm btn-primary fw-bold shadow-sm d-inline-flex align-items-center gap-1.5"
+               style="background:#167A5B; border-color:#167A5B; border-radius:8px; padding:6px 14px;">
+                <i class="bi bi-person-plus-fill fs-6"></i>
+                <span>+ नवीन विद्यार्थी नोंदणी</span>
+            </a>
+            <a href="http://localhost/hpc/zpschool2kuchi/portal/students/list.php?std=6&division=%E0%A4%85" 
+               class="btn btn-sm fw-semibold shadow-sm d-inline-flex align-items-center gap-1"
+               style="background:#ffffff; color:#167A5B; border:1.5px solid #DDD6FE; border-radius:8px; padding:6px 12px;">
+                <i class="bi bi-pie-chart-fill"></i>
+                <span>विद्यार्थी प्रगती तक्ता</span>
+            </a>
+            <a href="http://localhost/hpc/zpschool2kuchi/portal/modules/classes/index.php?tab=classes&std=6" 
+               class="btn btn-sm btn-outline-secondary shadow-sm d-inline-flex align-items-center gap-1"
+               style="border-radius:8px; padding:6px 12px;" 
+               title="वर्ग व तुकडी व्यवस्थापन हब">
+                <i class="bi bi-gear-wide-connected"></i>
+                <span class="d-none d-md-inline">वर्ग व्यवस्थापन</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 1. गुण नोंदणी (MARKS ENTRY) -->
+    <h2 class="cce-sec-title">गुण नोंदणी</h2>
+    <div class="cce-grid">
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/marks_config.php?std=6" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-sliders"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">भारांश (कमाल गुण) सेटअप</div>
+                <div class="cce-card-desc">विषय व सत्रानुसार आकारिक / संकलितचे कमाल गुण ठरवा — गुण नोंदणीपूर्वी आवश्यक</div>
+            </div>
+        </a>
+
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/marks_entry.php?std=6&division=%E0%A4%85" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-pencil-square"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">गुण नोंदणी</div>
+                <div class="cce-card-desc">तुकडीतील प्रत्येक विद्यार्थ्याचे प्राप्त गुण भरा</div>
+            </div>
+        </a>
+
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/outcomes.php?std=6&division=%E0%A4%85" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-bullseye"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">अध्ययन निष्पत्ती (स्तर नोंद व संक्षिप्त अहवाल)</div>
+                <div class="cce-card-desc">विद्यार्थीनिहाय स्तर १-४ नोंदणी, संक्षिप्त वर्ग अहवाल व रेडिओ तक्ता</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- 3. वर्णनात्मक नोंदी (REMARKS & DESCRIPTIVE NOTES) -->
+    <h2 class="cce-sec-title">वर्णनात्मक नोंदी</h2>
+    <div class="cce-grid">
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/remarks_entry.php?std=6&division=%E0%A4%85" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-file-earmark-text"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">वर्णनात्मक नोंदी</div>
+                <div class="cce-card-desc">प्रत्येक विद्यार्थ्याच्या सर्व विषयांसाठी वर्णनात्मक शेरे नोंदवा</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- 4. निकालपत्रके (RESULTS & REGISTERS) -->
+    <h2 class="cce-sec-title">निकालपत्रके</h2>
+    <div class="cce-grid">
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/class_grade_summary.php?std=6&division=%E0%A4%85" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-table"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">वर्गस्तर निकालपत्रके</div>
+                <div class="cce-card-desc">तुकडी व सत्र निवडून विद्यार्थीनिहाय विषयवार गुण/श्रेणी + लिंग/संवर्ग/हजर दिवस/एकूण एका तक्त्यात</div>
+            </div>
+        </a>
+
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/annual_grade_table.php?std=6&division=%E0%A4%85" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-award"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">वार्षिक निकालपत्रके</div>
+                <div class="cce-card-desc">तुकडी निवडून सत्र १ व सत्र २ दोन्ही एकाच तक्त्यात — संक्षिप्त किंवा सविस्तर (आकारिक/संकलित तपशीलसह)</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- 5. नोंदवही (CLASS REGISTERS) -->
+    <h2 class="cce-sec-title">नोंदवही</h2>
+    <div class="cce-grid">
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/nondvahi.php?std=6&division=%E0%A4%85" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-journal-bookmark-fill"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">नोंदवही</div>
+                <div class="cce-card-desc">तुकडी व सत्र निवडून संपूर्ण नोंदवही PDF तयार करा — कव्हर, अनुक्रमणिका, मूल्यमापन नोंदी, वर्णनात्मक नोंदी, गुण-श्रेणी तक्ता</div>
+            </div>
+        </a>
+
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/reports.php?std=6&division=%E0%A4%85" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-printer"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">सर्व अहवाल केंद्र</div>
+                <div class="cce-card-desc">नोंदवही मुखपृष्ठ, अनुक्रमणिका, साधनेनिहाय तक्ते, श्रेणी तक्ता व सर्व १८+ अहवाल एकाच ठिकाणी</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- 6. प्रगती पुस्तक / पत्रक (PROGRESS CARDS & BOOKLETS) -->
+    <h2 class="cce-sec-title">प्रगती पत्रक</h2>
+    <div class="cce-grid">
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/pragati_pustak.php?std=6&division=%E0%A4%85&all=1&size=a4" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-journal-album"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">प्रगती पुस्तक (बुकलेट A4/A5)</div>
+                <div class="cce-card-desc">तुकडी निवडून प्रत्येक विद्यार्थ्याचे अधिकृत बुकलेट (कव्हर, आतील पाने, सत्र १ व २ गुण-श्रेणी, उपस्थिती)</div>
+            </div>
+        </a>
+
+        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/progress_card.php?std=6&division=%E0%A4%85&all=1" class="cce-card">
+            <div class="cce-card-icon">
+                <i class="bi bi-file-earmark-person"></i>
+            </div>
+            <div class="cce-card-content">
+                <div class="cce-card-title">प्रगती पत्रक छापा</div>
+                <div class="cce-card-desc">तुकडी निवडून प्रत्येक विद्यार्थ्याचे 2-पानी वार्षिक प्रगती पत्रक (वैयक्तिक माहिती + श्रेणी/आरोग्य/उपस्थिती) तयार करा</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- 6. व्यवस्थापन (COLLAPSIBLE MANAGEMENT AT BOTTOM - ONCE-A-YEAR SETUP) -->
+    <div class="mt-4 pt-2">
+        <div class="card border rounded-3 shadow-xs overflow-hidden" style="background:#f8fafc; border-color:#e2e8f0 !important;">
+            <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-0" 
+                 role="button" 
+                 data-bs-toggle="collapse" 
+                 data-bs-target="#cceManagementCollapse" 
+                 aria-expanded="false" 
+                 aria-controls="cceManagementCollapse"
+                 style="user-select: none; cursor: pointer;">
+                <div class="d-flex align-items-center gap-2.5">
+                    <div class="rounded-2 d-flex align-items-center justify-content-center" style="width:36px;height:36px;border-radius:10px;background:#DCF0E7;color:#167A5B;">
+                        <i class="bi bi-gear-fill fs-6"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-bold text-dark" style="font-size:0.95rem;">व्यवस्थापन व प्राथमिक सेटअप (कदाचितच लागणारे पर्याय)</h6>
+                        <small class="text-muted" style="font-size:0.75rem;">तुकडी माध्यम, वर्ग निवड, वर्ष व उपस्थिती सेटिंग्ज (सत्राच्या सुरुवातीला एकदाच सेट करा)</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-light text-secondary border px-2 py-1 small d-none d-sm-inline">५ पर्याय</span>
+                    <i class="bi bi-chevron-down text-secondary" id="mgmtChevron"></i>
+                </div>
+            </div>
+            
+            <div class="collapse" id="cceManagementCollapse">
+                <div class="card-body p-3 pt-1 border-top bg-white">
+                    <div class="cce-grid mt-2 mb-0">
+                        <a href="http://localhost/hpc/zpschool2kuchi/portal/students/add.php?std=6&division=%E0%A4%85&return=cce" class="cce-card">
+                            <div class="cce-card-icon" style="background:#DCF0E7; color:#167A5B;">
+                                <i class="bi bi-person-plus-fill"></i>
+                            </div>
+                            <div class="cce-card-content">
+                                <div class="cce-card-title">विद्यार्थी नोंदणी व यादी</div>
+                                <div class="cce-card-desc">या वर्गात नवीन विद्यार्थी जोडा, माहिती अद्ययावत करा किंवा संपूर्ण यादी पहा</div>
+                            </div>
+                        </a>
+
+                        <a href="http://localhost/hpc/zpschool2kuchi/portal/modules/classes/index.php?tab=classes&std=6" class="cce-card">
+                            <div class="cce-card-icon">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </div>
+                            <div class="cce-card-content">
+                                <div class="cce-card-title">तुकडी व माध्यम सेटअप</div>
+                                <div class="cce-card-desc">गुण नोंदणीपूर्वी प्रत्येक तुकडीचे माध्यम इथे सेट केलेले असावे</div>
+                            </div>
+                        </a>
+
+                        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/class_scope.php?std=6" class="cce-card">
+                            <div class="cce-card-icon">
+                                <i class="bi bi-check2-circle"></i>
+                            </div>
+                            <div class="cce-card-content">
+                                <div class="cce-card-title">वर्ग/तुकडी निवडा</div>
+                                <div class="cce-card-desc">सातत्यपूर्ण मूल्यमापन मध्ये कोणत्या तुकड्या व त्यांचे विद्यार्थी दिसावेत ते निवडा</div>
+                            </div>
+                        </a>
+
+                        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/settings.php" class="cce-card">
+                            <div class="cce-card-icon">
+                                <i class="bi bi-calendar3"></i>
+                            </div>
+                            <div class="cce-card-content">
+                                <div class="cce-card-title">शैक्षणिक वर्ष सेटिंग्ज</div>
+                                <div class="cce-card-desc">मुख्याध्यापक नाव (सत्रनिहाय), कामाचे दिवस व स्वाक्षरी सेटिंग्ज</div>
+                            </div>
+                        </a>
+
+                        <a href="http://localhost/hpc/zpschool2kuchi/portal/cce/attendance.php?std=6&division=%E0%A4%85" class="cce-card">
+                            <div class="cce-card-icon">
+                                <i class="bi bi-calendar-check"></i>
+                            </div>
+                            <div class="cce-card-content">
+                                <div class="cce-card-title">मासिक उपस्थिती</div>
+                                <div class="cce-card-desc">सत्रनिहाय विद्यार्थ्यांचे हजर दिवस व उपस्थिती नोंदी</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-light py-5 mt-5" style="background: linear-gradient(180deg, #0B3D2E 0%, #05231A 100%); border-top: 4px solid #E9A23B;">
+        <style>
+            footer a.foot-link { color: #CBD5E1; text-decoration: none; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 6px; }
+            footer a.foot-link:hover { color: #FBBF24; transform: translateX(3px); }
+            footer .foot-desc { color: #BFE3D3; font-size: 0.92rem; line-height: 1.6; }
+            footer .foot-contact { color: #E2E8F0; font-size: 0.92rem; }
+            footer h5 { color: #FFF !important; font-weight: 700; font-size: 1.05rem; margin-bottom: 1.1rem; letter-spacing: -0.01em; }
+        </style>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Col 1: Brand & Mission -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="http://localhost/hpc/zpschool2kuchi/portal/assets/images/logo-icon.svg?v=4" alt="TechGuruji" width="40" height="40" class="rounded-3 shadow-sm">
+                        <div>
+                            <h4 class="mb-0 fw-bold text-white" style="letter-spacing: -0.01em; color: #FFFFFF !important;">TechGuruji</h4>
+                            <small style="color: #FDE047; font-size: 0.78rem; font-weight: 600;">स्मार्ट स्कूल हब</small>
+                        </div>
+                    </div>
+                    <p class="foot-desc">
+                        महाराष्ट्रातील प्राथमिक व माध्यमिक शाळांसाठी आधुनिक, परिपूर्ण व सुरक्षित शैक्षणिक SaaS व्यवस्थापन प्रणाली.
+                        राष्ट्रीय शिक्षण धोरण २०२० (NEP 2020) व राज्य शैक्षणिक मार्गदर्शक तत्त्वांनुसार सातत्यपूर्ण मूल्यमापन आणि HPC स्वयंचलित मूल्यमापन.
+                    </p>
+                    <div class="d-flex gap-2 pt-1">
+                        <span class="badge bg-warning text-dark px-2 py-1"><i class="bi bi-shield-check me-1"></i> UDISE सुरक्षित</span>
+                        <span class="badge bg-success px-2 py-1"><i class="bi bi-patch-check me-1"></i> शासकीय निकष</span>
+                        <span class="badge bg-primary px-2 py-1"><i class="bi bi-file-earmark-pdf me-1"></i> A4/A5 प्रिंट</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5>महत्त्वाचे दुवे</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal" class="foot-link"><i class="bi bi-house-door"></i> मुख्यपृष्ठ</a></li>
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/subscription/plans.php" class="foot-link"><i class="bi bi-gem text-warning"></i> सदस्यता योजना</a></li>
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/auth/register.php" class="foot-link"><i class="bi bi-person-plus text-success"></i> शाळा मोफत नोंदणी</a></li>
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/auth/login.php" class="foot-link"><i class="bi bi-box-arrow-in-right"></i> शाळा / शिक्षक लॉगिन</a></li>
+                        <li class="mb-2"><a href="https://play.google.com/store/apps/details?id=com.techguruji" target="_blank" rel="noopener" class="foot-link text-warning-emphasis"><i class="bi bi-google-play text-warning"></i> Play Store ॲप</a></li>
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/download_app.php" class="foot-link"><i class="bi bi-download"></i> ॲप डाऊनलोड (APK)</a></li>
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/modules/paripath/index.php" class="foot-link"><i class="bi bi-sun text-warning"></i> दैनिक परिपाठ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Legal & Gov Rules -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h5>माहिती व वैधानिक</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/pages/view.php?page=gov_rules" class="foot-link text-warning-emphasis"><i class="bi bi-bank"></i> शासकीय निकष व नियम</a></li>
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/pages/view.php?page=terms" class="foot-link"><i class="bi bi-file-earmark-text"></i> अटी व शर्ती (Terms)</a></li>
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/pages/view.php?page=privacy" class="foot-link"><i class="bi bi-shield-lock"></i> गोपनीयता धोरण (Privacy)</a></li>
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/pages/view.php?page=refund" class="foot-link"><i class="bi bi-currency-rupee"></i> परतावा व रद्द धोरण</a></li>
+                        <li class="mb-2"><a href="http://localhost/hpc/zpschool2kuchi/portal/pages/view.php?page=about" class="foot-link"><i class="bi bi-info-circle"></i> आमच्याबद्दल (About)</a></li>
+                        <li class="mb-2"><a href="https://parakh.ncert.gov.in/hpc" target="_blank" class="foot-link text-info"><i class="bi bi-box-arrow-up-right"></i> PARAKH NCERT HPC</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact & Support -->
+                <div class="col-lg-3 col-md-6">
+                    <h5>संपर्क व साहाय्य</h5>
+                    <ul class="list-unstyled">
+                        <li class="foot-contact mb-2 d-flex align-items-center gap-2">
+                            <i class="bi bi-envelope-fill text-warning"></i> 
+                            <a href="mailto:support@smartschoolhub.in" class="foot-link">support@smartschoolhub.in</a>
+                        </li>
+                        <li class="foot-contact mb-2 d-flex align-items-center gap-2">
+                            <i class="bi bi-whatsapp text-success"></i> 
+                            <span>+९१-९८२२XXXXXX (WhatsApp)</span>
+                        </li>
+                        <li class="foot-contact mb-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-clock-fill text-info"></i> 
+                            <small class="text-secondary">सोम–शनि, सकाळी ९:३० ते सायं ६:००</small>
+                        </li>
+                        <li>
+                            <a href="http://localhost/hpc/zpschool2kuchi/portal/pages/view.php?page=contact" class="btn btn-outline-warning btn-sm w-100 fw-bold">
+                                <i class="bi bi-chat-dots-fill me-1"></i> संपर्क केंद्र उघडा
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-secondary my-4 opacity-50">
+
+            <div class="row align-items-center gy-2">
+                <div class="col-md-7 text-center text-md-start" style="color: #94A3B8; font-size: 0.85rem;">
+                    &copy; 2026 <strong>स्मार्ट स्कूल हब (Smart School Hub)</strong>. सर्व हक्क राखीव.
+                    <span class="d-none d-sm-inline"> | </span>
+                    <span class="text-warning-emphasis">NEP 2020, RTE 2009 व महाराष्ट्र राज्य शालेय निकषांनुसार संचलित.</span>
+                </div>
+                <div class="col-md-5 text-center text-md-end">
+                    <span class="badge bg-dark border border-secondary text-secondary small px-3 py-1">
+                        <i class="bi bi-lock-fill text-success me-1"></i> SSL Secured • UDISE Isolated Data
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://localhost/hpc/zpschool2kuchi/portal/assets/js/app.js?v=2"></script>
+    <br />
+<b>Warning</b>:  require_once(C:\xampp\htdocs\hpc\zpschool2kuchi\portal\includes/anti_copy.php): Failed to open stream: No such file or directory in <b>C:\xampp\htdocs\hpc\zpschool2kuchi\portal\includes\footer.php</b> on line <b>106</b><br />
+<br />
+<b>Fatal error</b>:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\hpc\zpschool2kuchi\portal\includes/anti_copy.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\hpc\zpschool2kuchi\portal\includes\footer.php:106
+Stack trace:
+#0 C:\xampp\htdocs\hpc\zpschool2kuchi\portal\cce\index.php(673): require_once()
+#1 {main}
+  thrown in <b>C:\xampp\htdocs\hpc\zpschool2kuchi\portal\includes\footer.php</b> on line <b>106</b><br />

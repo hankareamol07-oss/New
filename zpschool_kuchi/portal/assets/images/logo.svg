@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="340" height="64" role="img" aria-label="TechGuruji Logo">
+  <defs>
+    <linearGradient id="tgBrandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B3D2E"/>
+      <stop offset="50%" stop-color="#167A5B"/>
+      <stop offset="100%" stop-color="#1D9370"/>
+    </linearGradient>
+    <linearGradient id="tgTassel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="60%" stop-color="#E9A23B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="tgGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#05231A" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- SQUIRCLE ICON -->
+  <g transform="translate(4, 4)">
+    <rect x="0" y="0" width="56" height="56" rx="15" fill="url(#tgBrandGrad)" filter="url(#tgGlow)"/>
+    <rect x="1.5" y="1.5" width="53" height="53" rx="13.5" fill="none" stroke="rgba(220,240,231,0.35)" stroke-width="1.2"/>
+    
+    <!-- Mortarboard cap -->
+    <path d="M19 29 C19 34 37 34 37 29 L37 32.5 C37 37.5 19 37.5 19 32.5 Z" fill="#ffffff" opacity="0.96"/>
+    <polygon points="28 15, 46 23.5, 28 32, 10 23.5" fill="#ffffff"/>
+    <ellipse cx="28" cy="23.5" rx="1.8" ry="1.1" fill="#d97706"/>
+    <path d="M28 23.5 C21 23.5 17 27.5 15 32" fill="none" stroke="url(#tgTassel)" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="15" cy="32.5" r="1.3" fill="url(#tgTassel)"/>
+    <polygon points="14 33.5, 16 33.5, 17 39, 13 39" fill="url(#tgTassel)"/>
+  </g>
+
+  <!-- BRAND TYPOGRAPHY: TechGuruji in Forest Emerald -->
+  <text x="72" y="34" font-family="'Plus Jakarta Sans', 'Mukta', system-ui, sans-serif" font-size="25" font-weight="900" fill="#0B3D2E" letter-spacing="-0.3">TechGuruji</text>
+
+  <!-- PILL BADGE: 🌟 HPC पोर्टल -->
+  <rect x="220" y="15" width="105" height="24" rx="12" fill="#DCF0E7" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="231" y="31" font-family="'Mukta', 'Noto Sans Devanagari', sans-serif" font-size="12" font-weight="800" fill="#0F4F3B">🌟 HPC पोर्टल</text>
+
+  <!-- SUBTITLE -->
+  <text x="74" y="52" font-family="'Mukta', system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">स्मार्ट स्कूल हब • NEP 2020 समग्र शिक्षण</text>
+</svg>

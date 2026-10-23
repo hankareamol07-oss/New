@@ -1,0 +1,34 @@
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/../../lib/app_layout.php';
+require_once __DIR__ . '/../../lib/module_helpers.php';
+
+$user = require_role(['admin','principal']);
+$sid = (int) $user['school_id'];
+$pdo = db();
+$stmt = $pdo->prepare('SELECT * FROM school_defaults WHERE school_id=?');
+$stmt->execute([$sid]);
+$defaults = $stmt->fetch() ?: ['school_id'=>$sid,'current_book_no'=>1,'def_book_no'=>1,'def_nationality'=>'भारतीय','def_caste_category'=>'open','def_birth_state'=>'महाराष्ट्र','def_birth_country'=>'भारत','def_prev_school'=>'नवीन','def_mother_tongue'=>'मराठी','def_medium'=>'मराठी','def_progress'=>'चांगली','def_conduct'=>'चांगली','def_shera'=>'संगणकीकृत दाखला'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && valid_csrf($_POST['csrf'] ?? null)) {
+    $fields = ['multi_book','current_book_no','def_book_no','def_nationality','def_religion','def_caste','def_caste_category','def_birth_taluka','def_birth_district','def_birth_state','def_birth_country','def_prev_school','def_mother_tongue','def_academic_year','def_medium','def_leaving_class','def_study_from_date','def_progress','def_conduct','def_leaving_date','def_leaving_reason','def_shera','def_issued_date','sem1_headmaster_name','sem2_headmaster_name','result_date','next_year_notice'];
+    $sets = [];
+    $values = [];
+    foreach ($fields as $field) {
+        $sets[] = $field . '=?';
+        $values[] = trim((string) ($_POST[$field] ?? ''));
+    }
+    $sets[] = 'updated_at=?';
+    $values[] = date(DATE_ATOM);
+    $pdo->prepare('INSERT IGNORE INTO school_defaults(school_id,updated_at) VALUES(?,?)')->execute([$sid, date(DATE_ATOM)]);
+    $pdo->prepare('UPDATE school_defaults SET ' . implode(',', $sets) . ' WHERE school_id=?')->execute(array_merge($values, [$sid]));
+    flash_set('success', 'डिफॉल्ट माहिती जतन झाली.');
+    header('Location: /modules/gr/school/defaults.php');
+    exit;
+}
+$stmt->execute([$sid]);
+$defaults = $stmt->fetch() ?: $defaults;
+layout_start('डिफॉल्ट माहिती', 'gr');
+?>
+<div class="max-w-6xl mx-auto bg-white border rounded-2xl p-6"><h2 class="text-2xl font-bold text-navy">⚙️ डिफॉल्ट माहिती</h2><p class="text-slate-600 mt-2">ही सामान्य माहिती नवीन जनरल रजिस्टर रेकॉर्डमध्ये आपोआप येते.</p><form method="post" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"><input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>"><label class="text-sm font-semibold">अनेक बुक पद्धत<input type="checkbox" name="multi_book" value="1" class="ml-3" <?= !empty($defaults['multi_book']) ? 'checked' : '' ?>></label><label class="text-sm font-semibold">चालू बुक नंबर<input type="number" name="current_book_no" class="w-full mt-2" value="<?= e($defaults['current_book_no'] ?? 1) ?>"></label><label class="text-sm font-semibold">बुक नंबर<input type="number" name="def_book_no" class="w-full mt-2" value="<?= e($defaults['def_book_no'] ?? 1) ?>"></label><?php $text = ['def_nationality'=>'राष्ट्रीयत्व','def_caste'=>'जात','def_birth_taluka'=>'जन्म तालुका','def_birth_district'=>'जन्म जिल्हा','def_birth_state'=>'जन्म राज्य','def_birth_country'=>'जन्म देश','def_prev_school'=>'यापूर्वीची शाळा','sem1_headmaster_name'=>'सत्र १ मुख्याध्यापक','sem2_headmaster_name'=>'सत्र २ मुख्याध्यापक']; foreach ($text as $name => $label): ?><label class="text-sm font-semibold"><?= e($label) ?><input name="<?= e($name) ?>" class="w-full mt-2" value="<?= e($defaults[$name] ?? '') ?>"></label><?php endforeach; ?><label class="text-sm font-semibold">धर्म<select name="def_religion" class="w-full mt-2"><option value="">-- निवडा / रिकामे --</option><?php foreach (religion_options() as $option): ?><option <?= ($defaults['def_religion'] ?? '') === $option ? 'selected' : '' ?>><?= e($option) ?></option><?php endforeach; ?></select></label><label class="text-sm font-semibold">जात संवर्ग<select name="def_caste_category" class="w-full mt-2"><?php foreach (caste_options() as $label => $value): ?><option value="<?= e($value) ?>" <?= ($defaults['def_caste_category'] ?? 'open') === $value ? 'selected' : '' ?>><?= e($label) ?></option><?php endforeach; ?></select></label><label class="text-sm font-semibold">मातृभाषा<select name="def_mother_tongue" class="w-full mt-2"><?php foreach (mother_tongue_options() as $option): ?><option <?= ($defaults['def_mother_tongue'] ?? 'मराठी') === $option ? 'selected' : '' ?>><?= e($option) ?></option><?php endforeach; ?></select></label><label class="text-sm font-semibold">शैक्षणिक वर्ष<input name="def_academic_year" class="w-full mt-2" value="<?= e($defaults['def_academic_year'] ?? '') ?>"></label><label class="text-sm font-semibold">माध्यम<select name="def_medium" class="w-full mt-2"><?php foreach (['मराठी','हिंदी','English','उर्दू','सेमी-इंग्रजी'] as $option): ?><option <?= ($defaults['def_medium'] ?? 'मराठी') === $option ? 'selected' : '' ?>><?= e($option) ?></option><?php endforeach; ?></select></label><label class="text-sm font-semibold">शिकत असलेली इयत्ता<select name="def_leaving_class" class="w-full mt-2"><option value="">-- निवडा --</option><?php foreach (class_labels() as $number => $label): ?><option value="<?= $number ?>" <?= (int) ($defaults['def_leaving_class'] ?? 0) === $number ? 'selected' : '' ?>><?= e($label) ?></option><?php endforeach; ?></select></label><?php foreach (['def_study_from_date'=>'कधीपासून शिकतो (दि.)','def_leaving_date'=>'शाळा सोडल्याची तारीख','result_date'=>'निकाल दिनांक','def_issued_date'=>'दाखला दिनांक'] as $name => $label): ?><label class="text-sm font-semibold"><?= e($label) ?><input type="date" name="<?= e($name) ?>" class="w-full mt-2" value="<?= e($defaults[$name] ?? '') ?>"></label><?php endforeach; ?><label class="text-sm font-semibold">प्रगती<select name="def_progress" class="w-full mt-2"><?php foreach (['ठीक','चांगली','उत्तम'] as $option): ?><option <?= ($defaults['def_progress'] ?? 'चांगली') === $option ? 'selected' : '' ?>><?= e($option) ?></option><?php endforeach; ?></select></label><label class="text-sm font-semibold">वर्तणूक<select name="def_conduct" class="w-full mt-2"><?php foreach (['चांगली','उत्तम'] as $option): ?><option <?= ($defaults['def_conduct'] ?? 'चांगली') === $option ? 'selected' : '' ?>><?= e($option) ?></option><?php endforeach; ?></select></label><label class="text-sm font-semibold sm:col-span-2">शाळा सोडल्याचे कारण<textarea name="def_leaving_reason" class="w-full mt-2"><?= e($defaults['def_leaving_reason'] ?? '') ?></textarea></label><label class="text-sm font-semibold sm:col-span-2">शेरा<textarea name="def_shera" class="w-full mt-2"><?= e($defaults['def_shera'] ?? '') ?></textarea></label><label class="text-sm font-semibold sm:col-span-2 lg:col-span-3">पुढील सत्र सूचना<textarea name="next_year_notice" class="w-full mt-2"><?= e($defaults['next_year_notice'] ?? '') ?></textarea></label><button class="sm:col-span-2 lg:col-span-3 bg-gold text-navy rounded-xl px-5 py-3 font-bold">💾 Save / जतन करा</button></form></div>
+<?php layout_end(); ?>

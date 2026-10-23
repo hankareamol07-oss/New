@@ -1,0 +1,17 @@
+# Dependencies & environment
+.env
+*.log
+uploads/cache/
+*.tmp
+.DS_Store
+Thumbs.db
+
+build/
+app/build/
+.dart_tool/
+app/.dart_tool/
+*.tar.gz
+*.zip
+*.sqlite-journal
+*exam_paper.sqlite
+

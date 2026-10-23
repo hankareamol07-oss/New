@@ -1,0 +1,93 @@
+/* TechGuruji Pro — design-only layer for print reports (no structure changes) */
+:root{--tg-g1:#0B3D2E;--tg-g2:#167A5B;--tg-g3:#1D9370;--tg-am:#E9A23B;--tg-ink:#14231D;--tg-line:#7FAF9C;--tg-head:#0F5A43;--tg-soft:#F1F8F5;--tg-tint:#E4F2EC}
+@media screen{
+  html,body{background:#E8EEEB !important}
+  .tb,.toolbar,.pc-toolbar,.no-print-bar{background:linear-gradient(90deg,#0B3D2E,#12523F) !important;box-shadow:0 6px 22px rgba(11,61,46,.28) !important;border-bottom:3px solid var(--tg-am) !important}
+  .tb button,.tb .btn-link,.tb a,.toolbar a,.toolbar button,.pc-toolbar a,.pc-toolbar button{background:rgba(255,255,255,.08) !important;color:#fff !important;border:1px solid rgba(255,255,255,.22) !important;border-radius:10px !important;box-shadow:none !important;transition:background .15s,transform .15s !important}
+  .tb button:hover,.tb a:hover,.toolbar a:hover,.toolbar button:hover{background:rgba(255,255,255,.18) !important;transform:translateY(-1px)}
+  .tb .btn-print,.tb button.btn-print,.toolbar button[onclick*="print"],.toolbar a[onclick*="print"]{background:var(--tg-am) !important;border-color:var(--tg-am) !important;color:#241703 !important}
+  .tb .btn-link.active{background:#fff !important;color:var(--tg-g1) !important;border-color:#fff !important}
+  .tb select,.toolbar select,.pc-toolbar select{background:#0E4736 !important;color:#fff !important;border:1px solid rgba(255,255,255,.25) !important;border-radius:10px !important}
+  .tb .print-tip,.tb .print-tip b{color:#BFE3D3 !important}
+  .nond-page,.pc-sheet,.page,.outer-spread,.inner-spread{box-shadow:0 12px 34px rgba(11,61,46,.14),0 1px 3px rgba(11,61,46,.08) !important;border-radius:6px}
+}
+/* ---------- common sheet typography ---------- */
+.nond-page,.pc-sheet,.page,.outer-spread,.inner-spread{color:var(--tg-ink)}
+table th{letter-spacing:.2px}
+/* ---------- नोंदवही ---------- */
+.cv-main-title,.cv-big-title{color:var(--tg-g1) !important}
+.cv-big-title{text-shadow:0 2px 0 rgba(233,162,59,.35)}
+.cv-dist-title{color:#4A5E56 !important;letter-spacing:.5px}
+.cv-year-title{color:var(--tg-g2) !important}
+.cv-cyan-line{background:linear-gradient(90deg,var(--tg-g2),var(--tg-am)) !important;height:4px !important;border-radius:4px}
+.cv-info-lbl{color:var(--tg-g2) !important}
+.cv-udise-box{border-color:var(--tg-line) !important;background:var(--tg-soft) !important;border-radius:3px}
+.idx-title-row .center-tag,.ev-top-center .c-title{color:var(--tg-g1) !important;letter-spacing:.4px}
+.idx-title-row,.ev-top-bar{border-bottom:2px solid var(--tg-tint);padding-bottom:1.5mm}
+.ev-sign-title{color:var(--tg-g1) !important}
+table.idx-table tbody tr:nth-child(even) td,table.mk-table tbody tr:nth-child(4n+3) td,table.mk-table tbody tr:nth-child(4n+4) td{background-color:var(--tg-soft)}
+/* ---------- प्रगती पुस्तक ---------- */
+.bk-res-date,.bk-att-title{color:var(--tg-g1) !important}
+.fc-school-card{border-color:var(--tg-am) !important;box-shadow:0 6px 18px rgba(11,61,46,.18) !important}
+.fc-school-name{color:var(--tg-g1) !important}
+.fc-meta-udise{color:var(--tg-g2) !important}
+.fc-school-tagline{color:var(--tg-g2) !important}
+.sem-head{color:var(--tg-g1) !important;letter-spacing:.4px}
+.sem-meta{border-bottom:1.5px solid var(--tg-tint)}
+/* ---------- प्रथम सत्र प्रगतीपत्रक ---------- */
+.pc-sheet{border-color:var(--tg-line) !important}
+.sch-header{border-bottom:2px solid var(--tg-g2) !important}
+.sch-name{color:var(--tg-g1) !important}
+.card-title-pill{background:var(--tg-g1) !important;border-color:var(--tg-g1) !important;color:#fff !important;border-radius:999px !important;padding:3px 18px !important}
+.bio-box{background:var(--tg-soft) !important;border:1px solid #CFE3DA !important;border-left:4px solid var(--tg-g2) !important;border-radius:8px !important}
+table.bio-table td.b-lbl{color:var(--tg-g2) !important}
+.sec-title{color:var(--tg-g1) !important}
+.sign-box .s-title{color:var(--tg-g1) !important}
+/* ---------- HPC ---------- */
+.cover h1{color:var(--tg-g1) !important}
+.cover .hpc{color:var(--tg-g2) !important}
+.cover .stage{color:var(--tg-am) !important}
+.cover .yr{border-color:var(--tg-g2) !important;color:var(--tg-g1) !important}
+.cover .who{background:var(--tg-soft) !important;border-color:var(--tg-g2) !important;border-left-width:5px !important}
+.cover .who b{color:var(--tg-g2) !important}
+.partA{border-color:var(--tg-line) !important;border-radius:10px !important}
+.secttl{color:var(--tg-g1) !important}
+.secsub{color:var(--tg-g2) !important}
+/* HPC stage card palette → brand */
+:root{--orange:#167A5B;--orange2:#1D9370;--brick:#0B3D2E;--peach:#E4F2EC;--peach2:#CFE7DD;--sand:#F7F4EA}
+.cover .band{background:linear-gradient(135deg,#0B3D2E 0,#167A5B 52%,#1D9370 52%,#2BA57F 100%) !important}
+.cover .ttl .stg{color:var(--tg-g2) !important}
+.page .bar{position:static !important;box-shadow:none !important;background:var(--tg-head) !important;color:#fff !important;border-color:var(--tg-head) !important;border-radius:6px 6px 0 0 !important;padding:5px 10px !important;font-size:13px !important}
+.page .bar.sub{background:var(--tg-tint) !important;color:var(--tg-g1) !important;border-color:var(--tg-line) !important}
+.ttl-bar{color:var(--tg-g1) !important}
+.tri.tr,.tri.bl{border-top-color:var(--tg-g2);border-bottom-color:var(--tg-g2)}
+.tri.tr2{border-top-color:var(--tg-am) !important}
+/* body cells that the theme tints must keep dark text */
+table.sem-table tr.bg-tint td.sb-no,table.sem-table tr.bg-tint td.sb-name,table.sem-table tr.bg-tint td.sb-grd,table.sem-table td.note-head-cell{color:var(--tg-g1) !important}
+/* HPC stage cover illustration */
+.cover:has(> .band){background:url('../hpc-cover-pro.png') no-repeat right 12mm top 147mm / 95mm auto,linear-gradient(180deg,#fff 0,#fff 58%,var(--sand) 58%,var(--sand) 100%) !important}
+
+/* Single line border enforcement for all non-pragati-pustak reports */
+body:not(.pragati-pustak-body) table.nk-table,
+body:not(.pragati-pustak-body) table.idx-table,
+body:not(.pragati-pustak-body) table.mk-table,
+body:not(.pragati-pustak-body) table.nt-table,
+body:not(.pragati-pustak-body) table.reg-table,
+body:not(.pragati-pustak-body) table.att-table,
+body:not(.pragati-pustak-body) table.res-table,
+body:not(.pragati-pustak-body) table.cce-table,
+body:not(.pragati-pustak-body) table.sem-table:not(.bk-table) {
+  border: 1px solid #111 !important;
+  border-collapse: collapse !important;
+}
+body:not(.pragati-pustak-body) table.nk-table th, body:not(.pragati-pustak-body) table.nk-table td,
+body:not(.pragati-pustak-body) table.idx-table th, body:not(.pragati-pustak-body) table.idx-table td,
+body:not(.pragati-pustak-body) table.mk-table th, body:not(.pragati-pustak-body) table.mk-table td,
+body:not(.pragati-pustak-body) table.nt-table th, body:not(.pragati-pustak-body) table.nt-table td,
+body:not(.pragati-pustak-body) table.reg-table th, body:not(.pragati-pustak-body) table.reg-table td,
+body:not(.pragati-pustak-body) table.att-table th, body:not(.pragati-pustak-body) table.att-table td,
+body:not(.pragati-pustak-body) table.res-table th, body:not(.pragati-pustak-body) table.res-table td,
+body:not(.pragati-pustak-body) table.cce-table th, body:not(.pragati-pustak-body) table.cce-table td {
+  border: 1px solid #111 !important;
+}
+

@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Tiro+Devanagari+Marathi:ital@0;1&family=Mukta:wght@300;400;500;600;700;800&family=Martel:wght@600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+/* ---- Local Font Face Definitions (Tiro Devanagari Marathi & Utsaah) ---- */
+@font-face {
+  font-family: 'Tiro Devanagari Marathi';
+  src: local('Tiro Devanagari Marathi'),
+       url('../../../assets/fonts/TiroDevanagariMarathi-Regular.ttf') format('truetype'),
+       url('/hpc/assets/fonts/TiroDevanagariMarathi-Regular.ttf') format('truetype'),
+       url('/assets/fonts/TiroDevanagariMarathi-Regular.ttf') format('truetype'),
+       url('../../assets/fonts/TiroDevanagariMarathi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Tiro Devanagari Marathi';
+  src: local('Tiro Devanagari Marathi Italic'),
+       url('../../../assets/fonts/TiroDevanagariMarathi-Italic.ttf') format('truetype'),
+       url('/hpc/assets/fonts/TiroDevanagariMarathi-Italic.ttf') format('truetype'),
+       url('/assets/fonts/TiroDevanagariMarathi-Italic.ttf') format('truetype'),
+       url('../../assets/fonts/TiroDevanagariMarathi-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Utsaah';
+  src: local('Utsaah'),
+       url('../../../assets/fonts/utsaah.woff') format('woff'),
+       url('../../../assets/fonts/utsaah.ttf') format('truetype'),
+       url('/hpc/assets/fonts/utsaah.woff') format('woff'),
+       url('/hpc/assets/fonts/utsaah.ttf') format('truetype'),
+       url('/assets/fonts/utsaah.woff') format('woff'),
+       url('/assets/fonts/utsaah.ttf') format('truetype'),
+       url('../../assets/fonts/utsaah.woff') format('woff'),
+       url('../../assets/fonts/utsaah.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Utsaah';
+  src: local('Utsaah Bold'),
+       url('../../../assets/fonts/utsaahb.woff') format('woff'),
+       url('../../../assets/fonts/utsaahb.ttf') format('truetype'),
+       url('/hpc/assets/fonts/utsaahb.woff') format('woff'),
+       url('/hpc/assets/fonts/utsaahb.ttf') format('truetype'),
+       url('/assets/fonts/utsaahb.woff') format('woff'),
+       url('/assets/fonts/utsaahb.ttf') format('truetype'),
+       url('../../assets/fonts/utsaahb.woff') format('woff'),
+       url('../../assets/fonts/utsaahb.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Utsaah';
+  src: local('Utsaah Italic'),
+       url('../../../assets/fonts/utsaahi.woff') format('woff'),
+       url('../../../assets/fonts/utsaahi.ttf') format('truetype'),
+       url('/hpc/assets/fonts/utsaahi.woff') format('woff'),
+       url('/hpc/assets/fonts/utsaahi.ttf') format('truetype'),
+       url('/assets/fonts/utsaahi.woff') format('woff'),
+       url('/assets/fonts/utsaahi.ttf') format('truetype'),
+       url('../../assets/fonts/utsaahi.woff') format('woff'),
+       url('../../assets/fonts/utsaahi.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Utsaah';
+  src: local('Utsaah Bold Italic'),
+       url('../../../assets/fonts/utsaahbi.woff') format('woff'),
+       url('../../../assets/fonts/utsaahbi.ttf') format('truetype'),
+       url('/hpc/assets/fonts/utsaahbi.woff') format('woff'),
+       url('/hpc/assets/fonts/utsaahbi.ttf') format('truetype'),
+       url('/assets/fonts/utsaahbi.woff') format('woff'),
+       url('/assets/fonts/utsaahbi.ttf') format('truetype'),
+       url('../../assets/fonts/utsaahbi.woff') format('woff'),
+       url('../../assets/fonts/utsaahbi.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@page { size: A4; margin: 12mm 14mm; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #e9ecef; font-family: 'Mukta', 'Tiro Devanagari Marathi', 'Utsaah', 'Mukta', 'Mukta', 'Mangal', Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 11pt; color: #000; line-height: 1.35; }
+.toolbar { position: sticky; top: 0; background: #212529; color: #fff; padding: 8px 16px; display: flex; gap: 14px; align-items: center; z-index: 10; }
+.toolbar button { background: #0d6efd; color: #fff; border: 0; border-radius: 4px; padding: 6px 14px; cursor: pointer; font-size: 14px; }
+.toolbar a { color: #9ec5fe; text-decoration: none; font-size: 14px; }
+.toolbar label { margin-left: auto; font-size: 13px; }
+
+.sheet { position: relative; background: #fff; width: 210mm; min-height: 297mm; margin: 16px auto; padding: 12mm 14mm; box-shadow: 0 0 8px rgba(0,0,0,.2); font-family: 'Mukta', 'Tiro Devanagari Marathi', 'Utsaah', 'Mukta', 'Mukta', 'Mangal', Arial, sans-serif; }
+.watermark { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(-30deg); font-size: 48pt; color: rgba(0,0,0,.06); white-space: nowrap; pointer-events: none; }
+
+.paper-header { display: flex; align-items: center; gap: 12px; border-bottom: 2px solid #000; padding-bottom: 6px; }
+.paper-header .logo, .paper-header .logo-spacer { width: 22mm; height: 22mm; object-fit: contain; flex: 0 0 22mm; }
+.paper-header .school { flex: 1; text-align: center; }
+.paper-header h1 { margin: 0; font-family: 'Tiro Devanagari Marathi', 'Utsaah', 'Martel', 'Mukta', serif; font-size: 18pt; font-weight: 800; letter-spacing: .5px; }
+.paper-header .addr { font-family: 'Tiro Devanagari Marathi', 'Utsaah', 'Mukta', sans-serif; font-size: 10pt; font-weight: 500; }
+.paper-header h2 { margin: 4px 0 0; font-family: 'Tiro Devanagari Marathi', 'Utsaah', 'Mukta', sans-serif; font-size: 13pt; font-weight: 700; }
+
+.meta { width: 100%; margin-top: 6px; border-collapse: collapse; }
+.meta td { padding: 2px 0; width: 33%; }
+.meta .c { text-align: center; } .meta .r { text-align: right; }
+.muted { color: #555; font-size: 10pt; }
+.student-line { border-bottom: 1px solid #000; padding-bottom: 6px; margin-bottom: 8px; }
+.instructions { font-size: 10.5pt; border: 1px dashed #666; padding: 4px 8px; margin-bottom: 8px; }
+.instructions ol { margin: 2px 0 0 18px; padding: 0; }
+
+.qsection { margin-top: 10px; break-inside: avoid-column; }
+.sec-title { display: flex; justify-content: space-between; font-weight: 700; border-bottom: 1px solid #999; margin-bottom: 4px; }
+ol.questions { margin: 0; padding-left: 22px; }
+ol.questions > li { margin-bottom: 6px; break-inside: avoid; }
+ol.subq { list-style: lower-roman; padding-left: 22px; margin: 2px 0; }
+.passage { font-style: italic; margin-bottom: 4px; }
+.qimg { max-width: 70mm; max-height: 60mm; display: block; margin: 4px 0; }
+.answer { color: #0a5c2e; margin-top: 2px; background: #f0fff4; padding: 2px 6px; border-left: 3px solid #198754; }
+.paper-footer { text-align: center; margin-top: 18px; padding-top: 6px; border-top: 1px solid #000; font-weight: 600; }
+
+.two-col .body { column-count: 2; column-gap: 8mm; column-rule: 1px solid #ccc; }
+
+.sheet.with-border {
+  border: 2px solid #000;
+  padding: 10mm 12mm;
+  box-sizing: border-box;
+}
+
+@media print {
+  body { background: #fff; }
+  .no-print { display: none !important; }
+  .sheet { width: auto; min-height: auto; margin: 0; padding: 0; box-shadow: none; }
+  .sheet.with-border {
+    border: 2px solid #000 !important;
+    padding: 8mm 10mm !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .answer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .ans-inline-blank, .ans-tail {
+    border-bottom: 1.5px solid #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* ---- competitive (Scholarship / Navodaya / NMMS) layout ---- */
+.watermark-logo { position: absolute; top: 50%; left: 50%; width: 60%; max-height: 60%; transform: translate(-50%, -50%); opacity: .08; pointer-events: none; }
+.sheet.competitive { position: relative; }
+.sheet.competitive .sec-head { text-align: center; margin: 10px 0 6px; }
+.sheet.competitive .sec-name { font-weight: 700; font-size: 13pt; text-decoration: underline; }
+.sheet.competitive .sec-range { font-size: 10.5pt; }
+.sheet.competitive .q { position: relative; padding-right: 44px; }
+.sheet.competitive .q-marks { position: absolute; right: 0; top: 0; font-size: 10pt; }
+.answer-grid { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 10pt; }
+.answer-grid th, .answer-grid td { border: 1px solid #888; padding: 2px 5px; }
+.answer-grid th { width: 28px; text-align: center; background: #f0f0f0; }
+.answers-heading { font-size: 12pt; margin: 6px 0; border-bottom: 1px solid #999; }
+@media print { .answer-grid th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+
+/* ---- संकलित / आकारिक मूल्यमापन layout ---- */
+.sheet.assessment .qsection { margin-top: 12px; }
+.sheet.assessment .qsection.sub-section { margin-top: 6px; }
+.sheet.assessment .sec-title { border-bottom: 0; margin-bottom: 2px; }
+.sheet.assessment .q-label { display: inline-block; min-width: 52px; }
+.sheet.assessment ol.items { list-style: none; padding-left: 0; }
+.sheet.assessment ol.items > li { display: flex; gap: 6px; padding-left: 52px; margin-bottom: 4px; }
+.sheet.assessment .item-no { flex: 0 0 26px; }
+.sheet.assessment .qtext { flex: 1; }
+.sheet.assessment .page-img { max-width: 120mm; max-height: 90mm; border: 1px solid #ccc; }
+.sheet.assessment.two-col .body { column-count: 2; }
+.sheet.assessment.two-col ol.items > li { padding-left: 0; }
+
+/* ---- MCQ options layout & images ---- */
+.opt-img { max-height: 25mm; max-width: 45mm; vertical-align: middle; margin: 2px 4px; display: inline-block; object-fit: contain; }
+.ep-options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; margin-top: 4px; }
+.ep-opt-item { display: flex; align-items: center; gap: 6px; }
+.ep-qimg, .qimg { max-width: 100%; max-height: 70mm; object-fit: contain; display: block; margin: 4px 0; }
+
+/* ---- जोड्या लावा / match the pairs ---- */
+.match-table { border-collapse: collapse; width: auto; min-width: 70%; max-width: 100%; margin: 3px 0 4px; page-break-inside: avoid; break-inside: avoid; white-space: normal; }
+.match-table th, .match-table td { border: 1px solid #000; padding: 2px 8px; text-align: left; vertical-align: top; font-size: 12pt; line-height: 1.45; }
+.match-table th { font-weight: 700; text-align: center; background: #f2f2f2; }
+.match-table td { width: 50%; }
+.match-key { margin: 2px 0 4px; padding: 2px 8px; border-left: 3px solid #198754; background: #f2faf5; font-size: 11pt; white-space: normal; }
+@media print { .match-table th { background: #eee; } }
+
+/* ---- उत्तर-लेखन (answer-lines) format for संकलित / आकारिक papers ---- */
+.sheet.lines-format { --pitch: 9mm; }
+.sheet.lines-format.std12 { --pitch: 11mm; font-size: 13pt; }
+.sheet.lines-format .ms-header { border-bottom: 0; padding-bottom: 2px; }
+.sheet.lines-format .ms-header .logo, .sheet.lines-format .ms-header .logo-spacer { width: 16mm; height: 16mm; flex-basis: 16mm; }
+.sheet.lines-format .ms-header h1 { font-size: 16pt; }
+.ms-strip { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; border-top: 1.5px solid #000; border-bottom: 1.5px solid #000; padding: 2px 4px; font-weight: 700; margin-top: 4px; }
+.ms-strip .ms-subject { font-size: 15pt; }
+.ms-strip .ms-lo { font-weight: 600; font-size: 10.5pt; }
+.ms-student { display: flex; gap: 8mm; padding: 4px 2px 2px; }
+.ms-fields { flex: 1; }
+.ms-row { display: flex; align-items: baseline; gap: 6px; line-height: var(--pitch); white-space: nowrap; }
+.ms-row.small { font-size: 10.5pt; }
+.ms-row b { flex: 0 0 auto; }
+.ms-row .dots { flex: 1; border-bottom: 1px dotted #000; min-width: 25mm; height: .8em; }
+.ms-row .dots.short { flex: 0 0 45mm; }
+.ms-row .ms-sign { margin-left: 8mm; }
+.ms-marksbox { flex: 0 0 auto; text-align: right; }
+.ms-roll { display: flex; gap: 6px; align-items: baseline; margin-bottom: 4px; }
+.ms-roll .dots { display: inline-block; width: 28mm; border-bottom: 1px dotted #000; height: .8em; }
+.ms-marks { border-collapse: collapse; font-size: 10.5pt; }
+.ms-marks th, .ms-marks td { border: 1px solid #000; padding: 2px 6px; min-width: 20mm; text-align: center; height: 7mm; }
+.ms-marks th { font-weight: 600; }
+.ms-rule { border-top: 1.5px dashed #000; margin: 4px 0 6px; }
+
+.sheet.lines-format .qsection { margin-top: 8px; break-inside: auto; }
+.sheet.lines-format .sec-title { font-size: 12pt; }
+.sheet.lines-format ol.items > li { margin-bottom: 5px; break-inside: avoid; }
+.sheet.lines-format .qtext { min-width: 0; }
+.ans-lines { margin: 3px 0 2px; }
+.ans-line { height: var(--pitch, 9mm); border-bottom: 1.2px dotted #222; }
+.ans-blank { margin: 2px 0; border: 1px dashed #888; }
+.ans-box { margin: 3px 0; border: 1.2px solid #000; width: 90mm; max-width: 100%; }
+.q-inline { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.q-inline > span:first-child { flex: 1 1 auto; }
+.ans-short { flex: 0 0 35%; min-width: 30mm; border-bottom: 1.2px dotted #222; height: .9em; display: inline-block; margin-left: auto; }
+.ans-tail { display: inline-block; width: 45%; min-width: 45mm; border-bottom: 1.2px dotted #222; height: .9em; vertical-align: baseline; }
+.ans-inline-blank { display: inline-block; min-width: 45mm; max-width: 100%; border-bottom: 1.2px dotted #222; margin: 0 5px; vertical-align: baseline; height: 0.85em; }
+.sheet.lines-format .ans-inline-blank { min-width: 50mm; border-bottom: 1.2px dotted #222; }
+.sheet.lines-format ol.items.grid2 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 10mm; }
+.sheet.lines-format ol.items.grid2 > li { padding-left: 52px; }
+.sheet.lines-format ol.items.grid2 .ans-short { flex-basis: 45%; }
+.sheet.lines-format .ans-mode-none ol.items > li, .sheet.lines-format .ans-mode-inline ol.items > li { line-height: calc(var(--pitch, 9mm) * .8); }
+.sheet.lines-format .match-table { margin-left: 4mm; }
+.ms-oral { margin-top: 10mm; border-top: 1.5px solid #000; padding-top: 6px; break-inside: avoid; }
+.ms-oral-title { font-weight: 700; font-size: 13pt; margin: 2px 0 4px 6mm; }
+.sheet.lines-format .paper-footer { margin-top: 12px; }
+@media print {
+  .ans-line, .ans-short, .ans-tail, .ans-inline-blank, .ms-row .dots, .ms-roll .dots {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    border-bottom-color: #000 !important;
+  }
+}
+.sheet.lines-format .sec-title { break-after: avoid; page-break-after: avoid; }
+.sheet.lines-format .questions > li.q:first-child { break-before: avoid; }

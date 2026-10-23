@@ -1,0 +1,547 @@
+/* Smart School Hub - Marathi UI Styles */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary: #167A5B;
+    --primary-dark: #0F4F3B;
+    --primary-light: #FF8A65;
+    --secondary: #1565C0;
+    --success: #2E7D32;
+    --bg-light: #EFF8F4;
+    --bg-card: #FFFFFF;
+    --text-dark: #212121;
+    --text-muted: #757575;
+    --border: #E0E0E0;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+* {
+    font-family: 'Mukta', 'Mukta', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: var(--text-dark);
+}
+
+/* Navbar Modern Styling & Animations */
+.navbar {
+    background: linear-gradient(135deg, #0F4F3B 0%, #167A5B 65%, #1D9370 100%) !important;
+    box-shadow: 0 4px 20px rgba(191, 54, 12, 0.22) !important;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+    transition: all 0.3s ease;
+}
+.navbar-brand {
+    font-weight: 800;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.navbar-brand:hover {
+    transform: scale(1.02);
+}
+
+/* SVG Logo smooth rendering */
+.navbar-logo-full,
+.navbar-logo-icon {
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+.navbar-brand:hover .navbar-logo-full,
+.navbar-brand:hover .navbar-logo-icon {
+    filter: drop-shadow(0 2px 8px rgba(191,54,12,0.45)) brightness(1.06) !important;
+}
+.navbar-nav .nav-link {
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 0.38rem 0.65rem !important;
+    border-radius: 8px;
+    margin: 0 1px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap !important; /* CRITICAL: Keep in ONE line */
+    color: rgba(255, 255, 255, 0.92) !important;
+    line-height: 1.2;
+    height: 38px;
+    box-sizing: border-box;
+}
+.navbar-nav .nav-link:hover {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-1px);
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.24);
+    font-weight: 700;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    height: 38px;
+}
+
+/* Premium Gold Pill */
+.nav-link-premium {
+    background: linear-gradient(135deg, #FFD54F 0%, #FFA000 100%) !important;
+    color: #212121 !important;
+    font-weight: 700 !important;
+    border-radius: 20px !important;
+    padding: 0.35rem 0.85rem !important;
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+    height: 36px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    box-shadow: 0 2px 10px rgba(255, 160, 0, 0.4);
+    transition: all 0.25s ease !important;
+    animation: pulsePremium 3s infinite;
+}
+.nav-link-premium:hover {
+    transform: translateY(-2px) scale(1.04) !important;
+    box-shadow: 0 4px 16px rgba(255, 160, 0, 0.6) !important;
+    color: #000000 !important;
+}
+@keyframes pulsePremium {
+    0%, 100% { box-shadow: 0 2px 10px rgba(255, 160, 0, 0.4); }
+    50% { box-shadow: 0 4px 18px rgba(255, 213, 79, 0.7); }
+}
+
+/* Dropdown Animation */
+.dropdown-menu {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.14);
+    animation: navDropdownFade 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: top;
+    padding: 0.5rem;
+    min-width: 230px;
+}
+@keyframes navDropdownFade {
+    0% {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.dropdown-item {
+    border-radius: 8px;
+    padding: 0.52rem 0.85rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.dropdown-item:hover {
+    background-color: #EFF8F4;
+    color: #167A5B;
+    transform: translateX(3px);
+}
+
+/* Mobile Responsive Drawer */
+@media (max-width: 991.98px) {
+    .navbar > .container-fluid {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    .navbar-toggler {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+        border-radius: 8px !important;
+        padding: 5px 9px !important;
+    }
+    .navbar-dark .navbar-collapse {
+        background: #0F4F3B;
+        border-radius: 16px;
+        padding: 1rem;
+        margin-top: 0.8rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        color: #FFFFFF !important;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem !important;
+        margin: 3px 0;
+        border-radius: 10px;
+        font-size: 0.98rem;
+    }
+    .navbar-nav .dropdown-menu {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: none;
+        margin-left: 0.5rem;
+        margin-top: 0.2rem;
+    }
+    .dropdown-item {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.65rem 1rem;
+    }
+    .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #FFFFFF !important;
+    }
+    .dropdown-header {
+        color: rgba(255, 255, 255, 0.65) !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        overflow: visible !important;
+    }
+    .navbar-collapse {
+        overflow: visible !important;
+    }
+    .navbar > .container-fluid {
+        flex-wrap: nowrap !important;
+    }
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+.card-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border-radius: 12px 12px 0 0 !important; font-weight: 600; }
+
+/* Buttons */
+.btn-primary { background: var(--primary); border-color: var(--primary); }
+.btn-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+.btn-outline-primary { color: var(--primary); border-color: var(--primary); }
+.btn-outline-primary:hover { background: var(--primary); border-color: var(--primary); }
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #4E342E 100%);
+    color: white;
+    padding: 80px 0;
+    margin-top: 0;
+}
+.hero-section h1 { font-size: 2.8rem; font-weight: 700; }
+.hero-section p { font-size: 1.2rem; opacity: 0.9; }
+
+/* Stats */
+.stat-card {
+    text-align: center;
+    padding: 24px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+.stat-card .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); }
+.stat-card .stat-label { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Dashboard */
+.dashboard-card {
+    border-left: 4px solid var(--primary);
+    padding: 20px;
+    background: white;
+    border-radius: 0 12px 12px 0;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+}
+.dashboard-card.blue { border-left-color: var(--secondary); }
+.dashboard-card.green { border-left-color: var(--success); }
+
+/* Forms */
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(22,122,91, 0.15);
+}
+.form-label { font-weight: 500; color: var(--text-dark); margin-bottom: 4px; }
+
+/* HPC Card Styles */
+.hpc-card-preview {
+    background: white;
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hpc-header {
+    text-align: center;
+    border-bottom: 3px double var(--primary);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+.hpc-header h2 { color: var(--primary); font-weight: 700; }
+.hpc-header h3 { color: var(--primary-dark); font-size: 1.1rem; }
+
+/* Part tabs */
+.hpc-tabs .nav-link {
+    color: var(--primary);
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+}
+.hpc-tabs .nav-link.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Domain cards */
+.domain-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+    background: var(--bg-light);
+}
+.domain-card h5 { color: var(--primary); font-weight: 600; }
+
+/* Assessment Rubric - 4 Level System */
+.rubric-table th { text-align: center; font-size: 0.85rem; }
+.rubric-table td { vertical-align: top; }
+.rubric-radio { accent-color: var(--primary); width: 16px; height: 16px; flex-shrink: 0; }
+.rubric-radio:checked + small { font-weight: 600; color: var(--text-dark); }
+.rubric-table label:has(input:checked) { background: rgba(22,122,91,0.08); border-radius: 6px; padding: 4px; }
+/* Fallback for browsers without :has */
+.rubric-table td { transition: background 0.2s; }
+.rubric-table input[type="radio"]:checked { box-shadow: 0 0 0 3px rgba(22,122,91,0.2); }
+
+/* Attendance Table */
+.attendance-table th { background: var(--primary); color: white; text-align: center; font-size: 0.85rem; }
+.attendance-table td { text-align: center; }
+.attendance-table input { width: 60px; text-align: center; }
+
+/* Interest checkboxes */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+.interest-item {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.interest-item:hover { background: var(--bg-light); border-color: var(--primary); }
+.interest-item.selected { background: var(--bg-light); border-color: var(--primary); }
+
+/* Pricing Cards */
+.pricing-card {
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.pricing-card:hover { transform: translateY(-8px); }
+.pricing-card.popular { border: 3px solid var(--primary); }
+.pricing-card .price { font-size: 2.5rem; font-weight: 700; color: var(--primary); }
+.pricing-card .price small { font-size: 1rem; color: var(--text-muted); }
+
+/* Print Styles */
+@media print {
+    .navbar, footer, .no-print, .btn, .alert { display: none !important; }
+    body { background: white; }
+    .hpc-card-preview { border: 1px solid #000; box-shadow: none; }
+    .card { box-shadow: none; border: 1px solid #ccc; }
+    main { padding: 0 !important; }
+    .container { max-width: 100% !important; }
+}
+
+/* Photo upload */
+.photo-upload {
+    width: 120px;
+    height: 150px;
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+.photo-upload:hover { border-color: var(--primary); }
+.photo-upload img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Plan badges */
+.plan-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.plan-badge.free { background: #E8F5E9; color: #2E7D32; }
+.plan-badge.basic { background: #E3F2FD; color: #1565C0; }
+.plan-badge.pro { background: #EFF8F4; color: #167A5B; }
+.plan-badge.enterprise { background: #F3E5F5; color: #7B1FA2; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section { padding: 40px 0; }
+    .hero-section h1 { font-size: 1.8rem; }
+    .stat-card .stat-number { font-size: 1.8rem; }
+    .interest-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Smart Hub Style Module Cards */
+.module-card-hub {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.module-card-hub:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1) !important;
+}
+.module-card-img-wrapper {
+    width: 108px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #ffffff;
+}
+.module-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.module-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+.module-card-link {
+    color: #4F46E5;
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap 0.2s ease, color 0.2s ease;
+}
+.module-card-link:hover {
+    color: #3730A3;
+    gap: 8px;
+}
+
+/* 3-Steps Section */
+.step-icon-img {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+.step-card-hub {
+    transition: transform 0.25s ease;
+}
+.step-card-hub:hover .step-icon-img {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* ==============================================================
+   UNIVERSAL MOBILE RESPONSIVE PREVIEW FOR ALL MODULE PAGES & PRINT SHEETS
+   Applies to screens <= 991.98px.
+   CRITICAL: In @media print, exact A4/A5 geometry is 100% untouched.
+   ============================================================== */
+@media screen and (max-width: 991.98px) {
+    /* Prevent horizontal page blowout across all devices */
+    html, body {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    .container, .container-fluid {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    /* Keep fixed-millimeter print containers from stretching mobile screen */
+    .sheet, .page, .pc-page, .print-sheet, .a4-sheet, .a5-sheet, 
+    .sh, .sh.a4l, .sh.a5l, .nond-page, .nikal-page, .print-page {
+        max-width: 100% !important;
+        width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+        margin: 10px auto !important;
+        padding: 14px 10px !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08) !important;
+        border-radius: 10px !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Print tables on mobile screen: preserve column widths, scroll smoothly inside card */
+    .sheet table, .page table, .pc-page table, .nond-page table, .nikal-page table {
+        min-width: 580px;
+    }
+
+    /* Top toolbars across print pages */
+    .toolbar, .tb, .bar, .pc-toolbar {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 8px 12px !important;
+        gap: 8px !important;
+        flex-wrap: wrap !important;
+    }
+    .toolbar button, .toolbar a, .tb button, .tb a, .bar button, .bar a, .pc-toolbar button, .pc-toolbar a {
+        min-height: 40px !important;
+        padding: 6px 14px !important;
+        font-size: 0.88rem !important;
+    }
+
+    /* Table responsive enhancements */
+    .table-responsive {
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        border-radius: 8px;
+    }
+
+    /* Student Table: Sticky Roll No column on mobile */
+    #studentsTable th:nth-child(1), #studentsTable td:nth-child(1) {
+        position: sticky;
+        left: 0;
+        background: #ffffff;
+        z-index: 2;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.06);
+    }
+    #studentsTable thead th:nth-child(1) {
+        background: #f8f9fa;
+        z-index: 3;
+    }
+
+    /* Attendance / marks tables touch inputs */
+    .att-input, input[type="number"].table-input {
+        min-width: 44px;
+        min-height: 36px;
+        font-size: 1rem !important;
+    }
+}

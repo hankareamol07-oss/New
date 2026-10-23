@@ -1,0 +1,9 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/../../lib/mdm_helpers.php';
+$u=require_role(['admin','principal','clerk']);$sid=(int)$u['school_id'];$pdo=db();
+if($_SERVER['REQUEST_METHOD']==='POST'&&valid_csrf($_POST['csrf']??null)){if((int)($_POST['id']??0))$pdo->prepare('UPDATE mdm_cooks SET name=?,role=?,honorarium=?,phone=? WHERE id=? AND school_id=?')->execute([trim((string)$_POST['name']),trim((string)$_POST['role']), (float)$_POST['honorarium'],trim((string)$_POST['phone']),(int)$_POST['id'],$sid]);else$pdo->prepare('INSERT INTO mdm_cooks(school_id,name,role,honorarium,phone) VALUES(?,?,?,?,?)')->execute([$sid,trim((string)$_POST['name']),trim((string)$_POST['role']), (float)$_POST['honorarium'],trim((string)$_POST['phone'])]);flash_set('success','स्वयंपाकी माहिती जतन झाली.');}
+$q=$pdo->prepare('SELECT * FROM mdm_cooks WHERE school_id=? AND active=1 ORDER BY name');$q->execute([$sid]);$rows=$q->fetchAll();mdm_layout_start('स्वयंपाकी — पोषण आहार');
+?>
+<form method="post" class="bg-white border rounded-2xl p-6 grid sm:grid-cols-4 gap-3"><input type="hidden" name="csrf" value="<?=e(csrf_token())?>"><input required name="name" placeholder="स्वयंपाकीचे नाव"><input name="role" value="स्वयंपाकी" placeholder="भूमिका"><input type="number" step=".01" name="honorarium" placeholder="मानधन"><input name="phone" placeholder="मोबाईल"><button class="bg-gold rounded-xl px-4 py-2">जोडा</button></form><div class="bg-white border rounded-2xl p-6 mt-6"><table class="w-full text-sm"><thead><tr><th>नाव</th><th>भूमिका</th><th>मानधन</th><th>फोन</th></tr></thead><tbody><?php foreach($rows as $r):?><tr><td><?=e($r['name'])?></td><td><?=e($r['role'])?></td><td>₹<?=$r['honorarium']?></td><td><?=e($r['phone'])?></td></tr><?php endforeach;?></tbody></table></div>
+<?php layout_end(); ?>

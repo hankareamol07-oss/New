@@ -1,0 +1,19 @@
+Exam Paper module - localhost (XAMPP/WAMP) setup
+================================================
+1. Copy the "exam_paper" folder into your web root (e.g. htdocs/).
+2. Create a MySQL database (e.g. "school") with utf8mb4 charset.
+3. Import ALL tables + data in one step (no PHP importers needed):
+     mysql -u root -p school < exam_paper/db/full_dump.sql
+   (or import db/full_dump.sql from phpMyAdmin - it is large, use the command line if phpMyAdmin times out)
+4. Open exam_paper/config.php and set EP_DB_HOST / EP_DB_NAME / EP_DB_USER / EP_DB_PASS
+   (or set them as environment variables).
+5. Open http://localhost/exam_paper/ in the browser.
+   - Settings: enter school name, address, logo, footer and the "Public URL of module"
+     (e.g. http://192.168.1.5/exam_paper) so the homework quiz link/QR works on phones.
+6. Daily Homework: http://localhost/exam_paper/homework.php
+
+Alternative (rebuild from JSON instead of the dump):
+     mysql -u root -p school < db/schema.sql
+     mysql -u root -p school < db/schema_books.sql
+     mysql -u root -p school < db/schema_homework.sql
+     php import_data.php && php import_books.php

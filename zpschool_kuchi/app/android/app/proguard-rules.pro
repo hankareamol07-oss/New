@@ -1,0 +1,11 @@
+-keep class io.flutter.** { *; }
+-keep class io.flutter.plugins.** { *; }
+-keep class com.razorpay.** { *; }
+-dontwarn com.razorpay.**
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
+-keep class proguard.annotation.Keep
+-keep class proguard.annotation.KeepClassMembers
+-dontwarn proguard.annotation.**
+-dontwarn com.google.android.play.core.**
+-optimizations !method/inlining/*
+-renamesourcefileattribute SourceFile

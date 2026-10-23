@@ -1,0 +1,188 @@
+{
+    "modes": {
+        "none": {
+            "label": "जागा नाही (जोड्या / तक्ता)",
+            "en": "No space (match table / table)"
+        },
+        "inline": {
+            "label": "ओळीतच रिकामी जागा",
+            "en": "Blank inside the sentence"
+        },
+        "tail": {
+            "label": "प्रश्नापुढे ओळ पूर्ण करा",
+            "en": "Dotted line continues after the text"
+        },
+        "short": {
+            "label": "उजवीकडे छोटी ओळ",
+            "en": "Short line at the right"
+        },
+        "grid2": {
+            "label": "दोन स्तंभ, प्रत्येकापुढे छोटी ओळ",
+            "en": "Two columns, short line each"
+        },
+        "lines": {
+            "label": "उत्तरासाठी ठिपक्यांच्या ओळी",
+            "en": "Dotted answer lines"
+        },
+        "blank": {
+            "label": "मोकळी जागा (उदाहरण सोडवा)",
+            "en": "Blank working space"
+        },
+        "box": {
+            "label": "चौकट (आकृती / चित्र)",
+            "en": "Box for figure / drawing"
+        }
+    },
+    "rules": {
+        "fill_blank": {
+            "mode": "inline"
+        },
+        "match": {
+            "mode": "none"
+        },
+        "true_false": {
+            "mode": "short"
+        },
+        "odd_one": {
+            "mode": "short"
+        },
+        "mcq": {
+            "mode": "short"
+        },
+        "one_word": {
+            "mode": "grid2"
+        },
+        "vocabulary": {
+            "mode": "grid2"
+        },
+        "grammar": {
+            "mode": "short"
+        },
+        "one_sentence": {
+            "mode": "lines",
+            "lines": 1,
+            "std12": {
+                "lines": 2
+            }
+        },
+        "short_answer": {
+            "mode": "lines",
+            "lines": 3,
+            "std12": {
+                "lines": 2
+            }
+        },
+        "reason": {
+            "mode": "lines",
+            "lines": 3
+        },
+        "define": {
+            "mode": "lines",
+            "lines": 2
+        },
+        "difference": {
+            "mode": "lines",
+            "lines": 4
+        },
+        "explain": {
+            "mode": "lines",
+            "lines": 4
+        },
+        "activity": {
+            "mode": "lines",
+            "lines": 3
+        },
+        "descriptive": {
+            "mode": "lines",
+            "lines": 6,
+            "std12": {
+                "lines": 4
+            }
+        },
+        "solve": {
+            "mode": "blank",
+            "mm": 30,
+            "std12": {
+                "mm": 25
+            }
+        },
+        "draw": {
+            "mode": "box",
+            "mm": 45
+        },
+        "": {
+            "mode": "lines",
+            "lines": 1
+        }
+    },
+    "instruction_keywords": [
+        {
+            "qtype": "match",
+            "regex": "/जोड्या|जोड़ी|जोड़िय|match/iu"
+        },
+        {
+            "qtype": "fill_blank",
+            "regex": "/रिकाम्या|रिक्त|गाळलेल|blank|ओळी पूर्ण|पूर्ण करा|complete the/iu"
+        },
+        {
+            "qtype": "true_false",
+            "regex": "/चूक|बरोबर|सही या गलत|true|false/iu"
+        },
+        {
+            "qtype": "odd_one",
+            "regex": "/विसंगत|गटात न|odd one|odd man/iu"
+        },
+        {
+            "qtype": "mcq",
+            "regex": "/पर्याय|विकल्प|option|alternative|correct/iu"
+        },
+        {
+            "qtype": "vocabulary",
+            "regex": "/समानार्थी|विरुद्धार्थी|विलोम|अर्थ लिहा|प्रत्यय|अनेकवचन|एकवचन|लिंग|वाक्प्रचार|मुहावर|synonym|opposite|antonym|meaning|rhym|plural|singular/iu"
+        },
+        {
+            "qtype": "one_word",
+            "regex": "/एका शब्दात|एक शब्द|one word|कोण ते|कोणाला|who said/iu"
+        },
+        {
+            "qtype": "draw",
+            "regex": "/आकृती काढा|चित्र काढा|आकृति बनाओ|draw/iu"
+        },
+        {
+            "qtype": "solve",
+            "regex": "/सोडवा|हल करो|बेरीज|वजाबाकी|गुणाकार|भागाकार|किंमत काढा|solve|simplify|find the|calculate|add|subtract|multiply|divide/iu"
+        },
+        {
+            "qtype": "one_sentence",
+            "regex": "/एका वाक्यात|एक वाक्य|one sentence|उत्तरे लिहा|उत्तर लिखो/iu"
+        },
+        {
+            "qtype": "reason",
+            "regex": "/कारणे|कारण|असे का|why|reason/iu"
+        },
+        {
+            "qtype": "difference",
+            "regex": "/फरक|अंतर|difference|distinguish/iu"
+        },
+        {
+            "qtype": "define",
+            "regex": "/व्याख्या|म्हणजे काय|define|what is meant/iu"
+        },
+        {
+            "qtype": "short_answer",
+            "regex": "/थोडक्यात|टीपा|टिपा|दोन-तीन|दो-तीन|two or three|briefly|short note|notes on/iu"
+        },
+        {
+            "qtype": "descriptive",
+            "regex": "/सविस्तर|निबंध|पत्र|आठ-दहा|आठ ते दहा|उतारा|कथा|वर्णन|essay|letter|paragraph|detail|eight to ten|describe/iu"
+        },
+        {
+            "qtype": "explain",
+            "regex": "/स्पष्ट करा|समजावून|explain/iu"
+        }
+    ],
+    "line_pitch_mm": {
+        "default": 9,
+        "std12": 11
+    }
+}

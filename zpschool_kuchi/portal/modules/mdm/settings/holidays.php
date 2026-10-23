@@ -1,0 +1,9 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/../../lib/mdm_helpers.php';
+$u=require_role(['admin','principal','clerk']);$sid=(int)$u['school_id'];$pdo=db();$month=(string)($_GET['month']??date('Y-m'));
+if($_SERVER['REQUEST_METHOD']==='POST'&&valid_csrf($_POST['csrf']??null)){if(($_POST['action']??'')==='delete')$pdo->prepare('DELETE FROM mdm_holidays WHERE id=? AND school_id=?')->execute([(int)$_POST['id'],$sid]);else$pdo->prepare('REPLACE INTO mdm_holidays(school_id,holiday_date,name) VALUES(?,?,?)')->execute([$sid,$_POST['holiday_date'],trim((string)$_POST['name'])]);flash_set('success','सुट्टी जतन झाली.');}
+$q=$pdo->prepare('SELECT * FROM mdm_holidays WHERE school_id=? AND substr(holiday_date,1,7)=? ORDER BY holiday_date');$q->execute([$sid,$month]);$rows=$q->fetchAll();mdm_layout_start('सुट्टी कॅलेंडर — पोषण आहार');
+?>
+<div class="bg-white border rounded-2xl p-6"><form method="post" class="flex flex-wrap gap-3"><input type="hidden" name="csrf" value="<?=e(csrf_token())?>"><input required type="date" name="holiday_date" value="<?=e($month.'-01')?>"><input required name="name" placeholder="सुट्टीचे नाव"><button class="bg-gold rounded-xl px-5">जोडा</button></form><form method="get" class="mt-4"><input type="month" name="month" value="<?=e($month)?>"><button class="bg-teal text-white rounded-xl px-4">पहा</button></form><table class="w-full text-sm mt-6"><thead><tr><th>दिनांक</th><th>सुट्टी</th><th>कृती</th></tr></thead><tbody><?php foreach($rows as $r):?><tr><td><?=$r['holiday_date']?></td><td><?=e($r['name'])?></td><td><form method="post"><input type="hidden" name="csrf" value="<?=e(csrf_token())?>"><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="<?=$r['id']?>"><button class="text-red-600">काढा</button></form></td></tr><?php endforeach;?></tbody></table></div>
+<?php layout_end(); ?>

@@ -1,0 +1,25 @@
+{
+  "name": "जि. प. शाळा नं २ कुची - स्मार्ट शाळा पोर्टल",
+  "short_name": "कुची शाळा",
+  "description": "जि. प. प्राथमिक शाळा नं २ कुची - समग्र प्रगती पत्रक (HPC), ऑनलाइन प्रश्नमंजुषा, दैनिक अभ्यास, वेळापत्रक व AI अभ्यास मित्र",
+  "start_url": "index.php",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1e3a8a",
+  "orientation": "any",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "assets/images/zp_sangli_logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/zp_sangli_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
