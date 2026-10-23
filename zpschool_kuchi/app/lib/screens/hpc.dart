@@ -187,7 +187,7 @@ class _HpcScreenState extends State<HpcScreen> {
         Padding(padding: const EdgeInsets.fromLTRB(12,8,12,4), child: TextField(controller: _sc,
           decoration: InputDecoration(hintText:'विद्यार्थी शोधा…', prefixIcon: const Icon(Icons.search), isDense:true,
             suffixText:'पूर्ण ${stats['completed']??0} · अपूर्ण ${stats['draft']??0}',
-            suffixStyle: const TextStyle(color:TG.muted, fontSize:11)),
+            suffixStyle: TextStyle(color:TG.mutedA, fontSize:11)),
           onChanged: (v) => setState(() => searchQ=v.trim()))),
         Expanded(child: ApiLoader(path: _hApi,
           query: {'action':'students','std':'$std','status':statusFilter,'search':searchQ, if (division.isNotEmpty) 'division': division},
@@ -275,10 +275,10 @@ class _HpcScreenState extends State<HpcScreen> {
                                     spacing: 8,
                                     runSpacing: 2,
                                     children: [
-                                      Text('रोल: ${s['roll_no'] ?? '-'}', style: const TextStyle(fontSize: 12, color: TG.muted)),
-                                      Text('तुकडी: ${s['section'] ?? 'अ'}', style: const TextStyle(fontSize: 12, color: TG.muted)),
+                                      Text('रोल: ${s['roll_no'] ?? '-'}', style: TextStyle(fontSize: 12, color: TG.mutedA)),
+                                      Text('तुकडी: ${s['section'] ?? 'अ'}', style: TextStyle(fontSize: 12, color: TG.mutedA)),
                                       if (s['gr_no']?.toString().isNotEmpty == true)
-                                        Text('GR: ${s['gr_no']}', style: const TextStyle(fontSize: 12, color: TG.muted)),
+                                        Text('GR: ${s['gr_no']}', style: TextStyle(fontSize: 12, color: TG.mutedA)),
                                       if (std <= 2 && (p1 + p2) > 0)
                                         Text('स.१: $p1% · स.२: $p2%', style: const TextStyle(fontSize: 11.5, color: Color(0xFF0F766E), fontWeight: FontWeight.w600)),
                                       if (h1 > 0 || w1 > 0)
@@ -506,7 +506,7 @@ class _FoundStep1 extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Row(children: [
           Expanded(child: Text('${dom['id']}. ${dom['name_mr']}', style: const TextStyle(fontWeight:FontWeight.w800, fontSize:15))),
-          Text('${(dom['competencies'] as List? ?? []).length} क्षमता', style: const TextStyle(fontSize:12, color:TG.muted)),
+          Text('${(dom['competencies'] as List? ?? []).length} क्षमता', style: TextStyle(fontSize:12, color:TG.mutedA)),
         ]),
         const SizedBox(height:10),
         for (final s in [1, 2]) _CodePick(dom: dom, sem: s, student: student, onSaved: onSaved),
@@ -553,7 +553,7 @@ class _CodePickState extends State<_CodePick> {
           Text('${widget.sem == 1 ? '📘' : '📙'} सत्र ${widget.sem}', style: TextStyle(fontWeight:FontWeight.w700, color: clr)),
           const Spacer(),
           if (_saving) const SizedBox(width:16, height:16, child: CircularProgressIndicator(strokeWidth:2))
-          else Text(_cur.isNotEmpty ? '✓ जतन' : '⏳ निवडा', style: TextStyle(fontSize:12, color: _cur.isNotEmpty ? const Color(0xFF059669) : TG.muted)),
+          else Text(_cur.isNotEmpty ? '✓ जतन' : '⏳ निवडा', style: TextStyle(fontSize:12, color: _cur.isNotEmpty ? const Color(0xFF059669) : TG.mutedA)),
         ]),
         const SizedBox(height:8),
         DropdownButtonFormField<String>(
@@ -566,7 +566,7 @@ class _CodePickState extends State<_CodePick> {
           selectedItemBuilder: (_) => [for (final c in comps) Text('${c['code']} : ${c['text']}', maxLines: 1, overflow: TextOverflow.ellipsis)],
           onChanged: _saving ? null : (v) { if (v != null && v != _cur) _save(v); }),
         if (txt.containsKey(_cur)) Padding(padding: const EdgeInsets.only(top:6),
-          child: Text('$_cur : ${txt[_cur]}', style: const TextStyle(fontSize:12, color: TG.muted, height: 1.4))),
+          child: Text('$_cur : ${txt[_cur]}', style: TextStyle(fontSize:12, color: TG.mutedA, height: 1.4))),
       ]));
   }
 }
@@ -623,7 +623,7 @@ class _FoundStep2State extends State<_FoundStep2> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text('${sem == 1 ? '📘' : '📙'} सत्र $sem${'${r['code'] ?? ''}'.isEmpty ? '' : ' — ${r['code']}'}${sel.isEmpty ? '' : '  (${sel.length} निवडले)'}',
                 style: TextStyle(fontWeight:FontWeight.w700, color: clr)),
-              if ('${r['code_text'] ?? ''}'.isNotEmpty) Text('${r['code_text']}', style: const TextStyle(fontSize:12, color:TG.muted)),
+              if ('${r['code_text'] ?? ''}'.isNotEmpty) Text('${r['code_text']}', style: TextStyle(fontSize:12, color:TG.mutedA)),
               if ('${r['code'] ?? ''}'.isEmpty) const Padding(padding: EdgeInsets.only(top:6),
                 child: Text('आधी पायरी 1 मध्ये या सत्राची क्षमता (C-code) निवडा.', style: TextStyle(color: Color(0xFFB3261E), fontSize:13)))
               else if (opts.isEmpty) const Padding(padding: EdgeInsets.only(top:6), child: Text('या क्षमतेसाठी अभिप्राय उपलब्ध नाहीत.', style: TextStyle(fontSize:13)))
@@ -820,7 +820,7 @@ class _FoundStep3State extends State<_FoundStep3> {
           ),
         ],
       ),
-      Table(border:TableBorder.all(color:TG.line,width:.8),
+      Table(border:TableBorder.all(color:TG.lineA,width:.8),
         columnWidths: const {0:FlexColumnWidth(2.2),1:FlexColumnWidth(1.4),2:FlexColumnWidth(1.4)},
         children:[
           const TableRow(decoration: BoxDecoration(color:Color(0xFFEFF8F4)), children:[
@@ -1211,7 +1211,7 @@ class _StageSubCardState extends State<_StageSubCard> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(child: Text(label, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13, color: TG.ink))),
+            Expanded(child: Text(label, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13, color: TG.inkA))),
             if (phrases.isNotEmpty)
               InkWell(
                 borderRadius: BorderRadius.circular(6),
@@ -1310,7 +1310,7 @@ class _StageSubCardState extends State<_StageSubCard> {
   );
 
   Widget _chips(List<(String,String)> opts,List<String> sel,ValueChanged<List<String>> on,{bool showText=false}) => Wrap(spacing:6,runSpacing:6,children:[
-    for (final o in opts) FilterChip(label:Text(showText?o.$2:o.$1,style: const TextStyle(fontSize:12)),tooltip:o.$2,selected:sel.contains(o.$1),selectedColor:TG.g50,
+    for (final o in opts) FilterChip(label:Text(showText?o.$2:o.$1,style: const TextStyle(fontSize:12)),tooltip:o.$2,selected:sel.contains(o.$1),selectedColor:TG.g50A,
       onSelected:(v){final l=List<String>.from(sel);v?l.add(o.$1):l.remove(o.$1);on(l);})]);
   Widget _lvPick(String label,String cur,ValueChanged<String> on) => DropdownButtonFormField<String>(
     isExpanded:true,
@@ -1319,7 +1319,7 @@ class _StageSubCardState extends State<_StageSubCard> {
     items:[for (final l in _levels) DropdownMenuItem(value:'${l['key']}',child:Text('${l['name_mr']}',style: const TextStyle(fontSize:12)))],
     onChanged:(v)=>on(v??''));
   Widget _counts(Map<String,TextEditingController> m,String title) => Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-    Text(title,style: const TextStyle(fontSize:12,color:TG.muted)),const SizedBox(height:6),
+    Text(title,style: TextStyle(fontSize:12,color:TG.mutedA)),const SizedBox(height:6),
     Row(children:[for (final a in _abil) Expanded(child:Padding(padding: const EdgeInsets.only(right:6),child:TextField(controller:m['${a['key']}'],
       keyboardType:TextInputType.number,textAlign:TextAlign.center,
       decoration:InputDecoration(labelText:'${a['name_mr']}',border: const OutlineInputBorder(),isDense:true))))]),
@@ -1341,7 +1341,7 @@ class _StageSubCardState extends State<_StageSubCard> {
       if (k == 'pragat') return const Color(0xFF059669);
       if (k == 'praveen') return const Color(0xFF0284C7);
       if (k == 'prarambhik') return const Color(0xFFD97706);
-      return TG.muted;
+      return TG.mutedA;
     }
 
     return Container(
@@ -1440,9 +1440,9 @@ class _StageSubCardState extends State<_StageSubCard> {
             ],
           ),
           const SizedBox(height: 6),
-          const Text(
+          Text(
             'रुब्रिक, आत्मचिंतन व सहाध्यायी गुणांकनानुसार प्रगतीचक्र स्वयंचलित भरले जाते.',
-            style: TextStyle(fontSize: 10.5, color: TG.muted),
+            style: TextStyle(fontSize: 10.5, color: TG.mutedA),
           ),
         ],
       ),
@@ -1465,7 +1465,7 @@ class _StageSubCardState extends State<_StageSubCard> {
       ListTile(
         leading:CircleAvatar(backgroundColor:TG.g50,child:Text('${widget.subject['name_mr']}'.characters.first,style: const TextStyle(color:TG.g800,fontWeight:FontWeight.w800))),
         title:Text('${widget.subject['name_mr']}',style: const TextStyle(fontWeight:FontWeight.w800)),
-        subtitle:hasData?Text([for (final a in _abil) lvName(_lv['${a['key']}']??'')].join(' / '),style: const TextStyle(fontSize:12,color:TG.muted)):null,
+        subtitle:hasData?Text([for (final a in _abil) lvName(_lv['${a['key']}']??'')].join(' / '),style: TextStyle(fontSize:12,color:TG.mutedA)):null,
         trailing:Icon(_exp?Icons.expand_less:Icons.expand_more),
         onTap:()=>setState(()=>_exp=!_exp)),
       if(_exp) Padding(padding: const EdgeInsets.fromLTRB(14,0,14,14),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
@@ -1474,7 +1474,7 @@ class _StageSubCardState extends State<_StageSubCard> {
         if(comps.isNotEmpty)...[_h('क्षमता'),_chips([for (final c in comps) ('${c['code']}','${c['text']}')],_comps,(l)=>setState(()=>_comps=l))],
         if(topics.isNotEmpty)...[
           _h('पाठ / घटक (2026-27 तचन नियोजन)'),
-          const Text('घटक निवडल्यास संबंधित क्षमता आपोआप निवडल्या जातील', style: TextStyle(fontSize: 11.5, color: TG.muted)),
+          Text('घटक निवडल्यास संबंधित क्षमता आपोआप निवडल्या जातील', style: TextStyle(fontSize: 11.5, color: TG.mutedA)),
           const SizedBox(height: 6),
           Wrap(spacing: 6, runSpacing: 6, children: [
             for (final t in topics)
@@ -1773,7 +1773,7 @@ class _HpcPartAState extends State<HpcPartAScreen> {
 
   Widget _h(String t, [String? sub]) => Padding(padding: const EdgeInsets.fromLTRB(2, 18, 2, 6), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
     Text(t, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: Color(0xFFBE185D))),
-    if (sub != null) Text(sub, style: const TextStyle(fontSize: 12, color: TG.muted)),
+    if (sub != null) Text(sub, style: TextStyle(fontSize: 12, color: TG.mutedA)),
   ]));
   Widget _f(String k, String lbl, {int lines = 1}) {
     final bare = k.contains('.') ? k.split('.').last : k;

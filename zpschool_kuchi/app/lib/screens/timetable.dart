@@ -56,7 +56,7 @@ class _TimetableScreenState extends State<TimetableScreen> {
                 Expanded(child: Pick<String>(dense: true, label: 'माध्यम', value: '${d['medium'] ?? ''}', items: [for (final e in mediums.entries) ('${e.key}', '${e.value}')], onChanged: (v) => setState(() => medium = v ?? medium))),
               ])),
               if (d['is_template'] == true)
-                const Padding(padding: EdgeInsets.symmetric(horizontal: 12), child: Text('हा सुचवलेला साचा आहे — बदल करून जतन करा.', style: TextStyle(color: TG.muted, fontSize: 12))),
+                Padding(padding: const EdgeInsets.symmetric(horizontal: 12), child: Text('हा सुचवलेला साचा आहे — बदल करून जतन करा.', style: TextStyle(color: TG.mutedA, fontSize: 12))),
               Expanded(child: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 12), children: [
                 for (final day in days)
                   Card(child: ExpansionTile(

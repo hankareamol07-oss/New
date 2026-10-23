@@ -140,7 +140,7 @@ class _MarksTabState extends State<_MarksTab> {
         IconButton.filledTonal(tooltip:'पुढील', onPressed: idx+1<students.length?()=>setState(()=>idx++):null, icon: const Icon(Icons.chevron_right)),
       ])),
       Padding(padding: const EdgeInsets.symmetric(horizontal:12), child: LinearProgressIndicator(value: filled/students.length, minHeight:5, borderRadius: BorderRadius.circular(4))),
-      Padding(padding: const EdgeInsets.fromLTRB(12,2,12,0), child: Align(alignment: Alignment.centerLeft, child: Text('गुण भरलेले विद्यार्थी: $filled / ${students.length}', style: const TextStyle(fontSize:12,color:TG.muted)))),
+      Padding(padding: const EdgeInsets.fromLTRB(12,2,12,0), child: Align(alignment: Alignment.centerLeft, child: Text('गुण भरलेले विद्यार्थी: $filled / ${students.length}', style: TextStyle(fontSize:12,color:TG.mutedA)))),
       Expanded(child:_MarksSheet(key:ValueKey('m$sid-$subjectId-${marks[sid]?['grand_total']}'), std:widget.std, sem:widget.sem, subject:subject, student:s, row:marks[sid]??{},
         labels:labels, scale:scale, division:widget.division, hasNext: idx+1<students.length, inline:true,
         onDone:(next){ toast(context,'✓ ${s['name_mr']??s['name']} चे गुण जतन झाले'); setState((){ if(next && idx+1<students.length) idx++; }); reload(); })),
@@ -179,9 +179,9 @@ class _MarksTabState extends State<_MarksTab> {
           decoration:BoxDecoration(color: const Color(0xFFEFF8F4),borderRadius:BorderRadius.circular(8)),
           child:Row(mainAxisAlignment:MainAxisAlignment.spaceAround,children:[
             Text('FA: ${subject['fe_max']}',style: const TextStyle(color:Color(0xFF0284C7),fontWeight:FontWeight.w700,fontSize:13)),
-            Container(width:1,height:16,color:TG.line),
+            Container(width:1,height:16,color:TG.lineA),
             Text('SA: ${subject['se_max']}',style: const TextStyle(color:Color(0xFF7C3AED),fontWeight:FontWeight.w700,fontSize:13)),
-            Container(width:1,height:16,color:TG.line),
+            Container(width:1,height:16,color:TG.lineA),
             Text('एकूण: ${asInt(subject['fe_max'])+asInt(subject['se_max'])}',style: const TextStyle(color:TG.g800,fontWeight:FontWeight.w700,fontSize:13)),
           ])),
         Padding(padding: const EdgeInsets.fromLTRB(12,0,12,6), child: SegmentedButton<bool>(
@@ -192,13 +192,13 @@ class _MarksTabState extends State<_MarksTab> {
           :ListView.builder(itemCount:students.length,itemBuilder:(c,i){
             final s=students[i]; final m=marks[asInt(s['id'])];
             return ListTile(
-              leading:CircleAvatar(backgroundColor:m==null?TG.line:const Color(0xFFECFDF5),
-                child:Text('${s['roll_no']??i+1}',style:TextStyle(color:m==null?TG.muted:TG.g800,fontWeight:FontWeight.w700,fontSize:12))),
+              leading:CircleAvatar(backgroundColor:m==null?TG.lineA:const Color(0xFFECFDF5),
+                child:Text('${s['roll_no']??i+1}',style:TextStyle(color:m==null?TG.mutedA:TG.g800,fontWeight:FontWeight.w700,fontSize:12))),
               title:Text('${s['name_mr']??s['name']}'),
               subtitle:Text(m==null?'गुण भरलेले नाहीत':'FA:${m['fe_total']??'-'} SA:${m['se_total']??'-'} एकूण:${m['grand_total']??'-'}'),
               trailing:m==null?const Icon(Icons.add_circle_outline,color:TG.g600)
                 :Container(padding: const EdgeInsets.symmetric(horizontal:10,vertical:4),
-                  decoration:BoxDecoration(color:TG.g50,borderRadius:BorderRadius.circular(12),border:Border.all(color:TG.g600.withValues(alpha:.3))),
+                  decoration:BoxDecoration(color:TG.g50A,borderRadius:BorderRadius.circular(12),border:Border.all(color:TG.g600.withValues(alpha:.3))),
                   child:Text('${m['grade']??'-'}',style: const TextStyle(fontWeight:FontWeight.w800,color:TG.g800))),
               onTap:()=>setState((){idx=i;vertical=true;}));
           })),
@@ -265,7 +265,7 @@ class _MarksSheetState extends State<_MarksSheet> {
       Expanded(child: Text(label, style: const TextStyle(fontSize:14, fontWeight: FontWeight.w600))),
       if(rawMax!=null) Container(margin: const EdgeInsets.only(right:8), padding: const EdgeInsets.symmetric(horizontal:8,vertical:3),
         decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(10)),
-        child: Text('कमाल ${asInt(rawMax)}', style: const TextStyle(fontSize:11.5,color:TG.muted))),
+        child: Text('कमाल ${asInt(rawMax)}', style: TextStyle(fontSize:11.5,color:TG.mutedA))),
       SizedBox(width:92, child: TextFormField(controller:_c[k], keyboardType: const TextInputType.numberWithOptions(decimal:true), textAlign:TextAlign.center,
         style: const TextStyle(fontSize:18,fontWeight:FontWeight.w700),
         decoration: const InputDecoration(hintText:'0', border: OutlineInputBorder(), isDense:true, contentPadding: EdgeInsets.symmetric(vertical:12)),
@@ -291,18 +291,18 @@ class _MarksSheetState extends State<_MarksSheet> {
     final score=Container(padding: const EdgeInsets.all(12),decoration:BoxDecoration(color: const Color(0xFFEFF8F4),borderRadius:BorderRadius.circular(10)),
       child:Row(mainAxisAlignment:MainAxisAlignment.spaceAround,children:[
         _tot('${feT.toStringAsFixed(feT%1==0?0:1)}/$feMax','आकारिक'),
-        Container(width:1,height:32,color:TG.line),
+        Container(width:1,height:32,color:TG.lineA),
         _tot('${seT.toStringAsFixed(seT%1==0?0:1)}/$seMax','संकलित'),
-        Container(width:1,height:32,color:TG.line),
+        Container(width:1,height:32,color:TG.lineA),
         _tot(total.toStringAsFixed(total%1==0?0:1),'एकूण'),
-        Container(width:1,height:32,color:TG.line),
+        Container(width:1,height:32,color:TG.lineA),
         _tot('${pct.toStringAsFixed(0)}%','टक्के'),
-        Container(width:1,height:32,color:TG.line),
+        Container(width:1,height:32,color:TG.lineA),
         _tot(gr,'श्रेणी',isGrade:true),
       ]));
     final head=<Widget>[
       Text('${widget.student['roll_no']!=null?'${widget.student['roll_no']}. ':''}${widget.student['name_mr']??widget.student['name']}',style: const TextStyle(fontWeight:FontWeight.w800,fontSize:17)),
-      Text('${widget.subject['name_mr']} — सत्र ${widget.sem}',style: const TextStyle(color:TG.muted)),
+      Text('${widget.subject['name_mr']} — सत्र ${widget.sem}',style: TextStyle(color:TG.mutedA)),
       const SizedBox(height:10), score, const SizedBox(height:14),
       Text('आकारिक मूल्यमापन (कमाल ${_mx('fe_max')} गुण)',style: const TextStyle(fontWeight:FontWeight.w800,color:Color(0xFF0284C7))),
       const SizedBox(height:8),
@@ -327,8 +327,8 @@ class _MarksSheetState extends State<_MarksSheet> {
       child:SingleChildScrollView(child:Column(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.start,children:[...head, const SizedBox(height:14), bar])));
   }
   Widget _tot(String v,String l,{bool isGrade=false})=>Column(children:[
-    Text(v,style:TextStyle(fontWeight:FontWeight.w800,fontSize:isGrade?22:18,color:isGrade?const Color(0xFF059669):TG.ink)),
-    Text(l,style: const TextStyle(fontSize:11,color:TG.muted)),
+    Text(v,style:TextStyle(fontWeight:FontWeight.w800,fontSize:isGrade?22:18,color:isGrade?const Color(0xFF059669):TG.inkA)),
+    Text(l,style: TextStyle(fontSize:11,color:TG.mutedA)),
   ]);
 }
 
@@ -687,7 +687,7 @@ class _NotesTabState extends State<_NotesTab> {
                                   },
                                 )
                               else
-                                const Text('थेट नोंद खाली लिहा.', style: TextStyle(fontSize: 12, color: TG.muted)),
+                                Text('थेट नोंद खाली लिहा.', style: TextStyle(fontSize: 12, color: TG.mutedA)),
                               const SizedBox(height: 8),
                               TextField(
                                 controller: _ctrl['$sid-${a['slot']}'],
@@ -973,7 +973,7 @@ class _ReportsTab extends StatelessWidget {
       return ListView(padding: const EdgeInsets.all(12),children:[
         for(final g in groups)...[
           Padding(padding: const EdgeInsets.fromLTRB(4,16,4,8),
-            child:Text('${g['title']}',style: const TextStyle(fontWeight:FontWeight.w800,fontSize:16,color:TG.ink))),
+            child:Text('${g['title']}',style: TextStyle(fontWeight:FontWeight.w800,fontSize:16,color:TG.inkA))),
           for(final r in (g['items'] as List?) ?.cast<Map>()??[])
             ReportTile(title:'${r['title']}',subtitle:'${r['subtitle']??''}',
               page:'${r['page']}',params:{...Map<String,dynamic>.from((r['params'] as Map?) ??{}), if (division.isNotEmpty) 'section': division, if (division.isNotEmpty) 'division': division, if (division.isNotEmpty) 'section': division}),

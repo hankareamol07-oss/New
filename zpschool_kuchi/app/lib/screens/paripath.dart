@@ -460,7 +460,7 @@ class _ParipathScreenState extends State<ParipathScreen> {
     return Container(
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFF1E3A8A), Color(0xFF0369A1), Color(0xFF0284C7)],
+          colors: [TG.g800, Color(0xFF0369A1), Color(0xFF0284C7)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -593,7 +593,7 @@ class _ParipathScreenState extends State<ParipathScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('सूर्योदय', style: TextStyle(fontSize: 10, color: TG.muted)),
+                          Text('सूर्योदय', style: TextStyle(fontSize: 10, color: TG.mutedA)),
                           Text('${p['sunrise'] ?? '06:24 AM'}',
                               style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black87)),
                         ],
@@ -609,7 +609,7 @@ class _ParipathScreenState extends State<ParipathScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('सूर्यास्त', style: TextStyle(fontSize: 10, color: TG.muted)),
+                          Text('सूर्यास्त', style: TextStyle(fontSize: 10, color: TG.mutedA)),
                           Text('${p['sunset'] ?? '06:33 PM'}',
                               style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black87)),
                         ],
@@ -655,13 +655,13 @@ class _ParipathScreenState extends State<ParipathScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Row(
+            Row(
               children: [
-                Icon(Icons.format_list_numbered, size: 18, color: TG.g600),
-                SizedBox(width: 8),
-                Text('आदर्श शालेय परिपाठ क्रम', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
-                Spacer(),
-                Text('८ टप्पे', style: TextStyle(fontSize: 12, color: TG.muted, fontWeight: FontWeight.bold)),
+                const Icon(Icons.format_list_numbered, size: 18, color: TG.g600),
+                const SizedBox(width: 8),
+                const Text('आदर्श शालेय परिपाठ क्रम', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
+                const Spacer(),
+                Text('८ टप्पे', style: TextStyle(fontSize: 12, color: TG.mutedA, fontWeight: FontWeight.bold)),
               ],
             ),
             const SizedBox(height: 10),
@@ -895,8 +895,8 @@ class _ParipathScreenState extends State<ParipathScreen> {
 
             // Explanation
             if ((sub['explanation_mr'] ?? '').toString().isNotEmpty) ...[
-              const Text('सविस्तर विवेचन:',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: TG.muted)),
+              Text('सविस्तर विवेचन:',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11, color: TG.mutedA)),
               const SizedBox(height: 2),
               SelectableText(
                 '${sub['explanation_mr']}',
@@ -970,7 +970,7 @@ class _ParipathScreenState extends State<ParipathScreen> {
               const SizedBox(height: 4),
               Text(
                 '"$textEn"',
-                style: const TextStyle(fontSize: 13, fontStyle: FontStyle.italic, color: TG.muted),
+                style: TextStyle(fontSize: 13, fontStyle: FontStyle.italic, color: TG.mutedA),
               ),
             ],
             if (meaning.isNotEmpty) ...[
@@ -981,7 +981,7 @@ class _ParipathScreenState extends State<ParipathScreen> {
             ],
             if (exp.isNotEmpty) ...[
               const SizedBox(height: 8),
-              const Text('महत्त्व व बोध:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: TG.muted)),
+              Text('महत्त्व व बोध:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: TG.mutedA)),
               const SizedBox(height: 2),
               Text(exp, style: const TextStyle(fontSize: 13, height: 1.5, color: Colors.black87)),
             ],
@@ -1141,7 +1141,7 @@ class _ParipathScreenState extends State<ParipathScreen> {
                 Text('आजचे दिनविशेष (${fullList.length})',
                     style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
                 const Spacer(),
-                Text('${filtered.length} दर्शविले', style: const TextStyle(fontSize: 11, color: TG.muted)),
+                Text('${filtered.length} दर्शविले', style: TextStyle(fontSize: 11, color: TG.mutedA)),
               ],
             ),
             const SizedBox(height: 10),
@@ -1176,10 +1176,10 @@ class _ParipathScreenState extends State<ParipathScreen> {
             const SizedBox(height: 10),
 
             if (filtered.isEmpty)
-              const Center(
+              Center(
                 child: Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Text('या वर्गवारीत दिनविशेष उपलब्ध नाहीत.', style: TextStyle(color: TG.muted)),
+                  padding: const EdgeInsets.all(16),
+                  child: Text('या वर्गवारीत दिनविशेष उपलब्ध नाहीत.', style: TextStyle(color: TG.mutedA)),
                 ),
               )
             else
@@ -1672,7 +1672,7 @@ class _PrayersSheetState extends State<_PrayersSheet> {
 
           Expanded(
             child: filtered.isEmpty
-                ? const Center(child: Text('कोणतीही प्रार्थना सापडली नाही.', style: TextStyle(color: TG.muted)))
+                ? Center(child: Text('कोणतीही प्रार्थना सापडली नाही.', style: TextStyle(color: TG.mutedA)))
                 : ListView.builder(
                     itemCount: filtered.length,
                     itemBuilder: (ctx, i) {
@@ -1710,7 +1710,7 @@ class _PrayersSheetState extends State<_PrayersSheet> {
                               if ((p['author'] ?? '').toString().isNotEmpty) ...[
                                 const SizedBox(height: 2),
                                 Text('— ${p['author']}',
-                                    style: const TextStyle(fontSize: 12, color: TG.muted, fontStyle: FontStyle.italic)),
+                                    style: TextStyle(fontSize: 12, color: TG.mutedA, fontStyle: FontStyle.italic)),
                               ],
                               const Divider(height: 16),
                               Container(

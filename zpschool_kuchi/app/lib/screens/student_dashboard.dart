@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../core/session.dart';
+import '../core/theme_controller.dart';
+import '../theme.dart';
 import 'ai_study_bot.dart';
 import 'login.dart';
+import 'quiz.dart';
 
 class StudentDashboardScreen extends StatefulWidget {
   const StudentDashboardScreen({super.key});
@@ -111,7 +114,7 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
                 children: [
                   const Text(
                     '🔄 पाल्य बदला / दुसरे खाते',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF1E3A8A)),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: TG.g800),
                   ),
                   IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                 ],
@@ -132,13 +135,13 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
                   return Container(
                     margin: const EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
-                      color: isActive ? const Color(0xFFEFF6FF) : Colors.white,
-                      border: Border.all(color: isActive ? const Color(0xFF2563EB) : const Color(0xFFE2E8F0)),
+                      color: isActive ? TG.g50A : Theme.of(ctx).cardColor,
+                      border: Border.all(color: isActive ? TG.g600 : const Color(0xFFE2E8F0)),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: ListTile(
                       leading: CircleAvatar(
-                        backgroundColor: isActive ? const Color(0xFF2563EB) : const Color(0xFFE2E8F0),
+                        backgroundColor: isActive ? TG.g600 : const Color(0xFFE2E8F0),
                         child: Text(
                           '$std',
                           style: TextStyle(
@@ -237,7 +240,7 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
             ),
           ],
         ),
-        backgroundColor: const Color(0xFF1E3A8A),
+        backgroundColor: TG.g800,
         foregroundColor: Colors.white,
         actions: [
           IconButton(
@@ -251,6 +254,10 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
             onSelected: (val) {
               if (val == 'ai_bot') {
                 openAiStudyBot(context, std: studentStd, name: studentName, lockStd: true);
+              } else if (val == 'theme') {
+                ThemeController.toggle(context);
+              } else if (val == 'quiz') {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const QuizHomeScreen()));
               } else if (val == 'switch_child') {
                 _showSiblingSwitcher();
               } else if (val == 'logout') {
@@ -262,7 +269,7 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
                 value: 'ai_bot',
                 child: Row(
                   children: [
-                    Icon(Icons.smart_toy, color: Color(0xFF1E3A8A)),
+                    Icon(Icons.smart_toy, color: TG.g800),
                     SizedBox(width: 10),
                     Text(
                       'AI अभ्यास मित्र',
@@ -272,10 +279,30 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
                 ),
               ),
               const PopupMenuItem(
+                value: 'quiz',
+                child: Row(
+                  children: [
+                    Icon(Icons.emoji_events_outlined, color: Color(0xFFD97706)),
+                    SizedBox(width: 10),
+                    Text('क्विझ खेळ'),
+                  ],
+                ),
+              ),
+              const PopupMenuItem(
+                value: 'theme',
+                child: Row(
+                  children: [
+                    Icon(Icons.dark_mode_outlined, color: TG.g600),
+                    SizedBox(width: 10),
+                    Text('डार्क / लाईट मोड'),
+                  ],
+                ),
+              ),
+              const PopupMenuItem(
                 value: 'switch_child',
                 child: Row(
                   children: [
-                    Icon(Icons.people_alt_outlined, color: Color(0xFF2563EB)),
+                    Icon(Icons.people_alt_outlined, color: TG.g600),
                     SizedBox(width: 10),
                     Text('पाल्य बदला / दुसरे खाते'),
                   ],
@@ -305,7 +332,9 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  CircularProgressIndicator(color: Color(0xFF1E3A8A)),
+                  _PulseLogo(),
+                  SizedBox(height: 16),
+                  CircularProgressIndicator(color: TG.g600),
                   SizedBox(height: 12),
                   Text('विद्यार्थी कक्ष लोड होत आहे...', style: TextStyle(color: Colors.blueGrey)),
                 ],
@@ -333,7 +362,7 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
                     ),
                     const SizedBox(height: 20),
                     FilledButton.icon(
-                      style: FilledButton.styleFrom(backgroundColor: const Color(0xFF1E3A8A)),
+                      style: FilledButton.styleFrom(backgroundColor: TG.g800),
                       onPressed: () => _initWebView(),
                       icon: const Icon(Icons.refresh),
                       label: const Text('पुन्हा लोड करा'),
@@ -346,11 +375,52 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => openAiStudyBot(context, std: studentStd, name: studentName, lockStd: true),
-        backgroundColor: const Color(0xFF1E3A8A),
+        backgroundColor: TG.g800,
         foregroundColor: Colors.white,
         icon: const Icon(Icons.smart_toy),
         label: const Text('AI अभ्यास मित्र', style: TextStyle(fontWeight: FontWeight.bold)),
       ),
     ));
   }
+}
+
+/// Pulsing school logo shown while the student portal loads.
+class _PulseLogo extends StatefulWidget {
+  const _PulseLogo();
+
+  @override
+  State<_PulseLogo> createState() => _PulseLogoState();
+}
+
+class _PulseLogoState extends State<_PulseLogo> with SingleTickerProviderStateMixin {
+  late final AnimationController _c =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 900))
+        ..repeat(reverse: true);
+  late final Animation<double> _scale =
+      Tween<double>(begin: 0.92, end: 1.05).animate(CurvedAnimation(parent: _c, curve: Curves.easeInOut));
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => ScaleTransition(
+        scale: _scale,
+        child: Container(
+          width: 76,
+          height: 76,
+          padding: const EdgeInsets.all(5),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [BoxShadow(color: TG.g600.withValues(alpha: .25), blurRadius: 14, offset: const Offset(0, 6))],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(15),
+            child: Image.asset('assets/images/logo.png', fit: BoxFit.cover),
+          ),
+        ),
+      );
 }

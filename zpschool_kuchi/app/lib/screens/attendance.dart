@@ -139,7 +139,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                 child: ListView.separated(
                   padding: const EdgeInsets.all(16),
                   itemCount: list.length,
-                  separatorBuilder: (_, __) => const Divider(height: 1, color: TG.line),
+                  separatorBuilder: (_, __) => Divider(height: 1, color: TG.lineA),
                   itemBuilder: (_, i) {
                     final s = list[i];
                     return ListTile(

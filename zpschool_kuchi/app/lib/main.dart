@@ -5,6 +5,7 @@ import 'core/connectivity.dart';
 import 'core/local_db.dart';
 import 'core/session.dart';
 import 'core/sync.dart';
+import 'core/theme_controller.dart';
 import 'screens/home.dart';
 import 'screens/login.dart';
 import 'screens/privacy_consent.dart';
@@ -22,11 +23,40 @@ Future<void> main() async {
   runApp(const TechGurujiApp());
 }
 
-class TechGurujiApp extends StatelessWidget {
+class TechGurujiApp extends StatefulWidget {
   const TechGurujiApp({super.key});
 
   @override
+  State<TechGurujiApp> createState() => _TechGurujiAppState();
+}
+
+class _TechGurujiAppState extends State<TechGurujiApp> with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+    ThemeController.mode.addListener(_onThemeChanged);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    ThemeController.mode.removeListener(_onThemeChanged);
+    super.dispose();
+  }
+
+  void _onThemeChanged() => setState(() {});
+
+  @override
+  void didChangePlatformBrightness() => setState(() {});
+
+  @override
   Widget build(BuildContext context) {
+    final mode = ThemeController.mode.value;
+    final platformDark =
+        WidgetsBinding.instance.platformDispatcher.platformBrightness == Brightness.dark;
+    TG.darkMode = mode == ThemeMode.dark || (mode == ThemeMode.system && platformDark);
+
     final s = Session.I;
     final Widget start = !s.privacyAccepted
         ? const PrivacyConsentScreen()
@@ -36,6 +66,8 @@ class TechGurujiApp extends StatelessWidget {
       title: kAppName,
       debugShowCheckedModeBanner: false,
       theme: TG.theme,
+      darkTheme: TG.darkTheme,
+      themeMode: mode,
       home: start,
     );
   }

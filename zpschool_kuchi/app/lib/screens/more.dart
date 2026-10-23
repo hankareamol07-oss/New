@@ -7,9 +7,11 @@ import '../core/config.dart';
 import '../core/connectivity.dart';
 import '../core/local_db.dart';
 import '../core/session.dart';
+import '../core/theme_controller.dart';
 import '../theme.dart';
 import 'cce.dart';
 import 'exam_paper.dart';
+import 'quiz.dart';
 import 'holidays.dart';
 import 'hpc.dart';
 import 'mdm.dart';
@@ -33,6 +35,7 @@ class MoreScreen extends StatelessWidget {
       (Icons.insert_chart_outlined, 'समग्र प्रगती पत्रक', const Color(0xFF0F8A84), const HpcScreen()),
       (Icons.schedule_outlined, 'वेळापत्रक', const Color(0xFF7C3AED), const TimetableScreen()),
       (Icons.description_outlined, 'प्रश्नपत्रिका', const Color(0xFF2563A8), const ExamPaperScreen()),
+      (Icons.emoji_events_outlined, 'क्विझ खेळ', const Color(0xFFD97706), const QuizHomeScreen()),
       (Icons.wb_sunny_outlined, 'परिपाठ', const Color(0xFFB7791F), const ParipathScreen()),
       (Icons.restaurant_outlined, 'पोषण आहार', const Color(0xFFD97706), const MdmScreen()),
       (Icons.calendar_month_outlined, 'दिनदर्शिका व सुट्ट्या', TG.g600, const HolidaysScreen()),
@@ -57,6 +60,23 @@ class MoreScreen extends StatelessWidget {
         ),
         const SectionTitle('खाते'),
         Card(child: Column(children: [
+          ValueListenableBuilder<ThemeMode>(
+            valueListenable: ThemeController.mode,
+            builder: (ctx, _, __) {
+              final dark = Theme.of(ctx).brightness == Brightness.dark;
+              return ListTile(
+                leading: Icon(dark ? Icons.dark_mode : Icons.light_mode_outlined, color: TG.g600),
+                title: const Text('डार्क मोड'),
+                subtitle: Text(dark ? 'चालू आहे' : 'बंद आहे'),
+                trailing: Switch(
+                  value: dark,
+                  onChanged: (v) => ThemeController.set(v ? ThemeMode.dark : ThemeMode.light),
+                ),
+                onTap: () => ThemeController.set(dark ? ThemeMode.light : ThemeMode.dark),
+              );
+            },
+          ),
+          const Divider(height: 1),
           ListTile(leading: const Icon(Icons.workspace_premium_outlined, color: TG.amber), title: const Text('सदस्यता योजना'),
               subtitle: Text('${Session.I.school['plan_name'] ?? 'मोफत'}'), trailing: const Icon(Icons.chevron_right),
               onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const PlansScreen()))),
@@ -74,7 +94,7 @@ class MoreScreen extends StatelessWidget {
         const SizedBox(height: 16),
         FutureBuilder<PackageInfo>(
           future: PackageInfo.fromPlatform(),
-          builder: (_, s) => Center(child: Text('TechGuruji v${s.data?.version ?? '1.0.0'}', style: const TextStyle(color: TG.muted))),
+          builder: (_, s) => Center(child: Text('TechGuruji v${s.data?.version ?? '1.0.0'}', style: TextStyle(color: TG.mutedA))),
         ),
       ]),
     );
@@ -232,7 +252,7 @@ class _PlansScreenState extends State<PlansScreen> {
               if (_err != null) Card(color: const Color(0xFFFDF2DF), child: ListTile(leading: const Icon(Icons.wifi_off), title: Text(_err!))),
               if (_sub != null)
                 Card(
-                  color: TG.g50,
+                  color: TG.g50A,
                   child: ListTile(
                     leading: const Icon(Icons.workspace_premium, color: TG.g600),
                     title: Text('${_sub!['plan_name']}', style: const TextStyle(fontWeight: FontWeight.w700)),
@@ -251,7 +271,7 @@ class _PlansScreenState extends State<PlansScreen> {
                             style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800))),
                         Text('₹${(p['price'] as num).toStringAsFixed(0)}', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: TG.g800)),
                       ]),
-                      Text('${p['duration_months']} महिने', style: const TextStyle(color: TG.muted)),
+                      Text('${p['duration_months']} महिने', style: TextStyle(color: TG.mutedA)),
                       const SizedBox(height: 8),
                       for (final f in (p['features'] as List).take(5))
                         Padding(padding: const EdgeInsets.only(bottom: 4), child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -262,8 +282,8 @@ class _PlansScreenState extends State<PlansScreen> {
                     ]),
                   ),
                 ),
-              const Text('UPI, कार्ड किंवा नेट बँकिंगने सुरक्षित पेमेंट. पेमेंटची पडताळणी सर्व्हरवर होते.',
-                  textAlign: TextAlign.center, style: TextStyle(color: TG.muted, fontSize: 13)),
+              Text('UPI, कार्ड किंवा नेट बँकिंगने सुरक्षित पेमेंट. पेमेंटची पडताळणी सर्व्हरवर होते.',
+                  textAlign: TextAlign.center, style: TextStyle(color: TG.mutedA, fontSize: 13)),
             ]),
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../core/session.dart';
+import '../theme.dart';
 
 /// Marathi standard ordinal formatter:
 /// १ ली, २ री, ३ री, ४ थी, ५ वी, ६ वी, ७ वी, ८ वी
@@ -159,7 +160,7 @@ class _AiStudyBotScreenState extends State<AiStudyBotScreen> {
             ),
           ],
         ),
-        backgroundColor: const Color(0xFF1E3A8A),
+        backgroundColor: TG.g800,
         foregroundColor: Colors.white,
         actions: [
           IconButton(
@@ -178,7 +179,7 @@ class _AiStudyBotScreenState extends State<AiStudyBotScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  CircularProgressIndicator(color: Color(0xFF1E3A8A)),
+                  CircularProgressIndicator(color: TG.g800),
                   SizedBox(height: 12),
                   Text('AI अभ्यास मित्र लोड होत आहे...', style: TextStyle(color: Colors.blueGrey)),
                 ],
@@ -206,7 +207,7 @@ class _AiStudyBotScreenState extends State<AiStudyBotScreen> {
                     ),
                     const SizedBox(height: 20),
                     FilledButton.icon(
-                      style: FilledButton.styleFrom(backgroundColor: const Color(0xFF1E3A8A)),
+                      style: FilledButton.styleFrom(backgroundColor: TG.g800),
                       onPressed: () => _initWebView(),
                       icon: const Icon(Icons.refresh),
                       label: const Text('पुन्हा प्रयत्न करा'),

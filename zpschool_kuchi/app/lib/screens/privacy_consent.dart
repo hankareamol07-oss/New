@@ -26,8 +26,8 @@ class PrivacyConsentScreen extends StatelessWidget {
             child: ListView(padding: const EdgeInsets.all(24), children: [
               Image.asset('assets/images/logo.png', width: 64, height: 64, alignment: Alignment.centerLeft),
               const SizedBox(height: 16),
-              const Text('तुमची गोपनीयता', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800, color: TG.ink)),
-              const Text('ॲप वापरण्यापूर्वी कृपया वाचा.', style: TextStyle(color: TG.muted, fontSize: 16)),
+              Text('तुमची गोपनीयता', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800, color: TG.inkA)),
+              Text('ॲप वापरण्यापूर्वी कृपया वाचा.', style: TextStyle(color: TG.mutedA, fontSize: 16)),
               const SizedBox(height: 16),
               for (final p in points)
                 Padding(
@@ -38,7 +38,7 @@ class PrivacyConsentScreen extends StatelessWidget {
                     Expanded(
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                         Text(p[0], style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
-                        Text(p[1], style: const TextStyle(color: TG.muted, height: 1.4)),
+                        Text(p[1], style: TextStyle(color: TG.mutedA, height: 1.4)),
                       ]),
                     ),
                   ]),

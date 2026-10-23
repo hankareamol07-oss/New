@@ -40,6 +40,10 @@ class Session {
   bool get autoSync => _prefs.getBool('auto_sync') ?? false;
   set autoSync(bool v) => _prefs.setBool('auto_sync', v);
 
+  /// 'system' | 'light' | 'dark'
+  String get themeModeName => _prefs.getString('theme_mode') ?? 'system';
+  Future<void> setThemeModeName(String v) => _prefs.setString('theme_mode', v);
+
   Future<void> save(String token, Map<String, dynamic> user, String role, [Map<String, dynamic>? school]) async {
     await _prefs.setString('token', token);
     await _prefs.setString('user', jsonEncode(user));

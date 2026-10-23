@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../core/session.dart';
 import '../core/sync.dart';
+import '../core/theme_controller.dart';
+import '../theme.dart';
 import 'ai_study_bot.dart';
 import 'cce.dart';
 import 'dashboard.dart';
@@ -82,36 +84,46 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     return Scaffold(
       appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 12),
+          child: Center(
+            child: Container(
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: .18), blurRadius: 5, offset: const Offset(0, 2))],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset('assets/images/logo.png', fit: BoxFit.cover),
+              ),
+            ),
+          ),
+        ),
+        leadingWidth: 52,
         title: Text(
           Session.I.school['name_mr'] ?? Session.I.school['name'] ?? 'जि. प. शाळा नं. २ कुची',
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
         ),
-        backgroundColor: const Color(0xFF1E3A8A),
+        backgroundColor: TG.g800,
         foregroundColor: Colors.white,
         actions: [
-          PopupMenuButton<String>(
-            icon: const Icon(Icons.more_vert),
-            tooltip: 'मेनू',
-            onSelected: (val) {
-              if (val == 'ai_bot') {
-                openAiStudyBot(context);
-              }
-            },
-            itemBuilder: (ctx) => [
-              const PopupMenuItem(
-                value: 'ai_bot',
-                child: Row(
-                  children: [
-                    Icon(Icons.smart_toy, color: Color(0xFF1E3A8A)),
-                    SizedBox(width: 10),
-                    Text(
-                      'AI अभ्यास मित्र',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+          IconButton(
+            icon: Icon(Theme.of(context).brightness == Brightness.dark
+                ? Icons.light_mode_outlined
+                : Icons.dark_mode_outlined),
+            tooltip: 'डार्क / लाईट मोड',
+            onPressed: () => ThemeController.set(
+                Theme.of(context).brightness == Brightness.dark
+                    ? ThemeMode.light
+                    : ThemeMode.dark),
+          ),
+          IconButton(
+            icon: const Icon(Icons.smart_toy),
+            tooltip: 'AI अभ्यास मित्र',
+            onPressed: () => openAiStudyBot(context),
           ),
         ],
       ),

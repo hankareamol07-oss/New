@@ -33,7 +33,7 @@ class SectionTitle extends StatelessWidget {
         child: Row(children: [
           Container(width: 4, height: 20, decoration: BoxDecoration(color: TG.g600, borderRadius: BorderRadius.circular(2))),
           const SizedBox(width: 8),
-          Expanded(child: Text(text, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: TG.ink))),
+          Expanded(child: Text(text, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: TG.inkA))),
           if (trailing != null) trailing!,
         ]),
       );
@@ -60,8 +60,8 @@ class IconTile extends StatelessWidget {
                 child: Icon(icon, color: color),
               ),
               const SizedBox(height: 10),
-              Text(label, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15, color: TG.ink)),
-              if (sub != null) Text(sub!, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(color: TG.muted, fontSize: 12.5)),
+              Text(label, maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15, color: TG.inkA)),
+              if (sub != null) Text(sub!, maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(color: TG.mutedA, fontSize: 12.5)),
             ]),
           ),
         ),
@@ -77,10 +77,56 @@ class EmptyState extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(32),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(icon, size: 56, color: TG.line),
+            Icon(icon, size: 56, color: TG.mutedA),
             const SizedBox(height: 12),
-            Text(text, textAlign: TextAlign.center, style: const TextStyle(color: TG.muted, fontSize: 15)),
+            Text(text, textAlign: TextAlign.center, style: TextStyle(color: TG.mutedA, fontSize: 15)),
           ]),
         ),
+      );
+}
+
+/// Gentle entrance animation: fade + slight rise, with an optional
+/// stagger [delay]. Used across dashboards and lists for a pro feel.
+class AnimIn extends StatefulWidget {
+  const AnimIn({super.key, required this.child, this.delay = Duration.zero, this.dy = 16});
+  final Widget child;
+  final Duration delay;
+  final double dy;
+  @override
+  State<AnimIn> createState() => _AnimInState();
+}
+
+class _AnimInState extends State<AnimIn> with SingleTickerProviderStateMixin {
+  late final AnimationController _c =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 480));
+  late final Animation<double> _fade =
+      CurvedAnimation(parent: _c, curve: Curves.easeOutCubic);
+  late final Animation<Offset> _slide = Tween<Offset>(
+    begin: Offset(0, widget.dy / 100),
+    end: Offset.zero,
+  ).animate(CurvedAnimation(parent: _c, curve: Curves.easeOutCubic));
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.delay == Duration.zero) {
+      _c.forward();
+    } else {
+      Future.delayed(widget.delay, () {
+        if (mounted) _c.forward();
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => FadeTransition(
+        opacity: _fade,
+        child: SlideTransition(position: _slide, child: widget.child),
       );
 }

@@ -408,12 +408,12 @@ class _StudentFormState extends State<StudentForm> {
               for (final f in _groups[i].$2) Padding(padding: const EdgeInsets.only(bottom: 10), child: _field(f)),
               if (i == 5) ...[
                 const Divider(),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 6),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6),
                   child: Row(children: [
-                    Icon(Icons.star, color: Colors.amber, size: 18),
-                    SizedBox(width: 6),
-                    Text('आवड व छंद (Interests — एक किंवा अधिक निवडा)', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 13.5, color: TG.ink)),
+                    const Icon(Icons.star, color: Colors.amber, size: 18),
+                    const SizedBox(width: 6),
+                    Text('आवड व छंद (Interests — एक किंवा अधिक निवडा)', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 13.5, color: TG.inkA)),
                   ]),
                 ),
                 Wrap(

@@ -296,7 +296,7 @@ class _FsFormState extends State<_FsForm> {
   Widget _card(String title, List<Widget> children, {Widget? trailing}) => Card(margin: const EdgeInsets.only(bottom: 12), child: Padding(padding: const EdgeInsets.all(12),
     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Row(children: [
-        Expanded(child: Text(title, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15.5, color: TG.ink))),
+        Expanded(child: Text(title, style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15.5, color: TG.inkA))),
         if (trailing != null) trailing,
       ]),
       const Divider(), ...children])));
@@ -344,7 +344,7 @@ class _FsFormState extends State<_FsForm> {
                       style: const TextStyle(fontWeight: FontWeight.w700)),
                     const SizedBox(height: 2),
                     Text('इ. ${widget.student['grade'] ?? ''} ${widget.student['section'] ?? ''} · हजेरी क्र. ${widget.student['roll_no'] ?? '-'} · GR ${widget.student['gr_no'] ?? '-'}',
-                      style: const TextStyle(fontSize: 12, color: TG.muted)),
+                      style: TextStyle(fontSize: 12, color: TG.mutedA)),
                   ],
                 ),
               ),
@@ -374,7 +374,7 @@ class _FsFormState extends State<_FsForm> {
           subtitle: Text(() {
             final a = _st['${dm['id']}-1']?['competencies'] as List? ?? []; final b = _st['${dm['id']}-2']?['competencies'] as List? ?? [];
             return 'सत्र १: ${a.length} क्षमता · सत्र २: ${b.length} क्षमता';
-          }(), style: const TextStyle(fontSize: 12, color: TG.muted)),
+          }(), style: TextStyle(fontSize: 12, color: TG.mutedA)),
           childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
           children: [
             SegmentedButton<int>(segments: const [ButtonSegment(value: 1, label: Text('📘 सत्र १')), ButtonSegment(value: 2, label: Text('📗 सत्र २'))],
@@ -444,5 +444,5 @@ class _FsFormState extends State<_FsForm> {
   }
 
   Widget _info(String l, String v) => Padding(padding: const EdgeInsets.only(bottom: 4),
-    child: Row(children: [SizedBox(width: 110, child: Text(l, style: const TextStyle(color: TG.muted, fontSize: 13))), Expanded(child: Text(v.isEmpty ? '-' : v, style: const TextStyle(fontWeight: FontWeight.w600)))]));
+    child: Row(children: [SizedBox(width: 110, child: Text(l, style: TextStyle(color: TG.mutedA, fontSize: 13))), Expanded(child: Text(v.isEmpty ? '-' : v, style: const TextStyle(fontWeight: FontWeight.w600)))]));
 }

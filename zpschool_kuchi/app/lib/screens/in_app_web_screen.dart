@@ -3,6 +3,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 import '../core/config.dart';
 import '../core/session.dart';
+import '../theme.dart';
 
 class InAppWebScreen extends StatefulWidget {
   const InAppWebScreen({super.key, required this.url, this.title});
@@ -83,7 +84,7 @@ class _InAppWebScreenState extends State<InAppWebScreen> {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
-          backgroundColor: const Color(0xFF1E3A8A),
+          backgroundColor: TG.g800,
           foregroundColor: Colors.white,
           actions: [
             IconButton(

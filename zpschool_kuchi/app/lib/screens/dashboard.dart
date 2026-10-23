@@ -7,8 +7,13 @@ import '../core/local_db.dart';
 import '../core/session.dart';
 import '../core/sync.dart';
 import '../theme.dart';
+import 'attendance.dart';
 import 'exam_paper.dart';
+import 'fee.dart';
+import 'holidays.dart';
 import 'mdm.dart';
+import 'paripath.dart';
+import 'quiz.dart';
 import 'school.dart';
 import 'students.dart';
 import 'timetable.dart';
@@ -25,6 +30,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Map<String, int> _c = {};
   Map<String, dynamic> _serverStats = {};
   bool _statsLoading = false;
+  List<Map<String, dynamic>> _birthdays = [];
+  List<Map<String, dynamic>> _upcomingHolidays = [];
+  int? _attPct;
+  String _attMonthName = '';
 
   @override
   void initState() {
@@ -52,6 +61,54 @@ class _DashboardScreenState extends State<DashboardScreen> {
       m[t] = await LocalDb.I.count(t);
     }
     if (mounted) setState(() => _c = m);
+    _loadHighlights();
+  }
+
+  /// Today's birthdays, this month's attendance % and upcoming holidays —
+  /// computed from data already on the phone (hidden when no data).
+  Future<void> _loadHighlights() async {
+    try {
+      final now = DateTime.now();
+      final students = await LocalDb.I.rows('students');
+      final bdays = <Map<String, dynamic>>[];
+      for (final s in students) {
+        final raw = '${s['dob'] ?? s['date_of_birth'] ?? ''}'.trim();
+        if (raw.isEmpty) continue;
+        final d = DateTime.tryParse(raw);
+        if (d != null && d.month == now.month && d.day == now.day) bdays.add(s);
+      }
+      final holidays = await LocalDb.I.rows('holidays');
+      final upcoming = <Map<String, dynamic>>[];
+      for (final h in holidays) {
+        final d = DateTime.tryParse('${h['date'] ?? ''}');
+        if (d == null) continue;
+        final day = DateTime(d.year, d.month, d.day);
+        final today = DateTime(now.year, now.month, now.day);
+        if (!day.isBefore(today)) upcoming.add({...h, '_d': day});
+      }
+      upcoming.sort((a, b) => (a['_d'] as DateTime).compareTo(b['_d'] as DateTime));
+      final att = await LocalDb.I.rows('attendance');
+      final yStart = now.month >= 6 ? now.year : now.year - 1;
+      final yearStr = '$yStart-${yStart + 1}';
+      var present = 0, working = 0;
+      for (final r in att) {
+        if ('${r['month']}' == '${now.month}' && '${r['academic_year']}' == yearStr) {
+          present += int.tryParse('${r['days_present'] ?? 0}') ?? 0;
+          working += int.tryParse('${r['working_days'] ?? 0}') ?? 0;
+        }
+      }
+      const monthsMr = ['जानेवारी', 'फेब्रुवारी', 'मार्च', 'एप्रिल', 'मे', 'जून', 'जुलै', 'ऑगस्ट', 'सप्टेंबर', 'ऑक्टोबर', 'नोव्हेंबर', 'डिसेंबर'];
+      if (mounted) {
+        setState(() {
+          _birthdays = bdays;
+          _upcomingHolidays = upcoming.take(3).toList();
+          _attPct = working > 0 ? (present * 100 / working).round() : null;
+          _attMonthName = monthsMr[now.month - 1];
+        });
+      }
+    } catch (_) {
+      // Highlights are optional — never break the dashboard for them.
+    }
   }
 
   Future<void> _loadServerStats() async {
@@ -106,6 +163,52 @@ class _DashboardScreenState extends State<DashboardScreen> {
     onAllowed();
   }
 
+  String _teacherGreeting() {
+    final u = Session.I.user;
+    final name = (u['name_mr'] ?? u['name'] ?? '').toString().trim();
+    return name.isNotEmpty ? 'नमस्कार, $name 🙏' : 'नमस्कार 🙏';
+  }
+
+  String _academicYear() {
+    final s = Session.I.school;
+    return (s['academic_year'] ?? s['year'] ?? '').toString().trim();
+  }
+
+  Widget _headerChip(IconData icon, String label, {bool amber = false}) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        decoration: BoxDecoration(
+          color: amber ? TG.amber.withValues(alpha: .22) : Colors.white.withValues(alpha: .14),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: amber ? TG.amber.withValues(alpha: .55) : Colors.white.withValues(alpha: .25)),
+        ),
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          Icon(icon, size: 14, color: amber ? TG.amber : const Color(0xFFBFE3D3)),
+          const SizedBox(width: 5),
+          Text(label, style: TextStyle(color: amber ? const Color(0xFFFFE9BD) : const Color(0xFFE4F2EB), fontSize: 12, fontWeight: FontWeight.w600)),
+        ]),
+      );
+
+  Widget _quickAction(IconData icon, String label, Color color, VoidCallback onTap) => InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(18),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Container(
+              width: 58, height: 58,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [color, color.withValues(alpha: .72)], begin: Alignment.topLeft, end: Alignment.bottomRight),
+                borderRadius: BorderRadius.circular(18),
+                boxShadow: [BoxShadow(color: color.withValues(alpha: .35), blurRadius: 8, offset: const Offset(0, 4))],
+              ),
+              child: Icon(icon, color: Colors.white, size: 27),
+            ),
+            const SizedBox(height: 7),
+            SizedBox(width: 66, child: Text(label, textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: TG.inkA))),
+          ]),
+        ),
+      );
+
   @override
   Widget build(BuildContext context) {
     final s = Session.I.school;
@@ -131,27 +234,52 @@ class _DashboardScreenState extends State<DashboardScreen> {
               decoration: BoxDecoration(color: Colors.orange.shade100, borderRadius: BorderRadius.circular(10)),
               child: const Row(children: [Icon(Icons.wifi_off, color: Colors.orange, size: 20), SizedBox(width: 8), Expanded(child: Text('ऑफलाइन: शेवटची जतन केलेली माहिती', style: TextStyle(color: Colors.deepOrange, fontSize: 13)))]),
             )),
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(gradient: const LinearGradient(colors: [TG.g900, TG.g600]), borderRadius: BorderRadius.circular(20)),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Row(children: [
-                  ClipRRect(borderRadius: BorderRadius.circular(10), child: Image.asset('assets/images/logo.png', width: 44, height: 44)),
-                  const SizedBox(width: 12),
-                  Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(todayMarathi.isNotEmpty ? todayMarathi : DateFormat('d MMMM yyyy').format(DateTime.now()), style: const TextStyle(color: Color(0xFFBFE3D3), fontSize: 13)),
-                    if (panchangVar.isNotEmpty) Text(panchangVar, style: const TextStyle(color: Color(0xFF9CCFBA), fontSize: 12)),
-                  ])),
-                  if (_statsLoading) const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white54)),
+            AnimIn(child: Container(
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(colors: [TG.g900, TG.g700, TG.g500], begin: Alignment.topLeft, end: Alignment.bottomRight),
+                borderRadius: BorderRadius.circular(22),
+                boxShadow: [BoxShadow(color: TG.g600.withValues(alpha: .35), blurRadius: 16, offset: const Offset(0, 8))],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(22),
+                child: Stack(children: [
+                  Positioned(right: -28, top: -28, child: Container(width: 120, height: 120, decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white.withValues(alpha: .07)))),
+                  Positioned(right: 36, bottom: -44, child: Container(width: 96, height: 96, decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white.withValues(alpha: .05)))),
+                  Positioned(left: -20, bottom: -36, child: Container(width: 80, height: 80, decoration: BoxDecoration(shape: BoxShape.circle, color: TG.amber.withValues(alpha: .10)))),
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Row(children: [
+                        Container(
+                          width: 52, height: 52,
+                          padding: const EdgeInsets.all(3),
+                          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(14), boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: .22), blurRadius: 8, offset: const Offset(0, 3))]),
+                          child: ClipRRect(borderRadius: BorderRadius.circular(11), child: Image.asset('assets/images/logo.png', fit: BoxFit.cover)),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                          Text(todayMarathi.isNotEmpty ? todayMarathi : DateFormat('d MMMM yyyy').format(DateTime.now()), style: const TextStyle(color: Color(0xFFBFE3D3), fontSize: 13, fontWeight: FontWeight.w600)),
+                          if (panchangVar.isNotEmpty) Text(panchangVar, style: const TextStyle(color: Color(0xFF9CCFBA), fontSize: 12)),
+                        ])),
+                        if (_statsLoading) const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white54)),
+                      ]),
+                      const SizedBox(height: 14),
+                      Text(_teacherGreeting(), style: const TextStyle(color: Color(0xFFCFE7DC), fontSize: 14)),
+                      const SizedBox(height: 2),
+                      Text(schoolName ?? 'शाळा', style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w800, height: 1.15)),
+                      const SizedBox(height: 10),
+                      Wrap(spacing: 8, runSpacing: 6, children: [
+                        _headerChip(Icons.badge_outlined, 'UDISE ${s['udise_code'] ?? ''}'),
+                        _headerChip(s['is_subscribed'] == true ? Icons.verified : Icons.workspace_premium_outlined, '${s['plan_name'] ?? 'मोफत योजना'}${s['is_subscribed'] == true ? ' ✓' : ''}', amber: true),
+                        if (_academicYear().isNotEmpty) _headerChip(Icons.calendar_month_outlined, 'शैक्षणिक वर्ष ${_academicYear()}'),
+                      ]),
+                    ]),
+                  ),
                 ]),
-                const SizedBox(height: 10),
-                const Text('नमस्कार 🙏', style: TextStyle(color: Color(0xFFCFE7DC), fontSize: 14)),
-                Text(schoolName ?? 'शाळा', style: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w800)),
-                Text('UDISE ${s['udise_code'] ?? ''} • ${s['plan_name'] ?? 'मोफत'}${s['is_subscribed'] == true ? ' ✓' : ''}', style: const TextStyle(color: Color(0xFFCFE7DC), fontSize: 13)),
-              ]),
-            ),
+              ),
+            )),
             const SizedBox(height: 10),
-            if (suvichar.isNotEmpty) Container(
+            if (suvichar.isNotEmpty) AnimIn(delay: const Duration(milliseconds: 60), child: Container(
               margin: const EdgeInsets.only(bottom: 10),
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(color: const Color(0xFFFFFBEB), border: Border.all(color: const Color(0xFFE9A23B).withValues(alpha: .4)), borderRadius: BorderRadius.circular(14)),
@@ -162,14 +290,93 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   if (suvicharSource.isNotEmpty) Padding(padding: const EdgeInsets.only(top: 4), child: Text('— $suvicharSource', style: const TextStyle(color: TG.muted, fontSize: 12.5))),
                 ])),
               ]),
-            ),
+            )),
+            const SectionTitle('द्रुत कार्ये'),
+            AnimIn(delay: const Duration(milliseconds: 130), child: SizedBox(
+              height: 108,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  _quickAction(Icons.how_to_reg_outlined, 'हजेरी', const Color(0xFF2563A8), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AttendanceScreen()))),
+                  _quickAction(Icons.menu_book_outlined, 'परिपाठ', const Color(0xFF0F8A84), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ParipathScreen()))),
+                  _quickAction(Icons.schedule_outlined, 'वेळापत्रक', const Color(0xFF7C3AED), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const TimetableScreen()))),
+                  _quickAction(Icons.event_available_outlined, 'सुट्ट्या', const Color(0xFFB83B5E), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const HolidaysScreen()))),
+                  _quickAction(Icons.payments_outlined, 'फी नोंद', const Color(0xFFB7791F), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const FeeScreen()))),
+                  _quickAction(Icons.restaurant_outlined, 'पोषण आहार', const Color(0xFFD97706), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const MdmScreen()))),
+                  _quickAction(Icons.quiz_outlined, 'प्रश्नपत्रिका', const Color(0xFF2563A8), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ExamPaperScreen()))),
+                  _quickAction(Icons.emoji_events_outlined, 'क्विझ खेळ', const Color(0xFFD97706), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const QuizHomeScreen()))),
+                  _quickAction(Icons.groups_outlined, 'विद्यार्थी', TG.g600, () => Navigator.push(context, MaterialPageRoute(builder: (_) => const StudentsScreen()))),
+                ],
+              ),
+            )),
+            if (_birthdays.isNotEmpty || _attPct != null || _upcomingHolidays.isNotEmpty)
+              AnimIn(
+                delay: const Duration(milliseconds: 200),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  const SectionTitle('आजचे विशेष'),
+                  if (_birthdays.isNotEmpty)
+                    Card(
+                      margin: const EdgeInsets.only(bottom: 10),
+                      child: Padding(padding: const EdgeInsets.all(14), child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Container(width: 44, height: 44, decoration: BoxDecoration(color: const Color(0xFFFCE7F3), borderRadius: BorderRadius.circular(12)), child: const Icon(Icons.cake_outlined, color: Color(0xFFB83B5E))),
+                        const SizedBox(width: 12),
+                        Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                          const Text('🎂 आजचे वाढदिवस', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
+                          const SizedBox(height: 3),
+                          Text(
+                            _birthdays.take(4).map((b) => '${b['name_mr'] ?? b['name'] ?? 'विद्यार्थी'} (इ. ${b['grade'] ?? b['std'] ?? '-'})').join(', ') + (_birthdays.length > 4 ? ' व +${_birthdays.length - 4} अधिक' : ''),
+                            style: TextStyle(color: TG.mutedA, fontSize: 13),
+                          ),
+                        ])),
+                      ])),
+                    ),
+                  if (_attPct != null)
+                    Card(
+                      margin: const EdgeInsets.only(bottom: 10),
+                      child: Padding(padding: const EdgeInsets.all(14), child: Row(children: [
+                        SizedBox(width: 54, height: 54, child: Stack(fit: StackFit.expand, children: [
+                          CircularProgressIndicator(value: (_attPct ?? 0) / 100, strokeWidth: 6, backgroundColor: TG.lineA, color: TG.g600),
+                          Center(child: Text('$_attPct%', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 13))),
+                        ])),
+                        const SizedBox(width: 14),
+                        Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                          Text('$_attMonthName महिन्याची हजेरी', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
+                          const SizedBox(height: 2),
+                          Text('शाळेची सरासरी उपस्थिती', style: TextStyle(color: TG.mutedA, fontSize: 13)),
+                        ])),
+                        IconButton(icon: const Icon(Icons.how_to_reg_outlined, color: TG.g600), tooltip: 'हजेरी पहा', onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AttendanceScreen()))),
+                      ])),
+                    ),
+                  if (_upcomingHolidays.isNotEmpty)
+                    Card(
+                      child: Padding(padding: const EdgeInsets.all(14), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        const Row(children: [
+                          Icon(Icons.event_available_outlined, color: TG.g600, size: 20),
+                          SizedBox(width: 8),
+                          Text('आगामी सुट्ट्या', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
+                        ]),
+                        const SizedBox(height: 10),
+                        for (final h in _upcomingHolidays)
+                          Padding(padding: const EdgeInsets.only(bottom: 7), child: Row(children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
+                              decoration: BoxDecoration(color: TG.g50A, borderRadius: BorderRadius.circular(8)),
+                              child: Text(DateFormat('d MMM').format(h['_d'] as DateTime), style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12.5, color: TG.g600)),
+                            ),
+                            const SizedBox(width: 10),
+                            Expanded(child: Text('${h['name'] ?? h['title'] ?? 'सुट्टी'}', style: const TextStyle(fontSize: 13.5), overflow: TextOverflow.ellipsis)),
+                          ])),
+                      ])),
+                    ),
+                ]),
+              ),
             ListenableBuilder(listenable: sync, builder: (_, __) => Card(
               child: Padding(padding: const EdgeInsets.all(14), child: Row(children: [
                 Icon(sync.pending > 0 ? Icons.cloud_upload_outlined : Icons.cloud_done_outlined, color: sync.pending > 0 ? TG.amber : TG.g600, size: 30),
                 const SizedBox(width: 12),
                 Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Text(sync.pending > 0 ? '${sync.pending} बदल पाठवायचे' : 'सर्व बदल Sync झाले', style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
-                  Text(sync.lastSync == null ? 'अजून Sync केलेले नाही' : 'शेवटचे: ${DateFormat('d MMM, h:mm a').format(DateTime.parse(sync.lastSync!))}', style: const TextStyle(color: TG.muted, fontSize: 13)),
+                  Text(sync.lastSync == null ? 'अजून Sync केलेले नाही' : 'शेवटचे: ${DateFormat('d MMM, h:mm a').format(DateTime.parse(sync.lastSync!))}', style: TextStyle(color: TG.mutedA, fontSize: 13)),
                 ])),
                 FilledButton.icon(onPressed: sync.busy ? null : _sync,
                   icon: sync.busy ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Icon(Icons.sync, size: 18),
@@ -278,7 +485,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               Row(
                                 children: [
                                   Flexible(
-                                    child: Text(m.$1, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15.5, color: TG.ink), overflow: TextOverflow.ellipsis),
+                                    child: Text(m.$1, style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15.5, color: TG.inkA), overflow: TextOverflow.ellipsis),
                                   ),
                                   if (badge != null) ...[
                                     const SizedBox(width: 8),
@@ -295,7 +502,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 ],
                               ),
                               const SizedBox(height: 3),
-                              Text(m.$2, style: const TextStyle(color: TG.muted, fontSize: 12, height: 1.35)),
+                              Text(m.$2, style: TextStyle(color: TG.mutedA, fontSize: 12, height: 1.35)),
                             ],
                           ),
                         ),
@@ -325,11 +532,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text('$hpcCompleted / $hpcCount पत्रके पूर्ण', style: const TextStyle(fontWeight: FontWeight.w700)),
                     const SizedBox(height: 4),
-                    LinearProgressIndicator(value: hpcCount > 0 ? hpcCompleted / hpcCount : 0, backgroundColor: TG.line, color: TG.g600, borderRadius: BorderRadius.circular(6), minHeight: 8),
+                    LinearProgressIndicator(value: hpcCount > 0 ? hpcCompleted / hpcCount : 0, backgroundColor: TG.lineA, color: TG.g600, borderRadius: BorderRadius.circular(6), minHeight: 8),
                   ])),
                 ]),
                 const SizedBox(height: 8),
-                Text('${hpcCount - hpcCompleted} पत्रके अपूर्ण', style: const TextStyle(color: TG.muted, fontSize: 13)),
+                Text('${hpcCount - hpcCompleted} पत्रके अपूर्ण', style: TextStyle(color: TG.mutedA, fontSize: 13)),
               ]))),
             ],
             const SizedBox(height: 16),
@@ -342,10 +549,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget _stat(String l, int? v, IconData i, Color c) => Card(
     child: Padding(padding: const EdgeInsets.all(14), child: Row(children: [
       Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text(l, style: const TextStyle(color: TG.muted, fontSize: 12.5), maxLines: 1, overflow: TextOverflow.ellipsis),
-        Text('${v ?? 0}', style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: TG.ink)),
+        Text(l, style: TextStyle(color: TG.mutedA, fontSize: 12.5), maxLines: 1, overflow: TextOverflow.ellipsis),
+        TweenAnimationBuilder<int>(
+          tween: IntTween(begin: 0, end: v ?? 0),
+          duration: const Duration(milliseconds: 800),
+          curve: Curves.easeOutCubic,
+          builder: (_, val, __) => Text('$val', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: TG.inkA)),
+        ),
       ])),
-      Container(width: 36, height: 36, decoration: BoxDecoration(color: c.withValues(alpha: .1), borderRadius: BorderRadius.circular(10)), child: Icon(i, color: c, size: 20)),
+      Container(width: 40, height: 40, decoration: BoxDecoration(gradient: LinearGradient(colors: [c, c.withValues(alpha: .7)], begin: Alignment.topLeft, end: Alignment.bottomRight), borderRadius: BorderRadius.circular(12), boxShadow: [BoxShadow(color: c.withValues(alpha: .3), blurRadius: 6, offset: const Offset(0, 3))]), child: Icon(i, color: Colors.white, size: 21)),
     ])),
   );
 }

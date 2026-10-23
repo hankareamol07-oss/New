@@ -7,6 +7,7 @@ import '../core/sync.dart';
 import 'ai_study_bot.dart';
 import 'home.dart';
 import 'widgets.dart';
+import '../theme.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -184,7 +185,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF8FAFC),
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -194,11 +194,11 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
               children: [
                 // School Header Card
-                Container(
+                AnimIn(child: Container(
                   padding: const EdgeInsets.all(22),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
-                      colors: [Color(0xFF1E3A8A), Color(0xFF0F172A)],
+                      colors: [TG.g800, TG.g900],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -222,7 +222,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            child: const Icon(Icons.school, color: Color(0xFF1E3A8A), size: 28),
+                            child: const Icon(Icons.school, color: TG.g800, size: 28),
                           ),
                           const SizedBox(width: 14),
                           const Expanded(
@@ -257,17 +257,17 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       const Text(
                         'NEP 2020 Single-School Dedicated App',
-                        style: TextStyle(color: Color(0xFF93C5FD), fontSize: 13),
+                        style: TextStyle(color: Color(0xFFBFE3D3), fontSize: 13),
                       ),
                     ],
                   ),
-                ),
+                )),
                 const SizedBox(height: 24),
 
                 // Role Selector Chips
-                const Text(
+                Text(
                   'आपले पद निवडा (Select Role):',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF334155)),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: TG.mutedA),
                 ),
                 const SizedBox(height: 8),
                 Row(
@@ -309,7 +309,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 if (_selectedRole == 'student' && Session.I.savedStudents.isNotEmpty) ...[
                   const Text(
                     'जतन केलेली पाल्य खाती (Saved Sibling Accounts):',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF1E3A8A)),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: TG.g800),
                   ),
                   const SizedBox(height: 6),
                   Wrap(
@@ -319,7 +319,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       final sName = s['name_mr'] ?? s['name'] ?? 'पाल्य';
                       final sStd = s['std'] ?? '-';
                       return ActionChip(
-                        avatar: const Icon(Icons.account_circle, size: 18, color: Color(0xFF2563EB)),
+                        avatar: const Icon(Icons.account_circle, size: 18, color: TG.g600),
                         label: Text('🎓 $sName (इ. ${formatMarathiStd(sStd)})'),
                         onPressed: () async {
                           final sToken = s['token'] ?? '';
@@ -358,7 +358,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: ChoiceChip(
                             label: Text(formatMarathiStd(stdNum)),
                             selected: isSel,
-                            selectedColor: const Color(0xFF1E3A8A),
+                            selectedColor: TG.g800,
                             labelStyle: TextStyle(
                               color: isSel ? Colors.white : Colors.black87,
                               fontWeight: FontWeight.bold,
@@ -467,7 +467,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 FilledButton(
                   style: FilledButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 14),
-                    backgroundColor: const Color(0xFF1E3A8A),
+                    backgroundColor: TG.g800,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   ),
                   onPressed: _busy ? null : _submit,
