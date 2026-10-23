@@ -13,30 +13,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-function apiSuccess($data = [], string $message = 'यशस्वी', int $code = 200): void {
-    if (!headers_sent()) {
-        header('Content-Type: application/json; charset=UTF-8');
+if (!function_exists('apiSuccess')) {
+    function apiSuccess($data = [], string $message = 'यशस्वी', int $code = 200): void {
+        if (!headers_sent()) {
+            header('Content-Type: application/json; charset=UTF-8');
+        }
+        http_response_code($code);
+        echo json_encode([
+            'success' => true,
+            'message' => $message,
+            'data'    => $data
+        ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        exit();
     }
-    http_response_code($code);
-    echo json_encode([
-        'success' => true,
-        'message' => $message,
-        'data'    => $data
-    ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-    exit();
 }
 
-function apiError(string $message = 'त्रुटी उद्भवली', int $code = 400, $data = null): void {
-    if (!headers_sent()) {
-        header('Content-Type: application/json; charset=UTF-8');
+if (!function_exists('apiError')) {
+    function apiError(string $message = 'त्रुटी उद्भवली', int $code = 400, $data = null): void {
+        if (!headers_sent()) {
+            header('Content-Type: application/json; charset=UTF-8');
+        }
+        http_response_code($code);
+        echo json_encode([
+            'success' => false,
+            'message' => $message,
+            'data'    => $data
+        ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        exit();
     }
-    http_response_code($code);
-    echo json_encode([
-        'success' => false,
-        'message' => $message,
-        'data'    => $data
-    ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-    exit();
 }
 
 function getJsonInput(): array {

@@ -5,26 +5,6 @@ require_once __DIR__ . '/../../includes/module_access.php';
 
 function school_classes(int $schoolId): array
 {
-    // Strict Teacher Scope Isolation
-    if (function_exists('get_current_teacher_scope')) {
-        $tScope = get_current_teacher_scope();
-        if ($tScope && !empty($tScope['class_ids'])) {
-            $inList = implode(',', array_map('intval', $tScope['class_ids']));
-            try {
-                $s = getMainDB()->query("SELECT * FROM classes WHERE school_id = $schoolId AND id IN ($inList) ORDER BY std, section");
-                $tRows = $s->fetchAll(PDO::FETCH_ASSOC);
-                if (!empty($tRows)) return $tRows;
-            } catch (Throwable $e) {}
-        } elseif ($tScope && !empty($tScope['stds'])) {
-            $inList = implode(',', array_map('intval', $tScope['stds']));
-            try {
-                $s = getMainDB()->query("SELECT * FROM classes WHERE school_id = $schoolId AND std IN ($inList) ORDER BY std, section");
-                $tRows = $s->fetchAll(PDO::FETCH_ASSOC);
-                if (!empty($tRows)) return $tRows;
-            } catch (Throwable $e) {}
-        }
-    }
-
     $school = school_row($schoolId);
     $lower = (int)($school['lower_class'] ?? 1) ?: 1;
     $upper = (int)($school['upper_class'] ?? 8) ?: 8;

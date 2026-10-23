@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../core/remote.dart';
 import 'common.dart';
+import 'holidays.dart';
 import 'tachan_more.dart';
 import 'timetable.dart';
 import 'widgets.dart';
@@ -46,12 +47,13 @@ class _TachanScreenState extends State<TachanScreen> {
               PopupMenuButton<int>(
                 icon: const Icon(Icons.more_vert),
                 onSelected: (v) => Navigator.push(context, MaterialPageRoute(builder: (_) => [
-                  const TachanWeeklyScreen(), const TachanAnnualScreen(), const TimetableScreen(), const TachanPrefsScreen()][v])),
+                  const TachanWeeklyScreen(), const TachanAnnualScreen(), const TimetableScreen(), const HolidaysScreen(), const TachanPrefsScreen()][v])),
                 itemBuilder: (_) => const [
                   PopupMenuItem(value: 0, child: ListTile(leading: Icon(Icons.view_week_outlined), title: Text('साप्ताहिक टाचण'))),
                   PopupMenuItem(value: 1, child: ListTile(leading: Icon(Icons.calendar_month_outlined), title: Text('वार्षिक नियोजन'))),
                   PopupMenuItem(value: 2, child: ListTile(leading: Icon(Icons.schedule_outlined), title: Text('वेळापत्रक'))),
-                  PopupMenuItem(value: 3, child: ListTile(leading: Icon(Icons.tune), title: Text('टाचण सेटिंग्ज'))),
+                  PopupMenuItem(value: 3, child: ListTile(leading: Icon(Icons.event_available_outlined), title: Text('शालेय कामकाज कॅलेंडर'))),
+                  PopupMenuItem(value: 4, child: ListTile(leading: Icon(Icons.tune), title: Text('टाचण सेटिंग्ज'))),
                 ],
               ),
             ],
@@ -63,6 +65,7 @@ class _TachanScreenState extends State<TachanScreen> {
                 ('साप्ताहिक', Icons.view_week_outlined, () => const TachanWeeklyScreen()),
                 ('वार्षिक नियोजन', Icons.calendar_month_outlined, () => const TachanAnnualScreen()),
                 ('वेळापत्रक', Icons.schedule_outlined, () => const TimetableScreen()),
+                ('शालेय कॅलेंडर', Icons.event_available_outlined, () => const HolidaysScreen()),
                 ('सेटिंग्ज', Icons.tune, () => const TachanPrefsScreen()),
               ]) Padding(padding: const EdgeInsets.only(right: 8), child: ActionChip(
                 avatar: Icon(e.$2, size: 17, color: const Color(0xFF6B4FB8)),

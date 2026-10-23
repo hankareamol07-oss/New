@@ -643,15 +643,31 @@ $isInApp = isset($_GET['in_app']) || isset($_GET['app']);
                         </div>
                         <!-- 10. Class Subjects & Timetable -->
                         <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <a href="modules/classes/subjects.php" class="text-decoration-none text-dark d-block h-100">
+                            <a href="modules/tachan/timetable.php" class="text-decoration-none text-dark d-block h-100">
                                 <div class="p-3 border rounded-3 bg-white h-100 shadow-xs hover-card" style="border-left: 4px solid #6366f1 !important;">
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="p-2.5 rounded-3 fs-4" style="background:#e0e7ff;color:#4f46e5;">
-                                            <i class="bi bi-easel2-fill"></i>
+                                            <i class="bi bi-clock-history"></i>
                                         </div>
                                         <div>
-                                            <div class="fw-bold">वर्ग विषय व वेळापत्रक</div>
-                                            <div class="small text-muted">विषय व्यवस्थापन व तासिका वेळापत्रक</div>
+                                            <div class="fw-bold">तासिका वेळापत्रक</div>
+                                            <div class="small text-muted">वर्ग व शिक्षक आठवडा वेळापत्रक</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 11. School Working Calendar -->
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <a href="modules/tachan/calendar.php" class="text-decoration-none text-dark d-block h-100">
+                                <div class="p-3 border rounded-3 bg-white h-100 shadow-xs hover-card" style="border-left: 4px solid #2563eb !important;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="p-2.5 rounded-3 fs-4" style="background:#dbeafe;color:#2563eb;">
+                                            <i class="bi bi-calendar3-event-fill"></i>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold">शालेय कामकाज कॅलेंडर</div>
+                                            <div class="small text-muted">महिनानिहाय उपक्रम व सुट्ट्या</div>
                                         </div>
                                     </div>
                                 </div>

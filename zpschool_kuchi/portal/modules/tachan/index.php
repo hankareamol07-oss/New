@@ -24,15 +24,6 @@ try {
 
 $cards = [
     [
-        'href' => APP_URL . '/modules/daily_study/index.php',
-        'icon' => 'bi-journal-bookmark-fill',
-        'title' => 'दैनिक अभ्यास (Daily Homework)',
-        'subtitle' => 'टाचण मधील स्वाध्याय निवडून स्टुडंट ॲपमध्ये प्रकाशित करा',
-        'badge' => '⭐ नवीन',
-        'color' => '#059669',
-        'bg' => '#D1FAE5'
-    ],
-    [
         'href' => APP_URL . '/modules/tachan/day.php',
         'icon' => 'bi-calendar2-check',
         'title' => 'दैनिक टाचण',
@@ -76,6 +67,15 @@ $cards = [
         'badge' => 'वार्षिक',
         'color' => '#D97706',
         'bg' => '#FEF3C7'
+    ],
+    [
+        'href' => APP_URL . '/modules/tachan/calendar.php',
+        'icon' => 'bi-calendar3-event-fill',
+        'title' => 'शालेय कामकाज कॅलेंडर',
+        'subtitle' => 'महिनानिहाय उपक्रम, दिनविशेष आणि शासकीय व शाळा सुट्ट्या',
+        'badge' => 'कॅलेंडर',
+        'color' => '#2563EB',
+        'bg' => '#DBEAFE'
     ],
     [
         'href' => APP_URL . '/modules/tachan/holidays.php',

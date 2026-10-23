@@ -36,21 +36,23 @@ function issueUserToken(array $user): string {
 /**
  * Extract Authorization Token from Header
  */
-function getBearerToken(): ?string {
-    $header = $_SERVER['HTTP_AUTHORIZATION'] ?? $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ?? '';
-    if (empty($header) && function_exists('getallheaders')) {
-        $headers = getallheaders();
-        foreach ($headers as $k => $v) {
-            if (strtolower($k) === 'authorization') {
-                $header = $v;
-                break;
+if (!function_exists('getBearerToken')) {
+    function getBearerToken(): ?string {
+        $header = $_SERVER['HTTP_AUTHORIZATION'] ?? $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ?? '';
+        if (empty($header) && function_exists('getallheaders')) {
+            $headers = getallheaders();
+            foreach ($headers as $k => $v) {
+                if (strtolower($k) === 'authorization') {
+                    $header = $v;
+                    break;
+                }
             }
         }
+        if (!empty($header) && preg_match('/Bearer\s(\S+)/i', $header, $matches)) {
+            return $matches[1];
+        }
+        return !empty($_GET['token']) ? trim($_GET['token']) : null;
     }
-    if (!empty($header) && preg_match('/Bearer\s(\S+)/i', $header, $matches)) {
-        return $matches[1];
-    }
-    return !empty($_GET['token']) ? trim($_GET['token']) : null;
 }
 
 /**

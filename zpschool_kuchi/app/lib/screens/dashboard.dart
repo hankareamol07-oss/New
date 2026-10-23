@@ -349,12 +349,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
                   if (_upcomingHolidays.isNotEmpty)
                     Card(
-                      child: Padding(padding: const EdgeInsets.all(14), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        const Row(children: [
-                          Icon(Icons.event_available_outlined, color: TG.g600, size: 20),
-                          SizedBox(width: 8),
-                          Text('आगामी सुट्ट्या', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
-                        ]),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(14),
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const HolidaysScreen())),
+                        child: Padding(padding: const EdgeInsets.all(14), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                          const Row(children: [
+                            Icon(Icons.event_available_outlined, color: TG.g600, size: 20),
+                            SizedBox(width: 8),
+                            Text('आगामी सुट्ट्या व कॅलेंडर', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
+                            Spacer(),
+                            Icon(Icons.chevron_right, size: 20, color: TG.g600),
+                          ]),
                         const SizedBox(height: 10),
                         for (final h in _upcomingHolidays)
                           Padding(padding: const EdgeInsets.only(bottom: 7), child: Row(children: [
@@ -366,7 +371,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             const SizedBox(width: 10),
                             Expanded(child: Text('${h['name'] ?? h['title'] ?? 'सुट्टी'}', style: const TextStyle(fontSize: 13.5), overflow: TextOverflow.ellipsis)),
                           ])),
-                      ])),
+                        ])),
+                      ),
                     ),
                 ]),
               ),
