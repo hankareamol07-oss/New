@@ -430,27 +430,7 @@ $isInApp = isset($_GET['in_app']) || isset($_GET['app']);
                             </div>
                         </div>
 
-                        <!-- Quick Demo Credentials Box -->
-                        <div class="mt-4 pt-3 border-top">
-                            <p class="small text-muted fw-bold mb-2"><i class="bi bi-info-circle me-1"></i>चाचणीसाठी 1-क्लिक लॉगिन क्रेडेन्शियल (Demo Logins):</p>
-                            <div class="d-flex flex-wrap gap-1">
-                                <span class="demo-chip" onclick="fillCreds('teacher', '9960967574', 'Teacher@Kuchi2026')">
-                                    👨‍🏫 अमोल हंकारे (इ. ६ वी)
-                                </span>
-                                <span class="demo-chip" onclick="fillCreds('teacher', '9766000001', 'Teacher@Kuchi2026')">
-                                    👩‍🏫 अपर्णा पाटील (इ. १ ली)
-                                </span>
-                                <span class="demo-chip" onclick="fillCreds('student', 'kuchi601', '123456')">
-                                    🎓 आदर्श कांबळे (UserID: kuchi601 / 123456)
-                                </span>
-                                <span class="demo-chip" onclick="fillCreds('student', '21935574209', '123456')">
-                                    🎓 विद्यार्थी PEN लॉगिन (123456)
-                                </span>
-                                <span class="demo-chip" onclick="fillCreds('admin', '9988990000', 'Admin@Kuchi2026')">
-                                    🛡️ मुख्याध्यापक / ॲडमिन
-                                </span>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>

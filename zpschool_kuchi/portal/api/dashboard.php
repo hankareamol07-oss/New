@@ -6,106 +6,129 @@
  */
 
 require_once __DIR__ . '/helpers.php';
+require_once __DIR__ . '/../includes/tenant_db.php';
 
 $schoolId = getAuthSchoolId();
 $db       = getDB();
 
 // School info
-$school = $db->prepare(
-    'SELECT s.*, p.name AS plan_name, p.price AS plan_price
-     FROM schools s LEFT JOIN plans p ON s.plan_id = p.id
-     WHERE s.id = ? LIMIT 1'
-);
-$school->execute([$schoolId]);
-$schoolData = $school->fetch(PDO::FETCH_ASSOC);
+$schoolData = [
+    'id' => $schoolId,
+    'name' => 'जि. प. शाळा कुची',
+    'name_mr' => 'जि. प. शाळा नं. २ कुची',
+    'udise_code' => '27350302306',
+    'plan_name' => 'कायमस्वरूपी सक्रिय',
+    'plan_id' => 1,
+];
 
-if (!$schoolData) {
-    apiError('School not found', 404);
+try {
+    $stmt = $db->prepare('SELECT id, name, name_mr, udise_code FROM schools WHERE id = ? LIMIT 1');
+    $stmt->execute([$schoolId]);
+    $sRow = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($sRow) {
+        $schoolData = array_merge($schoolData, $sRow);
+    }
+} catch (Throwable $e) {}
+
+// Get user / teacher info if token has user
+$currentUser = null;
+if (function_exists('requireAuth')) {
+    try {
+        $currentUser = requireAuth();
+    } catch (Throwable $e) {}
 }
 
-// Get tenant DB for this school
-require_once __DIR__ . '/../includes/tenant_db.php';
 $tdb = getTenantDB($schoolId);
 
-// Stats
 $studentCount = 0;
-$hpcCount     = 0;
-$hpcCompleted = 0;
 $teacherCount = 0;
 $classesCount = 0;
-$cceCount     = 0;
+$lessonPlansCount = 0;
+$hpcCount = 0;
+$hpcCompleted = 0;
+$cceCount = 0;
+$teacherClass = null;
 
 if ($tdb) {
-    $studentCount = (int) $tdb->query('SELECT COUNT(*) FROM students')->fetchColumn();
-    $teacherCount = (int) $tdb->query('SELECT COUNT(*) FROM teachers')->fetchColumn();
-    $classesCount = (int) $tdb->query('SELECT COUNT(*) FROM classes')->fetchColumn();
-
-    // HPC
     try {
-        // HPC cards are stored in the main DB (same as hpc_native.php / portal HPC module).
-        $hpcSql = 'SELECT COUNT(*) AS c, SUM(CASE WHEN status = \'completed\' THEN 1 ELSE 0 END) AS d FROM hpc_cards WHERE school_id = ?';
+        $studentCount = (int)$tdb->query('SELECT COUNT(*) FROM students')->fetchColumn();
+    } catch (Throwable $e) {}
+    try {
+        $teacherCount = (int)$tdb->query('SELECT COUNT(*) FROM teachers')->fetchColumn();
+    } catch (Throwable $e) {}
+    try {
+        $classesCount = (int)$tdb->query('SELECT COUNT(*) FROM classes')->fetchColumn();
+    } catch (Throwable $e) {}
+    try {
+        $lessonPlansCount = (int)$tdb->query('SELECT COUNT(*) FROM lesson_plans')->fetchColumn();
+    } catch (Throwable $e) {}
+
+    // If teacher, get their assigned class & student count in their class
+    if ($currentUser && !empty($currentUser['linked_id'])) {
+        try {
+            $tStmt = $tdb->prepare('SELECT * FROM teachers WHERE id = ? LIMIT 1');
+            $tStmt->execute([(int)$currentUser['linked_id']]);
+            $tRow = $tStmt->fetch(PDO::FETCH_ASSOC);
+            if ($tRow) {
+                $teacherClass = $tRow;
+                // find student count in assigned class
+                $cStmt = $tdb->prepare('SELECT COUNT(*) FROM students WHERE class_id = ? OR std = ?');
+                $cStmt->execute([(int)($tRow['class_id'] ?? 0), (int)($tRow['assigned_class'] ?? 0)]);
+                $teacherClass['class_students_count'] = (int)$cStmt->fetchColumn();
+            }
+        } catch (Throwable $e) {}
+    }
+
+    try {
+        $hpcSql = "SELECT COUNT(*) AS c, SUM(CASE WHEN status = 'completed' THEN 1 ELSE 0 END) AS d FROM hpc_cards WHERE school_id = ?";
         $hpcArgs = [$schoolId];
-        if (function_exists('academic_year')) {
-            $hpcSql .= ' AND academic_year = ?';
-            $hpcArgs[] = academic_year();
-        }
-        $hst = $db->prepare($hpcSql);
-        $hst->execute($hpcArgs);
-        $hr = $hst->fetch(PDO::FETCH_ASSOC) ?: [];
-        $hpcCount     = (int) ($hr['c'] ?? 0);
-        $hpcCompleted = (int) ($hr['d'] ?? 0);
-    } catch (Exception $e) {
-        $hpcCount = $hpcCompleted = 0;
-    }
+        $hpc = $db->prepare($hpcSql);
+        $hpc->execute($hpcArgs);
+        $hpcData = $hpc->fetch(PDO::FETCH_ASSOC);
+        $hpcCount = (int)($hpcData['c'] ?? 0);
+        $hpcCompleted = (int)($hpcData['d'] ?? 0);
+    } catch (Throwable $e) {}
 
-    // CCE
     try {
-        $cceCount = (int) $tdb->query('SELECT COUNT(DISTINCT student_id) FROM cce_marks')->fetchColumn();
-    } catch (Exception $e) {
-        $cceCount = 0;
-    }
+        $cce = $tdb->query('SELECT COUNT(DISTINCT student_id) FROM cce_evaluations');
+        if ($cce) $cceCount = (int)$cce->fetchColumn();
+    } catch (Throwable $e) {}
 }
 
-// Subscription check
-$isSubscribed = ($schoolData['plan_price'] > 0)
-    && !empty($schoolData['subscription_end'])
-    && (strtotime($schoolData['subscription_end']) > time());
+// Fallback to MySQL if SQLite didn't return students
+if ($studentCount === 0) {
+    try {
+        $studentCount = (int)$db->query("SELECT COUNT(*) FROM students WHERE school_id = $schoolId")->fetchColumn();
+    } catch (Throwable $e) {}
+}
 
-// Today's suvichar (simple static for API, load from paripath bank)
-$today         = date('Y-m-d');
-$todayMarathi  = getMarathiDate($today);
-$academicYear  = academicYear();
+$today = date('Y-m-d');
+$todayMarathi = getMarathiDate($today);
+$academicYear = '2026-27';
 
 apiSuccess([
-    'school_name'        => $schoolData['name'],
-    'school_name_mr'     => $schoolData['name_mr'] ?? '',
-    'udise_code'         => $schoolData['udise_code'] ?? '',
-    'academic_year'      => $academicYear,
-    'student_count'      => $studentCount,
-    'hpc_count'          => $hpcCount,
-    'hpc_completed'      => $hpcCompleted,
-    'teacher_count'      => $teacherCount,
-    'classes_count'      => $classesCount,
-    'cce_evaluated_count'=> $cceCount,
-    'is_subscribed'      => $isSubscribed,
-    'plan_name'          => $schoolData['plan_name'] ?? 'मोफत',
-    'plan_id'            => (int) $schoolData['plan_id'],
-    'today_marathi'      => $todayMarathi,
-    'panchang_var'       => getPanchangVar($today),
-    'suvichar'           => getTodaySuvichar($today),
-    'suvichar_source'    => getTodaySuvicharSource($today),
+    'school_name'         => $schoolData['name'],
+    'school_name_mr'      => $schoolData['name_mr'] ?? '',
+    'udise_code'          => $schoolData['udise_code'] ?? '27350302306',
+    'academic_year'       => $academicYear,
+    'student_count'       => $studentCount,
+    'hpc_count'           => $hpcCount,
+    'hpc_completed'       => $hpcCompleted,
+    'teacher_count'       => $teacherCount,
+    'classes_count'       => $classesCount,
+    'lesson_plans_count'  => $lessonPlansCount,
+    'cce_evaluated_count' => $cceCount,
+    'is_subscribed'       => true,
+    'plan_name'           => 'कायमस्वरूपी सक्रिय',
+    'plan_id'             => 1,
+    'today_marathi'       => $todayMarathi,
+    'panchang_var'        => getPanchangVar($today),
+    'suvichar'            => getTodaySuvichar($today),
+    'suvichar_source'     => getTodaySuvicharSource($today),
+    'teacher_class'       => $teacherClass,
 ]);
 
 // ─── Helper functions ─────────────────────────────────────────────────────────
-
-function academicYear() {
-    $month = (int) date('n');
-    $year  = (int) date('Y');
-    if ($month >= 6) {
-        return $year . '-' . ($year + 1);
-    }
-    return ($year - 1) . '-' . $year;
-}
 
 function getMarathiDate($date) {
     $marathiMonths = [

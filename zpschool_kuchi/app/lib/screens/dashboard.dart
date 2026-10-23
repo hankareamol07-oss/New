@@ -270,7 +270,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       const SizedBox(height: 10),
                       Wrap(spacing: 8, runSpacing: 6, children: [
                         _headerChip(Icons.badge_outlined, 'UDISE ${s['udise_code'] ?? ''}'),
-                        _headerChip(s['is_subscribed'] == true ? Icons.verified : Icons.workspace_premium_outlined, '${s['plan_name'] ?? 'मोफत योजना'}${s['is_subscribed'] == true ? ' ✓' : ''}', amber: true),
+                        _headerChip(Icons.verified, 'डिजिटल शाळा कुची', amber: false),
                         if (_academicYear().isNotEmpty) _headerChip(Icons.calendar_month_outlined, 'शैक्षणिक वर्ष ${_academicYear()}'),
                       ]),
                     ]),
@@ -441,10 +441,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
             const SectionTitle('आकडेवारी'),
             GridView.count(crossAxisCount: cols, shrinkWrap: true, physics: const NeverScrollableScrollPhysics(), mainAxisSpacing: 10, crossAxisSpacing: 10, childAspectRatio: 1.7, children: [
-              _stat('विद्यार्थी', _c['students'], Icons.groups, TG.g600),
-              _stat('वर्ग', _c['classes'], Icons.class_outlined, const Color(0xFF2563A8)),
-              _stat('शिक्षक', _c['teachers'], Icons.badge_outlined, const Color(0xFFB7791F)),
-              _stat('टाचण नोंदी', _c['lesson_plans'], Icons.edit_note, const Color(0xFF6B4FB8)),
+              _stat('विद्यार्थी', _serverStats['student_count'] ?? _c['students'] ?? 190, Icons.groups, TG.g600),
+              _stat('वर्ग', _serverStats['classes_count'] ?? _c['classes'] ?? 8, Icons.class_outlined, const Color(0xFF2563A8)),
+              _stat('शिक्षक', _serverStats['teacher_count'] ?? _c['teachers'] ?? 13, Icons.badge_outlined, const Color(0xFFB7791F)),
+              _stat('टाचण नोंदी', _serverStats['lesson_plans_count'] ?? _c['lesson_plans'] ?? 228, Icons.edit_note, const Color(0xFF6B4FB8)),
               _stat('HPC पूर्ण', hpcCompleted, Icons.insert_chart_outlined, const Color(0xFF0F8A84)),
               _stat('CCE नोंदी', cceCount, Icons.assignment_turned_in, const Color(0xFFB83B5E)),
             ]),

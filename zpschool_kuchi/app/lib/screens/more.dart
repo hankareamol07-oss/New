@@ -77,10 +77,7 @@ class MoreScreen extends StatelessWidget {
             },
           ),
           const Divider(height: 1),
-          ListTile(leading: const Icon(Icons.workspace_premium_outlined, color: TG.amber), title: const Text('सदस्यता योजना'),
-              subtitle: Text('${Session.I.school['plan_name'] ?? 'मोफत'}'), trailing: const Icon(Icons.chevron_right),
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const PlansScreen()))),
-          const Divider(height: 1),
+
           ListTile(leading: const Icon(Icons.school_outlined, color: TG.g600), title: const Text('शाळा माहिती'), trailing: const Icon(Icons.chevron_right),
               onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SchoolProfileScreen()))),
           const Divider(height: 1),

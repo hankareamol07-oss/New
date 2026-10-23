@@ -7,7 +7,6 @@ import '../core/sync.dart';
 import 'ai_study_bot.dart';
 import 'home.dart';
 import 'widgets.dart';
-import '../theme.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -78,13 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  void _fillCreds(String role, String mobile, String pass) {
-    setState(() {
-      _selectedRole = role;
-      _mobileController.text = mobile;
-      _passController.text = pass;
-    });
-  }
+
 
   Future<void> _submit() async {
     final loginId = _mobileController.text.trim();
@@ -185,6 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF8FAFC),
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -194,11 +188,11 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
               children: [
                 // School Header Card
-                AnimIn(child: Container(
+                Container(
                   padding: const EdgeInsets.all(22),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
-                      colors: [TG.g800, TG.g900],
+                      colors: [Color(0xFF1E3A8A), Color(0xFF0F172A)],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -222,7 +216,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            child: const Icon(Icons.school, color: TG.g800, size: 28),
+                            child: const Icon(Icons.school, color: Color(0xFF1E3A8A), size: 28),
                           ),
                           const SizedBox(width: 14),
                           const Expanded(
@@ -257,17 +251,17 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       const Text(
                         'NEP 2020 Single-School Dedicated App',
-                        style: TextStyle(color: Color(0xFFBFE3D3), fontSize: 13),
+                        style: TextStyle(color: Color(0xFF93C5FD), fontSize: 13),
                       ),
                     ],
                   ),
-                )),
+                ),
                 const SizedBox(height: 24),
 
                 // Role Selector Chips
-                Text(
+                const Text(
                   'आपले पद निवडा (Select Role):',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: TG.mutedA),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF334155)),
                 ),
                 const SizedBox(height: 8),
                 Row(
@@ -309,7 +303,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 if (_selectedRole == 'student' && Session.I.savedStudents.isNotEmpty) ...[
                   const Text(
                     'जतन केलेली पाल्य खाती (Saved Sibling Accounts):',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: TG.g800),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF1E3A8A)),
                   ),
                   const SizedBox(height: 6),
                   Wrap(
@@ -319,7 +313,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       final sName = s['name_mr'] ?? s['name'] ?? 'पाल्य';
                       final sStd = s['std'] ?? '-';
                       return ActionChip(
-                        avatar: const Icon(Icons.account_circle, size: 18, color: TG.g600),
+                        avatar: const Icon(Icons.account_circle, size: 18, color: Color(0xFF2563EB)),
                         label: Text('🎓 $sName (इ. ${formatMarathiStd(sStd)})'),
                         onPressed: () async {
                           final sToken = s['token'] ?? '';
@@ -358,7 +352,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: ChoiceChip(
                             label: Text(formatMarathiStd(stdNum)),
                             selected: isSel,
-                            selectedColor: TG.g800,
+                            selectedColor: const Color(0xFF1E3A8A),
                             labelStyle: TextStyle(
                               color: isSel ? Colors.white : Colors.black87,
                               fontWeight: FontWeight.bold,
@@ -467,7 +461,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 FilledButton(
                   style: FilledButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 14),
-                    backgroundColor: TG.g800,
+                    backgroundColor: const Color(0xFF1E3A8A),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   ),
                   onPressed: _busy ? null : _submit,
@@ -484,57 +478,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 24),
 
-                // Quick Demo Logins
-                Container(
-                  padding: const EdgeInsets.all(14),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: const Color(0xFFE2E8F0)),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Row(
-                        children: [
-                          Icon(Icons.touch_app, size: 16, color: Colors.blue),
-                          SizedBox(width: 6),
-                          Text(
-                            'चाचणीसाठी 1-क्लिक क्रेडेन्शियल:',
-                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.blueGrey),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 8),
-                      Wrap(
-                        spacing: 6,
-                        runSpacing: 6,
-                        children: [
-                          ActionChip(
-                            label: const Text('👨‍🏫 अमोल हंकारे (इ. ६)'),
-                            onPressed: () => _fillCreds('teacher', '9960967574', 'Teacher@Kuchi2026'),
-                          ),
-                          ActionChip(
-                            label: const Text('👩‍🏫 अपर्णा पाटील (इ. १)'),
-                            onPressed: () => _fillCreds('teacher', '9766000001', 'Teacher@Kuchi2026'),
-                          ),
-                          ActionChip(
-                            label: const Text('🎓 आदर्श कांबळे (इ. ६)'),
-                            onPressed: () => _fillCreds('student', '21935574209', 'Student@Kuchi2026'),
-                          ),
-                          ActionChip(
-                            label: const Text('🎓 नमुना विद्यार्थी'),
-                            onPressed: () => _fillCreds('student', '9876543210', 'Student@Kuchi2026'),
-                          ),
-                          ActionChip(
-                            label: const Text('🛡️ मुख्याध्यापक'),
-                            onPressed: () => _fillCreds('admin', '9988990000', 'Admin@Kuchi2026'),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
           ),
