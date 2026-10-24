@@ -29,20 +29,29 @@ if (!empty($sec)) {
 
 $whereClause = implode(' AND ', $where);
 
-// Fetch students with their username from users table or generated
+// Fetch students from tenant SQLite
 $sql = "
-    SELECT s.id, s.name, s.name_mr, s.std, s.section, s.roll_no, s.student_pen, s.gender,
-           MIN(u.username) as username
+    SELECT s.id, s.name, s.name_mr, s.std, s.section, s.roll_no, s.student_pen, s.gender
     FROM students s
-    LEFT JOIN users u ON u.linked_id = s.id AND u.role = 'student'
     WHERE $whereClause
-    GROUP BY s.id
     ORDER BY s.std ASC, CAST(s.roll_no AS UNSIGNED) ASC, s.name_mr ASC
 ";
 
 $stmt = $tdb->prepare($sql);
 $stmt->execute($params);
 $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Optional MySQL usernames map
+$usernames = [];
+try {
+    require_once __DIR__ . '/../../includes/db.php';
+    if (isset($db)) {
+        $uStmt = $db->query("SELECT linked_id, username FROM users WHERE role = 'student' AND school_id = 1");
+        foreach ($uStmt->fetchAll(PDO::FETCH_ASSOC) as $ur) {
+            $usernames[(int)$ur['linked_id']] = $ur['username'];
+        }
+    }
+} catch (Throwable $e) {}
 
 function mrStdLabel($num) {
     $map = [1 => 'पहिली', 2 => 'दुसरी', 3 => 'तिसरी', 4 => 'चौथी', 5 => 'पाचवी', 6 => 'सहावी', 7 => 'सातवी', 8 => 'आठवी'];
@@ -60,7 +69,7 @@ function mrStdLabel($num) {
   <style>
     @page {
       size: A4 portrait;
-      margin: 12mm 10mm 12mm 10mm;
+      margin: 10mm 8mm 10mm 8mm;
     }
     * {
       box-sizing: border-box;
@@ -98,74 +107,68 @@ function mrStdLabel($num) {
       align-items: center;
       gap: 6px;
     }
-    .print-bar a {
-      color: #93c5fd;
-      text-decoration: none;
-      font-size: 13px;
-    }
     .paper {
       width: 100%;
       max-width: 210mm;
-      min-height: 297mm;
       margin: 0 auto;
       background: #fff;
-      padding: 14mm 12mm;
+      padding: 12mm 10mm;
       box-shadow: 0 4px 16px rgba(0,0,0,0.1);
       border-radius: 4px;
     }
     .header {
       text-align: center;
       border-bottom: 2.5px solid #1e3a8a;
-      padding-bottom: 10px;
-      margin-bottom: 12px;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
     }
     .tagline {
-      font-size: 13px;
+      font-size: 12px;
       color: #64748b;
       font-weight: 600;
     }
     .school-name {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 800;
       color: #1e3a8a;
       margin: 2px 0;
     }
     .sub-head {
-      font-size: 14px;
+      font-size: 13px;
       color: #334155;
       font-weight: 600;
     }
     .report-title {
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 6px;
       background: #eff6ff;
       border: 1.5px solid #bfdbfe;
       color: #1e40af;
-      padding: 4px 16px;
-      border-radius: 20px;
+      padding: 3px 14px;
+      border-radius: 18px;
       font-weight: 800;
-      font-size: 15px;
+      font-size: 14px;
     }
     .meta-bar {
       display: flex;
       justify-content: space-between;
       margin-bottom: 10px;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 600;
       color: #475569;
       background: #f8fafc;
-      padding: 6px 10px;
+      padding: 5px 10px;
       border-radius: 6px;
       border: 1px solid #e2e8f0;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 12.5px;
+      font-size: 12px;
     }
     th, td {
       border: 1px solid #cbd5e1;
-      padding: 5px 7px;
+      padding: 4.5px 6px;
       vertical-align: middle;
     }
     th {
@@ -183,46 +186,46 @@ function mrStdLabel($num) {
     }
     .login-id {
       font-family: monospace;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       color: #1d4ed8;
       background: #eff6ff;
-      padding: 2px 6px;
+      padding: 1px 5px;
       border-radius: 4px;
       display: inline-block;
     }
     .pass-pin {
       font-family: monospace;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       color: #047857;
       background: #ecfdf5;
-      padding: 2px 6px;
+      padding: 1px 5px;
       border-radius: 4px;
       display: inline-block;
     }
     .pen-code {
       font-family: monospace;
-      font-size: 11.5px;
+      font-size: 11px;
       color: #475569;
     }
     .instructions {
-      margin-top: 14px;
-      padding: 8px 12px;
+      margin-top: 12px;
+      padding: 6px 10px;
       background: #fffbeb;
       border: 1px solid #fef3c7;
       border-radius: 6px;
-      font-size: 11.5px;
+      font-size: 11px;
       color: #92400e;
-      line-height: 1.5;
+      line-height: 1.45;
     }
     .sign-row {
-      margin-top: 36px;
+      margin-top: 28px;
       display: flex;
       justify-content: space-between;
       padding: 0 20px;
       font-weight: 700;
-      font-size: 13px;
+      font-size: 12px;
       color: #334155;
     }
     @media print {
@@ -237,6 +240,13 @@ function mrStdLabel($num) {
         padding: 0;
         box-shadow: none;
         max-width: 100%;
+      }
+      table {
+        page-break-inside: auto;
+      }
+      tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
       }
     }
   </style>
@@ -276,9 +286,9 @@ function mrStdLabel($num) {
         <th style="width: 5%;">अ.क्र.</th>
         <th style="width: 8%;">इयत्ता</th>
         <th style="width: 6%;">ह.क्र.</th>
-        <th style="width: 32%; text-align: left;">विद्यार्थ्याचे नाव</th>
+        <th style="width: 33%; text-align: left;">विद्यार्थ्याचे नाव</th>
         <th style="width: 17%;">लॉगिन User ID</th>
-        <th style="width: 18%;">Student PEN</th>
+        <th style="width: 17%;">Student PEN</th>
         <th style="width: 14%;">पासवर्ड / PIN</th>
       </tr>
     </thead>
@@ -287,9 +297,10 @@ function mrStdLabel($num) {
         <tr><td colspan="7" class="center" style="padding: 20px; color: #64748b;">कोणतेही विद्यार्थी आढळले नाहीत.</td></tr>
       <?php else: ?>
         <?php foreach ($students as $i => $s): 
+          $sid = (int)$s['id'];
           $sStd = (int)($s['std'] ?? 1);
           $sRoll = $s['roll_no'] ?: ($i + 1);
-          $username = $s['username'] ?: ('kuchi' . $sStd . str_pad($sRoll, 2, '0', STR_PAD_LEFT));
+          $username = $usernames[$sid] ?? ('kuchi' . $sStd . str_pad($sRoll, 2, '0', STR_PAD_LEFT));
           $sPen = $s['student_pen'] ?: '—';
           $sName = $s['name_mr'] ?: $s['name'];
         ?>
