@@ -139,12 +139,17 @@ foreach ($std_subjects_def as $sno => $sdef) {
             break;
         }
     }
+    $fe_max_val = ($found && isset($found['fe_max']) && (int)$found['fe_max'] > 0) ? (int)$found['fe_max'] : ($sdef['is_cosch'] ? 100 : 50);
+    $se_max_val = ($found && isset($found['se_max']) && (int)$found['se_max'] >= 0) ? (int)$found['se_max'] : ($sdef['is_cosch'] ? 0 : 50);
     $display_subjects[$sno] = [
         'sno' => $sno,
         'name' => $sdef['name'],
         'is_cosch' => $sdef['is_cosch'],
         'sb' => $found,
         'id' => $found ? (int)$found['id'] : 0,
+        'fe_max' => $fe_max_val,
+        'se_max' => $se_max_val,
+        'total_max' => $fe_max_val + $se_max_val,
     ];
 }
 
@@ -244,7 +249,11 @@ foreach ($students as $idx => $st) {
                 $total_max += 100;
             }
         } else {
-            // Academic: 50 Formative + 50 Summative = 100
+            // Dynamic Formative + Summative based on actual school configuration
+            $sub_fe_max = (int)($d_sub['fe_max'] ?? 50);
+            $sub_se_max = (int)($d_sub['se_max'] ?? 50);
+            $sub_total_max = $sub_fe_max + $sub_se_max;
+
             $fe = $m && isset($m['fe_total']) ? (float)$m['fe_total'] : null;
             $se = $m && isset($m['se_total']) ? (float)$m['se_total'] : null;
             $tot = $m && isset($m['grand_total']) ? (float)$m['grand_total'] : null;
@@ -254,8 +263,8 @@ foreach ($students as $idx => $st) {
             $grd = '';
             if ($m && !empty($m['grade'])) {
                 $grd = cce_normalize_grade($m['grade']);
-            } elseif ($tot !== null && $tot > 0) {
-                $grd = cce_calc_grade(min(100, round(($tot / 100) * 100, 1)));
+            } elseif ($tot !== null && $tot > 0 && $sub_total_max > 0) {
+                $grd = cce_calc_grade(min(100, round(($tot / $sub_total_max) * 100, 1)));
             }
 
             $sub_results[$sno] = [
@@ -266,7 +275,7 @@ foreach ($students as $idx => $st) {
             ];
             if ($tot !== null) {
                 $total_got += $tot;
-                $total_max += 100;
+                $total_max += $sub_total_max;
             }
         }
 
@@ -871,9 +880,9 @@ foreach ($evaluated_chunks as $page_idx => $chunk_eval):
         <!-- Academic Max Marks -->
         <?php foreach ($display_subjects as $sno => $d_sub): ?>
           <?php if (!$d_sub['is_cosch']): ?>
-            <th>50</th>
-            <th>50</th>
-            <th>100</th>
+            <th><?= (int)($d_sub['fe_max'] ?? 50) ?></th>
+            <th><?= (int)($d_sub['se_max'] ?? 50) ?></th>
+            <th><?= (int)($d_sub['total_max'] ?? 100) ?></th>
             <th></th>
           <?php endif; ?>
         <?php endforeach; ?>
@@ -881,7 +890,7 @@ foreach ($evaluated_chunks as $page_idx => $chunk_eval):
         <!-- Co-scholastic Max Marks -->
         <?php foreach ($display_subjects as $sno => $d_sub): ?>
           <?php if ($d_sub['is_cosch']): ?>
-            <th>100</th>
+            <th><?= (int)($d_sub['total_max'] ?? 100) ?></th>
             <th></th>
           <?php endif; ?>
         <?php endforeach; ?>

@@ -420,10 +420,13 @@ foreach ($chunks as $page_idx => $c_students):
           <th rowspan="2" class="vert-th" style="background:#bae6fd; width:4%;">अंतिम<br>श्रेणी</th>
         </tr>
         <tr>
-          <?php foreach ($acad_subs as $asb): ?>
-            <th><?= (int)(($asb['fe_max'] ?? $asb['fe_total_max'] ?? 50) ?: 50) ?></th>
-            <th><?= (int)(($asb['se_max'] ?? $asb['se_total_max'] ?? 50) ?: 50) ?></th>
-            <th>100</th>
+          <?php foreach ($acad_subs as $asb): 
+            $f_max = (int)(($asb['fe_max'] ?? $asb['fe_total_max'] ?? 50) ?: 50);
+            $s_max = (int)(($asb['se_max'] ?? $asb['se_total_max'] ?? 50) ?: 50);
+          ?>
+            <th><?= $f_max ?></th>
+            <th><?= $s_max ?></th>
+            <th><?= $f_max + $s_max ?></th>
             <th>-</th>
           <?php endforeach; ?>
           <?php foreach ($cosch_subs as $csb): ?>

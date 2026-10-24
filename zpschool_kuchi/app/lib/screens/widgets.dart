@@ -39,6 +39,53 @@ class SectionTitle extends StatelessWidget {
       );
 }
 
+/// Emil Kowalski style micro-interaction: tactile spring scale-down on tap.
+class PressableScale extends StatefulWidget {
+  const PressableScale({super.key, required this.child, this.onTap, this.scaleDown = 0.965});
+  final Widget child;
+  final VoidCallback? onTap;
+  final double scaleDown;
+
+  @override
+  State<PressableScale> createState() => _PressableScaleState();
+}
+
+class _PressableScaleState extends State<PressableScale> with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 120),
+    reverseDuration: const Duration(milliseconds: 220),
+  );
+  late final Animation<double> _scale = Tween<double>(begin: 1.0, end: widget.scaleDown).animate(
+    CurvedAnimation(parent: _c, curve: const Cubic(0.16, 1, 0.3, 1), reverseCurve: Curves.easeOutBack),
+  );
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTapDown: (_) => _c.forward(),
+      onTapUp: (_) => _c.reverse(),
+      onTapCancel: () => _c.reverse(),
+      onTap: widget.onTap,
+      behavior: HitTestBehavior.opaque,
+      child: AnimatedBuilder(
+        animation: _scale,
+        builder: (context, child) => Transform.scale(
+          scale: _scale.value,
+          child: child,
+        ),
+        child: widget.child,
+      ),
+    );
+  }
+}
+
 class IconTile extends StatelessWidget {
   const IconTile({super.key, required this.icon, required this.label, this.sub, this.color = TG.g600, this.onTap});
   final IconData icon;
@@ -46,16 +93,18 @@ class IconTile extends StatelessWidget {
   final String? sub;
   final Color color;
   final VoidCallback? onTap;
+
   @override
-  Widget build(BuildContext context) => Card(
-        clipBehavior: Clip.antiAlias,
-        child: InkWell(
-          onTap: onTap,
+  Widget build(BuildContext context) => PressableScale(
+        onTap: onTap,
+        child: Card(
+          clipBehavior: Clip.antiAlias,
           child: Padding(
             padding: const EdgeInsets.all(14),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [
               Container(
-                width: 42, height: 42,
+                width: 42,
+                height: 42,
                 decoration: BoxDecoration(color: color.withValues(alpha: .12), borderRadius: BorderRadius.circular(12)),
                 child: Icon(icon, color: color),
               ),
@@ -86,9 +135,9 @@ class EmptyState extends StatelessWidget {
 }
 
 /// Gentle entrance animation: fade + slight rise, with an optional
-/// stagger [delay]. Used across dashboards and lists for a pro feel.
+/// stagger [delay]. Designed with Emil Kowalski spring curve.
 class AnimIn extends StatefulWidget {
-  const AnimIn({super.key, required this.child, this.delay = Duration.zero, this.dy = 16});
+  const AnimIn({super.key, required this.child, this.delay = Duration.zero, this.dy = 14});
   final Widget child;
   final Duration delay;
   final double dy;
@@ -98,13 +147,13 @@ class AnimIn extends StatefulWidget {
 
 class _AnimInState extends State<AnimIn> with SingleTickerProviderStateMixin {
   late final AnimationController _c =
-      AnimationController(vsync: this, duration: const Duration(milliseconds: 480));
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 280));
   late final Animation<double> _fade =
-      CurvedAnimation(parent: _c, curve: Curves.easeOutCubic);
+      CurvedAnimation(parent: _c, curve: const Cubic(0.16, 1, 0.3, 1));
   late final Animation<Offset> _slide = Tween<Offset>(
     begin: Offset(0, widget.dy / 100),
     end: Offset.zero,
-  ).animate(CurvedAnimation(parent: _c, curve: Curves.easeOutCubic));
+  ).animate(CurvedAnimation(parent: _c, curve: const Cubic(0.16, 1, 0.3, 1)));
 
   @override
   void initState() {

@@ -1,3 +1,4 @@
+import '../core/api.dart';
 import 'dart:convert';
 import 'dart:io';
 
@@ -41,6 +42,21 @@ class _StudentsScreenState extends State<StudentsScreen> {
   Future<void> _load() async {
     final r = await LocalDb.I.rows('students');
     if (mounted) setState(() => _all = r);
+    if (r.length < 100) {
+      try {
+        final res = await Api.get('students.php', {'per_page': '500'});
+        final serverList = (res['students'] as List<dynamic>?) ?? [];
+        if (serverList.isNotEmpty) {
+          for (final row in serverList) {
+            if (row is Map) {
+              await LocalDb.I.saveRow('students', Map<String, dynamic>.from(row));
+            }
+          }
+          final refreshed = await LocalDb.I.rows('students');
+          if (mounted) setState(() => _all = refreshed);
+        }
+      } catch (_) {}
+    }
   }
 
   @override
@@ -56,6 +72,25 @@ class _StudentsScreenState extends State<StudentsScreen> {
       appBar: AppBar(
         title: Text('विद्यार्थी (${_all.length})'),
         actions: [
+          FilledButton.tonalIcon(
+            style: FilledButton.styleFrom(
+              backgroundColor: const Color(0xFFEFF6FF),
+              foregroundColor: const Color(0xFF1D4ED8),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+              minimumSize: const Size(0, 34),
+            ),
+            onPressed: () {
+              Remote.printReport(
+                context,
+                'modules/classes/student_credentials_pdf.php',
+                {'std': _grade},
+                name: 'विद्यार्थी आयडी व पासवर्ड यादी',
+              );
+            },
+            icon: const Icon(Icons.picture_as_pdf_outlined, size: 16),
+            label: const Text('आयडी-पासवर्ड PDF', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+          ),
+          const SizedBox(width: 6),
           FilledButton.tonalIcon(
             style: FilledButton.styleFrom(
               backgroundColor: const Color(0xFFE8F5E9),

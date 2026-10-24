@@ -21,6 +21,7 @@ import 'students.dart';
 import 'timetable.dart';
 import 'login.dart';
 import 'widgets.dart';
+import 'study_and_tutorials.dart';
 
 class MoreScreen extends StatelessWidget {
   const MoreScreen({super.key});
@@ -30,6 +31,7 @@ class MoreScreen extends StatelessWidget {
     final w = MediaQuery.sizeOf(context).width;
     final cols = w >= 900 ? 4 : (w >= 600 ? 3 : 2);
     final mods = <(IconData, String, Color, Widget)>[
+      (Icons.video_library_rounded, 'शैक्षणिक व्हिडिओ व सुविधा', const Color(0xFFDC2626), const StudyAndTutorialsScreen()),
       (Icons.groups_outlined, 'विद्यार्थी', const Color(0xFF0D9488), const StudentsScreen()),
       (Icons.assignment_turned_in_outlined, 'सातत्यपूर्ण मूल्यमापन', const Color(0xFFB83B5E), const CceScreen()),
       (Icons.insert_chart_outlined, 'समग्र प्रगती पत्रक', const Color(0xFF0F8A84), const HpcScreen()),

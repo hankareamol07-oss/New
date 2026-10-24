@@ -453,8 +453,7 @@ html, body {
 }
 
 /* === BACKGROUNDS & SPREAD DIMENSIONS === */
-/* In official Maharashtra CCE reference PDF, outer spread card-01.png is sized to
-   275.5mm x 188mm with 10.75mm white margins around the A4 paper */
+/* Clean, professional white background without overlapping background image */
 .outer-spread {
   width: 275.5mm;
   height: 188mm;
@@ -463,12 +462,11 @@ html, body {
   margin: auto;
   align-self: center;
   position: relative;
-  background-image: url('<?= APP_URL ?>/<?= cce_get_bg_file() ?>?v=<?= @filemtime(__DIR__ . '/../' . cce_get_bg_file()) ?>');
-  background-size: 275.5mm 188mm;
-  background-repeat: no-repeat;
-  background-position: center top;
+  background: #ffffff !important;
+  background-image: none !important;
   display: flex;
   flex-shrink: 0;
+  border-radius: 4px;
 }
 .inner-spread {
   width: 297mm;
@@ -491,6 +489,10 @@ html, body {
   }
   .tb {
     display: none !important;
+  }
+  .outer-spread, .inner-spread {
+    background: #ffffff !important;
+    background-image: none !important;
   }
   .sh {
     margin: 0 auto !important;

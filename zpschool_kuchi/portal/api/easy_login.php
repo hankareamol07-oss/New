@@ -20,10 +20,11 @@ try {
             if ($std < 1 || $std > 8) $std = 6;
 
             $stmt = $db->prepare("
-                SELECT s.id, s.name, s.name_mr, s.std, s.section, s.roll_no, s.student_pen, u.username 
+                SELECT s.id, s.name, s.name_mr, s.std, s.section, s.roll_no, s.student_pen, MIN(u.username) as username 
                 FROM students s 
                 LEFT JOIN users u ON u.linked_id = s.id AND u.role = 'student'
                 WHERE s.school_id = ? AND s.std = ? AND (s.is_active = 1 OR s.is_active IS NULL)
+                GROUP BY s.id
                 ORDER BY CAST(s.roll_no AS UNSIGNED) ASC, s.name_mr ASC, s.name ASC
             ");
             $stmt->execute([SCHOOL_ID, $std]);

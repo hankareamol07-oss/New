@@ -1208,14 +1208,14 @@ foreach ($students as $stu):
                       7 => ($sb_info && $sb_info['fe7_max'] !== null) ? $sb_info['fe7_max'] : ($sno === 5 ? null : 10),
                       8 => ($sb_info && $sb_info['fe8_max'] !== null) ? $sb_info['fe8_max'] : null,
                   ];
-                  $fe_tot_max = 50;
+                  $fe_tot_max = ($sb_info && isset($sb_info['fe_max']) && (int)$sb_info['fe_max'] > 0) ? (int)$sb_info['fe_max'] : 50;
                   $se_max_row = [
                       1 => ($sb_info && $sb_info['se1_max'] !== null) ? $sb_info['se1_max'] : ($sno === 2 || $sno === 5 ? null : 10),
                       2 => ($sb_info && $sb_info['se2_max'] !== null) ? $sb_info['se2_max'] : null,
                       3 => ($sb_info && $sb_info['se3_max'] !== null) ? $sb_info['se3_max'] : ($sno === 2 || $sno === 5 ? 50 : 40),
                   ];
-                  $se_tot_max = 50;
-                  $grand_max = 100;
+                  $se_tot_max = ($sb_info && isset($sb_info['se_max']) && (int)$sb_info['se_max'] >= 0) ? (int)$sb_info['se_max'] : 50;
+                  $grand_max = $fe_tot_max + $se_tot_max;
               }
 
               // Student's obtained marks

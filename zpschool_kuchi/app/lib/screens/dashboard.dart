@@ -17,6 +17,8 @@ import 'quiz.dart';
 import 'school.dart';
 import 'students.dart';
 import 'timetable.dart';
+import 'study_and_tutorials.dart';
+import '../core/remote.dart';
 import 'widgets.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -188,9 +190,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ]),
       );
 
-  Widget _quickAction(IconData icon, String label, Color color, VoidCallback onTap) => InkWell(
+  Widget _quickAction(IconData icon, String label, Color color, VoidCallback onTap) => PressableScale(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(18),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
@@ -298,6 +299,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 scrollDirection: Axis.horizontal,
                 children: [
                   _quickAction(Icons.how_to_reg_outlined, 'हजेरी', const Color(0xFF2563A8), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AttendanceScreen()))),
+                  _quickAction(Icons.video_library_rounded, 'शैक्षणिक व्हिडिओ', const Color(0xFFDC2626), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const StudyAndTutorialsScreen()))),
+                  _quickAction(Icons.badge_rounded, 'ID-पासवर्ड PDF', const Color(0xFF1E40AF), () => Remote.printReport(context, 'modules/classes/student_credentials_pdf.php', {}, name: 'विद्यार्थी आयडी व पासवर्ड यादी')),
                   _quickAction(Icons.menu_book_outlined, 'परिपाठ', const Color(0xFF0F8A84), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ParipathScreen()))),
                   _quickAction(Icons.schedule_outlined, 'वेळापत्रक', const Color(0xFF7C3AED), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const TimetableScreen()))),
                   _quickAction(Icons.event_available_outlined, 'सुट्ट्या', const Color(0xFFB83B5E), () => Navigator.push(context, MaterialPageRoute(builder: (_) => const HolidaysScreen()))),
@@ -521,6 +524,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
             }),
             const SectionTitle('इतर कार्ये'),
             GridView.count(crossAxisCount: cols, shrinkWrap: true, physics: const NeverScrollableScrollPhysics(), mainAxisSpacing: 10, crossAxisSpacing: 10, childAspectRatio: 1.2, children: [
+              IconTile(icon: Icons.video_library, label: 'शैक्षणिक व्हिडिओ व सुविधा', sub: 'शिक्षक गाईड व अभ्यास व्हिडिओ', color: const Color(0xFFDC2626), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const StudyAndTutorialsScreen()))),
+              IconTile(icon: Icons.badge_outlined, label: 'विद्यार्थी ID/PW PDF', sub: '१-क्लिक यादी छपाई', color: const Color(0xFF1E40AF), onTap: () => Remote.printReport(context, 'modules/classes/student_credentials_pdf.php', {}, name: 'विद्यार्थी आयडी व पासवर्ड यादी')),
               IconTile(icon: Icons.groups, label: 'विद्यार्थी', sub: 'यादी, नवीन नोंद', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const StudentsScreen()))),
               IconTile(icon: Icons.table_chart, label: 'UDISE+ आयात', sub: 'Excel विद्यार्थी नोंद', color: const Color(0xFF167A5B), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const UdiseImportScreen()))),
               IconTile(icon: Icons.assignment_turned_in_outlined, label: 'CCE मूल्यमापन', sub: 'गुण नोंद', color: const Color(0xFFB83B5E), onTap: () => widget.onOpenTab(1)),

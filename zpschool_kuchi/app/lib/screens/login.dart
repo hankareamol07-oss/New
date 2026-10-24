@@ -53,12 +53,23 @@ class _LoginScreenState extends State<LoginScreen> {
         'std': std.toString(),
       });
       if (mounted) {
-        final list = (res['students'] as List<dynamic>?) ?? [];
+        final rawList = (res['students'] as List<dynamic>?) ?? [];
+        final seen = <int>{};
+        final uniqueList = <dynamic>[];
+        for (final item in rawList) {
+          if (item is Map) {
+            final id = int.tryParse('${item['id']}');
+            if (id != null && !seen.contains(id)) {
+              seen.add(id);
+              uniqueList.add(item);
+            }
+          }
+        }
         setState(() {
-          _classStudents = list;
+          _classStudents = uniqueList;
           _loadingStudents = false;
-          if (list.isNotEmpty) {
-            _selectedStudent = Map<String, dynamic>.from(list.first as Map);
+          if (uniqueList.isNotEmpty) {
+            _selectedStudent = Map<String, dynamic>.from(uniqueList.first as Map);
             _mobileController.text = _selectedStudent?['username'] ?? _selectedStudent?['student_pen'] ?? '';
             _passController.text = '123456';
           }
@@ -377,7 +388,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     )
                   else
                     DropdownButtonFormField<int>(
-                      value: _selectedStudent?['id'],
+                      value: _selectedStudent != null && _classStudents.any((x) => x['id'] == _selectedStudent!['id'])
+                          ? _selectedStudent!['id'] as int
+                          : null,
                       decoration: InputDecoration(
                         labelText: 'विद्यार्थी निवडा (Select Student)',
                         prefixIcon: const Icon(Icons.school_outlined),

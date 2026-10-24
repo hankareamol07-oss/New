@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $section = trim($_GET['section'] ?? '');
     $search  = trim($_GET['q'] ?? '');
     $page    = max(1, (int) ($_GET['page'] ?? 1));
-    $perPage = 100;
+    $perPage = max(100, (int) ($_GET['per_page'] ?? 500));
     $offset  = ($page - 1) * $perPage;
 
     $where  = ['1=1'];
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         $stmt = $tdb->prepare(
             "SELECT id, name, name_mr, roll_no, gr_no, grade, section, gender, date_of_birth,
-                    photo, father_name, mother_name, phone, apaar_id, aadhar_no, caste, blood_group
+                    photo, father_name, mother_name, phone, apaar_id, student_pen, aadhar_no, caste, blood_group
              FROM students
              WHERE $whereClause
              ORDER BY grade ASC, CAST(roll_no AS INTEGER) ASC, name ASC
