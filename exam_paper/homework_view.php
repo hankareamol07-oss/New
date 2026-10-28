@@ -12,6 +12,7 @@ $logo = ep_setting('school_logo');
 $watermark = ep_setting('watermark_text');
 $logoWatermark = $logo && ep_setting('watermark_logo') === '1';
 $english = $hw['medium'] === 'English' && !preg_match('/\p{Devanagari}/u', $hw['title']);
+$matchLang = $english ? 'en' : ($hw['medium'] === 'Hindi' || $hw['subject'] === 'Hindi' ? 'hi' : 'mr');
 $digits = fn($n) => $english ? (string)$n : strtr((string)$n, ['0' => '०', '1' => '१', '2' => '२', '3' => '३', '4' => '४', '5' => '५', '6' => '६', '7' => '७', '8' => '८', '9' => '९']);
 $subjectNames = ['Marathi' => 'मराठी', 'Maths' => 'गणित', 'English' => 'इंग्रजी', 'EVS Part 1' => 'परिसर अभ्यास भाग १', 'EVS Part 2' => 'परिसर अभ्यास भाग २', 'EVS' => 'परिसर अभ्यास',
     'Science' => 'विज्ञान', 'Hindi' => 'हिंदी', 'Geography' => 'भूगोल', 'History & Civics' => 'इतिहास व नागरिकशास्त्र'];
@@ -104,7 +105,7 @@ $std = $hw['std_label'] ?: 'Std ' . $hw['standard'];
   <ol class="items <?= $english ? '' : 'devanagari' ?>">
     <?php foreach ($hw['items'] as $i => $it): ?>
       <li><span class="item-no"><?= $digits($i + 1) ?>.</span>
-        <div class="qtext"><?= h($it['text']) ?><?php if (!empty($it['show_image']) && $it['page_image_url']): ?><img class="page-img" src="<?= h($it['page_image_url']) ?>" alt=""><?php endif; ?></div>
+        <div class="qtext"><?php if ($pairs = ep_item_pairs($it)): ?><?= h(ep_match_stem($it['text'])) ?><?= ep_match_table($pairs, $matchLang) ?><?php else: ?><?= h($it['text']) ?><?php endif; ?><?php if (!empty($it['show_image']) && $it['page_image_url']): ?><img class="page-img" src="<?= h($it['page_image_url']) ?>" alt=""><?php endif; ?></div>
       </li>
     <?php endforeach; ?>
   </ol>

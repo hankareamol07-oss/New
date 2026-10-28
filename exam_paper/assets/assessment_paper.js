@@ -120,12 +120,15 @@
     state.sections.push({ q_no: (last?.q_no || 0) + 1, sub: '', instruction: '', marks: 4, qtype: '', count: 4, items: [] });
     render();
   };
+  // match (जोड्या लावा) questions are edited as: stem line + one "left | right" line per pair; the print view draws the table
+  function matchText(q) { return Array.isArray(q.pairs) && q.pairs.length ? q.text + '\n' + q.pairs.map(p => `${p[0]} | ${p[1]}`).join('\n') : q.text; }
+  function bookItem(q) { return { bq_id: q.bq_id, text: matchText(q), page_image: q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype }; }
   async function fill(s, need) {
     if (need <= 0) return;
     const chs = selectedChapters();
     if (!chs.length) return alert('Tick at least one chapter');
     const rows = await api('book_random', { body: { chapter_ids: chs, qtype: s.qtype, count: need, exclude: usedIds() } });
-    for (const q of rows) s.items.push({ bq_id: q.bq_id, text: q.text, page_image: q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype });
+    for (const q of rows) s.items.push(bookItem(q));
     if (rows.length < need) s.warn = `Only ${rows.length} of ${need} found in the selected chapters`;
   }
   $('#autoFill').onclick = async () => {
@@ -200,7 +203,7 @@
         const rows = await api('book_random', { body: { chapter_ids: selectedChapters(), qtype: s.qtype, count: 1, exclude: usedIds() } });
         if (!rows.length) return alert('No other question available in the selected chapters');
         const q = rows[0];
-        s.items[+li.dataset.ii] = { bq_id: q.bq_id, text: q.text, page_image: q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype };
+        s.items[+li.dataset.ii] = bookItem(q);
         break;
       }
       case 'browse': openBrowse(s); return;
@@ -219,13 +222,13 @@
     $('#browseInfo').textContent = `${r.total} questions — page ${browsePage + 1} of ${Math.max(1, Math.ceil(r.total / r.size))}`;
     $('#browseList').innerHTML = r.items.length ? r.items.map(q => `
       <div class="border rounded p-2 mb-2 d-flex gap-2 align-items-start ${used.includes(q.bq_id) ? 'bg-light' : ''}">
-        <div class="flex-grow-1"><div>${esc(q.text)}</div>
+        <div class="flex-grow-1"><div style="white-space:pre-wrap">${esc(matchText(q))}</div>
           <div class="small text-muted">${esc(q.chapter_title || '')} · p.${q.page} · ${QTYPES[q.qtype] || q.qtype}${q.instruction ? ' · ' + esc(q.instruction) : ''}${+q.needs_figure ? ' · <i class="bi bi-image"></i> figure' : ''}</div></div>
         <button class="btn btn-sm ${used.includes(q.bq_id) ? 'btn-secondary disabled' : 'btn-primary'}" data-add="${q.bq_id}">${used.includes(q.bq_id) ? 'Added' : 'Add'}</button>
       </div>`).join('') : '<div class="text-muted">No questions match.</div>';
     $$('[data-add]', $('#browseList')).forEach(b => b.onclick = () => {
       const q = r.items.find(x => x.bq_id == b.dataset.add);
-      browseSec.items.push({ bq_id: q.bq_id, text: q.text, page_image: q.page_image, show_image: false, needs_figure: !!+q.needs_figure, page: q.page, qtype: q.qtype });
+      browseSec.items.push(bookItem(q));
       b.className = 'btn btn-sm btn-secondary disabled'; b.textContent = 'Added';
       render();
     });

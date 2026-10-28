@@ -138,6 +138,13 @@ mysql -u root -p school < db/schema_packs.sql   # ep_topic_packs (AI notes + 10-
 php import_books.php          # ep_books, ep_book_chapters, ep_book_questions, ep_paper_models, ep_topic_packs
 ```
 
+जोड्या लावा / Match the pairs: `ep_book_questions.pairs_json` stores
+`[["left","correct right"], ...]` (existing installs: `php import_books.php`
+adds the column). In the builders a match question is edited as plain lines
+`left | right`; the paper and homework sheet print it as a two-column
+'अ' / 'ब' गट table with the right column shuffled, and the teacher key
+(`paper_view.php?id=N&key=1`, `homework_key.php`) prints the (१)–(क) mapping.
+
 `data/topic_packs.json` holds, for every textbook chapter, short revision notes
 and a 10-question MCQ quiz (4 options, answer index, one-line explanation)
 generated from the chapter's OCR text. `api.php?action=topic_pack&chapter_id=N`

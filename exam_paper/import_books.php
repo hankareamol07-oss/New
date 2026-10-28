@@ -17,6 +17,15 @@ if (PHP_SAPI !== 'cli') {
 $dataDir = EP_ROOT . '/data';
 $db = ep_db();
 
+// older installs: add columns introduced after the first release
+foreach (['pairs_json TEXT DEFAULT NULL'] as $col) {
+    try {
+        $db->exec('ALTER TABLE ep_book_questions ADD COLUMN ' . $col);
+    } catch (PDOException $e) {
+        // column already present
+    }
+}
+
 $books = json_decode((string)@file_get_contents($dataDir . '/book_questions.json'), true);
 if (!$books || empty($books['books'])) {
     die("data/book_questions.json missing or invalid\n");
@@ -28,8 +37,8 @@ $delCh = $db->prepare('DELETE FROM ep_book_chapters WHERE book_id = ?');
 $insCh = $db->prepare('INSERT INTO ep_book_chapters (book_id, chapter_no, title, start_page, end_page) VALUES (?,?,?,?,?)');
 $delQ = $db->prepare('DELETE FROM ep_book_questions WHERE book_id = ?');
 $insQ = $db->prepare('INSERT INTO ep_book_questions (bq_id, book_id, chapter_id, standard, subject, lang, page, block, instruction, qtype, text, item_no, needs_figure, page_image,
-                                                     options_json, answer, ai_cleaned, figure_image)
-                      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                                                     options_json, pairs_json, answer, ai_cleaned, figure_image)
+                      VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
 $delPack = $db->prepare('DELETE FROM ep_topic_packs WHERE book_id = ?');
 $insPack = $db->prepare('REPLACE INTO ep_topic_packs (chapter_id, book_id, standard, subject, lang, title, notes_json, quiz_json, model) VALUES (?,?,?,?,?,?,?,?,?)');
 
@@ -57,7 +66,8 @@ foreach ($books['questions'] as $q) {
         $q['id'], $q['book_id'], $chapterIds[$q['book_id']][$q['chapter_no']] ?? null, $q['std'], $q['subject'], $q['lang'], $q['page'],
         mb_substr((string)$q['block'], 0, 100), mb_substr((string)$q['instruction'], 0, 400), $q['qtype'], $q['text'], $q['item_no'],
         $q['needs_figure'] ? 1 : 0, $q['page_image'],
-        !empty($q['options']) ? json_encode($q['options'], JSON_UNESCAPED_UNICODE) : null, $q['answer'] ?? null,
+        !empty($q['options']) ? json_encode($q['options'], JSON_UNESCAPED_UNICODE) : null,
+        !empty($q['pairs']) ? json_encode($q['pairs'], JSON_UNESCAPED_UNICODE) : null, $q['answer'] ?? null,
         !empty($q['ai_cleaned']) ? 1 : 0, $q['figure_image'] ?? null,
     ]);
     $nQ++;

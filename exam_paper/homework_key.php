@@ -10,6 +10,7 @@ if (!$hw) {
 }
 $logo = ep_setting('school_logo');
 $english = $hw['medium'] === 'English' && !preg_match('/\p{Devanagari}/u', $hw['title']);
+$matchLang = $english ? 'en' : ($hw['medium'] === 'Hindi' || $hw['subject'] === 'Hindi' ? 'hi' : 'mr');
 $digits = fn($n) => $english ? (string)$n : strtr((string)$n, ['0' => '०', '1' => '१', '2' => '२', '3' => '३', '4' => '४', '5' => '५', '6' => '६', '7' => '७', '8' => '८', '9' => '९']);
 $L = $english
     ? ['key' => 'Answer Key (Teacher copy)', 'std' => 'Std.', 'subject' => 'Subject', 'date' => 'Date', 'topic' => 'Chapter / Topic', 'teacher' => 'Teacher', 'hw' => 'Homework', 'quiz' => 'Quiz', 'ans' => 'Ans.', 'noans' => '— (no answer entered)', 'typed' => 'Expected answer']
@@ -82,8 +83,14 @@ $letters = ['A', 'B', 'C', 'D', 'E', 'F'];
     <?php foreach ($hw['items'] as $i => $it): ?>
       <li><span class="item-no"><?= $digits($i + 1) ?>.</span>
         <div style="flex:1">
-          <div class="q"><?= h($it['text']) ?></div>
-          <div class="ans"><b><?= $L['ans'] ?></b> <?= trim((string)($it['answer'] ?? '')) !== '' ? h($it['answer']) : '<span class="muted">' . $L['noans'] . '</span>' ?></div>
+          <?php if ($pairs = ep_item_pairs($it)): ?>
+            <div class="q"><?= h(ep_match_stem($it['text'])) ?></div>
+            <?= ep_match_table($pairs, $matchLang) ?>
+            <div class="ans"><b><?= $L['ans'] ?></b> <?= h(ep_match_key_text($pairs, $matchLang)) ?></div>
+          <?php else: ?>
+            <div class="q"><?= h($it['text']) ?></div>
+            <div class="ans"><b><?= $L['ans'] ?></b> <?= trim((string)($it['answer'] ?? '')) !== '' ? h($it['answer']) : '<span class="muted">' . $L['noans'] . '</span>' ?></div>
+          <?php endif; ?>
         </div>
       </li>
     <?php endforeach; ?>
