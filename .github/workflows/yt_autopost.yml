@@ -4,6 +4,9 @@ name: YT autopost (2 syllabus videos a day)
 # times in yt_studio/autopost.config.json (09:00 and 18:00 IST). Progress is kept on the autopost-state branch.
 # Secrets: YOUTUBE_TOKEN_JSON (from GET_YOUTUBE_TOKEN.bat) + at least one of GEMINI_API_KEY / GROQ_API_KEY / NVIDIA_API_KEY.
 on:
+  push:                     # setup check only (auto.py --dry) when this workflow changes
+    branches: ["devin/*-yt-autopost"]
+    paths: [.github/workflows/yt_autopost.yml]
   schedule:
     - cron: "30 0 * * *"      # 06:00 IST
   workflow_dispatch:
@@ -71,6 +74,7 @@ jobs:
           if [ "$UPLOAD" = "true" ] && [ -z "$YOUTUBE_TOKEN_JSON" ]; then
             echo "::error::Secret YOUTUBE_TOKEN_JSON is missing - run GET_YOUTUBE_TOKEN.bat (README section 0b)"; exit 2
           fi
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then python auto.py --dry; exit; fi
           if [ "$UPLOAD" = "true" ]; then python auto.py --count "$COUNT"; else python auto.py --count "$COUNT" --no-upload; fi
       - name: Save progress
         if: always()
