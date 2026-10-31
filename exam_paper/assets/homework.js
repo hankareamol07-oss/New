@@ -113,7 +113,7 @@
         src.chapters.map(x => `<option value="${x.chapter_id}" ${x.score >= 0.34 ? 'class="fw-semibold"' : ''}>${esc(x.name)} — ${x.mcq} MCQ${x.score >= 0.34 ? ' ★' : ''}</option>`).join('') + '</optgroup>');
       for (const x of src.chapters) if (x.mcq >= 8 && x.score >= 0.34 && (!best || x.score > best.score)) best = x;
     }
-    sel.innerHTML = opts.length ? opts.join('') : '<option value="">No MCQ bank for this class/subject — add questions manually or from textbook</option>';
+    sel.innerHTML = opts.length ? opts.join('') : '<option value="">No MCQ source for this lesson — import db/topic_packs.sql (AI quiz per chapter) or add questions manually</option>';
     const preferBank = OLD_SYLLABUS.includes(+stdSel.value) && best;
     if (preferBank) sel.value = String(best.chapter_id);
     else if (hasPack) sel.value = 'pack';
@@ -123,7 +123,7 @@
       : hasPack ? '★ 10-question quiz generated from this textbook lesson will be used. Choose a bank chapter instead if you prefer.'
       : state.sources.length
         ? (best ? `★ matched question-bank chapter "${best.name}" for auto MCQs. Change the source if it's wrong.` : 'No matching chapter found automatically — choose a bank chapter above, or add quiz questions manually / from the textbook.')
-        : 'This class/subject has no MCQ bank or generated quiz yet. Use "MCQ" / "Typed answer" / "From textbook" to add quiz questions yourself.';
+        : (c ? 'No generated quiz found for this lesson: import exam_paper/db/topic_packs.sql into the database (adds a 10-MCQ AI quiz for every chapter of std 1–8), then reload. ' : 'Choose a lesson to get its 10-MCQ AI quiz. ') + 'The scraped MCQ bank only covers some std 5/7/8 subjects; you can also add questions with "MCQ" / "Typed answer" / "From textbook".';
   }
 
   /* ---------- homework items ---------- */
