@@ -1,0 +1,120 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Head" itemID="6238ba4e-000001ff" symbolType="graphic" lastModified="1672605450" lastUniqueIdentifier="24">
+  <timeline>
+    <DOMTimeline name="Head" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="OL_Eyes" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65338,"b":-4880,"c":4880,"d":65338,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="OL Eyes" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.996978759765625" b="-0.077667236328125" c="0.077667236328125" d="0.996978759765625" tx="77.9" ty="103.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="43.05" y="28"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="OL_Ear" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65338,"b":-4880,"c":4880,"d":65338,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="OL Ear" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.996978759765625" b="-0.077667236328125" c="0.077667236328125" d="0.996978759765625" tx="15.2" ty="138.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.25" y="18.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="OL_FHair" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65338,"b":-4880,"c":4880,"d":65338,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="OL FHair" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.996978759765625" b="-0.077667236328125" c="0.077667236328125" d="0.996978759765625" tx="-15.35" ty="2.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="85.65" y="87.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="OL_Mouth" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65338,"b":-4880,"c":4880,"d":65338,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="OL Mouth" selected="true" symbolType="graphic" centerPoint3DX="116.4" centerPoint3DY="180.7" loop="single frame">
+                  <matrix>
+                    <Matrix a="-0.19580078125" b="-0.0310211181640625" c="-0.0310211181640625" d="0.19580078125" tx="143.25" ty="182"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="125.7" y="39.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="OL_Nose" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65338,"b":-4880,"c":4880,"d":65338,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="OL Nose" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.996978759765625" b="-0.077667236328125" c="0.077667236328125" d="0.996978759765625" tx="111.15" ty="131.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.8" y="21.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="OL_Plane_Face" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65338,"b":-4880,"c":4880,"d":65338,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="OL Plane Face" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.996978759765625" b="-0.077667236328125" c="0.077667236328125" d="0.996978759765625" tx="21.1" ty="65.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="71.55" y="81.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="OL_BHair" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65338,"b":-4880,"c":4880,"d":65338,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="OL BHair" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.996978759765625" b="-0.077667236328125" c="0.077667236328125" d="0.996978759765625" tx="70.35" ty="-0.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59" y="73.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

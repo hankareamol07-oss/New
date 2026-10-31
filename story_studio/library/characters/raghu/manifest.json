@@ -1,0 +1,83 @@
+{
+ "name": "raghu",
+ "label": "रघू (पिवळा कुर्ता)",
+ "gender": "male",
+ "pack": "All Character",
+ "rig": {
+  "root": "Duplicate Items Folder/boy45qw copy 2",
+  "frame": 0,
+  "bounds": [
+   -80.0,
+   -20.0,
+   232.0,
+   544.0
+  ],
+  "faces": "left",
+  "head": "face5w_copy",
+  "neck": [
+   112.75,
+   75.6
+  ],
+  "mouth": {
+   "Duplicate Items Folder/UP0-PER LIPSqw copy 2": {
+    "closed": 8,
+    "mid": 12,
+    "open": 4
+   },
+   "Duplicate Items Folder/LIPSqw copy 2": {
+    "closed": 0,
+    "mid": 8,
+    "open": 12
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eye 2 copy 23": {
+    "open": 0,
+    "blink": [
+     56,
+     57,
+     58,
+     59
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "hand51w_copy",
+   "fore": "hand52w_copy",
+   "shoulder": [
+    84.25,
+    109.72
+   ],
+   "elbow": [
+    70.76,
+    190.35
+   ]
+  },
+  "arm_back": {
+   "upper": "hand53w_copy",
+   "fore": "hand54w_copy",
+   "shoulder": [
+    172.25,
+    111.92
+   ],
+   "elbow": [
+    179.72,
+    196.2
+   ]
+  },
+  "legs": [
+   "leg51w_copy"
+  ],
+  "hips": {
+   "leg51w_copy": [
+    119.75,
+    259.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Layer_8"
+  ]
+ },
+ "root": "Duplicate Items Folder/boy45qw copy 2"
+}

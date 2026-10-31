@@ -1,0 +1,127 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Back Down Hand copy 2" itemID="6794defe-000011aa" symbolType="graphic" lastModified="1735781774">
+  <timeline>
+    <DOMTimeline name="Seth Back Down Hand copy 2" currentFrame="6" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <transformationPoint>
+                    <Point x="69.5" y="1.75"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <transformationPoint>
+                        <Point x="69.5" y="1.75"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#87211B"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#6D1B16"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!1390 0[-506 3293 -4 5188!-4 5188[#55D.1A #1186.48 2981 4991!2981 4991[3760 3404 4237 139"/>
+                        <Edge fillStyle0="1" edges="!4237 139|1390 0"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Front_Arm" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65240,"b":6011,"c":-6011,"d":65240,"tx":0,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 8 copy 4" symbolType="graphic" firstFrame="8" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.99530029296875" b="0.095672607421875" c="-0.095672607421875" d="0.99530029296875" tx="4.4" ty="243.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="63.6" y="31"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_4" color="#FF4FFF">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":65240,"b":6011,"c":-6011,"d":65240,"tx":0,"ty":0}'>
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMGroup>
+                      <members>
+                        <DOMShape>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#681915"/>
+                            </FillStyle>
+                          </fills>
+                          <strokes>
+                            <StrokeStyle index="1">
+                              <SolidStroke scaleMode="normal" weight="2">
+                                <fill>
+                                  <SolidColor color="#581612"/>
+                                </fill>
+                              </SolidStroke>
+                            </StrokeStyle>
+                          </strokes>
+                          <edges>
+                            <Edge fillStyle1="1" strokeStyle="1" edges="!-3 5187[1843 3354 2981 4995!2981 4995[2048 6523 -3 5187"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup>
+                      <matrix>
+                        <Matrix a="-0.9954833984375" b="-0.0949249267578125" c="-0.0949249267578125" d="0.9954833984375" tx="198.55" ty="35"/>
+                      </matrix>
+                      <members>
+                        <DOMShape>
+                          <matrix>
+                            <Matrix a="-0.9954833984375" b="-0.0949249267578125" c="-0.0949249267578125" d="0.9954833984375" tx="198.55" ty="35"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FCA068"/>
+                            </FillStyle>
+                          </fills>
+                          <strokes>
+                            <StrokeStyle index="1">
+                              <SolidStroke scaleMode="normal" weight="2">
+                                <fill>
+                                  <SolidColor color="#D48657"/>
+                                </fill>
+                              </SolidStroke>
+                            </StrokeStyle>
+                          </strokes>
+                          <edges>
+                            <Edge fillStyle1="1" strokeStyle="1" edges="!747 4899|908 1909!908 1909|3225 1936!3225 1936|3019 4582!3019 4582[3062 4716 3073 4865!3073 4865[3109 5346 2794 5711!2794 5711[2479 6077 1999 6113!1999 6113[1518 6149 1152 5834!1152 5834[786 5519 750 5038!750 5038[745 4967 748 4899!748
+ 4899|747 4899"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="face2" itemID="60ae7d18-00000278" symbolType="graphic" lastModified="1622277482">
+  <timeline>
+    <DOMTimeline name="face2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="eyes" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="604" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/eyes copy 11" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.92755126953125" d="0.92755126953125" tx="-677.9" ty="-67.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="868.15" y="394.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mouth" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="604" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/ajdadj copy 11" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="99" ty="431.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31.95" y="14.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="604" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="face3" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="237.85" y="260.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

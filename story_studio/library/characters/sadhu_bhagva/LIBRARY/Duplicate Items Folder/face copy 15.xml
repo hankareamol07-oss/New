@@ -1,0 +1,1361 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/face copy 15" itemID="6218b6d7-00008f32" symbolType="graphic" lastModified="1643041440" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="face copy 15" currentFrame="94" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="eyebrow" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1262" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/UBHBXJ" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-4.4" ty="83.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="76.7" y="14"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="2" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" duration="1258" keyMode="9728" soundName="Marker 23.mp3" soundSync="stream">
+              <SoundEnvelope>
+                <SoundEnvelopePoint level0="32768" level1="32768"/>
+              </SoundEnvelope>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mouth" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="2" name="Neutral" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" selected="true" symbolType="graphic" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="2" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" duration="4" name="Uh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="8" duration="3" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" duration="5" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="16" duration="2" name="Ee" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="5" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="3" name="F" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="6" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="21" duration="4" name="Woo" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="25" duration="10" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="35" duration="2" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="37" duration="2" name="L" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="3" name="Woo" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="42" duration="2" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="44" duration="3" name="Ee" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="5" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="47" duration="2" name="D" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" duration="3" name="Ee" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="5" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="52" duration="2" name="F" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="6" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="54" duration="3" name="D" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="57" duration="3" name="Uh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="60" duration="7" name="L" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="67" duration="4" name="D" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="71" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="72" duration="3" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="75" duration="2" name="L" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="77" duration="3" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="80" duration="3" name="Woo" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="83" duration="3" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="86" duration="2" name="Ah" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="6" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="88" duration="2" name="L" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="90" duration="3" name="D" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="93" duration="3" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="96" duration="4" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="4" name="L" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="104" duration="4" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="108" duration="2" name="Uh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="110" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="111" duration="3" name="Ee" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="5" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="114" duration="3" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="117" duration="3" name="Woo" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="120" duration="3" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="123" duration="4" name="Neutral" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="127" duration="2" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="129" duration="4" name="Neutral" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="133" duration="2" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="135" duration="8" name="Uh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="143" duration="2" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="145" duration="2" name="Uh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="147" duration="4" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="151" duration="4" name="Ee" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="5" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="155" duration="4" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="159" duration="2" name="Ee" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="5" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="161" duration="4" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="165" duration="3" name="Woo" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="168" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="169" duration="2" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="171" duration="2" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="173" duration="3" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="176" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="177" duration="3" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="180" duration="2" name="Ah" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="6" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="182" duration="3" name="L" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="185" duration="2" name="Ah" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="6" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="187" duration="2" name="F" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="6" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="189" duration="3" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="192" duration="5" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="197" duration="3" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="200" duration="2" name="Ee" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="5" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="202" duration="3" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="205" duration="2" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="207" duration="2" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="209" duration="2" name="Uh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="211" duration="3" name="L" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="214" duration="2" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="216" duration="2" name="Uh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="218" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="219" duration="3" name="Ee" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="5" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="222" duration="4" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="226" duration="2" name="Uh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="228" duration="3" name="L" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="231" duration="3" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="234" duration="4" name="F" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="6" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="238" duration="2" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="240" duration="2" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="242" duration="4" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="246" duration="3" name="Woo" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="249" duration="5" name="L" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="254" duration="4" name="Oh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="258" duration="2" name="S" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="260" duration="4" name="Uh" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="264" duration="2" name="D" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="2" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="266" duration="3" name="Woo" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="8" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="269" duration="990" name="M" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" firstFrame="1" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1259" duration="3" name="Neutral" labelType="name" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth 2 copy" symbolType="graphic" centerPoint3DX="64.45" centerPoint3DY="218.35" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.51068115234375" b="0.088104248046875" c="-0.088104248046875" d="2.51068115234375" tx="84.75" ty="215.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.3" y="1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="eyes" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1262" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/EYES copy 16" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="9.65" ty="89.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="62.25" y="31.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="1262" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#F79859"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#FC976F"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#FCA97F"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor alpha="0"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#FFFFFF"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!4191 1299|3681 835"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!3942 2552[3931 2577 3932 2630!3932 2630[3932 2713 3890 2803!3890 2803[3881 2821 3854 2871!3854 2871[3833 2920 3844 2963!3844 2963[3852 2995 3829 3045!3829 3045[3807 3092 3785 3106!3785 3106[3782 3197 3805 3206!3805 3206[3827 3214 3890
+ 3152!3890 3152|3970 3026!3970 3026[3996 3004 4084 2933!4084 2933[4105 2914 4131 2866!4131 2866[4145 2840 4168 2790!4168 2790[4184 2758 4194 2711!4194 2711[4202 2672 4202 2647!4202 2647[4202 2575 4181 2525!4181 2525[4154 2462 4099 2462
+!4099 2462[4075 2462 4039 2481!4039 2481[4012 2495 3997 2502!3997 2502[3987 2506 3983 2507!3983 2507[3953 2526 3942 2552"/>
+                        <Edge fillStyle0="1" edges="
+!4256 3862[4535 2913 4191 1299"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!3681 835|3171 370!3171 370|2967 323"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="
+!2967 323[2713 777 2687 1036!2687 1036[2674 1167 2670 1290!2670 1290[2670 1346 2802 1847!2802 1847[2933 2348 2933 2375!2933 2375[2933 2377 2933 2379"/>
+                        <Edge fillStyle0="3" fillStyle1="3" strokeStyle="2" edges="
+!1500 1147[1502 1194 1508 1242!1508 1242[1510 1260 1510 1348!1510 1348[1510 1501 1489 1609!1489 1609[1454 1781 1372 1781!1372 1781[1252 1781 1224 1478!1224 1478[1216 1383 1217 1266!1217 1266[1220 1167 1220 1162"/>
+                        <Edge fillStyle0="3" strokeStyle="1" edges="
+!2967 323|1560 0!1560 0[682 431 2 971!2 971[154 1467 64 1718!64 1718[-78 1954 93 2207!93 2207[98 2214 103 2222"/>
+                        <Edge fillStyle0="3" fillStyle1="2" strokeStyle="1" edges="
+!2908 2565[2702 2723 2687 2734!2687 2734[2616 2786 2514 2811!2514 2811[2340 2853 2293 2861!2293 2861[2197 2877 2062 2877!2062 2877[1913 2877 1874 2849!1874 2849[1861 2840 1750 2688!1750 2688[1692 2621 1647 2559!1647 2559[1560 2440 1560
+ 2379!1560 2379[1560 2323 1597 2282!1597 2282[1630 2244 1676 2236!1676 2236[1693 2233 1769 2208!1769 2208[1844 2183 1873 2178!1873 2178[1974 2160 2080 2124!2080 2124[2140 2104 2251 2104!2251 2104[2446 2104 2669 2221!2669 2221[2779 2279
+ 2933 2379"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!1134 2611[1133 2612 1132 2614!1132 2614|1103 2614"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="
+!1134 2611[1155 2562 1156 2556!1156 2556[1158 2548 1158 2482!1158 2482[1158 2447 1142 2281!1142 2281[891 2124 789 2078!789 2078[593 1989 393 1989!393 1989[280 1989 218 2031!218 2031[139 2084 103 2222"/>
+                        <Edge fillStyle0="3" fillStyle1="2" strokeStyle="1" edges="
+!1134 2611[1151 2849 1073 3029!1073 3029[1056 3065 1010 3219!1010 3219[1001 3250 975 3316!975 3316[955 3376 955 3412!955 3412[955 3458 985 3490!985 3490[1011 3517 1040 3518!1040 3518[1074 3519 1131 3527!1131 3527[1184 3535 1223 3546!1223
+ 3546[1262 3557 1338 3494!1338 3494[1414 3430 1413 3405!1413 3405[1411 3379 1379 3272!1379 3272[1347 3165 1339 3105!1339 3105[1330 3044 1351 2934!1351 2934[1376 2801 1377 2793!1377 2793[1373 2726 1410 2646!1410 2646[1420 2602 1426 2579
+!1426 2579[1439 2535 1478 2528!1478 2528[1445 2612 1432 2699!1432 2699[1425 2748 1410 2852!1410 2852|1410 3189!1410 3189[1445 3176 1501 3214!1501 3214[1531 3235 1579 3278!1579 3278[1619 3309 1648 3348!1648 3348[1680 3392 1680 3423!1680
+ 3423[1680 3450 1622 3476!1622 3476[1563 3502 1478 3512!1478 3512[1393 3522 1380 3504!1380 3504[1367 3485 1339 3516!1339 3516[1310 3547 1277 3573!1277 3573[1243 3599 1212 3600!1212 3600[1173 3598 1147 3598!1147 3598[1095 3598 1045 3569
+!1045 3569[995 3539 989 3539!989 3539[982 3539 948 3554!948 3554[914 3569 890 3569!890 3569[858 3569 837 3497!837 3497[821 3442 821 3396!821 3396[821 3356 862 3304!862 3304[884 3276 918 3236!918 3236[943 3192 1006 3050!1006 3050[1040
+ 2972 1064 2848!1064 2848[1070 2818 1103 2614!1103 2614|928 2614!928 2614[876 2628 738 2695!738 2695[635 2745 553 2745!553 2745[481 2745 316 2680!316 2680[203 2631 161 2614"/>
+                        <Edge fillStyle0="3" strokeStyle="1" edges="
+!161 2614[149 2643 131 2671!131 2671[-58 3104 57 3485!57 3485[153 4416 336 5359!336 5359|2599 5212"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!103 2222[238 2432 161 2614"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!2933 2379[2932 2454 2908 2565"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="
+!2908 2565[2870 2729 2779 2972!2779 2972[2619 3397 2612 3493!2612 3493[2598 3695 2556 4097!2556 4097[2523 4455 2599 5212"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!2599 5212|2744 5202!2744 5202|3697 4358"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!3697 4358|4256 3862"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!3681 835[3280 3062 3697 4358"/>
+                        <Edge cubics="!2670 1290(;2670,1393 2933,2311 2933,2375q2670 1290Q2670 1346q2802 1847Q2933 2348q2933 2375);"/>
+                        <Edge cubics="!2514 2811(;2327,2856 2261,2877 2062,2877q2514 2811Q2340 2853q2293 2861Q2197 2877q2062 2877);"/>
+                        <Edge cubics="!2062 2877(;1847,2877 1880,2866 1750,2688q2062 2877Q1913 2877q1874 2849Q1861 2840q1750 2688);"/>
+                        <Edge cubics="!1750 2688(;1729,2659 1560,2477 1560,2379q1750 2688Q1692 2621q1647 2559Q1560 2440q1560 2379);"/>
+                        <Edge cubics="!1560 2379(;1560,2300 1619,2246 1676,2236q1560 2379Q1560 2323q1597 2282Q1630 2244q1676 2236);"/>
+                        <Edge cubics="!1676 2236(;1715,2229 1820,2187 1873,2178q1676 2236Q1693 2233q1769 2208Q1844 2183q1873 2178);"/>
+                        <Edge cubics="!1873 2178(;2122,2133 2050,2104 2251,2104q1873 2178Q1974 2160q2080 2124Q2140 2104q2251 2104);"/>
+                        <Edge cubics="!928 2614(;778,2655 697,2745 553,2745q928 2614Q876 2628q738 2695Q635 2745q553 2745);"/>
+                        <Edge cubics="!3171 370(;3171,370 2967,323 2967,323q3171 370 2967 323);"/>
+                        <Edge cubics="!2967 323(;2798,626 2704,863 2687,1036q2967 323Q2713 777q2687 1036);"/>
+                        <Edge cubics="!2967 323(;2967,323 1560,0 1560,0q2967 323 1560 0);"/>
+                        <Edge cubics="!2933 2379(;2932,2429 2924,2491 2908,2565q2933 2379Q2932 2454q2908 2565);"/>
+                        <Edge cubics="!2933 2375(;2933,2376 2933,2378 2933,2379q2933 2375Q2933 2377q2933 2379);"/>
+                        <Edge cubics="!2687 2734(;2640,2769 2582,2794 2514,2811q2687 2734Q2616 2786q2514 2811);"/>
+                        <Edge cubics="!2251 2104(;2381,2104 2520,2143 2669,2221q2251 2104Q2446 2104q2669 2221);"/>
+                        <Edge cubics="!2612 3493(;2603,3628 2584,3829 2556,4097q2612 3493Q2598 3695q2556 4097);"/>
+                        <Edge cubics="!2908 2565(;2771,2670 2697,2727 2687,2734q2908 2565Q2702 2723q2687 2734);"/>
+                        <Edge cubics="!2908 2565(;2883,2674 2840,2810 2779,2972q2908 2565Q2870 2729q2779 2972);"/>
+                        <Edge cubics="!2669 2221(;2742,2260 2830,2312 2933,2379q2669 2221Q2779 2279q2933 2379);"/>
+                        <Edge cubics="!2779 2972(;2672,3255 2617,3429 2612,3493q2779 2972Q2619 3397q2612 3493);"/>
+                        <Edge cubics="!4191 1299(;4191,1299 3681,835 3681,835q4191 1299 3681 835);"/>
+                        <Edge cubics="!3681 835(;3681,835 3171,370 3171,370q3681 835 3171 370);"/>
+                        <Edge cubics="!2687 1036(;2678,1123 2673,1208 2670,1290q2687 1036Q2674 1167q2670 1290);"/>
+                        <Edge cubics="!393 1989(;318,1989 259,2003 218,2031q393 1989Q280 1989q218 2031);"/>
+                        <Edge cubics="!103 2222(;193,2362 212,2493 161,2614q103 2222Q238 2432q161 2614);"/>
+                        <Edge cubics="!93 2207(;96,2212 100,2217 103,2222q93 2207Q98 2214q103 2222);"/>
+                        <Edge cubics="!316 2680(;241,2647 189,2625 161,2614q316 2680Q203 2631q161 2614);"/>
+                        <Edge cubics="!161 2614(;153,2633 143,2652 131,2671q161 2614Q149 2643q131 2671);"/>
+                        <Edge cubics="!1142 2281(;1153,2392 1158,2459 1158,2482q1142 2281Q1158 2447q1158 2482);"/>
+                        <Edge cubics="!1158 2482(;1158,2526 1157,2551 1156,2556q1158 2482Q1158 2548q1156 2556);"/>
+                        <Edge cubics="!1142 2281(;975,2176 857,2109 789,2078q1142 2281Q891 2124q789 2078);"/>
+                        <Edge cubics="!218 2031(;165,2066 127,2130 103,2222q218 2031Q139 2084q103 2222);"/>
+                        <Edge cubics="!789 2078(;658,2019 526,1989 393,1989q789 2078Q593 1989q393 1989);"/>
+                        <Edge cubics="!553 2745(;505,2745 426,2723 316,2680q553 2745Q481 2745q316 2680);"/>
+                        <Edge cubics="!64 1718(;-31,1875 -21,2038 93,2207q64 1718Q-78 1954q93 2207);"/>
+                        <Edge cubics="!131 2671(;5,2960 -12,3227 81,3473q131 2671Q-58 3104q81 3473);"/>
+                        <Edge cubics="!2 971(;103,1302 124,1551 64,1718q2 971Q154 1467q64 1718);"/>
+                        <Edge cubics="!2599 5212(;2599,5212 2744,5202 2744,5202q2599 5212 2744 5202);"/>
+                        <Edge cubics="!2556 4097(;2534,4336 2548,4707 2599,5212q2556 4097Q2523 4455q2599 5212);"/>
+                        <Edge cubics="!336 5359(;336,5359 2599,5212 2599,5212q336 5359 2599 5212);"/>
+                        <Edge cubics="!1560 0(;1560,0 2,971 2,971q1560 0 2 971);"/>
+                        <Edge cubics="!81 3473(;81,3473 336,5359 336,5359q81 3473 336 5359);"/>
+                        <Edge cubics="!3697 4358(;3697,4358 4256,3862 4256,3862q3697 4358 4256 3862);"/>
+                        <Edge cubics="!2744 5202(;2744,5202 3697,4358 3697,4358q2744 5202 3697 4358);"/>
+                        <Edge cubics="!3681 835(;3414,2320 3419,3494 3697,4358q3681 835Q3280 3062q3697 4358);"/>
+                        <Edge cubics="!3932 2630(;3932,2687 3918,2743 3890,2803q3932 2630Q3932 2713q3890 2803);"/>
+                        <Edge cubics="!3890 2803(;3872,2839 3827,2895 3844,2963q3890 2803Q3881 2821q3854 2871Q3833 2920q3844 2963);"/>
+                        <Edge cubics="!3844 2963(;3855,3008 3812,3089 3785,3106q3844 2963Q3852 2995q3829 3045Q3807 3092q3785 3106);"/>
+                        <Edge cubics="!3890 3152(;3890,3152 3966,3029 3970,3026q3890 3152Q3890 3152q3970 3026);"/>
+                        <Edge cubics="!3970 3026(;3996,3004 4050,2963 4084,2933q3970 3026Q3996 3004q4084 2933);"/>
+                        <Edge cubics="!4084 2933(;4118,2902 4146,2833 4168,2790q4084 2933Q4105 2914q4131 2866Q4145 2840q4168 2790);"/>
+                        <Edge cubics="!4168 2790(;4191,2743 4202,2675 4202,2647q4168 2790Q4184 2758q4194 2711Q4202 2672q4202 2647);"/>
+                        <Edge cubics="!4202 2647(;4202,2569 4180,2462 4099,2462q4202 2647Q4202 2575q4181 2525Q4154 2462q4099 2462);"/>
+                        <Edge cubics="!3983 2507(;3963,2520 3949,2535 3942,2552q3983 2507Q3953 2526q3942 2552);"/>
+                        <Edge cubics="!3997 2502(;3990,2505 3986,2506 3983,2507q3997 2502Q3987 2506q3983 2507);"/>
+                        <Edge cubics="!4039 2481(;4021,2490 4007,2497 3997,2502q4039 2481Q4012 2495q3997 2502);"/>
+                        <Edge cubics="!3942 2552(;3935,2569 3931,2595 3932,2630q3942 2552Q3931 2577q3932 2630);"/>
+                        <Edge cubics="!4099 2462(;4083,2462 4063,2468 4039,2481q4099 2462Q4075 2462q4039 2481);"/>
+                        <Edge cubics="!3805 3206(;3820,3211 3848,3193 3890,3152q3805 3206Q3827 3214q3890 3152);"/>
+                        <Edge cubics="!3785 3106(;3783,3167 3790,3200 3805,3206q3785 3106Q3782 3197q3805 3206);"/>
+                        <Edge cubics="!4256 3862(;4442,3229 4420,2375 4191,1299q4256 3862Q4535 2913q4191 1299);"/>
+                        <Edge cubics="!1478 2528(;1424,2667 1433,2736 1410,2852q1478 2528Q1445 2612q1432 2699Q1425 2748q1410 2852);"/>
+                        <Edge cubics="!1410 2852(;1410,2852 1410,3189 1410,3189q1410 2852 1410 3189);"/>
+                        <Edge cubics="!1410 3189(;1466,3169 1539,3247 1579,3278q1410 3189Q1445 3176q1501 3214Q1531 3235q1579 3278);"/>
+                        <Edge cubics="!1579 3278(;1628,3316 1680,3379 1680,3423q1579 3278Q1619 3309q1648 3348Q1680 3392q1680 3423);"/>
+                        <Edge cubics="!1147 3598(;1058,3598 1017,3539 989,3539q1147 3598Q1095 3598q1045 3569Q995 3539q989 3539);"/>
+                        <Edge cubics="!989 3539(;969,3539 932,3569 890,3569q989 3539Q982 3539q948 3554Q914 3569q890 3569);"/>
+                        <Edge cubics="!890 3569(;841,3569 821,3435 821,3396q890 3569Q858 3569q837 3497Q821 3442q821 3396);"/>
+                        <Edge cubics="!821 3396(;821,3331 899,3268 918,3236q821 3396Q821 3356q862 3304Q884 3276q918 3236);"/>
+                        <Edge cubics="!918 3236(;950,3180 979,3111 1006,3050q918 3236Q943 3192q1006 3050);"/>
+                        <Edge cubics="!1073 3029(;1056,3066 1032,3146 1010,3219q1073 3029Q1056 3065q1010 3219);"/>
+                        <Edge cubics="!1010 3219(;991,3280 955,3353 955,3412q1010 3219Q1001 3250q975 3316Q955 3376q955 3412);"/>
+                        <Edge cubics="!955 3412(;955,3479 1006,3517 1040,3518q955 3412Q955 3458q985 3490Q1011 3517q1040 3518);"/>
+                        <Edge cubics="!1377 2793(;1374,2739 1388,2694 1410,2646q1377 2793Q1373 2726q1410 2646);"/>
+                        <Edge cubics="!1410 2646(;1417,2617 1422,2594 1426,2579q1410 2646Q1420 2602q1426 2579);"/>
+                        <Edge cubics="!1351 2934(;1368,2845 1376,2798 1377,2793q1351 2934Q1376 2801q1377 2793);"/>
+                        <Edge cubics="!1426 2579(;1435,2550 1452,2533 1478,2528q1426 2579Q1439 2535q1478 2528);"/>
+                        <Edge cubics="!1379 3272(;1358,3201 1344,3145 1339,3105q1379 3272Q1347 3165q1339 3105);"/>
+                        <Edge cubics="!1223 3546(;1249,3553 1287,3536 1338,3494q1223 3546Q1262 3557q1338 3494);"/>
+                        <Edge cubics="!1413 3405(;1412,3388 1400,3343 1379,3272q1413 3405Q1411 3379q1379 3272);"/>
+                        <Edge cubics="!1338 3494(;1389,3451 1414,3422 1413,3405q1338 3494Q1414 3430q1413 3405);"/>
+                        <Edge cubics="!1339 3105(;1333,3064 1337,3007 1351,2934q1339 3105Q1330 3044q1351 2934);"/>
+                        <Edge cubics="!1132 2614(;1132,2614 1103,2614 1103,2614q1132 2614 1103 2614);"/>
+                        <Edge cubics="!1134 2611(;1133,2612 1133,2613 1132,2614q1134 2611Q1133 2612q1132 2614);"/>
+                        <Edge cubics="!1134 2611(;1145,2770 1125,2909 1073,3029q1134 2611Q1151 2849q1073 3029);"/>
+                        <Edge cubics="!1006 3050(;1029,2998 1048,2931 1064,2848q1006 3050Q1040 2972q1064 2848);"/>
+                        <Edge cubics="!1064 2848(;1068,2828 1081,2750 1103,2614q1064 2848Q1070 2818q1103 2614);"/>
+                        <Edge cubics="!1103 2614(;1103,2614 928,2614 928,2614q1103 2614 928 2614);"/>
+                        <Edge cubics="!1156 2556(;1155,2560 1148,2578 1134,2611q1156 2556Q1155 2562q1134 2611);"/>
+                        <Edge cubics="!1040 3518(;1063,3519 1093,3522 1131,3527q1040 3518Q1074 3519q1131 3527);"/>
+                        <Edge cubics="!1131 3527(;1166,3532 1197,3539 1223,3546q1131 3527Q1184 3535q1223 3546);"/>
+                        <Edge cubics="!1510 1348(;1510,1466 1499,1781 1372,1781q1510 1348Q1510 1501q1489 1609Q1454 1781q1372 1781);"/>
+                        <Edge cubics="!1372 1781(;1181,1781 1220,1180 1220,1162q1372 1781Q1252 1781q1224 1478Q1216 1383q1217 1266Q1220 1167q1220 1162);"/>
+                        <Edge cubics="!1500 1147(;1501,1178 1504,1210 1508,1242q1500 1147Q1502 1194q1508 1242);"/>
+                        <Edge cubics="!1508 1242(;1509,1254 1510,1289 1510,1348q1508 1242Q1510 1260q1510 1348);"/>
+                        <Edge cubics="!1680 3423(;1680,3441 1661,3459 1622,3476q1680 3423Q1680 3450q1622 3476);"/>
+                        <Edge cubics="!1380 3504(;1371,3491 1358,3495 1339,3516q1380 3504Q1367 3485q1339 3516);"/>
+                        <Edge cubics="!1478 3512(;1421,3519 1389,3516 1380,3504q1478 3512Q1393 3522q1380 3504);"/>
+                        <Edge cubics="!1277 3573(;1254,3590 1233,3599 1212,3600q1277 3573Q1243 3599q1212 3600);"/>
+                        <Edge cubics="!1622 3476(;1583,3493 1535,3505 1478,3512q1622 3476Q1563 3502q1478 3512);"/>
+                        <Edge cubics="!1339 3516(;1320,3537 1299,3556 1277,3573q1339 3516Q1310 3547q1277 3573);"/>
+                        <Edge cubics="!1212 3600(;1186,3599 1164,3598 1147,3598q1212 3600Q1173 3598q1147 3598);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

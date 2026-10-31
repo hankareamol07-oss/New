@@ -1,0 +1,235 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Shoe copy 47" itemID="63b97ec9-00000b03" symbolType="graphic" lastModified="1680085298">
+  <timeline>
+    <DOMTimeline name="Shoe copy 47" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E8A17E"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#A06541"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1715 -240|161 -368!210 415[#EF.1F #1D9.04 295 585!295 585[#15E.C5 #2B9.06 524 826!524 826[#2B9.4C #3BA.F3 852 1029!852 1029[#35D.17 #412.FA 943 1086.5!943 1086.5[#400.E5 #469.F 1420 1028!1420 1028[#67B.5 #3B9.BF 1686 823!1686 823[#6B0.A1
+ #2B4.3 1699 637!1699 637[#65D.EE #1EB.8F 1689 408"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="
+!1689 408[#618.69 #191.7 1497 360!1497 360[#5F8.EB #EC.3E 1564 138!1564 138[#667.A #FFFFB6.A5 1715 -240"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!210 415[197 225 186 46!186 46[172 -169 161 -368"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" locked="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix ty="-231.85"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix ty="-231.85"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#020303"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#492400"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#351A00"/>
+                        </FillStyle>
+                        <FillStyle index="4">
+                          <SolidColor color="#482600"/>
+                        </FillStyle>
+                        <FillStyle index="5">
+                          <SolidColor color="#090007"/>
+                        </FillStyle>
+                        <FillStyle index="6">
+                          <SolidColor color="#472600"/>
+                        </FillStyle>
+                        <FillStyle index="7">
+                          <SolidColor/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#261401"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!2850 5097[3017 5031 2969 4933!2969 4933[2840 4827 2655 4926!2655 4926[2774 5003 2850 5097"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!2970 5621[3030 5418 2931 5164!2931 5164[2999 5143 3053 5069!3053 5069[3162 4881 3004 4813!3004 4813[2809 4758 2478 4849!2478 4849[2305 4849 2240 4939"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="
+!2416 4996[2362 5013 2342 5047!2342 5047[2424 5157 2591 5148"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!2240 4939[2218 4968 2207 5007"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!2207 5007[2196 5048 2198 5102!2198 5102[2194 5106 2192 5111!2192 5111[2122 5215 2180 5321!2180 5321|2096 5482!2096 5482[2062 5496 2030 5509!2030 5509[1780 5617 1658 5777"/>
+                        <Edge fillStyle0="1" fillStyle1="4" strokeStyle="1" edges="
+!1658 5777[1630 5811 1610 5848!1610 5848[1577 5911 1556 5971"/>
+                        <Edge fillStyle0="1" fillStyle1="6" strokeStyle="1" edges="
+!1556 5971[1491 6154 1541 6312"/>
+                        <Edge fillStyle0="1" fillStyle1="4" strokeStyle="1" edges="
+!1541 6312[1553 6346 1568 6378!1568 6378[1652 6577 1843 6557"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!1843 6557[1868 6554 1895 6547!1895 6547[2009 6497 2064 6086!2064 6086[2069 6069 2074 6052"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="2" edges="
+!1697 5261[1640 5112 1708 5039"/>
+                        <Edge fillStyle1="3" strokeStyle="2" edges="
+!1708 5039[1898 4905 2094 4960"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="2" edges="
+!2094 4960[2150 4974 2207 5007"/>
+                        <Edge fillStyle0="3" fillStyle1="4" strokeStyle="2" edges="
+!1622 5590[1632 5685 1658 5777!2334 5609[2355 5619 2377 5630!2338 5659[2334 5656 2330 5652"/>
+                        <Edge fillStyle0="3" fillStyle1="5" strokeStyle="1" edges="
+!2329 5667[2334 5662 2338 5659"/>
+                        <Edge fillStyle0="4" fillStyle1="5" strokeStyle="1" edges="
+!2338 5659[2357 5645 2377 5630"/>
+                        <Edge fillStyle0="3" fillStyle1="5" strokeStyle="1" edges="
+!2377 5630[2467 5564 2569 5498!2569 5498[2599 5478 2645 5514!2645 5514[2679 5544 2653 5564!2653 5564[2556 5624 2473 5688"/>
+                        <Edge fillStyle0="4" fillStyle1="5" strokeStyle="1" edges="
+!2473 5688[2438 5714 2405 5743"/>
+                        <Edge fillStyle0="3" fillStyle1="5" strokeStyle="1" edges="
+!2405 5743[2354 5786 2309 5832"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!2329 5667[2330 5659 2330 5652"/>
+                        <Edge fillStyle0="1" fillStyle1="4" strokeStyle="1" edges="
+!2330 5652[2332 5630 2334 5609"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!2334 5609[2337 5572 2339 5534!2339 5534[2445 5381 2410 5201!2410 5201[2461 5220 2519 5229"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!2519 5229[2589 5238 2670 5233"/>
+                        <Edge fillStyle0="3" fillStyle1="5" strokeStyle="1" edges="
+!2120 5854[2166 5807 2220 5759"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!2120 5854[2145 5728 2161 5598!2161 5598[2203 5557 2251 5578!2251 5578[2237 5669 2220 5759"/>
+                        <Edge fillStyle0="1" fillStyle1="5" strokeStyle="1" edges="
+!2309 5832[2322 5749 2329 5667"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!1943 6175[1926 6202 1910 6229"/>
+                        <Edge fillStyle0="1" fillStyle1="4" strokeStyle="1" edges="
+!1910 6229[1856 6328 1838 6435!1838 6435[1648 6458 1617 6282"/>
+                        <Edge fillStyle0="1" fillStyle1="6" strokeStyle="1" edges="
+!1617 6282[1603 6211 1616 6110!1616 6110[1654 6001 1706 5915"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!1706 5915[1835 5698 2051 5618!2051 5618[2011 5914 1943 6175"/>
+                        <Edge fillStyle0="3" fillStyle1="3" strokeStyle="2" edges="
+!1622 5590[1742 5485 1697 5261"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!2591 5148[2648 5143 2714 5127!2714 5127[2640 5056 2520 4980!2520 4980[2458 4984 2416 4996"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!2670 5233[2732 5228 2800 5214!2800 5214[2872 5370 2883 5522"/>
+                        <Edge fillStyle0="3" fillStyle1="5" strokeStyle="1" edges="
+!2818 5660[2848 5639 2888 5685!2888 5685[2917 5726 2890 5750!2890 5750[2858 5773 2828 5794!2828 5794[2790 5821 2755 5852"/>
+                        <Edge fillStyle0="4" fillStyle1="5" strokeStyle="1" edges="
+!2755 5852[2654 5934 2568 6025"/>
+                        <Edge fillStyle0="3" fillStyle1="5" strokeStyle="1" edges="
+!2568 6025[2524 6073 2484 6123!2484 6123[2416 6207 2361 6298!2361 6298[2311 6342 2257 6294!2257 6294[2226 6269 2235 6228!2235 6228[2338 6081 2481 5940!2481 5940[2497 5924 2514 5909"/>
+                        <Edge fillStyle0="4" fillStyle1="5" strokeStyle="1" edges="
+!2514 5909[2577 5850 2645 5793"/>
+                        <Edge fillStyle0="3" fillStyle1="5" strokeStyle="1" edges="
+!2645 5793[2653 5787 2660 5781!2660 5781[2735 5720 2818 5660"/>
+                        <Edge fillStyle0="3" fillStyle1="4" strokeStyle="2" edges="
+!2473 5688[2561 5744 2645 5793"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!2883 5522[2884 5537 2885 5552"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!2885 5552[2886 5592 2882 5632!2882 5632[2926 5670 2963 5638!2963 5638[2967 5629 2970 5621"/>
+                        <Edge fillStyle0="4" strokeStyle="1" edges="
+!4591 7266[4678 7022 4478 6787!4478 6787[4147 6397 3640 6097"/>
+                        <Edge fillStyle0="3" strokeStyle="1" edges="
+!3640 6097[3619 6085 3597 6073!3597 6073[3334 5924 3196 5759!3196 5759[3112 5672 2970 5621"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!2883 5522[2777 5357 2670 5233"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="2" edges="
+!2519 5229[2699 5355 2885 5552"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!2240 4939[2163 4931 2094 4960!2591 5148[2505 5058 2416 4996"/>
+                        <Edge fillStyle0="3" fillStyle1="4" strokeStyle="2" edges="
+!2514 5909[2470 5828 2405 5743"/>
+                        <Edge fillStyle1="6" strokeStyle="1" edges="
+!36 6020[18 5690 55 5349"/>
+                        <Edge fillStyle1="4" strokeStyle="1" edges="
+!55 5349[72 5184 103 5017"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="
+!103 5017[81 4870 149 4744!149 4744[362 4483 1194 4860!1194 4860[1497 5031 1708 5039"/>
+                        <Edge fillStyle0="4" fillStyle1="2" strokeStyle="2" edges="
+!956 5749[609 5723 325 5442!325 5442[133 5213 103 5017"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="2" edges="
+!956 5749[133 5321 247 4967!247 4967[460 4708 1198 5141!1198 5141[1413 5258 1697 5261"/>
+                        <Edge fillStyle0="6" fillStyle1="4" strokeStyle="2" edges="
+!1028 6710[1156 6475 1541 6312"/>
+                        <Edge fillStyle0="6" fillStyle1="7" strokeStyle="1" edges="
+!36 6020[319 6348 680 6509!680 6509[836 6579 1028 6710"/>
+                        <Edge fillStyle0="4" fillStyle1="7" strokeStyle="1" edges="
+!1028 6710[1275 6878 1581 7146!1581 7146[1879 7407 2234 7521!2234 7521[3916 8017 4501 7431!4501 7431[4563 7348 4591 7266"/>
+                        <Edge fillStyle0="7" strokeStyle="1" edges="
+!36 6020[-48 6334 63 6614!63 6614[225 6831 545 7044!545 7044[656 7118 807 7067!807 7067[927 7050 1116 7193!1116 7193[1303 7335 1459 7515!1459 7515[1912 7980 2704 8118!2704 8118[4021 8407 4592 7906!4592 7906[4862 7614 4591 7266"/>
+                        <Edge fillStyle0="6" fillStyle1="4" strokeStyle="2" edges="
+!1556 5971[1073 6136 647 5977!647 5977[208 5753 55 5349"/>
+                        <Edge fillStyle0="3" fillStyle1="4" strokeStyle="2" edges="
+!2056 6923[2168 6993 2309 6972!2309 6972[2646 6769 2608 6204!2608 6204[2603 6118 2568 6025"/>
+                        <Edge fillStyle0="3" fillStyle1="5" strokeStyle="1" edges="
+!2172 5991[2157 6012 2143 6033!2143 6033[2110 6058 2074 6052"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!2172 5991[2138 6142 2096 6289!2096 6289[2038 6583 1962 6844"/>
+                        <Edge fillStyle0="1" fillStyle1="4" strokeStyle="1" edges="
+!1962 6844[1947 6893 1932 6942!1932 6942[1757 7165 1912 7199!1912 7199[2005 7198 2026 7004!2026 7004[2041 6964 2056 6923"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!2056 6923[2148 6644 2177 6376!2177 6376[2267 6099 2309 5832"/>
+                        <Edge fillStyle0="3" fillStyle1="4" strokeStyle="2" edges="
+!1881 6195[1895 6212 1910 6229!1843 6557[1843 6687 1914 6786!1914 6786[1937 6818 1962 6844"/>
+                        <Edge fillStyle0="1" fillStyle1="5" strokeStyle="1" edges="
+!2220 5759[2198 5877 2172 5991!2074 6052[2100 5953 2120 5854"/>
+                        <Edge fillStyle0="3" fillStyle1="4" strokeStyle="2" edges="
+!956 5749[1265 5771 1622 5590"/>
+                        <Edge fillStyle0="3" fillStyle1="6" strokeStyle="2" edges="
+!1706 5915[1770 6062 1881 6195"/>
+                        <Edge fillStyle0="6" fillStyle1="4" strokeStyle="2" edges="
+!1617 6282[1737 6235 1881 6195"/>
+                        <Edge fillStyle0="3" fillStyle1="4" strokeStyle="2" edges="
+!2755 5852[3251 6112 3640 6097"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,86 @@
+{
+ "name": "all_village_man_stand",
+ "label": "Village Man Stand",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Village Man Stand",
+  "frame": 0,
+  "bounds": [
+   1248.0,
+   20.0,
+   1664.0,
+   1048.0
+  ],
+  "faces": "left",
+  "head": "VM_Head",
+  "neck": [
+   1454.75,
+   300.22
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 14": {
+    "closed": 0,
+    "mid": 8,
+    "open": 24
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyes copy 24": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/Left Eyebrow copy 16": {
+    "open": 0,
+    "blink": []
+   },
+   "Duplicate Items Folder/Right Eyebrow copy 16": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "VM_RHand",
+   "fore": "VM_RHand2",
+   "shoulder": [
+    1407.75,
+    357.6
+   ],
+   "elbow": [
+    1388.21,
+    493.92
+   ]
+  },
+  "arm_back": {
+   "upper": "VM_LHand",
+   "fore": "VM_LHand2",
+   "shoulder": [
+    1588.25,
+    350.34
+   ],
+   "elbow": [
+    1593.39,
+    485.18
+   ]
+  },
+  "legs": [
+   "VM_LLeg2"
+  ],
+  "hips": {
+   "VM_LLeg2": [
+    1514.75,
+    831.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Village Man Stand"
+}

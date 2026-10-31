@@ -1,0 +1,94 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/King LPuple" itemID="63d288b9-00000811" lastModified="1661532800">
+  <timeline>
+    <DOMTimeline name="King LPuple" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="91.7" ty="-33.65"/>
+                  </matrix>
+                  <members>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix tx="91.7" ty="-33.65"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix tx="91.7" ty="-33.65"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#802900"/>
+                            </FillStyle>
+                            <FillStyle index="2">
+                              <SolidColor color="#341000"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle0="1" fillStyle1="2" edges="!-1400 937S3[-1400 1016 -1454 1072!-1454 1072[-1507 1129 -1583 1129!-1583 1129[-1659 1129 -1713 1072!-1713 1072[-1766 1016 -1766 937!-1766 937[-1766 857 -1713 801!-1713 801[-1659 745 -1583 745!-1583 745[-1507 745 -1454 801!-1454 801[-1400
+ 857 -1400 937"/>
+                            <Edge fillStyle1="1" edges="
+!-1332 936S2[-1332 1045 -1406 1122!-1406 1122[-1479 1199 -1583 1199!-1583 1199[-1687 1199 -1761 1122!-1761 1122[-1834 1045 -1834 936!-1834 936[-1834 827 -1761 750!-1761 750[-1687 673 -1583 673!-1583 673[-1479 673 -1406 750!-1406 750[-1332
+ 827 -1332 936"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix a="0.677780151367188" d="0.677780151367188" tx="68.45" ty="-16.25"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix a="0.677780151367188" d="0.677780151367188" tx="68.45" ty="-16.25"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!-1351 1080S2[-1351 1119 -1377 1146!-1377 1146[-1403 1174 -1441 1174!-1441 1174[-1478 1174 -1504 1146!-1504 1146[-1531 1119 -1531 1080!-1531 1080[-1531 1041 -1504 1013!-1504 1013[-1478 985 -1441 985!-1441 985[-1403 985 -1377 1013!-1377
+ 1013[-1351 1041 -1351 1080"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix a="0.33135986328125" d="0.33135986328125" tx="29.15" ty="-9.5"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix a="0.33135986328125" d="0.33135986328125" tx="29.15" ty="-9.5"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!-1351 1080S2[-1351 1119 -1377 1146!-1377 1146[-1403 1174 -1441 1174!-1441 1174[-1478 1174 -1504 1146!-1504 1146[-1531 1119 -1531 1080!-1531 1080[-1531 1041 -1504 1013!-1504 1013[-1478 985 -1441 985!-1441 985[-1403 985 -1377 1013!-1377
+ 1013[-1351 1041 -1351 1080"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

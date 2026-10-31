@@ -1,0 +1,47 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Finger2 copy" itemID="650ab274-00000731" symbolType="graphic" lastModified="1738398230">
+  <timeline>
+    <DOMTimeline name="Finger2 copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FEBC95"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.1">
+                            <fill>
+                              <SolidColor color="#FEA082"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-7 157[-48 42 6 -183!6 -183[11 -206 4 -233!221 279[223 210 216 140!216 140[238 135 260 130!167 149[191 145 216 140!167 149[166 214 173 276!173 276[115 275 75 254"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-150 482[-171 543 -196 594!-196 594[-238 689 -294 675!-294 675[-369 635 -294 463!-294 463[-246 299 -251 131!-251 131[#FFFDE7.03 #FFFF02.F2 -460 -819!-460 -819|79 -858!79 -858[#1DB.73 #FFFE85.71 405 287!405 287[360 548 246 802!246 802
+[79 862 166 596!166 596[217 440 221 279"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!246 -358[166 -80 167 149!-207 92[-124 147 -7 157!-150 482[-102 344 -72 156!-86 812[-81 745 -32 631!-32 631[47 443 75 254"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-86 812[-206 827 -169 666!-169 666[-143 574 -150 482!221 279[54 924 -51 893!-51 893[-91 883 -86 812"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!75 254[17 225 -7 157!4 -233[-8 -275 -49 -324!-187 -544[-222 -208 4 -233"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

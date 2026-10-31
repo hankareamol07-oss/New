@@ -1,0 +1,84 @@
+{
+ "name": "riya",
+ "label": "रिया (टॉप)",
+ "gender": "female",
+ "pack": "3D Women Character",
+ "rig": {
+  "root": "Duplicate Items Folder/girl copy 2",
+  "frame": 0,
+  "bounds": [
+   388.0,
+   -272.0,
+   728.0,
+   896.0
+  ],
+  "faces": "right",
+  "head": "Layer_14",
+  "neck": [
+   467.5,
+   93.7
+  ],
+  "mouth": {
+   "Duplicate Items Folder/ajdadj copy 4": {
+    "closed": 0,
+    "mid": 6,
+    "open": 9
+   }
+  },
+  "eyes": {
+   "Eyes": {
+    "open": 0,
+    "blink": [
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Layer_11",
+   "fore": "Layer_12",
+   "shoulder": [
+    618.25,
+    4.78
+   ],
+   "elbow": [
+    653.57,
+    136.25
+   ]
+  },
+  "arm_back": {
+   "upper": "Layer_2",
+   "fore": "Layer_10",
+   "shoulder": [
+    459.5,
+    -13.38
+   ],
+   "elbow": [
+    439.61,
+    132.32
+   ]
+  },
+  "legs": [
+   "Layer_13",
+   "Layer_9"
+  ],
+  "hips": {
+   "Layer_13": [
+    511.75,
+    308.0
+   ],
+   "Layer_9": [
+    614.75,
+    317.5
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/girl copy 2"
+}

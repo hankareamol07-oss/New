@@ -1,0 +1,123 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="F1 LEB" itemID="6308b076-00000241" symbolType="graphic" lastModified="1678730008">
+  <timeline>
+    <DOMTimeline name="F1 LEB" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#2A2A2A"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!803 255[#305.E #95.1A 641.5 73!641.5 73[#1FD.5E #FFFFFC.AF 304.5 105!304.5 105[#63.A1 #D5.5 47.5 209!47.5 209[#FFFFFB.1F #CC.E5 38 233!38 233[54 244 83 255!83 255|163 226!163 226[261 195 356 179!356 179[657 128 803 255"/>
+                        <Edge cubics="!38 233(;50,241 65,248 83,255q38 233Q54 244q83 255);"/>
+                        <Edge cubics="!83 255(;83,255 570,52 803,255q83 255Q83 255q163 226Q261 195q356 179Q657 128q803 255);"/>
+                        <Edge cubics="!803 255(;784,184 730,124 642,73q803 255Q774 149q642 73);"/>
+                        <Edge cubics="!642 73(;553,22 441,33 305,105q642 73Q509 -3q305 105);"/>
+                        <Edge cubics="!305 105(;168,177 83,212 48,209q305 105Q100 213q48 209);"/>
+                        <Edge cubics="!48 209(;13,206 9,214 38,233q48 209Q-5 205q38 233);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="0.93975830078125" b="-0.341796875" c="0.341796875" d="0.93975830078125" tx="-1.25" ty="7.45"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="0.93975830078125" b="-0.341796875" c="0.341796875" d="0.93975830078125" tx="-1.25" ty="7.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#2A2A2A"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!803 255[774 149 642 73!642 73[509 -3 305 105!305 105[100 213 48 209!48 209[-5 205 38 233!38 233[54 244 83 255!83 255|163 226!163 226[261 195 356 179!356 179[657 128 803 255"/>
+                        <Edge cubics="!38 233(;50,241 65,248 83,255q38 233Q54 244q83 255);"/>
+                        <Edge cubics="!83 255(;83,255 570,52 803,255q83 255Q83 255q163 226Q261 195q356 179Q657 128q803 255);"/>
+                        <Edge cubics="!803 255(;784,184 730,124 642,73q803 255Q774 149q642 73);"/>
+                        <Edge cubics="!642 73(;553,22 441,33 305,105q642 73Q509 -3q305 105);"/>
+                        <Edge cubics="!305 105(;168,177 83,212 48,209q305 105Q100 213q48 209);"/>
+                        <Edge cubics="!48 209(;13,206 9,214 38,233q48 209Q-5 205q38 233);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="0.93975830078125" b="0.341796875" c="0.341796875" d="-0.93975830078125" tx="-1.25" ty="7.4"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="0.93975830078125" b="0.341796875" c="0.341796875" d="-0.93975830078125" tx="-1.25" ty="7.4"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#2A2A2A"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!803 255[774 149 642 73!642 73[509 -3 305 105!305 105[100 213 48 209!48 209[-5 205 38 233!38 233[54 244 83 255!83 255|163 226!163 226[261 195 356 179!356 179[657 128 803 255"/>
+                        <Edge cubics="!38 233(;50,241 65,248 83,255q38 233Q54 244q83 255);"/>
+                        <Edge cubics="!83 255(;83,255 570,52 803,255q83 255Q83 255q163 226Q261 195q356 179Q657 128q803 255);"/>
+                        <Edge cubics="!803 255(;784,184 730,124 642,73q803 255Q774 149q642 73);"/>
+                        <Edge cubics="!642 73(;553,22 441,33 305,105q642 73Q509 -3q305 105);"/>
+                        <Edge cubics="!305 105(;168,177 83,212 48,209q305 105Q100 213q48 209);"/>
+                        <Edge cubics="!48 209(;13,206 9,214 38,233q48 209Q-5 205q38 233);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

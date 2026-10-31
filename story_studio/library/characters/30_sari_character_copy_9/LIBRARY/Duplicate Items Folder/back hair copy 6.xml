@@ -1,0 +1,52 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/back hair copy 6" itemID="6565bb51-00006217" symbolType="graphic" lastModified="1701072033">
+  <timeline>
+    <DOMTimeline name="back hair copy 6" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="0.94781494140625" d="0.94781494140625" tx="-1278.6" ty="-443.8"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix a="0.94781494140625" d="0.94781494140625" tx="-1278.6" ty="-443.8"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#1F1F1D"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#1F1E1B"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!27392 7820S6[27899 7475 28191 7651!28191 7651[27765 7840 27667 8038!27667 8038[28134 8092 28318 8482!28318 8482[27692 8365 27353 8549"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!27667 8038S7[27463 8084 27226 8202"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!27226 8202S5[27203 8220 27122 8257!27122 8257[27119 8258 27116 8259"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!27116 8259S7[27268 8436 27353 8549"/>
+                        <Edge fillStyle0="1" edges="!27116 8259S1[27234 8191 27233 8194!27233 8194[27231 8197 27226 8202"/>
+                        <Edge fillStyle1="1" edges="!26530 8958S2[26937 8686 27116 8259"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!27353 8549S6[27970 8947 27904 10142!27904 10142[27838 11337 26404 11095!26404 11095[25585 10853 25646 10232!25646 10232[25691 9362 26530 8958"/>
+                        <Edge fillStyle0="1" edges="!27392 7820S1[27330 7999 27116 8259"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

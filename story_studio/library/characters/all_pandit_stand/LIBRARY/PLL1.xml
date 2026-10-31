@@ -1,0 +1,62 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="PLL1" itemID="630e8f6c-000085a4" symbolType="graphic" lastModified="1661898604">
+  <timeline>
+    <DOMTimeline name="PLL1" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-327.5" ty="-869.4"/>
+                  </matrix>
+                  <members>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix tx="-327.5" ty="-869.4"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix tx="-327.5" ty="-869.4"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FCAF42"/>
+                            </FillStyle>
+                          </fills>
+                          <strokes>
+                            <StrokeStyle index="1">
+                              <SolidStroke scaleMode="normal" weight="2">
+                                <fill>
+                                  <SolidColor color="#B96C00"/>
+                                </fill>
+                              </SolidStroke>
+                            </StrokeStyle>
+                          </strokes>
+                          <edges>
+                            <Edge fillStyle0="1" strokeStyle="1" edges="!6730 26493S5|6804 26563!6804 26563[6901 26648 7017 26723!7017 26723[7386 26962 7799 27008!7799 27008[8376 27072 8958 26740!8958 26740[9684 26326 10376 25314!10376 25314[10462 23445 10434 21534!10434 21534[10379 17712 9808 17500!9808
+ 17500[9322 17320 8807 17430!8807 17430[8080 17586 7568 18317!7568 18317[6915 19251 6679 21044!6679 21044[6397 23194 6730 26493"/>
+                            <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!9039 21213S7|9070 21318!9070 21318[9115 21445 9186 21558!9186 21558[9412 21922 9808 22011!8809 22405|8812 22478!8812 22478[8822 22569 8862 22663!8862 22663[8989 22964 9360 23175!8831 24086|8700 24322!8700 24322[8527 24595 8320 24782
+!8320 24782[7658 25380 6903 24891"/>
+                            <Edge cubics="!6730 26493(;6730,26493 8364,28258 10376,25314q6730 26493Q6730 26493q6804 26563Q6901 26648q7017 26723Q7386 26962q7799 27008Q8376 27072q8958 26740Q9684 26326q10376 25314);"/>
+                            <Edge cubics="!10376 25314(;10376,25314 10721,17839 9808,17500q10376 25314Q10462 23445q10434 21534Q10379 17712q9808 17500);"/>
+                            <Edge cubics="!9808 17500(;8894,17161 5774,17021 6730,26493q9808 17500Q9322 17320q8807 17430Q8080 17586q7568 18317Q6915 19251q6679 21044Q6397 23194q6730 26493);"/>
+                            <Edge cubics="!8831 24086(;8831,24086 8111,25674 6903,24891q8831 24086Q8831 24086q8700 24322Q8527 24595q8320 24782Q7658 25380q6903 24891);"/>
+                            <Edge cubics="!9039 21213(;9039,21213 9175,21868 9808,22011q9039 21213Q9039 21213q9070 21318Q9115 21445q9186 21558Q9412 21922q9808 22011);"/>
+                            <Edge cubics="!8809 22405(;8809,22405 8767,22837 9360,23175q8809 22405Q8809 22405q8812 22478Q8822 22569q8862 22663Q8989 22964q9360 23175);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,83 @@
+{
+ "name": "all_tantrik_stand",
+ "label": "Tantrik Stand",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Tantrik Stand",
+  "frame": 0,
+  "bounds": [
+   4.0,
+   -40.0,
+   368.0,
+   976.0
+  ],
+  "faces": "left",
+  "head": "Tantrik_Head",
+  "neck": [
+   149.25,
+   426.98
+  ],
+  "mouth": {
+   "Duplicate Items Folder/F2 Lips copy 9": {
+    "closed": 0,
+    "mid": 8,
+    "open": 32
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/F2 Eyes copy 9": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "T_LH",
+   "fore": "T_LH2",
+   "shoulder": [
+    134.25,
+    281.06
+   ],
+   "elbow": [
+    132.99,
+    404.32
+   ]
+  },
+  "arm_back": {
+   "upper": "T_RH",
+   "fore": "T_RH2",
+   "shoulder": [
+    297.25,
+    289.94
+   ],
+   "elbow": [
+    316.89,
+    397.1
+   ]
+  },
+  "legs": [
+   "T_LLeg",
+   "T_RLeg"
+  ],
+  "hips": {
+   "T_LLeg": [
+    148.5,
+    737.0
+   ],
+   "T_RLeg": [
+    259.25,
+    748.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Tantrik Stand"
+}

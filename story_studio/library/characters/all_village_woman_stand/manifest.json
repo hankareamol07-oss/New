@@ -1,0 +1,79 @@
+{
+ "name": "all_village_woman_stand",
+ "label": "Village Woman Stand",
+ "gender": "female",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Village Woman Stand",
+  "frame": 0,
+  "bounds": [
+   -60.0,
+   24.0,
+   472.0,
+   1468.0
+  ],
+  "faces": "right",
+  "head": "Head",
+  "neck": [
+   232.75,
+   308.66
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 11": {
+    "closed": 16,
+    "mid": 4,
+    "open": 20
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyes copy 11": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/Left Eyebrow copy 10": {
+    "open": 0,
+    "blink": []
+   },
+   "Duplicate Items Folder/Right Eyebrow copy 10": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "LH",
+   "fore": "LHand2",
+   "shoulder": [
+    300.75,
+    383.02
+   ],
+   "elbow": [
+    308.2,
+    586.75
+   ]
+  },
+  "arm_back": {
+   "upper": "RWH",
+   "fore": "RWH2",
+   "shoulder": [
+    76.0,
+    411.3
+   ],
+   "elbow": [
+    53.7,
+    583.2
+   ]
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Village Woman Stand"
+}

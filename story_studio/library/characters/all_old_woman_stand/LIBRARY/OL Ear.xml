@@ -1,0 +1,79 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="OL Ear" itemID="63b1eddc-00011b52" symbolType="graphic" lastModified="1672605148">
+  <timeline>
+    <DOMTimeline name="OL Ear" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-20.15" ty="-130.65"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-20.15" ty="-130.65"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#CD8669"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#B97356"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#6E3C28"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!511 2904S7[511 2862 521 2824!521 2824[542 2747 596 2768!596 2768[#271.AE #ADC.72 654 2809.5!654 2809.5[#2A5.78 #B11.D4 700 2869.5"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!866 2946S5|798 2794!798 2794[787 2775 776 2757!776 2757[703 2636 629 2617!629 2617[529 2592 456 2723!456 2723[385 2852 410 3005!410 3005[434 3149 548 3276!548 3276[564 3294 579 3309!579 3309[666 3394 720 3380!720 3380[789 3362 825 3332
+!825 3332[873 3292 891 3216"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!700 2869.5S7|677 2857!677 2857[#299.02 #B22.C8 654 2847!654 2847[#280.3A #B1A.1D 628 2841!628 2841[553 2832 544 2938"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!700 2869.5S7[#2C0.81 #B3C.A9 709 2884.5!709 2884.5[#2C7.81 #B48.96 714 2893!714 2893[769 2993 731 3005!731 3005[691 3019 680 3041!680 3041[#29D.22 #BF9.B4 687.5 3110"/>
+                        <Edge fillStyle1="1" edges="
+!866 2946S2[#38E.78 3081 891 3216"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="
+!687.5 3110S3[#206.9F #BFB.E3 511 2904"/>
+                        <Edge cubics="!511 2904(;511,2904 511,2735 596,2768q511 2904Q511 2862q521 2824Q542 2747q596 2768);"/>
+                        <Edge cubics="!596 2768(;616,2776 636,2791 654,2810q596 2768Q626 2780q654 2810);"/>
+                        <Edge cubics="!654 2810(;671,2827 686,2847 700,2870q654 2810p700 2870);"/>
+                        <Edge cubics="!714 2893(;751,2960 756,2997 731,3005q714 2893Q769 2993q731 3005);"/>
+                        <Edge cubics="!866 2946(;866,2946 832,2848 776,2757q866 2946 798 2794 776 2757);"/>
+                        <Edge cubics="!776 2757(;737,2692 687,2632 629,2617q776 2757Q703 2636q629 2617);"/>
+                        <Edge cubics="!629 2617(;494,2584 376,2803 410,3005q629 2617Q529 2592q456 2723Q385 2852q410 3005);"/>
+                        <Edge cubics="!720 3380(;798,3360 866,3326 891,3216q720 3380Q789 3362q825 3332Q873 3292q891 3216);"/>
+                        <Edge cubics="!548 3276(;559,3288 569,3299 579,3309q548 3276Q564 3294p579 3309);"/>
+                        <Edge cubics="!410 3005(;426,3101 471,3191 548,3276q410 3005Q434 3149q548 3276);"/>
+                        <Edge cubics="!579 3309(;638,3366 684,3389 720,3380p579 3309Q666 3394q720 3380);"/>
+                        <Edge cubics="!700 2870(;703,2875 706,2880 709,2885p700 2870Q705 2877q709 2885);"/>
+                        <Edge cubics="!709 2885(;711,2888 713,2890 714,2893q709 2885Q712 2889q714 2893);"/>
+                        <Edge cubics="!680 3041(;673,3058 675,3081 688,3110q680 3041Q669 3066q688 3110);"/>
+                        <Edge cubics="!731 3005(;704,3014 687,3026 680,3041q731 3005Q691 3019q680 3041);"/>
+                        <Edge cubics="!688 3110(;575,3082 516,3013 511,2904q688 3110Q519 3068q511 2904);"/>
+                        <Edge cubics="!700 2870(;700,2870 677,2857 677,2857p700 2870q677 2857);"/>
+                        <Edge cubics="!628 2841(;578,2835 550,2867 544,2938q628 2841Q553 2832q544 2938);"/>
+                        <Edge cubics="!654 2847(;645,2844 636,2842 628,2841q654 2847Q640 2842q628 2841);"/>
+                        <Edge cubics="!677 2857(;669,2853 661,2850 654,2847q677 2857Q665 2851q654 2847);"/>
+                        <Edge cubics="!866 2946(;895,3036 904,3126 891,3216q866 2946Q910 3081q891 3216);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

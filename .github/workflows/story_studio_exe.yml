@@ -1,0 +1,54 @@
+name: Story Studio Windows exe
+on:
+  push:
+    branches: [devin/1791711512-story-studio]
+    paths: [story_studio/**, yt_studio/ytstudio/**, .github/workflows/story_studio_exe.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: story_studio
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: python -m pip install pyinstaller -r requirements.txt
+      - name: Smoke test (headless import + one preview frame)
+        run: python -c "from engine import render; s=render.load('stories/sample_imandar_ramesh.json'); render.preview(s).save('preview.png'); print('ok')"
+      - name: Build exe
+        shell: cmd
+        run: >-
+          python -m PyInstaller --noconfirm --onefile --windowed --name StoryStudio --paths . --paths ..\yt_studio
+          --hidden-import skia --hidden-import lxml.etree --hidden-import lxml._elementpath --hidden-import edge_tts
+          --hidden-import ytstudio.llm --collect-submodules engine --collect-all edge_tts gui.py
+      - name: Add ffmpeg
+        shell: pwsh
+        run: |
+          Invoke-WebRequest https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile ff.zip
+          Expand-Archive ff.zip -DestinationPath ff
+          Copy-Item (Get-ChildItem ff -Recurse -Filter ffmpeg.exe | Select-Object -First 1).FullName .
+      - name: Package
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory StoryStudio | Out-Null
+          Copy-Item dist\StoryStudio.exe, ffmpeg.exe, README.md, config.example.json StoryStudio\
+          Copy-Item -Recurse assets, library, stories StoryStudio\
+          Compress-Archive StoryStudio\* StoryStudio_Windows.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: StoryStudio_Windows
+          path: story_studio/StoryStudio_Windows.zip
+      - name: Publish download (release story-studio-latest)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: story-studio-latest
+          name: Story Studio (Windows)
+          prerelease: true
+          target_commitish: ${{ github.sha }}
+          files: story_studio/StoryStudio_Windows.zip

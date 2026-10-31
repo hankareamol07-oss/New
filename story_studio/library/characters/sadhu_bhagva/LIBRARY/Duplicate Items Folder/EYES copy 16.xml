@@ -1,0 +1,28 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/EYES copy 16" itemID="6218b6d7-00008f33" symbolType="graphic" lastModified="1601299809">
+  <timeline>
+    <DOMTimeline name="EYES copy 16" currentFrame="16" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="47" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMSymbolInstance libraryItemName="Duplicate Items Folder/man eyes copy" selected="true" symbolType="graphic" loop="loop">
+                      <matrix>
+                        <Matrix a="-4.39959716796875" b="0.599334716796875" c="0.599334716796875" d="4.39959716796875" tx="118.15"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="13.45" y="5.75"/>
+                      </transformationPoint>
+                    </DOMSymbolInstance>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

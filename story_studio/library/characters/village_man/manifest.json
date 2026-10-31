@@ -1,0 +1,91 @@
+{
+ "name": "village_man",
+ "label": "MAN",
+ "gender": "male",
+ "pack": "Village man complete  1 ",
+ "rig": {
+  "root": "MAN",
+  "frame": 0,
+  "bounds": [
+   1104.0,
+   -40.0,
+   1468.0,
+   1096.0
+  ],
+  "faces": "left",
+  "head": "FACE",
+  "neck": [
+   1268.0,
+   197.5
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy": {
+    "closed": 0,
+    "mid": 28,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/FM Eyes copy": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/Right Eyebrow copy 14": {
+    "open": 0,
+    "blink": []
+   },
+   "Duplicate Items Folder/Left Eyebrow copy 14": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "LH",
+   "fore": "LH2",
+   "shoulder": [
+    1209.5,
+    280.34
+   ],
+   "elbow": [
+    1249.95,
+    417.12
+   ]
+  },
+  "arm_back": {
+   "upper": "RH",
+   "fore": "RH22",
+   "shoulder": [
+    1420.25,
+    307.24
+   ],
+   "elbow": [
+    1349.32,
+    464.22
+   ]
+  },
+  "legs": [
+   "R_foot",
+   "L_foot"
+  ],
+  "hips": {
+   "R_foot": [
+    1210.75,
+    808.0
+   ],
+   "L_foot": [
+    1344.0,
+    781.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "MAN"
+}

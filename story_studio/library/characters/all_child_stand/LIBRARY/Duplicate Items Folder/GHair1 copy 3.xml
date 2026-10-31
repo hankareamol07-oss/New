@@ -1,0 +1,72 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/GHair1 copy 3" itemID="62ff9ba2-00002c41" lastModified="1671733967">
+  <timeline>
+    <DOMTimeline name="GHair1 copy 3" currentFrame="28" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="GH" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GH">
+                  <matrix>
+                    <Matrix tx="-0.3" ty="-0.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.25" y="8.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GH" centerPoint3DX="21.9" centerPoint3DY="127">
+                  <matrix>
+                    <Matrix a="0.9949951171875" b="0.09991455078125" c="-0.09991455078125" d="0.9949951171875" tx="0.9" ty="-5.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.25" y="8.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GH" selected="true">
+                  <matrix>
+                    <Matrix a="0.999374389648438" b="-0.034942626953125" c="0.034942626953125" d="0.999374389648438" tx="-0.5" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.15" y="9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GH" selected="true">
+                  <matrix>
+                    <Matrix a="0.9996337890625" b="0.0262603759765625" c="-0.0262603759765625" d="0.9996337890625" ty="-1.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.2" y="8.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="24" duration="76" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GH" centerPoint3DX="33.85" centerPoint3DY="130.05">
+                  <matrix>
+                    <Matrix tx="-0.3" ty="-0.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.25" y="8.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,47 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Nose copy 2" itemID="6795063b-00001f63" symbolType="graphic" lastModified="1735613857">
+  <timeline>
+    <DOMTimeline name="Seth Nose copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FDA068"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#B8754C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#D48657"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" edges="!1171 1122[#4FA.F5 #2B6.77 1191 417!1191 417|950 417"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!950 417[#3A6.4E #233.F4 825 709!825 709[772 777 749 786!749 786[421 898 222 1088!222 1088[93 1212 18 1371!18 1371[-66 1753 233 1887!233 1887[562 2033 1365 1946"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!1314 1829[910 1717 534 1840!534 1840[453 1862 449 1782"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1171 1122[1343 1046 1473 1154!1473 1154[1542 1209 1599 1314!1599 1314[1864 1841 1484 1976!1484 1976[1452 1987 1413 1996"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!449 1782[749 1541 1314 1829"/>
+                        <Edge fillStyle1="1" edges="!1413 1996[1448 1911 1365 1946"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

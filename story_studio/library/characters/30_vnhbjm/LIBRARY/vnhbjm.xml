@@ -1,0 +1,184 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="vnhbjm" itemID="65098c60-000001b6" symbolType="graphic" lastModified="1695922949">
+  <timeline>
+    <DOMTimeline name="vnhbjm" currentFrame="64" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Face" color="#00FFFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="old man" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.51214599609375" d="0.51214599609375" tx="1030.65" ty="726.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-1132.7" y="-418.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="hand1" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="hand 1" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.999969482421875" b="-0.003814697265625" c="0.003814697265625" d="0.999969482421875" tx="1461" ty="961.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.2" y="-106.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="arm1" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="arm 1" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.995346069335938" b="0.09625244140625" c="-0.09625244140625" d="0.995346069335938" tx="1483.2" ty="739.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-22.95" y="-156.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Kurta" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="kurta old man" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="1639.1" ty="857.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="hand2" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/hand2 copy 48" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="1.017578125" b="-0.2158203125" c="0.2158203125" d="1.017578125" tx="1804.2" ty="939.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-1.4" y="-96.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Arm2" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/arm2 copy 51" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="1.035400390625" b="-0.0998687744140625" c="0.0998687744140625" d="1.035400390625" tx="1767.55" ty="730.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.8" y="-137.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="dhoti_pallu" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mukhiya dhoti pallu copy 4" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="1.1297607421875" d="1.1297607421875" tx="1666.15" ty="1276.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-119.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="L_leg" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mukhiya L leg copy 7" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.414337158203125" d="0.414337158203125" tx="1580.7" ty="1299.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.25" y="-596.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="L_foot" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mukhiya L foot copy 7" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.414337158203125" d="0.414337158203125" tx="1564.15" ty="1581.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-380.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="R_leg" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mukhiya R leg copy 7" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.398178100585938" d="0.398178100585938" tx="1714.35" ty="1286.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.95" y="-605.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="R_foot" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5784" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mukhiya R foot copy 7" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.398178100585938" d="0.398178100585938" tx="1723.3" ty="1561.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-3.9" y="-346.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

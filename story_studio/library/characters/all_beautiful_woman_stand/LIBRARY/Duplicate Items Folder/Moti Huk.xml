@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Moti Huk" itemID="6318bd48-00001235" lastModified="1647885896">
+  <timeline>
+    <DOMTimeline name="Moti Huk" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-75.4" ty="-159.45"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#707D91"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.25" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#4A505B"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!1655 3189[1618 3198 1647 3229!1647 3229[1681 3234 1704 3264!1704 3264[1727 3294 1727 3335!1727 3335[1727 3380 1701 3411!1701 3411[1675 3442 1637 3442!1637 3442[1604 3442 1580 3417!1580 3417[1555 3392 1549 3353!1549 3353[1528 3345 1508
+ 3328!1508 3328|1508 3338!1508 3338[1508 3400 1546 3444!1546 3444[1584 3488 1638 3488!1638 3488[1691 3488 1730 3444!1730 3444[1768 3400 1768 3338!1768 3338[1768 3281 1735 3238!1735 3238[1703 3197 1655 3189"/>
+                    <Edge cubics="!1655 3189(;1651,3190 1618,3198 1647,3229q1655 3189Q1618 3198q1647 3229);"/>
+                    <Edge cubics="!1647 3229(;1692,3235 1727,3280 1727,3335q1647 3229Q1681 3234q1704 3264Q1727 3294q1727 3335);"/>
+                    <Edge cubics="!1727 3335(;1727,3395 1687,3442 1637,3442q1727 3335Q1727 3380q1701 3411Q1675 3442q1637 3442);"/>
+                    <Edge cubics="!1637 3442(;1593,3442 1557,3404 1549,3353q1637 3442Q1604 3442q1580 3417Q1555 3392q1549 3353);"/>
+                    <Edge cubics="!1549 3353(;1534,3347 1520,3338 1508,3328q1549 3353Q1528 3345q1508 3328);"/>
+                    <Edge cubics="!1508 3328(;1508,3331 1508,3335 1508,3338q1508 3328 1508 3338);"/>
+                    <Edge cubics="!1508 3338(;1508,3421 1566,3488 1638,3488q1508 3338Q1508 3400q1546 3444Q1584 3488q1638 3488);"/>
+                    <Edge cubics="!1638 3488(;1709,3488 1768,3421 1768,3338q1638 3488Q1691 3488q1730 3444Q1768 3400q1768 3338);"/>
+                    <Edge cubics="!1768 3338(;1768,3261 1718,3199 1655,3189q1768 3338Q1768 3281q1735 3238Q1703 3197q1655 3189);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

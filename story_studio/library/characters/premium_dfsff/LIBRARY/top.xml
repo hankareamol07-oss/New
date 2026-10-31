@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="top" itemID="609020ad-00000bbf" symbolType="graphic" lastModified="1620058285">
+  <timeline>
+    <DOMTimeline name="top" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-894.25" ty="-594.95"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-894.25" ty="-594.95"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FF0201"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="2" edges="!17885 12536S2|17885 12266!17885 12266|19376 11983!19376 11983[#558F.C4 #2DE1.D 24995 12176!24995 12176|25065.5 12603"/>
+                        <Edge fillStyle1="1" edges="!17885 12807S2|17885 12536!18044 13968|17885 13590!17885 13590|17885 13348"/>
+                        <Edge fillStyle1="2" edges="!17885 13348S2|17885 12807!18203 14346|18044 13968"/>
+                        <Edge fillStyle1="1" edges="!18357.5 14714S2|18203 14346"/>
+                        <Edge fillStyle1="2" edges="!18566 15210S2|18357.5 14714"/>
+                        <Edge fillStyle1="1" edges="!18831.5 15533.5S2[#4915.54 #3C0E.9C 18566 15210"/>
+                        <Edge fillStyle0="2" edges="!25373 13398.5S1[#62B7.E #33A3.EA 25136 13030"/>
+                        <Edge fillStyle0="1" edges="!25559 13796S1[#6391.2D #3524.C7 25373 13398.5!25136 13030|25065.5 12603"/>
+                        <Edge fillStyle0="2" edges="!25664 14329S1[#6440.1D #37EF.84 25664 14310!25664 14310[#643A.B7 #36F4.28 25559 13796"/>
+                        <Edge fillStyle0="1" edges="!25639.5 14700S1[#6441.1A #38B6.F5 25664 14329!25352.5 15535[#6370.C3 #3BF8.D2 25526 15159"/>
+                        <Edge fillStyle0="2" edges="!25526 15159S1[#6405.8D #3A59.2 25639.5 14700"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!17885 12807S3[#581F.E4 #3018.A 25136 13030"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!17885 13348S3[#531E.E3 #3122.13 25373 13398.5"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!18831.5 15533.5S3[#55EC.A2 #38D0.D 25352.5 15535"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!18566 15210S3[#55FE.82 #369D.E2 25526 15159"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!18357.5 14714S3[#54CC.9B #34CD.6E 25639.5 14700"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!18203 14346S3[#5439.7F #3386.A6 25664 14329"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!18044 13968S3[#5242.9E #31C0.E2 25559 13796"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!17885 12536S3[#530D.BF #2F15.AF 25065.5 12603"/>
+                        <Edge fillStyle0="1" edges="!24797 16303.5S1[#6127.DC #3F1E.B4 24982 16033"/>
+                        <Edge fillStyle0="2" edges="!19320 16306.5S1[#4BFA.87 #40C2.EF 19505 16830!19505 16830|24647 16830!24647 16830[#6062.85 #409D.0B 24797 16303.5"/>
+                        <Edge fillStyle1="1" edges="!19320 16306.5S2[#4B20.35 #3EFA.AB 19110 15929"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!19320 16306.5S3[22058.5 #3C13.96 24797 16303.5"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!19110 15929S3[#567D.43 #3A90.A8 24982 16033"/>
+                        <Edge fillStyle1="2" edges="!19110 15929S2[#4A2B.F9 #3D77.FE 18831.5 15533.5"/>
+                        <Edge fillStyle0="2" edges="!24982 16033S1[#6272.EA #3DB3.DF 25352.5 15535"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

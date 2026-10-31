@@ -1,0 +1,78 @@
+{
+ "name": "all_gunda1_stand",
+ "label": "Gunda1 Stand",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Gunda1 Stand",
+  "frame": 0,
+  "bounds": [
+   820.0,
+   60.0,
+   1328.0,
+   1048.0
+  ],
+  "faces": "left",
+  "head": "F1_Head",
+  "neck": [
+   1064.25,
+   307.78
+  ],
+  "mouth": {
+   "F1 Lips": {
+    "closed": 0,
+    "mid": 0,
+    "open": 5
+   }
+  },
+  "eyes": {
+   "F1 Eyes": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "RArm",
+   "fore": "Rhand",
+   "shoulder": [
+    1020.25,
+    334.12
+   ],
+   "elbow": [
+    1012.26,
+    449.1
+   ]
+  },
+  "arm_back": {
+   "upper": "LArm",
+   "fore": "Hand2",
+   "shoulder": [
+    1181.5,
+    330.34
+   ],
+   "elbow": [
+    1182.52,
+    460.68
+   ]
+  },
+  "legs": [
+   "LFoot"
+  ],
+  "hips": {
+   "LFoot": [
+    1121.0,
+    827.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Gunda1 Stand"
+}

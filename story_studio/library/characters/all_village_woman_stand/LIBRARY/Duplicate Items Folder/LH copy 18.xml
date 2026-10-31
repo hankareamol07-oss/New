@@ -1,0 +1,74 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/LH copy 18" itemID="64ea4134-00001ae2" lastModified="1669456233">
+  <timeline>
+    <DOMTimeline name="LH copy 18" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isDrawingObject="true">
+                  <matrix>
+                    <Matrix ty="-40.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="38.2" y="173.35"/>
+                  </transformationPoint>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9A285"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#A85E3F"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1270 3753|1291 4512!1291 4512[1296 5373 1233 5886!1233 5886|1161 5979!1161 5979[1066 6083 963 6138!963 6138[631 6314 330 5933!330 5933[293 5418 265 4834!265 4834[209 3669 253 3329!253 3329[280 3123 440 2947!440 2947[601 2766 783 2750
+!783 2750[989 2732 1116 2950!1116 2950[1266 3208 1270 3753"/>
+                    <Edge cubics="!1270 3753(;1270,3753 1335,5064 1233,5886q1270 3753Q1270 3753q1291 4512Q1296 5373q1233 5886);"/>
+                    <Edge cubics="!1233 5886(;1233,5886 812,6542 330,5933q1233 5886Q1233 5886q1161 5979Q1066 6083q963 6138Q631 6314q330 5933);"/>
+                    <Edge cubics="!330 5933(;330,5933 183,3872 253,3329q330 5933Q293 5418q265 4834Q209 3669q253 3329);"/>
+                    <Edge cubics="!253 3329(;323,2787 1258,2186 1270,3753q253 3329Q280 3123q440 2947Q601 2766q783 2750Q989 2732q1116 2950Q1266 3208q1270 3753);"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-753.65" ty="-44.55"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#EC7E00"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#753E00"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!15981 986|16048 1053!16048 1053[16127 1149 16190 1291!16190 1291[16392 1745 16355 2487!16355 2487[16318 3230 16383 4057!16383 4057[16416 4470 16456 4735!16456 4735[16311 4800 16089 4840!16089 4840[15644 4920 15256 4795!15256 4795[15210
+ 4506 15165 4086!15165 4086[15073 3246 15073 2587!15073 2587[15072 1665 15254 1240!15254 1240[15481 708 15981 986"/>
+                    <Edge cubics="!15981 986(;15981,986 16414,1299 16355,2487q15981 986Q15981 986q16048 1053Q16127 1149q16190 1291Q16392 1745q16355 2487);"/>
+                    <Edge cubics="!16355 2487(;16296,3675 16456,4735 16456,4735q16355 2487Q16318 3230q16383 4057Q16416 4470q16456 4735);"/>
+                    <Edge cubics="!16456 4735(;16456,4735 15876,4995 15256,4795q16456 4735Q16311 4800q16089 4840Q15644 4920q15256 4795);"/>
+                    <Edge cubics="!15256 4795(;15256,4795 14526,177 15981,986q15256 4795Q15210 4506q15165 4086Q15073 3246q15073 2587Q15072 1665q15254 1240Q15481 708q15981 986);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

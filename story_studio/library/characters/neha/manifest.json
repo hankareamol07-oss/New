@@ -1,0 +1,84 @@
+{
+ "name": "neha",
+ "label": "नेहा (कुर्ता)",
+ "gender": "female",
+ "pack": "3D Women Character",
+ "rig": {
+  "root": "Girl",
+  "frame": 0,
+  "bounds": [
+   1328.0,
+   -40.0,
+   1644.0,
+   940.0
+  ],
+  "faces": "left",
+  "head": "Face",
+  "neck": [
+   1560.5,
+   268.3
+  ],
+  "mouth": {
+   "Duplicate Items Folder/ajdadj copy 4": {
+    "closed": 0,
+    "mid": 6,
+    "open": 9
+   }
+  },
+  "eyes": {
+   "Eyes": {
+    "open": 0,
+    "blink": [
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Arm2",
+   "fore": "Hand2",
+   "shoulder": [
+    1436.5,
+    187.04
+   ],
+   "elbow": [
+    1404.67,
+    304.82
+   ]
+  },
+  "arm_back": {
+   "upper": "Arm1",
+   "fore": "hand",
+   "shoulder": [
+    1582.5,
+    191.54
+   ],
+   "elbow": [
+    1610.81,
+    308.35
+   ]
+  },
+  "legs": [
+   "RLeg",
+   "LLeg"
+  ],
+  "hips": {
+   "RLeg": [
+    1444.5,
+    424.0
+   ],
+   "LLeg": [
+    1532.25,
+    433.0
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Girl"
+}

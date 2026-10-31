@@ -1,0 +1,81 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/PF copy 5" itemID="64ea43a0-00005b06" lastModified="1671480709">
+  <timeline>
+    <DOMTimeline name="PF copy 5" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/BH copy 5" selected="true">
+                  <transformationPoint>
+                    <Point x="68.05" y="73.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/RE copy 10">
+                  <matrix>
+                    <Matrix tx="5" ty="84.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.25" y="20.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#B75417"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#672700"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!2184 2602S6|2199 2781!2199 2781[#895.85 #B28.CC 2184 2922!2184 2922[#883.E1 #B7D.AD 2174.5 2960.5!2174.5 2960.5[#784.1C #D56.03 1172 3372!1172 3372[#211.65 #D07.B4 374.5 2947!374.5 2947[#170.EF #B70.53 363.5 2908.5!363.5 2908.5[#150.4D
+ #AFA.8F 310 2685!310 2685[225 2284 184 1745!184 1745[177 1568 179 1375!179 1375[183 989 227 912!227 912[322 746 440 672!440 672[672 525 1116 540!1116 540[2051 573 2231 1129!2231 1129[2268 1241 2259 1330!2259 1330[2254 1378 2217 1501
+!2217 1501[2134 1782 2161 2159!2161 2159|2173 2177!2173 2177[2186 2202 2194 2243!2194 2243[2220 2373 2184 2602"/>
+                        <Edge cubics="!2184 2602(;2184,2602 2218,2759 2184,2922q2184 2602 2199 2781Q2198 2857q2184 2922);"/>
+                        <Edge cubics="!364 2909(;302,2691 227,2311 184,1745q364 2909 310 2685Q225 2284q184 1745);"/>
+                        <Edge cubics="!184 1745(;184,1745 156,1035 227,912q184 1745Q177 1568q179 1375Q183 989q227 912);"/>
+                        <Edge cubics="!227 912(;297,790 429,517 1116,540q227 912Q322 746q440 672Q672 525q1116 540);"/>
+                        <Edge cubics="!1116 540(;1803,564 2123,795 2231,1129q1116 540Q2051 573q2231 1129);"/>
+                        <Edge cubics="!2231 1129(;2340,1463 2109,1444 2161,2159q2231 1129Q2268 1241q2259 1330Q2254 1378q2217 1501Q2134 1782q2161 2159);"/>
+                        <Edge cubics="!2161 2159(;2161,2159 2241,2235 2184,2602q2161 2159Q2161 2159q2173 2177Q2186 2202q2194 2243Q2220 2373q2184 2602);"/>
+                        <Edge cubics="!375 2947(;371,2934 367,2922 364,2909q375 2947Q369 2928q364 2909);"/>
+                        <Edge cubics="!2184 2922(;2181,2935 2178,2948 2175,2961q2184 2922Q2180 2942q2175 2961);"/>
+                        <Edge cubics="!375 2947(;478,3206 743,3348 1172,3372q375 2947Q529 3336q1172 3372);"/>
+                        <Edge cubics="!1172 3372(;1673,3400 2008,3263 2175,2961q1172 3372Q1924 3414q2175 2961);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/LE copy 10">
+                  <matrix>
+                    <Matrix tx="106.55" ty="91.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.65" y="21.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FSH copy 5" selected="true">
+                  <matrix>
+                    <Matrix tx="22.65" ty="18.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="43.7" y="17.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,129 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Symbol 5 copy 2" itemID="6795063b-00001f76" symbolType="graphic" lastModified="1737818387" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="Symbol 5 copy 2" currentFrame="24" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Symbol_4" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 4 copy 2" symbolType="graphic" firstFrame="1" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.9990234375" b="0.041107177734375" c="-0.041107177734375" d="0.9990234375" tx="27.5" ty="121.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="162.75" y="37.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 4 copy 2" selected="true" symbolType="graphic" firstFrame="1" centerPoint3DX="356.45" centerPoint3DY="354.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.729782104492188" b="-0.68341064453125" c="0.68341064453125" d="0.729782104492188" tx="44.2" ty="249.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="162.65" y="37.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" duration="7" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 4 copy 2" symbolType="graphic" firstFrame="1" centerPoint3DX="171.75" centerPoint3DY="417.45" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.9990234375" b="0.041107177734375" c="-0.041107177734375" d="0.9990234375" tx="27.5" ty="121.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="162.75" y="37.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="21" duration="7" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 4 copy 2" symbolType="graphic" firstFrame="1" centerPoint3DX="171.75" centerPoint3DY="417.45" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.9990234375" b="0.041107177734375" c="-0.041107177734375" d="0.9990234375" tx="27.5" ty="121.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="162.75" y="37.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="28" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 4 copy 2" symbolType="graphic" firstFrame="1" centerPoint3DX="171.75" centerPoint3DY="417.45" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.9990234375" b="0.041107177734375" c="-0.041107177734375" d="0.9990234375" tx="27.5" ty="121.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="162.75" y="37.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_3" color="#FF800A" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="29" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <transformationPoint>
+                    <Point x="176.1" y="-35.9"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <transformationPoint>
+                        <Point x="176.1" y="-35.9"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFF7D8"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#E9E2C5"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#C0BAA2"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!6973 3290[7042 2440 6999 1643!6999 1643[6999 1629 6998 1615!6998 1615[6952 803 6803 -1!6969 3340[6970 3315 6970 3290!6970 3290|6973 3290"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!6969 3340[6960 3540 6930 3734!6930 3734[6776 4688 6060 5435!6060 5435[5138 6397 3823 6454!3823 6454[3519 6467 3236 6429"/>
+                        <Edge strokeStyle="1" edges="!6969 3340[6971 3315 6973 3290"/>
+                        <Edge fillStyle0="2" edges="!800 70|378 76"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!800 70[487 883 931 2033!931 2033[968 2129 1010 2228!1010 2228[1750 3129 3874 2310"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!1190 5200[633 4445 625 3440!625 3440[625 3420 625 3400"/>
+                        <Edge strokeStyle="1" edges="!626 3341[626 3334 626 3328!626 3341|634 3341"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!626 3328[630 3334 634 3341!634 3341[636 3345 638 3349!638 3349[632 3375 625 3400"/>
+                        <Edge strokeStyle="1" edges="!625 3400[626 3370 626 3341"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!3874 2310[2528 3120 1635 3333!1635 3333[1518 3361 1408 3379"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!1408 3379[958 3452 638 3349!1190 5200[1530 5132 1843 5019"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!1843 5019[2626 4733 3233 4159"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!3236 6429[2292 6306 1572 5627!1572 5627[1477 5538 1392 5445"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!1392 5445[1283 5326 1190 5200"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!1408 3379[824 5206 1843 5019!1843 5019[1570 5232 1392 5445"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!3236 6429[3642 6096 3990 5696"/>
+                        <Edge fillStyle0="1" edges="!6803 -1|800 70"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!378 76[-487 1350 626 3328"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

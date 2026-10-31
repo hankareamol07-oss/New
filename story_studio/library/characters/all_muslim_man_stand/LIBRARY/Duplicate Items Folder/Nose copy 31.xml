@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Nose copy 31" itemID="64ea43a0-00005b02" lastModified="1671480038">
+  <timeline>
+    <DOMTimeline name="Nose copy 31" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#672700"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!131 -209[164 -138 189 -42!189 -42[240 150 205 279!205 279[172 400 79 534!79 534[#FFFFE1.F3 #2B5.12 -44 730.5!-44 730.5[#FFFFC6.25 #2FF.C7 -74 769!-74 769[#FFFFA5.DA #302.38 -97 837.5!-97 837.5[#FFFF98.0C #388.ED -48 965.5!-48 965.5[#8.1D
+ #402.15 215.5 1000.5!215.5 1000.5[#1A6.DF #3CE.C9 416.5 895!416.5 895[#19A.2F #32F.49 269 834!269 834|234 841"/>
+                    <Edge cubics="!131 -209(131,-209;131,-209 261,73 205,279q131 -209Q164 -138q189 -42Q240 150q205 279);"/>
+                    <Edge cubics="!205 279(;149,485 8,607 -42,719q205 279Q172 400q79 534Q-30 693q-42 719);"/>
+                    <Edge cubics="!-42 719(;-92,831 -305,771 -205,879q-42 719Q-65 770q-180 801Q-221 812q-229 824Q-239 842q-205 879);"/>
+                    <Edge cubics="!-205 879(;-105,987 274,1036 291,916q-205 879Q-127 963q74 983Q279 1003q291 916);"/>
+                    <Edge cubics="!291 916(;308,796 234,841 234,841q291 916Q302 841q269 834Q234 841q234 841)234,841;"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#672700"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="
+!561 953[#1F5.1A 839.5 369 837"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

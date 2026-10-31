@@ -1,0 +1,69 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Gunda3 Head" itemID="64ce2e77-00004239" symbolType="graphic" lastModified="1691234700">
+  <timeline>
+    <DOMTimeline name="Gunda3 Head" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="FDM_Nose" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Nose" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="40.35" ty="146.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="18.1" y="30.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_Eyes" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Eyes" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="9.65" ty="108.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.35" y="24.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_Lips" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Lips" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="26.75" ty="207.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.65" y="27.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_PFace" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM PFace" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="85.4" y="116.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

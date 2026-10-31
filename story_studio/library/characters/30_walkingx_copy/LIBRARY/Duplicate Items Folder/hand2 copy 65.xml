@@ -1,0 +1,70 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/hand2 copy 65" itemID="6565b976-00005c40" symbolType="graphic" lastModified="1701064108">
+  <timeline>
+    <DOMTimeline name="hand2 copy 65" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#74B756"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#3B464D"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#FFAC7D"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#3E672C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#2B3338"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="3">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A15C49"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-763 345S6[-738 58 -700 -225!-700 -225[-622 -793 -491 -1343!-491 -1343[-488 -1358 -485 -1373!-485 -1373[#FFFE38.0C #FFFA31.1C -286.5 -1865.5!-286.5 -1865.5[#FFFF8A.DC #FFF73B.A9 289 -2485!289 -2485[#278.8B #FFF669.F 807.5 -2173!807.5
+ -2173[#3D6.75 #FFF89C.1 819 -1126!819 -1126|490 727"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="2" edges="
+!-763 345S7[-654 431 -534 497!-534 497[-295 627 -12 684!-12 684[47 697 109 705!109 705[291 731 490 727"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="
+!490 727S6|440 1011!440 1011[353 1013 270 1012"/>
+                        <Edge fillStyle0="3" fillStyle1="2" strokeStyle="2" edges="
+!270 1012S7[224 1011 179 1009!179 1009[119 1007 61 1001!61 1001[-226 976 -443 893!-443 893[-596 835 -714 750"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="
+!-714 750S6[-753 722 -788 693!-788 693[-778 517 -763 345"/>
+                        <Edge fillStyle1="3" strokeStyle="3" edges="
+!270 1012S6|98 1837!98 1837[65 2040 -101 2161!-101 2161[-122 2176 -145 2191!-145 2191[-294 2278 -471 2250!-471 2250[-674 2217 -795 2050!-795 2050[-915 1883 -883 1681!-883 1681|-714 750"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

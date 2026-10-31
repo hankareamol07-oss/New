@@ -1,0 +1,62 @@
+{
+ "name": "3d_men_copy_3",
+ "label": "Men copy 3",
+ "gender": "male",
+ "pack": "3D MEN Character",
+ "rig": {
+  "root": "Duplicate Items Folder/Men copy 3",
+  "frame": 0,
+  "bounds": [
+   284.0,
+   404.0,
+   792.0,
+   1604.0
+  ],
+  "faces": "right",
+  "head": "Layer_2",
+  "neck": [
+   576.25,
+   470.96
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth copy 4": {
+    "closed": 9,
+    "mid": 6,
+    "open": 3
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyes1 copy 3": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "LHand",
+   "fore": null,
+   "shoulder": [
+    682.75,
+    511.5
+   ],
+   "elbow": null
+  },
+  "arm_back": null,
+  "legs": [
+   "Layer_8",
+   "Layer_9"
+  ],
+  "hips": {
+   "Layer_8": [
+    440.75,
+    956.5
+   ],
+   "Layer_9": [
+    599.5,
+    935.5
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/Men copy 3"
+}

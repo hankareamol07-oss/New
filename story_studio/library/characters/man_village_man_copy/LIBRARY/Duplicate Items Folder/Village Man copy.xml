@@ -1,0 +1,88 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Village Man copy" itemID="679e0e78-00001471" symbolType="graphic" lastModified="1738411348" lastUniqueIdentifier="17">
+  <timeline>
+    <DOMTimeline name="Village Man copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Face" color="#FF4F4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728" rigPropagationMatrix='{"a":0,"b":0,"c":0,"d":0,"tx":1438,"ty":-2942}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Face copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.15325927734375" d="0.11602783203125" tx="-20.05" ty="-292.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="32.95" y="100.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Right_Arm" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728" rigPropagationMatrix='{"a":0,"b":0,"c":0,"d":0,"tx":1438,"ty":-2942}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Arm copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.08392333984375" b="0.0106964111328125" c="-0.0159454345703125" d="0.0638427734375" tx="0.7" ty="-250.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-113.25" y="-326.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="dhoti_leg" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728" rigPropagationMatrix='{"a":0,"b":0,"c":0,"d":0,"tx":1438,"ty":-2942}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="dhoti leg" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.105682373046875" d="0.105682373046875" tx="-23.7" ty="-196.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Body" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728" rigPropagationMatrix='{"a":0,"b":0,"c":0,"d":0,"tx":1438,"ty":-2942}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Body copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.0854644775390625" d="0.0647125244140625" tx="-17.95" ty="-256.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Left_Arm" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728" rigPropagationMatrix='{"a":0,"b":0,"c":0,"d":0,"tx":1438,"ty":-2942}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Left Arm copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.08544921875" b="0.00030517578125" c="-0.0004119873046875" d="0.064697265625" tx="-40.25" ty="-253"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="26.85" y="-373.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

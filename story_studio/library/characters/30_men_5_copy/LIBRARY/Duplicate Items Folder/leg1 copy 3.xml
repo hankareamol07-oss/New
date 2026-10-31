@@ -1,0 +1,73 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/leg1 copy 3" itemID="6565ac82-00001309" symbolType="graphic" lastModified="1695551128">
+  <timeline>
+    <DOMTimeline name="leg1 copy 3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-1936.65" ty="-1401.6"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-1936.65" ty="-1401.6"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#3D2F2C"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#483D39"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#322623"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!41031 29923S5[#A123.9C #7163.D5 41255 27440!41255 27440[#A13B.A8 #6923.FE 41253 26386"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!41253 26386S5[#A0EC.29 #61CE.7E 40863 23667!40863 23667[#9EE2.5E #5967.64 39965 22333!39965 22333[#9A34.C9 #55BE.F5 38842 21910!38842 21910[#9467.E #5559.FB 37579 22132!37579 22132[#9042.97 #582E.6E 36680 23045!36680 23045[#8DC9.66 #5CD3.0A
+ 36244 24560!36244 24560[#8CEB.3 #69D3.03 36587 28314"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="
+!41253 26386S3[#9A37.05 #699F.8A 37462 26829!37462 26829[#90B7.E2 #689F.F2 36968 27105!36968 27105[#900B.38 #6B5A.F5 36980 27935!36980 27935[#91F2.E #736E.9E 38807 30105!38807 30105[#9374.D2 #74C3.21 36966 29123!36966 29123[#9048.0B #76EA.4D
+ 37677 31522!37677 31522[#95E4.09 #7F19.D7 39335 32731!39335 32731[#95D9.8A #7F55.75 37666 32091!37666 32091[#9598.A4 #82AB.05 38524 33576!38524 33576[#9617.03 #832F.45 38154 33470!38154 33470[#96AD.1 #8492.97 39329 34165.5"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!36587 28314S7[#8F93.7F #702C.A3 36970 29007!36970 29007[#9148.3B #727B.F8 37464 29488"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!36587 28314S5[#8D85.EB #7542.A8 37107 31339"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!41031 29923S7[#9FAD.5D #7757.1C 40675 30910"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!37760.5 32987.5S5[#9358.DD #826B.99 38155 33753!38155 33753[#9707.D #8584.1D 39329 34165.5"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!39329 34165.5S5[#9A43.EC #8571.FA 39664 34132!39664 34132[#9DB9.5B #84D3.4D 40590 33638!40590 33638[#A009.73 #80DD.7C 40828 32273"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!40828 32273S7[#9ECD.D6 #7FC9.98 40365 33080"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!37760.5 32987.5S7[#943E.3E #8197.F7 38195 33325"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="
+!41031 29923S6[#A101.F3 #7A34.C 40828 32273"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!37107 31339S5[#9115.12 #7E74.D 37760.5 32987.5"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!37107 31339S7[#91D0.07 #7BB7.1A 37627 31979"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,37 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Face copy 7" itemID="60a4ea2b-00001084" symbolType="graphic" lastModified="1621324244">
+  <timeline>
+    <DOMTimeline name="Face copy 7" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="702" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth copy 14" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="-3.056396484375" b="0.039794921875" c="0.039794921875" d="3.056396484375" tx="3633.55" ty="-436.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1093.3" y="425.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="702" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Eyes copy 5" selected="true" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="439.5" y="540"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

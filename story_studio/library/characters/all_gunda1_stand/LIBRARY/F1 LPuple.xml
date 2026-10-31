@@ -1,0 +1,88 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="F1 LPuple" itemID="6308b08f-0000024a" symbolType="graphic" lastModified="1661513871">
+  <timeline>
+    <DOMTimeline name="F1 LPuple" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="0.661224365234375" d="0.661224365234375" tx="36" ty="-67.45"/>
+                  </matrix>
+                  <members>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix a="0.660751342773438" d="0.660751342773438" tx="36" ty="-67.45"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix a="0.660751342773438" d="0.660751342773438" tx="36" ty="-67.45"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#5E5E5E"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="!-535 2318S2[-535 2433 -616 2514!-616 2514[-697 2595 -812 2595!-812 2595[-927 2595 -1008 2514!-1008 2514[-1089 2433 -1089 2318!-1089 2318[-1089 2203 -1008 2122!-1008 2122[-927 2041 -812 2041!-812 2041[-697 2041 -616 2122!-616 2122[-535
+ 2203 -535 2318"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix a="0.660751342773438" d="0.660751342773438" tx="36" ty="-67.45"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix a="0.660751342773438" d="0.660751342773438" tx="36" ty="-67.45"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#202020"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!-607 2319S2[-607 2404 -667 2465!-667 2465[-727 2525 -813 2525!-813 2525[-898 2525 -959 2465!-959 2465[-1019 2404 -1019 2319!-1019 2319[-1019 2233 -959 2173!-959 2173[-898 2113 -813 2113!-813 2113[-727 2113 -667 2173!-667 2173[-607 2233
+ -607 2319"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix a="0.660751342773438" d="0.660751342773438" tx="36" ty="-67.45"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix a="0.660751342773438" d="0.660751342773438" tx="36" ty="-67.45"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!-574 2474S2[-574 2505 -596 2527!-596 2527[-618 2549 -649 2549!-649 2549[-680 2549 -703 2527!-703 2527[-725 2505 -725 2474!-725 2474[-725 2442 -703 2420!-703 2420[-680 2399 -649 2399!-649 2399[-618 2399 -596 2420!-596 2420[-574 2442 -574
+ 2474"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

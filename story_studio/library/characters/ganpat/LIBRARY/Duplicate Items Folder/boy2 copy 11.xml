@@ -1,0 +1,427 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/boy2 copy 11" itemID="5f630ffa-00000f7e" symbolType="graphic" lastModified="1566917202">
+  <timeline>
+    <DOMTimeline name="boy2 copy 11" currentFrame="2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="vghtn hu" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="109.4" ty="87.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.2" y="-3.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="gfchntrhyujn&amp;#032" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="131.55" ty="155.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="23.35" y="-1.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="9" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Tween 11" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="136.45" ty="184.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="29" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Tween 13" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix c="0.0064849853515625" tx="134.6" ty="184.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="47" duration="10" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Tween 13" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix c="0.0064849853515625" tx="134.6" ty="184.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="57" duration="21" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Tween 11" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="136.45" ty="184.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_3" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cfgjm copy 4" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="33.2" ty="-9.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.95" y="70.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="9" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cfgjm copy 4" selected="true" symbolType="graphic" firstFrame="9" loop="loop">
+                  <matrix>
+                    <Matrix tx="33.2" ty="-9.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.95" y="70.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="29" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cfgjm copy 4" selected="true" symbolType="graphic" firstFrame="18" loop="loop">
+                  <matrix>
+                    <Matrix a="0.992355346679688" b="-0.117111206054688" c="0.123519897460938" d="0.99310302734375" tx="22.25" ty="-1.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.95" y="70.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="47" duration="10" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cfgjm copy 4" symbolType="graphic" firstFrame="47" loop="loop">
+                  <matrix>
+                    <Matrix a="0.992355346679688" b="-0.117111206054688" c="0.123519897460938" d="0.99310302734375" tx="22.25" ty="-1.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.95" y="70.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="57" duration="21" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cfgjm copy 4" selected="true" symbolType="graphic" firstFrame="56" loop="loop">
+                  <matrix>
+                    <Matrix tx="33.2" ty="-9.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.95" y="70.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_5" color="#4FFFFF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/gfhh copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="28.05" ty="43.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.85" y="129.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="9" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/gfhh copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="28.05" ty="43.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.85" y="129.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="29" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/gfhh copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix c="0.0064849853515625" tx="25.3" ty="43.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.8" y="129.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="47" duration="10" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/gfhh copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix c="0.0064849853515625" tx="25.3" ty="43.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.8" y="129.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="57" duration="21" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/gfhh copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="28.05" ty="43.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="56.85" y="129.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_6" color="#808080">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/xdgfbfmhk copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.999908447265625" b="0.00494384765625" c="-0.00494384765625" d="0.999908447265625" tx="73.1" ty="227.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="32.8" y="6.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="9" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/xdgfbfmhk copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.999908447265625" b="0.00494384765625" c="-0.00494384765625" d="0.999908447265625" tx="73.1" ty="227.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="32.8" y="6.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="29" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/xdgfbfmhk copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.99993896484375" b="0.00494384765625" c="0.0015411376953125" d="0.999908447265625" tx="71.55" ty="227.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="32.75" y="6.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="47" duration="10" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/xdgfbfmhk copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.99993896484375" b="0.00494384765625" c="0.0015411376953125" d="0.999908447265625" tx="71.55" ty="227.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="32.75" y="6.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="57" duration="21" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/xdgfbfmhk copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.999908447265625" b="0.00494384765625" c="-0.00494384765625" d="0.999908447265625" tx="73.1" ty="227.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="32.8" y="6.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_7" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cgfjtglu' copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.99005126953125" b="-0.1356201171875" c="0.141464233398438" d="1.03239440917969" tx="16.7" ty="268.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.35" y="-2.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="9" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cgfjtglu' copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.99005126953125" b="-0.1356201171875" c="0.141464233398438" d="1.03239440917969" tx="16.7" ty="268.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.35" y="-2.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="29" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cgfjtglu' copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.989181518554688" b="-0.1356201171875" c="0.148162841796875" d="1.03239440917969" tx="15.4" ty="268.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.35" y="-2.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="47" duration="10" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cgfjtglu' copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.989181518554688" b="-0.1356201171875" c="0.148162841796875" d="1.03239440917969" tx="15.4" ty="268.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.35" y="-2.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="57" duration="21" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/cgfjtglu' copy 8" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.99005126953125" b="-0.1356201171875" c="0.141464233398438" d="1.03239440917969" tx="16.7" ty="268.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.35" y="-2.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_8" color="#FF4F4F">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="gvhnt u" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="21.15" ty="84.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="18.45" y="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="ghyb rtu" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-9.35" ty="157.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40.1" y="-5.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="9" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Tween 14" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="22.25" ty="173"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="29" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Tween 15" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix c="0.0064849853515625" tx="20.3" ty="173"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="47" duration="10" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Tween 15" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix c="0.0064849853515625" tx="20.3" ty="173"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="57" duration="21" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Tween 14" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="22.25" ty="173"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_4" color="#FF4FFF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="9" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="18" duration="29" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="47" duration="10" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="57" duration="21" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

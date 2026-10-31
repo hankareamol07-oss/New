@@ -1,0 +1,53 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/boy copy 2" itemID="6090dc55-0000049c" symbolType="graphic" lastModified="1622053291">
+  <timeline>
+    <DOMTimeline name="boy copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_12" color="#FF4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/eyes copy 7" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.641616821289062" b="0.0274658203125" c="-0.0274658203125" d="0.641616821289062" tx="512.15" ty="75.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="897.8" y="312.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mouth" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth copy 4" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-1.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="960" y="540"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="men face.png">
+                  <matrix>
+                    <Matrix a="0.381439208984375" d="0.381439208984375" tx="879" ty="89"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

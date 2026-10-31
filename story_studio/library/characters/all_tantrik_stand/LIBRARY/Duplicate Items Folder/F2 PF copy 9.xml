@@ -1,0 +1,75 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/F2 PF copy 9" itemID="64ea43bd-00006924" lastModified="1678869815" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="F2 PF copy 9" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/RE copy 15">
+                  <matrix>
+                    <Matrix tx="5" ty="84.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.25" y="20.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#DC8E61"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#A3491F"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!2205 2355|2380 1924!2380 1924[2529 1613 2575 1234!2575 1234[2665 475 2146 132!2146 132[1831 -76 1450 -114!1450 -114[1062 -152 750 4!750 4[409 173 256 530!256 530[#B6.FE #2BC.A3 158 903.5!158 903.5[#7D.13 #497.52 178.5 1505!178.5 1505
+[#B2.87 #5E5.01 178.5 1513!178.5 1513[#B3.8A #660.3A 184 1745!184 1745[225 2284 310 2685!310 2685[372 2981 438 3124!438 3124[#1CA.C4 #C60.91 524 3250!524 3250[#213.B6 #CBB.89 540 3269.5!540 3269.5[#2DF.9F #DF1.43 1217 3555!1217 3555[#69B.6B
+ #DCF.D3 2011 3227!2011 3227[#7E4.86 #C90.C5 2029.5 3206.5!2029.5 3206.5[#815.1A #C58.E6 2102 3115!2102 3115[2195 2986 2199 2781!2199 2781|2184 2602!2184 2602[#89E.7 #99B.45 2205 2355"/>
+                        <Edge cubics="!2184 2602(;2184,2602 2250,2908 2102,3115q2184 2602Q2184 2602q2199 2781Q2195 2986q2102 3115);"/>
+                        <Edge cubics="!2102 3115(;2081,3144 2056,3175 2030,3207q2102 3115 2030 3207);"/>
+                        <Edge cubics="!524 3250(;487,3204 453,3157 438,3124q524 3250Q459 3169q438 3124);"/>
+                        <Edge cubics="!438 3124(;373,2983 245,2555 184,1745q438 3124Q372 2981q310 2685Q225 2284q184 1745);"/>
+                        <Edge cubics="!2380 1924(2380,1924;2380,1924 2977,681 2146,132q2380 1924Q2529 1613q2575 1234Q2665 475q2146 132);"/>
+                        <Edge cubics="!750 4(;523,117 358,292 256,530q750 4Q409 173q256 530);"/>
+                        <Edge cubics="!256 530(;207,645 174,772 158,904q256 530Q183 701q158 904);"/>
+                        <Edge cubics="!158 904(;136,1089 143,1287 179,1505q158 904Q125 1175p179 1505);"/>
+                        <Edge cubics="!2146 132(;1936,-7 1704,-89 1450,-114q2146 132Q1831 -76q1450 -114);"/>
+                        <Edge cubics="!1450 -114(;1191,-139 958,-100 750,4q1450 -114Q1062 -152q750 4);"/>
+                        <Edge cubics="!179 1513(;179,1510 179,1508 179,1505q179 1513Q179 1509p179 1505);"/>
+                        <Edge cubics="!184 1745(;181,1670 180,1592 179,1513q184 1745Q180 1632q179 1513);"/>
+                        <Edge cubics="!2205 2355(;2206,2424 2199,2507 2184,2602q2205 2355Q2206 2459q2184 2602);"/>
+                        <Edge cubics="!2205 2355(;2205,2355 2380,1924 2380,1924q2205 2355 2380 1924);"/>
+                        <Edge cubics="!524 3250(;529,3257 535,3263 540,3270q524 3250Q532 3260q540 3270);"/>
+                        <Edge cubics="!540 3270(;671,3469 896,3564 1217,3555q540 3270Q736 3569q1217 3555);"/>
+                        <Edge cubics="!2011 3227(;2018,3220 2024,3214 2030,3207q2011 3227Q2021 3217q2030 3207);"/>
+                        <Edge cubics="!1217 3555(;1533,3542 1798,3433 2011,3227q1217 3555Q1691 3536q2011 3227);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/LE copy 15">
+                  <matrix>
+                    <Matrix tx="106.55" ty="91.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.65" y="21.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,70 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Face1 copy 4" itemID="60a53f19-0000138a" symbolType="graphic" lastModified="1621441247">
+  <timeline>
+    <DOMTimeline name="Face1 copy 4" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_3" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" duration="552" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Much" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="552" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#120F03"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!1970 5149[#8F0.79 #13BF.FA 2459 4843!2459 4843[#AA3.A #11F6.A1 3037 4703!3037 4703[#CDB.83 #11CE.2D 3624 4827!3624 4827[#EEF.D2 #139A.A4 3968 5099!3968 5099[#E8A.A #143E.BE 3441 5049!3441 5049|2812 5048!2812 5048[#973.28 #1451.C1 1970
+ 5149"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="552" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/mouth copy 15" selected="true" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.952560424804688" b="0.0124053955078125" c="-0.0124053955078125" d="0.952560424804688" tx="-884.1" ty="-161"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" duration="552" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Eyes1 copy 7" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.5" ty="4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="132.2" y="159.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

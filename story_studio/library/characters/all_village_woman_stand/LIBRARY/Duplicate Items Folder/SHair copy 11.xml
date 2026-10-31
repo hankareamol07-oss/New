@@ -1,0 +1,63 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/SHair copy 11" itemID="64ea4134-00001acd" lastModified="1662563652" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="SHair copy 11" currentFrame="21" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/SH copy 11">
+                  <transformationPoint>
+                    <Point x="4.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/SH copy 11" centerPoint3DX="8.3" centerPoint3DY="33">
+                  <matrix>
+                    <Matrix a="0.99493408203125" b="-0.100189208984375" c="0.100189208984375" d="0.99493408203125" tx="0.05" ty="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="4.95" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/SH copy 11">
+                  <transformationPoint>
+                    <Point x="4.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="17" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/SH copy 11" centerPoint3DX="8.3" centerPoint3DY="33">
+                  <matrix>
+                    <Matrix a="0.99493408203125" b="-0.100189208984375" c="0.100189208984375" d="0.99493408203125" tx="0.05" ty="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="4.95" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="22" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/SH copy 11" selected="true" centerPoint3DX="4.95" centerPoint3DY="33.2">
+                  <transformationPoint>
+                    <Point x="4.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

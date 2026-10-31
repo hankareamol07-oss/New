@@ -1,0 +1,65 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="arm2" itemID="60a21ad0-00000486" symbolType="graphic" lastModified="1621237880">
+  <timeline>
+    <DOMTimeline name="arm2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-618.1" ty="-314.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="697.05" y="322.35"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-618.1" ty="-314.6"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="697.05" y="322.35"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FF524B"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#FEB784"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#F33F37"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#D98C55"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!13989 8920S5[14344 7900 14484 6786!14484 6786[14106 5949 13399 6530!13399 6530[12962 7593 12737 8647"/>
+                        <Edge fillStyle0="2" strokeStyle="2" edges="!13493 10638S5[13766 9754 13989 8920"/>
+                        <Edge fillStyle0="2" edges="!12362 10556S1[12566 10963 12855 10965!12855 10965[13273 10968 13493 10638"/>
+                        <Edge fillStyle0="2" strokeStyle="2" edges="!12737 8647S5[12477 9548 12362 10556"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!13989 8920S3[13579 8499 12737 8647"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

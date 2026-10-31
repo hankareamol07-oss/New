@@ -1,0 +1,75 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="LHand" itemID="649c9186-00000816" symbolType="graphic" lastModified="1687982948">
+  <timeline>
+    <DOMTimeline name="LHand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Hand" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="32.9" ty="46.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="81.6" y="86"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMShape isDrawingObject="true">
+                  <matrix>
+                    <Matrix a="5.6864013671875" d="5.6864013671875" tx="-663.4" ty="-655.75"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF7EAF"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#B63868"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!2341 2480[2321 2421 2353 2368!2353 2368[2385 2314 2446 2307!2446 2307|2449 2307!2449 2307[2513 2300 2584 2360!2584 2360[2656 2419 2669 2490!2669 2490[2683 2566 2576 2615!2576 2615[2466 2666 2406 2590!2406 2590[2361 2532 2341 2480"/>
+                    <Edge cubics="!2341 2480(;2314,2402 2364,2316 2446,2307q2341 2480Q2321 2421q2353 2368Q2385 2314q2446 2307);"/>
+                    <Edge cubics="!2446 2307(;2447,2307 2448,2307 2449,2307q2446 2307 2449 2307);"/>
+                    <Edge cubics="!2449 2307(;2534,2298 2651,2395 2669,2490q2449 2307Q2513 2300q2584 2360Q2656 2419q2669 2490);"/>
+                    <Edge cubics="!2669 2490(;2687,2585 2490,2696 2406,2590q2669 2490Q2683 2566q2576 2615Q2466 2666q2406 2590);"/>
+                    <Edge cubics="!2406 2590(;2370,2544 2352,2509 2341,2480q2406 2590Q2361 2532q2341 2480);"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#DC4385"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#A51E58"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1494 1698[#552.F9 #714.11 1022.5 1873!1022.5 1873[#2AA.13 #78D.CA 343.5 1582!343.5 1582[#4.E6 #4CE.48 2 703!2 703[55 276 379 89"/>
+                    <Edge fillStyle1="1" edges="!379 89|277 441!277 441[209 856 379 1158!379 1158[556 1459 1039 1607!1039 1607[1284 1681 1494 1698"/>
+                    <Edge cubics="!379 89(;379,89 106,675 379,1158q379 89Q379 89q277 441Q209 856q379 1158);"/>
+                    <Edge cubics="!379 1158(;658,1636 1494,1698 1494,1698q379 1158Q556 1459q1039 1607Q1284 1681q1494 1698);"/>
+                    <Edge cubics="!1494 1698(;1494,1698 976,2147 413,1613q1494 1698Q1363 1812q1164 1857Q766 1948q413 1613);"/>
+                    <Edge cubics="!413 1613(;-149,1073 -19,322 379,89q413 1613Q15 1232q38 737Q55 276q379 89);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

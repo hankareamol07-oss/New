@@ -1,0 +1,73 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="kamar body builder" itemID="65100eab-00000834" symbolType="graphic" lastModified="1695551147">
+  <timeline>
+    <DOMTimeline name="kamar body builder" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-1856.35" ty="-1170.35"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-1856.35" ty="-1170.35"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#483D39"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#3A2F2B"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#322623"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!40750 22965S5[#9F42.E6 #59A6.2 40791 22935!40791 22935[#A05C.23 #58D1.BB 40785 22407!40785 22407[#9F09.A #572E.0B 40576 22391!40576 22391[#9BF4.9C #58CB.3D 39210 22938.5"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!39210 22938.5S5[#94A4.E8 #5AEA.97 36730 23262.5!36730 23262.5[#871A.04 #5ACA.BB 33636 22237!33636 22237[#8302.A7 #5675.DA 33486.5 22246.5!33486.5 22246.5[#829A.78 #5757.67 33480 22501!33480 22501[#82F5.51 #5872.6 33423 22742!33423 22742
+[#81FF.97 #5960.FA 33416 22983!33416 22983[#822C.E3 #59E8.E 33335 23076!33335 23076[#8244.7B #5A78.45 33427 23208!33427 23208[#8262.9E #5AEE.68 33399 23382!33399 23382[#8290.BA #5BDB.3C 33508 23568!33508 23568[#8997.AB #604A.59 36934
+ 24626!36934 24626[#9448.FB #6023.1A 38919 24408"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!38919 24408S5[#9B49.24 #5EA6.C4 40535 23911!40535 23911[#9EF4.13 #5D26.3C 40813 23747!40813 23747[#A024.EF #5C2D.14 40793 23326"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!35155 23982S7[#9038.5C #5F41.4A 38686 24026!38686 24026|38686.5 24026"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!38686.5 24026S7[#989A.EF #5D8C.D1 39447.5 23836"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!39447.5 23836S7[#9CB8.2 #5C54.4C 40793 23326"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!33416 22983S7[#8892.18 #5D15.38 35924 23871"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!40750 22965S7[#9D46.43 #5B0D.28 39315 23469"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!39315 23469S7[#9954.8A #5BB7.BD 39188 23489.5!39188 23489.5[#9910.B7 #5BC2.01 39181.5 23490.5"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!39181.5 23490.5S7[#98D8.6F #5BCA.8D 39074 23506"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="
+!39210 22938.5S3[#9884.32 #5BD1.2B 39181.5 23490.5"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="
+!40750 22965S6[#A031.CA #5A5A.D6 40793 23326"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="
+!38686.5 24026S3[#980C.E #5DCB.ED 38996 24190!38996 24190[#988F.9D #5F14.2C 38919 24408!39315 23469[#9A62.68 #5C55.08 39447.5 23836"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

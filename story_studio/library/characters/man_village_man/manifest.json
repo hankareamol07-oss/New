@@ -1,0 +1,82 @@
+{
+ "name": "man_village_man",
+ "label": "Village Man",
+ "gender": "male",
+ "pack": "Man Village",
+ "rig": {
+  "root": "Village Man",
+  "frame": 0,
+  "bounds": [
+   -316.0,
+   -688.0,
+   320.0,
+   740.0
+  ],
+  "faces": "left",
+  "head": "Face",
+  "neck": [
+   -49.25,
+   -445.32
+  ],
+  "mouth": {
+   "Lips Sync With Joulinee": {
+    "closed": 0,
+    "mid": 0,
+    "open": 0
+   },
+   "Lips Sync With Jounline": {
+    "closed": 0,
+    "mid": 12,
+    "open": 24
+   }
+  },
+  "eyes": {
+   "Eyes": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Left_Arm",
+   "fore": null,
+   "shoulder": [
+    -108.0,
+    -418.5
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "Right_Arm",
+   "fore": null,
+   "shoulder": [
+    38.25,
+    -403.0
+   ],
+   "elbow": null
+  },
+  "legs": [
+   "Left_Leg",
+   "Right_Leg"
+  ],
+  "hips": {
+   "Left_Leg": [
+    -100.0,
+    -29.5
+   ],
+   "Right_Leg": [
+    103.75,
+    -46.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Village Man"
+}

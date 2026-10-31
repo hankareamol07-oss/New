@@ -1,0 +1,61 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Front Hand copy" itemID="6794defe-0000118c" symbolType="graphic" lastModified="1735783331" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="Seth Front Hand copy" currentFrame="76" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Down Hand copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.996414184570312" b="0.083343505859375" c="-0.083343505859375" d="0.996414184570312" tx="91.95" ty="408.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="96.05" y="16.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":63572,"b":-15217,"c":15217,"d":63572,"tx":0,"ty":0}'>
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#87211B"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#581612"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!0 3319|1578 0"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1578 0[#14A5.54 #80B.F4 5495.5 8527.5!5495.5 8527.5|5498 8605"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!5498 8605[5498 #21AE.7E 5498 8640!5498 8640[5498 #21F4.BA 5495.5 8744.5"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!5495.5 8744.5[#1554.AB #24C2.42 4979 9891!4979 9891[4461 10411 3728 10411!3728 10411[2994 10411 2475 9891!2475 9891[#7A7.C 9375.75 1950 8651"/>
+                        <Edge fillStyle0="1" edges="!5495.5 8744.5|5501.5 8744.5!5501.5 8744.5[#157B.E1 #21E2.92 5498 8605!1946.5 8647.5|1949 8650!1949 8650|1950 8651"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!1949 8650[#882.CB #20A0.8C 2673 8382"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1946.5 8647.5[#EF.89 #1601.82 0 3319"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

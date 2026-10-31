@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/mukhiya L leg copy 2" itemID="6541f53f-0000125e" symbolType="graphic" lastModified="1695366470">
+  <timeline>
+    <DOMTimeline name="mukhiya L leg copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#CCCCCC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!4249 -26[#1141.A5 #FFF9E0.A8 4459 -3164!4459 -3164[#1199.5E #FFECBF.AF 4364 -6818!4364 -6818[#1269.AF #FFD70F.CD 2665 -12666!2665 -12666[#794.24 #FFCC6B.66 -379 -13450!-379 -13450[#FFF575.DC #FFCA80.9A -4416 -12009!-3013 2648[-3174 4561
+ -2854 5835!-2854 5835[-2844 5880 -2832 5926!-2832 5926[-2445 7362 -1424 7956!-1424 7956[515 9084 2044 8648!2044 8648[3553 8178 4070 6420!4070 6420|4732 4554!4732 4554[5045 3497 4732 2367!4732 2367|4249 -26"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!4249 -26[4192 1628 3745 2819"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-3013 2648[-3929 -3 -4314 -2068!-4314 -2068[-4700 -4134 -4865 -5730!-4865 -5730[-5030 -7326 -4416 -12009"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-4416 -12009[-3845 -5969 -3527 -4762!-3527 -4762[-2469 -758 -578 2691!-578 2691[120 3963 1065 4981!-3013 2648[-2055 4748 -633 6471"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

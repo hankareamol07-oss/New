@@ -1,0 +1,181 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Symbol 3 copy 2" itemID="6795063b-00001f72" symbolType="graphic" lastModified="1737818322" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="Symbol 3 copy 2" currentFrame="25" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_4" color="#FF4FFF">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 2 copy 2" symbolType="graphic" firstFrame="1" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.999847412109375" b="-0.013519287109375" c="0.013519287109375" d="0.999847412109375" tx="33.35" ty="399.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="188.35" y="-24.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="7" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 2 copy 2" symbolType="graphic" firstFrame="1" centerPoint3DX="226.4" centerPoint3DY="667.25" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.999847412109375" b="-0.013519287109375" c="0.013519287109375" d="0.999847412109375" tx="33.35" ty="399.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="188.35" y="-24.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 2 copy 2" symbolType="graphic" firstFrame="1" centerPoint3DX="226.4" centerPoint3DY="667.25" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.999847412109375" b="-0.013519287109375" c="0.013519287109375" d="0.999847412109375" tx="33.35" ty="399.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="188.35" y="-24.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="21" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 2 copy 2" symbolType="graphic" firstFrame="1" centerPoint3DX="432.3" centerPoint3DY="578.45" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.700851440429688" b="-0.713134765625" c="0.713134765625" d="0.700851440429688" tx="106.55" ty="523.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="188.35" y="-24.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="28" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 2 copy 2" symbolType="graphic" firstFrame="1" centerPoint3DX="226.4" centerPoint3DY="667.25" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.999847412109375" b="-0.013519287109375" c="0.013519287109375" d="0.999847412109375" tx="33.35" ty="399.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="188.35" y="-24.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="29" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <transformationPoint>
+                    <Point x="207.45" y="229.45"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <transformationPoint>
+                        <Point x="207.45" y="229.45"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#E9E2C5"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#FFF7D8"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <LinearGradient>
+                            <matrix>
+                              <Matrix a="0.0024261474609375" b="0.371261596679688" c="-0.407363891601562" d="0.002655029296875" tx="143.9" ty="344.4"/>
+                            </matrix>
+                            <GradientEntry color="#FF8D00" ratio="0.0431372549019608"/>
+                            <GradientEntry color="#FFCA00" ratio="0.223529411764706"/>
+                            <GradientEntry color="#FF8D00" ratio="0.517647058823529"/>
+                            <GradientEntry color="#FFCA00" ratio="0.764705882352941"/>
+                            <GradientEntry color="#FF8D00" ratio="1"/>
+                          </LinearGradient>
+                        </FillStyle>
+                        <FillStyle index="4">
+                          <SolidColor color="#FFFBEC"/>
+                        </FillStyle>
+                        <FillStyle index="5">
+                          <SolidColor color="#FFB900"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#C0BAA2"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="3">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#D49100"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!8330 4404[#2102.7B #12BE.A2 8522 5036"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!8522 5036[8701 5623 8604 6166"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!8604 6166[8523 6605 8245 7017"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!6505 4580[6737 4765 7090 4875!7090 4875[7645 5048 8522 5036"/>
+                        <Edge fillStyle0="1" edges="!8330 4404[7503 4822 6751 4579!6751 4579[6746 4577 6741 4576!6741 4576[6527 4505 6315 4395!6315 4395[6397 4495 6505 4580"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!8604 6166[8358 6332 8115 6454!8115 6454[7014 7003 5939 6661!5939 6661[6688 7497 7766 7610!7766 7610[7893 7794 7949 7972!7949 7972|7909 7972!7909 7972[7918 8007 7924 8042"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!8259 7122[8317 7521 8254 7864!8254 7864[8178 8712 7935 9163!8243 7019[8252 7071 8259 7122"/>
+                        <Edge strokeStyle="1" edges="!8245 7017[8253 7069 8259 7122"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!8245 7017[8244 7018 8243 7019"/>
+                        <Edge strokeStyle="2" edges="!925 7[924 3 925 0"/>
+                        <Edge fillStyle0="3" strokeStyle="3" edges="!0 4623[230 6226 614 7876"/>
+                        <Edge strokeStyle="3" edges="!614 7876[654 8156 737 8420"/>
+                        <Edge fillStyle0="5" strokeStyle="3" edges="!737 8420[1007 9282 1719 9981!1719 9981[2124 10377 2588 10639"/>
+                        <Edge fillStyle0="5" fillStyle1="4" strokeStyle="3" edges="!2588 10639[2384 10178 2206 9643!2206 9643[1992 8882 1833 8127"/>
+                        <Edge fillStyle0="3" fillStyle1="2" strokeStyle="3" edges="!1833 8127[#5D0.13 #1A04.16 1401.5 5781!1401.5 5781[#522.D2 #1325.EC 1292 4602"/>
+                        <Edge fillStyle0="2" edges="!6505 4580|1292 4602"/>
+                        <Edge fillStyle0="3" edges="!1292 4602|0 4623"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!7932 9164|7923 9167"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!7923 9167[7921 9167 7920 9167"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!7920 9167[6101 9321 4923 8618"/>
+                        <Edge fillStyle0="4" fillStyle1="4" strokeStyle="1" edges="!4923 8618[4893 8601 4865 8583"/>
+                        <Edge fillStyle0="1" fillStyle1="4" edges="!6107 10846[5813 10720 5513 10478!5513 10478[5493 10461 5472 10444!5472 10444[5621 10728 5838 10949"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!7935 9163|7937 9162!7937 9162[7701 9592 7493 9808"/>
+                        <Edge fillStyle1="4" strokeStyle="1" edges="!7493 9808[7348 9980 7175 10141!7175 10141[6686 10597 6107 10846"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!6107 10846[5983 10899 5855 10943!5855 10943[5846 10946 5838 10949"/>
+                        <Edge fillStyle1="4" strokeStyle="1" edges="!5838 10949[5806 10959 5775 10969!5775 10969[5771 10970 5768 10972!5768 10972[5764 10973 5761 10974"/>
+                        <Edge fillStyle0="4" fillStyle1="4" strokeStyle="1" edges="!5377 10479[5515 10732 5761 10974"/>
+                        <Edge fillStyle1="4" strokeStyle="1" edges="!5761 10974[5153 11163 4454 11142!4454 11142[3426 11112 2588 10639"/>
+                        <Edge fillStyle0="1" fillStyle1="4" edges="!7924 8042[7976 8376 7764 8682!7764 8682[6286 9189 4923 8618!4923 8618[4882 8601 4842 8583!4842 8583[5632 9391 7089 9283!7089 9283[7355 9541 7493 9808"/>
+                        <Edge fillStyle1="3" edges="!676 8144[675 8142 675 8141!675 8141|665 8118!665 8118|666 8118!666 8118|665 8097!665 8097[639 7987 614 7876"/>
+                        <Edge fillStyle1="5" edges="!737 8420[708 8290 676 8144"/>
+                        <Edge fillStyle0="4" fillStyle1="2" edges="!7924 8042|1833 8127"/>
+                        <Edge fillStyle0="5" fillStyle1="3" edges="!1833 8127|676 8144"/>
+                        <Edge strokeStyle="2" edges="!6063 13529[6073 13530 6083 13530"/>
+                        <Edge fillStyle0="1" edges="!4083 12787[4950 13492 6060 13530!6060 13530[6062 13530 6063 13529!6063 13529[4977 13486 4125 12801!4125 12801[4104 12794 4083 12787"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!7932 9164|7935 9163!7924 9166|7932 9164"/>
+                        <Edge fillStyle1="1" edges="!7935 9163|7924 9165!7924 9165|7924 9166!7923 9167|7923 9166!7923 9166[7921 9166 7920 9167"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!8243 7019[7066 7260 5939 6661"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

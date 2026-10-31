@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/LH copy 6" itemID="64ea40f9-00000efb" lastModified="1669457688">
+  <timeline>
+    <DOMTimeline name="LH copy 6" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!489 211|412 268"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!489 211[447 567 285 847!285 847[108 1151 -307 1208!-307 1208[68 1095 257 772!257 772[396 537 412 268"/>
+                    <Edge cubics="!285 847(;167,1049 -30,1170 -307,1208q285 847Q108 1151p-307 1208);"/>
+                    <Edge cubics="!257 772(;131,988 -57,1133 -307,1208q257 772Q68 1095p-307 1208);"/>
+                    <Edge cubics="!489 211(;489,211 412,268 412,268q489 211 412 268);"/>
+                    <Edge cubics="!489 211(;461,449 393,661 285,847q489 211Q447 567q285 847);"/>
+                    <Edge cubics="!412 268(;401,447 349,616 257,772q412 268Q396 537q257 772);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

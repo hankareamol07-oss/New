@@ -1,0 +1,163 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/gthyk copy 2" itemID="6090da64-000002ea" symbolType="graphic" lastModified="1622051697">
+  <timeline>
+    <DOMTimeline name="gthyk copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="face" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="90" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/boy copy 2" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.68011474609375" d="0.68011474609375" tx="-59.35" ty="52.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="982.4" y="449.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r_bah" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="662" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/dsf copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="395.5" ty="390.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="104.3" y="8.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="sat" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="662" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/fdgsaf copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="476.3" ty="380.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="143.95" y="257.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="662" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/dufsd copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="695.1" ty="405.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="58.5" y="8.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="rightleg" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="662" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/rigleg copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-3.5723876953125" d="3.8328857421875" tx="799.15" ty="749.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="66.55" y="-3.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="leftleg" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="662" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/leftleg copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-3.5723876953125" d="3.8328857421875" tx="792.7" ty="756.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="36.1" y="-1.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_6" color="#FF0000">
+          <frames>
+            <DOMFrame index="0" duration="662" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/sdhfs copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="754.9" ty="624.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57.5" y="11.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_3" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" duration="662" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/desfgsdg copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.978317260742188" b="0.20709228515625" c="0.20709228515625" d="0.978317260742188" tx="451.45" ty="638.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.55" y="-15.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_5" color="#009999">
+          <frames>
+            <DOMFrame index="0" duration="662" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.2"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!15535 28748[14342 28364 12650 28364!12650 28364[10965 28364 9767 28748!9767 28748[8572 29127 8572 29665!8572 29665[8572 30204 9767 30581!9767 30581[10965 30961 12650 30961!12650 30961[14342 30961 15535 30581!15535 30581[16733 30204 16733
+ 29665!16733 29665[16733 29127 15535 28748"/>
+                    <Edge cubics="!15535 30581(15535,30581;16334,30329 16733,30024 16733,29665q15535 30581Q16733 30204q16733 29665);"/>
+                    <Edge cubics="!16733 29665(16733,29665;16733,29305 16334,29001 15535,28748q16733 29665Q16733 29127q15535 28748);"/>
+                    <Edge cubics="!8572 29665(8572,29665;8572,30024 8973,30329 9767,30581q8572 29665Q8572 30204q9767 30581);"/>
+                    <Edge cubics="!9767 30581(9767,30581;10564,30834 11526,30961 12650,30961q9767 30581Q10965 30961q12650 30961);"/>
+                    <Edge cubics="!12650 28364(12650,28364;11526,28364 10564,28493 9767,28748q12650 28364Q10965 28364q9767 28748);"/>
+                    <Edge cubics="!9767 28748(9767,28748;8973,29001 8572,29305 8572,29665q9767 28748Q8572 29127q8572 29665);"/>
+                    <Edge cubics="!12650 30961(;13777,30961 14739,30834 15535,30581q12650 30961Q14342 30961q15535 30581)15535,30581;"/>
+                    <Edge cubics="!15535 28748(;14739,28493 13777,28364 12650,28364q15535 28748Q14342 28364q12650 28364);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Ar copy 2" itemID="6564283f-00000934" symbolType="graphic" lastModified="1701013645">
+  <timeline>
+    <DOMTimeline name="Ar copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#666FA3"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#DF956D"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#262A3D"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                    <StrokeStyle index="2">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#966044"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!2324 5656[2231 5707 2139 5751"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!2139 5751[1352 6125 414 6010"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!414 6010[332 5998 191 5970!191 5970|3 1633!3 1633[-58 299 955 54!955 54[1201 -5 1511 0!1511 0[1554 25 1594 54!1594 54[2010 351 2117 949!2117 949|2324 5656"/>
+                    <Edge fillStyle1="2" strokeStyle="2" edges="!2139 5751|2139 8239!2139 8239[2139 8596 1886 8849!1886 8849[1634 9102 1276 9102!1276 9102[918 9102 666 8849!666 8849[413 8596 413 8239!413 8239|414 6010"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

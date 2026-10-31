@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="S LHand" itemID="6389c0a1-00000297" symbolType="graphic" lastModified="1671479905">
+  <timeline>
+    <DOMTimeline name="S LHand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix a="0.79412841796875" d="0.79412841796875" tx="-886.5" ty="-106.9"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#333333"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#0B0B0B"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!23342 2773|23364 2798!23364 2798[23393 2837 23423 2902!23423 2902[23521 3110 23604 3504!23604 3504[23871 4767 23890 7423!23890 7423|23808 7573!23808 7573[23700 7743 23571 7848!23571 7848[23157 8183 22682 7733!22682 7733[22611 7372 22532
+ 6843!22532 6843[22375 5785 22337 4946!22337 4946[22285 3771 22480 3202!22480 3202[22723 2491 23342 2773"/>
+                    <Edge cubics="!23342 2773(;23342,2773 23859,3173 23890,7423q23342 2773Q23342 2773q23364 2798Q23393 2837q23423 2902Q23521 3110q23604 3504Q23871 4767q23890 7423);"/>
+                    <Edge cubics="!23890 7423(;23890,7423 23442,8453 22682,7733q23890 7423Q23890 7423q23808 7573Q23700 7743q23571 7848Q23157 8183q22682 7733);"/>
+                    <Edge cubics="!22682 7733(;22682,7733 21542,1953 23342,2773q22682 7733Q22611 7372q22532 6843Q22375 5785q22337 4946Q22285 3771q22480 3202Q22723 2491q23342 2773);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

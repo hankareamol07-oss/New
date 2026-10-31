@@ -1,0 +1,69 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/F1 RPuple copy" itemID="64ea43ec-0000712f" symbolType="graphic" lastModified="1669670039">
+  <timeline>
+    <DOMTimeline name="F1 RPuple copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape selected="true">
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#360C00"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="!293 164S2[293 230 248 276!248 276[204 322 140 320!140 320[76 318 32 270!32 270[-13 222 -13 156!-13 156[-13 89 32 43!32 43[76 -3 140 -1!140 -1[204 1 248 49!248 49[293 97 293 164"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape selected="true">
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#190500"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="!253 163S2[253 213 220 247!220 247[187 281 139 280!139 280[92 279 59 243!59 243[25 207 25 157!25 157[25 107 59 74!59 74[92 40 139 41!139 41[187 42 220 78!220 78[253 113 253 163"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix a="0.552978515625" b="0.014617919921875" d="0.579696655273438" tx="29.45" ty="-58.6"/>
+                      </matrix>
+                      <members>
+                        <DOMShape selected="true">
+                          <matrix>
+                            <Matrix a="0.552978515625" b="0.014617919921875" d="0.579696655273438" tx="29.45" ty="-58.6"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="!-574 2474S2[-574 2505 -596 2527!-596 2527[-618 2549 -649 2549!-649 2549[-680 2549 -703 2527!-703 2527[-725 2505 -725 2474!-725 2474[-725 2442 -703 2420!-703 2420[-680 2399 -649 2399!-649 2399[-618 2399 -596 2420!-596 2420[-574 2442 -574
+ 2474"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

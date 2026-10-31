@@ -1,0 +1,78 @@
+{
+ "name": "30_police_man_copy",
+ "label": "पोलीस 2",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/police man copy",
+  "frame": 0,
+  "bounds": [
+   -140.0,
+   -476.0,
+   588.0,
+   1348.0
+  ],
+  "faces": "left",
+  "head": "Face",
+  "neck": [
+   191.0,
+   -141.54
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 18": {
+    "closed": 0,
+    "mid": 36,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 16": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "Hip",
+   "fore": "leg_middle_part_2",
+   "shoulder": [
+    302.81,
+    334.78
+   ],
+   "elbow": [
+    139.62,
+    521.0
+   ]
+  },
+  "arm_back": {
+   "upper": "Hip",
+   "fore": "leg_middle_part_1",
+   "shoulder": [
+    302.81,
+    334.78
+   ],
+   "elbow": [
+    298.88,
+    520.72
+   ]
+  },
+  "legs": [
+   "Foot_down_2",
+   "foot_down"
+  ],
+  "hips": {
+   "Foot_down_2": [
+    83.75,
+    839.0
+   ],
+   "foot_down": [
+    361.5,
+    787.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Layer_2"
+  ]
+ },
+ "root": "Duplicate Items Folder/police man copy"
+}

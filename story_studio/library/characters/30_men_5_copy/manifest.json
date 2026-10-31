@@ -1,0 +1,73 @@
+{
+ "name": "30_men_5_copy",
+ "label": "शेतकरी 2",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/men 5 copy",
+  "frame": 0,
+  "bounds": [
+   1464.0,
+   200.0,
+   2304.0,
+   2180.0
+  ],
+  "faces": "left",
+  "head": "face",
+  "neck": [
+   1813.0,
+   588.28
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy": {
+    "closed": 0,
+    "mid": 28,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "arm2",
+   "fore": "hand2",
+   "shoulder": [
+    1702.75,
+    674.96
+   ],
+   "elbow": [
+    1750.47,
+    938.72
+   ]
+  },
+  "arm_back": {
+   "upper": "arm1",
+   "fore": "hand1",
+   "shoulder": [
+    2040.5,
+    655.94
+   ],
+   "elbow": [
+    2012.68,
+    957.15
+   ]
+  },
+  "legs": [
+   "foot1"
+  ],
+  "hips": {
+   "foot1": [
+    2059.5,
+    1602.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/men 5 copy"
+}

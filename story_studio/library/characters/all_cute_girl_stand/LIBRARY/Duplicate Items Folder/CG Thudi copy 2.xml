@@ -1,0 +1,52 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/CG Thudi copy 2" itemID="64ea41bc-00002605" symbolType="graphic" lastModified="1687983424">
+  <timeline>
+    <DOMTimeline name="CG Thudi copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-847.75" ty="-388.1"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-847.75" ty="-388.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFD1A8"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B98150"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!16954.5 7989S5[#427D.CB #1FB0.6F 17116 8233!17116 8233[17288 8452 17529 8637!17529 8637[17748 8805 17979 8910!17979 8910[18199 9013 18360 9026!18360 9026[18674 9052 19007 8988!19007 8988[19392 8913 19731 8730!19731 8730[20121 8520 20417
+ 8183!20417 8183[#5011.9E #1F9A.48 20570.5 7989"/>
+                        <Edge fillStyle0="1" edges="
+!20570.5 7989S1[#4D6F.6E #1E47.13 18597 7763!18597 7763[#4470.E4 #1E5D.EB 16954.5 7989"/>
+                        <Edge cubics="!16955 7989(;17283,8584 17996,8995 18360,9026q16955 7989Q17022 8112q17116 8233Q17288 8452q17529 8637Q17748 8805q17979 8910Q18199 9013q18360 9026);"/>
+                        <Edge cubics="!18360 9026(;18978,9077 19933,8870 20571,7989q18360 9026Q18674 9052q19007 8988Q19392 8913q19731 8730Q20121 8520q20417 8183Q20498 8090q20571 7989);"/>
+                        <Edge cubics="!20571 7989(;20072,7830 19414,7755 18597,7763q20571 7989Q19823 7751q18597 7763);"/>
+                        <Edge cubics="!18597 7763(;17880,7770 17332,7846 16955,7989q18597 7763Q17521 7774q16955 7989);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

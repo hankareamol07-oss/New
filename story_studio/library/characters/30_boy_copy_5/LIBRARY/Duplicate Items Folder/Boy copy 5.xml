@@ -1,0 +1,168 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Boy copy 5" itemID="64771914-000006b0" symbolType="graphic" lastModified="1701084016" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="Boy copy 5" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="face" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="5ut7i" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.5050048828125" d="0.5050048828125" tx="992.1" ty="241.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1368.9" y="444.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="LHand" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/lHAND copy 5" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.876571655273438" b="0.323211669921875" c="-0.323211669921875" d="0.876571655273438" tx="1744.75" ty="664.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-10.95" y="-40.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="LArm" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/lARM copy 5" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.930389404296875" b="0.0853271484375" c="-0.0853271484375" d="0.930389404296875" tx="1731.7" ty="571.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-7" y="-78.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Body" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Body1 copy 5" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="1561.15" ty="443.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="80" y="277.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Leg1" color="#009999" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/leg1 copy 16" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="1624.9" ty="654"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="62.35" y="44.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Leg2" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/leg2 copy 14" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.944808959960938" b="0.0320281982421875" c="-0.0320281982421875" d="0.944808959960938" tx="1569.35" ty="650.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="42.95" y="51"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Foot1" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/foot1 copy 20" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="1618.95" ty="823.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="42.55" y="40.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Foot2" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/foot2 copy 22" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="1525.45" ty="810.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="61.3" y="36.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="RHand" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/HAND copy 5" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.89385986328125" b="-0.15728759765625" c="0.15728759765625" d="0.89385986328125" tx="1554.2" ty="660.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="22.25" y="-38.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="RArm" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="1896" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/aRM copy 5" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.89385986328125" b="-0.15728759765625" c="0.15728759765625" d="0.89385986328125" tx="1581.85" ty="568.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="19.65" y="-75.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,76 @@
+{
+ "name": "30_boy_walkingcopy",
+ "label": "मुलगा 2 (चालणे)",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/Boy walkingcopy",
+  "frame": 0,
+  "bounds": [
+   1500.0,
+   288.0,
+   1764.0,
+   1040.0
+  ],
+  "faces": "left",
+  "head": "face",
+  "neck": [
+   1640.5,
+   477.44
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 21": {
+    "closed": 0,
+    "mid": 28,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eyebrow copy 21": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "RArm",
+   "fore": "RHand",
+   "shoulder": [
+    1601.25,
+    508.3
+   ],
+   "elbow": [
+    1613.4,
+    628.88
+   ]
+  },
+  "arm_back": {
+   "upper": "LArm",
+   "fore": "LHand",
+   "shoulder": [
+    1714.25,
+    513.62
+   ],
+   "elbow": [
+    1700.73,
+    627.02
+   ]
+  },
+  "legs": [
+   "Foot2",
+   "Foot1"
+  ],
+  "hips": {
+   "Foot2": [
+    1566.75,
+    841.5
+   ],
+   "Foot1": [
+    1702.5,
+    851.5
+   ]
+  },
+  "feet": [],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/Boy walkingcopy"
+}

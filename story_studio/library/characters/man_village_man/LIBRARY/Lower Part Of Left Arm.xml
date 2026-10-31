@@ -1,0 +1,119 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Lower Part Of Left Arm" itemID="679dd63d-00000b1b" symbolType="graphic" lastModified="1738398099" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="Lower Part Of Left Arm" currentFrame="5" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Lower_Side_L" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="17.05" ty="-197"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="23.4" y="31.35"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMGroup>
+                      <matrix>
+                        <Matrix tx="17.05" ty="-197"/>
+                      </matrix>
+                      <members>
+                        <DOMShape>
+                          <matrix>
+                            <Matrix tx="17.05" ty="-197"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#8EC74B"/>
+                            </FillStyle>
+                          </fills>
+                          <strokes>
+                            <StrokeStyle index="1">
+                              <SolidStroke scaleMode="normal">
+                                <fill>
+                                  <SolidColor color="#0B9FB8"/>
+                                </fill>
+                              </SolidStroke>
+                            </StrokeStyle>
+                            <StrokeStyle index="2">
+                              <SolidStroke scaleMode="normal">
+                                <fill>
+                                  <SolidColor color="#8EB238"/>
+                                </fill>
+                              </SolidStroke>
+                            </StrokeStyle>
+                          </strokes>
+                          <edges>
+                            <Edge fillStyle0="1" strokeStyle="1" edges="!-2429 6492[-1268 7049 -9 7072"/>
+                            <Edge fillStyle0="1" strokeStyle="2" edges="!-920 419|-2429 6492"/>
+                            <Edge fillStyle1="1" edges="!-920 419|1877 798"/>
+                            <Edge fillStyle0="1" strokeStyle="2" edges="!-9 7072|1877 798"/>
+                            <Edge cubics="!-2429 6492(;-1655,6863 -848,7057 -9,7072q-2429 6492Q-1268 7049q-9 7072);"/>
+                            <Edge cubics="!-920 419(;-920,419 -2429,6492 -2429,6492q-920 419 -2429 6492);"/>
+                            <Edge cubics="!-920 419(;-920,419 1877,798 1877,798q-920 419 1877 798);"/>
+                            <Edge cubics="!-9 7072(;-9,7072 1877,798 1877,798q-9 7072 1877 798);"/>
+                          </edges>
+                        </DOMShape>
+                        <DOMGroup>
+                          <matrix>
+                            <Matrix tx="17.05" ty="-197"/>
+                          </matrix>
+                          <members>
+                            <DOMShape>
+                              <matrix>
+                                <Matrix tx="17.05" ty="-197"/>
+                              </matrix>
+                              <fills>
+                                <FillStyle index="1">
+                                  <SolidColor color="#0BB7C7"/>
+                                </FillStyle>
+                              </fills>
+                              <strokes>
+                                <StrokeStyle index="1">
+                                  <SolidStroke scaleMode="normal">
+                                    <fill>
+                                      <SolidColor color="#0B9FB8"/>
+                                    </fill>
+                                  </SolidStroke>
+                                </StrokeStyle>
+                              </strokes>
+                              <edges>
+                                <Edge fillStyle1="1" strokeStyle="1" edges="!-9 7072|-159 7453!-159 7453[-1359 7531 -2560 6832!-2560 6832[-2513 6572 -2429 6492"/>
+                                <Edge fillStyle1="1" edges="!-2429 6492[-1268 7049 -9 7072"/>
+                                <Edge cubics="!-2429 6492(;-1655,6863 -848,7057 -9,7072q-2429 6492Q-1268 7049q-9 7072);"/>
+                                <Edge cubics="!-2429 6492(;-2485,6545 -2529,6659 -2560,6832q-2429 6492Q-2513 6572q-2560 6832);"/>
+                                <Edge cubics="!-2560 6832(;-1759,7298 -959,7505 -159,7453q-2560 6832Q-1359 7531q-159 7453);"/>
+                                <Edge cubics="!-159 7453(;-159,7453 -9,7072 -9,7072q-159 7453 -9 7072);"/>
+                              </edges>
+                            </DOMShape>
+                          </members>
+                        </DOMGroup>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Hand Left Inside" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Hand Left Inside" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-75.65" ty="241.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

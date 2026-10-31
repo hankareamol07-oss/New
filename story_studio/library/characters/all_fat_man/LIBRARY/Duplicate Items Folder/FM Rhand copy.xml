@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/FM Rhand copy" itemID="64ea43ec-0000714c" symbolType="graphic" lastModified="1669526815">
+  <timeline>
+    <DOMTimeline name="FM Rhand copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-37.8" ty="-57.35"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#328FCF"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#125685"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!1484 1352[1315 1957 1140 2682!1140 2682[789 4132 756 4732!756 4732|821 4836!821 4836[909 4958 1028 5052!1028 5052[1407 5352 1944 5252!1944 5252[2136 4667 2310 3902!2310 3902[2657 2373 2564 1472!2564 1472[2449 1312 2257 1217!2257 1217
+[1872 1027 1484 1352"/>
+                    <Edge cubics="!1484 1352(;1484,1352 808,3772 756,4732q1484 1352Q1315 1957q1140 2682Q789 4132q756 4732);"/>
+                    <Edge cubics="!756 4732(;756,4732 1084,5412 1944,5252q756 4732Q756 4732q821 4836Q909 4958q1028 5052Q1407 5352q1944 5252);"/>
+                    <Edge cubics="!1944 5252(;1944,5252 2713,2913 2564,1472q1944 5252Q2136 4667q2310 3902Q2657 2373q2564 1472);"/>
+                    <Edge cubics="!2564 1472(;2564,1472 2104,832 1484,1352q2564 1472Q2449 1312q2257 1217Q1872 1027q1484 1352);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

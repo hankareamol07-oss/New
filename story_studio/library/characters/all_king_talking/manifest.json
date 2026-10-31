@@ -1,0 +1,83 @@
+{
+ "name": "all_king_talking",
+ "label": "King Talking",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "King Talking",
+  "frame": 0,
+  "bounds": [
+   96.0,
+   12.0,
+   624.0,
+   1108.0
+  ],
+  "faces": "left",
+  "head": "King_Head",
+  "neck": [
+   353.5,
+   374.24
+  ],
+  "mouth": {
+   "Duplicate Items Folder/King Lips": {
+    "closed": 0,
+    "mid": 8,
+    "open": 4
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/King Eyes": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "King_RHand",
+   "fore": "King_RHand2",
+   "shoulder": [
+    226.0,
+    425.66
+   ],
+   "elbow": [
+    195.59,
+    567.75
+   ]
+  },
+  "arm_back": {
+   "upper": "King_Chest",
+   "fore": "King_LH2",
+   "shoulder": [
+    364.0,
+    387.72
+   ],
+   "elbow": [
+    361.51,
+    534.72
+   ]
+  },
+  "legs": [
+   "King_RL",
+   "King_LL"
+  ],
+  "hips": {
+   "King_RL": [
+    265.25,
+    689.0
+   ],
+   "King_LL": [
+    414.75,
+    650.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "King Talking"
+}

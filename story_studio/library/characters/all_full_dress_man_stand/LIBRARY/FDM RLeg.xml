@@ -1,0 +1,54 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="FDM RLeg" itemID="63ac4576-000002ab" symbolType="graphic" lastModified="1677514846">
+  <timeline>
+    <DOMTimeline name="FDM RLeg" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#404040"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!46 2459|45 2812!45 2812[48 3257 59 3727!59 3727[92 5225 187 6373!187 6373[#120.71 #1B1B.8B 987 6999!987 6999[1821 7062 1850 6281!1850 6281[1802 4652 1917 3850!1917 3850[1971 3476 2141 2701!2141 2701[2308 1942 2355 1601!2355 1601[2432
+ 1036 2352 706!2352 706[2257 312 1927 169!1927 169[1584 21 1246 2!1246 2[927 -15 661 85!661 85[400 184 241 377!241 377[77 577 53 840!53 840|33 1048!33 1048[12 1305 4 1549!4 1549[-14 2118 46 2459"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!46 2459[68 2585 101 2679"/>
+                        <Edge cubics="!1917 3850(;2131,2354 2867,577 1927,169q1917 3850Q1971 3476q2141 2701Q2308 1942q2355 1601Q2432 1036q2352 706Q2257 312q1927 169);"/>
+                        <Edge cubics="!1927 169(;986,-238 118,127 53,840q1927 169Q1584 21q1246 2Q927 -15q661 85Q400 184q241 377Q77 577q53 840);"/>
+                        <Edge cubics="!53 840(;53,840 33,1048 33,1048q53 840 33 1048);"/>
+                        <Edge cubics="!33 1048(;19,1219 9,1386 4,1549q33 1048Q12 1305q4 1549);"/>
+                        <Edge cubics="!46 2459(;60,2543 79,2616 101,2679p46 2459Q68 2585q101 2679);"/>
+                        <Edge cubics="!45 2812(;47,3109 51,3414 59,3727q45 2812Q48 3257q59 3727);"/>
+                        <Edge cubics="!46 2459(;46,2459 45,2812 45,2812p46 2459q45 2812);"/>
+                        <Edge cubics="!4 1549(;-8,1928 6,2232 46,2459q4 1549Q-14 2118p46 2459);"/>
+                        <Edge cubics="!59 3727(;81,4726 124,5608 187,6373q59 3727Q92 5225q187 6373);"/>
+                        <Edge cubics="!1850 6281(;1818,5195 1840,4385 1917,3850p1850 6281Q1802 4652q1917 3850);"/>
+                        <Edge cubics="!987 6999(;1543,7041 1831,6802 1850,6281q987 6999Q1821 7062p1850 6281);"/>
+                        <Edge cubics="!187 6373(;338,6735 605,6944 987,6999p187 6373Q414 6916q987 6999);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

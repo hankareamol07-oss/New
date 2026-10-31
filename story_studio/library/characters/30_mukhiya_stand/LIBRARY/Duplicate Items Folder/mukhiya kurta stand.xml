@@ -1,0 +1,91 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/mukhiya kurta stand" itemID="650d4000-000008ac" symbolType="graphic" lastModified="1701021146">
+  <timeline>
+    <DOMTimeline name="mukhiya kurta stand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="325" ty="-92.9"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="325" ty="-92.9"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#D18C67"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#DFB57F"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#F3C58A"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#D5743C"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A78457"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="2" strokeStyle="2" edges="!-4186 2071S5[#FFEFCD.2B #77E.4 -4175 1753!-4175 1753[-4091 1647 -4172 1427!-4172 1427[-4173 1422 -4175 1415!-4175 1415[-4203 1343 -4192 1237"/>
+                        <Edge fillStyle0="3" strokeStyle="2" edges="!-4192 1237S5|-4082 -973!-4082 -973[-4035 -1926 -4136 -2269!-4136 -2269[-4186 -2467 -4200 -2718!-4200 -2718[-4191 -2916 -4221 -2997!-4221 -2997[-4702 -3324 -5233 -3552"/>
+                        <Edge fillStyle0="3" fillStyle1="1" strokeStyle="2" edges="!-5233 -3552S7[-5257 -3098 -5443 -2909!-5443 -2909[#FFEA29.FF #FFF537.94 -5630.5 -2685.5"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="2" edges="!-5630.5 -2685.5S7[#FFE9F6.35 #FFF597.07 -5645 -2650!-5645 -2650[-5659 -2582 -5669 -2539!-5669 -2539[-5726 -2232 -5807 -1923!-5807 -1923[-5934 -2153 -6002 -2444!-6002 -2444[-6071 -2733 -6112 -2763!-6112 -2763[#FFE608.DB #FFF3CC.08 -6991
+ -3533!-6991 -3533[#FFE483.C4 #FFF1FC.E5 -7066 -3626.5"/>
+                        <Edge fillStyle0="2" strokeStyle="2" edges="
+!-7066 -3626.5S5[#FFE458.5F #FFF1C3.C3 -7090 -3659!-7090 -3659[#FFE3F0.34 #FFF1D6.77 -7529 -3549!-7529 -3549[#FFE26D.01 #FFF22C.4D -7613.5 -3529"/>
+                        <Edge fillStyle0="3" strokeStyle="2" edges="
+!-7613.5 -3529S5[#FFE110.1E #FFF282.6C -8250 -3316.5!-8250 -3316.5[#FFDE4E.0D #FFF3A7.C2 -8577.5 -2768.5!-8577.5 -2768.5[-8529 #FFF6B7.0B -8591 -1626!-8591 -1626[#FFDE65.8C #FFFA33.05 -8611 -1347"/>
+                        <Edge fillStyle0="2" strokeStyle="2" edges="
+!-8611 -1347S5[#FFDE38.82 #FFFD11.7F -8628 -212!-8628 -212[#FFDE59.F8 #ED.02 -8592 754.5!-8592 754.5[#FFDE86.17 #4F7.F8 -8524.5 1504.5!-8524.5 1504.5[#FFDECC.04 #65E.0D -8520 1784!-8520 1784[#FFDEAF.2E #73B.7 -8561 1885!-8561 1885[#FFDE1C.05
+ #7F0.A3 -8662 2131"/>
+                        <Edge fillStyle0="3" strokeStyle="2" edges="
+!-8662 2131S5[#FFDC60.87 #10EF.5D -9467 6864!-9467 6864|-9175 7194!-9175 7194[#FFDCA0.9A #18AA.14 -8879 5604!-8879 5604[#FFDD2F.64 #19DB.CC -8864 7581!-8864 7581[#FFE8A3.0E #20DE.15 -3534 7437!-3534 7437|-4186 2071"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-7066 -3626.5S6[-6918 #FFF191.E1 -6770 -3795"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-6770 -3795S7|-6782 -3541"/>
+                        <Edge fillStyle0="2" fillStyle1="3" edges="
+!-7613.5 -3529S3[#FFE418.F #FFF2D1.6A -6887 -3158!-6887 -3158[#FFE65E.0D #FFF4BF.2E -6152 -2676!-6152 -2676[#FFE878.54 #FFF783.0F -5813 -1741!-5813 -1741[#FFE9DF.86 #FFF76C.A7 -5630.5 -2685.5"/>
+                        <Edge fillStyle0="3" fillStyle1="2" edges="
+!-6949 -822S3[#FFE1B5.A7 #FFFCC9.64 -7814 -1555!-7814 -1555[#FFE251.34 #FFFC16.D2 -6949 -822"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-5233 -3552S5|-5233 -4247!-5233 -4247|-6749 -4247!-6749 -4247|-6770 -3795"/>
+                        <Edge fillStyle0="2" fillStyle1="3" edges="
+!-4805 -921S3[#FFEE51.C7 -827.53125 -4333 -1002!-4333 -1002[#FFEE36.E6 #FFFC6A.BA -4805 -921"/>
+                        <Edge fillStyle0="3" fillStyle1="2" edges="
+!-6497 -931S3[#FFE906.DE #FFFB10.18 -5285 -950!-5285 -950[-5891 #FFFBC4.66 -6497 -931!-4271 2275[#FFEF8B.D1 2075 -4271 1875!-4271 1875[#FFEF07.DB #7BA.07 -4714 2025!-4714 2025[#FFEF6D.5B #70E.F9 -4263 1575!-4263 1575[#FFEEBB.49 #6DF.39
+ -4748 1841!-4748 1841[-4244.375 #63F.E2 -4192 1237"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="2" edges="
+!-4271 2275S7[#FFEF8B.7B #87F.F1 -4186 2071"/>
+                        <Edge fillStyle0="2" fillStyle1="3" edges="
+!-8662 2131S3[#FFDFD1.6C #984.9E -7722 2572!-7722 2572[#FFDF71.5D #8BD.16 -8282 1816!-8282 1816[-7813 #7DD.C9 -7344 1982!-7344 1982[#FFDFB3.6B #671.DA -8380 1362!-8380 1362[-8558.875 #28F.C4 -8611 -1347!-6437 1015[#FFEBF9.A8 #45E.FC -4468
+ -23!-4468 -23[#FFEB88.95 #356.49 -6437 1015"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

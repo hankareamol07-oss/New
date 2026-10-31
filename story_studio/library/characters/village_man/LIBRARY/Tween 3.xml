@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Tween 3" itemID="67485bfb-00000a0d" symbolType="graphic" lastModified="1732795387">
+  <timeline>
+    <DOMTimeline name="Tween 3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-978.1" ty="-608.2"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-978.1" ty="-608.2"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#49869E"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="square">
+                            <fill>
+                              <SolidColor color="#45849D"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!20675 12636S6[20198 12801 19665 12885!19665 12885[18597 13054 18391 12659!18391 12659[18343 12566 18400 12440!18400 12440[18513 12188 18640 11986!18640 11986[19045 11339 19430 11431!19430 11431|19881 11395!19881 11395[20358 11380 20484
+ 11482!20484 11482|20538 11623!20538 11623[#507A.1E #2E11.FB 20685 12097!20685 12097[#511F.A6 #3070.0F 20753 12636!20753 12636|20675 12636"/>
+                        <Edge cubics="!20675 12636(;20675,12636 18768,13295 18312,12651q20675 12636Q20198 12801q19665 12885Q18597 13054q18312 12651);"/>
+                        <Edge cubics="!18312 12651(;18312,12651 18814,11283 19430,11431q18312 12651Q18343 12566q18400 12440Q18513 12188q18640 11986Q19045 11339q19430 11431);"/>
+                        <Edge cubics="!19430 11431(;19430,11431 20282,11318 20484,11482q19430 11431Q19430 11431q19881 11395Q20358 11380q20484 11482);"/>
+                        <Edge cubics="!20484 11482(;20484,11482 20843,12356 20725,12612q20484 11482Q20484 11482q20538 11623Q20602 11794q20649 11951Q20799 12452q20725 12612);"/>
+                        <Edge cubics="!20725 12612(;20725,12612 20675,12636 20675,12636q20725 12612 20675 12636);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

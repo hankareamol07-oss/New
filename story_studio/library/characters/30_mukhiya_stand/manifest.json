@@ -1,0 +1,81 @@
+{
+ "name": "30_mukhiya_stand",
+ "label": "मुखिया (पगडी) 1",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/mukhiya stand",
+  "frame": 0,
+  "bounds": [
+   -532.0,
+   -504.0,
+   -96.0,
+   860.0
+  ],
+  "faces": "right",
+  "head": "Face",
+  "neck": [
+   -300.75,
+   -183.08
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 14": {
+    "closed": 0,
+    "mid": 20,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 14": {
+    "open": 0,
+    "blink": [
+     1,
+     2
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "arm2",
+   "fore": "hand2",
+   "shoulder": [
+    -231.0,
+    -122.2
+   ],
+   "elbow": [
+    -197.75,
+    46.5
+   ]
+  },
+  "arm_back": {
+   "upper": "arm1",
+   "fore": "hand1",
+   "shoulder": [
+    -425.5,
+    -131.14
+   ],
+   "elbow": [
+    -466.18,
+    58.05
+   ]
+  },
+  "legs": [
+   "L_foot",
+   "R_foot"
+  ],
+  "hips": {
+   "L_foot": [
+    -388.75,
+    507.0
+   ],
+   "R_foot": [
+    -241.0,
+    504.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/mukhiya stand"
+}

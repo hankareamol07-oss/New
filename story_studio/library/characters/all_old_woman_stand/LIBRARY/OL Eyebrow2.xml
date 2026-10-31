@@ -1,0 +1,82 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="OL Eyebrow2" itemID="63b1ebb2-00011b21" symbolType="graphic" lastModified="1672605009">
+  <timeline>
+    <DOMTimeline name="OL Eyebrow2" currentFrame="1" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#ACAAA8"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#454545"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!404 288[411 220 384 150!384 150[328 10 150 0!150 0|109 1!109 1[62 6 30 30!30 30[-18 67 11 121!11 121[42 175 98 153!98 153|100 153!100 153[163 127 258 170!258 170[353 212 404 288"/>
+                        <Edge cubics="!404 288(;404,288 435,16 150,0q404 288Q411 220q384 150Q328 10q150 0);"/>
+                        <Edge cubics="!150 0(;150,0 81,-9 30,30q150 0Q150 0q109 1Q62 6q30 30);"/>
+                        <Edge cubics="!30 30(;-34,78 22,181 98,153q30 30Q-18 67q11 121Q42 175q98 153);"/>
+                        <Edge cubics="!98 153(;99,153 100,153 100,153q98 153 100 153);"/>
+                        <Edge cubics="!100 153(;184,119 336,186 404,288q100 153Q163 127q258 170Q353 212q404 288);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="0.5" b="0.866012573242188" c="0.866012573242188" d="-0.5" tx="-1.2" ty="2.1"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="0.5" b="0.866012573242188" c="0.866012573242188" d="-0.5" tx="-1.2" ty="2.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#ACAAA8"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#454545"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!404 288[411 220 384 150!384 150[328 10 150 0!150 0|109 1!109 1[62 6 30 30!30 30[-18 67 11 121!11 121[42 175 98 153!98 153|100 153!100 153[163 127 258 170!258 170[353 212 404 288"/>
+                        <Edge cubics="!404 288(;404,288 435,16 150,0q404 288Q411 220q384 150Q328 10q150 0);"/>
+                        <Edge cubics="!150 0(;150,0 81,-9 30,30q150 0Q150 0q109 1Q62 6q30 30);"/>
+                        <Edge cubics="!30 30(;-34,78 22,181 98,153q30 30Q-18 67q11 121Q42 175q98 153);"/>
+                        <Edge cubics="!98 153(;99,153 100,153 100,153q98 153 100 153);"/>
+                        <Edge cubics="!100 153(;184,119 336,186 404,288q100 153Q163 127q258 170Q353 212q404 288);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

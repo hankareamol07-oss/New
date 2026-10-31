@@ -1,0 +1,95 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Rhand copy 8" itemID="60a53f19-00001391" symbolType="graphic" lastModified="1621264828">
+  <timeline>
+    <DOMTimeline name="Rhand copy 8" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#D8D8D8"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#ABABAB"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!2075 0[687 497 214 3827!214 3827[42 4781 0 6007!0 6007[118 7306 628 8270!628 8270[781 8565 1021 8474!1021 8474[2018 8428 2625 7869!2625 7869[1839 6790 1438 5126!1438 5126[1730 3480 2334 2014"/>
+                        <Edge fillStyle0="1" edges="!2334 2014[3043 -19 2075 0"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <transformationPoint>
+                    <Point x="69.7" y="419.35"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape selected="true">
+                      <transformationPoint>
+                        <Point x="69.7" y="419.35"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FEC5A5"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#F2B694"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.5">
+                            <fill>
+                              <SolidColor color="#D8794B"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!2781 10636S5|2889 10786!2889 10786[3097 10824 3072 10578!3072 10578[2889 10116 2597 9883!2597 9883[2360 9378 2285 8970!2285 8970[2539 9283 2731 9370!2731 9370|2752 9387!2752 9387[2993 9474 3035 9262!3035 9262[2831 9004 2718 8674!2718
+ 8674|2714 8654!2714 8654|2227 8141"/>
+                        <Edge fillStyle1="2" edges="
+!1214 8425S2|1227 8420!1227 8420[1252 8254 1410 8166"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="
+!1410 8166S3[1373 8275 1356 8416!1356 8416[1323 8799 1423 9658!1423 9658|1460 9924!1460 9924|1689 10187!1689 10187|2131 10424"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="
+!2131 10424S6|2023 10428!2023 10428|1714 10307!1714 10307|1435 10032!1435 10032|1410 10003!1410 10003[1140 9424 1214 8425"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!2456 10520S5|2602 10624!2602 10624|2781 10636"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!2456 10520S6|2256 10499!2256 10499|2139 10424!2139 10424|2131 10424"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!1614 9928S7|1848 10228!1848 10228|2131 10424!2456 10520|2198 10345!2198 10345|1848 9920!2781 10636[2481 10245 2156 9903"/>
+                        <Edge fillStyle0="1" edges="
+!2227 8141S1[1656 8037 1410 8166"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

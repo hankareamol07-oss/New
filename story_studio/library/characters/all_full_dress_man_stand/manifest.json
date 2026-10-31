@@ -1,0 +1,83 @@
+{
+ "name": "all_full_dress_man_stand",
+ "label": "Full Dress Man Stand",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Full Dress Man Stand",
+  "frame": 0,
+  "bounds": [
+   -52.0,
+   -212.0,
+   364.0,
+   1032.0
+  ],
+  "faces": "left",
+  "head": "FDM_Head",
+  "neck": [
+   114.75,
+   47.48
+  ],
+  "mouth": {
+   "Duplicate Items Folder/FDM Lips": {
+    "closed": 0,
+    "mid": 8,
+    "open": 4
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/FDM Eyes": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "FDM_RHand",
+   "fore": "FDM_RHand2",
+   "shoulder": [
+    72.25,
+    102.84
+   ],
+   "elbow": [
+    39.32,
+    277.73
+   ]
+  },
+  "arm_back": {
+   "upper": "FDM_LHand",
+   "fore": "FDM_LHand2",
+   "shoulder": [
+    271.0,
+    105.84
+   ],
+   "elbow": [
+    297.3,
+    278.77
+   ]
+  },
+  "legs": [
+   "FDM_RLeg2",
+   "FDM_LLeg2"
+  ],
+  "hips": {
+   "FDM_RLeg2": [
+    111.5,
+    647.5
+   ],
+   "FDM_LLeg2": [
+    227.5,
+    636.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Full Dress Man Stand"
+}

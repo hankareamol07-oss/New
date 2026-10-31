@@ -1,0 +1,36 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Nose copy 23" itemID="64ea427d-0000312f" lastModified="1680085298">
+  <timeline>
+    <DOMTimeline name="Nose copy 23" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-83.9" ty="-90.35"/>
+                  </matrix>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#A06541"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!1761 1807|1758 2037!1758 2037[1742 2304 1683 2485!1683 2485|1678 2524!1678 2524[1678 2568 1704 2596!1704 2596[1789 2686 2107 2580!2107 2580[2114 2562 2109 2544!2109 2544[2100 2506 2041 2502"/>
+                    <Edge cubics="!1761 1807(;1761,1807 1778,2195 1683,2485q1761 1807Q1761 1807q1758 2037Q1742 2304q1683 2485);"/>
+                    <Edge cubics="!1683 2485(;1683,2485 1598,2749 2107,2580q1683 2485Q1683 2485q1678 2524Q1678 2568q1704 2596Q1789 2686q2107 2580);"/>
+                    <Edge cubics="!2107 2580(;2107,2580 2135,2509 2041,2502q2107 2580Q2114 2562q2109 2544Q2100 2506q2041 2502);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

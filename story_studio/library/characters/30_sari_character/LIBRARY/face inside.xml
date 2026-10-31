@@ -1,0 +1,74 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="face inside" itemID="655b4c0f-00001c2e" symbolType="graphic" lastModified="1700482659">
+  <timeline>
+    <DOMTimeline name="face inside" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="0.9981689453125" b="0.0602264404296875" c="-0.0602264404296875" d="0.9981689453125" tx="-17.75" ty="-16.25"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix a="0.9981689453125" b="0.0602264404296875" c="-0.0602264404296875" d="0.9981689453125" tx="-17.75" ty="-16.25"/>
+                      </matrix>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#966044"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge strokeStyle="1" edges="!2691 -2081[2839 -2016 3143 -2157!3143 -2157[3279 -2214 3398 -2217!3398 -2217[3854 -2239 4102 -1885!2171 -2591[2371 -2452 2657 -2552!400 -2662[775 -2812 1152 -2802!0 -2079[1081 -2818 1475 -2247!3273 -2589[3690 -2629 4042 -2351"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#DB936C"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#D28B65"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#966044"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!-2277 6155[-3790 5438 -4520 4584!-4520 4584[-5250 3729 -5353 2523!-5353 2523[-5457 1317 -5579 -398!-5579 -398[-5522 -2554 -4762 -3861!-4762 -3861[-3675 -5732 -2112 -6629!-2112 -6629[1940 -8854 5579 -4767"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!5579 -4767|5165 -2402!5165 -2402[5150 -2112 5085 -1898!5085 -1898[5019 -1686 4871 -973!4871 -973[4723 -262 4985 900"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!5579 -4767[#6F0.E #FFEF18.8E 541 -3755!541 -3755[-2416 -2747 -3629 1972!-3629 1972[-4275 4489 255 7222"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!4985 900S4[5150 1490 5286 3101!5286 3101[5422 4712 4351 5633!4351 5633[3704 6263 3076 6874!3076 6874[2011 7736 255 7222"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!255 7222S4[84 7172 -93 7109!-93 7109[-764 6871 -2277 6155"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

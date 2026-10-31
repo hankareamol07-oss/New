@@ -1,0 +1,54 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Thuri" itemID="63a176c3-00002b0e" symbolType="graphic" lastModified="1671480215">
+  <timeline>
+    <DOMTimeline name="Thuri" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-18.75" ty="-147.35"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-18.75" ty="-147.35"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#B75417"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#672700"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!2174.5 2960.5S6[#866.4A #BE8.04 2102 3115!2102 3115[1978 3288 1756 3457!1756 3457[1505 3649 1281 3708!1281 3708[1235 3720 1164 3719!1164 3719[1023 3718 900 3656!900 3656[801 3558 694 3443!694 3443[479 3212 438 3124!438 3124[#195.A7 #BED.EA
+ 374.5 2947"/>
+                        <Edge fillStyle1="1" edges="
+!374.5 2947S2|2174.5 2960.5"/>
+                        <Edge cubics="!2102 3115(;1954,3322 1601,3623 1281,3708q2102 3115Q1978 3288q1756 3457Q1505 3649q1281 3708);"/>
+                        <Edge cubics="!1281 3708(;1281,3708 1097,3755 900,3656q1281 3708Q1235 3720q1164 3719Q1023 3718q900 3656);"/>
+                        <Edge cubics="!900 3656(;900,3656 504,3265 438,3124q900 3656Q801 3558q694 3443Q479 3212q438 3124);"/>
+                        <Edge cubics="!438 3124(;417,3077 396,3018 375,2947q438 3124Q406 3054q375 2947);"/>
+                        <Edge cubics="!2175 2961(;2158,3019 2134,3070 2102,3115q2175 2961Q2150 3048q2102 3115);"/>
+                        <Edge cubics="!375 2947(;375,2947 2175,2961 2175,2961q375 2947 2175 2961);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

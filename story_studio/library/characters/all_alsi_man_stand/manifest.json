@@ -1,0 +1,83 @@
+{
+ "name": "all_alsi_man_stand",
+ "label": "Alsi Man Stand",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Alsi Man Stand",
+  "frame": 0,
+  "bounds": [
+   -12.0,
+   24.0,
+   408.0,
+   1040.0
+  ],
+  "faces": "right",
+  "head": "GW_Head",
+  "neck": [
+   192.0,
+   280.06
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 15": {
+    "closed": 0,
+    "mid": 20,
+    "open": 4
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/AM Eyes": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/Left Eyebrow copy 15": {
+    "open": 0,
+    "blink": []
+   },
+   "Duplicate Items Folder/Right Eyebrow copy 15": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "GW_Middle_Dhoti",
+   "fore": null,
+   "shoulder": [
+    206.0,
+    567.0
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "GW_LHand",
+   "fore": "GW_LHand2",
+   "shoulder": [
+    151.5,
+    317.78
+   ],
+   "elbow": [
+    122.31,
+    454.12
+   ]
+  },
+  "legs": [
+   "GW_RLeg2"
+  ],
+  "hips": {
+   "GW_RLeg2": [
+    268.25,
+    816.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Alsi Man Stand"
+}

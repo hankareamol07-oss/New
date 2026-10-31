@@ -1,0 +1,84 @@
+{
+ "name": "premium_gthyk_copy_2",
+ "label": "gthyk copy 2",
+ "gender": "male",
+ "pack": "PREMIUM MEN",
+ "rig": {
+  "root": "Duplicate Items Folder/gthyk copy 2",
+  "frame": 0,
+  "bounds": [
+   380.0,
+   104.0,
+   880.0,
+   1556.0
+  ],
+  "faces": "right",
+  "head": "face",
+  "neck": [
+   665.5,
+   366.74
+  ],
+  "mouth": {
+   "Duplicate Items Folder/mouth copy 4": {
+    "closed": 9,
+    "mid": 6,
+    "open": 3
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eyes copy 7": {
+    "open": 0,
+    "blink": [
+     14,
+     15,
+     16,
+     17,
+     18
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "Layer_2",
+   "fore": "Layer_6",
+   "shoulder": [
+    738.5,
+    435.34
+   ],
+   "elbow": [
+    785.6,
+    626.1
+   ]
+  },
+  "arm_back": {
+   "upper": "r_bah",
+   "fore": "Layer_3",
+   "shoulder": [
+    506.75,
+    428.74
+   ],
+   "elbow": [
+    425.83,
+    642.35
+   ]
+  },
+  "legs": [
+   "rightleg",
+   "leftleg"
+  ],
+  "hips": {
+   "rightleg": [
+    570.5,
+    750.0
+   ],
+   "leftleg": [
+    700.25,
+    757.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Layer_5"
+  ]
+ },
+ "root": "Duplicate Items Folder/gthyk copy 2"
+}

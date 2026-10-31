@@ -1,0 +1,116 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Head" itemID="6794db13-00000815" symbolType="graphic" lastModified="1737808246" lastUniqueIdentifier="9">
+  <timeline>
+    <DOMTimeline name="Seth Head" currentFrame="31" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Seth_Lips" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Lips" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix ty="308.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Ear" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Ear" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="299.1" ty="211.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="33.9" y="78.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Nose" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Nose" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="72.7" ty="242.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="42.7" y="49.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Eyes" color="#009999" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="31" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Eyes" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="52.9" ty="203.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="31" duration="269" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Eyes" symbolType="graphic" firstFrame="7" centerPoint3DX="148.05" centerPoint3DY="230.3" loop="loop">
+                  <matrix>
+                    <Matrix tx="52.9" ty="203.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Hair_And_Cap" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Hair And Cap" symbolType="graphic" firstFrame="1" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.814102172851562" b="-0.0111083984375" c="0.0111083984375" d="0.814102172851562" tx="49.9" ty="3.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="205.25" y="174.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Face_Part" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Face Part" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="16.25" ty="68.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="156.5" y="211.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

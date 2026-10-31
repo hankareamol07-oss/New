@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/back hair copy" itemID="650dceab-000006a8" symbolType="graphic" lastModified="1695399479">
+  <timeline>
+    <DOMTimeline name="back hair copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#170A00"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#060300"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!2839 -2748S7|1223 -1459!1223 -1459[1376 -1206 1367 -912!1367 -912[1352 -368 1159 88!1159 88[909 575 870 1126!870 1126[830 1676 726 2034!726 2034[622 2391 597 3221"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!597 3221S5[1605 3595 2056 3704!2056 3704[2430 3793 2931 4046!2931 4046[3432 4299 3744 4137!3744 4137[4056 3976 3707 3332!3707 3332[3359 2688 3244 1515!3244 1515[3129 341 3099 -1607!3099 -1607[3090 -2233 2839 -2748!2839 -2748[1937 -4600
+ -819 -4343!-819 -4343[-2527 -4178 -2921 -1863!-2921 -1863|-3287 2218!-3287 2218[#FFF319.F1 #9F9.C5 -3339 3030!-3339 3030[#FFF2D0.07 #DB2.5D -3550 3884!-3550 3884[#FFF174.1F #10A5.62 -3174.5 4331!-3174.5 4331[#FFF5BE.A7 #1130.CA -2441
+ 4322!-2441 4322[-2425 4310 -2411 4297!-2411 4297[-2289 4179 -2327 3803!-2327 3803[-953 2310 597 3221"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,80 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/PF copy" itemID="64ea427d-00003131" lastModified="1680085298">
+  <timeline>
+    <DOMTimeline name="PF copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="BH">
+                  <transformationPoint>
+                    <Point x="68.05" y="73.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="RE">
+                  <matrix>
+                    <Matrix tx="5" ty="84.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.25" y="20.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#EF9D70"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#A06541"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!2184 2602|2199 2781!2199 2781[2195 2986 2102 3115!2102 3115[1978 3288 1756 3457!1756 3457[1505 3649 1281 3708!1281 3708[1235 3720 1164 3719!1164 3719[1023 3718 900 3656!900 3656[801 3558 694 3443!694 3443[479 3212 438 3124!438 3124[372
+ 2981 310 2685!310 2685[225 2284 184 1745!184 1745[177 1568 179 1375!179 1375[183 989 227 912!227 912[322 746 440 672!440 672[672 525 1116 540!1116 540[2051 573 2231 1129!2231 1129[2268 1241 2259 1330!2259 1330[2254 1378 2217 1501!2217
+ 1501[2134 1782 2161 2159!2161 2159|2173 2177!2173 2177[2186 2202 2194 2243!2194 2243[2220 2373 2184 2602"/>
+                        <Edge cubics="!2184 2602(;2184,2602 2250,2908 2102,3115q2184 2602Q2184 2602q2199 2781Q2195 2986q2102 3115);"/>
+                        <Edge cubics="!2102 3115(;1954,3322 1601,3623 1281,3708q2102 3115Q1978 3288q1756 3457Q1505 3649q1281 3708);"/>
+                        <Edge cubics="!1281 3708(;1281,3708 1097,3755 900,3656q1281 3708Q1235 3720q1164 3719Q1023 3718q900 3656);"/>
+                        <Edge cubics="!900 3656(;900,3656 504,3265 438,3124q900 3656Q801 3558q694 3443Q479 3212q438 3124);"/>
+                        <Edge cubics="!438 3124(;373,2983 245,2555 184,1745q438 3124Q372 2981q310 2685Q225 2284q184 1745);"/>
+                        <Edge cubics="!184 1745(;184,1745 156,1035 227,912q184 1745Q177 1568q179 1375Q183 989q227 912);"/>
+                        <Edge cubics="!227 912(;297,790 429,517 1116,540q227 912Q322 746q440 672Q672 525q1116 540);"/>
+                        <Edge cubics="!1116 540(;1803,564 2123,795 2231,1129q1116 540Q2051 573q2231 1129);"/>
+                        <Edge cubics="!2231 1129(;2340,1463 2109,1444 2161,2159q2231 1129Q2268 1241q2259 1330Q2254 1378q2217 1501Q2134 1782q2161 2159);"/>
+                        <Edge cubics="!2161 2159(;2161,2159 2241,2235 2184,2602q2161 2159Q2161 2159q2173 2177Q2186 2202q2194 2243Q2220 2373q2184 2602);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+                <DOMSymbolInstance libraryItemName="LE">
+                  <matrix>
+                    <Matrix tx="106.55" ty="91.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.65" y="21.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="FSH">
+                  <matrix>
+                    <Matrix tx="22.65" ty="18.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="43.7" y="17.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

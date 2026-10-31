@@ -1,0 +1,69 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="kurta" itemID="65637389-0000112e" symbolType="graphic" lastModified="1701016457">
+  <timeline>
+    <DOMTimeline name="kurta" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-2133.8" ty="-866.7"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-2133.8" ty="-866.7"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#D38A63"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#E6CC7D"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#FFE99B"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A99351"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#7B594D"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!43340 12445S7[43520 12126 43531 11858!43531 11858|43488 11279"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!43488 11279S6[43790 11419 43927 11631!43927 11631[43946 11711 43960 11791"/>
+                        <Edge fillStyle0="1" strokeStyle="2" edges="!43488 11279S5|43488 10832!43488 10832|41787 10832!41787 10832|41787 11223"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!42907 12561S7[42235 12125 41795 11548!41795 11548[41834 11383 41787 11223"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!41787 11223S5[41516 11385 41392 11596!41392 11596[41415 11661 41441 11726"/>
+                        <Edge fillStyle0="3" fillStyle1="2" strokeStyle="1" edges="!42907 12561S7[42395 12493 42333 13072!42333 13072[41736 12457 41441 11726"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="!42907 12561S7[43186 13037 43402 13935!43402 13935[43487 13177 43340 12445"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="!43340 12445S7[43665 12445 43876 12916!43876 12916[44061 12371 43960 11791"/>
+                        <Edge fillStyle0="3" strokeStyle="1" edges="!41441 11726S5[40528 12099 39649 12647!39649 12647[39154 14080 40465 16258!40465 16258[40656 16771 40757 17704!40757 17704|40340 21005!40340 21005|40024 23291!40024 23291[40517 23531 41032 23542!41032 23542[41388 22507 41353 21981"/>
+                        <Edge fillStyle1="3" edges="!45473 12443S2|45365 14184"/>
+                        <Edge fillStyle1="3" strokeStyle="1" edges="!43960 11791S6[44787 12066 45473 12443!45365 14184|45098 16925!45098 16925[45128 18543 45539 20347!45539 20347[45720 21684 45839 23255!45839 23255[43357 24231 41465 23571!41465 23571[41489 22569 41353 21981"/>
+                        <Edge fillStyle0="3" fillStyle1="3" strokeStyle="1" edges="!41353 21981S7[41352 21968 41351 21956!41351 21956[41350 21947 41349 21937"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

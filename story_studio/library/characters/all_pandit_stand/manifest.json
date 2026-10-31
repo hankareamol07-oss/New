@@ -1,0 +1,83 @@
+{
+ "name": "all_pandit_stand",
+ "label": "Pandit Stand",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Pandit Stand",
+  "frame": 0,
+  "bounds": [
+   20.0,
+   104.0,
+   688.0,
+   1908.0
+  ],
+  "faces": "right",
+  "head": "Head",
+  "neck": [
+   387.75,
+   504.88
+  ],
+  "mouth": {
+   "Duplicate Items Folder/F2 Lips copy 3": {
+    "closed": 0,
+    "mid": 8,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/F2 Eyes copy 3": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "MP",
+   "fore": "PLL1",
+   "shoulder": [
+    423.75,
+    970.88
+   ],
+   "elbow": [
+    413.9,
+    1060.97
+   ]
+  },
+  "arm_back": {
+   "upper": "Body",
+   "fore": "PEL1",
+   "shoulder": [
+    352.75,
+    514.46
+   ],
+   "elbow": [
+    334.84,
+    996.6
+   ]
+  },
+  "legs": [
+   "PRL",
+   "LL"
+  ],
+  "hips": {
+   "PRL": [
+    266.5,
+    1361.0
+   ],
+   "LL": [
+    437.0,
+    1315.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Pandit Stand"
+}

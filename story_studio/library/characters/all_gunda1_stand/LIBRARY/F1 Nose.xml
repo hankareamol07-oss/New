@@ -1,0 +1,67 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="F1 Nose" itemID="6308b1b1-0000025d" symbolType="graphic" lastModified="1678706488">
+  <timeline>
+    <DOMTimeline name="F1 Nose" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#B36A44"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge strokeStyle="1" edges="!219 1289[#119.14 #548.2 385 1338"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-38.15" ty="-78.9"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#E8A17E"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#B36A44"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!809 1670|820 1780!820 1780[#3BB.0A #87A.F6 959 2433.5!959 2433.5[#3C2.E1 #A88.1D 777.5 2738!777.5 2738[#2C6.5D #B96.84 942 2964!942 2964[#3A9.7 #B26.B1 1029 2860.5!1029 2860.5[#460.98 #B32.1E 1192 2837!1192 2837[1205 2815 1202 2790!1202
+ 2790[1196 2740 1115 2722"/>
+                        <Edge fillStyle1="1" edges="
+!809 1670[#40B.BD #4E5.DC 1115 2722"/>
+                        <Edge cubics="!1192 2837(;1192,2837 1244,2750 1115,2722q1192 2837Q1205 2815q1202 2790Q1196 2740q1115 2722);"/>
+                        <Edge cubics="!809 1670(;960,1393 1062,1743 1115,2722q809 1670Q1036 1254q1115 2722);"/>
+                        <Edge cubics="!809 1670(;809,1670 820,1780 820,1780q809 1670 820 1780);"/>
+                        <Edge cubics="!1029 2861(;1090,2864 1145,2856 1192,2837q1029 2861Q1121 2866q1192 2837);"/>
+                        <Edge cubics="!942 2964(;939,2891 968,2857 1029,2861q942 2964Q937 2855q1029 2861);"/>
+                        <Edge cubics="!778 2738(;733,2891 787,2966 942,2964q778 2738Q710 2967q942 2964);"/>
+                        <Edge cubics="!959 2434(;962,2609 901,2710 778,2738q959 2434Q963 2696q778 2738);"/>
+                        <Edge cubics="!820 1780(;910,2041 956,2259 959,2434q820 1780Q955 2171q959 2434);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

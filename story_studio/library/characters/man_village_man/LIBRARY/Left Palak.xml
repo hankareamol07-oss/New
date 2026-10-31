@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Left Palak" itemID="679de75e-00000bf4" symbolType="graphic" lastModified="1738401630">
+  <timeline>
+    <DOMTimeline name="Left Palak" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="67.75" ty="34.65"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="67.75" ty="34.65"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!-693 -977S2[-553 -944 -603 -826!-603 -826[-650 -711 -1308 -763!-1308 -763[-1968 -817 -2121 -378!-2121 -378[-2097 -633 -1964 -820!-1964 -820[-1828 -1013 -1328 -1009!-1328 -1009[-835 -1011 -693 -977"/>
+                        <Edge cubics="!-1964 -820(;-1876,-944 -1662,-1009 -1328,-1009q-1964 -820Q-1828 -1013q-1328 -1009);"/>
+                        <Edge cubics="!-693 -977(;-600,-955 -569,-908 -603,-826q-693 -977Q-553 -944q-603 -826);"/>
+                        <Edge cubics="!-1328 -1009(;-999,-1009 -785,-1000 -693,-977q-1328 -1009Q-835 -1011q-693 -977);"/>
+                        <Edge cubics="!-603 -826(;-634,-752 -869,-727 -1308,-763q-603 -826Q-650 -711q-1308 -763);"/>
+                        <Edge cubics="!-2121 -378(;-2106,-545 -2054,-696 -1964,-820q-2121 -378Q-2097 -633q-1964 -820);"/>
+                        <Edge cubics="!-1308 -763(;-1752,-799 -2020,-671 -2121,-378q-1308 -763Q-1968 -817q-2121 -378);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

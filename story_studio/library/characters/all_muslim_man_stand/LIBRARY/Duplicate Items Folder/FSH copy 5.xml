@@ -1,0 +1,60 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/FSH copy 5" itemID="64ea43a0-00005b0a" lastModified="1671481654">
+  <timeline>
+    <DOMTimeline name="FSH copy 5" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#131313"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#010101"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1437 391[#63A.0B #211.C7 1718 652!1718 652[#731.F7 #306.2A 1803 645!1803 645[#6E4.02 #203.F1 1757 449!1757 449[1750 383 1660 283!1660 283[1653 276 1647 269!1647 269[1628 249 1608 230!1608 230[1521 149 1408 92!1408 92[1226 1 1021 0!1021
+ 0[722 -3 534 16!534 16[521 17 508 19!508 19[#1A2.03 #1C.FA 199 23!199 23[#FFFFEB.F5 #11.0F -63.5 94.5!-63.5 94.5[#FFFF95.0E #AB.EB -64 178!-64 178[-225.6875 #10D.78 -288 428"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="
+!-288 428[#FFFEC3.BD #213.62 -180 702!-180 702[16 368 7 424!7 424[-22 606 75 682!75 682[#60.1 #23E.0E 286 517!286 517[#1DB.D1 #1CB.D 503 449!503 449[#212.1D #1B6.45 516 465.5!516 465.5[#1F6.12 #1EC.B3 894 446.5!894 446.5[#505.F6 #190.5A
+ 1118 622!1118 622[#5A5.65 #2A9.DE 1369 404!1369 404|1437 391"/>
+                    <Edge cubics="!1369 404(;1369,404 1432,359 1608,436q1369 404 1437 391Q1509 393q1608 436);"/>
+                    <Edge cubics="!1608 436(;1633,447 1655,458 1678,470q1608 436 1678 470);"/>
+                    <Edge cubics="!1608 230(;1485,116 1282,2 1021,0q1608 230Q1521 149q1408 92Q1226 1q1021 0);"/>
+                    <Edge cubics="!1021 0(;827,-2 669,2 534,16q1021 0 534 16);"/>
+                    <Edge cubics="!1647 269(;1634,256 1621,243 1608,230q1647 269Q1628 249q1608 230);"/>
+                    <Edge cubics="!1660 283(;1655,278 1651,274 1647,269q1660 283Q1653 276q1647 269);"/>
+                    <Edge cubics="!1678 470(;1735,501 1762,494 1757,449q1678 470Q1764 516q1757 449);"/>
+                    <Edge cubics="!1757 449(;1752,405 1720,350 1660,283q1757 449Q1750 383q1660 283);"/>
+                    <Edge cubics="!534 16(;525,17 517,18 508,19q534 16Q521 17q508 19);"/>
+                    <Edge cubics="!68 237(;63,244 59,251 56,258q68 237Q61 247q56 258);"/>
+                    <Edge cubics="!356 44(;220,77 124,142 68,237q356 44Q152 94q68 237);"/>
+                    <Edge cubics="!508 19(;448,26 397,34 356,44q508 19Q418 29q356 44);"/>
+                    <Edge cubics="!503 449(;521,442 525,447 516,466q503 449Q530 438q516 466);"/>
+                    <Edge cubics="!75 682(;89,610 159,555 286,517q75 682Q96 574q286 517);"/>
+                    <Edge cubics="!516 466(;507,484 538,515 611,559q516 466Q502 493q611 559);"/>
+                    <Edge cubics="!286 517(;413,479 485,456 503,449q286 517Q476 460q503 449);"/>
+                    <Edge cubics="!7 424(;-12,545 10,631 75,682q7 424Q-22 606q75 682);"/>
+                    <Edge cubics="!611 559(;684,603 936,551 1369,404q611 559Q720 625q1369 404);"/>
+                    <Edge cubics="!-288 428(;-307,497 -271,588 -180,702q-288 428Q-316 531q-180 702);"/>
+                    <Edge cubics="!56 258(;-132,265 -247,322 -288,428q56 258Q-226 269q-288 428);"/>
+                    <Edge cubics="!-180 702(;-49,479 13,387 7,424q-180 702Q16 368q7 424);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

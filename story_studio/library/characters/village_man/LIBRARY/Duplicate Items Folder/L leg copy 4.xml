@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/L leg copy 4" itemID="651d109d-00000511" symbolType="graphic" lastModified="1732797622">
+  <timeline>
+    <DOMTimeline name="L leg copy 4" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <transformationPoint>
+                    <Point x="-9.6" y="428.25"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <transformationPoint>
+                        <Point x="-9.6" y="428.25"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#BEBEBE"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-2884 -2140|-2884 -2141!-2884 -2141[-2890 -3524 -2721 -4736!-2721 -4736[#FFF5CA.F7 #FFEA79.D7 -2214.5 -6315!-2214.5 -6315[#FFF8E8.46 #FFE430.37 -610.5 -7575!-610.5 -7575[#252.91 #FFE0A1.F2 1579 -6889!1579 -6889[#A03.9 -5748.125 2759
+ -4256.5!2759 -4256.5[#B8A.41 #FFF533.3B 2869 -1365.5!2869 -1365.5[#ADF.CB #21.94 2777.5 379!2777.5 379[#AD3.4F #2D4.87 2779 765"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!2779 765[#AC5.28 #322.9D 2628 1346!2628 1346[#9A2.4E 2026.5 2043 3265"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!2703 6973[#CA7.DE #119C.9A 2779 765"/>
+                        <Edge fillStyle0="1" edges="
+!-2389 7269[-1780 8571 250 8584!250 8584[2091 8516 2703 6973"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-2389 7269[-3078 4271 -2884 -2140"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-2884 -2140[-1698 188 -109 914"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,172 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="5ut7i" itemID="651932d7-000001e8" symbolType="graphic" lastModified="1701084113">
+  <timeline>
+    <DOMTimeline name="5ut7i" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="mouth" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Mouth copy 21" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.344818115234375" b="-0.011627197265625" c="0.011627197265625" d="0.344818115234375" tx="1227.85" ty="407.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="77.6" y="59.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="nose" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/nose copy 4" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.496826171875" b="0.000152587890625" c="0.000152587890625" d="0.496826171875" tx="1255.05" ty="365.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="eyes" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/hnvbnvnh copy" symbolType="graphic" centerPoint3DX="1261.65" centerPoint3DY="316.05" loop="loop">
+                  <matrix>
+                    <Matrix a="-4.3924560546875" b="0.173263549804688" c="0.173263549804688" d="4.3924560546875" tx="1334.95" ty="297.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16.3" y="5.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Ear" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#CC8966"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#6E4B36"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!28621.5 6365.5S6[#70F5.4C #1862.DD 28983 6568!28983 6568[#7168.CE #1AB4.28 28904 7179!28904 7179[#6F3C.4A #1F88.8A 28016 7590.5!28016 7590.5[#6E3C.7F #1A15.DE 28621.5 6365.5"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!28788 6638S7[#6F8E.77 #19F1.AB 28411.5 6982!28411.5 6982[#6EAA.CF #1C00.CC 28275 7457!28411.5 6982[#6FF7.FF #1AA2.A5 28742 6982"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Hair" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#1B1300"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!27028.5 5849.5[#69F8.DC #1739.2B 27264.5 6087.5!27264.5 6087.5[#6C3C.17 #17F2.9D 27857 6397!27857 6397[#6D07.8C #1C02.58 27758 7930!27758 7930[#6CF0.34 #1EE4.D9 27978 7791.5!27978 7791.5[#6C3E.E7 #2118.EF 27897.5 8997.5!27897.5 8997.5
+[#6E09.D3 #223D.D2 28594 8592.5!28594 8592.5[#71CC.12 #208F.6F 28984 7599!28984 7599[#74A0.F8 #19A2.28 29838 5362!29838 5362[#74AE.8D #1041.DF 29118 3201!29118 3201[#6DBF.C4 #85B.CD 26568 2303!26568 2303[#6420.9E #949.D2 24730 2676!24730
+ 2676[#5E2A.BE #B42.93 23651 3276!23651 3276[#58D6.1E #DF1.0E 22402 4478!22402 4478[#56AF.ED #1392.82 22371.5 5452.5!22371.5 5452.5[#57BF.2A #14F9.48 22501 4788!22501 4788[#5844.3B #12A8.8A 22588 4972!22588 4972[#5861.13 #160C.37 23017
+ 5785.5!23017 5785.5[#5B02.8C #172B.D 23673 5931!23673 5931[#5B5A.72 #13A7.27 23830 4700!23830 4700|23830.5 4699.5!23830.5 4699.5[#5E66.47 #162D.FB 25108 5942.5!25108 5942.5[#6230.7A #14D0.64 25445.5 4827.5!25445.5 4827.5[#63D3.DD #1417.DE
+ 25811 5244.5!25811 5244.5[#650C.4E #1454.CD 25811.5 5027!25811.5 5027[#67E3.31 #156C.32 26811 6328!26811 6328[#696A.51 #18C9.F2 26811.5 5671!26811.5 5671[#6903.23 #164F.6 27028.5 5849.5"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!26713 5274[#68DE.51 #15E3.6E 27028.5 5849.5!23830 4700[#5D12.B3 #10DE.B4 23945 4059"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Face" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#CC8966"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#E29770"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#9F6A4F"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!27834 8330|28720 6696.5!28720 6696.5[#71DE.8B #12EF.DD 28469.5 3879.5!28469.5 3879.5[#6C8C.96 #B5F.18 26405.5 2866.5!26405.5 2866.5[#61BE.54 #B06.1A 24328 3143"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!24328 3143[#5BE4.8A #DB6.62 23392 4632!23392 4632[#5B94.F8 #1506.34 23739 6268!23739 6268[#5CD3.A9 #18B3.EF 23784 6376"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!23784 6376[#5D57.46 #1A04.FE 23877 6830.5!23877 6830.5[#5D2A.05 #1AEE.E4 23832 6978.5"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!23832 6978.5[#5CCA.14 #1CB2.78 23854 8087!23854 8087[#5DC8.99 #223A.DF 24387 9309!24387 9309[#6142.C8 #2727.98 25569 9946!25569 9946[#641D.F4 #26D5.27 25690 9933"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!25690 9933[#669D.76 #267F.3 26779 9477!26779 9477[#6B0C.4F #2356.73 27834 8330"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="
+!25690 9933[#6B21.39 #2146.1F 26821 6936!26821 6936[#65EE.68 #1C20.2F 25373 7019!25373 7019[#629A.C8 #1873.23 25588 6072!25588 6072[#6693.0C #172D.C7 26607 6293.5!26607 6293.5[#64D5.34 #1162.D 24328 3143"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="
+!23832 6978.5[#5EEC.1F #1C0F.AB 24962 6978!24962 6978[#6170.71 #188A.92 24563 6087!24563 6087[#5D3B.C8 #1716.16 23784 6376"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

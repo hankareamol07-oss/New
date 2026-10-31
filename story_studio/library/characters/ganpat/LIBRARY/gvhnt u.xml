@@ -1,0 +1,52 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="gvhnt u" itemID="5d654183-00000c05" symbolType="graphic" lastModified="1566916995">
+  <timeline>
+    <DOMTimeline name="gvhnt u" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-21.15" ty="-84.35"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-21.15" ty="-84.35"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#844F37"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#734531"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.5">
+                            <fill>
+                              <SolidColor color="#4D2E20"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!425 3345S6[398 1825 795 1723!795 1723[949 1608 1038 1860!1038 1860[1102 2030 1062 2121"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!1062 2121S6[1038 2573 1030 3045!1030 3045[1021 3515 933 3688"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!1062 2121S3[905 2319 882 2543!882 2543|783 3726"/>
+                        <Edge fillStyle1="1" edges="!783 3726S2[537 3752 462 3450!462 3450[442 3374 425 3345"/>
+                        <Edge fillStyle1="2" edges="!952 3680S2[948 3682 944 3683!944 3683|951 3672!951 3672|952 3680!933 3688[852 3720 783 3726"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

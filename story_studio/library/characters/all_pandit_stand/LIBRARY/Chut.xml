@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Chut" itemID="630e93b6-000002ca" symbolType="graphic" lastModified="1661899992" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="Chut" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="CI" selected="true">
+                  <transformationPoint>
+                    <Point x="207.2" y="79.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="CI" centerPoint3DX="121" centerPoint3DY="137.05">
+                  <matrix>
+                    <Matrix a="0.965927124023438" b="-0.2587890625" c="0.2587890625" d="0.965927124023438" tx="-13.55" ty="56.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="207.2" y="79.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="CI" centerPoint3DX="109.05" centerPoint3DY="112.75">
+                  <transformationPoint>
+                    <Point x="207.2" y="79.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

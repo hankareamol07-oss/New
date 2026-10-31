@@ -1,0 +1,86 @@
+{
+ "name": "all_gunda3_walking",
+ "label": "Gunda3 Walking",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Gunda3 Walking",
+  "frame": 0,
+  "bounds": [
+   1232.0,
+   24.0,
+   1716.0,
+   1048.0
+  ],
+  "faces": "left",
+  "head": "Gunda3_Head",
+  "neck": [
+   1457.25,
+   312.04
+  ],
+  "mouth": {
+   "FDM Lips": {
+    "closed": 0,
+    "mid": 8,
+    "open": 4
+   }
+  },
+  "eyes": {
+   "FDM Eyes": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "FDM Leyebrow": {
+    "open": 0,
+    "blink": []
+   },
+   "FDM REyebrow": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "VM_RHand",
+   "fore": "VM_RHand2",
+   "shoulder": [
+    1405.0,
+    374.24
+   ],
+   "elbow": [
+    1367.55,
+    507.28
+   ]
+  },
+  "arm_back": {
+   "upper": "VM_LHand",
+   "fore": "VM_LHand2",
+   "shoulder": [
+    1592.5,
+    364.24
+   ],
+   "elbow": [
+    1634.72,
+    493.05
+   ]
+  },
+  "legs": [
+   "VM_RLeg2"
+  ],
+  "hips": {
+   "VM_RLeg2": [
+    1612.75,
+    796.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Gunda3 Walking"
+}

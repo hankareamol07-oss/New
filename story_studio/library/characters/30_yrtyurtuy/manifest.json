@@ -1,0 +1,78 @@
+{
+ "name": "30_yrtyurtuy",
+ "label": "गावकरी 19",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "yrtyurtuy",
+  "frame": 0,
+  "bounds": [
+   1024.0,
+   320.0,
+   1596.0,
+   1884.0
+  ],
+  "faces": "right",
+  "head": "face",
+  "neck": [
+   1326.5,
+   593.54
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 5": {
+    "closed": 0,
+    "mid": 28,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 4": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "arm2",
+   "fore": "hand2",
+   "shoulder": [
+    1456.25,
+    667.32
+   ],
+   "elbow": [
+    1469.33,
+    950.95
+   ]
+  },
+  "arm_back": {
+   "upper": "arm1",
+   "fore": "hand1",
+   "shoulder": [
+    1162.5,
+    673.1
+   ],
+   "elbow": [
+    1126.65,
+    946.25
+   ]
+  },
+  "legs": [
+   "L_foot",
+   "R_foot"
+  ],
+  "hips": {
+   "L_foot": [
+    1238.5,
+    1385.5
+   ],
+   "R_foot": [
+    1401.25,
+    1418.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "yrtyurtuy"
+}

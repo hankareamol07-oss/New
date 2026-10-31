@@ -1,0 +1,85 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="CG Head" itemID="649c7b95-00000580" symbolType="graphic" lastModified="1687984938" lastUniqueIdentifier="3">
+  <timeline>
+    <DOMTimeline name="CG Head" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="CG_Front_Hair" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="CG Front Hair" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="173.15" y="157.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="CG_Nose" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="CG Nose" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="90.95" ty="211.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="22.7" y="25.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="CG_Lips" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="CG Lips" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="52.5" ty="258.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="90.4" y="32.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="CG_Eyes" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="CG Eyes" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="43.2" ty="137.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="98.55" y="51.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="CG_Back_Obj" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="CG Back Obj" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="28.75" ty="18.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="151.1" y="144.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

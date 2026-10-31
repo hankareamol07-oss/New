@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/back hair copy 8" itemID="6565bb78-00006523" symbolType="graphic" lastModified="1701074947">
+  <timeline>
+    <DOMTimeline name="back hair copy 8" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_3" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="-1.18336486816406" b="0.28955078125" c="0.28955078125" d="1.18336486816406" tx="236.4" ty="-676.1"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix a="-1.18336486816406" b="0.28955078125" c="0.28955078125" d="1.18336486816406" tx="236.4" ty="-676.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#1F0C03"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!5849 7898S5[5825 7925 5806 7954!5806 7954[5667 8146 5679 8433!5679 8433[5204 9517 5805 10213!5805 10213[6414 10970 7407 10860!7407 10860[7932 10512 7433 9716!7433 9716[7144 9219 6611 9079!6611 9079[6627 9035 6633 9036!6633 9036[6767
+ 8961 6718 8732"/>
+                        <Edge fillStyle1="1" edges="
+!5849 7898S2[6036 8402 6718 8732"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

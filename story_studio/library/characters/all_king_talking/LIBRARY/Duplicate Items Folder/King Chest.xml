@@ -1,0 +1,54 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/King Chest" itemID="63d288b9-0000088b" lastModified="1661532069">
+  <timeline>
+    <DOMTimeline name="King Chest" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF7C3E"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#B23900"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!1152 253[856 338 653 639!653 639[491 877 358 1314!358 1314[279 1571 69 2039!69 2039[-72 2420 74 2621!74 2621[205 2802 801 2730!801 2730[1645 2628 1970 2661!1970 2661[2327 2699 3160 2988!3160 2988[3911 3248 4390 3248!4390 3248[4722 3248
+ 5120 3107!5120 3107[5525 2964 5864 2721!5864 2721[6675 2139 6606 1433!6606 1433[6544 801 5792 338!5792 338[5556 193 5282 81!5282 81|5053 0!5053 0[4240 16 3346 55!3346 55[1555 136 1152 253"/>
+                    <Edge cubics="!1152 253(;725,377 515,803 358,1314q1152 253Q856 338q653 639Q491 877q358 1314);"/>
+                    <Edge cubics="!358 1314(;200,1826 -162,2296 74,2621q358 1314Q279 1571q69 2039Q-72 2420q74 2621);"/>
+                    <Edge cubics="!74 2621(;310,2945 1142,2573 1970,2661q74 2621Q205 2802q801 2730Q1645 2628q1970 2661);"/>
+                    <Edge cubics="!1970 2661(;2795,2749 3510,3248 4390,3248q1970 2661Q2327 2699q3160 2988Q3911 3248q4390 3248);"/>
+                    <Edge cubics="!4390 3248(;5268,3250 6703,2444 6606,1433q4390 3248Q4722 3248q5120 3107Q5525 2964q5864 2721Q6675 2139q6606 1433);"/>
+                    <Edge cubics="!6606 1433(;6505,422 5053,0 5053,0q6606 1433Q6544 801q5792 338Q5556 193q5282 81Q5053 0q5053 0);"/>
+                    <Edge cubics="!5053 0(;5053,0 1798,64 1152,253q5053 0Q4240 16q3346 55Q1555 136q1152 253);"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/&amp;#060Group&amp;#062_3" blendMode="layer">
+                  <matrix>
+                    <Matrix a="2.38475036621094" d="2.38475036621094" tx="28.05" ty="109.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="38.6" y="4.95"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.44140625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

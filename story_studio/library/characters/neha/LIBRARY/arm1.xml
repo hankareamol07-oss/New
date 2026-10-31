@@ -1,0 +1,58 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="arm1" itemID="60a216ae-00000299" symbolType="graphic" lastModified="1621237880">
+  <timeline>
+    <DOMTimeline name="arm1" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-886" ty="-320.95"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-886" ty="-320.95"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FF524B"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#FEB784"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#F33F37"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#D98C55"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!18186.5 9046S6[#45B5.4D #1F55.7 17720 6906!17720 6906[#46BE.18 #17B9.9F 18809 6664!18809 6664[#4B1F.3A #1E35.2F 19442 8790"/>
+                        <Edge fillStyle1="2" edges="!19754 10703S2[#4C7E.47 #2B63.D2 19293 11106!19293 11106[#49BA.F6 #2B5F.58 18660 10770"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="!18660 10770S6[#47DD.F5 #269B.47 18186.5 9046!19442 8790[#4CE9.8E #25DE.64 19754 10703"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!18186.5 9046S3[#48A9.F6 #21B5.A8 19442 8790"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

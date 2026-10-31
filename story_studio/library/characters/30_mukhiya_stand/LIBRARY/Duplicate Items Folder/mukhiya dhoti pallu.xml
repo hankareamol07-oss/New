@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/mukhiya dhoti pallu" itemID="650d4000-000008ae" symbolType="graphic" lastModified="1695366069">
+  <timeline>
+    <DOMTimeline name="mukhiya dhoti pallu" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFFFFF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#CCCCCC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-69 -4039S6[#FFFFFD.DF #FFEFE3.CE 119 -4043!119 -4043[#19C.97 #FFF33C.DF 580 -2291!580 -2291[1043 406 802 2302!802 2302[503 2523 251 2155!251 2155[58 1873 -302 2160!-302 2160[-619 2411 -887 2146!-887 2146[-363 377 -370 -2323!-370 -2323
+[#FFFE8A.D7 #FFF338.19 -476 -4014!-476 -4014[-389.75 #FFEFE6.B -279 -4033"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!411 2085S7[586 352 239 -2323!239 -2323[#75.18 #FFF34A.5E -69 -4039"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-279 -4033S6[-188.625 #FFEFE7.E6 -69 -4039"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-168 1837S7[124 213 -70 -2323!-70 -2323[#FFFF92.0A -3192 -279 -4033"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

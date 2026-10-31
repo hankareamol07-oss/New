@@ -1,0 +1,72 @@
+{
+ "name": "premium_dfsff_copy_3",
+ "label": "dfsff copy 3",
+ "gender": "female",
+ "pack": "PREMIUM WOMEN",
+ "rig": {
+  "root": "Duplicate Items Folder/dfsff copy 3",
+  "frame": 0,
+  "bounds": [
+   820.0,
+   72.0,
+   1384.0,
+   2068.0
+  ],
+  "faces": "left",
+  "head": "Layer_3",
+  "neck": [
+   1135.99,
+   664.14
+  ],
+  "mouth": {
+   "Duplicate Items Folder/ajdadj copy 10": {
+    "closed": 0,
+    "mid": 6,
+    "open": 9
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/eyes copy 10": {
+    "open": 0,
+    "blink": [
+     14,
+     15,
+     16,
+     17
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "hand",
+   "fore": "Layer_14",
+   "shoulder": [
+    910.5,
+    577.58
+   ],
+   "elbow": [
+    869.39,
+    883.02
+   ]
+  },
+  "arm_back": {
+   "upper": "Layer_15",
+   "fore": "Layer_16",
+   "shoulder": [
+    1195.0,
+    577.04
+   ],
+   "elbow": [
+    1265.6,
+    880.8
+   ]
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [
+   "Rleg",
+   "Lleg"
+  ],
+  "shadow": []
+ },
+ "root": "Duplicate Items Folder/dfsff copy 3"
+}

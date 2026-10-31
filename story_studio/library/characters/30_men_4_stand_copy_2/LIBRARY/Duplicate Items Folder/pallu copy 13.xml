@@ -1,0 +1,45 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/pallu copy 13" itemID="6565ae84-00003305" symbolType="graphic" lastModified="1696072756">
+  <timeline>
+    <DOMTimeline name="pallu copy 13" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#87B8C5"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#4C737E"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!581 -7264S6[#378.5A #FFE2B7.16 1316 -7015!1316 -7015[#35F.4B #FFE591.FA 970 -4957!970 -4957[#4B9.34 #FFFD81.05 1784 5975!1784 5975[843 6585 328 7674!328 7674[-671 7253 -958 7851!-958 7851[-1040 8023 -1134 8141!-1134 8141[-1302 8364 -1504
+ 8234!-1504 8234[-1688 8117 -1784 7753!-1784 7753[#FFFA43.04 #28F.2D -1195 -5893!-1195 -5893[#FFFB7C.34 #FFE551.CC -985 -7232!-985 -7232[#FFFCC4.AC #FFE2CE.E6 -558 -7304"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!251 6567S7[#1A5.0E #FFFFA0.49 241 -5257!241 -5257[#A2.CD #FFE6EC.97 216 -6793!216 -6793[#188.B7 #FFE425.1 581 -7264!-986 6145[#FFFDEB.4D #FFFEA6.B3 -662.5 -3232.5!-662.5 -3232.5[#FFFCE7.9A #FFE818.85 -683 -6980!-683 -6980[#FFFD76.5E
+ #FFE3F5.19 -558 -7304"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!581 -7264S5[#22.4D #FFE2C6.E9 -558 -7304"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

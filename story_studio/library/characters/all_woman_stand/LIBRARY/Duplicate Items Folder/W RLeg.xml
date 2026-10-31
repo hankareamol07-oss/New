@@ -1,0 +1,83 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/W RLeg" itemID="640dec9a-00005380" symbolType="graphic" lastModified="1678634138">
+  <timeline>
+    <DOMTimeline name="W RLeg" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#5F3301"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#E9A285"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#3E2203"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#BD6A56"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!872 1298[1033 1435 605 1418!605 1418[395 1403 235 1346!235 1346|156 1014!156 1014|78 1023"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!78 1023|48 1026!48 1026[90 1207 15 1379!15 1379|70 1845!70 1845[234 1937 412 1922!412 1922[429 1813 499 1837!499 1837[952 2179 1432 2094!1432 2094[1721 2054 1868 1905!1868 1905[1871 1902 1874 1899!1874 1899[1878 1895 1882 1891!1882 1891
+[1908 1861 1911 1823!1911 1823[1916 1790 1895 1757!1895 1757[1819 1636 1665 1573!1665 1573[1467 1492 1308 1420!1308 1420[1173 1359 872 1298"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!872 1298[812 1286 746 1274"/>
+                        <Edge fillStyle0="2" strokeStyle="2" edges="
+!746 1274|615.5 -329"/>
+                        <Edge fillStyle0="2" edges="
+!615.5 -329|-28.5 -344.5"/>
+                        <Edge fillStyle0="2" strokeStyle="2" edges="
+!-28.5 -344.5|78 1023"/>
+                        <Edge cubics="!156 1014(;156,1014 235,1346 235,1346q156 1014 235 1346);"/>
+                        <Edge cubics="!15 1379(;15,1379 70,1845 70,1845q15 1379 70 1845);"/>
+                        <Edge cubics="!1868 1905(;1870,1904 1872,1901 1874,1899q1868 1905Q1871 1902q1874 1899);"/>
+                        <Edge cubics="!1432 2094(;1625,2068 1771,2004 1868,1905q1432 2094Q1721 2054q1868 1905);"/>
+                        <Edge cubics="!499 1837(;801,2065 1112,2151 1432,2094q499 1837Q952 2179q1432 2094);"/>
+                        <Edge cubics="!1308 1420(;1220,1380 1077,1340 872,1298q1308 1420Q1173 1359q872 1298);"/>
+                        <Edge cubics="!872 1298(;838,1290 793,1282 746,1274q872 1298 746 1274);"/>
+                        <Edge cubics="!1665 1573(;1768,1615 1844,1677 1895,1757q1665 1573Q1819 1636q1895 1757);"/>
+                        <Edge cubics="!1874 1899(;1877,1896 1879,1894 1882,1891q1874 1899Q1878 1895q1882 1891);"/>
+                        <Edge cubics="!1665 1573(;1533,1519 1414,1467 1308,1420q1665 1573Q1467 1492q1308 1420);"/>
+                        <Edge cubics="!15 1379(;64,1265 76,1147 48,1026q15 1379Q90 1207q48 1026);"/>
+                        <Edge cubics="!70 1845(;179,1906 293,1932 412,1922q70 1845Q234 1937q412 1922);"/>
+                        <Edge cubics="!412 1922(;423,1849 451,1820 499,1837q412 1922Q429 1813q499 1837);"/>
+                        <Edge cubics="!1882 1891(;1900,1870 1909,1848 1911,1823q1882 1891Q1908 1861q1911 1823);"/>
+                        <Edge cubics="!1895 1757(;1908,1780 1915,1802 1911,1823q1895 1757Q1916 1790q1911 1823);"/>
+                        <Edge cubics="!235 1346(;342,1384 465,1408 605,1418q235 1346Q395 1403q605 1418);"/>
+                        <Edge cubics="!605 1418(;890,1429 979,1389 872,1298q605 1418Q1033 1435q872 1298);"/>
+                        <Edge cubics="!78 1023(;78,1023 156,1014 156,1014q78 1023 156 1014);"/>
+                        <Edge cubics="!48 1026(;48,1026 78,1023 78,1023q48 1026 78 1023);"/>
+                        <Edge cubics="!746 1274(;746,1274 616,-329 616,-329q746 1274 616 -329);"/>
+                        <Edge cubics="!616 -329(;616,-329 337,-3754 337,-3754q616 -329 337 -3754);"/>
+                        <Edge cubics="!-296 -3769(;-296,-3769 -28,-344 -28,-344q-296 -3769 -28 -344);"/>
+                        <Edge cubics="!-28 -344(;-28,-344 78,1023 78,1023q-28 -344 78 1023);"/>
+                        <Edge cubics="!337 -3754(;337,-3754 -296,-3769 -296,-3769q337 -3754 -296 -3769);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

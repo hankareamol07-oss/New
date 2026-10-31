@@ -1,0 +1,72 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/FDM Head copy 2" itemID="64ea42e6-000049e7" symbolType="graphic" lastModified="1677515058">
+  <timeline>
+    <DOMTimeline name="FDM Head copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Lips" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":-38990,"b":-889009,"c":889009,"d":-38990,"tx":-24836,"ty":9168}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Lips copy 14" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="1.27606201171875" b="-0.150558471679688" c="0.150558471679688" d="1.27606201171875" tx="41.4" ty="206.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="21.75" y="6.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Nose" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":172500,"b":-240821,"c":240821,"d":172500,"tx":-7447,"ty":-1376}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Nose copy 28">
+                  <matrix>
+                    <Matrix a="1.27606201171875" b="-0.150558471679688" c="0.150558471679688" d="1.27606201171875" tx="38.75" ty="138.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.95" y="21.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Eyes" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":121515,"b":-58720,"c":58720,"d":121515,"tx":-1969,"ty":-1124}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Eyes copy 27" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="1.27606201171875" b="-0.150558471679688" c="0.150558471679688" d="1.27606201171875" tx="0.65" ty="118.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="42.2" y="16.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="PF" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":83570,"b":-9860,"c":9860,"d":83570,"tx":-451,"ty":-411}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/PF copy 4">
+                  <matrix>
+                    <Matrix a="1.27606201171875" b="-0.150558471679688" c="0.150558471679688" d="1.27606201171875" tx="-20.7" ty="29.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="67.95" y="95.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

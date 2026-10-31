@@ -1,0 +1,65 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/King RHand" itemID="63d288ba-000009f3" lastModified="1661531959">
+  <timeline>
+    <DOMTimeline name="King RHand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/&amp;#060Path&amp;#062_1_1" blendMode="layer">
+                  <matrix>
+                    <Matrix a="2.3846435546875" d="2.3846435546875"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.15" y="0.05"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.3203125"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="-33.9" ty="-359.5"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="-33.9" ty="-359.5"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FF7C3E"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#B23900"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!3179 10409[3200 10170 3284 9836!3284 9836[3450 9171 3770 8692!3770 8692[4090 8212 4533 7933!4533 7933[4757 7793 4922 7747!4922 7747|4969 8207!4969 8207[5020 8770 5041 9283!5041 9283[5108 10924 4841 11463!4841 11463[4550 12054 4078 12276
+!4078 12276[#FC5.16 #3007.6C 3993 12312.5"/>
+                        <Edge fillStyle0="1" edges="
+!3179 10409[#B81.0A #3138.36 3993 12312.5"/>
+                        <Edge cubics="!3179 10409(;3179,10409 3260,9457 3770,8692q3179 10409Q3200 10170q3284 9836Q3450 9171q3770 8692);"/>
+                        <Edge cubics="!3770 8692(;4280,7928 4912,7747 4922,7747q3770 8692Q4090 8212q4533 7933Q4757 7793q4922 7747);"/>
+                        <Edge cubics="!4922 7747(;4922,7747 5268,10602 4841,11463q4922 7747Q4922 7747q4969 8207Q5020 8770q5041 9283Q5108 10924q4841 11463);"/>
+                        <Edge cubics="!4078 12276(;4051,12289 4022,12301 3993,12313q4078 12276Q4037 12295q3993 12313);"/>
+                        <Edge cubics="!4841 11463(;4647,11857 4393,12128 4078,12276q4841 11463Q4550 12054q4078 12276);"/>
+                        <Edge cubics="!3179 10409(;4156,11289 4428,11924 3993,12313q3179 10409Q4645 11729q3993 12313);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

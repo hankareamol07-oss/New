@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Right Leg" itemID="679e0ed2-0000161f" symbolType="graphic" lastModified="1738407364" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="Right Leg" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Right_Leg_Lower_Side" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="28" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Leg Lower Side copy" symbolType="graphic" centerPoint3DX="-18.2" centerPoint3DY="100.95" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.650802612304688" b="0.0413970947265625" c="0.0673828125" d="0.52496337890625" tx="-19.25" ty="93.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.75" y="-110.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Right_Leg_Upper_Side" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="28" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Right Leg Upper Side copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.65533447265625" b="0.050811767578125" c="0.0571136474609375" d="0.583053588867188" tx="-35.5" ty="-116.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.85" y="-336.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

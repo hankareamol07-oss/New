@@ -1,0 +1,136 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Girl" itemID="60a20558-00000139" symbolType="graphic" lastModified="1621238876">
+  <timeline>
+    <DOMTimeline name="Girl" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Face" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="466" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Face" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.244232177734375" d="0.244232177734375" tx="1321.8" ty="-33.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="792.7" y="734.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="hand" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="466" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="hand" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.645401000976562" d="0.645401000976562" tx="1584.6" ty="299"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="43.55" y="12.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Arm1" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="466" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="arm1" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.656875610351562" d="0.656875610351562" tx="1562.75" ty="173.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.9" y="9.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Body" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="466" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="body" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.656875610351562" d="0.656875610351562" tx="1402.3" ty="128.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="156.5" y="412.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Arm2" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="466" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="arm2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.656875610351562" d="0.656875610351562" tx="1386.75" ty="169.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="71.7" y="11.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Hand2" color="#FF4F4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="466" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="hand 2" selected="true" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix a="-0.586593627929688" b="-0.171783447265625" c="-0.171783447265625" d="0.586593627929688" tx="1433.35" ty="304.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="38.45" y="15.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="LLeg" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="466" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="LLeg" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.656875610351562" d="0.656875610351562" tx="1474.7" ty="432.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="87.6" y="72.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="RLeg" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="466" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Rleg" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.656875610351562" d="0.656875610351562" tx="1386.75" ty="422.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="87.6" y="75.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,83 @@
+{
+ "name": "all_man_walking",
+ "label": "Man Walking",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Duplicate Items Folder/Man Walking",
+  "frame": 0,
+  "bounds": [
+   148.0,
+   16.0,
+   960.0,
+   1700.0
+  ],
+  "faces": "right",
+  "head": "FDM_Head",
+  "neck": [
+   545.25,
+   430.96
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Lips copy 9": {
+    "closed": 0,
+    "mid": 8,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyes copy 16": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "LArm",
+   "fore": "LHand",
+   "shoulder": [
+    667.25,
+    516.04
+   ],
+   "elbow": [
+    744.62,
+    719.18
+   ]
+  },
+  "arm_back": {
+   "upper": "RArm",
+   "fore": "RHand",
+   "shoulder": [
+    376.0,
+    508.98
+   ],
+   "elbow": [
+    290.3,
+    730.15
+   ]
+  },
+  "legs": [
+   "LFoot",
+   "RFoot"
+  ],
+  "hips": {
+   "LFoot": [
+    329.0,
+    1183.5
+   ],
+   "RFoot": [
+    744.75,
+    1247.5
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/Man Walking"
+}

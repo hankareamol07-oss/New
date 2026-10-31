@@ -1,0 +1,58 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Choti copy 7" itemID="64ea4134-00001ade" lastModified="1669458500">
+  <timeline>
+    <DOMTimeline name="Choti copy 7" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-84.75" ty="-204.3"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-84.75" ty="-204.3"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#191919"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!2334 4147S5[2275 4160 2192 4191!2192 4191[2027 4254 1912 4350!1912 4350[1542 4655 1804 5167!1804 5167[2116 5776 2535 5857!2535 5857[2732 5895 2914 5797!2914 5797[3100 5697 3244 5467!3244 5467[3400 5219 3463 4954!3463 4954[3532 4663 3460
+ 4455!3460 4455[3377 4216 3121 4131!3121 4131[2829 4034 2334 4147"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!2699 4985S7|2561 5516!2955 4759|3114 5266!2856 4832|2856 5444!2699 4985|2397 5306!2732 4858|2699 4985!2685 4754|2192 4754!2535 4601|1995 4601!2640 4832|2127 5024"/>
+                        <Edge cubics="!2334 4147(;2334,4147 1384,4347 1804,5167q2334 4147Q2275 4160q2192 4191Q2027 4254q1912 4350Q1542 4655q1804 5167);"/>
+                        <Edge cubics="!1804 5167(;2224,5987 2854,6087 3244,5467q1804 5167Q2116 5776q2535 5857Q2732 5895q2914 5797Q3100 5697q3244 5467);"/>
+                        <Edge cubics="!3244 5467(;3634,4847 3733,3827 2334,4147q3244 5467Q3400 5219q3463 4954Q3532 4663q3460 4455Q3377 4216q3121 4131Q2829 4034q2334 4147);"/>
+                        <Edge cubics="!2732 4858(;2732,4858 2699,4985 2699,4985q2732 4858 2699 4985);"/>
+                        <Edge cubics="!2699 4985(;2699,4985 2561,5516 2561,5516q2699 4985 2561 5516);"/>
+                        <Edge cubics="!2640 4832(;2640,4832 2127,5024 2127,5024q2640 4832 2127 5024);"/>
+                        <Edge cubics="!2535 4601(;2535,4601 1995,4601 1995,4601q2535 4601 1995 4601);"/>
+                        <Edge cubics="!2685 4754(;2685,4754 2192,4754 2192,4754q2685 4754 2192 4754);"/>
+                        <Edge cubics="!2699 4985(;2699,4985 2397,5306 2397,5306q2699 4985 2397 5306);"/>
+                        <Edge cubics="!2856 4832(;2856,4832 2856,5444 2856,5444q2856 4832 2856 5444);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

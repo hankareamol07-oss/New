@@ -1,0 +1,71 @@
+{
+ "name": "all_sarpanch_stand",
+ "label": "Sarpanch Stand",
+ "gender": "male",
+ "pack": "All Humans",
+ "rig": {
+  "root": "Sarpanch Stand",
+  "frame": 0,
+  "bounds": [
+   -12.0,
+   -4.0,
+   372.0,
+   1072.0
+  ],
+  "faces": "right",
+  "head": "S_Head",
+  "neck": [
+   203.0,
+   270.96
+  ],
+  "mouth": {
+   "Duplicate Items Folder/F2 Lips copy 10": {
+    "closed": 0,
+    "mid": 28,
+    "open": 36
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/F2 Eyes copy 10": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  },
+  "arm_front": {
+   "upper": "S_LHand",
+   "fore": "S_LHand2",
+   "shoulder": [
+    263.75,
+    321.88
+   ],
+   "elbow": [
+    273.75,
+    483.0
+   ]
+  },
+  "arm_back": {
+   "upper": "S_RHand",
+   "fore": "S_Rhand2",
+   "shoulder": [
+    57.75,
+    321.32
+   ],
+   "elbow": [
+    29.75,
+    480.38
+   ]
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [],
+  "shadow": [
+   "Shadow"
+  ]
+ },
+ "root": "Sarpanch Stand"
+}

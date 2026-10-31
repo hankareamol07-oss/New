@@ -1,0 +1,76 @@
+{
+ "name": "seth_seth_charactr_walkimg",
+ "label": "Seth Charactr Walkimg",
+ "gender": "male",
+ "pack": "Seth Charactr",
+ "rig": {
+  "root": "Seth Charactr Walkimg",
+  "frame": 0,
+  "bounds": [
+   -208.0,
+   -8.0,
+   1052.0,
+   2064.0
+  ],
+  "faces": "right",
+  "head": "Seth_Head",
+  "neck": [
+   426.0,
+   483.08
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Seth Lips copy 2": {
+    "closed": 0,
+    "mid": 0,
+    "open": 0
+   },
+   "Duplicate Items Folder/Seth Lipand jowline copy 2": {
+    "closed": 8,
+    "mid": 7,
+    "open": 9
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Seth Eyes copy 2": {
+    "open": 0,
+    "blink": [
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Duplicate Items Folder/Seth Eyeball copy 2": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "Seth_Back_Part",
+   "fore": null,
+   "shoulder": [
+    577.5,
+    1062.0
+   ],
+   "elbow": null
+  },
+  "arm_back": {
+   "upper": "Seth_Back_Part_2",
+   "fore": null,
+   "shoulder": [
+    306.25,
+    1076.5
+   ],
+   "elbow": null
+  },
+  "legs": [],
+  "hips": {},
+  "feet": [
+   "Line"
+  ],
+  "shadow": [
+   "Shadwo"
+  ]
+ },
+ "root": "Seth Charactr Walkimg"
+}

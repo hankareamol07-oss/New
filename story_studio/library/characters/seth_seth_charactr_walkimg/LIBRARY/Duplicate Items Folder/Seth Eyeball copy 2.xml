@@ -1,0 +1,60 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Eyeball copy 2" itemID="6795063b-00001f69" symbolType="graphic" lastModified="1735634471" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="Seth Eyeball copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/eb in copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.4" y="13.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/eb in copy 2" symbolType="graphic" centerPoint3DX="13.25" centerPoint3DY="15" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.15" ty="1.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.4" y="13.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/eb in copy 2" selected="true" symbolType="graphic" centerPoint3DX="13.25" centerPoint3DY="15" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.15" ty="1.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.4" y="13.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/eb in copy 2" symbolType="graphic" centerPoint3DX="13.25" centerPoint3DY="13.45" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.4" y="13.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

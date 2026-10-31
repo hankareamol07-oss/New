@@ -1,0 +1,123 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/LEB copy 6" itemID="64ea42b2-00004775" lastModified="1678730117">
+  <timeline>
+    <DOMTimeline name="LEB copy 6" currentFrame="2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="-148.6" ty="-171.65"/>
+                  </matrix>
+                  <members>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix tx="-2173.95" ty="-216.65"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#000305"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#333333"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!43479 4587|43636 4333!43636 4333|45169 5270!45169 5270[45117 5646 44931 5776!44931 5776[44068 5672 43479 4587"/>
+                        <Edge cubics="!43479 4587(;43479,4587 43636,4333 43636,4333q43479 4587 43636 4333);"/>
+                        <Edge cubics="!43636 4333(;43636,4333 45169,5270 45169,5270q43636 4333 45169 5270);"/>
+                        <Edge cubics="!45169 5270(;45134,5522 45054,5690 44931,5776q45169 5270Q45117 5646q44931 5776);"/>
+                        <Edge cubics="!44931 5776(;44356,5707 43872,5311 43479,4587q44931 5776Q44068 5672q43479 4587);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728" rigPropagationMatrix='{"a":56756,"b":32768,"c":-32768,"d":56756,"tx":0,"ty":0}'>
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix a="0.86602783203125" b="0.499984741210938" c="-0.499984741210938" d="0.86602783203125" tx="-19.15" ty="-239.2"/>
+                  </matrix>
+                  <members>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="0.865753173828125" b="0.499832153320312" c="-0.499832153320312" d="0.865753173828125" tx="-1750.4" ty="-1290.65"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#000305"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#333333"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!43479 4587|43636 4333!43636 4333|45169 5270!45169 5270[45117 5646 44931 5776!44931 5776[44068 5672 43479 4587"/>
+                        <Edge cubics="!43479 4587(;43479,4587 43636,4333 43636,4333q43479 4587 43636 4333);"/>
+                        <Edge cubics="!43636 4333(;43636,4333 45169,5270 45169,5270q43636 4333 45169 5270);"/>
+                        <Edge cubics="!45169 5270(;45134,5522 45054,5690 44931,5776q45169 5270Q45117 5646q44931 5776);"/>
+                        <Edge cubics="!44931 5776(;44356,5707 43872,5311 43479,4587q44931 5776Q44068 5672q43479 4587);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728" rigPropagationMatrix='{"a":53804,"b":-37271,"c":37271,"d":53804,"tx":0,"ty":0}'>
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="0.8216552734375" b="-0.569931030273438" c="0.569931030273438" d="0.8216552734375" tx="-230.15" ty="-23.7"/>
+                  </matrix>
+                  <members>
+                    <DOMShape isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="0.821441650390625" b="-0.569778442382812" c="0.569778442382812" d="0.821441650390625" tx="-1919.45" ty="1093.35"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#000305"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#333333"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!43479 4587|43636 4333!43636 4333|45169 5270!45169 5270[45117 5646 44931 5776!44931 5776[44068 5672 43479 4587"/>
+                        <Edge cubics="!43479 4587(;43479,4587 43636,4333 43636,4333q43479 4587 43636 4333);"/>
+                        <Edge cubics="!43636 4333(;43636,4333 45169,5270 45169,5270q43636 4333 45169 5270);"/>
+                        <Edge cubics="!45169 5270(;45134,5522 45054,5690 44931,5776q45169 5270Q45117 5646q44931 5776);"/>
+                        <Edge cubics="!44931 5776(;44356,5707 43872,5311 43479,4587q44931 5776Q44068 5672q43479 4587);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

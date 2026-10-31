@@ -1,0 +1,146 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/face1 copy 2" itemID="65671154-0000115a" symbolType="graphic" lastModified="1701253100">
+  <timeline>
+    <DOMTimeline name="face1 copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_3" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" duration="3189" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="719.5" ty="25.5"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="719.5" ty="25.5"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#D08A64"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#985D3B"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!2731 7873[2704 7752 2693 7686!2693 7686[2647 7403 2613 7234!2613 7234[2581 7064 2416 6809!2416 6809[2279 6029 1858 5744!1858 5744[1536 5592 1360 5958!1360 5958[1126 6372 1114 6897!1114 6897[1090 7615 1333 8206!1333 8206[1594 8792 1931
+ 9001!1931 9001[2266 9187 2484 8964"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!1858 6603[2120 6881 2179 7429!1571 6402[1737 6473 1858 6603!1858 6603[1317 7401 1809 8200"/>
+                        <Edge fillStyle0="1" edges="
+!2484 8964[2679 8200 2731 7873"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="3189" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/raja" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-1.32847595214844" d="1.380859375" tx="863.25" ty="589.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-248.2" y="-330.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Nose" color="#FF4FFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="3189" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 46 copy 4" symbolType="graphic" centerPoint3DX="1041.4" centerPoint3DY="399.75" loop="loop">
+                  <matrix>
+                    <Matrix a="-3.26805114746094" b="-0.168624877929688" c="-0.168624877929688" d="3.26805114746094" tx="1043.3" ty="395.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.5" y="1.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mooch" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="3189" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Many mooch copy 18" selected="true" symbolType="graphic" centerPoint3DX="1006.35" centerPoint3DY="545.45" loop="single frame">
+                  <matrix>
+                    <Matrix a="-0.0588226318359375" b="-0.002593994140625" c="-0.0025634765625" d="0.0586090087890625" tx="1138.8" ty="426.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1737.4" y="1268.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mouth" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="3189" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Mouth copy 26" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.643157958984375" b="-0.0218353271484375" c="-0.0218353271484375" d="0.643157958984375" tx="1090.9" ty="463.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="77.7" y="57.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="eye" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="3189" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 4 copy 28" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-2.39129638671875" b="-0.0100250244140625" c="-0.0100250244140625" d="2.39129638671875" tx="1013.95" ty="361.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.7" y="0.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="face" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="3189" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/face copy 12" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.998886108398438" b="0.04718017578125" c="-0.04718017578125" d="0.998886108398438" tx="737.05" ty="20.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="226.4" y="289.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

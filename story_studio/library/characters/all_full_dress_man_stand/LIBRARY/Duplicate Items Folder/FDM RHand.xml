@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/FDM RHand" itemID="64ea42fe-00004ea9" symbolType="graphic" lastModified="1672233567">
+  <timeline>
+    <DOMTimeline name="FDM RHand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#C2EAFF"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#51849F"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!1174 29[1039 54 891 155!891 155[597 355 533 731!533 731[327 1943 224 2576!224 2576[-8 3995 0 4132!0 4132[#FFFFE8.25 #12CA.53 510 4878!510 4878[#494.2 #137D.9C 1306 4393!1306 4393[1378 4093 1466 3649!1466 3649[1643 2762 1723 2046!1723
+ 2046[1835 1044 1737 525!1737 525[1617 -122 1174 29"/>
+                    <Edge cubics="!1174 29(;1174,29 635,130 533,731q1174 29Q1039 54q891 155Q597 355q533 731);"/>
+                    <Edge cubics="!533 731(;431,1332 -12,3917 0,4132q533 731Q327 1943q224 2576Q-8 3995q0 4132);"/>
+                    <Edge cubics="!0 4132(;0,4132 1306,4393 1306,4393q0 4132 1306 4393);"/>
+                    <Edge cubics="!1306 4393(;1306,4393 2461,-411 1174,29q1306 4393Q1378 4093q1466 3649Q1643 2762q1723 2046Q1835 1044q1737 525Q1617 -122q1174 29);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

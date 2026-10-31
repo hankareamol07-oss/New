@@ -1,0 +1,55 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Lips copy 2" itemID="6795063b-00001f5f" symbolType="graphic" lastModified="1735869925" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="Seth Lips copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Audio" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Lips_and_jowline" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="106" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Lipand jowline copy 2" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point x="156.3" y="108.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Lipand jowline copy 2" symbolType="graphic" firstFrame="3" centerPoint3DX="156.05" centerPoint3DY="108.2" loop="single frame">
+                  <transformationPoint>
+                    <Point x="156.3" y="108.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="156" duration="35" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Lipand jowline copy 2" symbolType="graphic" firstFrame="8" centerPoint3DX="156.05" centerPoint3DY="108.2" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" duration="109" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Lipand jowline copy 2" symbolType="graphic" centerPoint3DX="156.05" centerPoint3DY="108.2" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

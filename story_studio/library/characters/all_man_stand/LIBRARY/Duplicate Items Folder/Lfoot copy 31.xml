@@ -1,0 +1,114 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Lfoot copy 31" itemID="63b97ec9-00000afd" symbolType="graphic" lastModified="1680092855">
+  <timeline>
+    <DOMTimeline name="Lfoot copy 31" currentFrame="1" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-539.1" ty="-1258.45"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-539.1" ty="-1258.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#0B2528"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#0E2D30"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!10782 26360S2[#2ACA.08 #65B8.A3 10962 26039"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!13605 25173S6|13550 30505"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!13550 30505S6|13547 30680!13547 30680[#3072.44 #7969.4A 11328 30752!11328 30752[11043.5 #77C6.B3 11122 30314!11122 30314|10782 26360"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!10962 26039S3|11309 30348!11309 30348[#2F15.6E #78D6.19 13550 30505"/>
+                        <Edge fillStyle1="2" edges="!10962 26039S2[#2E3C.D #6217.63 13605 25173"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#0B2528"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#0E2D30"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#041112"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!0 1191S2[172 872 180 870"/>
+                        <Edge fillStyle1="2" edges="!180 870S2[1055 -58 2823 4"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!2823 4S6|2768 5336"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!2768 5336S6|2765 5511!2765 5511[1620 5912 546 5583!546 5583[262 5494 340 5145!340 5145|0 1191"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!180 870S3|527 5179!527 5179[1271 5765 2768 5336"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Rleg1 copy 47" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.916671752929688" b="-0.0792999267578125" c="0.0792999267578125" d="0.916671752929688" tx="-5.6" ty="-66.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.7" y="192.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Shoe copy 47" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.896728515625" d="0.896728515625" tx="19.9" ty="244.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="118.15" y="89.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

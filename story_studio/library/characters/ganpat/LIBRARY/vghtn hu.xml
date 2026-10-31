@@ -1,0 +1,55 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="vghtn hu" itemID="5d654178-00000bfd" symbolType="graphic" lastModified="1566916984">
+  <timeline>
+    <DOMTimeline name="vghtn hu" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-109.4" ty="-87.1"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-109.4" ty="-87.1"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#844F37"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#734531"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.5">
+                            <fill>
+                              <SolidColor color="#4D2E20"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!2210 2417S2[2201 2344 2197 2270!2197 2270[2193 2231 2189 2189!2189 2189[2186 2149 2198 2118!2198 2118[2188 2006 2236 1914!2236 1914[2283 1824 2315 1828"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!3233 3335S5|3140 3036!3140 3036[2890 2237 2510 1778!2510 1778|2463 1747"/>
+                        <Edge strokeStyle="1" edges="!2463 1747S4|2450 1742"/>
+                        <Edge fillStyle1="2" edges="!2315 1828S2[2375 1763 2463 1747"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!2672 3428S6[2424 2787 2231 2522!2231 2522|2231 2517!2231 2517|2229 2515!2229 2515|2210 2417"/>
+                        <Edge fillStyle1="1" edges="!3120 3451S2|3055 3479!3055 3479|3052 3483!3052 3483[2749 3582 2672 3428"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!2315 1828S3[2451 1880 2656 2220!2656 2220[2921 2660 3095 3342!3095 3342|3120 3451"/>
+                        <Edge fillStyle0="2" edges="!3120 3451S1[3259 3386 3233 3335"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,78 @@
+{
+ "name": "30_dfdgdfghbfg",
+ "label": "गावकरी 1",
+ "gender": "male",
+ "pack": "30 Vector Character",
+ "rig": {
+  "root": "Duplicate Items Folder/dfdgdfghbfg",
+  "frame": 0,
+  "bounds": [
+   972.0,
+   196.0,
+   1772.0,
+   2376.0
+  ],
+  "faces": "right",
+  "head": "face",
+  "neck": [
+   1393.25,
+   601.64
+  ],
+  "mouth": {
+   "Duplicate Items Folder/Mouth copy 2": {
+    "closed": 0,
+    "mid": 20,
+    "open": 16
+   }
+  },
+  "eyes": {
+   "Duplicate Items Folder/Eyebrow copy 2": {
+    "open": 0,
+    "blink": []
+   }
+  },
+  "arm_front": {
+   "upper": "arm2",
+   "fore": "hand2",
+   "shoulder": [
+    1544.0,
+    677.92
+   ],
+   "elbow": [
+    1612.69,
+    1041.28
+   ]
+  },
+  "arm_back": {
+   "upper": "arm1",
+   "fore": "hand1",
+   "shoulder": [
+    1182.75,
+    680.98
+   ],
+   "elbow": [
+    1092.34,
+    1023.1
+   ]
+  },
+  "legs": [
+   "L_foot",
+   "R_foot"
+  ],
+  "hips": {
+   "L_foot": [
+    1264.0,
+    1693.0
+   ],
+   "R_foot": [
+    1488.5,
+    1738.0
+   ]
+  },
+  "feet": [],
+  "shadow": [
+   "shadow"
+  ]
+ },
+ "root": "Duplicate Items Folder/dfdgdfghbfg"
+}

@@ -1,0 +1,58 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="FDM LLeg" itemID="63ac4567-000002a3" symbolType="graphic" lastModified="1677514846">
+  <timeline>
+    <DOMTimeline name="FDM LLeg" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="-147.25" ty="-349.75"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="-147.25" ty="-349.75"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor color="#404040"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!3518 12627|3514 12759!3514 12759[3512 12922 3519 13071!3519 13071[#DCC.55 #343D.28 3581 13547.5!3581 13547.5[#E19.31 #354F.EE 3649 13706!3649 13706[#F84.7 #37A9.EB 4424 14371!4424 14371[#145D.2 #3893.4C 5442 13722!5442 13722[#1548.FB
+ #3359.7D 5458 12385!5458 12385[5483 10187 5500 9918!5500 9918[5562 8926 5564 8463!5564 8463[5566 7942 5500 7458!5500 7458[5482 7319 5340 7208!5340 7208[5204 7101 4988 7044!4988 7044[4767 6987 4517 6996!4517 6996[4250 7007 4004 7094!4004
+ 7094[3421 7300 3149 7844!3149 7844[2820 8500 3022 9532!3022 9532|3074 9956!3074 9956[3141 10475 3214 10958!3214 10958[#D2C.BD #2EEF.1E 3518 12627"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!3518 12627[#E00.E6 #326D.6D 3649 13097"/>
+                        <Edge cubics="!3518 12627(;3518,12627 3488,13213 3581,13548q3518 12627 3514 12759Q3512 12922q3519 13071Q3532 13373q3581 13548);"/>
+                        <Edge cubics="!3581 13548(;3600,13612 3622,13666 3649,13706q3581 13548Q3609 13648q3649 13706);"/>
+                        <Edge cubics="!5442 13722(;5460,12136 5481,10230 5500,9918q5442 13722 5458 12385Q5483 10187q5500 9918);"/>
+                        <Edge cubics="!5500 9918(;5580,8648 5591,8127 5500,7458q5500 9918Q5562 8926q5564 8463Q5566 7942q5500 7458);"/>
+                        <Edge cubics="!5500 7458(;5398,6703 2439,6551 3022,9532q5500 7458Q5482 7319q5340 7208Q5204 7101q4988 7044Q4767 6987q4517 6996Q4250 7007q4004 7094Q3421 7300q3149 7844Q2820 8500q3022 9532);"/>
+                        <Edge cubics="!3022 9532(;3022,9532 3249,11489 3518,12627q3022 9532 3074 9956Q3141 10475q3214 10958Q3373 12015q3518 12627);"/>
+                        <Edge cubics="!3518 12627(;3562,12811 3605,12969 3649,13097q3518 12627Q3585 12909q3649 13097);"/>
+                        <Edge cubics="!3649 13706(;3864,14069 4123,14290 4424,14371q3649 13706Q3972 14250q4424 14371);"/>
+                        <Edge cubics="!4424 14371(;4950,14446 5289,14229 5442,13722q4424 14371Q5213 14483p5442 13722);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

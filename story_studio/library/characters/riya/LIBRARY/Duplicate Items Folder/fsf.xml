@@ -1,0 +1,65 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/fsf" itemID="607306a4-000003fb" symbolType="graphic" lastModified="1621240087">
+  <timeline>
+    <DOMTimeline name="fsf" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <transformationPoint>
+                    <Point x="18.4" y="6.5"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape selected="true">
+                      <transformationPoint>
+                        <Point x="18.4" y="6.5"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FF6600"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#CC3300"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#FEB784"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="1.5">
+                            <fill>
+                              <SolidColor color="#CC3300"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#BD6A56"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!601 1770S6|251 1052!251 1052[#FFFFA7.5A #DC.12 325 -32!325 -32[#33E.83 #FFFF81.EA 1118.5 412.5!1118.5 412.5[#57E.44 #3B7.1C 1513 1295"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="!1513 1295S6[1558 1445 1605 1584"/>
+                        <Edge fillStyle1="3" strokeStyle="2" edges="!1605 1584S6[1748 1929 1852 2233!1852 2233[1957 2539 2020 2708"/>
+                        <Edge fillStyle0="2" fillStyle1="3" edges="!733 2039S3[774 2003 874 1927!874 1927[1153 1712 1605 1584"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!1513 1295S3[1032 1367 601 1770"/>
+                        <Edge fillStyle1="3" edges="!2020 2708S2[2136 3393 1696 3405!1696 3405[1596 3401 1530 3357!1530 3357[1375 3249 1269 3034"/>
+                        <Edge fillStyle1="3" strokeStyle="2" edges="!1269 3034S6|733 2039"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="!733 2039S6|601 1770"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,66 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/BW Back Pallu" itemID="6419add7-000018b9" symbolType="graphic" lastModified="1679405805">
+  <timeline>
+    <DOMTimeline name="BW Back Pallu" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FFA200"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#B07000"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#D18500"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#986000"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#714800"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1938 164S6[2031 297 2045 558!2045 558[1996 1127 1857 1646!1857 1646[1621 2661 1462 4882!1462 4882|1258 7718!1475 3[1624 -11 1785 45!1785 45[1878 77 1938 164"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="2" edges="!865 7609S7[1073 7720 1247 7867"/>
+                        <Edge fillStyle0="2" strokeStyle="2" edges="!1247 7867S5|1258 7718"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="2" edges="!1258 7718S7[1182 7664 1101 7616!1101 7616[725 7390 247 7273!247 7273|519 5606!519 5606[807 3879 823 2052!823 2052[782 783 1475 3"/>
+                        <Edge fillStyle0="2" strokeStyle="2" edges="!1475 3S5[1322 18 1077 162!1077 162[567 785 587 1987!587 1987[615 2530 576 3156!576 3156[380 5248 0 7322!0 7322[46 7360 95 7396"/>
+                        <Edge fillStyle1="3" strokeStyle="2" edges="!27 7584S6[30 7494 95 7396"/>
+                        <Edge fillStyle0="3" fillStyle1="2" strokeStyle="2" edges="!27 7584S7[146 7617 265 7647"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="2" edges="!858 7780S7|865 7609"/>
+                        <Edge fillStyle0="3" fillStyle1="1" strokeStyle="2" edges="!265 7647S7[562 7722 858 7780"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="2" edges="!95 7396S7[425 7638 858 7780"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="2" edges="!865 7609S7[488 7407 0 7322"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!1101 7616S7[1038 6337 1043 5029!1043 5029[1345 2416 1938 164"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="2" edges="!265 7647S7[709 7923 1238 8100"/>
+                        <Edge fillStyle1="2" strokeStyle="2" edges="!1238 8100S6|1232 8230!1232 8230[332 7975 27 7584"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1247 7867S6|1238 8100"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

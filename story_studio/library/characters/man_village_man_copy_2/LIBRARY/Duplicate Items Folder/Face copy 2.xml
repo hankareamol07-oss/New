@@ -1,0 +1,88 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Face copy 2" itemID="679e0ed2-00001653" symbolType="graphic" lastModified="1738402731">
+  <timeline>
+    <DOMTimeline name="Face copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Eyes" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Eyes copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.557708740234375" d="0.557708740234375" tx="-35.95" ty="9.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-0.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Ear" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Ear copy 3" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.557708740234375" d="0.557708740234375" tx="69.15" ty="33.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.35" y="-0.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Lips_Sync_With_Joulinee" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Lips Sync With Joulinee copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-16.6" ty="95.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Hairs" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Hairs copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.557708740234375" d="0.557708740234375" ty="-41.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.2" y="-0.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Plane_Face" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="100" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Plane Face copy 3" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.557708740234375" d="0.557708740234375" tx="-14.1" ty="10.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

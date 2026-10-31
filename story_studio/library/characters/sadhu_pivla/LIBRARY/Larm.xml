@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Larm" itemID="5f719e6f-00000140" symbolType="graphic" lastModified="1601281647">
+  <timeline>
+    <DOMTimeline name="Larm" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-1148.65" ty="-446.3"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-1148.65" ty="-446.3"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#F59959"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor alpha="0"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!23490 8977S5[#5863.AF #2546.97 23203 10956!23203 10956[#5D13.CF #2D27.47 24236 12706!24236 12706[#60B7.47 14527 25784 16348!25784 16348[#6901.CC #4667.1D 27620 16549!27620 16549[#6B10.06 #38A9.5C 26501 12562!26501 12562[#6653.51 #2E8C.73
+ 26186 11071!26186 11071[#65BD.ED #2191.8A 23490 8977"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

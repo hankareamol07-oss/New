@@ -1,0 +1,71 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/BW RHand" itemID="6419ad87-000018b4" symbolType="graphic" lastModified="1679405869">
+  <timeline>
+    <DOMTimeline name="BW RHand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-567.25" ty="-385.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="598.1" y="400.45"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-567.25" ty="-385.85"/>
+                      </matrix>
+                      <transformationPoint>
+                        <Point x="598.1" y="400.45"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#B25400"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#FF7800"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#FEBF91"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#A34D00"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#BD6A56"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!11466 8085S5|11405 9375"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!11405 9375S5|11387 9758"/>
+                        <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="!11387 9758S7[11728 9626 12234 9803"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!12234 9803S5|12265 9439"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!12265 9439S5|12380 8093"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!11405 9375S3[11802 9216 12265 9439"/>
+                        <Edge fillStyle0="3" strokeStyle="2" edges="!11387 9758S5|11345 10636!11345 10636[11467 10938 11708 10938!11708 10938[11981 10940 12164 10617!12164 10617|12234 9803"/>
+                        <Edge fillStyle1="2" edges="!11466 8085S2[#2D90.D7 #1E24.A4 11959 7716.5!11959 7716.5[#2FDD.0D #1E24.1E 12380 8093"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

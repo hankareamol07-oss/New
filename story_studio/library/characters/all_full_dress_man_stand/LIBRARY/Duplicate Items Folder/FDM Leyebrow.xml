@@ -1,0 +1,58 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/FDM Leyebrow" itemID="64ea42fe-00004e25" symbolType="graphic" lastModified="1672236947">
+  <timeline>
+    <DOMTimeline name="FDM Leyebrow" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-55.45" ty="-0.8"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-55.45" ty="-0.8"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#0F0F0F"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!2110 100S3[1930 42 1798 59!1798 59[1666 75 1526 172!1526 172[1477 206 1418 270!1418 270[1354 343 1323 377!1323 377[1269 434 1225 458!1225 458[1169 489 1109 481"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!1469 109S5[1385 165 1273 310!1273 310[1218 383 1193 410!1193 410[1148 459 1109 481"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!1109 481S5|1119 489!1119 489[1133 499 1149 506!1149 506[1201 525 1261 503!1261 503[1293 490 1334 453!1334 453[1356 433 1413 373!1413 373[1533 245 1623 188!1623 188[1747 112 1876 92!1876 92[1986 77 2110 100"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!2110 100S5[1928 19 1780 16!1780 16[1612 13 1469 109"/>
+                        <Edge cubics="!1469 109(;1308,218 1227,414 1109,481q1469 109Q1385 165q1273 310Q1218 383q1193 410Q1148 459q1109 481);"/>
+                        <Edge cubics="!1109 481(;1109,481 1165,540 1261,503q1109 481Q1109 481q1119 489Q1133 499q1149 506Q1201 525q1261 503);"/>
+                        <Edge cubics="!1261 503(;1357,466 1449,297 1623,188q1261 503Q1293 490q1334 453Q1356 433q1413 373Q1533 245q1623 188);"/>
+                        <Edge cubics="!1623 188(;1798,80 1961,72 2110,100q1623 188Q1747 112q1876 92Q1986 77q2110 100);"/>
+                        <Edge cubics="!2110 100(;1884,-1 1671,-26 1469,109q2110 100Q1928 19q1780 16Q1612 13q1469 109);"/>
+                        <Edge cubics="!1526 172(;1365,282 1283,505 1109,481q1526 172Q1477 206q1418 270Q1354 343q1323 377Q1269 434q1225 458Q1169 489q1109 481);"/>
+                        <Edge cubics="!2110 100(;1870,23 1713,42 1526,172q2110 100Q1930 42q1798 59Q1666 75q1526 172);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

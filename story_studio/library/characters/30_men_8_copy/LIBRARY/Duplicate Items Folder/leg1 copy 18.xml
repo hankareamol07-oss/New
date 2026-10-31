@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/leg1 copy 18" itemID="6565b989-00005d24" symbolType="graphic" lastModified="1701067740">
+  <timeline>
+    <DOMTimeline name="leg1 copy 18" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CBCA95"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#747354"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!1504 589[1509 532 1542 83!1542 83[1590 -573 1682 -1855!1682 -1855[#6EE.05 #FFF3BE.FF 1619 -3834!1619 -3834[#5B7.CB #FFEE4D.0A 1071 -4610!1071 -4610[#2A6.68 #FFEDAE.D6 209 -4788!209 -4788[#FFFEFB.96 -4886.875 -835.5 -4730.5!-835.5 -4730.5
+[#FFFA7D.32 #FFEE22.04 -1495 -3327!-1495 -3327[-1579 -2081 -1603 -1198!-1603 -1198[-1619 -566 -1642 -151!-1642 -151[-1754 1867 -1699 3348!-1699 3348[#FFF95A.13 #DE7.B1 -1680 3734.5!-1680 3734.5[#FFF970.04 #E9A.C1 -1680 3743!-1680 3743
+[#FFF975.02 #10E3.02 -1264 4734!-1264 4734[-849 5149 -263 5149!-263 5149[323 5149 737 4734!737 4734[1152 4320 1153 3733!1153 3733[1482 2392 1504 589"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!1504 557[1501 615 1504 589!1504 589[1504 573 1504 557"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-424 4277[#4D.61 #ECE.DB 655 2800.5!655 2800.5[#4D0.8E #712.23 1504 557"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,89 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Eye Bowl Right copy 2" itemID="679e0ed2-00001657" symbolType="graphic" lastModified="1738400867">
+  <timeline>
+    <DOMTimeline name="Eye Bowl Right copy 2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix a="1.10246276855469" d="1.10246276855469" tx="-2453" ty="-967.6"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true" isDrawingObject="true">
+                      <matrix>
+                        <Matrix a="1.10237121582031" d="1.10237121582031" tx="-2426.3" ty="-948.45"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#330000"/>
+                        </FillStyle>
+                      </fills>
+                      <edges>
+                        <Edge fillStyle1="1" edges="!44207 17203[44207 17283 44150 17339!44150 17339[44094 17396 44014 17396!44014 17396[43934 17396 43877 17339!43877 17339[43821 17283 43821 17203!43821 17203[43821 17123 43877 17066!43877 17066[43934 17010 44014 17010!44014 17010[44094
+ 17010 44150 17066!44150 17066[44207 17123 44207 17203"/>
+                      </edges>
+                    </DOMShape>
+                    <DOMGroup selected="true">
+                      <matrix>
+                        <Matrix a="1.10237121582031" d="1.10237121582031" tx="-2426.3" ty="-948.45"/>
+                      </matrix>
+                      <members>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="1.10226440429688" d="1.10226440429688" tx="-2426.3" ty="-948.45"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!44101 17190[44101 17229 44073 17256!44073 17256[44046 17284 44007 17284!44007 17284[43968 17284 43940 17256!43940 17256[43913 17229 43913 17190!43913 17190[43913 17151 43940 17123!43940 17123[43968 17096 44007 17096!44007 17096[44046
+ 17096 44073 17123!44073 17123[44101 17151 44101 17190"/>
+                          </edges>
+                        </DOMShape>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="1.10226440429688" d="1.10226440429688" tx="-2426.3" ty="-948.45"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!44126 17144[44126 17159 44115 17170!44115 17170[44104 17181 44089 17181!44089 17181[44074 17181 44063 17170!44063 17170[44052 17159 44052 17144!44052 17144[44052 17129 44063 17118!44063 17118[44074 17107 44089 17107!44089 17107[44104
+ 17107 44115 17118!44115 17118[44126 17129 44126 17144"/>
+                          </edges>
+                        </DOMShape>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="1.10226440429688" d="1.10226440429688" tx="-2426.3" ty="-948.45"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!43984 17273[43984 17284 43976 17291!43976 17291[43969 17299 43958 17299!43958 17299[43947 17299 43939 17291!43939 17291[43932 17284 43932 17273!43932 17273[43932 17262 43939 17254!43939 17254[43947 17247 43958 17247!43958 17247[43969
+ 17247 43976 17254!43976 17254[43984 17262 43984 17273"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

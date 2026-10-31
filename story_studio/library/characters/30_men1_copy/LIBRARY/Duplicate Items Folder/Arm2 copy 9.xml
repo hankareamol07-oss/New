@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Arm2 copy 9" itemID="6565ae2c-00002eca" symbolType="graphic" lastModified="1700937608">
+  <timeline>
+    <DOMTimeline name="Arm2 copy 9" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#A6A64C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#6E6E2F"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" edges="!577 -2836S1[-714 -3125 -1046 -1912"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-1046 -1912S5[-1011 42 -861 1990!-861 1990[-844 2351 -584 2612!-584 2612[-304 2892 91 2892!91 2892[486 2892 766 2612!766 2612[1040 2338 1046 1953!1046 1953[1045 1904 1043 1857!1043 1857[930 -1693 577 -2836"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

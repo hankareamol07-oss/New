@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/dhoti bitch copy" itemID="651d0859-0000049c" symbolType="graphic" lastModified="1695551185">
+  <timeline>
+    <DOMTimeline name="dhoti bitch copy" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="-1822.3" ty="-1381.4"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="-1822.3" ty="-1381.4"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#3D2F2C"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#483D39"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#322623"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!35279 24450.5S6[#8A52.48 #5C24.94 35653.5 23587.5!35653.5 23587.5[#8C38.6E #5C22.82 36260.5 23623.5!36260.5 23623.5[#8F10.BF #5C6C.44 36662 23990!36662 23990[36491 25749 36605 26976!36605 26976[36682 #6C9C.E2 36782.5 28408!36782.5 28408
+[36883 #7153.53 36929.5 29235.5!36929.5 29235.5[36976 #7313.A3 37046 29775.5!37046 29775.5[#90FC.11 #758B.8D 37215.5 30442!37215.5 30442[#91C2.CD #7848.33 37375 30981"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="
+!37375 30981S6[#9240.E1 #79D3.A9 37502 31317.5!37502 31317.5[37619 #7B4E.53 37693 31669!37693 31669[#91DB.6A #7B35.97 36965 31232!36965 31232[#8E10.01 #7811.2F 35953 29733!35953 29733[#8A87.3F #6F83.ED 35275 27160!35275 27160[#89B1.0A
+ #6958.93 35231.5 26776"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!35231.5 26776S6[#894B.9E #62E0.81 35279 24450.5"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="
+!35231.5 26776S3[#8BE4.94 #6961.CA 36161 28213!36161 28213|36760 30216!36760 30216[#904C.B7 #7863.B3 37375 30981"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

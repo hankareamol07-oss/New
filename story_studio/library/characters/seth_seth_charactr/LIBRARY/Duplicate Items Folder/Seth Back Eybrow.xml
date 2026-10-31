@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Back Eybrow" itemID="6794db13-00000858" symbolType="graphic" lastModified="1736578683" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="Seth Back Eybrow" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Seth_Back_Eybrow_In" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Eybrow In" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.4" y="15.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

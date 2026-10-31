@@ -1,0 +1,211 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/Seth Back Hand" itemID="6794db13-00000f0d" symbolType="graphic" lastModified="1737213945" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="Seth Back Hand" currentFrame="238" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Seth_Back_Down_Hand" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.998275756835938" b="-0.057861328125" c="0.057861328125" d="0.998275756835938" tx="26.55" ty="373.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="140.8" y="4.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" selected="true" symbolType="graphic" firstFrame="6" centerPoint3DX="142.95" centerPoint3DY="598.25" loop="loop">
+                  <matrix>
+                    <Matrix a="0.998275756835938" b="-0.057861328125" c="0.057861328125" d="0.998275756835938" tx="26.55" ty="373.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="140.8" y="4.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="62" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" symbolType="graphic" firstFrame="13" centerPoint3DX="-47.25" centerPoint3DY="452.15" loop="loop">
+                  <matrix>
+                    <Matrix a="0.50653076171875" b="0.86212158203125" c="-0.86212158203125" d="0.50653076171875" tx="99.7" ty="245.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="140.9" y="4.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="75" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" symbolType="graphic" firstFrame="75" centerPoint3DX="-47.25" centerPoint3DY="452.15" loop="loop">
+                  <matrix>
+                    <Matrix a="0.50653076171875" b="0.86212158203125" c="-0.86212158203125" d="0.50653076171875" tx="99.7" ty="245.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="140.9" y="4.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="81" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" symbolType="graphic" firstFrame="81" centerPoint3DX="-62.35" centerPoint3DY="359.8" loop="loop">
+                  <matrix>
+                    <Matrix a="0.12109375" b="0.992538452148438" c="-0.992538452148438" d="0.12109375" tx="154.6" ty="229.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="140.9" y="4.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="88" duration="62" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" symbolType="graphic" firstFrame="88" centerPoint3DX="-61.3" centerPoint3DY="346" loop="loop">
+                  <matrix>
+                    <Matrix a="0.0610198974609375" b="0.998031616210938" c="-0.998031616210938" d="0.0610198974609375" tx="163.05" ty="228.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="141" y="4.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="150" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" symbolType="graphic" firstFrame="150" centerPoint3DX="-61.3" centerPoint3DY="346" loop="loop">
+                  <matrix>
+                    <Matrix a="0.0610198974609375" b="0.998031616210938" c="-0.998031616210938" d="0.0610198974609375" tx="163.05" ty="228.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="141" y="4.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="156" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" symbolType="graphic" firstFrame="156" centerPoint3DX="-55.5" centerPoint3DY="313.6" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.0821533203125" b="0.996505737304688" c="-0.996505737304688" d="-0.0821533203125" tx="183.25" ty="229.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="141.05" y="4.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="163" duration="62" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" symbolType="graphic" firstFrame="163" centerPoint3DX="-62.1" centerPoint3DY="383.05" loop="loop">
+                  <matrix>
+                    <Matrix a="0.220306396484375" b="0.97528076171875" c="-0.97528076171875" d="0.220306396484375" tx="140.45" ty="231.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="141.1" y="4.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="225" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" selected="true" symbolType="graphic" firstFrame="225" centerPoint3DX="-62.1" centerPoint3DY="383.05" loop="loop">
+                  <matrix>
+                    <Matrix a="0.220306396484375" b="0.97528076171875" c="-0.97528076171875" d="0.220306396484375" tx="140.45" ty="231.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="141.1" y="4.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="231" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" selected="true" symbolType="graphic" firstFrame="231" centerPoint3DX="-54.2" centerPoint3DY="308.65" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.104354858398438" b="0.994384765625" c="-0.994384765625" d="-0.104354858398438" tx="186.35" ty="229.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="141.1" y="4.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="238" duration="62" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Seth Back Down Hand copy" symbolType="graphic" firstFrame="238" loop="loop">
+                  <matrix>
+                    <Matrix a="0.998275756835938" b="-0.057861328125" c="0.057861328125" d="0.998275756835938" tx="26.55" ty="373.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="140.8" y="4.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seth_Back_Up_Hand" color="#FF800A" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="300" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#87211B"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="2">
+                            <fill>
+                              <SolidColor color="#6D1B16"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!4750 7643[5882 6561 6768 4787!6768 4787[7166 3989 7647 3116!7647 3116[7725 3048 7799 2970!7799 2970[8302 2443 8283 1714!8283 1714[8264 985 7734 482!7734 482[7206 -18 6478 1!6478 1[5940 15 5526 306!5526 306[5523 308 5521 310!5521 310
+[3863 1432 3577 2386!3577 2386[#783.7D #1145.18 1933 7151.5!1933 7151.5[1917 #1C5B.DB 1917 7375!1917 7375[1917 7966 2335 8383!2335 8383[2752 8801 3343 8801!3343 8801[3934 8801 4352 8383!4352 8383[#123F.4E #1F7F.B2 4746 7642.5"/>
+                        <Edge fillStyle1="1" edges="
+!4750 7643|4746 7642.5"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

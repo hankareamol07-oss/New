@@ -1,0 +1,1114 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Full Dress Man Stand" itemID="63ac3e17-0000025b" symbolType="graphic" lastModified="1674739344" lastUniqueIdentifier="11">
+  <timeline>
+    <DOMTimeline name="Full Dress Man Stand" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="FDM_Head" color="#009999" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FDM Head copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="1.0545654296875" b="0.1434326171875" c="-0.1434326171875" d="1.0545654296875" tx="69.35" ty="-222.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="129.15" y="217.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FDM Head copy 2" selected="true" symbolType="graphic" firstFrame="6" centerPoint3DX="127.35" centerPoint3DY="-65.15" loop="loop">
+                  <matrix>
+                    <Matrix a="1.06425476074219" b="-0.0046234130859375" c="0.0046234130859375" d="1.06425476074219" tx="35.9" ty="-198.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="129.2" y="217.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FDM Head copy 2" symbolType="graphic" firstFrame="13" centerPoint3DX="124.9" centerPoint3DY="-77.4" loop="loop">
+                  <matrix>
+                    <Matrix a="1.0545654296875" b="0.1434326171875" c="-0.1434326171875" d="1.0545654296875" tx="52.95" ty="-222.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="129.15" y="217.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FDM Head copy 2" symbolType="graphic" firstFrame="100" centerPoint3DX="124.9" centerPoint3DY="-77.4" loop="loop">
+                  <matrix>
+                    <Matrix a="1.0545654296875" b="0.1434326171875" c="-0.1434326171875" d="1.0545654296875" tx="52.95" ty="-222.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="129.15" y="217.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FDM Head copy 2" symbolType="graphic" firstFrame="106" centerPoint3DX="127.35" centerPoint3DY="-65.15" loop="loop">
+                  <matrix>
+                    <Matrix a="1.06425476074219" b="-0.0046234130859375" c="0.0046234130859375" d="1.06425476074219" tx="35.9" ty="-198.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="129.2" y="217.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/FDM Head copy 2" symbolType="graphic" firstFrame="113" loop="loop">
+                  <matrix>
+                    <Matrix a="1.0545654296875" b="0.1434326171875" c="-0.1434326171875" d="1.0545654296875" tx="69.35" ty="-222.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="129.15" y="217.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_LHand2" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="272.7" ty="248.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.95" y="27.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65463,"b":2868,"c":-2868,"d":65463,"tx":0,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand2" selected="true" symbolType="graphic" centerPoint3DX="281.4" centerPoint3DY="401.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.994140625" b="0.10797119140625" c="-0.10797119140625" d="0.994140625" tx="266.95" ty="253.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.95" y="27.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand2" symbolType="graphic" centerPoint3DX="286.65" centerPoint3DY="393.8" loop="single frame">
+                  <matrix>
+                    <Matrix tx="256.3" ty="248.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.95" y="27.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand2" symbolType="graphic" centerPoint3DX="286.65" centerPoint3DY="393.8" loop="single frame">
+                  <matrix>
+                    <Matrix tx="256.3" ty="248.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.95" y="27.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65463,"b":2868,"c":-2868,"d":65463,"tx":0,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand2" symbolType="graphic" centerPoint3DX="281.4" centerPoint3DY="401.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.994140625" b="0.10797119140625" c="-0.10797119140625" d="0.994140625" tx="266.95" ty="253.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.95" y="27.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="272.7" ty="248.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.95" y="27.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_LHand" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="238.8" ty="70.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.6" y="16.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65463,"b":2868,"c":-2868,"d":65463,"tx":0,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand" selected="true" symbolType="graphic" centerPoint3DX="284.9" centerPoint3DY="198.85" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.998886108398438" b="0.04718017578125" c="-0.04718017578125" d="0.998886108398438" tx="239.6" ty="75.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.6" y="16.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand" symbolType="graphic" centerPoint3DX="273.45" centerPoint3DY="191.05" loop="single frame">
+                  <matrix>
+                    <Matrix tx="222.4" ty="70.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.6" y="16.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand" symbolType="graphic" centerPoint3DX="273.45" centerPoint3DY="191.05" loop="single frame">
+                  <matrix>
+                    <Matrix tx="222.4" ty="70.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.6" y="16.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65463,"b":2868,"c":-2868,"d":65463,"tx":0,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand" symbolType="graphic" centerPoint3DX="284.9" centerPoint3DY="198.85" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.998886108398438" b="0.04718017578125" c="-0.04718017578125" d="0.998886108398438" tx="239.6" ty="75.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.6" y="16.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LHand" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="238.8" ty="70.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.6" y="16.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_Body" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Body" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="56.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="113.8" y="203.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Body" selected="true" symbolType="graphic" centerPoint3DX="169.95" centerPoint3DY="203.3" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.994552612304688" tx="56.45" ty="6.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="113.9" y="203.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":65536,"b":0,"c":1503,"d":65536,"tx":-329,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Body" symbolType="graphic" centerPoint3DX="158.15" centerPoint3DY="203.3" loop="single frame">
+                  <matrix>
+                    <Matrix c="0.0229339599609375" tx="40"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="113.8" y="203.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" rigPropagationMatrix='{"a":65536,"b":0,"c":1503,"d":65536,"tx":-329,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Body" symbolType="graphic" centerPoint3DX="158.15" centerPoint3DY="203.3" loop="single frame">
+                  <matrix>
+                    <Matrix c="0.0229339599609375" tx="40"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="113.8" y="203.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Body" symbolType="graphic" centerPoint3DX="169.95" centerPoint3DY="203.3" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.994552612304688" tx="56.45" ty="6.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="113.9" y="203.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Body" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="56.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="113.8" y="203.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_RHand2" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix ty="251.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40.45" y="32.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65486,"b":2357,"c":-2357,"d":65486,"tx":0,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand2" selected="true" symbolType="graphic" centerPoint3DX="19.15" centerPoint3DY="391.6" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.992706298828125" b="0.120529174804688" c="-0.120529174804688" d="0.992706298828125" tx="-3.5" ty="252.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40.4" y="32.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand2" symbolType="graphic" centerPoint3DX="22.95" centerPoint3DY="386.75" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-16.4" ty="251.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40.45" y="32.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand2" symbolType="graphic" centerPoint3DX="22.95" centerPoint3DY="386.75" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-16.4" ty="251.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40.45" y="32.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65486,"b":2357,"c":-2357,"d":65486,"tx":0,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand2" symbolType="graphic" centerPoint3DX="19.15" centerPoint3DY="391.6" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.992706298828125" b="0.120529174804688" c="-0.120529174804688" d="0.992706298828125" tx="-3.5" ty="252.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40.4" y="32.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix ty="251.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40.45" y="32.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_RHand" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="15.4" ty="66.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="44.55" y="17.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65486,"b":2357,"c":-2357,"d":65486,"tx":0,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand" selected="true" symbolType="graphic" centerPoint3DX="55.85" centerPoint3DY="195.45" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.999237060546875" b="0.0390472412109375" c="-0.0390472412109375" d="0.999237060546875" tx="16.1" ty="71.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="44.6" y="17.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand" symbolType="graphic" centerPoint3DX="43.55" centerPoint3DY="188.9" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-1" ty="66.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="44.55" y="17.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand" symbolType="graphic" centerPoint3DX="43.55" centerPoint3DY="188.9" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-1" ty="66.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="44.55" y="17.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65486,"b":2357,"c":-2357,"d":65486,"tx":0,"ty":0}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand" symbolType="graphic" centerPoint3DX="55.85" centerPoint3DY="195.45" loop="single frame">
+                  <matrix>
+                    <Matrix a="0.999237060546875" b="0.0390472412109375" c="-0.0390472412109375" d="0.999237060546875" tx="16.1" ty="71.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="44.6" y="17.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RHand" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="15.4" ty="66.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="44.55" y="17.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_Bomb" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Bomb" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="68.05" ty="360.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="106.4" y="59.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64764,"tx":0,"ty":170}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Bomb" selected="true" symbolType="graphic" centerPoint3DX="174.25" centerPoint3DY="422.7" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.98822021484375" tx="68.05" ty="364.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="106.4" y="59.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":65536,"b":0,"c":1503,"d":65536,"tx":-329,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Bomb" symbolType="graphic" centerPoint3DX="167.4" centerPoint3DY="419.15" loop="single frame">
+                  <matrix>
+                    <Matrix c="0.0229339599609375" tx="59.85" ty="360.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="106.45" y="59.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" rigPropagationMatrix='{"a":65536,"b":0,"c":1503,"d":65536,"tx":-329,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Bomb" symbolType="graphic" centerPoint3DX="167.4" centerPoint3DY="419.15" loop="single frame">
+                  <matrix>
+                    <Matrix c="0.0229339599609375" tx="59.85" ty="360.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="106.45" y="59.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64764,"tx":0,"ty":170}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Bomb" symbolType="graphic" centerPoint3DX="174.25" centerPoint3DY="422.7" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.98822021484375" tx="68.05" ty="364.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="106.4" y="59.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM Bomb" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="68.05" ty="360.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="106.4" y="59.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_LLeg2" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="175.4" ty="635.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="52.4" y="38.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg2" selected="true" symbolType="graphic" centerPoint3DX="227.35" centerPoint3DY="827.35" loop="single frame">
+                  <matrix>
+                    <Matrix tx="175.4" ty="635.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="52.4" y="38.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg2" symbolType="graphic" centerPoint3DX="227.35" centerPoint3DY="827.35" loop="single frame">
+                  <matrix>
+                    <Matrix tx="175.4" ty="635.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="52.4" y="38.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg2" symbolType="graphic" centerPoint3DX="227.35" centerPoint3DY="827.35" loop="single frame">
+                  <matrix>
+                    <Matrix tx="175.4" ty="635.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="52.4" y="38.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg2" symbolType="graphic" centerPoint3DX="227.35" centerPoint3DY="827.35" loop="single frame">
+                  <matrix>
+                    <Matrix tx="175.4" ty="635.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="52.4" y="38.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="175.4" ty="635.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="52.4" y="38.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_LLeg" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="147.25" ty="349.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="65.45" y="78.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64764,"tx":0,"ty":170}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg" selected="true" symbolType="graphic" centerPoint3DX="212.7" centerPoint3DY="536.7" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.98822021484375" tx="147.25" ty="354.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="65.45" y="78.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":65536,"b":0,"c":1503,"d":65536,"tx":-329,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg" symbolType="graphic" centerPoint3DX="208.5" centerPoint3DY="534.5" loop="single frame">
+                  <matrix>
+                    <Matrix c="0.0229339599609375" tx="138.8" ty="349.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="65.5" y="78.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" rigPropagationMatrix='{"a":65536,"b":0,"c":1503,"d":65536,"tx":-329,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg" symbolType="graphic" centerPoint3DX="208.5" centerPoint3DY="534.5" loop="single frame">
+                  <matrix>
+                    <Matrix c="0.0229339599609375" tx="138.8" ty="349.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="65.5" y="78.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64764,"tx":0,"ty":170}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg" symbolType="graphic" centerPoint3DX="212.7" centerPoint3DY="536.7" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.98822021484375" tx="147.25" ty="354.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="65.45" y="78.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM LLeg" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="147.25" ty="349.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="65.45" y="78.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_RLeg2" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="56.45" ty="646.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54.9" y="21.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg2" selected="true" symbolType="graphic" centerPoint3DX="111.05" centerPoint3DY="822.5" loop="single frame">
+                  <matrix>
+                    <Matrix tx="56.45" ty="646.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54.9" y="21.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg2" symbolType="graphic" centerPoint3DX="111.05" centerPoint3DY="822.5" loop="single frame">
+                  <matrix>
+                    <Matrix tx="56.45" ty="646.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54.9" y="21.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg2" symbolType="graphic" centerPoint3DX="111.05" centerPoint3DY="822.5" loop="single frame">
+                  <matrix>
+                    <Matrix tx="56.45" ty="646.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54.9" y="21.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg2" symbolType="graphic" centerPoint3DX="111.05" centerPoint3DY="822.5" loop="single frame">
+                  <matrix>
+                    <Matrix tx="56.45" ty="646.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54.9" y="21.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg2" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="56.45" ty="646.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54.9" y="21.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="FDM_RLeg" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="69.4" ty="363.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="45.3" y="72.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64764,"tx":0,"ty":170}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg" selected="true" symbolType="graphic" centerPoint3DX="129.2" centerPoint3DY="540.45" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.98822021484375" tx="69.4" ty="367.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="45.3" y="72.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728" rigPropagationMatrix='{"a":65536,"b":0,"c":1503,"d":65536,"tx":-329,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg" symbolType="graphic" centerPoint3DX="125.1" centerPoint3DY="538.3" loop="single frame">
+                  <matrix>
+                    <Matrix c="0.0229339599609375" tx="61.25" ty="363.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="45.35" y="72.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="motion" keyMode="17921" rigPropagationMatrix='{"a":65536,"b":0,"c":1503,"d":65536,"tx":-329,"ty":0}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg" symbolType="graphic" centerPoint3DX="125.1" centerPoint3DY="538.3" loop="single frame">
+                  <matrix>
+                    <Matrix c="0.0229339599609375" tx="61.25" ty="363.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="45.35" y="72.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100" rigPropagationMatrix='{"a":65536,"b":0,"c":0,"d":64764,"tx":0,"ty":170}'>
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg" symbolType="graphic" centerPoint3DX="129.2" centerPoint3DY="540.45" loop="single frame">
+                  <matrix>
+                    <Matrix d="0.98822021484375" tx="69.4" ty="367.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="45.3" y="72.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="FDM RLeg" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix tx="69.4" ty="363.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="45.3" y="72.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shadow" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="6" tweenType="shape" keyMode="17922" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="-3.2890625, #4D.69" startPointB="-1.8046875, #4D.69" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="-3.2890625, #4C.5A" anchorPointA="#1.3A, #4B.9A" controlPointB="-1.8046875, #4C.5A" anchorPointB="#2.47, #4B.9A"/>
+                    <MorphCurves controlPointA="#5.BF, #4A.DB" anchorPointA="#C.24, #4A.DB" controlPointB="#6.5D, #4A.DB" anchorPointB="#C.25, #4A.DB"/>
+                    <MorphCurves controlPointA="#12.89, #4A.DB" anchorPointA="#17.0D, #4B.9A" controlPointB="#11.ED, #4A.DB" anchorPointB="#16.02, #4B.9A"/>
+                    <MorphCurves controlPointA="#1B.92, #4C.5A" anchorPointA="#1B.92, #4D.69" controlPointB="#1A.18, #4C.5A" anchorPointB="#1A.18, #4D.69"/>
+                    <MorphCurves controlPointA="#1B.92, #4E.78" anchorPointA="#17.0D, #4F.37" controlPointB="#1A.18, #4E.78" anchorPointB="#16.02, #4F.37"/>
+                    <MorphCurves controlPointA="#12.89, #4F.F7" anchorPointA="#C.24, #4F.F7" controlPointB="#11.ED, #4F.F7" anchorPointB="#C.25, #4F.F7"/>
+                    <MorphCurves controlPointA="#5.BF, #4F.F7" anchorPointA="#1.3A, #4F.37" controlPointB="#6.5D, #4F.F7" anchorPointB="#2.47, #4F.37"/>
+                    <MorphCurves controlPointA="-3.2890625, #4E.78" anchorPointA="-3.2890625, #4D.69" controlPointB="-1.8046875, #4E.78" anchorPointB="-1.8046875, #4D.69"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!7058 19817S2[7058 20088 5901 20279!5901 20279[4745 20471 3108 20471!3108 20471[1471 20471 314 20279!314 20279[-842 20088 -842 19817!-842 19817[-842 19546 314 19354!314 19354[1471 19163 3108 19163!3108 19163[4745 19163 5901 19354!5901
+ 19354[7058 19546 7058 19817"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="7" tweenType="shape" keyMode="17922" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="-1.8046875, #4D.69" startPointB="#FFFFFA.FF, #4D.69" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="-1.8046875, #4C.5A" anchorPointA="#2.47, #4B.9A" controlPointB="#FFFFFA.FF, #4C.5A" anchorPointB="-0.3984375, #4B.9A"/>
+                    <MorphCurves controlPointA="#6.5D, #4A.DB" anchorPointA="#C.25, #4A.DB" controlPointB="#4.37, #4A.DB" anchorPointB="#A.BD, #4A.DB"/>
+                    <MorphCurves controlPointA="#11.ED, #4A.DB" anchorPointA="#16.02, #4B.9A" controlPointB="#11.43, #4A.DB" anchorPointB="#15.DF, #4B.9A"/>
+                    <MorphCurves controlPointA="#1A.18, #4C.5A" anchorPointA="#1A.18, #4D.69" controlPointB="#1A.7B, #4C.5A" anchorPointB="#1A.7B, #4D.69"/>
+                    <MorphCurves controlPointA="#1A.18, #4E.78" anchorPointA="#16.02, #4F.37" controlPointB="#1A.7B, #4E.78" anchorPointB="#15.DF, #4F.37"/>
+                    <MorphCurves controlPointA="#11.ED, #4F.F7" anchorPointA="#C.25, #4F.F7" controlPointB="#11.43, #4F.F7" anchorPointB="#A.BD, #4F.F7"/>
+                    <MorphCurves controlPointA="#6.5D, #4F.F7" anchorPointA="#2.47, #4F.37" controlPointB="#4.37, #4F.F7" anchorPointB="-0.3984375, #4F.37"/>
+                    <MorphCurves controlPointA="-1.8046875, #4E.78" anchorPointA="-1.8046875, #4D.69" controlPointB="#FFFFFA.FF, #4E.78" anchorPointB="#FFFFFA.FF, #4D.69"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6680 19817S2[6680 20088 5634 20279!5634 20279[4589 20471 3109 20471!3109 20471[1629 20471 583 20279!583 20279[-462 20088 -462 19817!-462 19817[-462 19546 583 19354!583 19354[1629 19163 3109 19163!3109 19163[4589 19163 5634 19354!5634
+ 19354[6680 19546 6680 19817"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" duration="87" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6779 19817[6779 20088 5599 20279!5599 20279[4419 20471 2749 20471!2749 20471[1079 20471 -102 20279!-102 20279[-1281 20088 -1281 19817!-1281 19817[-1281 19546 -102 19354!-102 19354[1079 19163 2749 19163!2749 19163[4419 19163 5599 19354
+!5599 19354[6779 19546 6779 19817"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" duration="6" tweenType="shape" keyMode="17922" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="#FFFFFA.FF, #4D.69" startPointB="-1.8046875, #4D.69" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="#FFFFFA.FF, #4C.5A" anchorPointA="-0.3984375, #4B.9A" controlPointB="-1.8046875, #4C.5A" anchorPointB="#2.47, #4B.9A"/>
+                    <MorphCurves controlPointA="#4.37, #4A.DB" anchorPointA="#A.BD, #4A.DB" controlPointB="#6.5D, #4A.DB" anchorPointB="#C.25, #4A.DB"/>
+                    <MorphCurves controlPointA="#11.43, #4A.DB" anchorPointA="#15.DF, #4B.9A" controlPointB="#11.ED, #4A.DB" anchorPointB="#16.02, #4B.9A"/>
+                    <MorphCurves controlPointA="#1A.7B, #4C.5A" anchorPointA="#1A.7B, #4D.69" controlPointB="#1A.18, #4C.5A" anchorPointB="#1A.18, #4D.69"/>
+                    <MorphCurves controlPointA="#1A.7B, #4E.78" anchorPointA="#15.DF, #4F.37" controlPointB="#1A.18, #4E.78" anchorPointB="#16.02, #4F.37"/>
+                    <MorphCurves controlPointA="#11.43, #4F.F7" anchorPointA="#A.BD, #4F.F7" controlPointB="#11.ED, #4F.F7" anchorPointB="#C.25, #4F.F7"/>
+                    <MorphCurves controlPointA="#4.37, #4F.F7" anchorPointA="-0.3984375, #4F.37" controlPointB="#6.5D, #4F.F7" anchorPointB="#2.47, #4F.37"/>
+                    <MorphCurves controlPointA="#FFFFFA.FF, #4E.78" anchorPointA="#FFFFFA.FF, #4D.69" controlPointB="-1.8046875, #4E.78" anchorPointB="-1.8046875, #4D.69"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6779 19817[6779 20088 5599 20279!5599 20279[4419 20471 2749 20471!2749 20471[1079 20471 -102 20279!-102 20279[-1281 20088 -1281 19817!-1281 19817[-1281 19546 -102 19354!-102 19354[1079 19163 2749 19163!2749 19163[4419 19163 5599 19354
+!5599 19354[6779 19546 6779 19817"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" duration="7" tweenType="shape" keyMode="17922" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="-1.8046875, #4D.69" startPointB="-3.2890625, #4D.69" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="0">
+                    <MorphCurves controlPointA="-1.8046875, #4C.5A" anchorPointA="#2.47, #4B.9A" controlPointB="-3.2890625, #4C.5A" anchorPointB="#1.3A, #4B.9A"/>
+                    <MorphCurves controlPointA="#6.5D, #4A.DB" anchorPointA="#C.25, #4A.DB" controlPointB="#5.BF, #4A.DB" anchorPointB="#C.24, #4A.DB"/>
+                    <MorphCurves controlPointA="#11.ED, #4A.DB" anchorPointA="#16.02, #4B.9A" controlPointB="#12.89, #4A.DB" anchorPointB="#17.0D, #4B.9A"/>
+                    <MorphCurves controlPointA="#1A.18, #4C.5A" anchorPointA="#1A.18, #4D.69" controlPointB="#1B.92, #4C.5A" anchorPointB="#1B.92, #4D.69"/>
+                    <MorphCurves controlPointA="#1A.18, #4E.78" anchorPointA="#16.02, #4F.37" controlPointB="#1B.92, #4E.78" anchorPointB="#17.0D, #4F.37"/>
+                    <MorphCurves controlPointA="#11.ED, #4F.F7" anchorPointA="#C.25, #4F.F7" controlPointB="#12.89, #4F.F7" anchorPointB="#C.24, #4F.F7"/>
+                    <MorphCurves controlPointA="#6.5D, #4F.F7" anchorPointA="#2.47, #4F.37" controlPointB="#5.BF, #4F.F7" anchorPointB="#1.3A, #4F.37"/>
+                    <MorphCurves controlPointA="-1.8046875, #4E.78" anchorPointA="-1.8046875, #4D.69" controlPointB="-3.2890625, #4E.78" anchorPointB="-3.2890625, #4D.69"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6680 19817S2[6680 20088 5634 20279!5634 20279[4589 20471 3109 20471!3109 20471[1629 20471 583 20279!583 20279[-462 20088 -462 19817!-462 19817[-462 19546 583 19354!583 19354[1629 19163 3109 19163!3109 19163[4589 19163 5634 19354!5634
+ 19354[6680 19546 6680 19817"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" duration="87" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!7058 19817S2[7058 20088 5901 20279!5901 20279[4745 20471 3108 20471!3108 20471[1471 20471 314 20279!314 20279[-842 20088 -842 19817!-842 19817[-842 19546 314 19354!314 19354[1471 19163 3108 19163!3108 19163[4745 19163 5901 19354!5901
+ 19354[7058 19546 7058 19817"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

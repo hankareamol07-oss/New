@@ -1,0 +1,136 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Duplicate Items Folder/S Head" itemID="6389c0b3-0000029e" symbolType="graphic" lastModified="1669972147" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="S Head" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="LE_copy" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/LE copy 16" centerPoint3DX="257.05" centerPoint3DY="253.5">
+                  <matrix>
+                    <Matrix a="2.045654296875" b="-0.036529541015625" c="0.036529541015625" d="2.045654296875" tx="234.75" ty="210.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.7" y="21.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Pradhan_Pgdi" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":41636,"b":0,"c":0,"d":41636,"tx":1254,"ty":561}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Pradhan Pgdi copy" symbolType="graphic" centerPoint3DX="164.95" centerPoint3DY="101.25" loop="single frame">
+                  <matrix>
+                    <Matrix a="-2.044921875" d="2.044921875" tx="335.2" ty="-69.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="83" y="82.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_Lips" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 Lips copy 10" symbolType="graphic" centerPoint3DX="121.35" centerPoint3DY="321.15" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.045654296875" b="-0.036529541015625" c="0.036529541015625" d="2.045654296875" tx="84.2" ty="318.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="21.75" y="6.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_Nose" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 Nose copy 10" centerPoint3DX="113.85" centerPoint3DY="251.95">
+                  <matrix>
+                    <Matrix a="2.045654296875" b="-0.036529541015625" c="0.036529541015625" d="2.045654296875" tx="90.9" ty="209.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.8" y="21.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_Eyes" color="#009999" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 Eyes copy 10" selected="true" symbolType="graphic" centerPoint3DX="120.65" centerPoint3DY="205.15" loop="loop">
+                  <matrix>
+                    <Matrix a="2.045654296875" b="-0.036529541015625" c="0.036529541015625" d="2.045654296875" tx="33.55" ty="172.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="42.2" y="16.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="F2_PF" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/F2 PF copy 10" symbolType="graphic" firstFrame="1" loop="single frame">
+                  <matrix>
+                    <Matrix a="2.045654296875" b="-0.036529541015625" c="0.036529541015625" d="2.045654296875" tx="13.5" ty="27.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="68.15" y="95.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="B_Pagari" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728" rigPropagationMatrix='{"a":59058,"b":0,"c":0,"d":59058,"tx":340,"ty":155}'>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/B Pagari copy" centerPoint3DX="141.6" centerPoint3DY="190.65">
+                  <matrix>
+                    <Matrix a="-2.044921875" d="2.044921875" tx="284.6" ty="108.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="69.95" y="40.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="RE_copy" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="200" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/RE copy 16" centerPoint3DX="42.35" centerPoint3DY="241.1">
+                  <matrix>
+                    <Matrix a="2.045654296875" b="-0.036529541015625" c="0.036529541015625" d="2.045654296875" tx="26.8" ty="200.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.25" y="20.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
