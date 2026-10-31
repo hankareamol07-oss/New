@@ -12,6 +12,7 @@ FONT_DIR = os.path.join(ROOT, "assets", "fonts")
 W, H = 1920, 1080
 INK = (25, 30, 45)
 GREEN = (0, 110, 50)
+_NO_DEVA_GLYPH = set("$&@`")  # ASCII missing from Noto Sans Devanagari: draw with Noto Sans
 _RUN = re.compile(r"[A-Za-z][A-Za-z0-9'’.,;:!?%/()\-]*|[^A-Za-z]+")
 
 
@@ -46,7 +47,7 @@ class Text:
             t = m.group(0)
             latin = t[0].isascii() and t[0].isalpha()
             has_deva = any("\u0900" <= ch <= "\u097F" for ch in t)
-            deva = has_deva or (self.deva and not latin)
+            deva = has_deva or (self.deva and not latin and not set(t) & _NO_DEVA_GLYPH)
             out.append((t, self._font(deva, size, bold)))
         return out
 
