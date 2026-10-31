@@ -18,36 +18,62 @@ def service(cfg):
     from googleapiclient.discovery import build
 
     token_file = cfg["youtube"].get("token_file") or TOKEN_FILE
+    env_token = os.environ.get("YOUTUBE_TOKEN_JSON", "").strip()   # cloud autopost: token json stored as a secret
     creds = None
-    if os.path.exists(token_file):
+    if env_token:
+        creds = Credentials.from_authorized_user_info(json.loads(env_token), SCOPES)
+    elif os.path.exists(token_file):
         creds = Credentials.from_authorized_user_file(token_file, SCOPES)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
+        elif env_token or os.environ.get("CI"):
+            raise RuntimeError("YouTube login is missing or expired - run GET_YOUTUBE_TOKEN.bat again and update the "
+                               "YOUTUBE_TOKEN_JSON secret")
         else:
             cs = cfg["youtube"]["client_secret"]
             if not os.path.exists(cs):
                 raise FileNotFoundError(f"client_secret.json not found: {cs} - copy your Google OAuth client file there")
             flow = InstalledAppFlow.from_client_secrets_file(cs, SCOPES)
-            creds = flow.run_local_server(port=0)
-        with open(token_file, "w") as f:
-            f.write(creds.to_json())
+            creds = flow.run_local_server(port=0, prompt="consent")
+        if not env_token:
+            with open(token_file, "w") as f:
+                f.write(creds.to_json())
     return build("youtube", "v3", credentials=creds)
 
 
+def _slots(s):
+    times = s.get("times") or [f"{s['hour']:02d}:{s['minute']:02d}"]
+    return sorted(tuple(int(x) for x in t.split(":")[:2]) for t in times)
+
+
 def next_publish_time(cfg, state_file):
-    """Consistent schedule: next free slot at HH:MM local, every N days, remembered in state_file."""
+    """Next free slot: one of schedule.times (or hour:minute) each day, in schedule.tz (default: PC time zone);
+    a single daily slot repeats every_days. The last slot used is remembered in state_file."""
     s = cfg["youtube"]["schedule"]
+    tz = None
+    if s.get("tz"):
+        from zoneinfo import ZoneInfo
+        tz = ZoneInfo(s["tz"])
+    now = dt.datetime.now(tz) if tz else dt.datetime.now().astimezone()
     last = None
     if os.path.exists(state_file):
         with open(state_file) as f:
-            last = dt.datetime.fromisoformat(json.load(f).get("last", ""))
-    now = dt.datetime.now().astimezone()
-    cand = now.replace(hour=s["hour"], minute=s["minute"], second=0, microsecond=0)
-    if cand <= now:
-        cand += dt.timedelta(days=1)
-    if last and cand <= last:
-        cand = last + dt.timedelta(days=s["every_days"])
+            v = json.load(f).get("last")
+        if v:
+            last = dt.datetime.fromisoformat(v).astimezone(now.tzinfo)
+    slots = _slots(s)
+    step = s.get("every_days", 1) if len(slots) == 1 else 1
+    floor = now + dt.timedelta(minutes=20)
+    day = floor.date()
+    cand = None
+    while cand is None:
+        for h, m in slots:
+            c = dt.datetime.combine(day, dt.time(h, m), now.tzinfo)
+            if c > floor and (last is None or (c >= last + dt.timedelta(days=step, minutes=-1) if step > 1 else c > last)):
+                cand = c
+                break
+        day += dt.timedelta(days=1)
     with open(state_file, "w") as f:
         json.dump({"last": cand.isoformat()}, f)
     return cand
@@ -86,7 +112,11 @@ def upload(cfg, mp4, meta, thumb=None, is_short=False, log=print):
         "status": {"privacyStatus": y["privacy"], "selfDeclaredMadeForKids": y["made_for_kids"]},
     }
     if y["schedule"]["enabled"]:
-        when = next_publish_time(cfg, os.path.join(ROOT, "schedule_state.json"))
+        if is_short and meta.get("publish_at"):        # the Short goes live together with its video
+            when = dt.datetime.fromisoformat(meta["publish_at"])
+        else:
+            when = next_publish_time(cfg, os.path.join(ROOT, "schedule_state.json"))
+            meta["publish_at"] = when.isoformat()
         body["status"]["privacyStatus"] = "private"
         body["status"]["publishAt"] = when.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         log(f"[youtube] scheduled for {when}")

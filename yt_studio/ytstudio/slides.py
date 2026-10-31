@@ -250,9 +250,9 @@ class Renderer:
                 self.t.draw(d, (x, y), f"({labels[i]})  {o}", 46, hit, GREEN if hit else (40, 40, 40))
             y += 70
         if is_match:
-            right = [p[1] for p in pairs]
+            col_b = [p[1] for p in pairs]
             if not show_answer:
-                right = sorted(right, key=lambda s: str(s)[::-1])
+                col_b = sorted(col_b, key=lambda s: str(s)[::-1])
             y += 10
             hdr_a, hdr_b = ("Group A", "Group B") if self.en else ("अ गट", "ब गट")
             self.t.draw(d, (290, y), hdr_a, 40, True, self.primary)
@@ -260,7 +260,7 @@ class Renderer:
             y += 56
             for i, p in enumerate(pairs[:6]):
                 self.t.draw(d, (290, y), f"{i + 1}. {p[0]}", 42, False, (40, 40, 40))
-                self.t.draw(d, (290 + col, y), ("→ " if show_answer else "") + str(right[i]), 42, show_answer, GREEN if show_answer else (40, 40, 40))
+                self.t.draw(d, (290 + col, y), ("→ " if show_answer else "") + str(col_b[i]), 42, show_answer, GREEN if show_answer else (40, 40, 40))
                 y += 58
         if show_answer:
             top = H - 90 - ans_h
