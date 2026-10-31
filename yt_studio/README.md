@@ -24,6 +24,26 @@ chapter ─► questions (book / typed / both) ─► LLM script+SEO (JSON)
    Queue order = `auto.stds` (default 6,7,8,5,4,3,2,1) × Marathi books × chapters with ≥ `auto.min_questions` questions.
    Limit with `"subjects": ["Science"]` / `"langs": ["mr","hi"]`.
 
+## 0b. Cloud autopilot — 2 videos a day, laptop off (GitHub Actions, free)
+
+Workflow `.github/workflows/yt_autopost.yml` runs every day at 06:00 IST on GitHub: makes the next 2 chapters
+(`autopost.config.json`) and uploads them scheduled for **09:00 and 18:00 IST** (+ a Short each). Progress
+(`auto_state.json`, `schedule_state.json`) is kept on the `autopost-state` branch, so nothing is uploaded twice.
+
+One-time setup (≈15 min):
+1. Google Cloud Console (any account) → enable **YouTube Data API v3** → OAuth client ID (*Desktop app*) → download as
+   `yt_studio/client_secret.json`. OAuth consent screen → **Publish app** (in "Testing" mode Google expires the login after 7 days).
+2. Double-click `GET_YOUTUBE_TOKEN.bat`. In the browser sign in with the account that **owns the channel** (pick the brand
+   channel if asked; click *Advanced → Go to app* on the "unverified app" page). The window prints the channel name — check it.
+3. GitHub → repo **Settings → Secrets and variables → Actions → New repository secret**:
+   * `YOUTUBE_TOKEN_JSON` = all text of `youtube_token.json` (Notepad opens it for you)
+   * `GEMINI_API_KEY` and/or `GROQ_API_KEY` / `NVIDIA_API_KEY` (free keys, several comma-separated allowed)
+4. **Actions → YT autopost → Run workflow** once to test. After that it runs by itself every day.
+
+Videos stay **private + scheduled**; YouTube publishes them at the slot time. (New Google API projects may be limited to private
+uploads until the project passes YouTube's free audit — then videos are private until you make them public.)
+Change times / standards / languages in `autopost.config.json`. The rendered files are kept 3 days as the run's "videos" artifact.
+
 ## 1. Install (Windows / Linux / macOS)
 
 1. Python 3.10+ → https://www.python.org/downloads/ (tick "Add to PATH").

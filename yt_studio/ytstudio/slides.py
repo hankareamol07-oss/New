@@ -12,6 +12,7 @@ FONT_DIR = os.path.join(ROOT, "assets", "fonts")
 W, H = 1920, 1080
 INK = (25, 30, 45)
 GREEN = (0, 110, 50)
+_NO_DEVA_GLYPH = set("$&@`")  # ASCII missing from Noto Sans Devanagari: draw with Noto Sans
 _RUN = re.compile(r"[A-Za-z][A-Za-z0-9'’.,;:!?%/()\-]*|[^A-Za-z]+")
 
 
@@ -46,7 +47,7 @@ class Text:
             t = m.group(0)
             latin = t[0].isascii() and t[0].isalpha()
             has_deva = any("\u0900" <= ch <= "\u097F" for ch in t)
-            deva = has_deva or (self.deva and not latin)
+            deva = has_deva or (self.deva and not latin and not set(t) & _NO_DEVA_GLYPH)
             out.append((t, self._font(deva, size, bold)))
         return out
 
@@ -250,9 +251,9 @@ class Renderer:
                 self.t.draw(d, (x, y), f"({labels[i]})  {o}", 46, hit, GREEN if hit else (40, 40, 40))
             y += 70
         if is_match:
-            right = [p[1] for p in pairs]
+            col_b = [p[1] for p in pairs]
             if not show_answer:
-                right = sorted(right, key=lambda s: str(s)[::-1])
+                col_b = sorted(col_b, key=lambda s: str(s)[::-1])
             y += 10
             hdr_a, hdr_b = ("Group A", "Group B") if self.en else ("अ गट", "ब गट")
             self.t.draw(d, (290, y), hdr_a, 40, True, self.primary)
@@ -260,7 +261,7 @@ class Renderer:
             y += 56
             for i, p in enumerate(pairs[:6]):
                 self.t.draw(d, (290, y), f"{i + 1}. {p[0]}", 42, False, (40, 40, 40))
-                self.t.draw(d, (290 + col, y), ("→ " if show_answer else "") + str(right[i]), 42, show_answer, GREEN if show_answer else (40, 40, 40))
+                self.t.draw(d, (290 + col, y), ("→ " if show_answer else "") + str(col_b[i]), 42, show_answer, GREEN if show_answer else (40, 40, 40))
                 y += 58
         if show_answer:
             top = H - 90 - ans_h

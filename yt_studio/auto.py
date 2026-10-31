@@ -78,12 +78,29 @@ def queue(cfg, bank):
     return out
 
 
+def login():
+    from ytstudio import config, youtube
+    cfg = config.load()
+    if not os.path.exists(cfg["youtube"]["client_secret"]):
+        print(f"client_secret.json not found at {cfg['youtube']['client_secret']} (README section 0).")
+        return 2
+    print("Browser opens: sign in with the Google account that OWNS the YouTube channel (pick the channel if asked).")
+    yt = youtube.service(cfg)
+    ch = yt.channels().list(part="snippet", mine=True).execute().get("items", [])
+    print("Channel:", ch[0]["snippet"]["title"] if ch else "(none found - sign in with the channel's account)")
+    print(f"Saved {youtube.TOKEN_FILE}. Copy ALL its text into the GitHub secret YOUTUBE_TOKEN_JSON.")
+    return 0 if ch else 1
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry", action="store_true")
     ap.add_argument("--no-upload", action="store_true")
     ap.add_argument("--count", type=int)
+    ap.add_argument("--login", action="store_true", help="only sign in to YouTube and save youtube_token.json")
     args = ap.parse_args()
+    if args.login:
+        return login()
     cfg = preflight()
     from ytstudio import pipeline
     from ytstudio.data import Bank
@@ -102,7 +119,7 @@ def main():
         for b, c, n in todo[:40]:
             print(f"  std {b['std']} {b['subject']:<15} {b['lang']}  ch {c['no']:>2}  {c['title']}  ({n} q)")
         return
-    if upload and not os.path.exists(cfg["youtube"]["client_secret"]):
+    if upload and not os.environ.get("YOUTUBE_TOKEN_JSON") and not os.path.exists(cfg["youtube"]["client_secret"]):
         print(f"\nclient_secret.json not found at {cfg['youtube']['client_secret']} — put it there (README §0) or run with --no-upload.")
         return 2
     per_run = args.count or cfg["auto"]["per_run"]
