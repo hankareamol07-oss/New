@@ -1,0 +1,79 @@
+{
+  "name": "YT Studio - upload finished video",
+  "nodes": [
+    {
+      "parameters": {"httpMethod": "POST", "path": "yt-studio", "responseMode": "onReceived", "options": {}},
+      "name": "Webhook (from run.py)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "webhookId": "yt-studio"
+    },
+    {
+      "parameters": {
+        "conditions": {"boolean": [{"value1": "={{ !$json.body.youtube_url }}", "value2": true}]}
+      },
+      "name": "Not uploaded yet?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [240, 0]
+    },
+    {
+      "parameters": {"filePath": "={{ $json.body.video }}"},
+      "name": "Read MP4",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [480, -100]
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "upload",
+        "title": "={{ $('Webhook (from run.py)').item.json.body.title }}",
+        "categoryId": "27",
+        "binaryProperty": "data",
+        "options": {
+          "description": "={{ $('Webhook (from run.py)').item.json.body.description + '\\n\\n' + $('Webhook (from run.py)').item.json.body.chapters_text + '\\n\\n' + $('Webhook (from run.py)').item.json.body.hashtags.join(' ') }}",
+          "tags": "={{ $('Webhook (from run.py)').item.json.body.tags.join(',') }}",
+          "privacyStatus": "private",
+          "defaultLanguage": "={{ $('Webhook (from run.py)').item.json.body.lang }}",
+          "selfDeclaredMadeForKids": false
+        }
+      },
+      "name": "YouTube upload",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [720, -100],
+      "credentials": {"youTubeOAuth2Api": {"id": "REPLACE", "name": "YouTube account"}}
+    },
+    {
+      "parameters": {
+        "chatId": "REPLACE_CHAT_ID",
+        "text": "=✅ Uploaded: {{ $('Webhook (from run.py)').item.json.body.title }}\nhttps://youtu.be/{{ $json.id }}"
+      },
+      "name": "Telegram notify",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [960, -100],
+      "credentials": {"telegramApi": {"id": "REPLACE", "name": "Telegram bot"}}
+    },
+    {
+      "parameters": {
+        "chatId": "REPLACE_CHAT_ID",
+        "text": "=✅ Video already on YouTube: {{ $json.body.youtube_url }}\n{{ $json.body.title }}"
+      },
+      "name": "Telegram notify (already uploaded)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [480, 120],
+      "credentials": {"telegramApi": {"id": "REPLACE", "name": "Telegram bot"}}
+    }
+  ],
+  "connections": {
+    "Webhook (from run.py)": {"main": [[{"node": "Not uploaded yet?", "type": "main", "index": 0}]]},
+    "Not uploaded yet?": {"main": [[{"node": "Read MP4", "type": "main", "index": 0}], [{"node": "Telegram notify (already uploaded)", "type": "main", "index": 0}]]},
+    "Read MP4": {"main": [[{"node": "YouTube upload", "type": "main", "index": 0}]]},
+    "YouTube upload": {"main": [[{"node": "Telegram notify", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"}
+}
