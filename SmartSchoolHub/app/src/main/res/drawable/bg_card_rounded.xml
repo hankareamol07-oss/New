@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    bg_card_rounded.xml
+    White rounded rectangle with 16dp corners for Material card surfaces.
+    Elevation shadow is handled by MaterialCardView; this drawable provides
+    the fill + stroke for non-Material card containers.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- White card surface -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- 16dp rounded corners (Material 3 medium shape) -->
+    <corners android:radius="16dp" />
+
+    <!-- Subtle border to lift card from background -->
+    <stroke
+        android:width="1dp"
+        android:color="#0D000000" />
+
+    <!-- Internal padding handled by layout; padding here is 0 -->
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+
+</shape>

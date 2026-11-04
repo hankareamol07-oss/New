@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Active / selected tab label -->
+    <item
+        android:color="#BF360C"
+        android:state_checked="true" />
+
+    <!-- Touch feedback -->
+    <item
+        android:color="#9A2B09"
+        android:state_pressed="true" />
+
+    <!-- Inactive tab label -->
+    <item android:color="#757575" />
+
+</selector>

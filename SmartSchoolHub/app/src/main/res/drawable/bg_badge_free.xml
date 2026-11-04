@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    bg_badge_free.xml
+    Green rounded rectangle badge for 'मोफत' (Free) modules.
+    Filled with Material Green 700, 50dp corner radius for pill shape.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Material Green 700 -->
+    <solid android:color="#388E3C" />
+
+    <!-- Pill-shaped corners -->
+    <corners android:radius="50dp" />
+
+    <!-- No stroke needed; color itself stands out -->
+
+    <padding
+        android:bottom="2dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:top="2dp" />
+
+</shape>

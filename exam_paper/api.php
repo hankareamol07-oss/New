@@ -8,6 +8,9 @@ $action = $_GET['action'] ?? $_POST['action'] ?? '';
 $body = json_decode(file_get_contents('php://input'), true) ?: [];
 
 switch ($action) {
+    case 'standards':
+        ep_json(ep_standards());
+
     case 'subjects':
         ep_json(ep_subjects((int)($_GET['standard_id'] ?? 0)));
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_school_logo.xml
+    School logo — mortarboard / graduation cap in white.
+    Material Symbols style, 24×24 viewport.
+    Used in the app-bar, splash screen, and hero banner.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Mortarboard flat top (square cap) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,3 L2,8 L12,13 L22,8 Z" />
+
+    <!-- Cap tassel string -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M20,8.5 L20,15"
+        android:strokeWidth="1.8"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
+
+    <!-- Tassel end blob -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,15 m-1.5,0 a1.5,1.5 0 1,0 3,0 a1.5,1.5 0 1,0 -3,0" />
+
+    <!-- Diploma scroll body (under cap) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M6,10.5 L6,16 C6,18.21 8.69,20 12,20 C15.31,20 18,18.21 18,16 L18,10.5"
+        android:strokeWidth="2"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>

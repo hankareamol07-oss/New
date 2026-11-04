@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    selector_bottom_nav.xml
+    Color state list for bottom navigation bar icons and text.
+    Selected state: Deep Orange primary #BF360C
+    Default state : Mid-gray #757575
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Selected / checked state — brand primary -->
+    <item
+        android:color="#BF360C"
+        android:state_checked="true" />
+
+    <!-- Pressed state — slightly darker for feedback -->
+    <item
+        android:color="#9A2B09"
+        android:state_pressed="true" />
+
+    <!-- Default / unselected state -->
+    <item android:color="#757575" />
+
+</selector>

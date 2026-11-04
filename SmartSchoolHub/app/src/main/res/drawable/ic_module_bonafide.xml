@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_module_bonafide.xml
+    Bonafide Certificate module icon — file document with stamp outline style.
+    Material Symbols style, 24×24 viewport.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorPrimary">
+
+    <!-- Document body with folded top-right corner -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M14,2 L6,2 C4.9,2 4,2.9 4,4 L4,20 C4,21.1 4.9,22 6,22 L18,22 C19.1,22 20,21.1 20,20 L20,8 Z"
+        android:strokeWidth="2"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Folded corner crease -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M14,2 L14,8 L20,8"
+        android:strokeWidth="2"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Text line 1 -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M8,13 L16,13"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Text line 2 -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M8,16 L13,16"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Stamp circle on bottom right of document -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M15,17 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C" />
+
+    <!-- Tick inside stamp -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M13.5,17 L14.5,18 L16.5,16"
+        android:strokeWidth="1.2"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>

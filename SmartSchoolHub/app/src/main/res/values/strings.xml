@@ -1,0 +1,169 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">स्मार्ट स्कूल हब</string>
+    <string name="app_name_en">Smart School Hub</string>
+    <string name="app_tagline">TechGuruji — शाळा व शिक्षकांसाठी #१ डिजिटल प्लॅटफॉर्म</string>
+
+    <!-- Base URL -->
+    <string name="base_url">https://vijetaacademysangli.in/techguruji/</string>
+    <string name="api_base_url">https://vijetaacademysangli.in/techguruji/api/</string>
+
+    <!-- Auth Strings -->
+    <string name="login_title">शाळा लॉगिन</string>
+    <string name="login_subtitle">ईमेल / मोबाईल नंबर व पासवर्ड टाका</string>
+    <string name="email_or_phone">ईमेल किंवा मोबाईल क्रमांक</string>
+    <string name="password">पासवर्ड</string>
+    <string name="login_btn">लॉगिन करा</string>
+    <string name="no_account">खाते नाही? मोफत नोंदणी करा</string>
+    <string name="register_title">शाळा मोफत नोंदणी</string>
+    <string name="school_name_en">शाळेचे नाव (इंग्रजी)</string>
+    <string name="school_name_mr">शाळेचे नाव (मराठी)</string>
+    <string name="udise_code">UDISE कोड</string>
+    <string name="phone">फोन नंबर</string>
+    <string name="district">जिल्हा</string>
+    <string name="taluka">तालुका</string>
+    <string name="village">गाव</string>
+    <string name="pin_code">पिन कोड</string>
+    <string name="email">ईमेल</string>
+    <string name="confirm_password">पासवर्ड पुन्हा टाका</string>
+    <string name="register_btn">नोंदणी करा</string>
+    <string name="already_account">आधीच खाते आहे? लॉगिन करा</string>
+    <string name="logout">लॉगआउट करा</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard">डॅशबोर्ड</string>
+    <string name="welcome">स्वागत आहे</string>
+    <string name="academic_year">शैक्षणिक वर्ष</string>
+    <string name="total_students">एकूण विद्यार्थी</string>
+    <string name="hpc_cards">HPC कार्ड्स</string>
+    <string name="cce_evaluated">CCE मूल्यांकित</string>
+    <string name="teachers">शिक्षक</string>
+    <string name="classes">वर्ग</string>
+
+    <!-- Modules -->
+    <string name="modules">मॉड्यूल्स</string>
+    <string name="paripath">शालेय परिपाठ</string>
+    <string name="hpc">HPC प्रगती पत्रक</string>
+    <string name="cce">CCE मूल्यमापन</string>
+    <string name="tachan">टाचण (दैनिक नियोजन)</string>
+    <string name="hajeri">हजेरी</string>
+    <string name="mdm">पोषण आहार (MDM)</string>
+    <string name="fee">फी व्यवस्थापन</string>
+    <string name="students_module">विद्यार्थी व्यवस्थापन</string>
+    <string name="class_mgmt">वर्ग व्यवस्थापन</string>
+    <string name="exam_paper">प्रश्नपत्रिका जनरेटर</string>
+    <string name="bonafide">बोनाफाईड दाखला</string>
+    <string name="gr_register">जनरल रजिस्टर (GR)</string>
+    <string name="subscription">प्रीमियम योजना</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_home">मुख्यपृष्ठ</string>
+    <string name="nav_modules">मॉड्यूल्स</string>
+    <string name="nav_students">विद्यार्थी</string>
+    <string name="nav_paripath">परिपाठ</string>
+    <string name="nav_profile">प्रोफाइल</string>
+
+    <!-- Common -->
+    <string name="loading">लोड होत आहे…</string>
+    <string name="retry">पुन्हा प्रयत्न करा</string>
+    <string name="no_internet">इंटरनेट नाही. कृपया तपासा.</string>
+    <string name="error_generic">काहीतरी चूक झाली. पुन्हा प्रयत्न करा.</string>
+    <string name="success">यशस्वी!</string>
+    <string name="cancel">रद्द करा</string>
+    <string name="ok">ठीक आहे</string>
+    <string name="free_badge">मोफत</string>
+    <string name="premium_badge">प्रीमियम</string>
+    <string name="free_plan_msg">मोफत ५ विद्यार्थ्यांची चाचणी सक्रिय. प्रो योजनेत अपग्रेड करा.</string>
+    <string name="upgrade_pro">⭐ प्रो योजना मिळवा</string>
+    <string name="open_module">मॉड्युल वापरा →</string>
+    <string name="go_back">परत जा</string>
+    <string name="today">आज</string>
+    <string name="view_all">सर्व पहा</string>
+
+    <string name="nav_dashboard">डॅशबोर्ड</string>
+    <string name="module_hpc">HPC प्रगती पत्रक</string>
+    <string name="module_cce">CCE मूल्यमापन</string>
+    <string name="module_tachan">टाचण नियोजन</string>
+    <string name="module_hajeri">हजेरी</string>
+    <string name="module_mdm">पोषण आहार (MDM)</string>
+    <string name="module_fee">फी व्यवस्थापन</string>
+    <string name="module_exam">प्रश्नपत्रिका जनरेटर</string>
+    <string name="student_detail">विद्यार्थी माहिती</string>
+
+    <!-- Native module screens -->
+    <string name="print_pdf">प्रिंट / PDF</string>
+    <string name="save">जतन करा</string>
+    <string name="add">जोडा</string>
+    <string name="date">दिनांक</string>
+    <string name="grade">इयत्ता</string>
+    <string name="section">तुकडी</string>
+    <string name="select_grade">इयत्ता निवडा</string>
+    <string name="select_section">तुकडी निवडा</string>
+    <string name="select_student">विद्यार्थी निवडा</string>
+    <string name="all_grades">सर्व इयत्ता</string>
+    <string name="search">शोधा</string>
+    <string name="saving">जतन होत आहे…</string>
+    <string name="saved_success">यशस्वीरित्या जतन झाले!</string>
+    <string name="network_error">नेटवर्क त्रुटी. इंटरनेट तपासा.</string>
+    <string name="required_field">हे आवश्यक आहे</string>
+
+    <string name="mdm_title">पोषण आहार (MDM)</string>
+    <string name="mdm_group_1_5">इयत्ता १ ली ते ५ वी</string>
+    <string name="mdm_group_6_8">इयत्ता ६ वी ते ८ वी</string>
+    <string name="mdm_beneficiaries">लाभार्थी संख्या</string>
+    <string name="mdm_menu">आजचा मेनू</string>
+    <string name="mdm_cooked">आहार शिजवला</string>
+    <string name="mdm_holiday">सुट्टी / आहार नाही</string>
+    <string name="mdm_remarks">शेरा (ऐच्छिक)</string>
+    <string name="mdm_rice">तांदूळ (किलो)</string>
+    <string name="mdm_dal">डाळ (किलो)</string>
+
+    <string name="fee_title">फी व्यवस्थापन</string>
+    <string name="fee_collect">फी जमा करा</string>
+    <string name="fee_amount">रक्कम (₹)</string>
+    <string name="fee_mode">पेमेंट पद्धत</string>
+    <string name="fee_type">फी प्रकार</string>
+    <string name="fee_remarks">शेरा (ऐच्छिक)</string>
+    <string name="fee_receipt">पावती</string>
+    <string name="fee_expected">अपेक्षित</string>
+    <string name="fee_collected">जमा</string>
+    <string name="fee_pending">बाकी</string>
+
+    <string name="exam_title">प्रश्नपत्रिका जनरेटर</string>
+    <string name="exam_name">परीक्षेचे नाव</string>
+    <string name="exam_subject">विषय</string>
+    <string name="exam_total_marks">एकूण गुण</string>
+    <string name="exam_duration">वेळ (मिनिटे)</string>
+    <string name="exam_add_question">प्रश्न जोडा</string>
+    <string name="exam_generate">प्रश्नपत्रिका तयार करा</string>
+    <string name="exam_question">प्रश्न</string>
+    <string name="exam_marks">गुण</string>
+    <string name="exam_section">विभाग</string>
+
+    <string name="classes_title">वर्ग व्यवस्थापन</string>
+    <string name="bonafide_title">बोनाफाईड दाखला</string>
+    <string name="bonafide_purpose">दाखल्याचा उद्देश</string>
+    <string name="bonafide_generate">दाखला तयार करा</string>
+    <string name="gr_title">जनरल रजिस्टर (GR)</string>
+    <string name="gr_print">रजिस्टर प्रिंट</string>
+    <string name="search_hint">नाव / GR शोधा</string>
+    <string name="plans_title">सबस्क्रिप्शन योजना</string>
+
+    <string name="add_student_title">नवीन विद्यार्थी नोंदणी</string>
+    <string name="student_name_en">विद्यार्थ्याचे नाव (इंग्रजी)</string>
+    <string name="student_name_mr">विद्यार्थ्याचे नाव (मराठी)</string>
+    <string name="gr_no">GR क्रमांक</string>
+    <string name="roll_no">हजेरी क्रमांक</string>
+    <string name="gender">लिंग</string>
+    <string name="dob">जन्मतारीख</string>
+    <string name="father_name">वडिलांचे नाव</string>
+    <string name="mother_name">आईचे नाव</string>
+    <string name="aadhar_no">आधार क्रमांक</string>
+    <string name="apaar_id">APAAR ID</string>
+    <string name="caste">जात / प्रवर्ग</string>
+    <string name="blood_group">रक्तगट</string>
+    <string name="student_saved">विद्यार्थी यशस्वीरित्या जोडला!</string>
+    <string name="attendance_summary">हजेरी सारांश</string>
+    <string name="present">उपस्थित</string>
+    <string name="absent">अनुपस्थित</string>
+</resources>

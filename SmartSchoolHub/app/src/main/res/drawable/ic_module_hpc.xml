@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_module_hpc.xml
+    HPC Progress Card module icon — ID card / badge outline style.
+    Material Symbols style, 24×24 viewport.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorPrimary">
+
+    <!--
+        ID card outline:
+        - Outer card body
+        - Photo placeholder circle
+        - Name / info lines
+    -->
+
+    <!-- Card body outline -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M20,4 L4,4 C2.9,4 2,4.9 2,6 L2,18 C2,19.1 2.9,20 4,20 L20,20 C21.1,20 22,19.1 22,18 L22,6 C22,4.9 21.1,4 20,4 Z"
+        android:strokeWidth="2"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Photo circle placeholder -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M7,14 C7,12.34 8.34,11 10,11 C11.66,11 13,12.34 13,14"
+        android:strokeWidth="1.8"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Head circle -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M10,11 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0"
+        android:strokeWidth="1.8"
+        android:strokeColor="#BF360C" />
+
+    <!-- Name line -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M15,10 L19,10"
+        android:strokeWidth="1.8"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Sub-line 1 -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M15,13 L18,13"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Sub-line 2 -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M15,16 L17,16"
+        android:strokeWidth="1.5"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+</vector>

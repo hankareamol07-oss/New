@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_module_cce.xml
+    CCE Evaluation module icon — bar chart / poll outline style.
+    Material Symbols style, 24×24 viewport.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorPrimary">
+
+    <!-- Bar chart baseline -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M3,20 L21,20"
+        android:strokeWidth="2"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Left bar (tall) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M5,20 L5,10"
+        android:strokeWidth="3"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Center-left bar (short) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M9,20 L9,15"
+        android:strokeWidth="3"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Center-right bar (tallest) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M13,20 L13,7"
+        android:strokeWidth="3"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Right bar (medium) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M17,20 L17,12"
+        android:strokeWidth="3"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+    <!-- Far-right bar (short) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M21,20 L21,16"
+        android:strokeWidth="3"
+        android:strokeColor="#BF360C"
+        android:strokeLineCap="round" />
+
+</vector>

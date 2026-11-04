@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    colors_selector.xml
+    Color state lists have been moved to res/color/bottom_nav_text_color.xml
+    and res/color/bottom_nav_icon_tint.xml because <selector> tags are color state list
+    resources that belong in the res/color/ directory.
+-->
+<resources>
+</resources>

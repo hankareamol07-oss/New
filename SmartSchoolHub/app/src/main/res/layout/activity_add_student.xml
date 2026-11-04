@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/ModuleToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:subtitle="Student Registration"
+            app:title="@string/add_student_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="96dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Section: basic -->
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+                android:text="मूलभूत माहिती" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName" style="@style/FormField"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/student_name_en">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etName"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormField"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/student_name_mr">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etNameMr"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout style="@style/FormDropdown"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp" android:layout_weight="1" android:hint="@string/grade">
+                    <AutoCompleteTextView android:id="@+id/ddGrade" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/FormDropdown"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp" android:layout_weight="1" android:hint="@string/section">
+                    <AutoCompleteTextView android:id="@+id/ddSection" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout style="@style/FormField"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp" android:layout_weight="1" android:hint="@string/gr_no">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etGrNo"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/FormField"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp" android:layout_weight="1" android:hint="@string/roll_no">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRollNo"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout style="@style/FormDropdown"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp" android:layout_weight="1" android:hint="@string/gender">
+                    <AutoCompleteTextView android:id="@+id/ddGender" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/FormField"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp" android:layout_weight="1" android:hint="@string/dob"
+                    app:endIconDrawable="@drawable/ic_calendar" app:endIconMode="custom">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDob"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:clickable="true" android:cursorVisible="false"
+                        android:focusable="false" android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Section: family -->
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp" android:text="पालक माहिती" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormField"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/father_name">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etFather"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormField"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/mother_name">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etMother"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilPhone"
+                style="@style/FormField" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="@string/phone"
+                app:startIconDrawable="@drawable/ic_phone">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPhone"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="phone" android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Section: IDs -->
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp" android:text="ओळखपत्र व इतर" />
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilAadhar"
+                style="@style/FormField" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="@string/aadhar_no">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAadhar"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="number" android:maxLength="12" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormField"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/apaar_id">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etApaar"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters" android:maxLength="12" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout style="@style/FormDropdown"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp" android:layout_weight="1" android:hint="@string/caste">
+                    <AutoCompleteTextView android:id="@+id/ddCaste" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/FormDropdown"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp" android:layout_weight="1" android:hint="@string/blood_group">
+                    <AutoCompleteTextView android:id="@+id/ddBlood" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="@string/save"
+        app:icon="@drawable/ic_save" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
